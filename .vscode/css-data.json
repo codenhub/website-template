@@ -1,0 +1,21 @@
+{
+  "version": 1.1,
+  "atDirectives": [
+    {
+      "name": "@apply",
+      "description": "A custom at-rule for applying styles."
+    },
+    {
+      "name": "@custom-variant",
+      "description": "A custom at-rule for defining Tailwind CSS variants."
+    },
+    {
+      "name": "@theme",
+      "description": "A custom at-rule for defining Tailwind CSS variables."
+    },
+    {
+      "name": "@reference",
+      "description": "A custom at-rule for referencing other CSS files."
+    }
+  ]
+}

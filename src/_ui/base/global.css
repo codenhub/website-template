@@ -1,0 +1,25 @@
+@layer base {
+  ::-webkit-scrollbar {
+    width: calc(var(--spacing) * 4);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-primary);
+    border: var(--spacing) solid var(--color-background);
+    border-radius: calc(var(--spacing) * 2);
+  }
+
+  ::selection {
+    background: var(--color-primary);
+    color: var(--color-background);
+  }
+
+  html,
+  body {
+    @apply flex flex-col min-h-screen overflow-x-hidden bg-neutral-50;
+  }
+
+  button {
+    @apply [&:not(:disabled)]:cursor-pointer;
+  }
+}

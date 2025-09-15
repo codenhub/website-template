@@ -1,0 +1,48 @@
+@layer base {
+  input,
+  textarea {
+    @apply flex p-2 min-h-10 rounded-md border border-accent focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-200;
+  }
+}
+
+@layer components {
+  .loader {
+    @apply bg-neutral-200 fixed inset-0 z-999 skew-x-10 transition-all duration-800 ease-out;
+
+    &.left {
+      @apply -translate-x-1/10;
+
+      &.loaded {
+        @apply -translate-x-11/10;
+      }
+    }
+
+    &.right {
+      @apply translate-x-1/10;
+
+      &.loaded {
+        @apply translate-x-11/10;
+      }
+    }
+  }
+
+  .sect {
+    @apply flex flex-col gap-4 p-4 items-center justify-center;
+  }
+
+  .sect-container {
+    @apply flex flex-col w-full max-w-7xl gap-4 items-center;
+  }
+
+  .primary-btn {
+    @apply bg-primary hover:bg-primary-hover text-neutral-50 font-semibold flex items-center justify-center px-4 py-2 min-h-10 rounded-md transition-all duration-400;
+  }
+
+  .secondary-btn {
+    @apply bg-accent hover:bg-accent-hover font-semibold flex items-center justify-center px-4 py-2 min-h-10 rounded-md transition-all duration-400;
+  }
+
+  .card {
+    @apply flex flex-col p-4 gap-2 border border-accent rounded-md shadow-md hover:shadow-lg hover:scale-105 transition-all duration-400;
+  }
+}
