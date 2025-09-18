@@ -1,8 +1,10 @@
 @theme {
   --color-primary: var(--color-neutral-950);
+  --color-primary-contrast: var(--color-neutral-50);
   --color-primary-hover: var(--color-neutral-700);
-  --color-secondary: var(--color-neutral-700);
   --color-accent: var(--color-neutral-300);
   --color-accent-hover: var(--color-neutral-400);
   --color-background: var(--color-neutral-50);
+  --color-text: var(--color-neutral-950);
+  --color-text-secondary: var(--color-neutral-700);
 }

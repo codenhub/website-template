@@ -5,13 +5,8 @@
 
   ::-webkit-scrollbar-thumb {
     background: var(--color-primary);
-    border: var(--spacing) solid var(--color-background);
+    border: var(--spacing) solid var(--color-primary-contrast);
     border-radius: calc(var(--spacing) * 2);
-  }
-
-  ::selection {
-    background: var(--color-primary);
-    color: var(--color-background);
   }
 
   html,

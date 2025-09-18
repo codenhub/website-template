@@ -1,11 +1,12 @@
-const loaderLeft = document.querySelector(".loader.left");
-const loaderRight = document.querySelector(".loader.right");
+const loaders = document.querySelectorAll(".loader");
+const loaderIndicator = document.getElementById("loader-indicator");
 
 document.addEventListener("DOMContentLoaded", () => {
-  loaderLeft.classList.add("loaded");
-  loaderRight.classList.add("loaded");
-  setTimeout(() => {
-    loaderLeft.remove();
-    loaderRight.remove();
-  }, 800);
+  loaderIndicator?.remove();
+  loaders.forEach((el) => {
+    el.classList.add("loaded");
+    setTimeout(() => {
+      el.remove();
+    }, 800);
+  });
 });

@@ -26,12 +26,26 @@
     }
   }
 
+  .mouse-tracker {
+    @apply fixed -top-8 -left-8 size-8 rounded-full border border-primary/40 bg-primary/10 -translate-1/2 transition duration-800 pointer-events-none z-999;
+
+    &.moving {
+      @apply scale-160 duration-400;
+    }
+
+    /* FOR CONSTRAST WITH PRIMARY BACKGROUND */
+    &::after {
+      @apply absolute inset-0 rounded-full border border-primary-contrast/40 bg-primary-contrast/10 transition duration-800 pointer-events-none z-999;
+      content: "";
+    }
+  }
+
   .sect {
-    @apply flex flex-col gap-4 p-4 items-center justify-center;
+    @apply flex flex-col gap-8 px-4 py-16 items-center justify-center;
   }
 
   .sect-container {
-    @apply flex flex-col w-full max-w-7xl gap-4 items-center;
+    @apply flex flex-col w-full max-w-7xl gap-12 items-center;
   }
 
   .primary-btn {

@@ -1,0 +1,33 @@
+@reference "./_ui/main.css";
+
+@layer components {
+  .faq-item {
+    @apply flex flex-col p-4 rounded-md border border-neutral-200 cursor-pointer;
+
+    & .question {
+      @apply flex items-center justify-between;
+
+      & svg {
+        @apply size-6 transition-all duration-400;
+      }
+    }
+
+    & .answer {
+      @apply max-h-0 opacity-0 transition-all duration-400;
+      interpolate-size: allow-keywords;
+    }
+
+    &.active {
+      & .question svg {
+        @apply rotate-180;
+      }
+      & .answer {
+        @apply max-h-max pt-4 opacity-100;
+      }
+    }
+  }
+
+  footer a {
+    @apply hover:underline;
+  }
+}

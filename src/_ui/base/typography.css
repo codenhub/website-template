@@ -1,6 +1,17 @@
 @layer base {
   * {
     font-family: "Segoe UI", system-ui, sans-serif;
+    color: var(--color-text); /* Text color */
+  }
+
+  .text-contrast,
+  .text-contrast * {
+    color: var(--color-primary-contrast); /* Text contrast color */
+  }
+
+  ::selection {
+    background: var(--color-primary);
+    color: var(--color-primary-contrast);
   }
 
   h1 {
