@@ -38,12 +38,4 @@ export default function initMouseTracker() {
   });
 
   document.addEventListener("scroll", cursorMoving);
-
-  document.addEventListener("mouseleave", () => {
-    mouseTracker.style.opacity = "0";
-  });
-
-  document.addEventListener("mouseenter", () => {
-    mouseTracker.style.opacity = "1";
-  });
 }

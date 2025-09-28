@@ -4,12 +4,14 @@ import { DotLottie } from "@lottiefiles/dotlottie-web";
 
 gsap.registerPlugin(ScrollTrigger);
 
-// HERO ANIMATION
-new DotLottie({
-  autoplay: true,
-  loop: true,
-  canvas: document.querySelector("#dotlottie-canvas"),
-  src: "/assets/animations/hero.lottie",
+// SVG ANIMATIONS
+document.querySelectorAll("canvas.svg-animation").forEach((canvas) => {
+  new DotLottie({
+    autoplay: true,
+    loop: true,
+    canvas: canvas,
+    src: canvas.dataset.source,
+  });
 });
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -20,14 +22,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const direction = currentScrollY > lastScrollY ? "down" : "up";
     if (direction === "down") {
       document.querySelector("header").classList.add("-translate-y-1/1");
-      document.querySelector("header").classList.remove("shadow-sm");
+      document.querySelector("header").classList.remove("border-b");
     }
     if (direction === "up") {
       document.querySelector("header").classList.remove("-translate-y-1/1");
       // ADD SHADOW IF NOT TOP
       document
         .querySelector("header")
-        .classList.toggle("shadow-sm", currentScrollY > 0);
+        .classList.toggle("border-b", currentScrollY > 0);
     }
     lastScrollY = currentScrollY;
   });

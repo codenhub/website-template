@@ -1,8 +1,18 @@
 @reference "./_ui/main.css";
 
 @layer components {
+  .testimonial {
+    & p {
+      @apply text-text-secondary;
+    }
+
+    & > div {
+      @apply flex items-center gap-4 mt-auto;
+    }
+  }
+
   .faq-item {
-    @apply flex flex-col p-4 rounded-md border border-neutral-200 cursor-pointer;
+    @apply p-4 gap-0 cursor-pointer;
 
     & .question {
       @apply flex items-center justify-between;
@@ -21,6 +31,7 @@
       & .question svg {
         @apply rotate-180;
       }
+
       & .answer {
         @apply max-h-max pt-4 opacity-100;
       }

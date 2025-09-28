@@ -10,24 +10,27 @@
     @apply bg-neutral-200 fixed inset-0 z-999 skew-x-10 transition-all duration-800 ease-out;
 
     &.left {
-      @apply -translate-x-1/10;
+      @apply -translate-x-2/10;
 
       &.loaded {
-        @apply -translate-x-11/10;
+        @apply -translate-x-12/10;
       }
     }
 
     &.right {
-      @apply translate-x-1/10;
+      @apply translate-x-2/10;
 
       &.loaded {
-        @apply translate-x-11/10;
+        @apply translate-x-12/10;
       }
     }
   }
 
+  body:hover .mouse-tracker {
+    @apply md:opacity-100;
+  }
   .mouse-tracker {
-    @apply fixed -top-8 -left-8 size-8 rounded-full border border-primary/40 bg-primary/10 -translate-1/2 transition duration-800 pointer-events-none z-999;
+    @apply fixed -top-8 -left-8 size-8 rounded-full border border-primary/40 bg-primary/10 -translate-1/2 transition duration-800 pointer-events-none z-999 opacity-0;
 
     &.moving {
       @apply scale-160 duration-400;
@@ -49,14 +52,14 @@
   }
 
   .primary-btn {
-    @apply bg-primary hover:bg-primary-hover text-neutral-50 font-semibold flex items-center justify-center px-4 py-2 min-h-10 rounded-md transition-all duration-400;
+    @apply bg-primary hover:bg-primary-hover text-neutral-50 font-semibold flex items-center justify-center px-4 py-2 min-h-10 rounded-md transition duration-400;
   }
 
   .secondary-btn {
-    @apply bg-accent hover:bg-accent-hover font-semibold flex items-center justify-center px-4 py-2 min-h-10 rounded-md transition-all duration-400;
+    @apply bg-accent hover:bg-accent-hover font-semibold flex items-center justify-center px-4 py-2 min-h-10 rounded-md transition duration-400;
   }
 
   .card {
-    @apply flex flex-col p-4 gap-2 border border-accent rounded-md shadow-md hover:shadow-lg hover:scale-105 transition-all duration-400;
+    @apply flex flex-col p-8 gap-4 border bg-background border-accent rounded-md hover:shadow-md transition-shadow duration-400;
   }
 }

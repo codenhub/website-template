@@ -8,4 +8,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // INIT MOUSE TRACKER
   initMouseTracker();
+
+  // MAKE IMAGES NOT DRAGGABLE
+  document.querySelectorAll("img").forEach((img) => {
+    img.setAttribute("draggable", "false");
+  });
 });

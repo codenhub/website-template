@@ -1,552 +1,612 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="stylesheet" href="./_ui/main.css" />
-    <link rel="stylesheet" href="./index.css" />
-    <script type="module" src="./_ui/main.js"></script>
-    <title>Website template by Coden</title>
-  </head>
-  <body>
-    <!-- LOADER -->
-    <div class="loader left"></div>
-    <div class="loader right"></div>
-    <div
-      id="loader-indicator"
-      class="z-999 fixed left-1/2 top-1/2 -translate-1/2 size-16"
-    >
-      <svg stroke="currentColor" viewBox="0 0 24 24">
-        <style>
-          .spinner {
-            transform-origin: center;
-            animation: rotate 2s linear infinite;
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="stylesheet" href="./_ui/main.css" />
+  <link rel="stylesheet" href="./index.css" />
+  <script type="module" src="./_ui/main.js"></script>
+  <title>Website template by Coden</title>
+</head>
+
+<body>
+  <!-- LOADER -->
+  <div class="loader left"></div>
+  <div class="loader right"></div>
+  <div id="loader-indicator" class="z-999 fixed left-1/2 top-1/2 -translate-1/2 size-16">
+    <svg stroke="currentColor" viewBox="0 0 24 24">
+      <style>
+        .spinner {
+          transform-origin: center;
+          animation: rotate 2s linear infinite;
+        }
+
+        .spinner circle {
+          stroke-linecap: round;
+          animation: grow 1.5s ease-in-out infinite;
+        }
+
+        @keyframes rotate {
+          to {
+            transform: rotate(360deg);
+          }
+        }
+
+        @keyframes grow {
+          0% {
+            stroke-dasharray: 0 150;
+            stroke-dashoffset: 0;
           }
 
-          .spinner circle {
-            stroke-linecap: round;
-            animation: grow 1.5s ease-in-out infinite;
+          50% {
+            stroke-dasharray: 42 150;
+            stroke-dashoffset: -16;
           }
 
-          @keyframes rotate {
-            to {
-              transform: rotate(360deg);
-            }
+          95%,
+          100% {
+            stroke-dasharray: 42 150;
+            stroke-dashoffset: -59;
           }
+        }
+      </style>
+      <g class="spinner">
+        <circle cx="12" cy="12" r="9.5" fill="none" stroke-width="2"></circle>
+      </g>
+    </svg>
+  </div>
+  <!-- END LOADER -->
 
-          @keyframes grow {
-            0% {
-              stroke-dasharray: 0 150;
-              stroke-dashoffset: 0;
-            }
+  <!-- HEADER -->
+  <header
+    class="flex p-4 justify-center bg-background fixed inset-x-0 anim-down-in border-neutral-300 z-99 transition-all duration-400">
+    <div class="sect-container flex-row justify-between">
+      <a href="#">
+        <img src="/logo.svg" alt="Logo" class="h-10 object-contain" />
+      </a>
 
-            50% {
-              stroke-dasharray: 42 150;
-              stroke-dashoffset: -16;
-            }
+      <!-- DESKTOP NAV -->
+      <div class="hidden md:flex gap-4 items-center">
+        <nav class="flex gap-4">
+          <a href="#" class="hover:font-semibold hover:tracking-wide transition-all duration-400">About</a>
+          <a href="#" class="hover:font-semibold hover:tracking-wide transition-all duration-400">Solutions</a>
+          <a href="#" class="hover:font-semibold hover:tracking-wide transition-all duration-400">Why us?</a>
+        </nav>
+        <a href="#" class="primary-btn">Get a quote</a>
+      </div>
+      <!-- END DESKTOP NAV -->
 
-            95%,
-            100% {
-              stroke-dasharray: 42 150;
-              stroke-dashoffset: -59;
-            }
-          }
-        </style>
-        <g class="spinner">
-          <circle cx="12" cy="12" r="9.5" fill="none" stroke-width="2"></circle>
-        </g>
-      </svg>
-    </div>
-    <!-- END LOADER -->
-
-    <!-- HEADER -->
-    <header
-      class="flex p-4 justify-center bg-background fixed inset-x-0 anim-down-in z-99 transition-all duration-400"
-    >
-      <div class="sect-container flex-row justify-between">
-        <a href="#">
-          <img src="/logo.svg" alt="Logo" class="h-10 object-contain" />
-        </a>
-
-        <!-- DESKTOP NAV -->
-        <div class="hidden md:flex gap-4 items-center">
-          <nav class="flex gap-4">
-            <a
-              href="#"
-              class="hover:font-semibold hover:tracking-wide transition-all duration-400"
-              >About</a
-            >
-            <a
-              href="#"
-              class="hover:font-semibold hover:tracking-wide transition-all duration-400"
-              >Solutions</a
-            >
-            <a
-              href="#"
-              class="hover:font-semibold hover:tracking-wide transition-all duration-400"
-              >Why us?</a
-            >
+      <!-- MOBILE NAV -->
+      <div class="flex md:hidden">
+        <input type="checkbox" id="mobile-menu" class="peer sr-only" />
+        <label class="flex flex-col w-6 gap-1.5 py-2 cursor-pointer" for="mobile-menu">
+          <div class="w-full h-0.5 bg-neutral-950"></div>
+          <div class="w-full h-0.5 bg-neutral-950"></div>
+          <div class="w-full h-0.5 bg-neutral-950"></div>
+        </label>
+        <div
+          class="absolute flex top-18 inset-x-0 bg-background shadow-lg p-4 max-h-0 opacity-0 peer-checked:max-h-max peer-checked:opacity-100 transition-all duration-400"
+          style="interpolate-size: allow-keywords">
+          <nav class="flex flex-col w-full gap-2">
+            <a href="#" class="flex w-full text-center justify-center text-lg tracking-wide">About</a>
+            <a href="#" class="flex w-full text-center justify-center text-lg tracking-wide">Solutions</a>
+            <a href="#" class="flex w-full text-center justify-center text-lg tracking-wide">Why us?</a>
+            <a href="#" class="primary-btn">Get a quote</a>
           </nav>
-          <a href="#" class="primary-btn">Get a quote</a>
         </div>
-        <!-- END DESKTOP NAV -->
-
-        <!-- MOBILE NAV -->
-        <div class="flex md:hidden">
-          <input type="checkbox" id="mobile-menu" class="peer sr-only" />
-          <label
-            class="flex flex-col w-6 gap-1.5 py-2 cursor-pointer"
-            for="mobile-menu"
-          >
-            <div class="w-full h-0.5 bg-neutral-950"></div>
-            <div class="w-full h-0.5 bg-neutral-950"></div>
-            <div class="w-full h-0.5 bg-neutral-950"></div>
-          </label>
-          <div
-            class="absolute top-0 left-0 w-40 bg-white shadow-md rounded-md p-4 hidden peer-checked:block"
-          >
-            <nav class="flex flex-col gap-2">
-              <a
-                href="#"
-                class="hover:font-semibold hover:tracking-wide transition-all duration-400"
-                >About</a
-              >
-              <a
-                href="#"
-                class="hover:font-semibold hover:tracking-wide transition-all duration-400"
-                >Solutions</a
-              >
-              <a
-                href="#"
-                class="hover:font-semibold hover:tracking-wide transition-all duration-400"
-                >Why us?</a
-              >
-            </nav>
-          </div>
-        </div>
-        <!-- END MOBILE NAV -->
       </div>
-    </header>
-    <!-- END HEADER -->
+      <!-- END MOBILE NAV -->
+    </div>
+  </header>
+  <!-- END HEADER -->
 
-    <!-- MAIN CONTENT -->
-    <main id="smooth-wrapper">
-      <div id="smooth-content">
-        <!-- HERO -->
-        <section class="sect py-0">
-          <div class="sect-container min-h-screen flex-row">
-            <div class="flex flex-col gap-4 w-full">
-              <h1 class="anim-text-chars-in">Some headline</h1>
-              <p class="text-xl max-w-xl anim-text-in">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                sollicitudin quam vitae velit pellentesque, sit amet posuere
-                nisi condimentum.
-              </p>
-              <div class="flex gap-4 mt-4 anim-in">
-                <a href="#" class="primary-btn">Get a quote</a>
-                <a href="#" class="secondary-btn">Know more</a>
-              </div>
-            </div>
-            <canvas
-              id="dotlottie-canvas"
-              class="anim-left-in"
-              style="width: 600px; height: 600px"
-            ></canvas>
-          </div>
-        </section>
-        <!-- END HERO -->
-
-        <!-- CLIENTS -->
-        <section class="sect">
-          <div class="sect-container">
-            <h2 class="anim-text-chars-in text-text-secondary">Trusted by</h2>
-            <div
-              class="flex flex-wrap w-full gap-8 items-center justify-center"
-            >
-              <img
-                src="/assets/images/clients/google.webp"
-                alt="Google logo"
-                class="h-10 object-contain anim-in"
-              />
-              <img
-                src="/assets/images/clients/microsoft.webp"
-                alt="Google logo"
-                class="h-10 object-contain anim-in"
-              />
-              <img
-                src="/assets/images/clients/google.webp"
-                alt="Google logo"
-                class="h-10 object-contain anim-in"
-              />
-              <img
-                src="/assets/images/clients/microsoft.webp"
-                alt="Google logo"
-                class="h-10 object-contain anim-in"
-              />
-              <img
-                src="/assets/images/clients/google.webp"
-                alt="Google logo"
-                class="h-10 object-contain anim-in"
-              />
-              <img
-                src="/assets/images/clients/microsoft.webp"
-                alt="Google logo"
-                class="h-10 object-contain anim-in"
-              />
-              <img
-                src="/assets/images/clients/google.webp"
-                alt="Google logo"
-                class="h-10 object-contain anim-in"
-              />
-            </div>
-          </div>
-        </section>
-        <!-- END CLIENTS -->
-
-        <!-- METRICS -->
-        <!-- <section class="sect counters">
-          <div class="sect-container flex-row justify-between">
-            <div class="flex flex-col items-center gap-4 anim-right-in">
-              <h1>+<span class="counter" data-target="700">0</span></h1>
-              <p class="text-lg">Projects completed</p>
-            </div>
-            <div class="flex flex-col items-center gap-4 anim-right-in">
-              <h1>+<span class="counter" data-target="250">0</span></h1>
-              <p class="text-lg">Clients satisfied</p>
-            </div>
-            <div class="flex flex-col items-center gap-4 anim-left-in">
-              <h1>+<span class="counter" data-target="10">0</span>k</h1>
-              <p class="text-lg">Active users</p>
-            </div>
-            <div class="flex flex-col items-center gap-4 anim-left-in">
-              <h1><span class="counter" data-target="100">0</span>%</h1>
-              <p class="text-lg">Satisfaction rate</p>
-            </div>
-          </div>
-        </section> -->
-        <!-- END METRICS -->
-
-        <!-- ABOUT -->
-        <section class="sect">
-          <div class="sect-container">
-            <h2>About us</h2>
-
-            <p class="text-center anim-text-in">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam est
-              nunc, convallis nec turpis et, dapibus tincidunt magna. Duis id
-              volutpat dolor. Etiam mollis ac eros sit amet imperdiet. Ut a
-              tincidunt purus. Pellentesque vitae lorem ipsum. Curabitur ut
-              massa orci. Proin eu tortor maximus, elementum urna quis,
-              tincidunt odio. Fusce in mi sapien. Sed sagittis mi dolor, sed
-              hendrerit sem tempus ac. In posuere mi porttitor urna
-              pellentesque, in blandit sem hendrerit. Integer tellus neque,
-              auctor finibus turpis vitae, ornare convallis magna. <br /><br />
-              Suspendisse nec vulputate lectus, quis interdum leo. In dignissim
-              sit amet felis nec tincidunt. Aliquam erat volutpat. Donec rutrum
-              mauris eget tristique interdum. Vivamus iaculis imperdiet justo
-              aliquam tristique. Sed dictum rutrum fermentum. In hac habitasse
-              platea dictumst. Nulla efficitur et mi eu blandit.
+  <!-- MAIN CONTENT -->
+  <main id="smooth-wrapper">
+    <div id="smooth-content">
+      <!-- HERO -->
+      <section class="sect py-0">
+        <div class="sect-container min-h-screen flex-row">
+          <div class="flex flex-col gap-4 w-full">
+            <h1 class="anim-text-chars-in">Some headline</h1>
+            <p class="text-xl max-w-xl anim-text-in">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+              sollicitudin quam vitae velit pellentesque, sit amet posuere
+              nisi condimentum.
             </p>
+            <div class="flex gap-4 mt-4 anim-in">
+              <a href="#" class="primary-btn">Get a quote</a>
+              <a href="#" class="secondary-btn">Know more</a>
+            </div>
+          </div>
+          <canvas class="svg-animation anim-left-in" data-source="/assets/animations/hero.lottie"
+            style="width: 600px; height: 600px"></canvas>
+        </div>
+      </section>
+      <!-- END HERO -->
 
-            <div class="flex flex-row w-full justify-between">
-              <div class="flex flex-col items-center gap-4 anim-right-in">
-                <h1>+<span class="counter" data-target="700">0</span></h1>
-                <p class="text-lg">Projects completed</p>
+      <!-- METRICS -->
+      <section class="sect counters">
+        <div class="sect-container flex-row justify-between">
+          <div class="flex flex-col items-center gap-4 anim-right-in">
+            <h1>+<span class="counter" data-target="700">0</span></h1>
+            <p class="text-lg">Projects completed</p>
+          </div>
+          <div class="flex flex-col items-center gap-4 anim-right-in">
+            <h1>+<span class="counter" data-target="250">0</span></h1>
+            <p class="text-lg">Clients satisfied</p>
+          </div>
+          <div class="flex flex-col items-center gap-4 anim-left-in">
+            <h1>+<span class="counter" data-target="10">0</span>k</h1>
+            <p class="text-lg">Active users</p>
+          </div>
+          <div class="flex flex-col items-center gap-4 anim-left-in">
+            <h1><span class="counter" data-target="100">0</span>%</h1>
+            <p class="text-lg">Satisfaction rate</p>
+          </div>
+        </div>
+      </section>
+      <!-- END METRICS -->
+
+      <!-- CLIENTS -->
+      <section class="sect">
+        <div class="sect-container">
+          <h2 class="anim-text-chars-in text-text-secondary">Trusted by</h2>
+          <div class="flex flex-wrap w-full gap-8 items-center justify-center">
+            <img src="/assets/images/clients/google.webp" alt="Google logo" class="h-10 object-contain anim-in" />
+            <img src="/assets/images/clients/microsoft.webp" alt="Google logo" class="h-10 object-contain anim-in" />
+            <img src="/assets/images/clients/google.webp" alt="Google logo" class="h-10 object-contain anim-in" />
+            <img src="/assets/images/clients/microsoft.webp" alt="Google logo" class="h-10 object-contain anim-in" />
+            <img src="/assets/images/clients/google.webp" alt="Google logo" class="h-10 object-contain anim-in" />
+            <img src="/assets/images/clients/microsoft.webp" alt="Google logo" class="h-10 object-contain anim-in" />
+            <img src="/assets/images/clients/google.webp" alt="Google logo" class="h-10 object-contain anim-in" />
+          </div>
+        </div>
+      </section>
+      <!-- END CLIENTS -->
+
+      <!-- DIFERENTIALS -->
+      <section class="sect">
+        <div class="sect-container">
+          <h2 class="anim-text-chars-in">Why choose us?</h2>
+          <p class="text-center anim-text-in max-w-2xl mx-auto">
+            We stand out from the competition with our unique approach,
+            exceptional service, and proven track record of success.
+          </p>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+            <!-- DIFFERENTIAL 1 -->
+            <div class="flex gap-6 items-start anim-right-in">
+              <img src="/assets/icons/diferentials/docs.svg" alt="Documentation icon" class="size-12" />
+              <div class="flex flex-col gap-2">
+                <h4>Well documented</h4>
+                <p class="text-text-secondary">
+                  Clean, semantic code with comprehensive documentation. Every
+                  component is clearly commented for easy customization and
+                  maintenance.
+                </p>
               </div>
-              <div class="flex flex-col items-center gap-4 anim-right-in">
-                <h1>+<span class="counter" data-target="250">0</span></h1>
-                <p class="text-lg">Clients satisfied</p>
+            </div>
+
+            <!-- DIFFERENTIAL 2 -->
+            <div class="flex gap-6 items-start anim-left-in">
+              <img src="/assets/icons/diferentials/integration.svg" alt="Integration icon" class="size-12" />
+              <div class="flex flex-col gap-2">
+                <h4>Easy integration</h4>
+                <p class="text-text-secondary">
+                  Compatible with popular frameworks like React, Vue, and
+                  Angular. Seamlessly integrate with any existing project or
+                  CMS.
+                </p>
               </div>
-              <div class="flex flex-col items-center gap-4 anim-left-in">
-                <h1>+<span class="counter" data-target="10">0</span>k</h1>
-                <p class="text-lg">Active users</p>
+            </div>
+
+            <!-- DIFFERENTIAL 3 -->
+            <div class="flex gap-6 items-start anim-right-in">
+              <img src="/assets/icons/diferentials/lightning.svg" alt="Lightning icon" class="size-12" />
+              <div class="flex flex-col gap-2">
+                <h4>Lightning fast</h4>
+                <p class="text-text-secondary">
+                  Optimized assets and efficient code ensure sub-second
+                  loading times. Built with performance best practices from
+                  the ground up.
+                </p>
               </div>
-              <div class="flex flex-col items-center gap-4 anim-left-in">
-                <h1><span class="counter" data-target="100">0</span>%</h1>
-                <p class="text-lg">Satisfaction rate</p>
+            </div>
+
+            <!-- DIFFERENTIAL 4 -->
+            <div class="flex gap-6 items-start anim-left-in">
+              <img src="/assets/icons/diferentials/feather.svg" alt="Feather icon" class="size-12" />
+              <div class="flex flex-col gap-2">
+                <h4>Light weight</h4>
+                <p class="text-text-secondary">
+                  Minimal footprint with no bloated dependencies. Clean CSS
+                  and JavaScript that won't slow down your website.
+                </p>
+              </div>
+            </div>
+
+            <!-- DIFFERENTIAL 5 -->
+            <div class="flex gap-6 items-start anim-right-in">
+              <img src="/assets/icons/diferentials/organization.svg" alt="Organization icon" class="size-12" />
+              <div class="flex flex-col gap-2">
+                <h4>Scalable structure</h4>
+                <p class="text-text-secondary">
+                  Modular component architecture that grows with your needs.
+                  Perfect for simple landing pages or complex multi-page
+                  websites.
+                </p>
+              </div>
+            </div>
+
+            <!-- DIFFERENTIAL 6 -->
+            <div class="flex gap-6 items-start anim-left-in">
+              <img src="/assets/icons/diferentials/animations.svg" alt="Animations icon" class="size-12" />
+              <div class="flex flex-col gap-2">
+                <h4>Amazing UI/UX</h4>
+                <p class="text-text-secondary">
+                  Modern design with smooth animations and micro-interactions.
+                  Responsive layouts that look perfect on every device and
+                  screen size.
+                </p>
               </div>
             </div>
           </div>
-        </section>
-        <!-- END ABOUT -->
+        </div>
+      </section>
+      <!-- END DIFERENTIALS -->
 
-        <!-- SOLUTIONS SECTION -->
+      <!-- TESTIMONIALS -->
+      <section class="sect">
+        <div class="sect-container">
+          <h2 class="anim-text-chars-in">What our clients say</h2>
+          <p class="text-center anim-text-in max-w-2xl mx-auto">
+            Don't just take our word for it. Here's what our satisfied clients
+            have to say about working with us.
+          </p>
 
-        <!-- DIFERENTIALS SECTION -->
-
-        <!-- CREDIBILITY SECTION -->
-
-        <!-- TESTIMONIALS SECTION -->
-
-        <!-- CONTACT SECTION -->
-
-        <!-- FAQ -->
-        <section class="sect">
-          <div class="sect-container">
-            <h2 class="anim-text-chars-in">Frequently asked questions</h2>
-            <div class="flex flex-col gap-4 w-full">
-              <!-- QUESTION 1 -->
-              <div class="faq-item anim-in">
-                <div class="question">
-                  <h5>Lorem ipsum dolor sit amet?</h5>
-                  <svg viewBox="0 0 24 24" fill="none">
-                    <path
-                      d="M6 9L12 15L18 9"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- TESTIMONIAL 1 -->
+            <div class="card testimonial anim-in">
+              <custom-rating></custom-rating>
+              <p class="text-secondary italic">
+                "Working with this team has been an absolute game-changer for
+                our business. Their expertise and dedication helped us achieve
+                results we never thought possible."
+              </p>
+              <div>
+                <div class="size-12 bg-primary rounded-full flex items-center justify-center text-contrast font-bold">
+                  SM
                 </div>
-                <p class="answer">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Vestibulum ac turpis vel lectus tempus fermentum. Donec
-                  maximus maximus lacinia. Donec sodales purus sed ultricies
-                  imperdiet. Vivamus vel sem tristique mauris imperdiet volutpat
-                  eu aliquet nisl. In tincidunt, enim a consequat accumsan,
-                  augue libero facilisis nulla, ac efficitur justo nulla id
-                  libero. Aenean convallis mauris lorem, et tempor lorem
-                  lobortis nec. Vestibulum id risus mauris. Cras ut est lacinia
-                  leo consequat mattis.
-                </p>
-              </div>
-
-              <!-- QUESTION 2 -->
-              <div class="faq-item anim-in">
-                <div class="question">
-                  <h5>Lorem ipsum dolor sit amet?</h5>
-                  <svg viewBox="0 0 24 24" fill="none">
-                    <path
-                      d="M6 9L12 15L18 9"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
+                <div>
+                  <h5>Sarah Martinez</h5>
+                  <p>CEO, TechStart Inc.</p>
                 </div>
-                <p class="answer">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Vestibulum ac turpis vel lectus tempus fermentum. Donec
-                  maximus maximus lacinia. Donec sodales purus sed ultricies
-                  imperdiet. Vivamus vel sem tristique mauris imperdiet volutpat
-                  eu aliquet nisl. In tincidunt, enim a consequat accumsan,
-                  augue libero facilisis nulla, ac efficitur justo nulla id
-                  libero. Aenean convallis mauris lorem, et tempor lorem
-                  lobortis nec. Vestibulum id risus mauris. Cras ut est lacinia
-                  leo consequat mattis.
-                </p>
-              </div>
-
-              <!-- QUESTION 3 -->
-              <div class="faq-item anim-in">
-                <div class="question">
-                  <h5>Lorem ipsum dolor sit amet?</h5>
-                  <svg viewBox="0 0 24 24" fill="none">
-                    <path
-                      d="M6 9L12 15L18 9"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </div>
-                <p class="answer">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Vestibulum ac turpis vel lectus tempus fermentum. Donec
-                  maximus maximus lacinia. Donec sodales purus sed ultricies
-                  imperdiet. Vivamus vel sem tristique mauris imperdiet volutpat
-                  eu aliquet nisl. In tincidunt, enim a consequat accumsan,
-                  augue libero facilisis nulla, ac efficitur justo nulla id
-                  libero. Aenean convallis mauris lorem, et tempor lorem
-                  lobortis nec. Vestibulum id risus mauris. Cras ut est lacinia
-                  leo consequat mattis.
-                </p>
-              </div>
-
-              <!-- QUESTION 4 -->
-              <div class="faq-item anim-in">
-                <div class="question">
-                  <h5>Lorem ipsum dolor sit amet?</h5>
-                  <svg viewBox="0 0 24 24" fill="none">
-                    <path
-                      d="M6 9L12 15L18 9"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </div>
-                <p class="answer">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Vestibulum ac turpis vel lectus tempus fermentum. Donec
-                  maximus maximus lacinia. Donec sodales purus sed ultricies
-                  imperdiet. Vivamus vel sem tristique mauris imperdiet volutpat
-                  eu aliquet nisl. In tincidunt, enim a consequat accumsan,
-                  augue libero facilisis nulla, ac efficitur justo nulla id
-                  libero. Aenean convallis mauris lorem, et tempor lorem
-                  lobortis nec. Vestibulum id risus mauris. Cras ut est lacinia
-                  leo consequat mattis.
-                </p>
-              </div>
-
-              <!-- QUESTION 5 -->
-              <div class="faq-item anim-in">
-                <div class="question">
-                  <h5>Lorem ipsum dolor sit amet?</h5>
-                  <svg viewBox="0 0 24 24" fill="none">
-                    <path
-                      d="M6 9L12 15L18 9"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </div>
-                <p class="answer">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Vestibulum ac turpis vel lectus tempus fermentum. Donec
-                  maximus maximus lacinia. Donec sodales purus sed ultricies
-                  imperdiet. Vivamus vel sem tristique mauris imperdiet volutpat
-                  eu aliquet nisl. In tincidunt, enim a consequat accumsan,
-                  augue libero facilisis nulla, ac efficitur justo nulla id
-                  libero. Aenean convallis mauris lorem, et tempor lorem
-                  lobortis nec. Vestibulum id risus mauris. Cras ut est lacinia
-                  leo consequat mattis.
-                </p>
-              </div>
-
-              <!-- QUESTION 6 -->
-              <div class="faq-item anim-in">
-                <div class="question">
-                  <h5>Lorem ipsum dolor sit amet?</h5>
-                  <svg viewBox="0 0 24 24" fill="none">
-                    <path
-                      d="M6 9L12 15L18 9"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </div>
-                <p class="answer">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Vestibulum ac turpis vel lectus tempus fermentum. Donec
-                  maximus maximus lacinia. Donec sodales purus sed ultricies
-                  imperdiet. Vivamus vel sem tristique mauris imperdiet volutpat
-                  eu aliquet nisl. In tincidunt, enim a consequat accumsan,
-                  augue libero facilisis nulla, ac efficitur justo nulla id
-                  libero. Aenean convallis mauris lorem, et tempor lorem
-                  lobortis nec. Vestibulum id risus mauris. Cras ut est lacinia
-                  leo consequat mattis.
-                </p>
-              </div>
-              <!-- END QUESTIONS -->
-            </div>
-          </div>
-        </section>
-        <!-- END FAQ -->
-
-        <!-- FOOTER -->
-        <footer class="sect bg-primary text-contrast">
-          <div class="sect-container flex-col gap-8">
-            <div class="flex justify-between w-full gap-4">
-              <div class="flex flex-col items-start gap-4">
-                <a href="#">
-                  <img
-                    src="/logo.svg"
-                    alt="Logo"
-                    class="h-10 object-contain invert"
-                  />
-                </a>
-                <p class="max-w-sm">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                  pharetra, nibh quis convallis mattis, est mauris pretium
-                  magna.
-                </p>
-              </div>
-              <div class="flex flex-col w-fit gap-2">
-                <p class="mb-2"><b>Company</b></p>
-                <a href="#">Solution 1</a>
-                <a href="#">Solution 2</a>
-                <a href="#">Solution 3</a>
-                <a href="#">Solution 4</a>
-                <a href="#">Solution 5</a>
-              </div>
-              <div class="flex flex-col w-fit gap-2">
-                <p class="mb-2"><b>Help</b></p>
-                <a href="#">Customer service</a>
-                <a href="#">Forum</a>
-                <a href="#">FAQ</a>
-                <a href="#">Privacy policy</a>
-                <a href="#">Terms of use</a>
-              </div>
-              <div class="flex flex-col w-fit gap-2">
-                <p class="mb-2"><b>Company</b></p>
-                <a href="#">Who we are</a>
-                <a href="#">Our team</a>
-                <a href="#">Work with us</a>
-                <a href="#">Contact us</a>
               </div>
             </div>
-            <div
-              class="flex w-full items-center justify-between pt-4 border-t border-neutral-700"
-            >
-              <p>© 2025 Company. All rights reserved.</p>
-              <div class="flex gap-4 items-center">
-                <!-- WHATSAPP LINK -->
-                <a href="https://wa.me/1234567890" class="size-6">
-                  <svg viewBox="0 0 24 24" fill="currentColor">
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M3.50002 12C3.50002 7.30558 7.3056 3.5 12 3.5C16.6944 3.5 20.5 7.30558 20.5 12C20.5 16.6944 16.6944 20.5 12 20.5C10.3278 20.5 8.77127 20.0182 7.45798 19.1861C7.21357 19.0313 6.91408 18.9899 6.63684 19.0726L3.75769 19.9319L4.84173 17.3953C4.96986 17.0955 4.94379 16.7521 4.77187 16.4751C3.9657 15.176 3.50002 13.6439 3.50002 12ZM12 1.5C6.20103 1.5 1.50002 6.20101 1.50002 12C1.50002 13.8381 1.97316 15.5683 2.80465 17.0727L1.08047 21.107C0.928048 21.4637 0.99561 21.8763 1.25382 22.1657C1.51203 22.4552 1.91432 22.5692 2.28599 22.4582L6.78541 21.1155C8.32245 21.9965 10.1037 22.5 12 22.5C17.799 22.5 22.5 17.799 22.5 12C22.5 6.20101 17.799 1.5 12 1.5ZM14.2925 14.1824L12.9783 15.1081C12.3628 14.7575 11.6823 14.2681 10.9997 13.5855C10.2901 12.8759 9.76402 12.1433 9.37612 11.4713L10.2113 10.7624C10.5697 10.4582 10.6678 9.94533 10.447 9.53028L9.38284 7.53028C9.23954 7.26097 8.98116 7.0718 8.68115 7.01654C8.38113 6.96129 8.07231 7.046 7.84247 7.24659L7.52696 7.52195C6.76823 8.18414 6.3195 9.2723 6.69141 10.3741C7.07698 11.5163 7.89983 13.314 9.58552 14.9997C11.3991 16.8133 13.2413 17.5275 14.3186 17.8049C15.1866 18.0283 16.008 17.7288 16.5868 17.2572L17.1783 16.7752C17.4313 16.5691 17.5678 16.2524 17.544 15.9269C17.5201 15.6014 17.3389 15.308 17.0585 15.1409L15.3802 14.1409C15.0412 13.939 14.6152 13.9552 14.2925 14.1824Z"
-                    />
-                  </svg>
-                </a>
-                <!-- INSTAGRAM LINK -->
-                <a href="https://www.instagram.com/coden.agency" class="size-6">
-                  <svg viewBox="0 0 24 24" fill="currentColor">
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z"
-                    />
-                    <path
-                      d="M18 5C17.4477 5 17 5.44772 17 6C17 6.55228 17.4477 7 18 7C18.5523 7 19 6.55228 19 6C19 5.44772 18.5523 5 18 5Z"
-                    />
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M1.65396 4.27606C1 5.55953 1 7.23969 1 10.6V13.4C1 16.7603 1 18.4405 1.65396 19.7239C2.2292 20.8529 3.14708 21.7708 4.27606 22.346C5.55953 23 7.23969 23 10.6 23H13.4C16.7603 23 18.4405 23 19.7239 22.346C20.8529 21.7708 21.7708 20.8529 22.346 19.7239C23 18.4405 23 16.7603 23 13.4V10.6C23 7.23969 23 5.55953 22.346 4.27606C21.7708 3.14708 20.8529 2.2292 19.7239 1.65396C18.4405 1 16.7603 1 13.4 1H10.6C7.23969 1 5.55953 1 4.27606 1.65396C3.14708 2.2292 2.2292 3.14708 1.65396 4.27606ZM13.4 3H10.6C8.88684 3 7.72225 3.00156 6.82208 3.0751C5.94524 3.14674 5.49684 3.27659 5.18404 3.43597C4.43139 3.81947 3.81947 4.43139 3.43597 5.18404C3.27659 5.49684 3.14674 5.94524 3.0751 6.82208C3.00156 7.72225 3 8.88684 3 10.6V13.4C3 15.1132 3.00156 16.2777 3.0751 17.1779C3.14674 18.0548 3.27659 18.5032 3.43597 18.816C3.81947 19.5686 4.43139 20.1805 5.18404 20.564C5.49684 20.7234 5.94524 20.8533 6.82208 20.9249C7.72225 20.9984 8.88684 21 10.6 21H13.4C15.1132 21 16.2777 20.9984 17.1779 20.9249C18.0548 20.8533 18.5032 20.7234 18.816 20.564C19.5686 20.1805 20.1805 19.5686 20.564 18.816C20.7234 18.5032 20.8533 18.0548 20.9249 17.1779C20.9984 16.2777 21 15.1132 21 13.4V10.6C21 8.88684 20.9984 7.72225 20.9249 6.82208C20.8533 5.94524 20.7234 5.49684 20.564 5.18404C20.1805 4.43139 19.5686 3.81947 18.816 3.43597C18.5032 3.27659 18.0548 3.14674 17.1779 3.0751C16.2777 3.00156 15.1132 3 13.4 3Z"
-                    />
-                  </svg>
-                </a>
-                <!-- FACEBOOK LINK -->
-                <a href="https://www.facebook.com/yourpage" class="size-6">
-                  <svg viewBox="0 0 24 24" fill="currentColor">
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M20 1C21.6569 1 23 2.34315 23 4V20C23 21.6569 21.6569 23 20 23H4C2.34315 23 1 21.6569 1 20V4C1 2.34315 2.34315 1 4 1H20ZM20 3C20.5523 3 21 3.44772 21 4V20C21 20.5523 20.5523 21 20 21H15V13.9999H17.0762C17.5066 13.9999 17.8887 13.7245 18.0249 13.3161L18.4679 11.9871C18.6298 11.5014 18.2683 10.9999 17.7564 10.9999H15V8.99992C15 8.49992 15.5 7.99992 16 7.99992H18C18.5523 7.99992 19 7.5522 19 6.99992V6.31393C19 5.99091 18.7937 5.7013 18.4813 5.61887C17.1705 5.27295 16 5.27295 16 5.27295C13.5 5.27295 12 6.99992 12 8.49992V10.9999H10C9.44772 10.9999 9 11.4476 9 11.9999V12.9999C9 13.5522 9.44771 13.9999 10 13.9999H12V21H4C3.44772 21 3 20.5523 3 20V4C3 3.44772 3.44772 3 4 3H20Z"
-                    />
-                  </svg>
-                </a>
+
+            <!-- TESTIMONIAL 2 -->
+            <div class="card testimonial anim-in">
+              <custom-rating></custom-rating>
+              <p class="italic">
+                "The level of professionalism and technical expertise is
+                outstanding. They delivered exactly what we needed, on time
+                and within budget."
+              </p>
+              <div>
+                <div class="size-12 bg-primary rounded-full flex items-center justify-center text-white font-bold">
+                  JD
+                </div>
+                <div>
+                  <h5>John Davis</h5>
+                  <p>CTO, InnovateCorp</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- TESTIMONIAL 3 -->
+            <div class="card testimonial anim-in">
+              <custom-rating></custom-rating>
+              <p class="italic">
+                "Amazing results! They transformed our digital presence and
+                helped us reach new heights. Highly recommend their services
+                to anyone looking for quality."
+              </p>
+              <div>
+                <div class="size-12 bg-primary rounded-full flex items-center justify-center text-white font-bold">
+                  ER
+                </div>
+                <div>
+                  <h5>Emily Rodriguez</h5>
+                  <p>Marketing Director, GrowthLab</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- TESTIMONIAL 4 -->
+            <div class="card testimonial anim-in">
+              <custom-rating></custom-rating>
+              <p class="italic">
+                "Exceptional service from start to finish. The team was
+                responsive, creative, and delivered beyond our expectations.
+                We couldn't be happier!"
+              </p>
+              <div>
+                <div class="size-12 bg-primary rounded-full flex items-center justify-center text-white font-bold">
+                  MT
+                </div>
+                <div>
+                  <h5>Michael Thompson</h5>
+                  <p>Founder, Digital Ventures</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- TESTIMONIAL 5 -->
+            <div class="card testimonial anim-in">
+              <custom-rating></custom-rating>
+              <p class="italic">
+                "Their innovative approach and attention to detail made all
+                the difference. Our project was completed flawlessly and ahead
+                of schedule."
+              </p>
+              <div>
+                <div class="size-12 bg-primary rounded-full flex items-center justify-center text-white font-bold">
+                  LC
+                </div>
+                <div>
+                  <h5>Lisa Chen</h5>
+                  <p>Operations Manager, FutureTech</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- TESTIMONIAL 6 -->
+            <div class="card testimonial anim-in">
+              <custom-rating></custom-rating>
+              <p class="italic">
+                "Professional, reliable, and results-driven. They took our
+                vision and turned it into reality. I would definitely work
+                with them again."
+              </p>
+              <div>
+                <div class="size-12 bg-primary rounded-full flex items-center justify-center text-white font-bold">
+                  DW
+                </div>
+                <div>
+                  <h5>David Wilson</h5>
+                  <p>Product Manager, NextGen Solutions</p>
+                </div>
               </div>
             </div>
           </div>
-        </footer>
-        <!-- END FOOTER -->
-      </div>
-    </main>
-    <!-- END MAIN CONTENT -->
+        </div>
+      </section>
+      <!-- END TESTIMONIALS -->
 
-    <script src="./index.js" type="module"></script>
-  </body>
+      <!-- CONTACT SECTION -->
+
+      <!-- FAQ -->
+      <section class="sect">
+        <div class="sect-container">
+          <h2 class="anim-text-chars-in">Frequently asked questions</h2>
+          <div class="flex flex-col gap-4 w-full">
+            <!-- QUESTION 1 -->
+            <div class="card faq-item anim-in">
+              <div class="question">
+                <h5>Lorem ipsum dolor sit amet?</h5>
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </div>
+              <p class="answer">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Vestibulum ac turpis vel lectus tempus fermentum. Donec
+                maximus maximus lacinia. Donec sodales purus sed ultricies
+                imperdiet. Vivamus vel sem tristique mauris imperdiet volutpat
+                eu aliquet nisl. In tincidunt, enim a consequat accumsan,
+                augue libero facilisis nulla, ac efficitur justo nulla id
+                libero. Aenean convallis mauris lorem, et tempor lorem
+                lobortis nec. Vestibulum id risus mauris. Cras ut est lacinia
+                leo consequat mattis.
+              </p>
+            </div>
+
+            <!-- QUESTION 2 -->
+            <div class="card faq-item anim-in">
+              <div class="question">
+                <h5>Lorem ipsum dolor sit amet?</h5>
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </div>
+              <p class="answer">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Vestibulum ac turpis vel lectus tempus fermentum. Donec
+                maximus maximus lacinia. Donec sodales purus sed ultricies
+                imperdiet. Vivamus vel sem tristique mauris imperdiet volutpat
+                eu aliquet nisl. In tincidunt, enim a consequat accumsan,
+                augue libero facilisis nulla, ac efficitur justo nulla id
+                libero. Aenean convallis mauris lorem, et tempor lorem
+                lobortis nec. Vestibulum id risus mauris. Cras ut est lacinia
+                leo consequat mattis.
+              </p>
+            </div>
+
+            <!-- QUESTION 3 -->
+            <div class="card faq-item anim-in">
+              <div class="question">
+                <h5>Lorem ipsum dolor sit amet?</h5>
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </div>
+              <p class="answer">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Vestibulum ac turpis vel lectus tempus fermentum. Donec
+                maximus maximus lacinia. Donec sodales purus sed ultricies
+                imperdiet. Vivamus vel sem tristique mauris imperdiet volutpat
+                eu aliquet nisl. In tincidunt, enim a consequat accumsan,
+                augue libero facilisis nulla, ac efficitur justo nulla id
+                libero. Aenean convallis mauris lorem, et tempor lorem
+                lobortis nec. Vestibulum id risus mauris. Cras ut est lacinia
+                leo consequat mattis.
+              </p>
+            </div>
+
+            <!-- QUESTION 4 -->
+            <div class="card faq-item anim-in">
+              <div class="question">
+                <h5>Lorem ipsum dolor sit amet?</h5>
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </div>
+              <p class="answer">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Vestibulum ac turpis vel lectus tempus fermentum. Donec
+                maximus maximus lacinia. Donec sodales purus sed ultricies
+                imperdiet. Vivamus vel sem tristique mauris imperdiet volutpat
+                eu aliquet nisl. In tincidunt, enim a consequat accumsan,
+                augue libero facilisis nulla, ac efficitur justo nulla id
+                libero. Aenean convallis mauris lorem, et tempor lorem
+                lobortis nec. Vestibulum id risus mauris. Cras ut est lacinia
+                leo consequat mattis.
+              </p>
+            </div>
+
+            <!-- QUESTION 5 -->
+            <div class="card faq-item anim-in">
+              <div class="question">
+                <h5>Lorem ipsum dolor sit amet?</h5>
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </div>
+              <p class="answer">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Vestibulum ac turpis vel lectus tempus fermentum. Donec
+                maximus maximus lacinia. Donec sodales purus sed ultricies
+                imperdiet. Vivamus vel sem tristique mauris imperdiet volutpat
+                eu aliquet nisl. In tincidunt, enim a consequat accumsan,
+                augue libero facilisis nulla, ac efficitur justo nulla id
+                libero. Aenean convallis mauris lorem, et tempor lorem
+                lobortis nec. Vestibulum id risus mauris. Cras ut est lacinia
+                leo consequat mattis.
+              </p>
+            </div>
+
+            <!-- QUESTION 6 -->
+            <div class="card faq-item anim-in">
+              <div class="question">
+                <h5>Lorem ipsum dolor sit amet?</h5>
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </div>
+              <p class="answer">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Vestibulum ac turpis vel lectus tempus fermentum. Donec
+                maximus maximus lacinia. Donec sodales purus sed ultricies
+                imperdiet. Vivamus vel sem tristique mauris imperdiet volutpat
+                eu aliquet nisl. In tincidunt, enim a consequat accumsan,
+                augue libero facilisis nulla, ac efficitur justo nulla id
+                libero. Aenean convallis mauris lorem, et tempor lorem
+                lobortis nec. Vestibulum id risus mauris. Cras ut est lacinia
+                leo consequat mattis.
+              </p>
+            </div>
+            <!-- END QUESTIONS -->
+          </div>
+        </div>
+      </section>
+      <!-- END FAQ -->
+
+      <!-- FOOTER -->
+      <footer class="sect bg-primary text-contrast">
+        <div class="sect-container flex-col gap-8">
+          <div class="flex justify-between w-full gap-4">
+            <div class="flex w-full flex-col items-start gap-4">
+              <a href="#">
+                <img src="/logo.svg" alt="Logo" class="h-10 object-contain invert" />
+              </a>
+              <p class="max-w-sm">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                pharetra, nibh quis convallis mattis, est mauris pretium
+                magna.
+              </p>
+            </div>
+            <div class="flex flex-col w-fit gap-2 min-w-48">
+              <p class="mb-2"><b>Solutions</b></p>
+              <a href="#">Solution 1</a>
+              <a href="#">Solution 2</a>
+              <a href="#">Solution 3</a>
+              <a href="#">Solution 4</a>
+              <a href="#">Solution 5</a>
+            </div>
+            <div class="flex flex-col w-fit gap-2 min-w-48">
+              <p class="mb-2"><b>Help</b></p>
+              <a href="#">Customer service</a>
+              <a href="#">Forum</a>
+              <a href="#">FAQ</a>
+              <a href="#">Privacy policy</a>
+              <a href="#">Terms of use</a>
+            </div>
+            <div class="flex flex-col w-fit gap-2 min-w-48">
+              <p class="mb-2"><b>Company</b></p>
+              <a href="#">Who we are</a>
+              <a href="#">Our team</a>
+              <a href="#">Work with us</a>
+              <a href="#">Contact us</a>
+            </div>
+          </div>
+          <div class="flex w-full items-center justify-between pt-4 border-t border-neutral-700">
+            <p>© 2025 Company. All rights reserved.</p>
+            <div class="flex gap-4 items-center">
+              <!-- GITHUB LINK -->
+              <a href="https://github.com/codenhub/" target="_blank" class="size-6">
+                <svg viewBox="0 0 20 20" fill="currentColor">
+                  <path transform="translate(-84.000000, -7399.000000)"
+                    d="M94,7399 C99.523,7399 104,7403.59 104,7409.253 C104,7413.782 101.138,7417.624 97.167,7418.981 C96.66,7419.082 96.48,7418.762 96.48,7418.489 C96.48,7418.151 96.492,7417.047 96.492,7415.675 C96.492,7414.719 96.172,7414.095 95.813,7413.777 C98.04,7413.523 100.38,7412.656 100.38,7408.718 C100.38,7407.598 99.992,7406.684 99.35,7405.966 C99.454,7405.707 99.797,7404.664 99.252,7403.252 C99.252,7403.252 98.414,7402.977 96.505,7404.303 C95.706,7404.076 94.85,7403.962 94,7403.958 C93.15,7403.962 92.295,7404.076 91.497,7404.303 C89.586,7402.977 88.746,7403.252 88.746,7403.252 C88.203,7404.664 88.546,7405.707 88.649,7405.966 C88.01,7406.684 87.619,7407.598 87.619,7408.718 C87.619,7412.646 89.954,7413.526 92.175,7413.785 C91.889,7414.041 91.63,7414.493 91.54,7415.156 C90.97,7415.418 89.522,7415.871 88.63,7414.304 C88.63,7414.304 88.101,7413.319 87.097,7413.247 C87.097,7413.247 86.122,7413.234 87.029,7413.87 C87.029,7413.87 87.684,7414.185 88.139,7415.37 C88.139,7415.37 88.726,7417.2 91.508,7416.58 C91.513,7417.437 91.522,7418.245 91.522,7418.489 C91.522,7418.76 91.338,7419.077 90.839,7418.982 C86.865,7417.627 84,7413.783 84,7409.253 C84,7403.59 88.478,7399 94,7399">
+                  </path>
+                </svg>
+              </a>
+              <!-- INSTAGRAM LINK -->
+              <a href="https://www.instagram.com/coden.agency" target="_blank" class="size-6">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z" />
+                  <path
+                    d="M18 5C17.4477 5 17 5.44772 17 6C17 6.55228 17.4477 7 18 7C18.5523 7 19 6.55228 19 6C19 5.44772 18.5523 5 18 5Z" />
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M1.65396 4.27606C1 5.55953 1 7.23969 1 10.6V13.4C1 16.7603 1 18.4405 1.65396 19.7239C2.2292 20.8529 3.14708 21.7708 4.27606 22.346C5.55953 23 7.23969 23 10.6 23H13.4C16.7603 23 18.4405 23 19.7239 22.346C20.8529 21.7708 21.7708 20.8529 22.346 19.7239C23 18.4405 23 16.7603 23 13.4V10.6C23 7.23969 23 5.55953 22.346 4.27606C21.7708 3.14708 20.8529 2.2292 19.7239 1.65396C18.4405 1 16.7603 1 13.4 1H10.6C7.23969 1 5.55953 1 4.27606 1.65396C3.14708 2.2292 2.2292 3.14708 1.65396 4.27606ZM13.4 3H10.6C8.88684 3 7.72225 3.00156 6.82208 3.0751C5.94524 3.14674 5.49684 3.27659 5.18404 3.43597C4.43139 3.81947 3.81947 4.43139 3.43597 5.18404C3.27659 5.49684 3.14674 5.94524 3.0751 6.82208C3.00156 7.72225 3 8.88684 3 10.6V13.4C3 15.1132 3.00156 16.2777 3.0751 17.1779C3.14674 18.0548 3.27659 18.5032 3.43597 18.816C3.81947 19.5686 4.43139 20.1805 5.18404 20.564C5.49684 20.7234 5.94524 20.8533 6.82208 20.9249C7.72225 20.9984 8.88684 21 10.6 21H13.4C15.1132 21 16.2777 20.9984 17.1779 20.9249C18.0548 20.8533 18.5032 20.7234 18.816 20.564C19.5686 20.1805 20.1805 19.5686 20.564 18.816C20.7234 18.5032 20.8533 18.0548 20.9249 17.1779C20.9984 16.2777 21 15.1132 21 13.4V10.6C21 8.88684 20.9984 7.72225 20.9249 6.82208C20.8533 5.94524 20.7234 5.49684 20.564 5.18404C20.1805 4.43139 19.5686 3.81947 18.816 3.43597C18.5032 3.27659 18.0548 3.14674 17.1779 3.0751C16.2777 3.00156 15.1132 3 13.4 3Z" />
+                </svg>
+              </a>
+              <!-- FACEBOOK LINK -->
+              <a href="https://www.facebook.com/yourpage" target="_blank" class="size-6">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M20 1C21.6569 1 23 2.34315 23 4V20C23 21.6569 21.6569 23 20 23H4C2.34315 23 1 21.6569 1 20V4C1 2.34315 2.34315 1 4 1H20ZM20 3C20.5523 3 21 3.44772 21 4V20C21 20.5523 20.5523 21 20 21H15V13.9999H17.0762C17.5066 13.9999 17.8887 13.7245 18.0249 13.3161L18.4679 11.9871C18.6298 11.5014 18.2683 10.9999 17.7564 10.9999H15V8.99992C15 8.49992 15.5 7.99992 16 7.99992H18C18.5523 7.99992 19 7.5522 19 6.99992V6.31393C19 5.99091 18.7937 5.7013 18.4813 5.61887C17.1705 5.27295 16 5.27295 16 5.27295C13.5 5.27295 12 6.99992 12 8.49992V10.9999H10C9.44772 10.9999 9 11.4476 9 11.9999V12.9999C9 13.5522 9.44771 13.9999 10 13.9999H12V21H4C3.44772 21 3 20.5523 3 20V4C3 3.44772 3.44772 3 4 3H20Z" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- END FOOTER -->
+    </div>
+  </main>
+  <!-- END MAIN CONTENT -->
+
+  <script type="module" src="./_ui/components/index.js"></script>
+  <script src="./index.js" type="module"></script>
+</body>
+
 </html>

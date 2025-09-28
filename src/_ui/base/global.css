@@ -17,4 +17,8 @@
   button {
     @apply [&:not(:disabled)]:cursor-pointer;
   }
+
+  img {
+    @apply select-none;
+  }
 }
