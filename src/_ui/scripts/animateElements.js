@@ -2,8 +2,9 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollSmoother } from "gsap/ScrollSmoother";
 import { SplitText } from "gsap/SplitText";
+import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
 
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText);
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText, DrawSVGPlugin);
 
 export default function animateElements() {
   // ANIMATE ELEMENTS
@@ -65,22 +66,7 @@ export default function animateElements() {
   gsap.utils.toArray(".anim-text-in").forEach((el) => {
     let split = SplitText.create(el, { type: "lines" });
     gsap.from(split.lines, {
-      y: 50,
-      opacity: 0,
-      duration: 0.8,
-      ease: "power1.inOut",
-      stagger: { amount: 0.8 },
-      scrollTrigger: {
-        trigger: el,
-        start: "top bottom",
-        toggleActions: "play none none none",
-      },
-    });
-  });
-  gsap.utils.toArray(".anim-text-words-in").forEach((el) => {
-    let split = SplitText.create(el, { type: "words" });
-    gsap.from(split.words, {
-      y: 50,
+      yPercent: 120,
       opacity: 0,
       duration: 0.8,
       ease: "power1.inOut",
@@ -93,10 +79,9 @@ export default function animateElements() {
     });
   });
   gsap.utils.toArray(".anim-text-chars-in").forEach((el) => {
-    let split = SplitText.create(el, { type: "chars" });
+    let split = SplitText.create(el, { type: "chars, words" });
     gsap.from(split.chars, {
-      x: 100,
-      // rotate: 15,
+      x: 50,
       opacity: 0,
       duration: 0.8,
       ease: "power1.inOut",
@@ -110,10 +95,36 @@ export default function animateElements() {
   });
   // END ANIMATE TEXT
 
+  // ANIMATE SVGS
+  gsap.utils.toArray(".draw").forEach((el) => {
+    gsap.from(el, {
+      drawSVG: "0%",
+      duration: 0.8,
+      ease: "power1.inOut",
+      scrollTrigger: {
+        trigger: el,
+        start: "top bottom",
+        toggleActions: "play none none none",
+      },
+    });
+  });
+  // END ANIMATE SVGS
+
   // SMOOTH SCROLL
-  ScrollSmoother.create({
+  const smoother = ScrollSmoother.create({
     smooth: 1,
     effects: true,
     smoothTouch: 0.1,
   });
+
+  document.querySelectorAll("a[href^='#']").forEach((anchor) => {
+    anchor.addEventListener("click", (e) => {
+      e.preventDefault();
+      let target = document.querySelector(anchor.getAttribute("href"));
+      if (target) {
+        smoother.scrollTo(target, true, "top 20px");
+      }
+    });
+  });
+  // END SMOOTH SCROLL
 }

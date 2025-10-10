@@ -17,6 +17,10 @@
     & .question {
       @apply flex items-center justify-between;
 
+      & h5 {
+        @apply font-semibold;
+      }
+
       & svg {
         @apply size-6 transition-all duration-400;
       }

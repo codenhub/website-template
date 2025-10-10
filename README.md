@@ -7,7 +7,7 @@ This is a minimal, opinionated template for static websites. Use the structure a
 - Minimal Vite setup for fast local dev and small production bundles.
 - TailwindCSS configured for utility-first styling and rapid prototyping.
 - Prettier configuration for consistent formatting.
-- GSAP and dotlottie-web included for advanced, performant animations.
+- GSAP for advanced, performant animations.
 - Small, easy-to-understand file structure to get started quickly.
 
 ## Quick start
@@ -23,30 +23,32 @@ This is a minimal, opinionated template for static websites. Use the structure a
 
 (Adjust commands to your package manager as needed.)
 
-## Project structure (concise)
+## Project structure
 
-- index.html — entry HTML.
-- package.json — scripts and deps.
-- vite.config.* — Vite configuration.
-- tailwind.config.* — Tailwind configuration.
 - src/
-  - main.* — JS/TS entry.
-  - assets/ — images, fonts, lottie files.
-  - styles/ — Tailwind entry / CSS.
-  - components/ — reusable UI pieces.
-  - pages/ — page-level components or routes.
-- public/ — static files copied as-is to build output.
-- README.md — this file.
+  - \_public/ - static files copied as-is to build output.
+    - assets/ - images, icons, fonts
+    - robots.txt - search engine crawlers instructions
+    - sitemap.xml - the sitemap of the website
+  - \_ui/ - interface core.
+    - base/ - global CSS styling.
+    - components/ - reusable UI pieces.
+    - scripts/ - global JS scripts.
+    - main.\* - JS/CSS entry.
+  - index.html - entry HTML.
+- package.json - scripts and deps.
+- README.md - this file.
+- vite.config.js - Vite configuration.
+- wrangler-toml - Cloudflare workers configuration
 
 This layout keeps runnable code in src/, static assets in public/ and build config at the repo root.
 
 ## Technology stack
 
-- Vite — fast dev server and build tool.
-- TailwindCSS — utility-first styling, good for small teams and rapid iterations.
-- Prettier — code formatting.
-- GSAP — performant animations when you need more control.
-- dotlottie-web — easy integration for SVG/lottie animations.
+- Vite - fast dev server and build tool.
+- TailwindCSS - utility-first styling, good for small teams and rapid iterations.
+- Prettier - code formatting.
+- GSAP - performant animations when you need more control.
 - (Optional) Add TypeScript if you want static typing.
 
 ## Good for
@@ -54,10 +56,3 @@ This layout keeps runnable code in src/, static assets in public/ and build conf
 - Landing pages, product microsites, and developer portfolios.
 - Fast prototyping with Tailwind utilities.
 - Projects where small bundle size and quick iteration matter.
-
-## Recommendations
-
-- Purge unused Tailwind classes in production (via the configured content option).
-- Keep animations lightweight; prefer CSS where possible and GSAP for complex sequences.
-- Add a linting step (ESLint) if the project grows.
-- Use feature branches and small commits when customizing the template.

@@ -1,6 +1,6 @@
 @layer base {
   * {
-    font-family: "Segoe UI", system-ui, sans-serif;
+    font-family: "Segoe UI", sans-serif;
     color: var(--color-text); /* Text color */
   }
 
@@ -39,6 +39,6 @@
   }
 
   p {
-    @apply text-base font-normal tracking-wide;
+    @apply text-base font-normal tracking-wider;
   }
 }

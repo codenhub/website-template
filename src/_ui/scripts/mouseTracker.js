@@ -3,21 +3,7 @@ export default function initMouseTracker() {
   mouseTracker.classList.add("mouse-tracker");
   document.body.appendChild(mouseTracker);
 
-  let mouseX = 0;
-  let mouseY = 0;
-  let cursorX = 0;
-  let cursorY = 0;
   let moveTimer;
-
-  const updateCursor = () => {
-    cursorX += (mouseX - cursorX) * 0.15;
-    cursorY += (mouseY - cursorY) * 0.15;
-
-    mouseTracker.style.left = cursorX + "px";
-    mouseTracker.style.top = cursorY + "px";
-
-    requestAnimationFrame(updateCursor);
-  };
 
   const cursorMoving = () => {
     mouseTracker.classList.add("moving");
@@ -28,11 +14,16 @@ export default function initMouseTracker() {
     }, 100);
   };
 
-  updateCursor();
-
   document.addEventListener("mousemove", async (e) => {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
+    const { clientX, clientY } = e;
+
+    mouseTracker.animate(
+      {
+        left: `${clientX}px`,
+        top: `${clientY}px`,
+      },
+      { duration: 800, fill: "forwards" },
+    );
 
     cursorMoving();
   });

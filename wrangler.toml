@@ -1,0 +1,5 @@
+name = "website-template"
+compatibility_date = "2025-10-08"
+
+[assets]
+directory = "./dist"

@@ -29,6 +29,7 @@
   body:hover .mouse-tracker {
     @apply md:opacity-100;
   }
+
   .mouse-tracker {
     @apply fixed -top-8 -left-8 size-8 rounded-full border border-primary/40 bg-primary/10 -translate-1/2 transition duration-800 pointer-events-none z-999 opacity-0;
 
@@ -56,10 +57,10 @@
   }
 
   .secondary-btn {
-    @apply bg-accent hover:bg-accent-hover font-semibold flex items-center justify-center px-4 py-2 min-h-10 rounded-md transition duration-400;
+    @apply bg-accent hover:bg-accent-hover text-accent-contrast font-semibold flex items-center justify-center px-4 py-2 min-h-10 rounded-md transition duration-400;
   }
 
   .card {
-    @apply flex flex-col p-8 gap-4 border bg-background border-accent rounded-md hover:shadow-md transition-shadow duration-400;
+    @apply flex flex-col p-8 gap-4 border bg-background border-neutral-300 rounded-md hover:shadow-md transition-shadow duration-400;
   }
 }

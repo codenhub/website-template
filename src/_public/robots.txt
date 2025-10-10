@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-# Sitemap: https://dominio.com/sitemap.xml
+Sitemap: https://website-template.coden.agency/sitemap.xml
