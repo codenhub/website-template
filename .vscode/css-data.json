@@ -16,6 +16,10 @@
     {
       "name": "@reference",
       "description": "A custom at-rule for referencing other CSS files."
+    },
+    {
+      "name": "@utility",
+      "description": "A custom at-rule for defining utility classes."
     }
   ]
 }
