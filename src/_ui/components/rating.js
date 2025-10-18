@@ -1,6 +1,6 @@
 class Rating extends HTMLElement {
   connectedCallback() {
-    this.outerHTML = `
+    this.innerHTML = `
       <div class="flex gap-1">
         <svg
           viewBox="0 0 24 24"

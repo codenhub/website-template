@@ -16,12 +16,14 @@
 
 @layer base {
   * {
-    color: var(--color-text); /* Text color */
+    color: var(--color-text);
+    /* Text color */
   }
 
   .text-contrast,
   .text-contrast * {
-    color: var(--color-primary-contrast); /* Text contrast color */
+    color: var(--color-primary-contrast);
+    /* Text contrast color */
   }
 
   ::selection {
@@ -30,11 +32,11 @@
   }
 
   h1 {
-    @apply text-7xl font-bebas tracking-tight;
+    @apply text-7xl md:text-8xl font-bebas tracking-tight;
   }
 
   h2 {
-    @apply text-5xl font-bebas tracking-tight;
+    @apply text-5xl md:text-6xl font-bebas tracking-tight;
   }
 
   h3 {
