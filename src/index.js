@@ -22,7 +22,6 @@ document.addEventListener("DOMContentLoaded", () => {
     trigger: ".counters",
     start: "top bottom",
     onEnter: () => {
-      console.log("entered");
       counters.forEach((counter) => {
         const updateCount = () => {
           const target = +counter.getAttribute("data-target");
@@ -40,7 +39,4 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   });
   // END COUNTER ANIMATION
-
-  // ELEMENTS ANIMATIONS
-  // END ELEMENTS ANIMATIONS
 });
