@@ -21,8 +21,6 @@ This is a minimal, opinionated template for static websites. Use the structure a
 4. Preview build:
    - npm run preview
 
-(Adjust commands to your package manager as needed.)
-
 ## Project structure
 
 - src/
