@@ -1,4 +1,4 @@
-# Website template by Coden
+# Website template
 
 This is a minimal, opinionated template for static websites. Use the structure and starter content, or strip everything and start fresh. Suitable for landing pages, portfolios, documentation sites, or simple marketing sites.
 
@@ -47,7 +47,6 @@ This layout keeps runnable code in src/, static assets in public/ and build conf
 - TailwindCSS - utility-first styling, good for small teams and rapid iterations.
 - Prettier - code formatting.
 - GSAP - performant animations when you need more control.
-- (Optional) Add TypeScript if you want static typing.
 
 ## Good for
 

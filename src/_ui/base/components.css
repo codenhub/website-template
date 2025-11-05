@@ -1,5 +1,4 @@
 @layer base {
-
   input,
   textarea {
     @apply flex p-2 min-h-10 rounded-md border border-accent focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-200;
@@ -32,7 +31,7 @@
   }
 
   .mouse-tracker {
-    @apply fixed -top-8 -left-8 size-8 rounded-full border border-primary/40 bg-primary/10 -translate-1/2 transition duration-800 pointer-events-none z-999 opacity-0;
+    @apply fixed -top-8 -left-8 size-16 rounded-full border border-primary/40 bg-primary/10 -translate-1/2 transition duration-800 pointer-events-none z-999 opacity-0;
 
     &.moving {
       @apply scale-160 duration-400;
