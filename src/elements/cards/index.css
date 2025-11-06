@@ -1,0 +1,10 @@
+@reference "../../_ui/main.css";
+
+@layer components {
+  .neobrutalism-card {
+    @apply flex gap-4 w-full items-center p-8 border-2 border-neutral-950 shadow-[4px_4px_0_#0a0a0a] hover:shadow-[2px_2px_0_#0a0a0a] hover:translate-0.5 transition duration-400;
+  }
+  .neobrutalism-btn {
+    @apply bg-primary text-neutral-50 flex w-fit px-4 py-2 font-semibold border-2 border-neutral-950 shadow-[4px_4px_0_#0a0a0a] hover:shadow-[2px_2px_0_#0a0a0a] hover:translate-0.5 active:shadow-[0_0_0_#0a0a0a] active:translate-1 transition duration-400;
+  }
+}

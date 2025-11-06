@@ -43,7 +43,7 @@ class Footer extends HTMLElement {
               <a href="#">Contact us</a>
             </div>
           </div>
-          <div class="flex w-full flex-wrap gap-4 items-center justify-between pt-4 border-t border-neutral-50">
+          <div class="flex w-full flex-wrap gap-4 items-center justify-between pt-4 border-t border-border">
             <p>Made with ❤️ by <a href="https://coden.agency/" target="_blank">Coden</a></p>
             <div class="flex gap-4 items-center">
               <!-- GITHUB LINK -->

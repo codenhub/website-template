@@ -37,7 +37,7 @@
       @apply scale-160 duration-400;
     }
 
-    /* FOR CONSTRAST WITH PRIMARY BACKGROUND */
+    /* FOR CONTRAST WITH PRIMARY BACKGROUND */
     &::after {
       @apply absolute inset-0 rounded-full border border-primary-contrast/40 bg-primary-contrast/10 transition duration-800 pointer-events-none z-999;
       content: "";
@@ -53,14 +53,14 @@
   }
 
   .primary-btn {
-    @apply bg-primary hover:bg-primary-hover text-neutral-50 font-semibold flex items-center justify-center px-4 py-2 min-h-10 rounded-md transition duration-400;
+    @apply bg-primary hover:bg-primary-hover text-neutral-50 font-semibold flex w-fit items-center justify-center px-4 py-2 min-h-10 rounded-md transition duration-400;
   }
 
   .secondary-btn {
-    @apply bg-accent hover:bg-accent-hover text-accent-contrast font-semibold flex items-center justify-center px-4 py-2 min-h-10 rounded-md transition duration-400;
+    @apply bg-accent hover:bg-accent-hover text-accent-contrast font-semibold flex w-fit items-center justify-center px-4 py-2 min-h-10 rounded-md transition duration-400;
   }
 
   .card {
-    @apply flex flex-col p-8 gap-4 border bg-background border-border rounded-md hover:shadow-md transition-shadow duration-400;
+    @apply flex flex-col p-8 gap-4 border bg-background border-border rounded-md shadow-primary/10 hover:shadow-md transition-shadow duration-400;
   }
 }
