@@ -1,10 +1,33 @@
 @reference "../../_ui/main.css";
 
+@theme {
+  --shadow-neumorphism: 6px 6px 12px #d4d4d4, -6px -6px 12px #fafafa;
+  --shadow-neumorphism-hover:
+    inset 4px 4px 12px #d4d4d4, inset -4px -4px 12px #fafafa;
+}
+
 @layer components {
-  .neobrutalism-card {
-    @apply flex gap-4 w-full items-center p-8 border-2 border-neutral-950 shadow-[4px_4px_0_#0a0a0a] hover:shadow-[2px_2px_0_#0a0a0a] hover:translate-0.5 transition duration-400;
+  .flat-card {
+    @apply flex gap-4 flex-1 min-w-md items-center bg-background-secondary rounded-xl p-8;
   }
+
+  .border-card {
+    @apply flex gap-4 flex-1 min-w-sm items-center rounded-xl p-8 border border-border hover:border-primary hover:shadow-lg transition duration-400;
+  }
+
+  .neobrutalism-card {
+    @apply flex gap-4 flex-1 min-w-sm items-center p-8 border-2 border-neutral-950 shadow-[4px_4px_0_#0a0a0a] hover:shadow-[2px_2px_0_#0a0a0a] hover:translate-0.5 transition duration-400;
+  }
+
   .neobrutalism-btn {
     @apply bg-primary text-neutral-50 flex w-fit px-4 py-2 font-semibold border-2 border-neutral-950 shadow-[4px_4px_0_#0a0a0a] hover:shadow-[2px_2px_0_#0a0a0a] hover:translate-0.5 active:shadow-[0_0_0_#0a0a0a] active:translate-1 transition duration-400;
+  }
+
+  .glassmorphism-card {
+    @apply flex gap-4 flex-1 min-w-sm items-center p-8 border border-border rounded-xl backdrop-blur-md bg-neutral-50/30 hover:scale-105 hover:-translate-y-2 transition duration-400;
+  }
+
+  .neumorphism-card {
+    @apply flex gap-4 flex-1 min-w-sm items-center p-8 rounded-xl bg-background shadow-neumorphism hover:shadow-neumorphism-hover;
   }
 }

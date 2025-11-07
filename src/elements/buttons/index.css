@@ -1,0 +1,7 @@
+@reference "../../_ui/main.css";
+
+@theme {
+  --shadow-neumorphism-btn: 6px 6px 12px #d4d4d4, -6px -6px 12px #fafafa;
+  --shadow-neumorphism-btn-hover:
+    inset 4px 4px 12px #d4d4d4, inset -4px -4px 12px #fafafa;
+}
