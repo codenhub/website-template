@@ -7,7 +7,7 @@
 
 @layer components {
   .loader {
-    @apply bg-neutral-200 fixed inset-0 z-999 skew-x-10 transition-all duration-800 ease-out;
+    @apply bg-background-secondary fixed inset-0 z-999 skew-x-10 transition-all duration-800 ease-out;
 
     &.left {
       @apply -translate-x-2/10;
@@ -53,7 +53,7 @@
   }
 
   .primary-btn {
-    @apply bg-primary hover:bg-primary-hover text-neutral-50 font-semibold flex w-fit items-center justify-center px-4 py-2 min-h-10 rounded-md transition duration-400;
+    @apply bg-primary hover:bg-primary-hover text-primary-contrast font-semibold flex w-fit items-center justify-center px-4 py-2 min-h-10 rounded-md transition duration-400;
   }
 
   .secondary-btn {
