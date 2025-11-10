@@ -14,7 +14,7 @@
   font-display: swap;
 }
 
-@utility font-bebas {
+@utility font-title {
   font-family: "Bebas Neue", "Inter", "Segoe UI", system-ui, sans-serif;
 }
 
@@ -40,11 +40,11 @@
   }
 
   h1 {
-    @apply text-7xl md:text-8xl font-bebas tracking-tight;
+    @apply text-7xl md:text-8xl font-title tracking-tight;
   }
 
   h2 {
-    @apply text-5xl md:text-6xl font-bebas tracking-tight;
+    @apply text-5xl md:text-6xl font-title tracking-tight;
   }
 
   h3 {
