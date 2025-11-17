@@ -7,7 +7,7 @@
 
 @layer components {
   .loader {
-    @apply bg-background-secondary fixed inset-0 z-999 skew-x-10 transition-all duration-800 ease-out;
+    @apply bg-foreground fixed inset-0 z-999 skew-x-10 transition-all duration-800 ease-out;
 
     &.left {
       @apply -translate-x-2/10;
@@ -61,6 +61,6 @@
   }
 
   .card {
-    @apply flex flex-col p-8 gap-4 border bg-background border-border rounded-md shadow-primary/10 hover:shadow-md transition-shadow duration-400;
+    @apply flex flex-col p-8 gap-4 border bg-background border-border rounded-md shadow-primary/10 hover:shadow-md hover:border-primary transition duration-400;
   }
 }

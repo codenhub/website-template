@@ -7,7 +7,7 @@
   --color-accent-hover: var(--color-neutral-400);
   --color-border: var(--color-neutral-300);
   --color-background: var(--color-neutral-50);
-  --color-background-secondary: var(--color-neutral-100);
+  --color-foreground: var(--color-neutral-100);
   --color-text: var(--color-neutral-950);
   --color-text-secondary: var(--color-neutral-700);
 }
