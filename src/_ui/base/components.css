@@ -61,6 +61,6 @@
   }
 
   .card {
-    @apply flex flex-col p-8 gap-4 border bg-background border-border rounded-md shadow-primary/10 hover:shadow-md hover:border-primary transition duration-400;
+    @apply flex flex-col p-8 gap-4 border bg-background border-border rounded-md shadow-primary/10 hover:shadow-md hover:border-primary transition-[box-shadow,_border] duration-400;
   }
 }

@@ -8,7 +8,7 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText, DrawSVGPlugin);
 
 export default function animateElements() {
   // ANIMATE ELEMENTS
-  gsap.utils.toArray(".anim-in").forEach((el) => {
+  gsap.utils.toArray(".slide-up-in").forEach((el) => {
     gsap.from(el, {
       y: 100,
       opacity: 0,
@@ -21,7 +21,7 @@ export default function animateElements() {
       },
     });
   });
-  gsap.utils.toArray(".anim-left-in").forEach((el) => {
+  gsap.utils.toArray(".slide-left-in").forEach((el) => {
     gsap.from(el, {
       x: 200,
       opacity: 0,
@@ -34,7 +34,7 @@ export default function animateElements() {
       },
     });
   });
-  gsap.utils.toArray(".anim-right-in").forEach((el) => {
+  gsap.utils.toArray(".slide-right-in").forEach((el) => {
     gsap.from(el, {
       x: -200,
       opacity: 0,
@@ -47,7 +47,7 @@ export default function animateElements() {
       },
     });
   });
-  gsap.utils.toArray(".anim-down-in").forEach((el) => {
+  gsap.utils.toArray(".slide-down-in").forEach((el) => {
     gsap.from(el, {
       y: -50,
       opacity: 0,
@@ -63,7 +63,7 @@ export default function animateElements() {
   // END ANIMATE ELEMENTS
 
   // ANIMATE TEXT
-  gsap.utils.toArray(".anim-text-in").forEach((el) => {
+  gsap.utils.toArray(".split-text").forEach((el) => {
     let split = SplitText.create(el, { type: "lines" });
     gsap.from(split.lines, {
       yPercent: 120,
@@ -78,7 +78,7 @@ export default function animateElements() {
       },
     });
   });
-  gsap.utils.toArray(".anim-text-chars-in").forEach((el) => {
+  gsap.utils.toArray(".split-chars").forEach((el) => {
     let split = SplitText.create(el, { type: "chars, words" });
     gsap.from(split.chars, {
       x: 50,

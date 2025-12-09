@@ -2,7 +2,7 @@ class Header extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
       <header
-        class="flex p-4 justify-center bg-background/80 backdrop-blur-sm fixed inset-x-0 anim-down-in border-b border-transparent z-99 transition-all duration-400">
+        class="flex p-4 justify-center bg-background/80 backdrop-blur-sm fixed inset-x-0 slide-down-in border-b border-transparent z-99 transition-all duration-400">
         <div class="sect-container flex-row justify-between">
           <a href="#">
             <img src="/logo.svg" alt="Logo" class="h-10 object-contain" />
