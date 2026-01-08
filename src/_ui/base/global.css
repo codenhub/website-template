@@ -15,7 +15,7 @@
   }
 
   button {
-    @apply [&:not(:disabled)]:cursor-pointer;
+    @apply not-disabled:cursor-pointer;
   }
 
   img {
