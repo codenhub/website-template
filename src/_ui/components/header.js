@@ -22,7 +22,7 @@ class Header extends HTMLElement {
 
           <!-- MOBILE NAV -->
           <div class="flex md:hidden">
-            <input type="checkbox" name="mobile-menu" id="mobile-menu" class="peer sr-only" />
+            <input type="checkbox" name="mobile-menu" id="mobile-menu" class="peer sr-only" aria-label="Mobile menu toggle button" />
             <label class="flex flex-col w-6 gap-1.5 py-2 cursor-pointer" for="mobile-menu">
               <div class="w-full h-0.5 bg-text"></div>
               <div class="w-full h-0.5 bg-text"></div>
