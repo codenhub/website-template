@@ -62,34 +62,58 @@ export default function animateElements() {
   });
 
   // ANIMATE TEXT
-  gsap.utils.toArray(".split-text").forEach((el) => {
-    let split = SplitText.create(el, { type: "lines", aria: "auto" });
-    gsap.from(split.lines, {
-      yPercent: 120,
-      opacity: 0,
-      duration: 0.8,
-      ease: "power1.inOut",
-      stagger: { amount: 0.8 },
-      scrollTrigger: {
-        trigger: el,
-        start: "top bottom",
-        toggleActions: "play none none none",
-      },
+  document.fonts.ready.then(() => {
+    const createAccessibleSplit = (el, options) => {
+      const originalContent = el.innerHTML;
+      const originalText = el.innerText || el.textContent;
+
+      el.innerHTML = "";
+
+      const srSpan = document.createElement("span");
+      srSpan.classList.add("sr-only");
+      srSpan.textContent = originalText;
+      el.appendChild(srSpan);
+
+      const wrapper = document.createElement("span");
+      wrapper.setAttribute("aria-hidden", "true");
+      wrapper.innerHTML = originalContent;
+      el.appendChild(wrapper);
+
+      return SplitText.create(wrapper, options);
+    };
+
+    gsap.utils.toArray(".split-text").forEach((el) => {
+      let split = createAccessibleSplit(el, { type: "lines" });
+
+      gsap.from(split.lines, {
+        yPercent: 120,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power1.inOut",
+        stagger: { amount: 0.8 },
+        scrollTrigger: {
+          trigger: el,
+          start: "top bottom",
+          toggleActions: "play none none none",
+        },
+      });
     });
-  });
-  gsap.utils.toArray(".split-chars").forEach((el) => {
-    let split = SplitText.create(el, { type: "chars, words", aria: "auto" });
-    gsap.from(split.chars, {
-      x: 50,
-      opacity: 0,
-      duration: 0.8,
-      ease: "power1.inOut",
-      stagger: { amount: 0.8 },
-      scrollTrigger: {
-        trigger: el,
-        start: "top bottom",
-        toggleActions: "play none none none",
-      },
+
+    gsap.utils.toArray(".split-chars").forEach((el) => {
+      let split = createAccessibleSplit(el, { type: "chars, words" });
+
+      gsap.from(split.chars, {
+        x: 50,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power1.inOut",
+        stagger: { amount: 0.8 },
+        scrollTrigger: {
+          trigger: el,
+          start: "top bottom",
+          toggleActions: "play none none none",
+        },
+      });
     });
   });
 
