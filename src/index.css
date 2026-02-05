@@ -17,8 +17,8 @@
     & .question {
       @apply flex items-center justify-between;
 
-      & h5 {
-        @apply font-semibold;
+      & h3 {
+        @apply text-lg;
       }
 
       & svg {

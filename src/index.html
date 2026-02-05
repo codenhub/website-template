@@ -27,17 +27,19 @@
       content="A complete website template built with Vite + TailwindCSS. Includes smooth and ready-to-use animations, SEO configs, and a scalable structure."
     />
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="./_ui/main.css" />
+    <link rel="stylesheet" href="./index.css" />
     <link
       rel="preload"
-      href="./_ui/main.css"
-      as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
+      fetchpriority="high"
+      href="/assets/images/clients/google.webp"
+      as="image"
     />
     <link
       rel="preload"
-      href="./index.css"
-      as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
+      fetchpriority="high"
+      href="/assets/images/clients/microsoft.webp"
+      as="image"
     />
     <script type="module" src="./_ui/main.js" defer></script>
     <script type="module" src="./_ui/components/index.js" defer></script>
@@ -983,7 +985,7 @@
                   class="size-12"
                 />
                 <div class="flex flex-col gap-2">
-                  <h4>Well documented</h4>
+                  <h3 class="text-2xl">Well documented</h3>
                   <p class="text-text-secondary">
                     Clean, semantic code with comprehensive documentation. Every
                     component is clearly commented for easy customization and
@@ -1000,7 +1002,7 @@
                   class="size-12"
                 />
                 <div class="flex flex-col gap-2">
-                  <h4>Easy integration</h4>
+                  <h3 class="text-2xl">Easy integration</h3>
                   <p class="text-text-secondary">
                     Compatible with popular frameworks like React, Vue, and
                     Angular. Seamlessly integrate with any existing project or
@@ -1017,7 +1019,7 @@
                   class="size-12"
                 />
                 <div class="flex flex-col gap-2">
-                  <h4>Lightning fast</h4>
+                  <h3 class="text-2xl">Lightning fast</h3>
                   <p class="text-text-secondary">
                     Optimized assets and efficient code ensure sub-second
                     loading times. Built with performance best practices from
@@ -1034,7 +1036,7 @@
                   class="size-12"
                 />
                 <div class="flex flex-col gap-2">
-                  <h4>Light weight</h4>
+                  <h3 class="text-2xl">Light weight</h3>
                   <p class="text-text-secondary">
                     Minimal footprint with no bloated dependencies. Clean CSS
                     and JavaScript that won't slow down your website.
@@ -1050,7 +1052,7 @@
                   class="size-12"
                 />
                 <div class="flex flex-col gap-2">
-                  <h4>Scalable structure</h4>
+                  <h3 class="text-2xl">Scalable structure</h3>
                   <p class="text-text-secondary">
                     Modular component architecture that grows with your needs.
                     Perfect for simple landing pages or complex multi-page
@@ -1067,7 +1069,7 @@
                   class="size-12"
                 />
                 <div class="flex flex-col gap-2">
-                  <h4>Amazing UI/UX</h4>
+                  <h3 class="text-2xl">Amazing UI/UX</h3>
                   <p class="text-text-secondary">
                     Modern design with smooth animations and micro-interactions.
                     Responsive layouts that look perfect on every device and
@@ -1099,13 +1101,13 @@
                   results we never thought possible."
                 </p>
                 <div>
-                  <div
-                    class="size-12 bg-primary text-primary-contrast rounded-full flex items-center justify-center font-bold"
+                  <h3
+                    class="size-12 bg-primary text-primary-contrast rounded-full flex items-center justify-center font-bold text-base"
                   >
                     SM
-                  </div>
+                  </h3>
                   <div>
-                    <h5>Sarah Martinez</h5>
+                    <h4>Sarah Martinez</h4>
                     <p>CEO, TechStart Inc.</p>
                   </div>
                 </div>
@@ -1120,13 +1122,13 @@
                   and within budget."
                 </p>
                 <div>
-                  <div
-                    class="size-12 bg-primary text-primary-contrast rounded-full flex items-center justify-center font-bold"
+                  <h3
+                    class="size-12 bg-primary text-primary-contrast rounded-full flex items-center justify-center font-bold text-base"
                   >
                     JD
-                  </div>
+                  </h3>
                   <div>
-                    <h5>John Davis</h5>
+                    <h4>John Davis</h4>
                     <p>CTO, InnovateCorp</p>
                   </div>
                 </div>
@@ -1141,13 +1143,13 @@
                   to anyone looking for quality."
                 </p>
                 <div>
-                  <div
-                    class="size-12 bg-primary text-primary-contrast rounded-full flex items-center justify-center font-bold"
+                  <h3
+                    class="size-12 bg-primary text-primary-contrast rounded-full flex items-center justify-center font-bold text-base"
                   >
                     ER
-                  </div>
+                  </h3>
                   <div>
-                    <h5>Emily Rodriguez</h5>
+                    <h4>Emily Rodriguez</h4>
                     <p>Marketing Director, GrowthLab</p>
                   </div>
                 </div>
@@ -1162,13 +1164,13 @@
                   We couldn't be happier!"
                 </p>
                 <div>
-                  <div
-                    class="size-12 bg-primary text-primary-contrast rounded-full flex items-center justify-center font-bold"
+                  <h3
+                    class="size-12 bg-primary text-primary-contrast rounded-full flex items-center justify-center font-bold text-base"
                   >
                     MT
-                  </div>
+                  </h3>
                   <div>
-                    <h5>Michael Thompson</h5>
+                    <h4>Michael Thompson</h4>
                     <p>Founder, Digital Ventures</p>
                   </div>
                 </div>
@@ -1183,13 +1185,13 @@
                   of schedule."
                 </p>
                 <div>
-                  <div
-                    class="size-12 bg-primary text-primary-contrast rounded-full flex items-center justify-center font-bold"
+                  <h3
+                    class="size-12 bg-primary text-primary-contrast rounded-full flex items-center justify-center font-bold text-base"
                   >
                     LC
-                  </div>
+                  </h3>
                   <div>
-                    <h5>Lisa Chen</h5>
+                    <h4>Lisa Chen</h4>
                     <p>Operations Manager, FutureTech</p>
                   </div>
                 </div>
@@ -1204,13 +1206,13 @@
                   with them again."
                 </p>
                 <div>
-                  <div
-                    class="size-12 bg-primary text-primary-contrast rounded-full flex items-center justify-center font-bold"
+                  <h3
+                    class="size-12 bg-primary text-primary-contrast rounded-full flex items-center justify-center font-bold text-base"
                   >
                     DW
-                  </div>
+                  </h3>
                   <div>
-                    <h5>David Wilson</h5>
+                    <h4>David Wilson</h4>
                     <p>Product Manager, NextGen</p>
                   </div>
                 </div>
@@ -1228,7 +1230,7 @@
               <!-- QUESTION 1 -->
               <div class="card faq-item slide-up-in">
                 <div class="question">
-                  <h5>Lorem ipsum dolor sit amet?</h5>
+                  <h3>Lorem ipsum dolor sit amet?</h3>
                   <svg viewBox="0 0 24 24" fill="none">
                     <path
                       d="M6 9L12 15L18 9"
@@ -1255,7 +1257,7 @@
               <!-- QUESTION 2 -->
               <div class="card faq-item slide-up-in">
                 <div class="question">
-                  <h5>Lorem ipsum dolor sit amet?</h5>
+                  <h3>Lorem ipsum dolor sit amet?</h3>
                   <svg viewBox="0 0 24 24" fill="none">
                     <path
                       d="M6 9L12 15L18 9"
@@ -1282,7 +1284,7 @@
               <!-- QUESTION 3 -->
               <div class="card faq-item slide-up-in">
                 <div class="question">
-                  <h5>Lorem ipsum dolor sit amet?</h5>
+                  <h3>Lorem ipsum dolor sit amet?</h3>
                   <svg viewBox="0 0 24 24" fill="none">
                     <path
                       d="M6 9L12 15L18 9"
@@ -1309,7 +1311,7 @@
               <!-- QUESTION 4 -->
               <div class="card faq-item slide-up-in">
                 <div class="question">
-                  <h5>Lorem ipsum dolor sit amet?</h5>
+                  <h3>Lorem ipsum dolor sit amet?</h3>
                   <svg viewBox="0 0 24 24" fill="none">
                     <path
                       d="M6 9L12 15L18 9"
@@ -1336,7 +1338,7 @@
               <!-- QUESTION 5 -->
               <div class="card faq-item slide-up-in">
                 <div class="question">
-                  <h5>Lorem ipsum dolor sit amet?</h5>
+                  <h3>Lorem ipsum dolor sit amet?</h3>
                   <svg viewBox="0 0 24 24" fill="none">
                     <path
                       d="M6 9L12 15L18 9"
@@ -1363,7 +1365,7 @@
               <!-- QUESTION 6 -->
               <div class="card faq-item slide-up-in">
                 <div class="question">
-                  <h5>Lorem ipsum dolor sit amet?</h5>
+                  <h3>Lorem ipsum dolor sit amet?</h3>
                   <svg viewBox="0 0 24 24" fill="none">
                     <path
                       d="M6 9L12 15L18 9"
