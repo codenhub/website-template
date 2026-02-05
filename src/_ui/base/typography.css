@@ -23,20 +23,15 @@
 }
 
 @layer base {
-  * {
-    color: var(--color-text);
-    /* Text color */
-  }
-
-  .text-contrast,
-  .text-contrast * {
-    color: var(--color-primary-contrast);
-    /* Text contrast color */
-  }
-
   ::selection {
     background: var(--color-primary);
     color: var(--color-primary-contrast);
+  }
+
+  .selection-contrast::selection,
+  .selection-contrast *::selection {
+    background: var(--color-primary-contrast);
+    color: var(--color-primary);
   }
 
   h1 {

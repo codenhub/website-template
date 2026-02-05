@@ -1,5 +1,0 @@
-@reference "../../_ui/main.css";
-
-footer a {
-  @apply hover:underline;
-}

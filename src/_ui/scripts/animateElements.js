@@ -60,11 +60,10 @@ export default function animateElements() {
       },
     });
   });
-  // END ANIMATE ELEMENTS
 
   // ANIMATE TEXT
   gsap.utils.toArray(".split-text").forEach((el) => {
-    let split = SplitText.create(el, { type: "lines" });
+    let split = SplitText.create(el, { type: "lines", aria: "auto" });
     gsap.from(split.lines, {
       yPercent: 120,
       opacity: 0,
@@ -79,7 +78,7 @@ export default function animateElements() {
     });
   });
   gsap.utils.toArray(".split-chars").forEach((el) => {
-    let split = SplitText.create(el, { type: "chars, words" });
+    let split = SplitText.create(el, { type: "chars, words", aria: "auto" });
     gsap.from(split.chars, {
       x: 50,
       opacity: 0,
@@ -93,7 +92,6 @@ export default function animateElements() {
       },
     });
   });
-  // END ANIMATE TEXT
 
   // ANIMATE SVGS
   gsap.utils.toArray(".draw").forEach((el) => {
@@ -108,7 +106,6 @@ export default function animateElements() {
       },
     });
   });
-  // END ANIMATE SVGS
 
   // SMOOTH SCROLL
   const smoother = ScrollSmoother.create({
@@ -126,5 +123,4 @@ export default function animateElements() {
       }
     });
   });
-  // END SMOOTH SCROLL
 }

@@ -3,27 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- Author & Copyright -->
     <meta name="author" content="Coden Agency" />
     <meta name="copyright" content="Coden Agency" />
 
-    <!-- Styles & Scripts -->
-    <link rel="stylesheet" href="../../_ui/main.css" />
-    <link rel="stylesheet" href="./index.css" />
-    <script type="module" src="../../_ui/main.js" defer></script>
-
-    <!-- Website info -->
     <title>Website template by Coden</title>
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="../../_ui/main.css" />
+    <script type="module" src="../../_ui/main.js" defer></script>
+    <style>
+      footer a:hover {
+        text-decoration: underline;
+      }
+    </style>
   </head>
 
   <body>
-    <!-- MAIN CONTENT -->
     <main id="smooth-wrapper">
       <div id="smooth-content">
         <!-- DEFAULT FOOTER -->
-        <footer class="sect bg-primary text-contrast">
+        <footer class="sect bg-primary text-primary-contrast">
           <div class="sect-container flex-col gap-8">
             <div class="flex max-md:flex-col justify-between w-full gap-8">
               <div class="flex flex-col items-start gap-4">
@@ -67,13 +65,19 @@
             <div
               class="flex w-full flex-wrap gap-4 items-center justify-between pt-4 border-t border-border"
             >
-              <p>
+              <p class="flex gap-2 items-center">
                 Made with ❤️ by
-                <a href="https://coden.agency/" target="_blank">Coden</a>
+                <a href="https://coden.agency/" target="_blank"
+                  ><img
+                    src="https://coden.agency/logo.svg"
+                    alt="Coden Agency Logo"
+                    class="h-5 object-contain"
+                /></a>
               </p>
               <div class="flex gap-4 items-center">
                 <!-- GITHUB LINK -->
                 <a
+                  aria-label="See our GitHub profile"
                   href="https://github.com/codenhub/"
                   target="_blank"
                   class="size-6"
@@ -87,6 +91,7 @@
                 </a>
                 <!-- INSTAGRAM LINK -->
                 <a
+                  aria-label="See our Instagram profile"
                   href="https://instagram.com/coden.agency"
                   target="_blank"
                   class="size-6"
@@ -109,6 +114,7 @@
                 </a>
                 <!-- X LINK -->
                 <a
+                  aria-label="See our X/Twitter profile"
                   href="https://x.com/codenagency"
                   target="_blank"
                   class="size-6"
@@ -123,10 +129,9 @@
             </div>
           </div>
         </footer>
-        <!-- END DEFAULT FOOTER -->
 
         <!-- LIGHT FOOTER -->
-        <footer class="sect bg-background">
+        <footer class="sect">
           <div class="sect-container flex-col gap-8">
             <div class="flex max-md:flex-col justify-between w-full gap-8">
               <div class="flex flex-col items-start gap-4">
@@ -166,13 +171,19 @@
             <div
               class="flex w-full flex-wrap gap-4 items-center justify-between pt-4 border-t border-border"
             >
-              <p>
+              <p class="flex gap-2 items-center">
                 Made with ❤️ by
-                <a href="https://coden.agency/" target="_blank">Coden</a>
+                <a href="https://coden.agency/" target="_blank"
+                  ><img
+                    src="https://coden.agency/logo.svg"
+                    alt="Coden Agency Logo"
+                    class="h-5 object-contain invert"
+                /></a>
               </p>
               <div class="flex gap-4 items-center">
                 <!-- GITHUB LINK -->
                 <a
+                  aria-label="See our GitHub profile"
                   href="https://github.com/codenhub/"
                   target="_blank"
                   class="size-6"
@@ -186,6 +197,7 @@
                 </a>
                 <!-- INSTAGRAM LINK -->
                 <a
+                  aria-label="See our Instagram profile"
                   href="https://instagram.com/coden.agency"
                   target="_blank"
                   class="size-6"
@@ -208,6 +220,7 @@
                 </a>
                 <!-- X LINK -->
                 <a
+                  aria-label="See our X/Twitter profile"
                   href="https://x.com/codenagency"
                   target="_blank"
                   class="size-6"
@@ -222,11 +235,10 @@
             </div>
           </div>
         </footer>
-        <!-- END LIGHT FOOTER -->
 
         <!-- TOP-ROUNDED FOOTER -->
         <footer
-          class="sect rounded-t-2xl max-w-[84rem] px-4 mx-auto bg-primary text-contrast"
+          class="sect rounded-t-2xl max-w-[84rem] px-4 mx-auto bg-primary text-primary-contrast"
         >
           <div class="sect-container flex-col gap-8">
             <div
@@ -273,13 +285,19 @@
             <div
               class="flex w-full flex-wrap gap-4 items-center justify-between pt-4 border-t border-border"
             >
-              <p>
+              <p class="flex gap-2 items-center">
                 Made with ❤️ by
-                <a href="https://coden.agency/" target="_blank">Coden</a>
+                <a href="https://coden.agency/" target="_blank"
+                  ><img
+                    src="https://coden.agency/logo.svg"
+                    alt="Coden Agency Logo"
+                    class="h-5 object-contain"
+                /></a>
               </p>
               <div class="flex gap-4 items-center">
                 <!-- GITHUB LINK -->
                 <a
+                  aria-label="See our GitHub profile"
                   href="https://github.com/codenhub/"
                   target="_blank"
                   class="size-6"
@@ -293,6 +311,7 @@
                 </a>
                 <!-- INSTAGRAM LINK -->
                 <a
+                  aria-label="See our Instagram profile"
                   href="https://instagram.com/coden.agency"
                   target="_blank"
                   class="size-6"
@@ -315,6 +334,7 @@
                 </a>
                 <!-- X LINK -->
                 <a
+                  aria-label="See our X/Twitter profile"
                   href="https://x.com/codenagency"
                   target="_blank"
                   class="size-6"
@@ -329,7 +349,6 @@
             </div>
           </div>
         </footer>
-        <!-- END TOP-ROUNDED FOOTER -->
 
         <!-- FULL-ROUNDED FOOTER -->
         <footer
@@ -374,13 +393,19 @@
             <div
               class="flex w-full flex-wrap gap-4 items-center justify-between pt-4 border-t border-border"
             >
-              <p>
+              <p class="flex gap-2 items-center">
                 Made with ❤️ by
-                <a href="https://coden.agency/" target="_blank">Coden</a>
+                <a href="https://coden.agency/" target="_blank"
+                  ><img
+                    src="https://coden.agency/logo.svg"
+                    alt="Coden Agency Logo"
+                    class="h-5 object-contain invert"
+                /></a>
               </p>
               <div class="flex gap-4 items-center">
                 <!-- GITHUB LINK -->
                 <a
+                  aria-label="See our GitHub profile"
                   href="https://github.com/codenhub/"
                   target="_blank"
                   class="size-6"
@@ -394,6 +419,7 @@
                 </a>
                 <!-- INSTAGRAM LINK -->
                 <a
+                  aria-label="See our Instagram profile"
                   href="https://instagram.com/coden.agency"
                   target="_blank"
                   class="size-6"
@@ -416,6 +442,7 @@
                 </a>
                 <!-- X LINK -->
                 <a
+                  aria-label="See our X/Twitter profile"
                   href="https://x.com/codenagency"
                   target="_blank"
                   class="size-6"
@@ -430,7 +457,6 @@
             </div>
           </div>
         </footer>
-        <!-- END FULL-ROUNDED FOOTER -->
 
         <!-- GLASSMORPHISM FOOTER -->
         <footer
@@ -475,13 +501,19 @@
             <div
               class="flex w-full flex-wrap gap-4 items-center justify-between pt-4 border-t border-border"
             >
-              <p>
+              <p class="flex gap-2 items-center">
                 Made with ❤️ by
-                <a href="https://coden.agency/" target="_blank">Coden</a>
+                <a href="https://coden.agency/" target="_blank"
+                  ><img
+                    src="https://coden.agency/logo.svg"
+                    alt="Coden Agency Logo"
+                    class="h-5 object-contain invert"
+                /></a>
               </p>
               <div class="flex gap-4 items-center">
                 <!-- GITHUB LINK -->
                 <a
+                  aria-label="See our GitHub profile"
                   href="https://github.com/codenhub/"
                   target="_blank"
                   class="size-6"
@@ -495,6 +527,7 @@
                 </a>
                 <!-- INSTAGRAM LINK -->
                 <a
+                  aria-label="See our Instagram profile"
                   href="https://instagram.com/coden.agency"
                   target="_blank"
                   class="size-6"
@@ -517,6 +550,7 @@
                 </a>
                 <!-- X LINK -->
                 <a
+                  aria-label="See our X/Twitter profile"
                   href="https://x.com/codenagency"
                   target="_blank"
                   class="size-6"
@@ -531,9 +565,7 @@
             </div>
           </div>
         </footer>
-        <!-- END GLASSMORPHISM FOOTER -->
       </div>
     </main>
-    <!-- END MAIN CONTENT -->
   </body>
 </html>

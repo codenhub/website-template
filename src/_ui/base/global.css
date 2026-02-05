@@ -5,13 +5,13 @@
 
   ::-webkit-scrollbar-thumb {
     background: var(--color-primary);
-    border: var(--spacing) solid var(--color-primary-contrast);
+    border: var(--spacing) solid var(--color-background);
     border-radius: calc(var(--spacing) * 2);
   }
 
   html,
   body {
-    @apply flex flex-col min-h-screen overflow-x-hidden bg-background;
+    @apply flex flex-col min-h-screen overflow-x-hidden bg-background text-text;
   }
 
   button {

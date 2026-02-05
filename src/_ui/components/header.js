@@ -2,7 +2,7 @@ class Header extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
       <header
-        class="flex p-4 justify-center bg-background/80 backdrop-blur-sm fixed inset-x-0 slide-down-in border-b border-transparent z-99 transition-all duration-400">
+        class="flex p-4 justify-center fixed inset-x-0 slide-down-in border-b border-transparent z-99 transition-all duration-400">
         <div class="sect-container flex-row justify-between">
           <a href="#">
             <img src="/logo.svg" alt="Logo" class="h-10 object-contain" />
@@ -22,16 +22,16 @@ class Header extends HTMLElement {
 
           <!-- MOBILE NAV -->
           <div class="flex md:hidden">
-            <input type="checkbox" id="mobile-menu" class="peer sr-only" />
+            <input type="checkbox" name="mobile-menu" id="mobile-menu" class="peer sr-only" />
             <label class="flex flex-col w-6 gap-1.5 py-2 cursor-pointer" for="mobile-menu">
-              <div class="w-full h-0.5 bg-neutral-950"></div>
-              <div class="w-full h-0.5 bg-neutral-950"></div>
-              <div class="w-full h-0.5 bg-neutral-950"></div>
+              <div class="w-full h-0.5 bg-text"></div>
+              <div class="w-full h-0.5 bg-text"></div>
+              <div class="w-full h-0.5 bg-text"></div>
             </label>
             <div
-              class="absolute flex top-18 inset-x-0 bg-background shadow-lg p-4 max-h-0 opacity-0 peer-checked:max-h-max peer-checked:opacity-100 transition-all duration-400"
-              style="interpolate-size: allow-keywords">
-              <nav class="flex flex-col w-full gap-2">
+              class="absolute flex top-18 inset-x-0 bg-background shadow-lg p-4 origin-top scale-y-0 opacity-0 peer-checked:scale-y-100 peer-checked:opacity-100 transition duration-400"
+            >
+              <nav class="flex flex-col items-center w-full gap-2">
                 <a href="#why-this-template" class="flex w-full text-center justify-center text-lg tracking-wide">Why us?</a>
                 <a href="#features" class="flex w-full text-center justify-center text-lg tracking-wide">Features</a>
                 <a href="#testimonials" class="flex w-full text-center justify-center text-lg tracking-wide">Testimonials</a>
@@ -45,7 +45,6 @@ class Header extends HTMLElement {
       </header>
     `;
 
-    // HIDE/SHOW ON SCROLL
     let lastScrollY = window.scrollY;
     document.addEventListener("scroll", () => {
       const header = document.querySelector("header");
@@ -53,17 +52,28 @@ class Header extends HTMLElement {
       const direction = currentScrollY > lastScrollY ? "down" : "up";
       if (direction === "down") {
         header.classList.add("-translate-y-1/1");
-        header.classList.remove("border-neutral-300");
       }
       if (direction === "up") {
         header.classList.remove("-translate-y-1/1");
-        // ADD SHADOW IF NOT TOP
-        header.classList.toggle("border-transparent", !(currentScrollY > 0));
-        header.classList.toggle("border-neutral-300", currentScrollY > 0);
+        // ADD BORDER AND BLUR IF NOT TOP
+        if (currentScrollY > 0) {
+          header.classList.add(
+            "border-border",
+            "bg-background/80",
+            "backdrop-blur-sm",
+          );
+          header.classList.remove("border-transparent");
+        } else {
+          header.classList.remove(
+            "border-border",
+            "bg-background/80",
+            "backdrop-blur-sm",
+          );
+          header.classList.add("border-transparent");
+        }
       }
       lastScrollY = currentScrollY;
     });
-    // END HIDE/SHOW ON SCROLL
   }
 }
 

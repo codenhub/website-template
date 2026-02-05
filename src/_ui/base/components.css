@@ -6,26 +6,6 @@
 }
 
 @layer components {
-  .loader {
-    @apply bg-foreground fixed inset-0 z-999 skew-x-10 transition-all duration-800 ease-out;
-
-    &.left {
-      @apply -translate-x-2/10;
-
-      &.loaded {
-        @apply -translate-x-12/10;
-      }
-    }
-
-    &.right {
-      @apply translate-x-2/10;
-
-      &.loaded {
-        @apply translate-x-12/10;
-      }
-    }
-  }
-
   body:hover .mouse-tracker {
     @apply md:opacity-100;
   }
