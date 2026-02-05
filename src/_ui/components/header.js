@@ -45,17 +45,20 @@ class Header extends HTMLElement {
       </header>
     `;
 
+    const header = document.querySelector("header");
     let lastScrollY = window.scrollY;
-    document.addEventListener("scroll", () => {
-      const header = document.querySelector("header");
+    let ticking = false;
+
+    const updateHeader = () => {
       const currentScrollY = window.scrollY;
       const direction = currentScrollY > lastScrollY ? "down" : "up";
+
       if (direction === "down") {
         header.classList.add("-translate-y-1/1");
       }
+
       if (direction === "up") {
         header.classList.remove("-translate-y-1/1");
-        // ADD BORDER AND BLUR IF NOT TOP
         if (currentScrollY > 0) {
           header.classList.add(
             "border-border",
@@ -72,8 +75,19 @@ class Header extends HTMLElement {
           header.classList.add("border-transparent");
         }
       }
+
       lastScrollY = currentScrollY;
-    });
+      ticking = false;
+    };
+
+    const onScroll = () => {
+      if (!ticking) {
+        requestAnimationFrame(updateHeader);
+        ticking = true;
+      }
+    };
+
+    document.addEventListener("scroll", onScroll, { passive: true });
   }
 }
 
