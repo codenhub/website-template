@@ -1,5 +1,6 @@
 import { defineConfig } from "vite";
 import tailwindcss from "@tailwindcss/vite";
+import deferCssPlugin from "./vite-defer-css";
 
 export default defineConfig({
   root: "./src",
@@ -19,5 +20,5 @@ export default defineConfig({
       },
     },
   },
-  plugins: [tailwindcss()],
+  plugins: [tailwindcss(), deferCssPlugin()],
 });
