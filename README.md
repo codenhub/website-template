@@ -53,3 +53,7 @@ This layout keeps runnable code in src/, static assets in public/ and build conf
 - Landing pages, product microsites, and developer portfolios.
 - Fast prototyping with Tailwind utilities.
 - Projects where small bundle size and quick iteration matter.
+
+## License
+
+The code is available under the [MIT license](LICENSE).
