@@ -1,7 +1,7 @@
 import animateElements from "./scripts/animateElements.js";
 import initMouseTracker from "./scripts/mouseTracker.js";
 
-document.addEventListener("DOMContentLoaded", () => {
+window.addEventListener("load", () => {
   const loaders = document.querySelectorAll(".loader");
   const loaderIndicator = document.getElementById("loader-indicator");
   loaderIndicator?.remove();
