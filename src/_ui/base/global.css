@@ -11,7 +11,7 @@
 
   html,
   body {
-    @apply flex flex-col min-h-screen overflow-x-hidden bg-background text-text;
+    @apply flex flex-col min-h-screen overflow-x-hidden bg-background text-text font-default;
   }
 
   button {
