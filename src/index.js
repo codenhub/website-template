@@ -14,7 +14,6 @@ document.addEventListener("DOMContentLoaded", () => {
       item.classList.toggle("active");
     });
   });
-  // END FAQ TOGGLE
 
   // COUNTER ANIMATION
   const counters = document.querySelectorAll(".counter");
@@ -38,5 +37,4 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     },
   });
-  // END COUNTER ANIMATION
 });

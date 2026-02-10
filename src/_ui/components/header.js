@@ -1,8 +1,9 @@
 class Header extends HTMLElement {
   connectedCallback() {
+    const fixed = this.hasAttribute("fixed") || false;
     this.innerHTML = `
       <header
-        class="flex p-4 justify-center fixed inset-x-0 slide-down-in border-b border-transparent z-99 transition-all duration-400">
+        class="flex p-4 justify-center slide-down-in border-b transition duration-400${fixed ? " fixed inset-x-0 border-transparent z-99" : " border-border"}">
         <div class="sect-container flex-row justify-between">
           <a href="#">
             <img src="/logo.svg" alt="Logo" class="h-10 object-contain" />
@@ -87,7 +88,7 @@ class Header extends HTMLElement {
       }
     };
 
-    document.addEventListener("scroll", onScroll, { passive: true });
+    if (fixed) document.addEventListener("scroll", onScroll, { passive: true });
   }
 }
 
