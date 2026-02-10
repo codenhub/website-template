@@ -10,7 +10,7 @@ export default function animateElements() {
   // ANIMATE ELEMENTS
   gsap.utils.toArray(".slide-up-in").forEach((el) => {
     gsap.from(el, {
-      y: 100,
+      yPercent: 120,
       opacity: 0,
       duration: 1.2,
       ease: "power1.inOut",
@@ -103,7 +103,7 @@ export default function animateElements() {
       let split = createAccessibleSplit(el, { type: "chars, words" });
 
       gsap.from(split.chars, {
-        x: 50,
+        xPercent: 120,
         opacity: 0,
         duration: 0.8,
         ease: "power1.inOut",

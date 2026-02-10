@@ -13,18 +13,95 @@
     <title>Components Library</title>
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="stylesheet" href="../../_ui/main.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
     <script type="module" src="../../_ui/components/index.js" defer></script>
     <script type="module" src="../../_ui/main.js" defer></script>
+    <style>
+      .loader {
+        background-color: oklch(98.5% 0 0);
+        position: fixed;
+        inset: 0;
+        transform: skewX(10deg);
+        transition: all 800ms ease;
+        border: none;
+        z-index: 999;
+
+        &.left {
+          transform: skewX(10deg) translateX(-20%);
+
+          &.loaded {
+            transform: skewX(10deg) translateX(-120%);
+          }
+        }
+
+        &.right {
+          transform: skewX(10deg) translateX(20%);
+
+          &.loaded {
+            transform: skewX(10deg) translateX(120%);
+          }
+        }
+      }
+      #loader-indicator {
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        color: oklch(20.5% 0 0);
+        width: 4rem;
+        height: 4rem;
+        z-index: 999;
+      }
+    </style>
   </head>
 
   <body>
+    <!-- LOADER -->
+    <div class="loader left"></div>
+    <div class="loader right"></div>
+    <div id="loader-indicator">
+      <svg stroke="currentColor" viewBox="0 0 24 24">
+        <style>
+          .spinner {
+            transform-origin: center;
+            animation: rotate 2s linear infinite;
+          }
+
+          .spinner circle {
+            stroke-linecap: round;
+            animation: grow 1.5s ease-in-out infinite;
+          }
+
+          @keyframes rotate {
+            to {
+              transform: rotate(360deg);
+            }
+          }
+
+          @keyframes grow {
+            0% {
+              stroke-dasharray: 0 150;
+              stroke-dashoffset: 0;
+            }
+
+            50% {
+              stroke-dasharray: 42 150;
+              stroke-dashoffset: -16;
+            }
+
+            95%,
+            100% {
+              stroke-dasharray: 42 150;
+              stroke-dashoffset: -59;
+            }
+          }
+        </style>
+        <g class="spinner">
+          <circle cx="12" cy="12" r="9.5" fill="none" stroke-width="2"></circle>
+        </g>
+      </svg>
+    </div>
+    <!-- END LOADER -->
+
     <main id="smooth-wrapper">
       <div id="smooth-content">
         <custom-header></custom-header>
@@ -33,7 +110,7 @@
         <section class="sect relative overflow-hidden">
           <div class="sect-container text-center">
             <span
-              class="flex items-center gap-2 px-4 py-2 rounded-full border border-border bg-foreground text-text-secondary text-xs font-medium tracking-widest uppercase"
+              class="flex items-center gap-2 px-4 py-2 rounded-full border border-border bg-foreground text-text-secondary text-xs font-medium tracking-widest uppercase slide-down-in"
             >
               <svg
                 viewBox="0 0 800 800"
@@ -56,14 +133,14 @@
               </svg>
               Open-source UI Kit
             </span>
-            <h1>Components Library</h1>
+            <h1 class="split-chars">Components Library</h1>
             <p
-              class="text-lg tracking-normal max-w-2xl text-text-secondary -mt-6"
+              class="text-lg tracking-normal max-w-2xl text-text-secondary -mt-6 split-text"
             >
               A curated collection of production-ready UI components. Copy,
               paste, and customize to ship faster.
             </p>
-            <div class="flex gap-3 mt-2">
+            <div class="flex gap-3 mt-2 slide-up-in">
               <a href="#components" class="primary-btn">
                 <img
                   src="/assets/icons/arrow-up.svg"
@@ -94,7 +171,7 @@
           <div
             class="sect-container flex-row flex-wrap justify-center gap-12 max-md:gap-6"
           >
-            <div class="flex flex-col items-center gap-1">
+            <div class="flex flex-col items-center gap-1 slide-right-in">
               <p class="text-3xl font-title tracking-tight">100+</p>
               <p class="text-xs text-text-secondary tracking-widest uppercase">
                 Components
@@ -104,7 +181,7 @@
               class="w-px h-10 bg-border max-md:hidden"
               aria-hidden="true"
             ></div>
-            <div class="flex flex-col items-center gap-1">
+            <div class="flex flex-col items-center gap-1 slide-up-in">
               <p class="text-3xl font-title tracking-tight">6</p>
               <p class="text-xs text-text-secondary tracking-widest uppercase">
                 Categories
@@ -114,7 +191,7 @@
               class="w-px h-10 bg-border max-md:hidden"
               aria-hidden="true"
             ></div>
-            <div class="flex flex-col items-center gap-1">
+            <div class="flex flex-col items-center gap-1 slide-up-in">
               <p class="text-3xl font-title tracking-tight">100%</p>
               <p class="text-xs text-text-secondary tracking-widest uppercase">
                 TailwindCSS
@@ -124,7 +201,7 @@
               class="w-px h-10 bg-border max-md:hidden"
               aria-hidden="true"
             ></div>
-            <div class="flex flex-col items-center gap-1">
+            <div class="flex flex-col items-center gap-1 slide-left-in">
               <p class="text-3xl font-title tracking-tight">Free &</p>
               <p class="text-xs text-text-secondary tracking-widest uppercase">
                 Open source
@@ -136,12 +213,16 @@
         <!-- AVAILABLE COMPONENTS -->
         <section id="components" class="sect">
           <div class="sect-container">
-            <h2>Available Components</h2>
+            <h2 class="split-chars">Available Components</h2>
             <div
               class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full"
             >
               <!-- BUTTONS -->
-              <a id="component-buttons" href="./buttons/" class="group card">
+              <a
+                id="component-buttons"
+                href="./buttons/"
+                class="group card slide-up-in"
+              >
                 <div class="flex justify-between">
                   <div
                     class="flex items-center justify-center size-12 rounded-lg bg-foreground group-hover:bg-primary group-hover:text-primary-contrast transition-colors duration-400"
@@ -180,7 +261,11 @@
               </a>
 
               <!-- CARDS -->
-              <a id="component-buttons" href="./buttons/" class="group card">
+              <a
+                id="component-buttons"
+                href="./buttons/"
+                class="group card slide-up-in"
+              >
                 <div class="flex justify-between">
                   <div
                     class="flex items-center justify-center size-12 rounded-lg bg-foreground group-hover:bg-primary group-hover:text-primary-contrast transition-colors duration-400"
@@ -215,7 +300,11 @@
               </a>
 
               <!-- HEADERS -->
-              <a id="component-buttons" href="./buttons/" class="group card">
+              <a
+                id="component-buttons"
+                href="./buttons/"
+                class="group card slide-up-in"
+              >
                 <div class="flex justify-between">
                   <div
                     class="flex items-center justify-center size-12 rounded-lg bg-foreground group-hover:bg-primary group-hover:text-primary-contrast transition-colors duration-400"
@@ -255,7 +344,11 @@
               </a>
 
               <!-- FOOTERS -->
-              <a id="component-buttons" href="./buttons/" class="group card">
+              <a
+                id="component-buttons"
+                href="./buttons/"
+                class="group card slide-up-in"
+              >
                 <div class="flex justify-between">
                   <div
                     class="flex items-center justify-center size-12 rounded-lg bg-foreground group-hover:bg-primary group-hover:text-primary-contrast transition-colors duration-400"
@@ -291,7 +384,11 @@
               </a>
 
               <!-- CTA -->
-              <a id="component-buttons" href="./buttons/" class="group card">
+              <a
+                id="component-buttons"
+                href="./buttons/"
+                class="group card slide-up-in"
+              >
                 <div class="flex justify-between">
                   <div
                     class="flex items-center justify-center size-12 rounded-lg bg-foreground group-hover:bg-primary group-hover:text-primary-contrast transition-colors duration-400"
@@ -334,7 +431,11 @@
               </a>
 
               <!-- CONTACT -->
-              <a id="component-buttons" href="./buttons/" class="group card">
+              <a
+                id="component-buttons"
+                href="./buttons/"
+                class="group card slide-up-in"
+              >
                 <div class="flex justify-between">
                   <div
                     class="flex items-center justify-center size-12 rounded-lg bg-foreground group-hover:bg-primary group-hover:text-primary-contrast transition-colors duration-400"

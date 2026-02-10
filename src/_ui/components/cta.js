@@ -5,8 +5,8 @@ class CustomCTA extends HTMLElement {
         <div
           class="flex flex-col items-center text-center max-w-7xl w-full px-8 py-16 gap-5 rounded-xl bg-foreground"
         >
-          <h2>Start Building</h2>
-          <p class="max-w-xl text-text-secondary">
+          <h2 class="split-chars">Start Building</h2>
+          <p class="max-w-xl text-text-secondary split-text">
             Clone the repository, pick the components you need, and customize
             them with your own design tokens. It's that simple.
           </p>
@@ -14,7 +14,7 @@ class CustomCTA extends HTMLElement {
             <a
               href="https://github.com/codenhub/website-template"
               target="_blank"
-              class="primary-btn"
+              class="primary-btn slide-left-in"
             >
               <svg viewBox="0 0 20 20" fill="currentColor" class="size-4">
                 <path
