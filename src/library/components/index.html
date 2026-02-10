@@ -5,11 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Coden Agency" />
     <meta name="copyright" content="Coden Agency" />
+    <meta
+      name="description"
+      content="A curated collection of reusable UI components built with TailwindCSS. Browse buttons, cards, headers, footers, and more."
+    />
 
     <title>Components Library</title>
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="stylesheet" href="../../_ui/main.css" />
-    <script type="module" src="../../_ui/components/index.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script type="module" src="../../_ui/components/index.js" defer></script>
     <script type="module" src="../../_ui/main.js" defer></script>
   </head>
 
@@ -17,17 +28,354 @@
     <main id="smooth-wrapper">
       <div id="smooth-content">
         <custom-header></custom-header>
-        <section class="sect">
-          <div class="sect-container items-baseline gap-4">
-            <h2>Components Library</h2>
-            <p class="text-lg tracking-normal max-w-2xl">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam,
-              cumque ad et quisquam officiis voluptas quibusdam eius velit
-              nulla, commodi aspernatur ipsam libero voluptatem, nostrum dolorum
-              corporis magnam laborum deleniti.
+
+        <!-- HERO -->
+        <section class="sect relative overflow-hidden">
+          <div class="sect-container text-center">
+            <span
+              class="flex items-center gap-2 px-4 py-2 rounded-full border border-border bg-foreground text-text-secondary text-xs font-medium tracking-widest uppercase"
+            >
+              <svg
+                viewBox="0 0 800 800"
+                class="size-4 overflow-visible"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="8%"
+              >
+                <path
+                  d="m71 557.8v-3.2-319.5c0-12.8 6.8-24.5 17.9-30.8l0.7-0.3 295.4-166.2 2.3-1.3c8.3-4.7 18.6-4.7 26.9 0l300.3 168.9c9.9 5.6 16 16.1 16 27.5v2.2 319.5 3.2c0 11.7-6.1 22.4-16.1 28.4l-298 175.6c-9.7 5.6-21.6 5.6-31.3 0l-298-175.6c-10-6-16.1-16.7-16.1-28.4z"
+                />
+                <path d="m400.8 771v-371" />
+                <path d="m400.8 400l-329.8-185.5" />
+                <path d="m730.5 214.5l-329.7 185.5" />
+                <path
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                  d="m402 408.7v358.6l-338.9-196.4v-358.7z"
+                />
+              </svg>
+              Open-source UI Kit
+            </span>
+            <h1>Components Library</h1>
+            <p
+              class="text-lg tracking-normal max-w-2xl text-text-secondary -mt-6"
+            >
+              A curated collection of production-ready UI components. Copy,
+              paste, and customize to ship faster.
             </p>
+            <div class="flex gap-3 mt-2">
+              <a href="#components" class="primary-btn">
+                <img
+                  src="/assets/icons/arrow-up.svg"
+                  alt="Arrow icon"
+                  class="size-3 rotate-180 invert"
+                />
+                Browse components
+              </a>
+              <a
+                href="https://github.com/codenhub/website-template"
+                target="_blank"
+                class="secondary-btn"
+              >
+                <svg viewBox="0 0 20 20" fill="currentColor" class="size-4">
+                  <path
+                    transform="translate(-84.000000, -7399.000000)"
+                    d="M94,7399 C99.523,7399 104,7403.59 104,7409.253 C104,7413.782 101.138,7417.624 97.167,7418.981 C96.66,7419.082 96.48,7418.762 96.48,7418.489 C96.48,7418.151 96.492,7417.047 96.492,7415.675 C96.492,7414.719 96.172,7414.095 95.813,7413.777 C98.04,7413.523 100.38,7412.656 100.38,7408.718 C100.38,7407.598 99.992,7406.684 99.35,7405.966 C99.454,7405.707 99.797,7404.664 99.252,7403.252 C99.252,7403.252 98.414,7402.977 96.505,7404.303 C95.706,7404.076 94.85,7403.962 94,7403.958 C93.15,7403.962 92.295,7404.076 91.497,7404.303 C89.586,7402.977 88.746,7403.252 88.746,7403.252 C88.203,7404.664 88.546,7405.707 88.649,7405.966 C88.01,7406.684 87.619,7407.598 87.619,7408.718 C87.619,7412.646 89.954,7413.526 92.175,7413.785 C91.889,7414.041 91.63,7414.493 91.54,7415.156 C90.97,7415.418 89.522,7415.871 88.63,7414.304 C88.63,7414.304 88.101,7413.319 87.097,7413.247 C87.097,7413.247 86.122,7413.234 87.029,7413.87 C87.029,7413.87 87.684,7414.185 88.139,7415.37 C88.139,7415.37 88.726,7417.2 91.508,7416.58 C91.513,7417.437 91.522,7418.245 91.522,7418.489 C91.522,7418.76 91.338,7419.077 90.839,7418.982 C86.865,7417.627 84,7413.783 84,7409.253 C84,7403.59 88.478,7399 94,7399"
+                  ></path>
+                </svg>
+                Source code
+              </a>
+            </div>
           </div>
         </section>
+
+        <!-- STATS BAR -->
+        <section class="sect">
+          <div
+            class="sect-container flex-row flex-wrap justify-center gap-12 max-md:gap-6"
+          >
+            <div class="flex flex-col items-center gap-1">
+              <p class="text-3xl font-title tracking-tight">100+</p>
+              <p class="text-xs text-text-secondary tracking-widest uppercase">
+                Components
+              </p>
+            </div>
+            <div
+              class="w-px h-10 bg-border max-md:hidden"
+              aria-hidden="true"
+            ></div>
+            <div class="flex flex-col items-center gap-1">
+              <p class="text-3xl font-title tracking-tight">6</p>
+              <p class="text-xs text-text-secondary tracking-widest uppercase">
+                Categories
+              </p>
+            </div>
+            <div
+              class="w-px h-10 bg-border max-md:hidden"
+              aria-hidden="true"
+            ></div>
+            <div class="flex flex-col items-center gap-1">
+              <p class="text-3xl font-title tracking-tight">100%</p>
+              <p class="text-xs text-text-secondary tracking-widest uppercase">
+                TailwindCSS
+              </p>
+            </div>
+            <div
+              class="w-px h-10 bg-border max-md:hidden"
+              aria-hidden="true"
+            ></div>
+            <div class="flex flex-col items-center gap-1">
+              <p class="text-3xl font-title tracking-tight">Free &</p>
+              <p class="text-xs text-text-secondary tracking-widest uppercase">
+                Open source
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- AVAILABLE COMPONENTS -->
+        <section id="components" class="sect">
+          <div class="sect-container">
+            <h2>Available Components</h2>
+            <div
+              class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full"
+            >
+              <!-- BUTTONS -->
+              <a id="component-buttons" href="./buttons/" class="group card">
+                <div class="flex justify-between">
+                  <div
+                    class="flex items-center justify-center size-12 rounded-lg bg-foreground group-hover:bg-primary group-hover:text-primary-contrast transition-colors duration-400"
+                  >
+                    <svg
+                      viewBox="0 0 1920 1920"
+                      class="size-6"
+                      fill="currentColor"
+                    >
+                      <path
+                        d="M0 426.667C0 191.025 191.025 0 426.667 0c235.641 0 426.666 191.025 426.666 426.667 0 235.641-191.025 426.666-426.666 426.666C191.025 853.333 0 662.308 0 426.667zm853.333 640.003V1920H0v-853.33h853.333zM1360 1920v-346.67h-346.67v-160H1360v-346.66h160v346.66h346.67v160H1520V1920h-160zm560-1066.667L1440 0 960 853.333h960z"
+                      />
+                    </svg>
+                  </div>
+                  <span
+                    class="px-2 py-1 text-xs rounded-full bg-foreground text-text-secondary size-fit"
+                  >
+                    4 variants
+                  </span>
+                </div>
+                <h4>Buttons</h4>
+                <p class="text-text-secondary -mt-2">
+                  Flat, shadow, outline, and neobrutalism styles with primary,
+                  secondary, and ghost variants.
+                </p>
+                <button
+                  class="flex items-center gap-2 text-sm font-semibold mt-auto"
+                >
+                  View component
+                  <img
+                    src="/assets/icons/arrow-up.svg"
+                    alt="Arrow icon"
+                    class="size-4 rotate-90 group-hover:translate-x-1 transition-transform duration-400"
+                  />
+                </button>
+              </a>
+
+              <!-- CARDS -->
+              <a id="component-buttons" href="./buttons/" class="group card">
+                <div class="flex justify-between">
+                  <div
+                    class="flex items-center justify-center size-12 rounded-lg bg-foreground group-hover:bg-primary group-hover:text-primary-contrast transition-colors duration-400"
+                  >
+                    <svg viewBox="0 0 16 16" fill="currentColor" class="size-6">
+                      <path d="M13 0H3V2H13V0Z" />
+                      <path d="M2 4H14V6H2V4Z" />
+                      <path d="M1 8H15V15H1V8Z" />
+                    </svg>
+                  </div>
+                  <span
+                    class="px-2 py-1 text-xs rounded-full bg-foreground text-text-secondary size-fit"
+                  >
+                    5 variants
+                  </span>
+                </div>
+                <h4>Cards</h4>
+                <p class="text-text-secondary -mt-2">
+                  Flat, border, neobrutalism, glassmorphism, and neumorphism
+                  card layouts.
+                </p>
+                <button
+                  class="flex items-center gap-2 text-sm font-semibold mt-auto"
+                >
+                  View component
+                  <img
+                    src="/assets/icons/arrow-up.svg"
+                    alt="Arrow icon"
+                    class="size-4 rotate-90 group-hover:translate-x-1 transition-transform duration-400"
+                  />
+                </button>
+              </a>
+
+              <!-- HEADERS -->
+              <a id="component-buttons" href="./buttons/" class="group card">
+                <div class="flex justify-between">
+                  <div
+                    class="flex items-center justify-center size-12 rounded-lg bg-foreground group-hover:bg-primary group-hover:text-primary-contrast transition-colors duration-400"
+                  >
+                    <svg
+                      viewBox="0 0 35 35"
+                      fill="currentColor"
+                      class="size-6 rotate-180"
+                    >
+                      <path
+                        d="M0,0v25.366h35V0H0z M32.879,23.245H2.121V2.121h30.758V23.245z"
+                      />
+                      <rect y="28.283" width="35" height="6.717" />
+                    </svg>
+                  </div>
+                  <span
+                    class="px-2 py-1 text-xs rounded-full bg-foreground text-text-secondary size-fit"
+                  >
+                    3 variants
+                  </span>
+                </div>
+                <h4>Headers</h4>
+                <p class="text-text-secondary -mt-2">
+                  Default, centered, and dropdown navigation headers with
+                  responsive mobile menus.
+                </p>
+                <button
+                  class="flex items-center gap-2 text-sm font-semibold mt-auto"
+                >
+                  View component
+                  <img
+                    src="/assets/icons/arrow-up.svg"
+                    alt="Arrow icon"
+                    class="size-4 rotate-90 group-hover:translate-x-1 transition-transform duration-400"
+                  />
+                </button>
+              </a>
+
+              <!-- FOOTERS -->
+              <a id="component-buttons" href="./buttons/" class="group card">
+                <div class="flex justify-between">
+                  <div
+                    class="flex items-center justify-center size-12 rounded-lg bg-foreground group-hover:bg-primary group-hover:text-primary-contrast transition-colors duration-400"
+                  >
+                    <svg viewBox="0 0 35 35" fill="currentColor" class="size-6">
+                      <path
+                        d="M0,0v25.366h35V0H0z M32.879,23.245H2.121V2.121h30.758V23.245z"
+                      />
+                      <rect y="28.283" width="35" height="6.717" />
+                    </svg>
+                  </div>
+                  <span
+                    class="px-2 py-1 text-xs rounded-full bg-foreground text-text-secondary size-fit"
+                  >
+                    5 variants
+                  </span>
+                </div>
+                <h4>Footers</h4>
+                <p class="text-text-secondary -mt-2">
+                  Default, light, top-rounded, full-rounded, and glassmorphism
+                  footer layouts.
+                </p>
+                <button
+                  class="flex items-center gap-2 text-sm font-semibold mt-auto"
+                >
+                  View component
+                  <img
+                    src="/assets/icons/arrow-up.svg"
+                    alt="Arrow icon"
+                    class="size-4 rotate-90 group-hover:translate-x-1 transition-transform duration-400"
+                  />
+                </button>
+              </a>
+
+              <!-- CTA -->
+              <a id="component-buttons" href="./buttons/" class="group card">
+                <div class="flex justify-between">
+                  <div
+                    class="flex items-center justify-center size-12 rounded-lg bg-foreground group-hover:bg-primary group-hover:text-primary-contrast transition-colors duration-400"
+                  >
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      class="size-8"
+                      stroke="currentColor"
+                      stroke-width="8%"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M7 7L5.5 5.5M15 7L16.5 5.5M5.5 16.5L7 15M11 5L11 3M5 11L3 11M17.1603 16.9887L21.0519 15.4659C21.4758 15.3001 21.4756 14.7003 21.0517 14.5346L11.6992 10.8799C11.2933 10.7213 10.8929 11.1217 11.0515 11.5276L14.7062 20.8801C14.8719 21.304 15.4717 21.3042 15.6375 20.8803L17.1603 16.9887Z"
+                      />
+                    </svg>
+                  </div>
+                  <span
+                    class="px-2 py-1 text-xs rounded-full bg-foreground text-text-secondary size-fit"
+                  >
+                    3 variants
+                  </span>
+                </div>
+                <h4>Call to Action</h4>
+                <p class="text-text-secondary -mt-2">
+                  Flat, background image, and neobrutalism CTA banners with
+                  dual-button layouts.
+                </p>
+                <button
+                  class="flex items-center gap-2 text-sm font-semibold mt-auto"
+                >
+                  View component
+                  <img
+                    src="/assets/icons/arrow-up.svg"
+                    alt="Arrow icon"
+                    class="size-4 rotate-90 group-hover:translate-x-1 transition-transform duration-400"
+                  />
+                </button>
+              </a>
+
+              <!-- CONTACT -->
+              <a id="component-buttons" href="./buttons/" class="group card">
+                <div class="flex justify-between">
+                  <div
+                    class="flex items-center justify-center size-12 rounded-lg bg-foreground group-hover:bg-primary group-hover:text-primary-contrast transition-colors duration-400"
+                  >
+                    <svg viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M3.58579 2.58579C3 3.17157 3 4.11438 3 6V16C3 18.8284 3 20.2426 3.87868 21.1213C4.51998 21.7626 5.44655 21.9359 7 21.9827V19C7 18.4477 7.44772 18 8 18C8.55228 18 9 18.4477 9 19L9 22H15V19C15 18.4477 15.4477 18 16 18C16.5523 18 17 18.4477 17 19L17 21.9827C18.5534 21.9359 19.48 21.7626 20.1213 21.1213C21 20.2426 21 18.8284 21 16V6C21 4.11438 21 3.17157 20.4142 2.58579C19.8284 2 18.8856 2 17 2H7C5.11438 2 4.17157 2 3.58579 2.58579ZM8 8C7.44772 8 7 8.44772 7 9C7 9.55228 7.44772 10 8 10H16C16.5523 10 17 9.55228 17 9C17 8.44772 16.5523 8 16 8H8ZM8 14L16 14C16.5523 14 17 13.5523 17 13C17 12.4477 16.5523 12 16 12L8 12C7.44772 12 7 12.4477 7 13C7 13.5523 7.44772 14 8 14Z"
+                      />
+                    </svg>
+                  </div>
+                  <span
+                    class="px-2 py-1 text-xs rounded-full bg-foreground text-text-secondary size-fit"
+                  >
+                    2 variants
+                  </span>
+                </div>
+                <h4>Contact</h4>
+                <p class="text-text-secondary -mt-2">
+                  Form with map and info cards with map layouts, including
+                  embedded Google Maps.
+                </p>
+                <button
+                  class="flex items-center gap-2 text-sm font-semibold mt-auto"
+                >
+                  View component
+                  <img
+                    src="/assets/icons/arrow-up.svg"
+                    alt="Arrow icon"
+                    class="size-4 rotate-90 group-hover:translate-x-1 transition-transform duration-400"
+                  />
+                </button>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <custom-cta></custom-cta>
+
+        <custom-footer></custom-footer>
       </div>
     </main>
   </body>
