@@ -16,7 +16,7 @@ export default function animateElements() {
       ease: "power1.inOut",
       scrollTrigger: {
         trigger: el,
-        start: "top 100%",
+        start: "top bottom",
         toggleActions: "play none none none",
       },
     });
@@ -83,14 +83,17 @@ export default function animateElements() {
     };
 
     gsap.utils.toArray(".split-text").forEach((el) => {
-      let split = createAccessibleSplit(el, { type: "lines" });
+      let split = createAccessibleSplit(el, { type: "lines", mask: "lines" });
+      gsap.set(split.lines, {
+        overflow: "hidden",
+      });
 
       gsap.from(split.lines, {
-        yPercent: 120,
+        yPercent: 100,
         opacity: 0,
         duration: 0.8,
         ease: "power1.inOut",
-        stagger: { amount: 0.8 },
+        stagger: 0.2,
         scrollTrigger: {
           trigger: el,
           start: "top bottom",
@@ -103,7 +106,7 @@ export default function animateElements() {
       let split = createAccessibleSplit(el, { type: "chars, words" });
 
       gsap.from(split.chars, {
-        xPercent: 120,
+        xPercent: 100,
         opacity: 0,
         duration: 0.8,
         ease: "power1.inOut",
