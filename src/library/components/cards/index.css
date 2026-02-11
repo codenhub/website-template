@@ -1,4 +1,4 @@
-@reference "../../_ui/main.css";
+@reference "../../../_ui/main.css";
 
 @theme {
   --shadow-neumorphism: 6px 6px 12px #d4d4d4, -6px -6px 12px #fafafa;
