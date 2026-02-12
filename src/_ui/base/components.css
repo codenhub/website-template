@@ -11,7 +11,8 @@
   }
 
   .mouse-tracker {
-    @apply fixed -top-8 -left-8 size-4 rounded-full bg-primary -translate-1/2 transition duration-400 pointer-events-none z-999 opacity-0;
+    @apply fixed -top-8 -left-8 size-4 rounded-full bg-white -translate-1/2 transition duration-400 pointer-events-none z-999 opacity-0;
+    mix-blend-mode: difference;
 
     &.moving {
       @apply scale-160 duration-200;
