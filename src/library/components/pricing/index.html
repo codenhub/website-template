@@ -1,0 +1,605 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Coden Agency" />
+    <meta name="copyright" content="Coden Agency" />
+    <meta
+      name="description"
+      content="A curated collection of reusable pricing components built with TailwindCSS. Browse flat, featured, and comparison pricing card styles."
+    />
+
+    <title>Pricing – Components Library</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="../../../_ui/main.css" />
+    <script type="module" src="../../../_ui/components/index.js" defer></script>
+    <script type="module" src="../../../_ui/main.js" defer></script>
+    <script type="module" src="../header-section.js" defer></script>
+    <style>
+      .loader {
+        background-color: oklch(98.5% 0 0);
+        position: fixed;
+        inset: 0;
+        transform: skewX(10deg);
+        transition: all 800ms ease;
+        border: none;
+        z-index: 999;
+
+        &.left {
+          transform: skewX(10deg) translateX(-20%);
+          &.loaded {
+            transform: skewX(10deg) translateX(-120%);
+          }
+        }
+        &.right {
+          transform: skewX(10deg) translateX(20%);
+          &.loaded {
+            transform: skewX(10deg) translateX(120%);
+          }
+        }
+      }
+      #loader-indicator {
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        color: oklch(20.5% 0 0);
+        width: 4rem;
+        height: 4rem;
+        z-index: 999;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- LOADER -->
+    <div class="loader left"></div>
+    <div class="loader right"></div>
+    <div id="loader-indicator">
+      <svg stroke="currentColor" viewBox="0 0 24 24">
+        <style>
+          .spinner {
+            transform-origin: center;
+            animation: rotate 2s linear infinite;
+          }
+          .spinner circle {
+            stroke-linecap: round;
+            animation: grow 1.5s ease-in-out infinite;
+          }
+          @keyframes rotate {
+            to {
+              transform: rotate(360deg);
+            }
+          }
+          @keyframes grow {
+            0% {
+              stroke-dasharray: 0 150;
+              stroke-dashoffset: 0;
+            }
+            50% {
+              stroke-dasharray: 42 150;
+              stroke-dashoffset: -16;
+            }
+            95%,
+            100% {
+              stroke-dasharray: 42 150;
+              stroke-dashoffset: -59;
+            }
+          }
+        </style>
+        <g class="spinner">
+          <circle cx="12" cy="12" r="9.5" fill="none" stroke-width="2"></circle>
+        </g>
+      </svg>
+    </div>
+    <!-- END LOADER -->
+
+    <main id="smooth-wrapper">
+      <div id="smooth-content">
+        <custom-header></custom-header>
+
+        <header-section></header-section>
+
+        <div class="flex w-full justify-center px-4">
+          <h2 class="max-w-7xl w-full split-chars">Pricing</h2>
+        </div>
+
+        <section
+          class="flex flex-col items-center gap-8 py-8 my-8 border-y-2 border-dashed border-border"
+        >
+          <!-- FLAT WITH FEATURED -->
+          <h3>Flat with featured</h3>
+          <div
+            class="flex gap-8 items-stretch justify-center w-full flex-wrap max-w-6xl mx-auto px-4"
+          >
+            <!-- Starter -->
+            <div
+              class="flex flex-col flex-1 min-w-72 p-8 gap-6 rounded-xl bg-foreground"
+            >
+              <div class="flex flex-col gap-2">
+                <p
+                  class="text-sm font-semibold text-text-secondary uppercase tracking-wider"
+                >
+                  Starter
+                </p>
+                <div class="flex items-baseline gap-1">
+                  <span class="text-4xl font-bold text-text">$9</span>
+                  <span class="text-text-secondary">/month</span>
+                </div>
+                <p class="text-sm text-text-secondary">
+                  Perfect for side projects and experiments.
+                </p>
+              </div>
+              <hr class="border-border" />
+              <ul class="flex flex-col gap-3 flex-1">
+                <li class="flex items-center gap-2 text-sm">
+                  <svg
+                    class="size-4 text-emerald-600 shrink-0"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                  >
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  Up to 3 projects
+                </li>
+                <li class="flex items-center gap-2 text-sm">
+                  <svg
+                    class="size-4 text-emerald-600 shrink-0"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                  >
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  1 GB storage
+                </li>
+                <li class="flex items-center gap-2 text-sm">
+                  <svg
+                    class="size-4 text-emerald-600 shrink-0"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                  >
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  Basic analytics
+                </li>
+                <li class="flex items-center gap-2 text-sm text-text-secondary">
+                  <svg
+                    class="size-4 shrink-0"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M18 6 6 18" />
+                    <path d="m6 6 12 12" />
+                  </svg>
+                  Priority support
+                </li>
+                <li class="flex items-center gap-2 text-sm text-text-secondary">
+                  <svg
+                    class="size-4 shrink-0"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M18 6 6 18" />
+                    <path d="m6 6 12 12" />
+                  </svg>
+                  Custom domain
+                </li>
+              </ul>
+              <button class="secondary-btn w-full justify-center">
+                Get started
+              </button>
+            </div>
+
+            <!-- Pro (Featured) -->
+            <div
+              class="flex flex-col flex-1 min-w-72 p-8 gap-6 rounded-xl bg-primary text-primary-contrast relative"
+            >
+              <span
+                class="absolute top-0 right-6 -translate-y-1/2 bg-accent text-accent-contrast text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider"
+                >Popular</span
+              >
+              <div class="flex flex-col gap-2">
+                <p
+                  class="text-sm font-semibold opacity-80 uppercase tracking-wider"
+                >
+                  Pro
+                </p>
+                <div class="flex items-baseline gap-1">
+                  <span class="text-4xl font-bold">$29</span>
+                  <span class="opacity-80">/month</span>
+                </div>
+                <p class="text-sm opacity-80">
+                  Best for growing teams and businesses.
+                </p>
+              </div>
+              <hr class="border-neutral-700" />
+              <ul class="flex flex-col gap-3 flex-1">
+                <li class="flex items-center gap-2 text-sm">
+                  <svg
+                    class="size-4 text-emerald-400 shrink-0"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                  >
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  Unlimited projects
+                </li>
+                <li class="flex items-center gap-2 text-sm">
+                  <svg
+                    class="size-4 text-emerald-400 shrink-0"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                  >
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  50 GB storage
+                </li>
+                <li class="flex items-center gap-2 text-sm">
+                  <svg
+                    class="size-4 text-emerald-400 shrink-0"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                  >
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  Advanced analytics
+                </li>
+                <li class="flex items-center gap-2 text-sm">
+                  <svg
+                    class="size-4 text-emerald-400 shrink-0"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                  >
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  Priority support
+                </li>
+                <li class="flex items-center gap-2 text-sm opacity-60">
+                  <svg
+                    class="size-4 shrink-0"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M18 6 6 18" />
+                    <path d="m6 6 12 12" />
+                  </svg>
+                  Custom domain
+                </li>
+              </ul>
+              <button
+                class="bg-background text-text hover:bg-foreground font-semibold flex w-full items-center justify-center px-4 py-2 gap-2 min-h-10 rounded-md transition-colors duration-400"
+              >
+                Get started
+              </button>
+            </div>
+
+            <!-- Enterprise -->
+            <div
+              class="flex flex-col flex-1 min-w-72 p-8 gap-6 rounded-xl bg-foreground"
+            >
+              <div class="flex flex-col gap-2">
+                <p
+                  class="text-sm font-semibold text-text-secondary uppercase tracking-wider"
+                >
+                  Enterprise
+                </p>
+                <div class="flex items-baseline gap-1">
+                  <span class="text-4xl font-bold text-text">$99</span>
+                  <span class="text-text-secondary">/month</span>
+                </div>
+                <p class="text-sm text-text-secondary">
+                  For large-scale teams with advanced needs.
+                </p>
+              </div>
+              <hr class="border-border" />
+              <ul class="flex flex-col gap-3 flex-1">
+                <li class="flex items-center gap-2 text-sm">
+                  <svg
+                    class="size-4 text-emerald-600 shrink-0"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                  >
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  Unlimited projects
+                </li>
+                <li class="flex items-center gap-2 text-sm">
+                  <svg
+                    class="size-4 text-emerald-600 shrink-0"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                  >
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  500 GB storage
+                </li>
+                <li class="flex items-center gap-2 text-sm">
+                  <svg
+                    class="size-4 text-emerald-600 shrink-0"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                  >
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  Advanced analytics
+                </li>
+                <li class="flex items-center gap-2 text-sm">
+                  <svg
+                    class="size-4 text-emerald-600 shrink-0"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                  >
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  Priority support
+                </li>
+                <li class="flex items-center gap-2 text-sm">
+                  <svg
+                    class="size-4 text-emerald-600 shrink-0"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                  >
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  Custom domain
+                </li>
+              </ul>
+              <button class="primary-btn w-full justify-center">
+                Contact sales
+              </button>
+            </div>
+          </div>
+
+          <!-- BORDER -->
+          <h3>Border</h3>
+          <div
+            class="flex gap-8 items-stretch justify-center w-full flex-wrap max-w-6xl mx-auto px-4"
+          >
+            <div
+              class="flex flex-col flex-1 min-w-72 p-8 gap-6 rounded-xl border border-border hover:border-border-hover hover:shadow-lg transition duration-400"
+            >
+              <div class="flex flex-col gap-2">
+                <p
+                  class="text-sm font-semibold text-text-secondary uppercase tracking-wider"
+                >
+                  Basic
+                </p>
+                <div class="flex items-baseline gap-1">
+                  <span class="text-4xl font-bold text-text">Free</span>
+                </div>
+                <p class="text-sm text-text-secondary">
+                  Get started with the essentials.
+                </p>
+              </div>
+              <hr class="border-border" />
+              <ul class="flex flex-col gap-3 flex-1">
+                <li class="flex items-center gap-2 text-sm">
+                  <svg
+                    class="size-4 text-emerald-600 shrink-0"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                  >
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  1 project
+                </li>
+                <li class="flex items-center gap-2 text-sm">
+                  <svg
+                    class="size-4 text-emerald-600 shrink-0"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                  >
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  500 MB storage
+                </li>
+                <li class="flex items-center gap-2 text-sm">
+                  <svg
+                    class="size-4 text-emerald-600 shrink-0"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                  >
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  Community support
+                </li>
+              </ul>
+              <button class="secondary-btn w-full justify-center">
+                Get started
+              </button>
+            </div>
+            <div
+              class="flex flex-col flex-1 min-w-72 p-8 gap-6 rounded-xl border-2 border-primary shadow-lg relative"
+            >
+              <span
+                class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-primary text-primary-contrast text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider"
+                >Most popular</span
+              >
+              <div class="flex flex-col gap-2">
+                <p
+                  class="text-sm font-semibold text-text-secondary uppercase tracking-wider"
+                >
+                  Pro
+                </p>
+                <div class="flex items-baseline gap-1">
+                  <span class="text-4xl font-bold text-text">$19</span>
+                  <span class="text-text-secondary">/month</span>
+                </div>
+                <p class="text-sm text-text-secondary">
+                  Everything you need to grow.
+                </p>
+              </div>
+              <hr class="border-border" />
+              <ul class="flex flex-col gap-3 flex-1">
+                <li class="flex items-center gap-2 text-sm">
+                  <svg
+                    class="size-4 text-emerald-600 shrink-0"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                  >
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  10 projects
+                </li>
+                <li class="flex items-center gap-2 text-sm">
+                  <svg
+                    class="size-4 text-emerald-600 shrink-0"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                  >
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  20 GB storage
+                </li>
+                <li class="flex items-center gap-2 text-sm">
+                  <svg
+                    class="size-4 text-emerald-600 shrink-0"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                  >
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  Email support
+                </li>
+                <li class="flex items-center gap-2 text-sm">
+                  <svg
+                    class="size-4 text-emerald-600 shrink-0"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                  >
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  API access
+                </li>
+              </ul>
+              <button class="primary-btn w-full justify-center">
+                Get started
+              </button>
+            </div>
+            <div
+              class="flex flex-col flex-1 min-w-72 p-8 gap-6 rounded-xl border border-border hover:border-border-hover hover:shadow-lg transition duration-400"
+            >
+              <div class="flex flex-col gap-2">
+                <p
+                  class="text-sm font-semibold text-text-secondary uppercase tracking-wider"
+                >
+                  Team
+                </p>
+                <div class="flex items-baseline gap-1">
+                  <span class="text-4xl font-bold text-text">$49</span>
+                  <span class="text-text-secondary">/month</span>
+                </div>
+                <p class="text-sm text-text-secondary">
+                  Collaboration tools for teams.
+                </p>
+              </div>
+              <hr class="border-border" />
+              <ul class="flex flex-col gap-3 flex-1">
+                <li class="flex items-center gap-2 text-sm">
+                  <svg
+                    class="size-4 text-emerald-600 shrink-0"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                  >
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  Unlimited projects
+                </li>
+                <li class="flex items-center gap-2 text-sm">
+                  <svg
+                    class="size-4 text-emerald-600 shrink-0"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                  >
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  100 GB storage
+                </li>
+                <li class="flex items-center gap-2 text-sm">
+                  <svg
+                    class="size-4 text-emerald-600 shrink-0"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                  >
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  Priority support
+                </li>
+                <li class="flex items-center gap-2 text-sm">
+                  <svg
+                    class="size-4 text-emerald-600 shrink-0"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                  >
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  SSO integration
+                </li>
+              </ul>
+              <button class="primary-btn w-full justify-center">
+                Contact sales
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <custom-cta></custom-cta>
+
+        <custom-footer></custom-footer>
+      </div>
+    </main>
+  </body>
+</html>

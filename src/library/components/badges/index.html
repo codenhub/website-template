@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Coden Agency" />
+    <meta name="copyright" content="Coden Agency" />
+    <meta
+      name="description"
+      content="A curated collection of reusable badge components built with TailwindCSS. Browse flat, outline, pill, and more badge styles."
+    />
+
+    <title>Badges – Components Library</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="../../../_ui/main.css" />
+    <script type="module" src="../../../_ui/components/index.js" defer></script>
+    <script type="module" src="../../../_ui/main.js" defer></script>
+    <script type="module" src="../header-section.js" defer></script>
+    <style>
+      .loader {
+        background-color: oklch(98.5% 0 0);
+        position: fixed;
+        inset: 0;
+        transform: skewX(10deg);
+        transition: all 800ms ease;
+        border: none;
+        z-index: 999;
+
+        &.left {
+          transform: skewX(10deg) translateX(-20%);
+
+          &.loaded {
+            transform: skewX(10deg) translateX(-120%);
+          }
+        }
+
+        &.right {
+          transform: skewX(10deg) translateX(20%);
+
+          &.loaded {
+            transform: skewX(10deg) translateX(120%);
+          }
+        }
+      }
+      #loader-indicator {
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        color: oklch(20.5% 0 0);
+        width: 4rem;
+        height: 4rem;
+        z-index: 999;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- LOADER -->
+    <div class="loader left"></div>
+    <div class="loader right"></div>
+    <div id="loader-indicator">
+      <svg stroke="currentColor" viewBox="0 0 24 24">
+        <style>
+          .spinner {
+            transform-origin: center;
+            animation: rotate 2s linear infinite;
+          }
+
+          .spinner circle {
+            stroke-linecap: round;
+            animation: grow 1.5s ease-in-out infinite;
+          }
+
+          @keyframes rotate {
+            to {
+              transform: rotate(360deg);
+            }
+          }
+
+          @keyframes grow {
+            0% {
+              stroke-dasharray: 0 150;
+              stroke-dashoffset: 0;
+            }
+
+            50% {
+              stroke-dasharray: 42 150;
+              stroke-dashoffset: -16;
+            }
+
+            95%,
+            100% {
+              stroke-dasharray: 42 150;
+              stroke-dashoffset: -59;
+            }
+          }
+        </style>
+        <g class="spinner">
+          <circle cx="12" cy="12" r="9.5" fill="none" stroke-width="2"></circle>
+        </g>
+      </svg>
+    </div>
+    <!-- END LOADER -->
+
+    <main id="smooth-wrapper">
+      <div id="smooth-content">
+        <custom-header></custom-header>
+
+        <header-section></header-section>
+
+        <div class="flex w-full justify-center px-4">
+          <h2 class="max-w-7xl w-full split-chars">Badges</h2>
+        </div>
+
+        <section
+          class="flex flex-col items-center gap-8 py-8 my-8 border-y-2 border-dashed border-border"
+        >
+          <!-- FLAT -->
+          <h3>Flat</h3>
+          <div class="flex gap-4 items-center justify-center w-full flex-wrap">
+            <span
+              class="px-3 py-1 text-sm font-medium rounded-md bg-primary text-primary-contrast"
+              >Primary</span
+            >
+            <span
+              class="px-3 py-1 text-sm font-medium rounded-md bg-accent text-accent-contrast"
+              >Secondary</span
+            >
+            <span
+              class="px-3 py-1 text-sm font-medium rounded-md bg-emerald-600 text-neutral-50"
+              >Success</span
+            >
+            <span
+              class="px-3 py-1 text-sm font-medium rounded-md bg-red-600 text-neutral-50"
+              >Error</span
+            >
+            <span
+              class="px-3 py-1 text-sm font-medium rounded-md bg-amber-500 text-neutral-950"
+              >Warning</span
+            >
+            <span
+              class="px-3 py-1 text-sm font-medium rounded-md bg-sky-600 text-neutral-50"
+              >Info</span
+            >
+          </div>
+
+          <!-- OUTLINE -->
+          <h3>Outline</h3>
+          <div class="flex gap-4 items-center justify-center w-full flex-wrap">
+            <span
+              class="px-3 py-1 text-sm font-medium rounded-md border border-primary text-text"
+              >Primary</span
+            >
+            <span
+              class="px-3 py-1 text-sm font-medium rounded-md border border-accent text-text"
+              >Secondary</span
+            >
+            <span
+              class="px-3 py-1 text-sm font-medium rounded-md border border-emerald-600 text-emerald-700"
+              >Success</span
+            >
+            <span
+              class="px-3 py-1 text-sm font-medium rounded-md border border-red-600 text-red-700"
+              >Error</span
+            >
+            <span
+              class="px-3 py-1 text-sm font-medium rounded-md border border-amber-500 text-amber-700"
+              >Warning</span
+            >
+            <span
+              class="px-3 py-1 text-sm font-medium rounded-md border border-sky-600 text-sky-700"
+              >Info</span
+            >
+          </div>
+
+          <!-- PILL -->
+          <h3>Pill</h3>
+          <div class="flex gap-4 items-center justify-center w-full flex-wrap">
+            <span
+              class="px-4 py-1 text-sm font-medium rounded-full bg-primary text-primary-contrast"
+              >Primary</span
+            >
+            <span
+              class="px-4 py-1 text-sm font-medium rounded-full bg-accent text-accent-contrast"
+              >Secondary</span
+            >
+            <span
+              class="px-4 py-1 text-sm font-medium rounded-full bg-emerald-600 text-neutral-50"
+              >Success</span
+            >
+            <span
+              class="px-4 py-1 text-sm font-medium rounded-full bg-red-600 text-neutral-50"
+              >Error</span
+            >
+            <span
+              class="px-4 py-1 text-sm font-medium rounded-full bg-amber-500 text-neutral-950"
+              >Warning</span
+            >
+            <span
+              class="px-4 py-1 text-sm font-medium rounded-full bg-sky-600 text-neutral-50"
+              >Info</span
+            >
+          </div>
+
+          <!-- WITH DOT INDICATOR -->
+          <h3>Dot indicator</h3>
+          <div class="flex gap-4 items-center justify-center w-full flex-wrap">
+            <span
+              class="inline-flex items-center gap-1.5 px-3 py-1 text-sm font-medium rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200"
+            >
+              <span class="size-2 rounded-full bg-emerald-500"></span>
+              Active
+            </span>
+            <span
+              class="inline-flex items-center gap-1.5 px-3 py-1 text-sm font-medium rounded-full bg-red-50 text-red-700 border border-red-200"
+            >
+              <span class="size-2 rounded-full bg-red-500"></span>
+              Offline
+            </span>
+            <span
+              class="inline-flex items-center gap-1.5 px-3 py-1 text-sm font-medium rounded-full bg-amber-50 text-amber-700 border border-amber-200"
+            >
+              <span class="size-2 rounded-full bg-amber-500"></span>
+              Pending
+            </span>
+            <span
+              class="inline-flex items-center gap-1.5 px-3 py-1 text-sm font-medium rounded-full bg-sky-50 text-sky-700 border border-sky-200"
+            >
+              <span class="size-2 rounded-full bg-sky-500"></span>
+              In review
+            </span>
+          </div>
+
+          <!-- NEOBRUTALISM -->
+          <h3>Neobrutalism</h3>
+          <div class="flex gap-4 items-center justify-center w-full flex-wrap">
+            <span
+              class="px-3 py-1 text-sm font-bold bg-primary text-primary-contrast border-2 border-neutral-950 shadow-[2px_2px_0_#0a0a0a]"
+              >Primary</span
+            >
+            <span
+              class="px-3 py-1 text-sm font-bold bg-amber-400 text-neutral-950 border-2 border-neutral-950 shadow-[2px_2px_0_#0a0a0a]"
+              >Warning</span
+            >
+            <span
+              class="px-3 py-1 text-sm font-bold bg-emerald-400 text-neutral-950 border-2 border-neutral-950 shadow-[2px_2px_0_#0a0a0a]"
+              >Success</span
+            >
+            <span
+              class="px-3 py-1 text-sm font-bold bg-sky-400 text-neutral-950 border-2 border-neutral-950 shadow-[2px_2px_0_#0a0a0a]"
+              >Info</span
+            >
+            <span
+              class="px-3 py-1 text-sm font-bold bg-rose-400 text-neutral-950 border-2 border-neutral-950 shadow-[2px_2px_0_#0a0a0a]"
+              >Error</span
+            >
+          </div>
+
+          <!-- SOFT -->
+          <h3>Soft</h3>
+          <div class="flex gap-4 items-center justify-center w-full flex-wrap">
+            <span
+              class="px-3 py-1 text-sm font-medium rounded-md bg-primary/10 text-text"
+              >Primary</span
+            >
+            <span
+              class="px-3 py-1 text-sm font-medium rounded-md bg-emerald-500/10 text-emerald-700"
+              >Success</span
+            >
+            <span
+              class="px-3 py-1 text-sm font-medium rounded-md bg-red-500/10 text-red-700"
+              >Error</span
+            >
+            <span
+              class="px-3 py-1 text-sm font-medium rounded-md bg-amber-500/10 text-amber-700"
+              >Warning</span
+            >
+            <span
+              class="px-3 py-1 text-sm font-medium rounded-md bg-sky-500/10 text-sky-700"
+              >Info</span
+            >
+          </div>
+        </section>
+
+        <custom-cta></custom-cta>
+
+        <custom-footer></custom-footer>
+      </div>
+    </main>
+  </body>
+</html>
