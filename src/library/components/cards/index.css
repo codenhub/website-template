@@ -12,7 +12,7 @@
   }
 
   .border-card {
-    @apply flex gap-4 flex-1 min-w-sm items-center rounded-xl p-8 border border-border hover:border-primary hover:shadow-lg transition duration-400;
+    @apply flex gap-4 flex-1 min-w-sm items-center rounded-xl p-8 border border-border hover:border-border-hover hover:shadow-lg transition duration-400;
   }
 
   .neobrutalism-card {
