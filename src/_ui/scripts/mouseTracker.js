@@ -22,7 +22,7 @@ export default function initMouseTracker() {
         left: `${clientX}px`,
         top: `${clientY}px`,
       },
-      { duration: 800, fill: "forwards" },
+      { duration: 400, fill: "forwards" },
     );
 
     cursorMoving();

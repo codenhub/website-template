@@ -11,16 +11,10 @@
   }
 
   .mouse-tracker {
-    @apply fixed -top-8 -left-8 size-16 rounded-full border border-primary/40 bg-primary/10 -translate-1/2 transition duration-800 pointer-events-none z-999 opacity-0;
+    @apply fixed -top-8 -left-8 size-4 rounded-full bg-primary -translate-1/2 transition duration-400 pointer-events-none z-999 opacity-0;
 
     &.moving {
-      @apply scale-160 duration-400;
-    }
-
-    /* FOR CONTRAST WITH PRIMARY BACKGROUND */
-    &::after {
-      @apply absolute inset-0 rounded-full border border-primary-contrast/40 bg-primary-contrast/10 transition duration-800 pointer-events-none z-999;
-      content: "";
+      @apply scale-160 duration-200;
     }
   }
 
