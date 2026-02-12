@@ -5,20 +5,118 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Coden Agency" />
     <meta name="copyright" content="Coden Agency" />
+    <meta
+      name="description"
+      content="A curated collection of reusable UI components built with TailwindCSS. Browse buttons, cards, headers, footers, and more."
+    />
 
-    <title>Website template by Coden</title>
+    <title>Components Library</title>
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="stylesheet" href="../../../_ui/main.css" />
+    <script type="module" src="../../../_ui/components/index.js" defer></script>
     <script type="module" src="../../../_ui/main.js" defer></script>
+    <script type="module" src="../header-section.js" defer></script>
+    <style>
+      .loader {
+        background-color: oklch(98.5% 0 0);
+        position: fixed;
+        inset: 0;
+        transform: skewX(10deg);
+        transition: all 800ms ease;
+        border: none;
+        z-index: 999;
+
+        &.left {
+          transform: skewX(10deg) translateX(-20%);
+
+          &.loaded {
+            transform: skewX(10deg) translateX(-120%);
+          }
+        }
+
+        &.right {
+          transform: skewX(10deg) translateX(20%);
+
+          &.loaded {
+            transform: skewX(10deg) translateX(120%);
+          }
+        }
+      }
+      #loader-indicator {
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        color: oklch(20.5% 0 0);
+        width: 4rem;
+        height: 4rem;
+        z-index: 999;
+      }
+    </style>
   </head>
 
   <body>
+    <!-- LOADER -->
+    <div class="loader left"></div>
+    <div class="loader right"></div>
+    <div id="loader-indicator">
+      <svg stroke="currentColor" viewBox="0 0 24 24">
+        <style>
+          .spinner {
+            transform-origin: center;
+            animation: rotate 2s linear infinite;
+          }
+
+          .spinner circle {
+            stroke-linecap: round;
+            animation: grow 1.5s ease-in-out infinite;
+          }
+
+          @keyframes rotate {
+            to {
+              transform: rotate(360deg);
+            }
+          }
+
+          @keyframes grow {
+            0% {
+              stroke-dasharray: 0 150;
+              stroke-dashoffset: 0;
+            }
+
+            50% {
+              stroke-dasharray: 42 150;
+              stroke-dashoffset: -16;
+            }
+
+            95%,
+            100% {
+              stroke-dasharray: 42 150;
+              stroke-dashoffset: -59;
+            }
+          }
+        </style>
+        <g class="spinner">
+          <circle cx="12" cy="12" r="9.5" fill="none" stroke-width="2"></circle>
+        </g>
+      </svg>
+    </div>
+    <!-- END LOADER -->
+
     <main id="smooth-wrapper">
       <div id="smooth-content">
-        <!-- FLAT -->
-        <section class="sect">
-          <div class="sect-container">
-            <h2>Flat</h2>
+        <custom-header></custom-header>
+
+        <header-section></header-section>
+
+        <h2 class="max-w-7xl w-full mx-auto split-chars">Buttons</h2>
+
+        <section
+          class="flex flex-col gap-4 py-8 my-8 border-y-2 border-dashed border-border"
+        >
+          <!-- FLAT -->
+          <div class="max-w-7xl w-full mx-auto px-4">
+            <h3>Flat</h3>
             <div class="flex gap-8 items-center justify-center w-full">
               <button
                 class="bg-primary hover:bg-primary-hover text-neutral-50 font-semibold flex w-fit items-center justify-center px-4 py-2 min-h-10 rounded-md transition duration-400"
@@ -42,12 +140,10 @@
               </button>
             </div>
           </div>
-        </section>
 
-        <!-- SHADOW -->
-        <section class="sect">
-          <div class="sect-container">
-            <h2>Shadow</h2>
+          <!-- SHADOW -->
+          <div class="max-w-7xl w-full mx-auto px-4">
+            <h3>Shadow</h3>
             <div class="flex gap-8 items-center justify-center w-full">
               <button
                 class="bg-primary hover:bg-primary-hover text-neutral-50 font-semibold flex w-fit items-center justify-center px-4 py-2 min-h-10 rounded-md shadow-md shadow-primary/40 hover:shadow-primary/20 transition duration-400"
@@ -71,12 +167,10 @@
               </button>
             </div>
           </div>
-        </section>
 
-        <!-- OUTLINE -->
-        <section class="sect">
-          <div class="sect-container">
-            <h2>Outline</h2>
+          <!-- OUTLINE -->
+          <div class="max-w-7xl w-full mx-auto px-4">
+            <h3>Outline</h3>
             <div class="flex gap-8 items-center justify-center w-full">
               <button
                 class="bg-transparent hover:bg-primary text-text hover:text-primary-contrast font-semibold flex w-fit items-center justify-center px-4 py-2 min-h-10 rounded-md border border-primary transition duration-400"
@@ -100,12 +194,10 @@
               </button>
             </div>
           </div>
-        </section>
 
-        <!-- NEOBRUTALISM -->
-        <section class="sect">
-          <div class="sect-container">
-            <h2>Neobrutalism</h2>
+          <!-- NEOBRUTALISM -->
+          <div class="max-w-7xl w-full mx-auto px-4">
+            <h3>Neobrutalism</h3>
             <div class="flex gap-8 items-center justify-center w-full">
               <button
                 class="bg-primary text-primary-contrast flex w-fit px-4 py-2 font-semibold border-2 border-neutral-950 shadow-[4px_4px_0_#0a0a0a] hover:shadow-[2px_2px_0_#0a0a0a] hover:translate-0.5 active:shadow-[0_0_0_#0a0a0a] active:translate-1 transition duration-400"
@@ -125,6 +217,10 @@
             </div>
           </div>
         </section>
+
+        <custom-cta></custom-cta>
+
+        <custom-footer></custom-footer>
       </div>
     </main>
   </body>

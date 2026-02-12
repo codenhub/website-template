@@ -5,90 +5,194 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Coden Agency" />
     <meta name="copyright" content="Coden Agency" />
+    <meta
+      name="description"
+      content="A curated collection of reusable UI components built with TailwindCSS. Browse buttons, cards, headers, footers, and more."
+    />
 
-    <title>Website template by Coden</title>
+    <title>Components Library</title>
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="stylesheet" href="../../../_ui/main.css" />
+    <script type="module" src="../../../_ui/components/index.js" defer></script>
     <script type="module" src="../../../_ui/main.js" defer></script>
+    <script type="module" src="../header-section.js" defer></script>
+    <style>
+      .loader {
+        background-color: oklch(98.5% 0 0);
+        position: fixed;
+        inset: 0;
+        transform: skewX(10deg);
+        transition: all 800ms ease;
+        border: none;
+        z-index: 999;
+
+        &.left {
+          transform: skewX(10deg) translateX(-20%);
+
+          &.loaded {
+            transform: skewX(10deg) translateX(-120%);
+          }
+        }
+
+        &.right {
+          transform: skewX(10deg) translateX(20%);
+
+          &.loaded {
+            transform: skewX(10deg) translateX(120%);
+          }
+        }
+      }
+      #loader-indicator {
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        color: oklch(20.5% 0 0);
+        width: 4rem;
+        height: 4rem;
+        z-index: 999;
+      }
+    </style>
   </head>
 
   <body>
+    <!-- LOADER -->
+    <div class="loader left"></div>
+    <div class="loader right"></div>
+    <div id="loader-indicator">
+      <svg stroke="currentColor" viewBox="0 0 24 24">
+        <style>
+          .spinner {
+            transform-origin: center;
+            animation: rotate 2s linear infinite;
+          }
+
+          .spinner circle {
+            stroke-linecap: round;
+            animation: grow 1.5s ease-in-out infinite;
+          }
+
+          @keyframes rotate {
+            to {
+              transform: rotate(360deg);
+            }
+          }
+
+          @keyframes grow {
+            0% {
+              stroke-dasharray: 0 150;
+              stroke-dashoffset: 0;
+            }
+
+            50% {
+              stroke-dasharray: 42 150;
+              stroke-dashoffset: -16;
+            }
+
+            95%,
+            100% {
+              stroke-dasharray: 42 150;
+              stroke-dashoffset: -59;
+            }
+          }
+        </style>
+        <g class="spinner">
+          <circle cx="12" cy="12" r="9.5" fill="none" stroke-width="2"></circle>
+        </g>
+      </svg>
+    </div>
+    <!-- END LOADER -->
+
     <main id="smooth-wrapper">
       <div id="smooth-content">
-        <!-- FLAT -->
-        <section class="sect">
-          <div
-            class="flex flex-col items-center text-center max-w-7xl w-full px-4 py-12 gap-4 rounded-xl bg-foreground"
-          >
-            <h2>Call to Action</h2>
-            <p class="max-w-xl">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
-              alias tenetur veritatis quibusdam repellat.
-            </p>
-            <div class="flex gap-4">
-              <button class="primary-btn">Click me</button>
-              <button class="secondary-btn">Learn more</button>
+        <custom-header></custom-header>
+
+        <header-section></header-section>
+
+        <h2 class="max-w-7xl w-full mx-auto split-chars">Call to Action</h2>
+
+        <section
+          class="flex flex-col gap-4 py-8 my-8 border-y-2 border-dashed border-border"
+        >
+          <!-- FLAT -->
+          <div class="flex items-center justify-center px-4">
+            <div
+              class="flex flex-col items-center text-center max-w-7xl w-full px-4 py-12 gap-4 rounded-xl bg-foreground"
+            >
+              <h3>Call to Action</h3>
+              <p class="max-w-xl">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
+                alias tenetur veritatis quibusdam repellat.
+              </p>
+              <div class="flex gap-4">
+                <button class="primary-btn">Click me</button>
+                <button class="secondary-btn">Learn more</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- BACKGROUND IMAGE -->
+          <div class="flex items-center justify-center px-4">
+            <div
+              class="relative overflow-hidden z-1 flex flex-col items-center text-center max-w-7xl w-full px-4 py-12 gap-4 rounded-xl bg-primary text-primary-contrast"
+            >
+              <img
+                src="/assets/images/coding.webp"
+                alt="Coding background"
+                class="absolute inset-0 size-full -z-1 object-cover opacity-20"
+              />
+              <h3>Call to Action</h3>
+              <p class="max-w-xl">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
+                alias tenetur veritatis quibusdam repellat.
+              </p>
+              <div class="flex gap-4">
+                <button class="primary-btn">Click me</button>
+                <button class="secondary-btn">Learn more</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- NEOBRUTALISM -->
+          <div class="flex items-center justify-center px-4">
+            <div
+              class="relative overflow-hidden z-1 flex flex-col items-center text-center max-w-7xl w-full px-4 py-12 gap-4 border-2 border-neutral-950 shadow-[4px_4px_0_#0a0a0a]"
+            >
+              <img
+                src="/assets/images/neobrutalism.webp"
+                alt="Coding background"
+                class="absolute inset-0 size-full -z-1 object-cover"
+              />
+              <h3
+                class="text-neutral-50 stroke-2 text-shadow-[4px_4px_0_#0a0a0a]"
+              >
+                Call to Action
+              </h3>
+              <p
+                class="max-w-xl text-neutral-50 text-shadow-md text-shadow-neutral-950/40"
+              >
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
+                alias tenetur veritatis quibusdam repellat.
+              </p>
+              <div class="flex gap-4">
+                <button
+                  class="bg-primary text-primary-contrast flex w-fit px-4 py-2 font-semibold border-2 border-neutral-950 shadow-[4px_4px_0_#0a0a0a] hover:shadow-[2px_2px_0_#0a0a0a] hover:translate-0.5 active:shadow-[0_0_0_#0a0a0a] active:translate-1 transition duration-400"
+                >
+                  Click me
+                </button>
+                <button
+                  class="bg-accent text-accent-contrast flex w-fit px-4 py-2 font-semibold border-2 border-neutral-950 shadow-[4px_4px_0_#0a0a0a] hover:shadow-[2px_2px_0_#0a0a0a] hover:translate-0.5 active:shadow-[0_0_0_#0a0a0a] active:translate-1 transition duration-400"
+                >
+                  Learn more
+                </button>
+              </div>
             </div>
           </div>
         </section>
 
-        <!-- BACKGROUND IMAGE -->
-        <section class="sect">
-          <div
-            class="relative overflow-hidden z-1 flex flex-col items-center text-center max-w-7xl w-full px-4 py-12 gap-4 rounded-xl bg-primary text-primary-contrast"
-          >
-            <img
-              src="/assets/images/coding.webp"
-              alt="Coding background"
-              class="absolute inset-0 size-full -z-1 object-cover opacity-20"
-            />
-            <h2>Call to Action</h2>
-            <p class="max-w-xl">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
-              alias tenetur veritatis quibusdam repellat.
-            </p>
-            <div class="flex gap-4">
-              <button class="primary-btn">Click me</button>
-              <button class="secondary-btn">Learn more</button>
-            </div>
-          </div>
-        </section>
+        <custom-cta></custom-cta>
 
-        <!-- NEOBRUTALISM -->
-        <section class="sect">
-          <div
-            class="relative overflow-hidden z-1 flex flex-col items-center text-center max-w-7xl w-full px-4 py-12 gap-4 border-2 border-neutral-950 shadow-[4px_4px_0_#0a0a0a]"
-          >
-            <img
-              src="/assets/images/neobrutalism.webp"
-              alt="Coding background"
-              class="absolute inset-0 size-full -z-1 object-cover"
-            />
-            <h2
-              class="text-neutral-50 stroke-2 text-shadow-[4px_4px_0_#0a0a0a]"
-            >
-              Call to Action
-            </h2>
-            <p
-              class="max-w-xl text-neutral-50 text-shadow-md text-shadow-neutral-950/40"
-            >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
-              alias tenetur veritatis quibusdam repellat.
-            </p>
-            <div class="flex gap-4">
-              <button
-                class="bg-primary text-primary-contrast flex w-fit px-4 py-2 font-semibold border-2 border-neutral-950 shadow-[4px_4px_0_#0a0a0a] hover:shadow-[2px_2px_0_#0a0a0a] hover:translate-0.5 active:shadow-[0_0_0_#0a0a0a] active:translate-1 transition duration-400"
-              >
-                Click me
-              </button>
-              <button
-                class="bg-accent text-accent-contrast flex w-fit px-4 py-2 font-semibold border-2 border-neutral-950 shadow-[4px_4px_0_#0a0a0a] hover:shadow-[2px_2px_0_#0a0a0a] hover:translate-0.5 active:shadow-[0_0_0_#0a0a0a] active:translate-1 transition duration-400"
-              >
-                Learn more
-              </button>
-            </div>
-          </div>
-        </section>
+        <custom-footer></custom-footer>
       </div>
     </main>
   </body>

@@ -5,21 +5,119 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Coden Agency" />
     <meta name="copyright" content="Coden Agency" />
+    <meta
+      name="description"
+      content="A curated collection of reusable UI components built with TailwindCSS. Browse buttons, cards, headers, footers, and more."
+    />
 
-    <title>Website template by Coden</title>
+    <title>Components Library</title>
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="stylesheet" href="../../../_ui/main.css" />
     <link rel="stylesheet" href="./index.css" />
+    <script type="module" src="../../../_ui/components/index.js" defer></script>
     <script type="module" src="../../../_ui/main.js" defer></script>
+    <script type="module" src="../header-section.js" defer></script>
+    <style>
+      .loader {
+        background-color: oklch(98.5% 0 0);
+        position: fixed;
+        inset: 0;
+        transform: skewX(10deg);
+        transition: all 800ms ease;
+        border: none;
+        z-index: 999;
+
+        &.left {
+          transform: skewX(10deg) translateX(-20%);
+
+          &.loaded {
+            transform: skewX(10deg) translateX(-120%);
+          }
+        }
+
+        &.right {
+          transform: skewX(10deg) translateX(20%);
+
+          &.loaded {
+            transform: skewX(10deg) translateX(120%);
+          }
+        }
+      }
+      #loader-indicator {
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        color: oklch(20.5% 0 0);
+        width: 4rem;
+        height: 4rem;
+        z-index: 999;
+      }
+    </style>
   </head>
 
   <body>
+    <!-- LOADER -->
+    <div class="loader left"></div>
+    <div class="loader right"></div>
+    <div id="loader-indicator">
+      <svg stroke="currentColor" viewBox="0 0 24 24">
+        <style>
+          .spinner {
+            transform-origin: center;
+            animation: rotate 2s linear infinite;
+          }
+
+          .spinner circle {
+            stroke-linecap: round;
+            animation: grow 1.5s ease-in-out infinite;
+          }
+
+          @keyframes rotate {
+            to {
+              transform: rotate(360deg);
+            }
+          }
+
+          @keyframes grow {
+            0% {
+              stroke-dasharray: 0 150;
+              stroke-dashoffset: 0;
+            }
+
+            50% {
+              stroke-dasharray: 42 150;
+              stroke-dashoffset: -16;
+            }
+
+            95%,
+            100% {
+              stroke-dasharray: 42 150;
+              stroke-dashoffset: -59;
+            }
+          }
+        </style>
+        <g class="spinner">
+          <circle cx="12" cy="12" r="9.5" fill="none" stroke-width="2"></circle>
+        </g>
+      </svg>
+    </div>
+    <!-- END LOADER -->
+
     <main id="smooth-wrapper">
       <div id="smooth-content">
-        <!-- FLAT -->
-        <section class="sect">
-          <div class="sect-container">
-            <h2>Flat</h2>
+        <custom-header></custom-header>
+
+        <header-section></header-section>
+
+        <h2 class="max-w-7xl w-full mx-auto split-chars">Cards</h2>
+
+        <section
+          class="flex flex-col gap-4 py-8 my-8 border-y-2 border-dashed border-border"
+        >
+          <!-- FLAT -->
+          <div class="max-w-7xl w-full mx-auto px-4">
+            <h3>Flat</h3>
             <div class="flex flex-row flex-wrap gap-8 w-full">
               <div class="flat-card">
                 <div class="flex flex-1 flex-col gap-4 w-full justify-between">
@@ -53,12 +151,10 @@
               </div>
             </div>
           </div>
-        </section>
 
-        <!-- BORDER + SHADOW -->
-        <section class="sect">
-          <div class="sect-container">
-            <h2>Border + shadow</h2>
+          <!-- BORDER + SHADOW -->
+          <div class="max-w-7xl w-full mx-auto px-4">
+            <h3>Border + shadow</h3>
             <div class="flex flex-row flex-wrap gap-8 w-full">
               <div class="border-card">
                 <div class="flex flex-1 flex-col gap-4 w-full justify-between">
@@ -104,12 +200,10 @@
               </div>
             </div>
           </div>
-        </section>
 
-        <!-- NEOBRUTALISM -->
-        <section class="sect">
-          <div class="sect-container">
-            <h2>Neobrutalism</h2>
+          <!-- NEOBRUTALISM -->
+          <div class="max-w-7xl w-full mx-auto px-4">
+            <h3>Neobrutalism</h3>
             <div class="flex flex-row flex-wrap gap-8 w-full">
               <div class="neobrutalism-card">
                 <div class="flex flex-1 flex-col gap-4 w-full justify-between">
@@ -155,12 +249,10 @@
               </div>
             </div>
           </div>
-        </section>
 
-        <!-- GLASSMORPHISM -->
-        <section class="sect">
-          <div class="sect-container">
-            <h2>Glassmorphism</h2>
+          <!-- GLASSMORPHISM -->
+          <div class="max-w-7xl w-full mx-auto px-4">
+            <h3>Glassmorphism</h3>
             <div class="flex flex-row flex-wrap gap-8 w-full relative">
               <div
                 class="absolute size-32 bg-sky-600 rounded-full left-0 top-0 -translate-12"
@@ -212,12 +304,10 @@
               </div>
             </div>
           </div>
-        </section>
 
-        <!-- NEUMORPHISM -->
-        <section class="sect">
-          <div class="sect-container">
-            <h2>Neumorphism</h2>
+          <!-- NEUMORPHISM -->
+          <div class="max-w-7xl w-full mx-auto px-4">
+            <h3>Neumorphism</h3>
             <div class="flex flex-row flex-wrap gap-8 w-full relative">
               <div class="neumorphism-card">
                 <div class="flex flex-1 flex-col gap-4 w-full justify-between">
@@ -264,6 +354,10 @@
             </div>
           </div>
         </section>
+
+        <custom-cta></custom-cta>
+
+        <custom-footer></custom-footer>
       </div>
     </main>
   </body>
