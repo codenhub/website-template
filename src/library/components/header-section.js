@@ -10,7 +10,7 @@ class HeaderSection extends HTMLElement {
             A curated collection of production-ready UI components. Copy,
             paste, and customize to ship faster.
           </p>
-          <div class="flex gap-4 items-center w-full">
+          <div class="flex gap-4 items-center flex-wrap w-full">
             <a
               href="/library/components/buttons/"
               class="flex items-center gap-2 px-4 py-2 rounded-xl border border-border hover:border-border-hover transition-colors duration-400"
