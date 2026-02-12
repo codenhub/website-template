@@ -1,0 +1,107 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+@theme {
+  --color-primary: var(--color-neutral-950);
+  --color-primary-contrast: var(--color-neutral-50);
+  --color-primary-hover: var(--color-neutral-700);
+  --color-accent: var(--color-neutral-300);
+  --color-accent-contrast: var(--color-neutral-950);
+  --color-accent-hover: var(--color-neutral-400);
+  --color-border: var(--color-neutral-300);
+  --color-border-hover: var(--color-neutral-600);
+  --color-background: var(--color-neutral-50);
+  --color-foreground: var(--color-neutral-200);
+  --color-text: var(--color-neutral-950);
+  --color-text-secondary: var(--color-neutral-700);
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("/assets/fonts/Inter-Variable.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@utility font-title {
+  font-family: "Bebas Neue", "Inter", "Segoe UI", system-ui, sans-serif;
+}
+
+@utility font-default {
+  font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+}
+
+@layer base {
+  ::-webkit-scrollbar {
+    width: calc(var(--spacing) * 4);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-primary);
+    border: var(--spacing) solid var(--color-background);
+    border-radius: calc(var(--spacing) * 2);
+  }
+
+  html,
+  body {
+    @apply flex flex-col min-h-screen overflow-x-hidden bg-background text-text font-default;
+  }
+
+  button {
+    @apply not-disabled:cursor-pointer;
+  }
+
+  img {
+    @apply select-none;
+  }
+
+  ::selection {
+    background: var(--color-primary);
+    color: var(--color-primary-contrast);
+  }
+
+  .selection-contrast::selection,
+  .selection-contrast *::selection {
+    background: var(--color-primary-contrast);
+    color: var(--color-primary);
+  }
+
+  h1 {
+    @apply text-7xl md:text-8xl font-title tracking-tight;
+  }
+
+  h2 {
+    @apply text-5xl md:text-6xl font-title tracking-tight;
+  }
+
+  h3 {
+    @apply text-3xl font-semibold tracking-tight;
+  }
+
+  h4 {
+    @apply text-xl font-medium tracking-tight;
+  }
+
+  h5 {
+    @apply text-lg font-medium tracking-wide;
+  }
+
+  h6 {
+    @apply text-base font-medium tracking-wide;
+  }
+
+  p,
+  li,
+  a {
+    @apply text-sm font-normal tracking-wider;
+  }
+
+  .sect {
+    @apply flex flex-col gap-8 px-4 py-16 items-center justify-center;
+  }
+
+  .sect-container {
+    @apply flex flex-col w-full max-w-7xl gap-12 items-center;
+  }
+}
