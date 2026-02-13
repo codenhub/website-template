@@ -7,10 +7,10 @@
     <meta name="copyright" content="Coden Agency" />
     <meta
       name="description"
-      content="A curated collection of reusable UI components built with TailwindCSS. Browse buttons, cards, headers, footers, and more."
+      content="A curated collection of reusable CTA components built with TailwindCSS. Browse centered, split, newsletter, banner, and neobrutalism styles."
     />
 
-    <title>Components Library</title>
+    <title>CTA – Components Library</title>
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="stylesheet" href="../../../_ui/main.css" />
     <script type="module" src="../../../_ui/components/index.js" defer></script>
@@ -114,51 +114,359 @@
         </div>
 
         <section
-          class="flex flex-col gap-4 py-8 my-8 border-y-2 border-dashed border-border"
+          class="flex flex-col gap-8 py-8 my-8 border-y-2 border-dashed border-border"
         >
-          <!-- FLAT -->
+          <!-- Centered: Simple -->
           <div class="flex items-center justify-center px-4">
             <div
-              class="flex flex-col items-center text-center max-w-7xl w-full px-4 py-12 gap-4 rounded-xl bg-foreground"
+              class="flex flex-col items-center text-center max-w-7xl w-full px-6 py-16 gap-4 rounded-xl bg-foreground"
             >
-              <h3>Call to Action</h3>
-              <p class="max-w-xl">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
-                alias tenetur veritatis quibusdam repellat.
+              <p
+                class="text-sm font-semibold text-text-secondary uppercase tracking-wider"
+              >
+                Get started
               </p>
-              <div class="flex gap-4">
-                <button class="primary-btn">Click me</button>
-                <button class="secondary-btn">Learn more</button>
+              <h3 class="text-3xl md:text-4xl font-bold text-text max-w-2xl">
+                Boost your productivity today
+              </h3>
+              <p class="max-w-xl text-text-secondary">
+                Start building for free. No credit card required. Upgrade
+                anytime as your team grows.
+              </p>
+              <div class="flex flex-col sm:flex-row gap-3 mt-2">
+                <button class="primary-btn">Start free trial</button>
+                <button class="secondary-btn">Talk to sales</button>
               </div>
             </div>
           </div>
 
-          <!-- BACKGROUND IMAGE -->
+          <!-- Centered: With Background Image -->
           <div class="flex items-center justify-center px-4">
             <div
-              class="relative overflow-hidden z-1 flex flex-col items-center text-center max-w-7xl w-full px-4 py-12 gap-4 rounded-xl bg-primary text-primary-contrast"
+              class="relative overflow-hidden z-1 flex flex-col items-center text-center max-w-7xl w-full px-6 py-16 gap-4 rounded-xl bg-primary text-primary-contrast"
             >
               <img
                 src="/assets/images/coding.webp"
                 alt="Coding background"
                 class="absolute inset-0 size-full -z-1 object-cover opacity-20"
               />
-              <h3>Call to Action</h3>
-              <p class="max-w-xl">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
-                alias tenetur veritatis quibusdam repellat.
+              <p
+                class="text-sm font-semibold opacity-70 uppercase tracking-wider"
+              >
+                Build faster
               </p>
-              <div class="flex gap-4">
-                <button class="primary-btn">Click me</button>
-                <button class="secondary-btn">Learn more</button>
+              <h3 class="text-3xl md:text-4xl font-bold max-w-2xl">
+                Ship your next project in record time
+              </h3>
+              <p class="max-w-xl opacity-80">
+                Join thousands of teams already using our platform. Get started
+                in minutes, not hours.
+              </p>
+              <div class="flex flex-col sm:flex-row gap-3 mt-2">
+                <button
+                  class="bg-background text-text hover:bg-foreground font-semibold flex w-fit items-center justify-center px-5 py-2.5 gap-2 min-h-10 rounded-md transition-colors duration-400"
+                >
+                  Get started
+                </button>
+                <button
+                  class="bg-transparent hover:bg-white/10 text-primary-contrast font-semibold flex w-fit items-center justify-center px-5 py-2.5 gap-2 min-h-10 rounded-md border border-white/30 transition-colors duration-400"
+                >
+                  Learn more
+                </button>
               </div>
             </div>
           </div>
 
-          <!-- NEOBRUTALISM -->
+          <!-- Centered: Minimal -->
           <div class="flex items-center justify-center px-4">
             <div
-              class="relative overflow-hidden z-1 flex flex-col items-center text-center max-w-7xl w-full px-4 py-12 gap-4 border-2 border-neutral-950 shadow-[4px_4px_0_#0a0a0a]"
+              class="flex flex-col items-center text-center max-w-7xl w-full px-6 py-16 gap-4"
+            >
+              <h3 class="text-3xl md:text-4xl font-bold text-text max-w-2xl">
+                Ready to dive in?
+              </h3>
+              <p class="max-w-md text-text-secondary">
+                Start your free 14-day trial. No credit card required.
+              </p>
+              <button class="primary-btn mt-2">Get started</button>
+            </div>
+          </div>
+
+          <!-- Split: Left content, right image -->
+          <div class="flex items-center justify-center px-4">
+            <div
+              class="flex flex-col md:flex-row items-center max-w-7xl w-full bg-foreground rounded-2xl overflow-hidden"
+            >
+              <div
+                class="flex-1 flex flex-col justify-center p-8 md:p-12 gap-5"
+              >
+                <p
+                  class="text-sm font-semibold text-text-secondary uppercase tracking-wider"
+                >
+                  For developers
+                </p>
+                <h3 class="text-3xl md:text-4xl font-bold text-text">
+                  Ready to get started?
+                </h3>
+                <p class="text-text-secondary">
+                  Join thousands of developers building beautiful applications
+                  with our tools. Start your free trial today.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-3">
+                  <button class="primary-btn">Get started</button>
+                  <button class="secondary-btn">View docs</button>
+                </div>
+                <div
+                  class="flex items-center gap-3 text-sm text-text-secondary mt-2"
+                >
+                  <div class="flex -space-x-2">
+                    <img
+                      src="https://i.pravatar.cc/100?img=1"
+                      alt="User"
+                      class="w-8 h-8 rounded-full border-2 border-foreground"
+                    />
+                    <img
+                      src="https://i.pravatar.cc/100?img=2"
+                      alt="User"
+                      class="w-8 h-8 rounded-full border-2 border-foreground"
+                    />
+                    <img
+                      src="https://i.pravatar.cc/100?img=3"
+                      alt="User"
+                      class="w-8 h-8 rounded-full border-2 border-foreground"
+                    />
+                  </div>
+                  <p>Joined by 10,000+ developers</p>
+                </div>
+              </div>
+              <div class="flex-1 w-full min-h-64 md:min-h-96 relative">
+                <img
+                  src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop"
+                  alt="Team collaboration"
+                  class="absolute inset-0 w-full h-full object-cover"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- Split: Right content, left image -->
+          <div class="flex items-center justify-center px-4">
+            <div
+              class="flex flex-col-reverse md:flex-row items-center max-w-7xl w-full rounded-2xl overflow-hidden border border-border"
+            >
+              <div class="flex-1 w-full min-h-64 md:min-h-96 relative">
+                <img
+                  src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=2070&auto=format&fit=crop"
+                  alt="Working together"
+                  class="absolute inset-0 w-full h-full object-cover"
+                />
+              </div>
+              <div
+                class="flex-1 flex flex-col justify-center p-8 md:p-12 gap-5"
+              >
+                <h3 class="text-3xl md:text-4xl font-bold text-text">
+                  Scale without limits
+                </h3>
+                <p class="text-text-secondary">
+                  Our infrastructure grows with your business. From prototype to
+                  production-scale — we've got you covered.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-3">
+                  <button class="primary-btn">Start building</button>
+                  <button class="secondary-btn">See case studies</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Newsletter: Dark card -->
+          <div class="flex items-center justify-center px-4">
+            <div
+              class="w-full max-w-7xl px-6 py-16 md:py-20 bg-neutral-900 rounded-2xl text-center"
+            >
+              <div class="flex flex-col items-center gap-5 max-w-2xl mx-auto">
+                <h3
+                  class="text-3xl md:text-4xl font-bold text-white tracking-tight"
+                >
+                  Stay ahead of the curve
+                </h3>
+                <p class="text-neutral-400 md:text-lg max-w-lg">
+                  Get the latest updates, articles, and resources sent straight
+                  to your inbox once a week. No spam, ever.
+                </p>
+
+                <form
+                  class="w-full max-w-md flex flex-col sm:flex-row gap-3 mt-2"
+                  onsubmit="event.preventDefault();"
+                >
+                  <input
+                    type="email"
+                    placeholder="Enter your email"
+                    class="flex-1 px-4 py-2.5 rounded-md bg-white/10 border border-white/15 text-white placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-white/30 transition-all"
+                    required
+                  />
+                  <button
+                    class="px-5 py-2.5 rounded-md bg-white text-neutral-900 font-semibold hover:bg-neutral-200 transition-colors"
+                  >
+                    Subscribe
+                  </button>
+                </form>
+
+                <p class="text-neutral-500 text-sm">
+                  We care about your data in our
+                  <a href="#" class="underline hover:text-neutral-300"
+                    >privacy policy</a
+                  >.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Newsletter: Inline with border -->
+          <div class="flex items-center justify-center px-4">
+            <div
+              class="w-full max-w-7xl flex flex-col md:flex-row items-center justify-between gap-6 px-8 py-10 rounded-2xl border border-border"
+            >
+              <div class="flex flex-col gap-2 md:max-w-md">
+                <h3 class="text-xl font-bold text-text">
+                  Subscribe to our newsletter
+                </h3>
+                <p class="text-text-secondary text-sm">
+                  The latest news, articles, and resources, sent to your inbox
+                  weekly.
+                </p>
+              </div>
+              <form
+                class="flex flex-col sm:flex-row gap-3 w-full md:w-auto"
+                onsubmit="event.preventDefault();"
+              >
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  class="sm:min-w-64"
+                  required
+                />
+                <button class="primary-btn justify-center">Subscribe</button>
+              </form>
+            </div>
+          </div>
+
+          <!-- Banner: Simple inline -->
+          <div class="flex items-center justify-center px-4">
+            <div
+              class="w-full max-w-7xl flex flex-col sm:flex-row items-center justify-between gap-4 px-6 py-4 rounded-xl bg-primary text-primary-contrast"
+            >
+              <div class="flex items-center gap-3">
+                <svg
+                  class="size-5 shrink-0"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"
+                  />
+                  <path d="M12 9v4" />
+                  <path d="M12 17h.01" />
+                </svg>
+                <p class="text-sm font-medium">
+                  Big news! We're excited to announce our Series A funding.
+                  <a href="#" class="underline ml-1 font-semibold"
+                    >Read more &rarr;</a
+                  >
+                </p>
+              </div>
+              <button
+                class="text-sm opacity-70 hover:opacity-100 transition-opacity shrink-0"
+                aria-label="Dismiss"
+              >
+                <svg
+                  class="size-4"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M18 6 6 18" />
+                  <path d="m6 6 12 12" />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Banner: With CTA button -->
+          <div class="flex items-center justify-center px-4">
+            <div
+              class="w-full max-w-7xl flex flex-col sm:flex-row items-center justify-between gap-4 px-6 py-4 rounded-xl border border-border bg-foreground"
+            >
+              <p class="text-sm text-text">
+                <span class="font-semibold">Free trial available.</span>
+                Try our pro features for 14 days — no strings attached.
+              </p>
+              <button class="primary-btn text-sm shrink-0">
+                Start free trial
+              </button>
+            </div>
+          </div>
+
+          <!-- With Stats -->
+          <div class="flex items-center justify-center px-4">
+            <div
+              class="w-full max-w-7xl flex flex-col lg:flex-row gap-10 lg:gap-16 items-center px-6 py-16"
+            >
+              <div class="flex-1 flex flex-col gap-5">
+                <h3 class="text-3xl md:text-4xl font-bold text-text">
+                  Trusted by teams worldwide
+                </h3>
+                <p class="text-text-secondary max-w-lg">
+                  We help companies of all sizes build better products. Start
+                  your journey today and see the difference.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-3">
+                  <button class="primary-btn">Get started</button>
+                  <button class="secondary-btn">Contact sales</button>
+                </div>
+              </div>
+              <div
+                class="flex-1 grid grid-cols-2 gap-px bg-border rounded-xl overflow-hidden border border-border"
+              >
+                <div class="flex flex-col gap-1 p-6 md:p-8 bg-background">
+                  <span class="text-3xl md:text-4xl font-bold text-text"
+                    >8K+</span
+                  >
+                  <span class="text-sm text-text-secondary">Active users</span>
+                </div>
+                <div class="flex flex-col gap-1 p-6 md:p-8 bg-background">
+                  <span class="text-3xl md:text-4xl font-bold text-text"
+                    >99.9%</span
+                  >
+                  <span class="text-sm text-text-secondary">Uptime</span>
+                </div>
+                <div class="flex flex-col gap-1 p-6 md:p-8 bg-background">
+                  <span class="text-3xl md:text-4xl font-bold text-text"
+                    >12M+</span
+                  >
+                  <span class="text-sm text-text-secondary"
+                    >API requests/day</span
+                  >
+                </div>
+                <div class="flex flex-col gap-1 p-6 md:p-8 bg-background">
+                  <span class="text-3xl md:text-4xl font-bold text-text"
+                    >200+</span
+                  >
+                  <span class="text-sm text-text-secondary">Integrations</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Neobrutalism -->
+          <div class="flex items-center justify-center px-4">
+            <div
+              class="relative overflow-hidden z-1 flex flex-col items-center text-center max-w-7xl w-full px-6 py-16 gap-4 border-2 border-neutral-950 shadow-[4px_4px_0_#0a0a0a]"
             >
               <img
                 src="/assets/images/neobrutalism.webp"
@@ -166,7 +474,7 @@
                 class="absolute inset-0 size-full -z-1 object-cover"
               />
               <h3
-                class="text-neutral-50 stroke-2 text-shadow-[4px_4px_0_#0a0a0a]"
+                class="text-3xl md:text-4xl font-bold text-neutral-50 text-shadow-[3px_3px_0_#0a0a0a]"
               >
                 Call to Action
               </h3>
@@ -176,14 +484,14 @@
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
                 alias tenetur veritatis quibusdam repellat.
               </p>
-              <div class="flex gap-4">
+              <div class="flex flex-col sm:flex-row gap-4 mt-2">
                 <button
-                  class="bg-primary text-primary-contrast flex w-fit px-4 py-2 font-semibold border-2 border-neutral-950 shadow-[4px_4px_0_#0a0a0a] hover:shadow-[2px_2px_0_#0a0a0a] hover:translate-0.5 active:shadow-[0_0_0_#0a0a0a] active:translate-1 transition duration-400"
+                  class="bg-primary text-primary-contrast flex w-fit px-5 py-2.5 font-semibold border-2 border-neutral-950 shadow-[4px_4px_0_#0a0a0a] hover:shadow-[2px_2px_0_#0a0a0a] hover:translate-0.5 active:shadow-[0_0_0_#0a0a0a] active:translate-1 transition duration-400"
                 >
                   Click me
                 </button>
                 <button
-                  class="bg-accent text-accent-contrast flex w-fit px-4 py-2 font-semibold border-2 border-neutral-950 shadow-[4px_4px_0_#0a0a0a] hover:shadow-[2px_2px_0_#0a0a0a] hover:translate-0.5 active:shadow-[0_0_0_#0a0a0a] active:translate-1 transition duration-400"
+                  class="bg-accent text-accent-contrast flex w-fit px-5 py-2.5 font-semibold border-2 border-neutral-950 shadow-[4px_4px_0_#0a0a0a] hover:shadow-[2px_2px_0_#0a0a0a] hover:translate-0.5 active:shadow-[0_0_0_#0a0a0a] active:translate-1 transition duration-400"
                 >
                   Learn more
                 </button>

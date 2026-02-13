@@ -7,10 +7,10 @@
     <meta name="copyright" content="Coden Agency" />
     <meta
       name="description"
-      content="A curated collection of reusable UI components built with TailwindCSS. Browse buttons, cards, headers, footers, and more."
+      content="A curated collection of reusable contact components built with TailwindCSS. Browse form layouts, info cards, and combined map sections."
     />
 
-    <title>Components Library</title>
+    <title>Contact – Components Library</title>
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="stylesheet" href="../../../_ui/main.css" />
     <script type="module" src="../../../_ui/components/index.js" defer></script>
@@ -116,26 +116,56 @@
         <section
           class="flex flex-col gap-8 py-8 my-8 border-y-2 border-dashed border-border"
         >
-          <!-- FORM + MAP -->
+          <!-- Form + Map Side by Side -->
           <div class="max-w-7xl w-full mx-auto px-4">
-            <div class="flex gap-8 w-full">
+            <div class="flex flex-col lg:flex-row gap-8 w-full">
               <!-- FORM -->
-              <div class="flex flex-1 flex-col gap-4">
-                <h3 class="anim-right-in">Send us a message</h3>
-                <input type="text" placeholder="Name" class="anim-right-in" />
-                <input type="email" placeholder="Email" class="anim-right-in" />
-                <textarea
-                  rows="5"
-                  placeholder="Message"
-                  class="anim-right-in"
-                ></textarea>
-                <button class="primary-btn w-full anim-right-in">Submit</button>
+              <div class="flex flex-1 flex-col gap-5 anim-right-in">
+                <div class="flex flex-col gap-1">
+                  <h3 class="text-2xl font-bold text-text">
+                    Send us a message
+                  </h3>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-4">
+                  <div class="flex flex-col gap-1.5 flex-1">
+                    <label class="text-sm font-medium text-text"
+                      >First name</label
+                    >
+                    <input type="text" placeholder="John" />
+                  </div>
+                  <div class="flex flex-col gap-1.5 flex-1">
+                    <label class="text-sm font-medium text-text"
+                      >Last name</label
+                    >
+                    <input type="text" placeholder="Doe" />
+                  </div>
+                </div>
+                <div class="flex flex-col gap-1.5">
+                  <label class="text-sm font-medium text-text">Email</label>
+                  <input type="email" placeholder="john@example.com" />
+                </div>
+                <div class="flex flex-col gap-1.5">
+                  <label class="text-sm font-medium text-text">Subject</label>
+                  <input type="text" placeholder="How can we help?" />
+                </div>
+                <div class="flex flex-col gap-1.5">
+                  <label class="text-sm font-medium text-text">Message</label>
+                  <textarea
+                    rows="4"
+                    placeholder="Tell us about your project..."
+                  ></textarea>
+                </div>
+                <button class="primary-btn w-full justify-center">
+                  Send message
+                </button>
               </div>
               <!-- MAP -->
-              <div class="flex flex-1 rounded-md shadow-md anim-left-in">
+              <div
+                class="flex flex-1 rounded-xl shadow-sm overflow-hidden anim-left-in min-h-80"
+              >
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3021.066385666981!2d-73.96815832312802!3d40.78255467138296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2589a018531e3%3A0xb9df1f7387a94119!2sCentral%20Park!5e0!3m2!1spt-BR!2sbr!4v1762691183828!5m2!1spt-BR!2sbr"
-                  class="w-full"
+                  class="w-full h-full"
                   style="border: 0; min-height: 360px"
                   allowfullscreen=""
                   loading="lazy"
@@ -145,76 +175,216 @@
             </div>
           </div>
 
-          <!-- CARDS + MAP -->
+          <!-- Info Cards + Map -->
           <div class="max-w-7xl w-full mx-auto px-4">
-            <div class="flex gap-8 w-full">
+            <div class="flex flex-col lg:flex-row gap-8 w-full">
               <!-- CARDS -->
-              <div class="flex flex-1 flex-col gap-8">
+              <div class="flex flex-1 flex-col gap-6">
                 <div
-                  class="flex flex-col gap-4 flex-1 rounded-md p-8 border border-border hover:border-primary hover:shadow-lg transition duration-400 anim-right-in"
+                  class="flex flex-col gap-3 rounded-xl p-6 border border-border hover:border-border-hover hover:shadow-md transition duration-400 anim-right-in"
                 >
-                  <div class="flex gap-4 items-center">
-                    <img
-                      src="/assets/icons/organization.svg"
-                      alt="Icon"
-                      class="size-12 object-contain"
-                    />
-                    <h3>Lorem ipsum</h3>
+                  <div class="flex gap-3 items-center">
+                    <div
+                      class="size-10 rounded-lg bg-foreground flex items-center justify-center"
+                    >
+                      <svg
+                        class="size-5 text-text"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path
+                          d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0"
+                        />
+                        <circle cx="12" cy="10" r="3" />
+                      </svg>
+                    </div>
+                    <h4 class="font-semibold text-text">Our Office</h4>
                   </div>
-                  <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Sequi, suscipit nesciunt, ratione nam doloribus distinctio
-                    aliquam optio soluta, quod dolorum eum incidunt.
+                  <p class="text-sm text-text-secondary">
+                    123 Innovation Drive, Suite 400<br />
+                    New York, NY 10001
                   </p>
-                  <button
-                    class="flex items-center w-fit text-lg font-semibold gap-4 hover:gap-6 transition-all duration-400"
-                  >
-                    Learn more
-                    <img
-                      src="/assets/icons/arrow-link.svg"
-                      alt="Seta para cima"
-                      class="size-4"
-                    />
-                  </button>
                 </div>
                 <div
-                  class="flex flex-col gap-4 flex-1 rounded-md p-8 border border-border hover:border-primary hover:shadow-lg transition duration-400 anim-right-in"
+                  class="flex flex-col gap-3 rounded-xl p-6 border border-border hover:border-border-hover hover:shadow-md transition duration-400 anim-right-in"
                 >
-                  <div class="flex gap-4 items-center">
-                    <img
-                      src="/assets/icons/organization.svg"
-                      alt="Icon"
-                      class="size-12 object-contain"
-                    />
-                    <h3>Lorem ipsum</h3>
+                  <div class="flex gap-3 items-center">
+                    <div
+                      class="size-10 rounded-lg bg-foreground flex items-center justify-center"
+                    >
+                      <svg
+                        class="size-5 text-text"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect width="20" height="16" x="2" y="4" rx="2" />
+                        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                      </svg>
+                    </div>
+                    <h4 class="font-semibold text-text">Email Us</h4>
                   </div>
-                  <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Sequi, suscipit nesciunt, ratione nam doloribus distinctio
-                    aliquam optio soluta, quod dolorum eum incidunt.
+                  <p class="text-sm text-text-secondary">
+                    General inquiries:
+                    <a href="mailto:hello@example.com" class="underline"
+                      >hello@example.com</a
+                    ><br />
+                    Support:
+                    <a href="mailto:support@example.com" class="underline"
+                      >support@example.com</a
+                    >
                   </p>
-                  <button
-                    class="flex items-center w-fit text-lg font-semibold gap-4 hover:gap-6 transition-all duration-400"
-                  >
-                    Learn more
-                    <img
-                      src="/assets/icons/arrow-link.svg"
-                      alt="Seta para cima"
-                      class="size-4"
-                    />
-                  </button>
+                </div>
+                <div
+                  class="flex flex-col gap-3 rounded-xl p-6 border border-border hover:border-border-hover hover:shadow-md transition duration-400 anim-right-in"
+                >
+                  <div class="flex gap-3 items-center">
+                    <div
+                      class="size-10 rounded-lg bg-foreground flex items-center justify-center"
+                    >
+                      <svg
+                        class="size-5 text-text"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path
+                          d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92"
+                        />
+                      </svg>
+                    </div>
+                    <h4 class="font-semibold text-text">Call Us</h4>
+                  </div>
+                  <p class="text-sm text-text-secondary">
+                    Mon–Fri, 9:00 AM – 6:00 PM EST<br />
+                    <a href="tel:+15551234567" class="underline"
+                      >+1 (555) 123-4567</a
+                    >
+                  </p>
                 </div>
               </div>
               <!-- MAP -->
-              <div class="flex flex-1 rounded-md shadow-md anim-left-in">
+              <div
+                class="flex flex-1 rounded-xl shadow-sm overflow-hidden anim-left-in min-h-80"
+              >
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3021.066385666981!2d-73.96815832312802!3d40.78255467138296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2589a018531e3%3A0xb9df1f7387a94119!2sCentral%20Park!5e0!3m2!1spt-BR!2sbr!4v1762691183828!5m2!1spt-BR!2sbr"
-                  class="w-full"
+                  class="w-full h-full"
                   style="border: 0; min-height: 360px"
                   allowfullscreen=""
                   loading="lazy"
                   referrerpolicy="no-referrer-when-downgrade"
                 ></iframe>
+              </div>
+            </div>
+          </div>
+
+          <!-- Split Dark Form -->
+          <div class="max-w-7xl w-full mx-auto px-4">
+            <div
+              class="flex flex-col lg:flex-row rounded-2xl overflow-hidden border border-border"
+            >
+              <!-- Left: Info -->
+              <div
+                class="flex-1 flex flex-col justify-between gap-8 p-8 md:p-12 bg-neutral-900 text-neutral-50"
+              >
+                <div class="flex flex-col gap-4">
+                  <h3 class="text-2xl md:text-3xl font-bold">
+                    Let's work together
+                  </h3>
+                  <p class="text-neutral-400 max-w-sm">
+                    We'd love to learn more about you and what we can build
+                    together. Drop us a line and we'll be in touch.
+                  </p>
+                </div>
+                <div class="flex flex-col gap-5">
+                  <div class="flex items-center gap-3">
+                    <svg
+                      class="size-5 text-neutral-400 shrink-0"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <rect width="20" height="16" x="2" y="4" rx="2" />
+                      <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                    </svg>
+                    <span class="text-sm text-neutral-300"
+                      >hello@example.com</span
+                    >
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <svg
+                      class="size-5 text-neutral-400 shrink-0"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92"
+                      />
+                    </svg>
+                    <span class="text-sm text-neutral-300"
+                      >+1 (555) 123-4567</span
+                    >
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <svg
+                      class="size-5 text-neutral-400 shrink-0"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0" />
+                      <circle cx="12" cy="10" r="3" />
+                    </svg>
+                    <span class="text-sm text-neutral-300"
+                      >123 Innovation Drive, New York, NY</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <!-- Right: Form -->
+              <div class="flex-1 flex flex-col gap-5 p-8 md:p-12 bg-background">
+                <div class="flex flex-col sm:flex-row gap-4">
+                  <div class="flex flex-col gap-1.5 flex-1">
+                    <label class="text-sm font-medium text-text">Name</label>
+                    <input type="text" placeholder="Your name" />
+                  </div>
+                  <div class="flex flex-col gap-1.5 flex-1">
+                    <label class="text-sm font-medium text-text">Email</label>
+                    <input type="email" placeholder="you@example.com" />
+                  </div>
+                </div>
+                <div class="flex flex-col gap-1.5">
+                  <label class="text-sm font-medium text-text">Subject</label>
+                  <input type="text" placeholder="What's this about?" />
+                </div>
+                <div class="flex flex-col gap-1.5">
+                  <label class="text-sm font-medium text-text">Message</label>
+                  <textarea rows="5" placeholder="Your message..."></textarea>
+                </div>
+                <button class="primary-btn w-full justify-center">
+                  Send message
+                </button>
               </div>
             </div>
           </div>
