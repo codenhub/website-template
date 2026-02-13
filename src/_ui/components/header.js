@@ -6,12 +6,13 @@ class Header extends HTMLElement {
         class="flex p-4 justify-center slide-down-in border-b transition duration-400${fixed ? " fixed inset-x-0 border-transparent z-99" : " border-border"}">
         <div class="sect-container flex-row justify-between">
           <a href="/">
-            <img src="/logo.svg" alt="Logo" class="h-10 object-contain" />
+            <img src="/logo.svg" alt="Logo" class="hidden xs:block h-10 object-contain" />
+            <img src="/logo-icon.svg" alt="Logo" class="xs:hidden h-10 object-contain" />
           </a>
 
           <!-- DESKTOP NAV -->
-          <div class="hidden md:flex gap-6 items-center">
-            <nav class="flex gap-6">
+          <div class="flex gap-6 items-center">
+            <nav class="hidden md:flex gap-6">
               <a href="#why-this-template" class="hover:font-semibold hover:tracking-wide transition-all duration-400">Why us?</a>
               <a href="#features" class="hover:font-semibold hover:tracking-wide transition-all duration-400">Features</a>
               <a href="#testimonials" class="hover:font-semibold hover:tracking-wide transition-all duration-400">Testimonials</a>
@@ -26,30 +27,28 @@ class Header extends HTMLElement {
               </svg>
               Get template
             </a>
+            <!-- MOBILE NAV -->
+            <div class="flex md:hidden">
+              <input type="checkbox" name="mobile-menu" id="mobile-menu" class="peer sr-only" aria-label="Mobile menu toggle button" />
+              <label class="flex flex-col w-6 gap-1.5 py-2 cursor-pointer" for="mobile-menu">
+                <div class="w-full h-0.5 bg-text"></div>
+                <div class="w-full h-0.5 bg-text"></div>
+                <div class="w-full h-0.5 bg-text"></div>
+              </label>
+              <div
+                class="absolute flex top-18 inset-x-0 bg-background shadow-lg p-4 origin-top scale-y-0 opacity-0 peer-checked:scale-y-100 peer-checked:opacity-100 transition duration-400 z-50"
+              >
+                <nav class="flex flex-col items-center w-full gap-2">
+                  <a href="#why-this-template" class="flex w-full text-center justify-center text-lg tracking-wide">Why us?</a>
+                  <a href="#features" class="flex w-full text-center justify-center text-lg tracking-wide">Features</a>
+                  <a href="#testimonials" class="flex w-full text-center justify-center text-lg tracking-wide">Testimonials</a>
+                  <a href="#faq" class="flex w-full text-center justify-center text-lg tracking-wide">FAQ</a>
+                </nav>
+              </div>
+            </div>
+            <!-- END MOBILE NAV -->
           </div>
           <!-- END DESKTOP NAV -->
-
-          <!-- MOBILE NAV -->
-          <div class="flex md:hidden">
-            <input type="checkbox" name="mobile-menu" id="mobile-menu" class="peer sr-only" aria-label="Mobile menu toggle button" />
-            <label class="flex flex-col w-6 gap-1.5 py-2 cursor-pointer" for="mobile-menu">
-              <div class="w-full h-0.5 bg-text"></div>
-              <div class="w-full h-0.5 bg-text"></div>
-              <div class="w-full h-0.5 bg-text"></div>
-            </label>
-            <div
-              class="absolute flex top-18 inset-x-0 bg-background shadow-lg p-4 origin-top scale-y-0 opacity-0 peer-checked:scale-y-100 peer-checked:opacity-100 transition duration-400"
-            >
-              <nav class="flex flex-col items-center w-full gap-2">
-                <a href="#why-this-template" class="flex w-full text-center justify-center text-lg tracking-wide">Why us?</a>
-                <a href="#features" class="flex w-full text-center justify-center text-lg tracking-wide">Features</a>
-                <a href="#testimonials" class="flex w-full text-center justify-center text-lg tracking-wide">Testimonials</a>
-                <a href="#faq" class="flex w-full text-center justify-center text-lg tracking-wide">FAQ</a>
-                <a href="https://github.com/codenhub/website-template" target="_blank" class="primary-btn">Get template</a>
-              </nav>
-            </div>
-          </div>
-          <!-- END MOBILE NAV -->
         </div>
       </header>
     `;
