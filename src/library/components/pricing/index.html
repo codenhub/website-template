@@ -7,7 +7,7 @@
     <meta name="copyright" content="Coden Agency" />
     <meta
       name="description"
-      content="A curated collection of reusable pricing components built with TailwindCSS. Browse flat, featured, and comparison pricing card styles."
+      content="A curated collection of reusable pricing components built with TailwindCSS. Browse flat, featured, bordered, toggle, and comparison table styles."
     />
 
     <title>Pricing – Components Library</title>
@@ -48,6 +48,34 @@
         width: 4rem;
         height: 4rem;
         z-index: 999;
+      }
+
+      /* Billing toggle */
+      .billing-toggle {
+        position: relative;
+        width: 44px;
+        height: 24px;
+        background-color: var(--color-accent);
+        border-radius: 9999px;
+        cursor: pointer;
+        transition: background-color 0.2s;
+      }
+      .billing-toggle::after {
+        content: "";
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        width: 20px;
+        height: 20px;
+        background: white;
+        border-radius: 9999px;
+        transition: transform 0.2s;
+      }
+      .billing-toggle.active {
+        background-color: var(--color-primary);
+      }
+      .billing-toggle.active::after {
+        transform: translateX(20px);
       }
     </style>
   </head>
@@ -108,10 +136,9 @@
         <section
           class="flex flex-col items-center gap-8 py-8 my-8 border-y-2 border-dashed border-border"
         >
-          <!-- FLAT WITH FEATURED -->
-          <h3>Flat with featured</h3>
+          <!-- Flat with Featured: Starter / Pro / Enterprise -->
           <div
-            class="flex gap-8 items-stretch justify-center w-full flex-wrap max-w-6xl mx-auto px-4"
+            class="flex gap-6 items-stretch justify-center w-full flex-wrap max-w-6xl mx-auto px-4"
           >
             <!-- Starter -->
             <div
@@ -381,13 +408,39 @@
             </div>
           </div>
 
-          <!-- BORDER -->
-          <h3>Border</h3>
+          <!-- Border with Toggle: Basic / Pro / Team -->
+          <!-- Billing Toggle -->
+          <div class="flex items-center gap-3" id="billing-toggle-section">
+            <span
+              class="text-sm font-medium text-text"
+              id="billing-label-monthly"
+              >Monthly</span
+            >
+            <button
+              class="billing-toggle"
+              id="billing-toggle"
+              role="switch"
+              aria-checked="false"
+              aria-label="Toggle annual billing"
+              onclick="this.classList.toggle('active'); this.setAttribute('aria-checked', this.classList.contains('active'));
+                document.querySelectorAll('.price-monthly').forEach(el => el.classList.toggle('hidden'));
+                document.querySelectorAll('.price-annual').forEach(el => el.classList.toggle('hidden'));
+              "
+            ></button>
+            <span class="text-sm font-medium text-text-secondary"
+              >Annual
+              <span class="text-xs font-semibold text-emerald-600 ml-1"
+                >Save 20%</span
+              ></span
+            >
+          </div>
+
           <div
-            class="flex gap-8 items-stretch justify-center w-full flex-wrap max-w-6xl mx-auto px-4"
+            class="flex gap-6 items-stretch justify-center w-full flex-wrap max-w-6xl mx-auto px-4"
           >
+            <!-- Basic -->
             <div
-              class="flex flex-col flex-1 min-w-72 p-8 gap-6 rounded-xl border border-border hover:border-border-hover hover:shadow-lg transition duration-400"
+              class="flex flex-col flex-1 min-w-72 p-8 gap-6 rounded-xl border border-border hover:border-border-hover hover:shadow-md transition duration-400"
             >
               <div class="flex flex-col gap-2">
                 <p
@@ -396,7 +449,12 @@
                   Basic
                 </p>
                 <div class="flex items-baseline gap-1">
-                  <span class="text-4xl font-bold text-text">Free</span>
+                  <span class="text-4xl font-bold text-text price-monthly"
+                    >Free</span
+                  >
+                  <span class="text-4xl font-bold text-text price-annual hidden"
+                    >Free</span
+                  >
                 </div>
                 <p class="text-sm text-text-secondary">
                   Get started with the essentials.
@@ -445,8 +503,10 @@
                 Get started
               </button>
             </div>
+
+            <!-- Pro (Featured) -->
             <div
-              class="flex flex-col flex-1 min-w-72 p-8 gap-6 rounded-xl border-2 border-primary shadow-lg relative"
+              class="flex flex-col flex-1 min-w-72 p-8 gap-6 rounded-xl border-2 border-primary shadow-md relative"
             >
               <span
                 class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-primary text-primary-contrast text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider"
@@ -459,8 +519,16 @@
                   Pro
                 </p>
                 <div class="flex items-baseline gap-1">
-                  <span class="text-4xl font-bold text-text">$19</span>
-                  <span class="text-text-secondary">/month</span>
+                  <span class="text-4xl font-bold text-text price-monthly"
+                    >$19</span
+                  >
+                  <span class="text-text-secondary price-monthly">/month</span>
+                  <span class="text-4xl font-bold text-text price-annual hidden"
+                    >$15</span
+                  >
+                  <span class="text-text-secondary price-annual hidden"
+                    >/month</span
+                  >
                 </div>
                 <p class="text-sm text-text-secondary">
                   Everything you need to grow.
@@ -521,8 +589,10 @@
                 Get started
               </button>
             </div>
+
+            <!-- Team -->
             <div
-              class="flex flex-col flex-1 min-w-72 p-8 gap-6 rounded-xl border border-border hover:border-border-hover hover:shadow-lg transition duration-400"
+              class="flex flex-col flex-1 min-w-72 p-8 gap-6 rounded-xl border border-border hover:border-border-hover hover:shadow-md transition duration-400"
             >
               <div class="flex flex-col gap-2">
                 <p
@@ -531,8 +601,16 @@
                   Team
                 </p>
                 <div class="flex items-baseline gap-1">
-                  <span class="text-4xl font-bold text-text">$49</span>
-                  <span class="text-text-secondary">/month</span>
+                  <span class="text-4xl font-bold text-text price-monthly"
+                    >$49</span
+                  >
+                  <span class="text-text-secondary price-monthly">/month</span>
+                  <span class="text-4xl font-bold text-text price-annual hidden"
+                    >$39</span
+                  >
+                  <span class="text-text-secondary price-annual hidden"
+                    >/month</span
+                  >
                 </div>
                 <p class="text-sm text-text-secondary">
                   Collaboration tools for teams.
@@ -592,6 +670,517 @@
               <button class="primary-btn w-full justify-center">
                 Contact sales
               </button>
+            </div>
+          </div>
+
+          <!-- Two-Column Minimal: Free / Pro -->
+          <div
+            class="flex gap-6 items-stretch justify-center w-full flex-wrap max-w-4xl mx-auto px-4"
+          >
+            <!-- Free -->
+            <div
+              class="flex flex-col flex-1 min-w-72 p-8 gap-6 rounded-xl bg-foreground"
+            >
+              <div class="flex flex-col gap-1">
+                <p
+                  class="text-sm font-semibold text-text-secondary uppercase tracking-wider"
+                >
+                  Free
+                </p>
+                <div class="flex items-baseline gap-1 mt-1">
+                  <span class="text-4xl font-bold text-text">$0</span>
+                  <span class="text-text-secondary">/month</span>
+                </div>
+                <p class="text-sm text-text-secondary mt-2">
+                  For individuals getting started.
+                </p>
+              </div>
+              <button class="secondary-btn w-full justify-center">
+                Get started
+              </button>
+              <hr class="border-border" />
+              <ul class="flex flex-col gap-3">
+                <li class="flex items-center gap-2 text-sm">
+                  <svg
+                    class="size-4 text-emerald-600 shrink-0"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                  >
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  1 workspace
+                </li>
+                <li class="flex items-center gap-2 text-sm">
+                  <svg
+                    class="size-4 text-emerald-600 shrink-0"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                  >
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  Up to 5 collaborators
+                </li>
+                <li class="flex items-center gap-2 text-sm">
+                  <svg
+                    class="size-4 text-emerald-600 shrink-0"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                  >
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  Basic integrations
+                </li>
+                <li class="flex items-center gap-2 text-sm">
+                  <svg
+                    class="size-4 text-emerald-600 shrink-0"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                  >
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  48-hour support response
+                </li>
+              </ul>
+            </div>
+
+            <!-- Pro -->
+            <div
+              class="flex flex-col flex-1 min-w-72 p-8 gap-6 rounded-xl border-2 border-primary relative"
+            >
+              <span
+                class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-primary text-primary-contrast text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider"
+                >Recommended</span
+              >
+              <div class="flex flex-col gap-1">
+                <p
+                  class="text-sm font-semibold text-text-secondary uppercase tracking-wider"
+                >
+                  Pro
+                </p>
+                <div class="flex items-baseline gap-1 mt-1">
+                  <span class="text-4xl font-bold text-text">$29</span>
+                  <span class="text-text-secondary">/month</span>
+                </div>
+                <p class="text-sm text-text-secondary mt-2">
+                  For teams that need more power.
+                </p>
+              </div>
+              <button class="primary-btn w-full justify-center">
+                Get started
+              </button>
+              <hr class="border-border" />
+              <ul class="flex flex-col gap-3">
+                <li class="flex items-center gap-2 text-sm">
+                  <svg
+                    class="size-4 text-emerald-600 shrink-0"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                  >
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  Unlimited workspaces
+                </li>
+                <li class="flex items-center gap-2 text-sm">
+                  <svg
+                    class="size-4 text-emerald-600 shrink-0"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                  >
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  Unlimited collaborators
+                </li>
+                <li class="flex items-center gap-2 text-sm">
+                  <svg
+                    class="size-4 text-emerald-600 shrink-0"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                  >
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  Advanced integrations
+                </li>
+                <li class="flex items-center gap-2 text-sm">
+                  <svg
+                    class="size-4 text-emerald-600 shrink-0"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                  >
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  Priority support
+                </li>
+                <li class="flex items-center gap-2 text-sm">
+                  <svg
+                    class="size-4 text-emerald-600 shrink-0"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                  >
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  Custom branding
+                </li>
+                <li class="flex items-center gap-2 text-sm">
+                  <svg
+                    class="size-4 text-emerald-600 shrink-0"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                  >
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  Analytics dashboard
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Comparison Table -->
+          <div class="w-full max-w-5xl mx-auto px-4 overflow-x-auto">
+            <table class="w-full text-sm">
+              <thead>
+                <tr class="border-b-2 border-border">
+                  <th class="py-4 pr-4 text-left font-semibold text-text">
+                    Features
+                  </th>
+                  <th class="py-4 px-4 text-center font-semibold text-text">
+                    <div class="flex flex-col items-center gap-1">
+                      <span>Basic</span>
+                      <span class="text-2xl font-bold">Free</span>
+                    </div>
+                  </th>
+                  <th
+                    class="py-4 px-4 text-center font-semibold text-text bg-primary/5 rounded-t-lg"
+                  >
+                    <div class="flex flex-col items-center gap-1">
+                      <span
+                        class="bg-primary text-primary-contrast text-xs font-bold px-2 py-0.5 rounded-full"
+                        >Popular</span
+                      >
+                      <span>Pro</span>
+                      <span class="text-2xl font-bold">$19</span>
+                      <span class="text-xs text-text-secondary font-normal"
+                        >/month</span
+                      >
+                    </div>
+                  </th>
+                  <th class="py-4 pl-4 text-center font-semibold text-text">
+                    <div class="flex flex-col items-center gap-1">
+                      <span>Enterprise</span>
+                      <span class="text-2xl font-bold">$99</span>
+                      <span class="text-xs text-text-secondary font-normal"
+                        >/month</span
+                      >
+                    </div>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="border-b border-border">
+                  <td class="py-3 pr-4 text-text">Projects</td>
+                  <td class="py-3 px-4 text-center text-text-secondary">1</td>
+                  <td
+                    class="py-3 px-4 text-center text-text-secondary bg-primary/5"
+                  >
+                    10
+                  </td>
+                  <td class="py-3 pl-4 text-center text-text-secondary">
+                    Unlimited
+                  </td>
+                </tr>
+                <tr class="border-b border-border">
+                  <td class="py-3 pr-4 text-text">Storage</td>
+                  <td class="py-3 px-4 text-center text-text-secondary">
+                    500 MB
+                  </td>
+                  <td
+                    class="py-3 px-4 text-center text-text-secondary bg-primary/5"
+                  >
+                    20 GB
+                  </td>
+                  <td class="py-3 pl-4 text-center text-text-secondary">
+                    500 GB
+                  </td>
+                </tr>
+                <tr class="border-b border-border">
+                  <td class="py-3 pr-4 text-text">Team members</td>
+                  <td class="py-3 px-4 text-center text-text-secondary">1</td>
+                  <td
+                    class="py-3 px-4 text-center text-text-secondary bg-primary/5"
+                  >
+                    5
+                  </td>
+                  <td class="py-3 pl-4 text-center text-text-secondary">
+                    Unlimited
+                  </td>
+                </tr>
+                <tr class="border-b border-border">
+                  <td class="py-3 pr-4 text-text">Analytics</td>
+                  <td class="py-3 px-4 text-center text-text-secondary">
+                    Basic
+                  </td>
+                  <td
+                    class="py-3 px-4 text-center text-text-secondary bg-primary/5"
+                  >
+                    Advanced
+                  </td>
+                  <td class="py-3 pl-4 text-center text-text-secondary">
+                    Custom
+                  </td>
+                </tr>
+                <tr class="border-b border-border">
+                  <td class="py-3 pr-4 text-text">API access</td>
+                  <td class="py-3 px-4 text-center">
+                    <svg
+                      class="size-4 text-text-secondary mx-auto"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path d="M18 6 6 18" />
+                      <path d="m6 6 12 12" />
+                    </svg>
+                  </td>
+                  <td class="py-3 px-4 text-center bg-primary/5">
+                    <svg
+                      class="size-4 text-emerald-600 mx-auto"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                    >
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                  </td>
+                  <td class="py-3 pl-4 text-center">
+                    <svg
+                      class="size-4 text-emerald-600 mx-auto"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                    >
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                  </td>
+                </tr>
+                <tr class="border-b border-border">
+                  <td class="py-3 pr-4 text-text">Priority support</td>
+                  <td class="py-3 px-4 text-center">
+                    <svg
+                      class="size-4 text-text-secondary mx-auto"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path d="M18 6 6 18" />
+                      <path d="m6 6 12 12" />
+                    </svg>
+                  </td>
+                  <td class="py-3 px-4 text-center bg-primary/5">
+                    <svg
+                      class="size-4 text-emerald-600 mx-auto"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                    >
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                  </td>
+                  <td class="py-3 pl-4 text-center">
+                    <svg
+                      class="size-4 text-emerald-600 mx-auto"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                    >
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                  </td>
+                </tr>
+                <tr class="border-b border-border">
+                  <td class="py-3 pr-4 text-text">Custom domain</td>
+                  <td class="py-3 px-4 text-center">
+                    <svg
+                      class="size-4 text-text-secondary mx-auto"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path d="M18 6 6 18" />
+                      <path d="m6 6 12 12" />
+                    </svg>
+                  </td>
+                  <td class="py-3 px-4 text-center bg-primary/5">
+                    <svg
+                      class="size-4 text-text-secondary mx-auto"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path d="M18 6 6 18" />
+                      <path d="m6 6 12 12" />
+                    </svg>
+                  </td>
+                  <td class="py-3 pl-4 text-center">
+                    <svg
+                      class="size-4 text-emerald-600 mx-auto"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                    >
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                  </td>
+                </tr>
+                <tr class="border-b border-border">
+                  <td class="py-3 pr-4 text-text">SSO</td>
+                  <td class="py-3 px-4 text-center">
+                    <svg
+                      class="size-4 text-text-secondary mx-auto"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path d="M18 6 6 18" />
+                      <path d="m6 6 12 12" />
+                    </svg>
+                  </td>
+                  <td class="py-3 px-4 text-center bg-primary/5">
+                    <svg
+                      class="size-4 text-text-secondary mx-auto"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path d="M18 6 6 18" />
+                      <path d="m6 6 12 12" />
+                    </svg>
+                  </td>
+                  <td class="py-3 pl-4 text-center">
+                    <svg
+                      class="size-4 text-emerald-600 mx-auto"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                    >
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="pt-6 pr-4"></td>
+                  <td class="pt-6 px-4">
+                    <button class="secondary-btn w-full justify-center">
+                      Get started
+                    </button>
+                  </td>
+                  <td class="pt-6 px-4 bg-primary/5 rounded-b-lg">
+                    <button class="primary-btn w-full justify-center">
+                      Get started
+                    </button>
+                  </td>
+                  <td class="pt-6 pl-4">
+                    <button class="primary-btn w-full justify-center">
+                      Contact sales
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Single Card: Enterprise -->
+          <div class="w-full max-w-3xl mx-auto px-4">
+            <div
+              class="flex flex-col md:flex-row items-center gap-8 p-8 md:p-10 rounded-2xl border border-border"
+            >
+              <div class="flex flex-col gap-3 flex-1">
+                <p
+                  class="text-sm font-semibold text-text-secondary uppercase tracking-wider"
+                >
+                  Enterprise
+                </p>
+                <h3 class="text-2xl font-bold text-text">
+                  Need a custom plan?
+                </h3>
+                <p class="text-sm text-text-secondary">
+                  Get a tailored solution for your organization. We'll work with
+                  you to understand your needs and provide a customized quote.
+                </p>
+                <ul class="flex flex-col gap-2 mt-2">
+                  <li class="flex items-center gap-2 text-sm">
+                    <svg
+                      class="size-4 text-emerald-600 shrink-0"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                    >
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                    Dedicated account manager
+                  </li>
+                  <li class="flex items-center gap-2 text-sm">
+                    <svg
+                      class="size-4 text-emerald-600 shrink-0"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                    >
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                    Custom SLA
+                  </li>
+                  <li class="flex items-center gap-2 text-sm">
+                    <svg
+                      class="size-4 text-emerald-600 shrink-0"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                    >
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                    On-premise deployment
+                  </li>
+                </ul>
+              </div>
+              <div class="flex flex-col items-center gap-3 shrink-0">
+                <span class="text-4xl font-bold text-text">Custom</span>
+                <span class="text-sm text-text-secondary">pricing</span>
+                <button class="primary-btn">Contact sales</button>
+              </div>
             </div>
           </div>
         </section>
