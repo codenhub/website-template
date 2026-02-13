@@ -83,20 +83,16 @@ export default function animateElements() {
     };
 
     gsap.utils.toArray(".split-text").forEach((el) => {
-      let split = createAccessibleSplit(el, { type: "lines", mask: "lines" });
-      gsap.set(split.lines, {
-        overflow: "hidden",
-      });
+      let split = createAccessibleSplit(el, { type: "chars, words" });
 
-      gsap.from(split.lines, {
-        yPercent: 100,
-        opacity: 0,
-        duration: 0.8,
+      gsap.from(split.chars, {
+        opacity: 0.2,
+        duration: 0.1,
         ease: "power1.inOut",
-        stagger: 0.2,
+        stagger: { amount: 0.8 },
         scrollTrigger: {
           trigger: el,
-          start: "top bottom",
+          start: "top 90%",
           toggleActions: "play none none none",
         },
       });
