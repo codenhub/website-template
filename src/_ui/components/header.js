@@ -3,7 +3,7 @@ class Header extends HTMLElement {
     const fixed = this.hasAttribute("fixed") || false;
     this.innerHTML = `
       <header
-        class="flex p-4 justify-center slide-down-in border-b transition duration-400${fixed ? " fixed inset-x-0 border-transparent z-99" : " border-border"}">
+        class="flex p-4 justify-center slide-down-in border-b transition duration-400${fixed ? " fixed inset-x-0 border-transparent z-99" : " relative border-border z-50"}">
         <div class="sect-container flex-row justify-between">
           <a href="/">
             <img src="/logo.svg" alt="Logo" class="hidden xs:block h-10 object-contain" />
