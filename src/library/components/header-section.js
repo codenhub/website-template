@@ -19,7 +19,7 @@ class HeaderSection extends HTMLElement {
                 <path d="M29.895,12.52c-0.235-0.704-0.829-1.209-1.549-1.319l-7.309-1.095l-3.29-6.984C17.42,2.43,16.751,2,16,2  s-1.42,0.43-1.747,1.122l-3.242,6.959l-7.357,1.12c-0.72,0.11-1.313,0.615-1.549,1.319c-0.241,0.723-0.063,1.507,0.465,2.046  l5.321,5.446l-1.257,7.676c-0.125,0.767,0.185,1.518,0.811,1.959c0.602,0.427,1.376,0.469,2.02,0.114l6.489-3.624l6.581,3.624  c0.646,0.355,1.418,0.311,2.02-0.114c0.626-0.441,0.937-1.192,0.811-1.959l-1.259-7.686l5.323-5.436  C29.958,14.027,30.136,13.243,29.895,12.52z" id="XMLID_328_"/>
               </svg>
               <p class="font-medium mr-2">Featured</p>
-              <span class="px-2 py-1 bg-foreground rounded-full text-sm">12</span>
+              <span class="px-2 py-1 bg-foreground rounded-full text-sm">14</span>
             </a>
             <a
               href="/library/components/alerts/"
@@ -96,6 +96,16 @@ class HeaderSection extends HTMLElement {
               <span class="px-2 py-1 bg-foreground rounded-full text-sm">3</span>
             </a>
             <a
+              href="/library/components/feature-cards/"
+              class="flex items-center gap-2 px-4 py-2 rounded-xl border border-border hover:border-border-hover transition-colors duration-400"
+            >
+              <svg viewBox="0 0 24 24" fill="none" class="size-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="18" height="18" x="3" y="3" rx="2" /><path d="M7 7h10" /><path d="M7 12h10" /><path d="M7 17h10" />
+              </svg>
+              <p class="font-medium mr-2">Feature Cards</p>
+              <span class="px-2 py-1 bg-foreground rounded-full text-sm">6</span>
+            </a>
+            <a
               href="/library/components/footers/"
               class="flex items-center gap-2 px-4 py-2 rounded-xl border border-border hover:border-border-hover transition-colors duration-400"
             >
@@ -106,7 +116,7 @@ class HeaderSection extends HTMLElement {
                 <rect y="28.283" width="35" height="6.717" />
               </svg>
               <p class="font-medium mr-2">Footers</p>
-              <span class="px-2 py-1 bg-foreground rounded-full text-sm">5</span>
+              <span class="px-2 py-1 bg-foreground rounded-full text-sm">6</span>
             </a>
             <a
               href="/library/components/headers/"
@@ -119,7 +129,17 @@ class HeaderSection extends HTMLElement {
                 <rect y="28.283" width="35" height="6.717" />
               </svg>
               <p class="font-medium mr-2">Headers</p>
-              <span class="px-2 py-1 bg-foreground rounded-full text-sm">3</span>
+              <span class="px-2 py-1 bg-foreground rounded-full text-sm">6</span>
+            </a>
+            <a
+              href="/library/components/hero-sections/"
+              class="flex items-center gap-2 px-4 py-2 rounded-xl border border-border hover:border-border-hover transition-colors duration-400"
+            >
+              <svg viewBox="0 0 24 24" fill="none" class="size-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z" /><path d="m3.3 7 8.7 5 8.7-5" /><path d="M12 22V12" />
+              </svg>
+              <p class="font-medium mr-2">Hero Sections</p>
+              <span class="px-2 py-1 bg-foreground rounded-full text-sm">5</span>
             </a>
             <a
               href="/library/components/inputs/"

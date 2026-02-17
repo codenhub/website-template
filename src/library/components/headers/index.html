@@ -7,7 +7,7 @@
     <meta name="copyright" content="Coden Agency" />
     <meta
       name="description"
-      content="A curated collection of reusable UI components built with TailwindCSS. Browse buttons, cards, headers, footers, and more."
+      content="A curated collection of reusable header/navbar components built with TailwindCSS. Browse default, centered, dropdown, transparent, dark, and pill-nav styles."
     />
 
     <title>Headers - Components Library</title>
@@ -143,14 +143,18 @@
 
               <!-- MOBILE NAV -->
               <div class="flex md:hidden">
-                <input type="checkbox" id="mobile-menu" class="peer sr-only" />
+                <input
+                  type="checkbox"
+                  id="mobile-menu-1"
+                  class="peer sr-only"
+                />
                 <label
                   class="flex flex-col w-6 gap-1.5 py-2 cursor-pointer"
-                  for="mobile-menu"
+                  for="mobile-menu-1"
                 >
-                  <div class="w-full h-0.5 bg-neutral-950"></div>
-                  <div class="w-full h-0.5 bg-neutral-950"></div>
-                  <div class="w-full h-0.5 bg-neutral-950"></div>
+                  <div class="w-full h-0.5 bg-text"></div>
+                  <div class="w-full h-0.5 bg-text"></div>
+                  <div class="w-full h-0.5 bg-text"></div>
                 </label>
                 <div
                   class="absolute flex top-18 inset-x-0 bg-background shadow-lg p-4 max-h-0 opacity-0 peer-checked:max-h-max peer-checked:opacity-100 transition-all duration-400"
@@ -189,76 +193,107 @@
             </div>
           </header>
 
-          <!-- CENTERED HEADER -->
+          <!-- CENTERED NAV HEADER -->
           <header
             class="flex p-4 justify-center bg-background/80 backdrop-blur-sm border-b border-border transition-all duration-400"
           >
-            <div class="sect-container flex-row justify-between">
-              <a href="#">
-                <img src="/logo.svg" alt="Logo" class="h-10 object-contain" />
-              </a>
-
-              <!-- DESKTOP NAV -->
-              <div class="hidden md:flex gap-6 items-center">
-                <nav class="flex gap-6">
-                  <a href="#why-this-template">Why us?</a>
-                  <a href="#features">Features</a>
-                  <a href="#testimonials">Testimonials</a>
-                  <a href="#faq">FAQ</a>
-                </nav>
-              </div>
-              <a
-                href="https://github.com/codenhub/website-template"
-                target="_blank"
-                class="primary-btn max-md:hidden"
-                >Get template</a
-              >
-
-              <!-- MOBILE NAV -->
-              <div class="flex md:hidden">
-                <input type="checkbox" id="mobile-menu" class="peer sr-only" />
-                <label
-                  class="flex flex-col w-6 gap-1.5 py-2 cursor-pointer"
-                  for="mobile-menu"
-                >
-                  <div class="w-full h-0.5 bg-neutral-950"></div>
-                  <div class="w-full h-0.5 bg-neutral-950"></div>
-                  <div class="w-full h-0.5 bg-neutral-950"></div>
-                </label>
-                <div
-                  class="absolute flex top-18 inset-x-0 bg-background shadow-lg p-4 max-h-0 opacity-0 peer-checked:max-h-max peer-checked:opacity-100 transition-all duration-400"
-                  style="interpolate-size: allow-keywords"
-                >
-                  <nav class="flex flex-col w-full gap-2">
-                    <a
-                      href="#why-this-template"
-                      class="flex w-full text-center justify-center text-lg tracking-wide"
-                      >Why us?</a
-                    >
-                    <a
-                      href="#features"
-                      class="flex w-full text-center justify-center text-lg tracking-wide"
-                      >Features</a
-                    >
-                    <a
-                      href="#testimonials"
-                      class="flex w-full text-center justify-center text-lg tracking-wide"
-                      >Testimonials</a
-                    >
-                    <a
-                      href="#faq"
-                      class="flex w-full text-center justify-center text-lg tracking-wide"
-                      >FAQ</a
-                    >
-                    <a
-                      href="https://github.com/codenhub/website-template"
-                      target="_blank"
-                      class="primary-btn"
-                      >Get template</a
-                    >
-                  </nav>
+            <div class="sect-container flex-col items-center gap-3">
+              <div class="flex w-full items-center justify-between">
+                <a href="#">
+                  <img src="/logo.svg" alt="Logo" class="h-10 object-contain" />
+                </a>
+                <div class="hidden md:flex gap-4 items-center">
+                  <a
+                    href="#"
+                    class="text-sm text-text-secondary hover:text-text transition-colors"
+                    >Login</a
+                  >
+                  <a
+                    href="https://github.com/codenhub/website-template"
+                    target="_blank"
+                    class="primary-btn"
+                    >Get template</a
+                  >
+                </div>
+                <!-- MOBILE NAV -->
+                <div class="flex md:hidden">
+                  <input
+                    type="checkbox"
+                    id="mobile-menu-2"
+                    class="peer sr-only"
+                  />
+                  <label
+                    class="flex flex-col w-6 gap-1.5 py-2 cursor-pointer"
+                    for="mobile-menu-2"
+                  >
+                    <div class="w-full h-0.5 bg-text"></div>
+                    <div class="w-full h-0.5 bg-text"></div>
+                    <div class="w-full h-0.5 bg-text"></div>
+                  </label>
+                  <div
+                    class="absolute flex top-24 inset-x-0 bg-background shadow-lg p-4 max-h-0 opacity-0 peer-checked:max-h-max peer-checked:opacity-100 transition-all duration-400"
+                    style="interpolate-size: allow-keywords"
+                  >
+                    <nav class="flex flex-col w-full gap-2">
+                      <a
+                        href="#"
+                        class="flex w-full text-center justify-center text-lg tracking-wide"
+                        >Why us?</a
+                      >
+                      <a
+                        href="#"
+                        class="flex w-full text-center justify-center text-lg tracking-wide"
+                        >Features</a
+                      >
+                      <a
+                        href="#"
+                        class="flex w-full text-center justify-center text-lg tracking-wide"
+                        >Testimonials</a
+                      >
+                      <a
+                        href="#"
+                        class="flex w-full text-center justify-center text-lg tracking-wide"
+                        >FAQ</a
+                      >
+                      <a
+                        href="https://github.com/codenhub/website-template"
+                        target="_blank"
+                        class="primary-btn"
+                        >Get template</a
+                      >
+                    </nav>
+                  </div>
                 </div>
               </div>
+              <nav
+                class="hidden md:flex gap-8 py-2 border-t border-border w-full justify-center"
+              >
+                <a
+                  href="#"
+                  class="text-sm font-medium text-text-secondary hover:text-primary transition-colors"
+                  >Why us?</a
+                >
+                <a
+                  href="#"
+                  class="text-sm font-medium text-text-secondary hover:text-primary transition-colors"
+                  >Features</a
+                >
+                <a
+                  href="#"
+                  class="text-sm font-medium text-primary border-b-2 border-primary pb-1"
+                  >Pricing</a
+                >
+                <a
+                  href="#"
+                  class="text-sm font-medium text-text-secondary hover:text-primary transition-colors"
+                  >Testimonials</a
+                >
+                <a
+                  href="#"
+                  class="text-sm font-medium text-text-secondary hover:text-primary transition-colors"
+                  >FAQ</a
+                >
+              </nav>
             </div>
           </header>
 
@@ -315,14 +350,18 @@
 
               <!-- MOBILE NAV -->
               <div class="flex md:hidden">
-                <input type="checkbox" id="mobile-menu" class="peer sr-only" />
+                <input
+                  type="checkbox"
+                  id="mobile-menu-3"
+                  class="peer sr-only"
+                />
                 <label
                   class="flex flex-col w-6 gap-1.5 py-2 cursor-pointer"
-                  for="mobile-menu"
+                  for="mobile-menu-3"
                 >
-                  <div class="w-full h-0.5 bg-neutral-950"></div>
-                  <div class="w-full h-0.5 bg-neutral-950"></div>
-                  <div class="w-full h-0.5 bg-neutral-950"></div>
+                  <div class="w-full h-0.5 bg-text"></div>
+                  <div class="w-full h-0.5 bg-text"></div>
+                  <div class="w-full h-0.5 bg-text"></div>
                 </label>
                 <div
                   class="absolute flex top-18 inset-x-0 bg-background shadow-lg p-4 max-h-0 opacity-0 peer-checked:max-h-max peer-checked:opacity-100 transition-all duration-400"
@@ -355,6 +394,307 @@
                       class="primary-btn"
                       >Get template</a
                     >
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </header>
+
+          <!-- TRANSPARENT / OVERLAY HEADER (for use on hero images) -->
+          <div class="relative w-full min-h-52 bg-primary overflow-hidden">
+            <img
+              src="/assets/images/coding.webp"
+              alt="Hero background"
+              class="absolute inset-0 w-full h-full object-cover opacity-40"
+            />
+            <header
+              class="relative flex p-4 justify-center z-10 transition-all duration-400"
+            >
+              <div class="sect-container flex-row justify-between">
+                <a href="#">
+                  <img
+                    src="/logo.svg"
+                    alt="Logo"
+                    class="h-10 object-contain invert"
+                  />
+                </a>
+
+                <div
+                  class="hidden md:flex gap-6 items-center text-primary-contrast"
+                >
+                  <nav class="flex gap-6">
+                    <a
+                      href="#"
+                      class="text-primary-contrast/80 hover:text-primary-contrast transition-colors"
+                      >Why us?</a
+                    >
+                    <a
+                      href="#"
+                      class="text-primary-contrast/80 hover:text-primary-contrast transition-colors"
+                      >Features</a
+                    >
+                    <a
+                      href="#"
+                      class="text-primary-contrast/80 hover:text-primary-contrast transition-colors"
+                      >Testimonials</a
+                    >
+                    <a
+                      href="#"
+                      class="text-primary-contrast/80 hover:text-primary-contrast transition-colors"
+                      >FAQ</a
+                    >
+                  </nav>
+                  <a
+                    href="#"
+                    class="bg-background text-text hover:bg-foreground font-semibold flex w-fit items-center justify-center px-4 py-2 gap-2 min-h-10 rounded-md transition-colors duration-400"
+                    >Get template</a
+                  >
+                </div>
+
+                <!-- MOBILE NAV -->
+                <div class="flex md:hidden">
+                  <input
+                    type="checkbox"
+                    id="mobile-menu-4"
+                    class="peer sr-only"
+                  />
+                  <label
+                    class="flex flex-col w-6 gap-1.5 py-2 cursor-pointer"
+                    for="mobile-menu-4"
+                  >
+                    <div class="w-full h-0.5 bg-primary-contrast"></div>
+                    <div class="w-full h-0.5 bg-primary-contrast"></div>
+                    <div class="w-full h-0.5 bg-primary-contrast"></div>
+                  </label>
+                  <div
+                    class="absolute flex top-18 inset-x-0 bg-background shadow-lg p-4 max-h-0 opacity-0 peer-checked:max-h-max peer-checked:opacity-100 transition-all duration-400"
+                    style="interpolate-size: allow-keywords"
+                  >
+                    <nav class="flex flex-col w-full gap-2">
+                      <a
+                        href="#"
+                        class="flex w-full text-center justify-center text-lg tracking-wide"
+                        >Why us?</a
+                      >
+                      <a
+                        href="#"
+                        class="flex w-full text-center justify-center text-lg tracking-wide"
+                        >Features</a
+                      >
+                      <a
+                        href="#"
+                        class="flex w-full text-center justify-center text-lg tracking-wide"
+                        >Testimonials</a
+                      >
+                      <a
+                        href="#"
+                        class="flex w-full text-center justify-center text-lg tracking-wide"
+                        >FAQ</a
+                      >
+                      <a href="#" class="primary-btn">Get template</a>
+                    </nav>
+                  </div>
+                </div>
+              </div>
+            </header>
+            <div
+              class="relative z-10 flex flex-col items-center text-center py-8 text-primary-contrast px-4"
+            >
+              <p class="text-sm uppercase tracking-widest opacity-70 mb-2">
+                Transparent header
+              </p>
+              <p class="max-w-md opacity-80">
+                Ideal for hero sections where the header overlays an image or
+                video background.
+              </p>
+            </div>
+          </div>
+
+          <!-- DARK HEADER -->
+          <header
+            class="flex p-4 justify-center bg-primary text-primary-contrast transition-all duration-400"
+          >
+            <div class="sect-container flex-row justify-between">
+              <a href="#">
+                <img
+                  src="/logo.svg"
+                  alt="Logo"
+                  class="h-10 object-contain invert"
+                />
+              </a>
+
+              <div class="hidden md:flex gap-6 items-center">
+                <nav class="flex gap-6">
+                  <a
+                    href="#"
+                    class="text-primary-contrast/70 hover:text-primary-contrast transition-colors"
+                    >Why us?</a
+                  >
+                  <a
+                    href="#"
+                    class="text-primary-contrast/70 hover:text-primary-contrast transition-colors"
+                    >Features</a
+                  >
+                  <a
+                    href="#"
+                    class="text-primary-contrast/70 hover:text-primary-contrast transition-colors"
+                    >Pricing</a
+                  >
+                  <a
+                    href="#"
+                    class="text-primary-contrast/70 hover:text-primary-contrast transition-colors"
+                    >FAQ</a
+                  >
+                </nav>
+                <div class="flex gap-3 items-center">
+                  <a
+                    href="#"
+                    class="text-sm text-primary-contrast/70 hover:text-primary-contrast transition-colors"
+                    >Sign in</a
+                  >
+                  <a
+                    href="#"
+                    class="bg-background text-text hover:bg-foreground font-semibold flex w-fit items-center justify-center px-4 py-2 gap-2 min-h-10 rounded-md transition-colors duration-400"
+                    >Start free trial</a
+                  >
+                </div>
+              </div>
+
+              <!-- MOBILE NAV -->
+              <div class="flex md:hidden">
+                <input
+                  type="checkbox"
+                  id="mobile-menu-5"
+                  class="peer sr-only"
+                />
+                <label
+                  class="flex flex-col w-6 gap-1.5 py-2 cursor-pointer"
+                  for="mobile-menu-5"
+                >
+                  <div class="w-full h-0.5 bg-primary-contrast"></div>
+                  <div class="w-full h-0.5 bg-primary-contrast"></div>
+                  <div class="w-full h-0.5 bg-primary-contrast"></div>
+                </label>
+                <div
+                  class="absolute flex top-18 inset-x-0 bg-primary shadow-lg p-4 max-h-0 opacity-0 peer-checked:max-h-max peer-checked:opacity-100 transition-all duration-400"
+                  style="interpolate-size: allow-keywords"
+                >
+                  <nav class="flex flex-col w-full gap-2 text-primary-contrast">
+                    <a
+                      href="#"
+                      class="flex w-full text-center justify-center text-lg tracking-wide"
+                      >Why us?</a
+                    >
+                    <a
+                      href="#"
+                      class="flex w-full text-center justify-center text-lg tracking-wide"
+                      >Features</a
+                    >
+                    <a
+                      href="#"
+                      class="flex w-full text-center justify-center text-lg tracking-wide"
+                      >Pricing</a
+                    >
+                    <a
+                      href="#"
+                      class="flex w-full text-center justify-center text-lg tracking-wide"
+                      >FAQ</a
+                    >
+                    <a
+                      href="#"
+                      class="bg-background text-text font-semibold flex items-center justify-center px-4 py-2 min-h-10 rounded-md transition-colors duration-400"
+                      >Start free trial</a
+                    >
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </header>
+
+          <!-- PILL-NAV HEADER -->
+          <header
+            class="flex p-4 justify-center bg-background transition-all duration-400"
+          >
+            <div class="sect-container flex-row justify-between">
+              <a href="#">
+                <img src="/logo.svg" alt="Logo" class="h-10 object-contain" />
+              </a>
+
+              <div class="hidden md:flex items-center">
+                <nav class="flex bg-foreground rounded-full px-1 py-1 gap-1">
+                  <a
+                    href="#"
+                    class="px-4 py-2 rounded-full bg-primary text-primary-contrast text-sm font-medium transition-colors duration-300"
+                    >Home</a
+                  >
+                  <a
+                    href="#"
+                    class="px-4 py-2 rounded-full text-sm font-medium text-text-secondary hover:bg-surface transition-colors duration-300"
+                    >Features</a
+                  >
+                  <a
+                    href="#"
+                    class="px-4 py-2 rounded-full text-sm font-medium text-text-secondary hover:bg-surface transition-colors duration-300"
+                    >Pricing</a
+                  >
+                  <a
+                    href="#"
+                    class="px-4 py-2 rounded-full text-sm font-medium text-text-secondary hover:bg-surface transition-colors duration-300"
+                    >About</a
+                  >
+                </nav>
+              </div>
+
+              <div class="hidden md:flex gap-3 items-center">
+                <a
+                  href="#"
+                  class="text-sm text-text-secondary hover:text-text transition-colors"
+                  >Sign in</a
+                >
+                <a href="#" class="primary-btn">Get started</a>
+              </div>
+
+              <!-- MOBILE NAV -->
+              <div class="flex md:hidden">
+                <input
+                  type="checkbox"
+                  id="mobile-menu-6"
+                  class="peer sr-only"
+                />
+                <label
+                  class="flex flex-col w-6 gap-1.5 py-2 cursor-pointer"
+                  for="mobile-menu-6"
+                >
+                  <div class="w-full h-0.5 bg-text"></div>
+                  <div class="w-full h-0.5 bg-text"></div>
+                  <div class="w-full h-0.5 bg-text"></div>
+                </label>
+                <div
+                  class="absolute flex top-18 inset-x-0 bg-background shadow-lg p-4 max-h-0 opacity-0 peer-checked:max-h-max peer-checked:opacity-100 transition-all duration-400"
+                  style="interpolate-size: allow-keywords"
+                >
+                  <nav class="flex flex-col w-full gap-2">
+                    <a
+                      href="#"
+                      class="flex w-full text-center justify-center text-lg tracking-wide"
+                      >Home</a
+                    >
+                    <a
+                      href="#"
+                      class="flex w-full text-center justify-center text-lg tracking-wide"
+                      >Features</a
+                    >
+                    <a
+                      href="#"
+                      class="flex w-full text-center justify-center text-lg tracking-wide"
+                      >Pricing</a
+                    >
+                    <a
+                      href="#"
+                      class="flex w-full text-center justify-center text-lg tracking-wide"
+                      >About</a
+                    >
+                    <a href="#" class="primary-btn">Get started</a>
                   </nav>
                 </div>
               </div>
