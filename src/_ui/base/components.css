@@ -38,4 +38,20 @@
   .card {
     @apply flex flex-col p-8 gap-4 border bg-background border-border rounded-xl shadow-primary/10 hover:shadow-md hover:border-border-hover transition-[box-shadow,border] duration-400;
   }
+
+  .frame-tab {
+    @apply text-text-secondary hover:text-text;
+
+    &.active {
+      @apply bg-background text-text shadow-sm;
+    }
+  }
+
+  .frame-vp {
+    @apply text-text-secondary hover:bg-surface hover:text-text;
+
+    &.active {
+      @apply bg-surface text-primary;
+    }
+  }
 }
