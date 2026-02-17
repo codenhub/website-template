@@ -100,7 +100,7 @@ class Frame extends HTMLElement {
     this.innerHTML = `
       <div class="relative flex flex-col w-full h-fit gap-4">
         <!-- Toolbar -->
-        <div class="flex items-center justify-between gap-2">
+        <div class="flex items-center flex-wrap justify-between gap-2">
           <div class="flex items-center gap-4">
             <span class="font-semibold text-text truncate">${title}</span>
             <div class="flex items-center bg-surface rounded-md p-1 gap-0.5">
