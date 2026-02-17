@@ -7,6 +7,7 @@ const ICON_TABLET = `<svg viewBox="0 0 24 24" class="size-4" fill="none" stroke=
 const ICON_MOBILE = `<svg viewBox="0 0 24 24" class="size-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg>`;
 
 const MIN_WIDTH = 320;
+const HEIGHT_SYNC_INTERVAL_MS = 200;
 
 function dedentHtml(raw) {
   const lines = raw.replace(/^\s*\n|\n\s*$/g, "").split("\n");
@@ -27,7 +28,65 @@ function escapeHtml(str) {
     .replace(/"/g, "&quot;");
 }
 
+function collectParentStyles() {
+  const parts = [];
+
+  for (const node of document.querySelectorAll(
+    'link[rel="stylesheet"], style',
+  )) {
+    if (node.tagName === "LINK") {
+      parts.push(`<link rel="stylesheet" href="${node.href}" />`);
+    } else {
+      parts.push(`<style>${node.textContent}</style>`);
+    }
+  }
+
+  return parts.join("\n");
+}
+
+/**
+ * Builds the srcdoc HTML for the preview iframe.
+ * The iframe gets the same styles as the parent document so
+ * Tailwind classes render correctly — and because the iframe has its
+ * own viewport, responsive breakpoints now match the container width.
+ */
+function buildSrcdoc(bodyHtml) {
+  const styles = collectParentStyles();
+
+  return `<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  ${styles}
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      min-height: 0;
+      overflow: hidden;
+      background: transparent;
+    }
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    /* Prevent scrollbars from affecting size calculation */
+    html { overflow: hidden; }
+  </style>
+</head>
+<body>${bodyHtml}</body>
+</html>`;
+}
+
 class Frame extends HTMLElement {
+  /** @type {number | null} */
+  #heightSyncTimer = null;
+
+  /** @type {ResizeObserver | null} */
+  #resizeObserver = null;
+
   connectedCallback() {
     this.style.cssText = "display:block;width:100%;";
 
@@ -66,7 +125,7 @@ class Frame extends HTMLElement {
         <!-- Preview panel -->
         <div class="frame-preview relative flex w-full border border-border rounded-xl overflow-hidden bg-border">
           <div class="frame-sizer relative w-full overflow-hidden" style="min-width:${MIN_WIDTH}px">
-            <div class="w-full">${rawHtml}</div>
+            <iframe class="frame-iframe w-full border-0 block" style="height:0" sandbox="allow-scripts allow-same-origin"></iframe>
             <div class="frame-handle absolute right-0 top-0 bottom-0 w-4 cursor-col-resize flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-200 z-10">
               <div class="w-1 h-8 rounded-full bg-primary"></div>
             </div>
@@ -80,10 +139,15 @@ class Frame extends HTMLElement {
       </div>
     `;
 
+    this.#initIframe(rawHtml);
     this.#bindTabs();
     this.#bindViewports();
     this.#bindResize();
     this.#bindCopy(codeText);
+  }
+
+  disconnectedCallback() {
+    this.#stopHeightSync();
   }
 
   #q(sel) {
@@ -92,6 +156,79 @@ class Frame extends HTMLElement {
 
   #qAll(sel) {
     return this.querySelectorAll(sel);
+  }
+
+  #initIframe(rawHtml) {
+    const iframe = this.#q(".frame-iframe");
+    const srcdoc = buildSrcdoc(rawHtml);
+
+    iframe.srcdoc = srcdoc;
+
+    iframe.addEventListener("load", () => {
+      this.#syncIframeHeight();
+      this.#startHeightSync();
+    });
+  }
+
+  #syncIframeHeight() {
+    const iframe = this.#q(".frame-iframe");
+    if (!iframe) return;
+
+    try {
+      const iframeDoc =
+        iframe.contentDocument || iframe.contentWindow?.document;
+      if (!iframeDoc) return;
+
+      const contentHeight = iframeDoc.documentElement.scrollHeight;
+      iframe.style.height = `${contentHeight}px`;
+    } catch {
+      // Cross-origin — silently ignore
+    }
+  }
+
+  #startHeightSync() {
+    this.#stopHeightSync();
+
+    const iframe = this.#q(".frame-iframe");
+    if (!iframe) return;
+
+    // Use ResizeObserver on the iframe body when possible
+    try {
+      const iframeDoc =
+        iframe.contentDocument || iframe.contentWindow?.document;
+      if (iframeDoc) {
+        this.#resizeObserver = new ResizeObserver(() => {
+          this.#syncIframeHeight();
+        });
+        this.#resizeObserver.observe(iframeDoc.documentElement);
+      }
+    } catch {
+      // Fallback to interval polling
+    }
+
+    // Also use an interval as a safety net for images loading, etc.
+    this.#heightSyncTimer = window.setInterval(() => {
+      this.#syncIframeHeight();
+    }, HEIGHT_SYNC_INTERVAL_MS);
+
+    // Stop the interval after a generous settling period
+    window.setTimeout(() => {
+      if (this.#heightSyncTimer !== null) {
+        window.clearInterval(this.#heightSyncTimer);
+        this.#heightSyncTimer = null;
+      }
+    }, 5000);
+  }
+
+  #stopHeightSync() {
+    if (this.#heightSyncTimer !== null) {
+      window.clearInterval(this.#heightSyncTimer);
+      this.#heightSyncTimer = null;
+    }
+    if (this.#resizeObserver) {
+      this.#resizeObserver.disconnect();
+      this.#resizeObserver = null;
+    }
   }
 
   #bindTabs() {
@@ -140,7 +277,9 @@ class Frame extends HTMLElement {
         // Remove transition after animation so drag resize stays snappy
         setTimeout(() => {
           sizer.style.transition = "none";
-        }, 300);
+          // Re-sync height since the content may have reflowed
+          this.#syncIframeHeight();
+        }, 320);
       });
     });
   }
@@ -160,6 +299,7 @@ class Frame extends HTMLElement {
       );
       sizer.style.width = `${newW}px`;
       label.textContent = newW >= maxW - 2 ? "100%" : `${newW}px`;
+      this.#syncIframeHeight();
     };
 
     const onUp = () => {
