@@ -8,6 +8,9 @@ const ICON_MOBILE = `<svg viewBox="0 0 24 24" class="size-4" fill="none" stroke=
 
 const MIN_WIDTH = 320;
 const HEIGHT_SYNC_INTERVAL_MS = 200;
+const HEIGHT_SETTLE_MS = 5_000;
+const TRANSITION_DURATION_MS = 320;
+const COPY_FEEDBACK_MS = 1_500;
 
 function dedentHtml(raw) {
   const lines = raw.replace(/^\s*\n|\n\s*$/g, "").split("\n");
@@ -15,8 +18,12 @@ function dedentHtml(raw) {
   if (nonEmpty.length === 0) return raw.trim();
 
   const minIndent = Math.min(
-    ...nonEmpty.map((l) => l.match(/^(\s*)/)[1].length),
+    ...nonEmpty.map((l) => {
+      const match = l.match(/^(\s*)/);
+      return match ? match[1].length : 0;
+    }),
   );
+
   return lines.map((l) => l.slice(minIndent)).join("\n");
 }
 
@@ -44,48 +51,44 @@ function collectParentStyles() {
   return parts.join("\n");
 }
 
-/**
- * Builds the srcdoc HTML for the preview iframe.
- * The iframe gets the same styles as the parent document so
- * Tailwind classes render correctly — and because the iframe has its
- * own viewport, responsive breakpoints now match the container width.
- */
 function buildSrcdoc(bodyHtml) {
   const styles = collectParentStyles();
 
-  return `<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  ${styles}
-  <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      min-height: 0;
-      overflow: hidden;
-      background: transparent;
-    }
-    body {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    /* Prevent scrollbars from affecting size calculation */
-    html { overflow: hidden; }
-  </style>
-</head>
-<body>${bodyHtml}</body>
-</html>`;
+  return `
+    <!doctype html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        ${styles}
+        <style>
+          html, body {
+            margin: 0;
+            padding: 0;
+            min-height: 0;
+            overflow: hidden;
+            background: transparent;
+          }
+          body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        </style>
+      </head>
+      <body>${bodyHtml}</body>
+    </html>
+  `;
 }
 
 class Frame extends HTMLElement {
-  /** @type {number | null} */
   #heightSyncTimer = null;
 
-  /** @type {ResizeObserver | null} */
   #resizeObserver = null;
+
+  #pendingTimeouts = new Set();
+
+  #dragAbortController = null;
 
   connectedCallback() {
     this.style.cssText = "display:block;width:100%;";
@@ -148,6 +151,9 @@ class Frame extends HTMLElement {
 
   disconnectedCallback() {
     this.#stopHeightSync();
+    this.#clearAllTimeouts();
+    this.#dragAbortController?.abort();
+    this.#dragAbortController = null;
   }
 
   #q(sel) {
@@ -158,12 +164,27 @@ class Frame extends HTMLElement {
     return this.querySelectorAll(sel);
   }
 
+  #setTimeout(fn, ms) {
+    const id = window.setTimeout(() => {
+      this.#pendingTimeouts.delete(id);
+      fn();
+    }, ms);
+    this.#pendingTimeouts.add(id);
+    return id;
+  }
+
+  #clearAllTimeouts() {
+    for (const id of this.#pendingTimeouts) {
+      window.clearTimeout(id);
+    }
+    this.#pendingTimeouts.clear();
+  }
+
   #initIframe(rawHtml) {
     const iframe = this.#q(".frame-iframe");
-    const srcdoc = buildSrcdoc(rawHtml);
+    if (!iframe) return;
 
-    iframe.srcdoc = srcdoc;
-
+    iframe.srcdoc = buildSrcdoc(rawHtml);
     iframe.addEventListener("load", () => {
       this.#syncIframeHeight();
       this.#startHeightSync();
@@ -203,21 +224,21 @@ class Frame extends HTMLElement {
         this.#resizeObserver.observe(iframeDoc.documentElement);
       }
     } catch {
-      // Fallback to interval polling
+      // Cross-origin — fall back to interval polling only
     }
 
-    // Also use an interval as a safety net for images loading, etc.
+    // Interval as a safety net for images loading, etc.
     this.#heightSyncTimer = window.setInterval(() => {
       this.#syncIframeHeight();
     }, HEIGHT_SYNC_INTERVAL_MS);
 
-    // Stop the interval after a generous settling period
-    window.setTimeout(() => {
+    // Stop interval after a generous settling period
+    this.#setTimeout(() => {
       if (this.#heightSyncTimer !== null) {
         window.clearInterval(this.#heightSyncTimer);
         this.#heightSyncTimer = null;
       }
-    }, 5000);
+    }, HEIGHT_SETTLE_MS);
   }
 
   #stopHeightSync() {
@@ -236,20 +257,23 @@ class Frame extends HTMLElement {
       btn.addEventListener("click", () => {
         const isPreview = btn.dataset.tab === "preview";
 
-        // Toggle active tab style
         this.#qAll(".frame-tab").forEach((b) => b.classList.remove("active"));
         btn.classList.add("active");
 
-        // Toggle panels
-        this.#q(".frame-preview").classList.toggle("hidden", !isPreview);
-        this.#q(".frame-code").classList.toggle("hidden", isPreview);
+        this.#q(".frame-preview")?.classList.toggle("hidden", !isPreview);
+        this.#q(".frame-code")?.classList.toggle("hidden", isPreview);
 
-        // Toggle toolbar context
-        this.#q(".frame-viewport-group").classList.toggle("hidden", !isPreview);
-        this.#q(".frame-width-label").classList.toggle("hidden", !isPreview);
+        this.#q(".frame-viewport-group")?.classList.toggle(
+          "hidden",
+          !isPreview,
+        );
+        this.#q(".frame-width-label")?.classList.toggle("hidden", !isPreview);
+
         const copyBtn = this.#q(".frame-copy");
-        copyBtn.classList.toggle("hidden", isPreview);
-        copyBtn.classList.toggle("flex", !isPreview);
+        if (copyBtn) {
+          copyBtn.classList.toggle("hidden", isPreview);
+          copyBtn.classList.toggle("flex", !isPreview);
+        }
       });
     });
   }
@@ -262,24 +286,30 @@ class Frame extends HTMLElement {
 
         const sizer = this.#q(".frame-sizer");
         const container = this.#q(".frame-preview");
+        const label = this.#q(".frame-width-label");
+        if (!sizer || !container || !label) return;
+
         const targetWidth = btn.dataset.width;
 
         sizer.style.transition = "width 0.3s ease";
+
         if (targetWidth === "100%") {
           sizer.style.width = "100%";
-          this.#q(".frame-width-label").textContent = "100%";
+          label.textContent = "100%";
         } else {
-          const px = Math.min(parseInt(targetWidth, 10), container.offsetWidth);
+          const parsed = Number.parseInt(targetWidth, 10);
+          const px = Number.isNaN(parsed)
+            ? container.offsetWidth
+            : Math.min(parsed, container.offsetWidth);
           sizer.style.width = `${px}px`;
-          this.#q(".frame-width-label").textContent = `${px}px`;
+          label.textContent = `${px}px`;
         }
 
         // Remove transition after animation so drag resize stays snappy
-        setTimeout(() => {
+        this.#setTimeout(() => {
           sizer.style.transition = "none";
-          // Re-sync height since the content may have reflowed
           this.#syncIframeHeight();
-        }, 320);
+        }, TRANSITION_DURATION_MS);
       });
     });
   }
@@ -289,7 +319,14 @@ class Frame extends HTMLElement {
     const sizer = this.#q(".frame-sizer");
     const container = this.#q(".frame-preview");
     const label = this.#q(".frame-width-label");
-    let startX, startW;
+    if (!handle || !sizer || !container || !label) return;
+
+    // Use an AbortController so we can tear down drag listeners on disconnect
+    this.#dragAbortController = new AbortController();
+    const { signal } = this.#dragAbortController;
+
+    let startX = 0;
+    let startW = 0;
 
     const onMove = (e) => {
       const maxW = container.offsetWidth;
@@ -302,35 +339,49 @@ class Frame extends HTMLElement {
       this.#syncIframeHeight();
     };
 
-    const onUp = () => {
+    const onUp = (e) => {
+      handle.releasePointerCapture(e.pointerId);
       handle.classList.remove("!opacity-100");
-      document.removeEventListener("pointermove", onMove);
-      document.removeEventListener("pointerup", onUp);
+      handle.removeEventListener("pointermove", onMove);
+      handle.removeEventListener("pointerup", onUp);
 
       this.#qAll(".frame-vp").forEach((b) => b.classList.remove("active"));
     };
 
-    handle.addEventListener("pointerdown", (e) => {
-      e.preventDefault();
-      startX = e.clientX;
-      startW = sizer.offsetWidth;
-      sizer.style.transition = "none";
-      handle.classList.add("!opacity-100");
-      document.addEventListener("pointermove", onMove);
-      document.addEventListener("pointerup", onUp);
-    });
+    handle.addEventListener(
+      "pointerdown",
+      (e) => {
+        e.preventDefault();
+        startX = e.clientX;
+        startW = sizer.offsetWidth;
+        sizer.style.transition = "none";
+        handle.classList.add("!opacity-100");
+
+        handle.setPointerCapture(e.pointerId);
+        handle.addEventListener("pointermove", onMove);
+        handle.addEventListener("pointerup", onUp);
+      },
+      { signal },
+    );
   }
 
   #bindCopy(codeText) {
     const btn = this.#q(".frame-copy");
+    if (!btn) return;
+
     btn.addEventListener("click", async () => {
-      await navigator.clipboard.writeText(codeText);
-      btn.innerHTML = `${ICON_CHECK} Copied!`;
-      btn.classList.add("text-green-600", "border-green-400");
-      setTimeout(() => {
+      try {
+        await navigator.clipboard.writeText(codeText);
+        btn.innerHTML = `${ICON_CHECK} Copied!`;
+        btn.classList.add("text-green-600", "border-green-400");
+      } catch {
+        btn.innerHTML = `${ICON_CHECK} Error`;
+      }
+
+      this.#setTimeout(() => {
         btn.innerHTML = `${ICON_COPY} Copy`;
         btn.classList.remove("text-green-600", "border-green-400");
-      }, 1500);
+      }, COPY_FEEDBACK_MS);
     });
   }
 }
