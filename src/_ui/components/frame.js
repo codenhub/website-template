@@ -36,7 +36,7 @@ class Frame extends HTMLElement {
     const codeText = dedentHtml(rawHtml);
 
     this.innerHTML = `
-      <div class="relative flex flex-col w-full h-fit gap-2">
+      <div class="relative flex flex-col w-full h-fit gap-4">
         <!-- Toolbar -->
         <div class="flex items-center justify-between gap-2">
           <div class="flex items-center gap-4">
@@ -64,7 +64,7 @@ class Frame extends HTMLElement {
         </div>
 
         <!-- Preview panel -->
-        <div class="frame-preview relative flex w-full border border-border rounded-xl overflow-hidden bg-background">
+        <div class="frame-preview relative flex w-full border border-border rounded-xl overflow-hidden bg-border">
           <div class="frame-sizer relative w-full overflow-hidden" style="min-width:${MIN_WIDTH}px">
             <div class="w-full">${rawHtml}</div>
             <div class="frame-handle absolute right-0 top-0 bottom-0 w-4 cursor-col-resize flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-200 z-10">
@@ -74,7 +74,7 @@ class Frame extends HTMLElement {
         </div>
 
         <!-- Code panel -->
-        <div class="frame-code hidden border border-border overflow-auto bg-neutral-900">
+        <div class="frame-code hidden border border-border rounded-xl overflow-auto bg-neutral-900">
           <pre class="p-4 text-xs leading-relaxed text-neutral-300 font-mono whitespace-pre overflow-x-auto"><code>${escapeHtml(codeText)}</code></pre>
         </div>
       </div>
