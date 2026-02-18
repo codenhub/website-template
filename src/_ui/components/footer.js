@@ -102,7 +102,9 @@ class Footer extends HTMLElement {
       </footer>
     `;
 
-    gsap.from("footer", {
+    const footer = this.querySelector("footer");
+
+    gsap.from(footer, {
       y: 100,
       duration: 0.8,
       ease: "power1.inOut",
