@@ -35,7 +35,7 @@
   }
 
   h1 {
-    @apply text-7xl md:text-8xl font-title tracking-tight;
+    @apply text-6xl md:text-8xl font-title tracking-tight;
   }
 
   h2 {
