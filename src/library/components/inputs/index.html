@@ -105,226 +105,275 @@
           <h2 class="max-w-7xl w-full split-chars">Inputs</h2>
         </div>
 
-        <section
-          class="flex flex-col items-center gap-8 py-8 my-8 border-y-2 border-dashed border-border"
-        >
-          <!-- DEFAULT -->
-          <h3>Default</h3>
-          <div
-            class="flex gap-8 items-end justify-center w-full flex-wrap max-w-5xl mx-auto px-4"
-          >
-            <div class="flex flex-col gap-2 flex-1 min-w-64">
-              <label class="text-sm font-medium text-text">Name</label>
-              <input type="text" placeholder="John Doe" />
-            </div>
-            <div class="flex flex-col gap-2 flex-1 min-w-64">
-              <label class="text-sm font-medium text-text">Email</label>
-              <input type="email" placeholder="john@example.com" />
-            </div>
-            <div class="flex flex-col gap-2 flex-1 min-w-64">
-              <label class="text-sm font-medium text-text">Password</label>
-              <input type="password" placeholder="••••••••" />
-            </div>
-          </div>
-
-          <!-- WITH HELPER TEXT -->
-          <h3>With helper text</h3>
-          <div
-            class="flex gap-8 items-start justify-center w-full flex-wrap max-w-5xl mx-auto px-4"
-          >
-            <div class="flex flex-col gap-2 flex-1 min-w-64">
-              <label class="text-sm font-medium text-text">Email</label>
-              <input type="email" placeholder="john@example.com" />
-              <p class="text-xs text-text-secondary">
-                We'll never share your email.
-              </p>
-            </div>
-            <div class="flex flex-col gap-2 flex-1 min-w-64">
-              <label class="text-sm font-medium text-text">Password</label>
-              <input
-                type="password"
-                placeholder="••••••••"
-                class="border-red-500! focus:ring-red-500!"
-              />
-              <p class="text-xs text-red-600">
-                Password must be at least 8 characters.
-              </p>
-            </div>
-            <div class="flex flex-col gap-2 flex-1 min-w-64">
-              <label class="text-sm font-medium text-text">Username</label>
-              <input
-                type="text"
-                placeholder="johndoe"
-                value="johndoe"
-                class="border-emerald-500! focus:ring-emerald-500!"
-              />
-              <p class="text-xs text-emerald-600">Username is available!</p>
-            </div>
-          </div>
-
-          <!-- WITH ICON -->
-          <h3>With icon</h3>
-          <div
-            class="flex gap-8 items-end justify-center w-full flex-wrap max-w-5xl mx-auto px-4"
-          >
-            <div class="flex flex-col gap-2 flex-1 min-w-64">
-              <label class="text-sm font-medium text-text">Search</label>
-              <div class="relative">
-                <svg
-                  class="absolute left-3 top-1/2 -translate-y-1/2 size-4 text-text-secondary pointer-events-none"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+        <section class="sect">
+          <div class="sect-container">
+            <custom-frame title="Default">
+              <div class="w-full p-8 md:p-12 bg-background">
+                <div
+                  class="flex gap-8 items-end justify-center w-full flex-wrap max-w-5xl mx-auto"
                 >
-                  <circle cx="11" cy="11" r="8" />
-                  <path d="m21 21-4.35-4.35" />
-                </svg>
-                <input
-                  type="text"
-                  placeholder="Search..."
-                  class="w-full pl-10!"
-                />
+                  <div class="flex flex-col gap-2 flex-1 min-w-64">
+                    <label class="text-sm font-medium text-text">Name</label>
+                    <input type="text" placeholder="John Doe" />
+                  </div>
+                  <div class="flex flex-col gap-2 flex-1 min-w-64">
+                    <label class="text-sm font-medium text-text">Email</label>
+                    <input type="email" placeholder="john@example.com" />
+                  </div>
+                  <div class="flex flex-col gap-2 flex-1 min-w-64">
+                    <label class="text-sm font-medium text-text">Password</label>
+                    <input type="password" placeholder="••••••••" />
+                  </div>
+                </div>
               </div>
-            </div>
-            <div class="flex flex-col gap-2 flex-1 min-w-64">
-              <label class="text-sm font-medium text-text">Website</label>
-              <div class="relative">
-                <svg
-                  class="absolute left-3 top-1/2 -translate-y-1/2 size-4 text-text-secondary pointer-events-none"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <circle cx="12" cy="12" r="10" />
-                  <path d="M2 12h20" />
-                  <path
-                    d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
-                  />
-                </svg>
-                <input
-                  type="url"
-                  placeholder="https://example.com"
-                  class="w-full pl-10!"
-                />
-              </div>
-            </div>
-            <div class="flex flex-col gap-2 flex-1 min-w-64">
-              <label class="text-sm font-medium text-text">Email</label>
-              <div class="relative">
-                <svg
-                  class="absolute left-3 top-1/2 -translate-y-1/2 size-4 text-text-secondary pointer-events-none"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <rect width="20" height="16" x="2" y="4" rx="2" />
-                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
-                </svg>
-                <input
-                  type="email"
-                  placeholder="john@example.com"
-                  class="w-full pl-10!"
-                />
-              </div>
-            </div>
+            </custom-frame>
           </div>
+        </section>
 
-          <!-- WITH ADDON -->
-          <h3>With addon</h3>
-          <div
-            class="flex gap-8 items-end justify-center w-full flex-wrap max-w-5xl mx-auto px-4"
-          >
-            <div class="flex flex-col gap-2 flex-1 min-w-64">
-              <label class="text-sm font-medium text-text">Website</label>
-              <div class="flex">
-                <span
-                  class="inline-flex items-center px-3 text-sm font-medium text-text-secondary bg-foreground border border-r-0 border-accent rounded-l-md"
-                  >https://</span
+        <section class="sect">
+          <div class="sect-container">
+            <custom-frame title="With helper text">
+              <div class="w-full p-8 md:p-12 bg-background">
+                <div
+                  class="flex gap-8 items-start justify-center w-full flex-wrap max-w-5xl mx-auto"
                 >
-                <input
-                  type="text"
-                  placeholder="example.com"
-                  class="flex-1 rounded-l-none!"
-                />
+                  <div class="flex flex-col gap-2 flex-1 min-w-64">
+                    <label class="text-sm font-medium text-text">Email</label>
+                    <input type="email" placeholder="john@example.com" />
+                    <p class="text-xs text-text-secondary">
+                      We'll never share your email.
+                    </p>
+                  </div>
+                  <div class="flex flex-col gap-2 flex-1 min-w-64">
+                    <label class="text-sm font-medium text-text"
+                      >Password</label
+                    >
+                    <input
+                      type="password"
+                      placeholder="••••••••"
+                      class="border-red-500! focus:ring-red-500!"
+                    />
+                    <p class="text-xs text-red-600">
+                      Password must be at least 8 characters.
+                    </p>
+                  </div>
+                  <div class="flex flex-col gap-2 flex-1 min-w-64">
+                    <label class="text-sm font-medium text-text"
+                      >Username</label
+                    >
+                    <input
+                      type="text"
+                      placeholder="johndoe"
+                      value="johndoe"
+                      class="border-emerald-500! focus:ring-emerald-500!"
+                    />
+                    <p class="text-xs text-emerald-600">
+                      Username is available!
+                    </p>
+                  </div>
+                </div>
               </div>
-            </div>
-            <div class="flex flex-col gap-2 flex-1 min-w-64">
-              <label class="text-sm font-medium text-text">Price</label>
-              <div class="flex">
-                <span
-                  class="inline-flex items-center px-3 text-sm font-medium text-text-secondary bg-foreground border border-r-0 border-accent rounded-l-md"
-                  >$</span
+            </custom-frame>
+          </div>
+        </section>
+
+        <section class="sect">
+          <div class="sect-container">
+            <custom-frame title="With icon">
+              <div class="w-full p-8 md:p-12 bg-background">
+                <div
+                  class="flex gap-8 items-end justify-center w-full flex-wrap max-w-5xl mx-auto"
                 >
-                <input
-                  type="number"
-                  placeholder="0.00"
-                  class="flex-1 rounded-l-none! rounded-r-none!"
-                />
-                <span
-                  class="inline-flex items-center px-3 text-sm font-medium text-text-secondary bg-foreground border border-l-0 border-accent rounded-r-md"
-                  >USD</span
-                >
+                  <div class="flex flex-col gap-2 flex-1 min-w-64">
+                    <label class="text-sm font-medium text-text">Search</label>
+                    <div class="relative">
+                      <svg
+                        class="absolute left-3 top-1/2 -translate-y-1/2 size-4 text-text-secondary pointer-events-none"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <circle cx="11" cy="11" r="8" />
+                        <path d="m21 21-4.35-4.35" />
+                      </svg>
+                      <input
+                        type="text"
+                        placeholder="Search..."
+                        class="w-full pl-10!"
+                      />
+                    </div>
+                  </div>
+                  <div class="flex flex-col gap-2 flex-1 min-w-64">
+                    <label class="text-sm font-medium text-text"
+                      >Website</label
+                    >
+                    <div class="relative">
+                      <svg
+                        class="absolute left-3 top-1/2 -translate-y-1/2 size-4 text-text-secondary pointer-events-none"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <circle cx="12" cy="12" r="10" />
+                        <path d="M2 12h20" />
+                        <path
+                          d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+                        />
+                      </svg>
+                      <input
+                        type="url"
+                        placeholder="https://example.com"
+                        class="w-full pl-10!"
+                      />
+                    </div>
+                  </div>
+                  <div class="flex flex-col gap-2 flex-1 min-w-64">
+                    <label class="text-sm font-medium text-text">Email</label>
+                    <div class="relative">
+                      <svg
+                        class="absolute left-3 top-1/2 -translate-y-1/2 size-4 text-text-secondary pointer-events-none"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect width="20" height="16" x="2" y="4" rx="2" />
+                        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                      </svg>
+                      <input
+                        type="email"
+                        placeholder="john@example.com"
+                        class="w-full pl-10!"
+                      />
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
+            </custom-frame>
           </div>
+        </section>
 
-          <!-- TEXTAREA -->
-          <h3>Textarea</h3>
-          <div
-            class="flex gap-8 items-start justify-center w-full flex-wrap max-w-5xl mx-auto px-4"
-          >
-            <div class="flex flex-col gap-2 flex-1 min-w-64">
-              <label class="text-sm font-medium text-text">Message</label>
-              <textarea rows="4" placeholder="Write your message..."></textarea>
-            </div>
-            <div class="flex flex-col gap-2 flex-1 min-w-64">
-              <label class="text-sm font-medium text-text">Bio</label>
-              <textarea
-                rows="4"
-                placeholder="Tell us about yourself..."
-              ></textarea>
-              <p class="text-xs text-text-secondary text-right">0/500</p>
-            </div>
+        <section class="sect">
+          <div class="sect-container">
+            <custom-frame title="With addon">
+              <div class="w-full p-8 md:p-12 bg-background">
+                <div
+                  class="flex gap-8 items-end justify-center w-full flex-wrap max-w-5xl mx-auto"
+                >
+                  <div class="flex flex-col gap-2 flex-1 min-w-64">
+                    <label class="text-sm font-medium text-text"
+                      >Website</label
+                    >
+                    <div class="flex">
+                      <span
+                        class="inline-flex items-center px-3 text-sm font-medium text-text-secondary bg-foreground border border-r-0 border-accent rounded-l-md"
+                        >https://</span
+                      >
+                      <input
+                        type="text"
+                        placeholder="example.com"
+                        class="flex-1 rounded-l-none!"
+                      />
+                    </div>
+                  </div>
+                  <div class="flex flex-col gap-2 flex-1 min-w-64">
+                    <label class="text-sm font-medium text-text">Price</label>
+                    <div class="flex">
+                      <span
+                        class="inline-flex items-center px-3 text-sm font-medium text-text-secondary bg-foreground border border-r-0 border-accent rounded-l-md"
+                        >$</span
+                      >
+                      <input
+                        type="number"
+                        placeholder="0.00"
+                        class="flex-1 rounded-l-none! rounded-r-none!"
+                      />
+                      <span
+                        class="inline-flex items-center px-3 text-sm font-medium text-text-secondary bg-foreground border border-l-0 border-accent rounded-r-md"
+                        >USD</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </custom-frame>
           </div>
+        </section>
 
-          <!-- SELECT -->
-          <h3>Select</h3>
-          <div
-            class="flex gap-8 items-end justify-center w-full flex-wrap max-w-5xl mx-auto px-4"
-          >
-            <div class="flex flex-col gap-2 flex-1 min-w-64">
-              <label class="text-sm font-medium text-text">Country</label>
-              <select
-                class="flex p-2 min-h-10 rounded-md border border-accent focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-200 bg-background appearance-none cursor-pointer"
-              >
-                <option>Select a country</option>
-                <option>United States</option>
-                <option>Brazil</option>
-                <option>United Kingdom</option>
-                <option>Japan</option>
-              </select>
-            </div>
-            <div class="flex flex-col gap-2 flex-1 min-w-64">
-              <label class="text-sm font-medium text-text">Role</label>
-              <select
-                class="flex p-2 min-h-10 rounded-md border border-accent focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-200 bg-background appearance-none cursor-pointer"
-              >
-                <option>Select a role</option>
-                <option>Developer</option>
-                <option>Designer</option>
-                <option>Manager</option>
-                <option>Analyst</option>
-              </select>
-            </div>
+        <section class="sect">
+          <div class="sect-container">
+            <custom-frame title="Textarea">
+              <div class="w-full p-8 md:p-12 bg-background">
+                <div
+                  class="flex gap-8 items-start justify-center w-full flex-wrap max-w-5xl mx-auto"
+                >
+                  <div class="flex flex-col gap-2 flex-1 min-w-64">
+                    <label class="text-sm font-medium text-text">Message</label>
+                    <textarea
+                      rows="4"
+                      placeholder="Write your message..."
+                    ></textarea>
+                  </div>
+                  <div class="flex flex-col gap-2 flex-1 min-w-64">
+                    <label class="text-sm font-medium text-text">Bio</label>
+                    <textarea
+                      rows="4"
+                      placeholder="Tell us about yourself..."
+                    ></textarea>
+                    <p class="text-xs text-text-secondary text-right">
+                      0/500
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </custom-frame>
+          </div>
+        </section>
+
+        <section class="sect">
+          <div class="sect-container">
+            <custom-frame title="Select">
+              <div class="w-full p-8 md:p-12 bg-background">
+                <div
+                  class="flex gap-8 items-end justify-center w-full flex-wrap max-w-5xl mx-auto"
+                >
+                  <div class="flex flex-col gap-2 flex-1 min-w-64">
+                    <label class="text-sm font-medium text-text"
+                      >Country</label
+                    >
+                    <select
+                      class="flex p-2 min-h-10 rounded-md border border-accent focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-200 bg-background appearance-none cursor-pointer"
+                    >
+                      <option>Select a country</option>
+                      <option>United States</option>
+                      <option>Brazil</option>
+                      <option>United Kingdom</option>
+                      <option>Japan</option>
+                    </select>
+                  </div>
+                  <div class="flex flex-col gap-2 flex-1 min-w-64">
+                    <label class="text-sm font-medium text-text">Role</label>
+                    <select
+                      class="flex p-2 min-h-10 rounded-md border border-accent focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-200 bg-background appearance-none cursor-pointer"
+                    >
+                      <option>Select a role</option>
+                      <option>Developer</option>
+                      <option>Designer</option>
+                      <option>Manager</option>
+                      <option>Analyst</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </custom-frame>
           </div>
         </section>
 
