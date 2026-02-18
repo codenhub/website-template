@@ -35,6 +35,114 @@ function escapeHtml(str) {
     .replace(/"/g, "&quot;");
 }
 
+function highlightHtml(raw) {
+  const TOKEN_PATTERNS = [
+    { type: "comment", regex: /<!--[\s\S]*?-->/g },
+    { type: "tag", regex: /<\/?[a-zA-Z][^>]*\/?>/g },
+  ];
+
+  const tokens = [];
+
+  for (const { type, regex } of TOKEN_PATTERNS) {
+    let match;
+    while ((match = regex.exec(raw)) !== null) {
+      tokens.push({
+        type,
+        start: match.index,
+        end: match.index + match[0].length,
+        text: match[0],
+      });
+    }
+  }
+
+  tokens.sort((a, b) => a.start - b.start);
+
+  // Remove overlapping tokens (keep the first one)
+  const filtered = [];
+  let lastEnd = 0;
+  for (const token of tokens) {
+    if (token.start >= lastEnd) {
+      filtered.push(token);
+      lastEnd = token.end;
+    }
+  }
+
+  const parts = [];
+  let cursor = 0;
+
+  for (const token of filtered) {
+    if (token.start > cursor) {
+      parts.push(escapeHtml(raw.slice(cursor, token.start)));
+    }
+
+    if (token.type === "comment") {
+      parts.push(`<span class="hl-comment">${escapeHtml(token.text)}</span>`);
+    } else {
+      parts.push(highlightTag(token.text));
+    }
+
+    cursor = token.end;
+  }
+
+  if (cursor < raw.length) {
+    parts.push(escapeHtml(raw.slice(cursor)));
+  }
+
+  return parts.join("");
+}
+
+function highlightTag(tagStr) {
+  // Match opening bracket + optional slash + tag name
+  const tagOpen = /^(<\/?)(\w[\w.-]*)/.exec(tagStr);
+  if (!tagOpen) return escapeHtml(tagStr);
+
+  const parts = [];
+  const bracket = tagOpen[1];
+  const tagName = tagOpen[2];
+
+  parts.push(`<span class="hl-bracket">${escapeHtml(bracket)}</span>`);
+  parts.push(`<span class="hl-tag">${escapeHtml(tagName)}</span>`);
+
+  let rest = tagStr.slice(tagOpen[0].length);
+
+  // Parse attributes iteratively
+  const ATTR_REGEX =
+    /([\w@:.\-]+)(?:(\s*=\s*)("[^"]*"|'[^']*'|[^\s>]*))?|(\/?>)/g;
+  let attrMatch;
+
+  while ((attrMatch = ATTR_REGEX.exec(rest)) !== null) {
+    const beforeIndex = ATTR_REGEX.lastIndex - attrMatch[0].length;
+    const textBefore = rest.slice(0, beforeIndex);
+    if (textBefore && !textBefore.match(/^\s*$/)) {
+      parts.push(escapeHtml(textBefore));
+    } else if (textBefore) {
+      parts.push(textBefore);
+    }
+    rest = rest.slice(ATTR_REGEX.lastIndex);
+    ATTR_REGEX.lastIndex = 0;
+
+    if (attrMatch[4]) {
+      // Closing bracket
+      parts.push(`<span class="hl-bracket">${escapeHtml(attrMatch[4])}</span>`);
+      break;
+    }
+
+    const attrName = attrMatch[1];
+    parts.push(`<span class="hl-attr">${escapeHtml(attrName)}</span>`);
+
+    if (attrMatch[2] !== undefined) {
+      parts.push(`<span class="hl-punct">${escapeHtml(attrMatch[2])}</span>`);
+      parts.push(`<span class="hl-value">${escapeHtml(attrMatch[3])}</span>`);
+    }
+  }
+
+  if (rest) {
+    parts.push(escapeHtml(rest));
+  }
+
+  return parts.join("");
+}
+
 function collectParentStyles() {
   const parts = [];
 
@@ -118,7 +226,7 @@ class Frame extends HTMLElement {
               <button data-width="768" title="Tablet · 768px" class="frame-vp flex items-center justify-center size-7 rounded transition-colors duration-200">${ICON_TABLET}</button>
               <button data-width="375" title="Mobile · 375px" class="frame-vp flex items-center justify-center size-7 rounded transition-colors duration-200">${ICON_MOBILE}</button>
             </div>
-            <span class="frame-width-label text-[11px] font-mono text-text-secondary tabular-nums min-w-14 text-center select-none">100%</span>
+            <span class="frame-width-label px-2 py-1 rounded-full bg-foreground text-xs font-mono text-text-secondary tabular-nums text-center select-none">100%</span>
             <button class="frame-copy hidden items-center justify-center gap-1.5 px-2 py-1 rounded border border-border text-[11px] font-medium text-text-secondary hover:text-text hover:border-border-hover transition-colors duration-200">
               ${ICON_COPY} Copy
             </button>
@@ -137,8 +245,16 @@ class Frame extends HTMLElement {
         </div>
 
         <!-- Code panel -->
-        <div class="frame-code hidden border border-border rounded-xl overflow-auto bg-neutral-900">
-          <pre class="p-4 text-xs leading-relaxed text-neutral-300 font-mono whitespace-pre overflow-x-auto"><code>${escapeHtml(codeText)}</code></pre>
+        <div class="frame-code hidden border border-border rounded-xl overflow-auto bg-slate-950">
+          <style>
+            .hl-bracket { color: #7c8896; }
+            .hl-tag     { color: #7ee787; }
+            .hl-attr    { color: #79c0ff; }
+            .hl-punct   { color: #7c8896; }
+            .hl-value   { color: #a5d6ff; }
+            .hl-comment { color: #546370; font-style: italic; }
+          </style>
+          <pre class="p-4 text-xs leading-relaxed text-[#c9d1d9] font-mono whitespace-pre overflow-x-auto"><code>${highlightHtml(codeText)}</code></pre>
         </div>
       </div>
     `;

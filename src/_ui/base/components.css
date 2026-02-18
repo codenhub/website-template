@@ -43,7 +43,7 @@
     @apply text-text-secondary hover:text-text;
 
     &.active {
-      @apply bg-background text-text shadow-sm;
+      @apply bg-background text-text;
     }
   }
 
