@@ -126,7 +126,8 @@ class Frame extends HTMLElement {
         </div>
 
         <!-- Preview panel -->
-        <div class="frame-preview relative flex w-full border border-border rounded-xl overflow-hidden bg-border">
+        <div class="frame-preview relative flex w-full border border-border rounded-xl overflow-hidden">
+          <div class="frame-dot-grid absolute inset-0 pointer-events-none" style="background-image:radial-gradient(circle, var(--color-border) 1px, transparent 1px); background-size:20px 20px; background-position:10px 10px;"></div>
           <div class="frame-sizer relative w-full overflow-hidden" style="min-width:${MIN_WIDTH}px">
             <iframe class="frame-iframe w-full border-0 block" style="height:0" sandbox="allow-scripts allow-same-origin"></iframe>
             <div class="frame-handle absolute right-0 top-0 bottom-0 w-4 cursor-col-resize flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-200 z-10">
@@ -200,6 +201,7 @@ class Frame extends HTMLElement {
         iframe.contentDocument || iframe.contentWindow?.document;
       if (!iframeDoc) return;
 
+      iframe.style.height = "0";
       const contentHeight = iframeDoc.documentElement.scrollHeight;
       iframe.style.height = `${contentHeight}px`;
     } catch {
