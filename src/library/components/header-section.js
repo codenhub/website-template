@@ -132,13 +132,13 @@ class HeaderSection extends HTMLElement {
               <span class="px-2 py-1 bg-foreground rounded-full text-sm">6</span>
             </a>
             <a
-              href="/library/components/hero-sections/"
+              href="/library/components/heroes/"
               class="flex items-center gap-2 px-4 py-2 rounded-xl border border-border hover:border-border-hover transition-colors duration-400"
             >
               <svg viewBox="0 0 24 24" fill="none" class="size-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z" /><path d="m3.3 7 8.7 5 8.7-5" /><path d="M12 22V12" />
               </svg>
-              <p class="font-medium mr-2">Hero Sections</p>
+              <p class="font-medium mr-2">Heroes</p>
               <span class="px-2 py-1 bg-foreground rounded-full text-sm">5</span>
             </a>
             <a
