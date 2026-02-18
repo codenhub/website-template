@@ -7,7 +7,7 @@
     <meta name="copyright" content="Coden Agency" />
     <meta
       name="description"
-      content="A curated collection of reusable alert and notification components built with TailwindCSS. Browse info, success, warning, and error alert styles."
+      content="A curated collection of reusable alert components built with TailwindCSS. Browse flat, bordered, left-accent, dismissible, and neobrutalism alert styles."
     />
 
     <title>Alerts - Components Library</title>
@@ -105,443 +105,493 @@
           <h2 class="max-w-7xl w-full split-chars">Alerts</h2>
         </div>
 
-        <section
-          class="flex flex-col items-center gap-8 py-8 my-8 border-y-2 border-dashed border-border"
-        >
-          <!-- FLAT -->
-          <h3>Flat</h3>
-          <div class="flex flex-col gap-4 w-full max-w-3xl mx-auto px-4">
-            <div
-              class="flex items-center gap-3 p-4 rounded-lg bg-sky-50 text-sky-800"
-            >
-              <svg
-                class="size-5 shrink-0"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+        <section class="sect">
+          <div class="sect-container">
+            <custom-frame title="Flat">
+              <div
+                class="flex w-full items-center justify-center p-4 bg-background"
               >
-                <circle cx="12" cy="12" r="10" />
-                <path d="M12 16v-4" />
-                <path d="M12 8h.01" />
-              </svg>
-              <p class="text-sm font-medium">
-                This is an informational message. Check documentation for more
-                details.
-              </p>
-            </div>
-            <div
-              class="flex items-center gap-3 p-4 rounded-lg bg-emerald-50 text-emerald-800"
-            >
-              <svg
-                class="size-5 shrink-0"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
-                <polyline points="22 4 12 14.01 9 11.01" />
-              </svg>
-              <p class="text-sm font-medium">
-                Success! Your changes have been saved.
-              </p>
-            </div>
-            <div
-              class="flex items-center gap-3 p-4 rounded-lg bg-amber-50 text-amber-800"
-            >
-              <svg
-                class="size-5 shrink-0"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path
-                  d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"
-                />
-                <path d="M12 9v4" />
-                <path d="M12 17h.01" />
-              </svg>
-              <p class="text-sm font-medium">
-                Warning! Please review your input before proceeding.
-              </p>
-            </div>
-            <div
-              class="flex items-center gap-3 p-4 rounded-lg bg-red-50 text-red-800"
-            >
-              <svg
-                class="size-5 shrink-0"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <circle cx="12" cy="12" r="10" />
-                <path d="m15 9-6 6" />
-                <path d="m9 9 6 6" />
-              </svg>
-              <p class="text-sm font-medium">
-                Error! Something went wrong. Please try again.
-              </p>
-            </div>
+                <div class="flex flex-col gap-4 w-full max-w-3xl">
+                  <div
+                    class="flex items-center gap-3 p-4 rounded-lg bg-sky-50 text-sky-800"
+                  >
+                    <svg
+                      class="size-5 shrink-0"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <circle cx="12" cy="12" r="10" />
+                      <path d="M12 16v-4" />
+                      <path d="M12 8h.01" />
+                    </svg>
+                    <p class="text-sm font-medium">
+                      This is an informational message. Check documentation for
+                      more details.
+                    </p>
+                  </div>
+                  <div
+                    class="flex items-center gap-3 p-4 rounded-lg bg-emerald-50 text-emerald-800"
+                  >
+                    <svg
+                      class="size-5 shrink-0"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                      <polyline points="22 4 12 14.01 9 11.01" />
+                    </svg>
+                    <p class="text-sm font-medium">
+                      Success! Your changes have been saved.
+                    </p>
+                  </div>
+                  <div
+                    class="flex items-center gap-3 p-4 rounded-lg bg-amber-50 text-amber-800"
+                  >
+                    <svg
+                      class="size-5 shrink-0"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"
+                      />
+                      <path d="M12 9v4" />
+                      <path d="M12 17h.01" />
+                    </svg>
+                    <p class="text-sm font-medium">
+                      Warning! Please review your input before proceeding.
+                    </p>
+                  </div>
+                  <div
+                    class="flex items-center gap-3 p-4 rounded-lg bg-red-50 text-red-800"
+                  >
+                    <svg
+                      class="size-5 shrink-0"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <circle cx="12" cy="12" r="10" />
+                      <path d="m15 9-6 6" />
+                      <path d="m9 9 6 6" />
+                    </svg>
+                    <p class="text-sm font-medium">
+                      Error! Something went wrong. Please try again.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </custom-frame>
           </div>
+        </section>
 
-          <!-- WITH BORDER -->
-          <h3>With border</h3>
-          <div class="flex flex-col gap-4 w-full max-w-3xl mx-auto px-4">
-            <div
-              class="flex items-center gap-3 p-4 rounded-lg bg-sky-50 text-sky-800 border border-sky-200"
-            >
-              <svg
-                class="size-5 shrink-0"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+        <section class="sect">
+          <div class="sect-container">
+            <custom-frame title="With border">
+              <div
+                class="flex w-full items-center justify-center p-4 bg-background"
               >
-                <circle cx="12" cy="12" r="10" />
-                <path d="M12 16v-4" />
-                <path d="M12 8h.01" />
-              </svg>
-              <div class="flex flex-col">
-                <p class="text-sm font-semibold">Information</p>
-                <p class="text-sm">
-                  Check the documentation for more details about configuration.
-                </p>
+                <div class="flex flex-col gap-4 w-full max-w-3xl">
+                  <div
+                    class="flex items-center gap-3 p-4 rounded-lg bg-sky-50 text-sky-800 border border-sky-200"
+                  >
+                    <svg
+                      class="size-5 shrink-0"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <circle cx="12" cy="12" r="10" />
+                      <path d="M12 16v-4" />
+                      <path d="M12 8h.01" />
+                    </svg>
+                    <div class="flex flex-col">
+                      <p class="text-sm font-semibold">Information</p>
+                      <p class="text-sm">
+                        Check the documentation for more details about
+                        configuration.
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="flex items-center gap-3 p-4 rounded-lg bg-emerald-50 text-emerald-800 border border-emerald-200"
+                  >
+                    <svg
+                      class="size-5 shrink-0"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                      <polyline points="22 4 12 14.01 9 11.01" />
+                    </svg>
+                    <div class="flex flex-col">
+                      <p class="text-sm font-semibold">Success</p>
+                      <p class="text-sm">
+                        Your account has been updated successfully.
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="flex items-center gap-3 p-4 rounded-lg bg-amber-50 text-amber-800 border border-amber-200"
+                  >
+                    <svg
+                      class="size-5 shrink-0"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"
+                      />
+                      <path d="M12 9v4" />
+                      <path d="M12 17h.01" />
+                    </svg>
+                    <div class="flex flex-col">
+                      <p class="text-sm font-semibold">Warning</p>
+                      <p class="text-sm">
+                        Your session is about to expire. Save your work now.
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="flex items-center gap-3 p-4 rounded-lg bg-red-50 text-red-800 border border-red-200"
+                  >
+                    <svg
+                      class="size-5 shrink-0"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <circle cx="12" cy="12" r="10" />
+                      <path d="m15 9-6 6" />
+                      <path d="m9 9 6 6" />
+                    </svg>
+                    <div class="flex flex-col">
+                      <p class="text-sm font-semibold">Error</p>
+                      <p class="text-sm">
+                        Failed to connect to the server. Check your internet
+                        connection.
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
-            <div
-              class="flex items-center gap-3 p-4 rounded-lg bg-emerald-50 text-emerald-800 border border-emerald-200"
-            >
-              <svg
-                class="size-5 shrink-0"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
-                <polyline points="22 4 12 14.01 9 11.01" />
-              </svg>
-              <div class="flex flex-col">
-                <p class="text-sm font-semibold">Success</p>
-                <p class="text-sm">
-                  Your account has been updated successfully.
-                </p>
-              </div>
-            </div>
-            <div
-              class="flex items-center gap-3 p-4 rounded-lg bg-amber-50 text-amber-800 border border-amber-200"
-            >
-              <svg
-                class="size-5 shrink-0"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path
-                  d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"
-                />
-                <path d="M12 9v4" />
-                <path d="M12 17h.01" />
-              </svg>
-              <div class="flex flex-col">
-                <p class="text-sm font-semibold">Warning</p>
-                <p class="text-sm">
-                  Your session is about to expire. Save your work now.
-                </p>
-              </div>
-            </div>
-            <div
-              class="flex items-center gap-3 p-4 rounded-lg bg-red-50 text-red-800 border border-red-200"
-            >
-              <svg
-                class="size-5 shrink-0"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <circle cx="12" cy="12" r="10" />
-                <path d="m15 9-6 6" />
-                <path d="m9 9 6 6" />
-              </svg>
-              <div class="flex flex-col">
-                <p class="text-sm font-semibold">Error</p>
-                <p class="text-sm">
-                  Failed to connect to the server. Check your internet
-                  connection.
-                </p>
-              </div>
-            </div>
+            </custom-frame>
           </div>
+        </section>
 
-          <!-- LEFT ACCENT -->
-          <h3>Left accent</h3>
-          <div class="flex flex-col gap-4 w-full max-w-3xl mx-auto px-4">
-            <div
-              class="flex items-center gap-3 p-4 rounded-r-lg bg-sky-50 text-sky-800 border-l-4 border-sky-500"
-            >
-              <svg
-                class="size-5 shrink-0"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <circle cx="12" cy="12" r="10" />
-                <path d="M12 16v-4" />
-                <path d="M12 8h.01" />
-              </svg>
-              <p class="text-sm font-medium">
-                A new version is available. Update now for the latest features.
-              </p>
-            </div>
-            <div
-              class="flex items-center gap-3 p-4 rounded-r-lg bg-emerald-50 text-emerald-800 border-l-4 border-emerald-500"
-            >
-              <svg
-                class="size-5 shrink-0"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
-                <polyline points="22 4 12 14.01 9 11.01" />
-              </svg>
-              <p class="text-sm font-medium">
-                Payment received. Your invoice is ready to download.
-              </p>
-            </div>
-            <div
-              class="flex items-center gap-3 p-4 rounded-r-lg bg-amber-50 text-amber-800 border-l-4 border-amber-500"
-            >
-              <svg
-                class="size-5 shrink-0"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path
-                  d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"
-                />
-                <path d="M12 9v4" />
-                <path d="M12 17h.01" />
-              </svg>
-              <p class="text-sm font-medium">
-                Disk space is running low. Free up some storage.
-              </p>
-            </div>
-            <div
-              class="flex items-center gap-3 p-4 rounded-r-lg bg-red-50 text-red-800 border-l-4 border-red-500"
-            >
-              <svg
-                class="size-5 shrink-0"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <circle cx="12" cy="12" r="10" />
-                <path d="m15 9-6 6" />
-                <path d="m9 9 6 6" />
-              </svg>
-              <p class="text-sm font-medium">
-                Authentication failed. Invalid credentials provided.
-              </p>
-            </div>
+        <section class="sect">
+          <div class="sect-container">
+            <custom-frame title="Example">
+              <div
+                class="flex w-full items-center justify-center p-4 bg-background"
+              ></div>
+            </custom-frame>
           </div>
+        </section>
 
-          <!-- WITH DISMISS -->
-          <h3>With dismiss button</h3>
-          <div class="flex flex-col gap-4 w-full max-w-3xl mx-auto px-4">
-            <div
-              class="flex items-center justify-between gap-3 p-4 rounded-lg bg-sky-50 text-sky-800 border border-sky-200"
-            >
-              <div class="flex items-center gap-3">
-                <svg
-                  class="size-5 shrink-0"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <circle cx="12" cy="12" r="10" />
-                  <path d="M12 16v-4" />
-                  <path d="M12 8h.01" />
-                </svg>
-                <p class="text-sm font-medium">
-                  We just released a new feature. Check it out!
-                </p>
-              </div>
-              <button
-                class="shrink-0 p-1 rounded-md hover:bg-sky-100 transition-colors duration-200"
+        <section class="sect">
+          <div class="sect-container">
+            <custom-frame title="Left accent">
+              <div
+                class="flex items-center justify-center p-4 w-full bg-background"
               >
-                <svg
-                  class="size-4"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="M18 6 6 18" />
-                  <path d="m6 6 12 12" />
-                </svg>
-              </button>
-            </div>
-            <div
-              class="flex items-center justify-between gap-3 p-4 rounded-lg bg-emerald-50 text-emerald-800 border border-emerald-200"
-            >
-              <div class="flex items-center gap-3">
-                <svg
-                  class="size-5 shrink-0"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
-                  <polyline points="22 4 12 14.01 9 11.01" />
-                </svg>
-                <p class="text-sm font-medium">File uploaded successfully!</p>
+                <div class="flex flex-col gap-4 w-full max-w-3xl">
+                  <div
+                    class="flex items-center gap-3 p-4 rounded-r-lg bg-sky-50 text-sky-800 border-l-4 border-sky-500"
+                  >
+                    <svg
+                      class="size-5 shrink-0"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <circle cx="12" cy="12" r="10" />
+                      <path d="M12 16v-4" />
+                      <path d="M12 8h.01" />
+                    </svg>
+                    <p class="text-sm font-medium">
+                      A new version is available. Update now for the latest
+                      features.
+                    </p>
+                  </div>
+                  <div
+                    class="flex items-center gap-3 p-4 rounded-r-lg bg-emerald-50 text-emerald-800 border-l-4 border-emerald-500"
+                  >
+                    <svg
+                      class="size-5 shrink-0"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                      <polyline points="22 4 12 14.01 9 11.01" />
+                    </svg>
+                    <p class="text-sm font-medium">
+                      Payment received. Your invoice is ready to download.
+                    </p>
+                  </div>
+                  <div
+                    class="flex items-center gap-3 p-4 rounded-r-lg bg-amber-50 text-amber-800 border-l-4 border-amber-500"
+                  >
+                    <svg
+                      class="size-5 shrink-0"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"
+                      />
+                      <path d="M12 9v4" />
+                      <path d="M12 17h.01" />
+                    </svg>
+                    <p class="text-sm font-medium">
+                      Disk space is running low. Free up some storage.
+                    </p>
+                  </div>
+                  <div
+                    class="flex items-center gap-3 p-4 rounded-r-lg bg-red-50 text-red-800 border-l-4 border-red-500"
+                  >
+                    <svg
+                      class="size-5 shrink-0"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <circle cx="12" cy="12" r="10" />
+                      <path d="m15 9-6 6" />
+                      <path d="m9 9 6 6" />
+                    </svg>
+                    <p class="text-sm font-medium">
+                      Authentication failed. Invalid credentials provided.
+                    </p>
+                  </div>
+                </div>
               </div>
-              <button
-                class="shrink-0 p-1 rounded-md hover:bg-emerald-100 transition-colors duration-200"
-              >
-                <svg
-                  class="size-4"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="M18 6 6 18" />
-                  <path d="m6 6 12 12" />
-                </svg>
-              </button>
-            </div>
+            </custom-frame>
           </div>
+        </section>
 
-          <!-- NEOBRUTALISM -->
-          <h3>Neobrutalism</h3>
-          <div class="flex flex-col gap-4 w-full max-w-3xl mx-auto px-4">
-            <div
-              class="flex items-center gap-3 p-4 bg-sky-200 text-neutral-950 border-2 border-neutral-950 shadow-[4px_4px_0_#0a0a0a]"
-            >
-              <svg
-                class="size-5 shrink-0"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+        <section class="sect">
+          <div class="sect-container">
+            <custom-frame title="With dismiss button">
+              <div
+                class="flex w-full items-center justify-center p-4 bg-background"
               >
-                <circle cx="12" cy="12" r="10" />
-                <path d="M12 16v-4" />
-                <path d="M12 8h.01" />
-              </svg>
-              <p class="text-sm font-bold">
-                Heads up! This action cannot be undone.
-              </p>
-            </div>
-            <div
-              class="flex items-center gap-3 p-4 bg-emerald-200 text-neutral-950 border-2 border-neutral-950 shadow-[4px_4px_0_#0a0a0a]"
-            >
-              <svg
-                class="size-5 shrink-0"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                <div class="flex flex-col gap-4 w-full max-w-3xl">
+                  <div
+                    class="flex items-center justify-between gap-3 p-4 rounded-lg bg-sky-50 text-sky-800 border border-sky-200"
+                  >
+                    <div class="flex items-center gap-3">
+                      <svg
+                        class="size-5 shrink-0"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <circle cx="12" cy="12" r="10" />
+                        <path d="M12 16v-4" />
+                        <path d="M12 8h.01" />
+                      </svg>
+                      <p class="text-sm font-medium">
+                        We just released a new feature. Check it out!
+                      </p>
+                    </div>
+                    <button
+                      class="shrink-0 p-1 rounded-md hover:bg-sky-100 transition-colors duration-200"
+                    >
+                      <svg
+                        class="size-4"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path d="M18 6 6 18" />
+                        <path d="m6 6 12 12" />
+                      </svg>
+                    </button>
+                  </div>
+                  <div
+                    class="flex items-center justify-between gap-3 p-4 rounded-lg bg-emerald-50 text-emerald-800 border border-emerald-200"
+                  >
+                    <div class="flex items-center gap-3">
+                      <svg
+                        class="size-5 shrink-0"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                        <polyline points="22 4 12 14.01 9 11.01" />
+                      </svg>
+                      <p class="text-sm font-medium">
+                        File uploaded successfully!
+                      </p>
+                    </div>
+                    <button
+                      class="shrink-0 p-1 rounded-md hover:bg-emerald-100 transition-colors duration-200"
+                    >
+                      <svg
+                        class="size-4"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path d="M18 6 6 18" />
+                        <path d="m6 6 12 12" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </custom-frame>
+          </div>
+        </section>
+
+        <section class="sect">
+          <div class="sect-container">
+            <custom-frame title="Neobrutalism">
+              <div
+                class="flex w-full items-center justify-center p-4 bg-background"
               >
-                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
-                <polyline points="22 4 12 14.01 9 11.01" />
-              </svg>
-              <p class="text-sm font-bold">
-                All done! Your project has been deployed.
-              </p>
-            </div>
-            <div
-              class="flex items-center gap-3 p-4 bg-amber-200 text-neutral-950 border-2 border-neutral-950 shadow-[4px_4px_0_#0a0a0a]"
-            >
-              <svg
-                class="size-5 shrink-0"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path
-                  d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"
-                />
-                <path d="M12 9v4" />
-                <path d="M12 17h.01" />
-              </svg>
-              <p class="text-sm font-bold">
-                Watch out! You're about to reach your plan limit.
-              </p>
-            </div>
-            <div
-              class="flex items-center gap-3 p-4 bg-rose-200 text-neutral-950 border-2 border-neutral-950 shadow-[4px_4px_0_#0a0a0a]"
-            >
-              <svg
-                class="size-5 shrink-0"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <circle cx="12" cy="12" r="10" />
-                <path d="m15 9-6 6" />
-                <path d="m9 9 6 6" />
-              </svg>
-              <p class="text-sm font-bold">
-                Oops! Something broke on our end. We're on it.
-              </p>
-            </div>
+                <div class="flex flex-col gap-4 w-full max-w-3xl">
+                  <div
+                    class="flex items-center gap-3 p-4 bg-sky-200 text-neutral-950 border-2 border-neutral-950 shadow-[4px_4px_0_#0a0a0a]"
+                  >
+                    <svg
+                      class="size-5 shrink-0"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <circle cx="12" cy="12" r="10" />
+                      <path d="M12 16v-4" />
+                      <path d="M12 8h.01" />
+                    </svg>
+                    <p class="text-sm font-bold">
+                      Heads up! This action cannot be undone.
+                    </p>
+                  </div>
+                  <div
+                    class="flex items-center gap-3 p-4 bg-emerald-200 text-neutral-950 border-2 border-neutral-950 shadow-[4px_4px_0_#0a0a0a]"
+                  >
+                    <svg
+                      class="size-5 shrink-0"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                      <polyline points="22 4 12 14.01 9 11.01" />
+                    </svg>
+                    <p class="text-sm font-bold">
+                      All done! Your project has been deployed.
+                    </p>
+                  </div>
+                  <div
+                    class="flex items-center gap-3 p-4 bg-amber-200 text-neutral-950 border-2 border-neutral-950 shadow-[4px_4px_0_#0a0a0a]"
+                  >
+                    <svg
+                      class="size-5 shrink-0"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"
+                      />
+                      <path d="M12 9v4" />
+                      <path d="M12 17h.01" />
+                    </svg>
+                    <p class="text-sm font-bold">
+                      Watch out! You're about to reach your plan limit.
+                    </p>
+                  </div>
+                  <div
+                    class="flex items-center gap-3 p-4 bg-rose-200 text-neutral-950 border-2 border-neutral-950 shadow-[4px_4px_0_#0a0a0a]"
+                  >
+                    <svg
+                      class="size-5 shrink-0"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <circle cx="12" cy="12" r="10" />
+                      <path d="m15 9-6 6" />
+                      <path d="m9 9 6 6" />
+                    </svg>
+                    <p class="text-sm font-bold">
+                      Oops! Something broke on our end. We're on it.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </custom-frame>
           </div>
         </section>
 
