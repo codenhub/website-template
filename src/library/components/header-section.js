@@ -63,7 +63,7 @@ class HeaderSection extends HTMLElement {
                 <path d="M1 8H15V15H1V8Z" />
               </svg>
               <p class="font-medium mr-2">Cards</p>
-              <span class="px-2 py-1 bg-surface rounded-full text-sm">5</span>
+              <span class="px-2 py-1 bg-surface rounded-full text-sm">9</span>
             </a>
             <a
               href="/library/components/contact/"
@@ -94,16 +94,6 @@ class HeaderSection extends HTMLElement {
               </svg>
               <p class="font-medium mr-2">FAQ</p>
               <span class="px-2 py-1 bg-surface rounded-full text-sm">3</span>
-            </a>
-            <a
-              href="/library/components/feature-cards/"
-              class="flex items-center gap-2 px-4 py-2 rounded-xl border border-border hover:border-border-hover transition-colors duration-400"
-            >
-              <svg viewBox="0 0 24 24" fill="none" class="size-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <rect width="18" height="18" x="3" y="3" rx="2" /><path d="M7 7h10" /><path d="M7 12h10" /><path d="M7 17h10" />
-              </svg>
-              <p class="font-medium mr-2">Feature Cards</p>
-              <span class="px-2 py-1 bg-surface rounded-full text-sm">6</span>
             </a>
             <a
               href="/library/components/footers/"
