@@ -19,7 +19,7 @@ class HeaderSection extends HTMLElement {
                 <path d="M29.895,12.52c-0.235-0.704-0.829-1.209-1.549-1.319l-7.309-1.095l-3.29-6.984C17.42,2.43,16.751,2,16,2  s-1.42,0.43-1.747,1.122l-3.242,6.959l-7.357,1.12c-0.72,0.11-1.313,0.615-1.549,1.319c-0.241,0.723-0.063,1.507,0.465,2.046  l5.321,5.446l-1.257,7.676c-0.125,0.767,0.185,1.518,0.811,1.959c0.602,0.427,1.376,0.469,2.02,0.114l6.489-3.624l6.581,3.624  c0.646,0.355,1.418,0.311,2.02-0.114c0.626-0.441,0.937-1.192,0.811-1.959l-1.259-7.686l5.323-5.436  C29.958,14.027,30.136,13.243,29.895,12.52z" id="XMLID_328_"/>
               </svg>
               <p class="font-medium mr-2">Featured</p>
-              <span class="px-2 py-1 bg-surface rounded-full text-sm">14</span>
+              <span class="px-2 py-1 bg-surface rounded-full text-sm">20</span>
             </a>
             <a
               href="/library/components/alerts/"
@@ -160,6 +160,66 @@ class HeaderSection extends HTMLElement {
               </svg>
               <p class="font-medium mr-2">Testimonials</p>
               <span class="px-2 py-1 bg-surface rounded-full text-sm">3</span>
+            </a>
+            <a
+              href="/library/components/features/"
+              class="flex items-center gap-2 px-4 py-2 rounded-xl border border-border hover:border-border-hover transition-colors duration-400"
+            >
+              <svg viewBox="0 0 24 24" fill="none" class="size-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+              </svg>
+              <p class="font-medium mr-2">Features</p>
+              <span class="px-2 py-1 bg-surface rounded-full text-sm">4</span>
+            </a>
+            <a
+              href="/library/components/stats/"
+              class="flex items-center gap-2 px-4 py-2 rounded-xl border border-border hover:border-border-hover transition-colors duration-400"
+            >
+              <svg viewBox="0 0 24 24" fill="none" class="size-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 3v18h18" /><path d="M18 17V9" /><path d="M13 17V5" /><path d="M8 17v-3" />
+              </svg>
+              <p class="font-medium mr-2">Stats</p>
+              <span class="px-2 py-1 bg-surface rounded-full text-sm">4</span>
+            </a>
+            <a
+              href="/library/components/team/"
+              class="flex items-center gap-2 px-4 py-2 rounded-xl border border-border hover:border-border-hover transition-colors duration-400"
+            >
+              <svg viewBox="0 0 24 24" fill="none" class="size-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M22 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" />
+              </svg>
+              <p class="font-medium mr-2">Team</p>
+              <span class="px-2 py-1 bg-surface rounded-full text-sm">3</span>
+            </a>
+            <a
+              href="/library/components/logo-cloud/"
+              class="flex items-center gap-2 px-4 py-2 rounded-xl border border-border hover:border-border-hover transition-colors duration-400"
+            >
+              <svg viewBox="0 0 24 24" fill="none" class="size-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="7" height="7" x="3" y="3" rx="1" /><rect width="7" height="7" x="14" y="3" rx="1" /><rect width="7" height="7" x="14" y="14" rx="1" /><rect width="7" height="7" x="3" y="14" rx="1" />
+              </svg>
+              <p class="font-medium mr-2">Logo Cloud</p>
+              <span class="px-2 py-1 bg-surface rounded-full text-sm">4</span>
+            </a>
+            <a
+              href="/library/components/blog/"
+              class="flex items-center gap-2 px-4 py-2 rounded-xl border border-border hover:border-border-hover transition-colors duration-400"
+            >
+              <svg viewBox="0 0 24 24" fill="none" class="size-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2" /><path d="M18 14h-8" /><path d="M15 18h-5" /><path d="M10 6h8v4h-8V6Z" />
+              </svg>
+              <p class="font-medium mr-2">Blog</p>
+              <span class="px-2 py-1 bg-surface rounded-full text-sm">3</span>
+            </a>
+            <a
+              href="/library/components/steps/"
+              class="flex items-center gap-2 px-4 py-2 rounded-xl border border-border hover:border-border-hover transition-colors duration-400"
+            >
+              <svg viewBox="0 0 24 24" fill="none" class="size-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 20h9" /><path d="M16.376 3.622a1 1 0 0 1 3.002 3.002L7.368 18.635a2 2 0 0 1-.855.506l-2.872.838a.5.5 0 0 1-.62-.62l.838-2.872a2 2 0 0 1 .506-.854z" /><path d="m15 5 3 3" />
+              </svg>
+              <p class="font-medium mr-2">Steps</p>
+              <span class="px-2 py-1 bg-surface rounded-full text-sm">4</span>
             </a>
           </div>
         </div>

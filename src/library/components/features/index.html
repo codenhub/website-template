@@ -1,0 +1,922 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Coden Agency" />
+    <meta name="copyright" content="Coden Agency" />
+    <meta
+      name="description"
+      content="A curated collection of reusable feature section components built with TailwindCSS. Browse grid, icon card, split, and bento feature layouts."
+    />
+
+    <title>Features – Components Library</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="../../../_ui/main.css" />
+    <script type="module" src="../../../_ui/components/index.js" defer></script>
+    <script type="module" src="../../../_ui/main.js" defer></script>
+    <script type="module" src="../header-section.js" defer></script>
+    <style>
+      .loader {
+        background-color: oklch(98.5% 0 0);
+        position: fixed;
+        inset: 0;
+        transform: skewX(10deg);
+        transition: all 800ms ease;
+        border: none;
+        z-index: 999;
+
+        &.left {
+          transform: skewX(10deg) translateX(-20%);
+          &.loaded {
+            transform: skewX(10deg) translateX(-120%);
+          }
+        }
+        &.right {
+          transform: skewX(10deg) translateX(20%);
+          &.loaded {
+            transform: skewX(10deg) translateX(120%);
+          }
+        }
+      }
+      #loader-indicator {
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        color: oklch(20.5% 0 0);
+        width: 4rem;
+        height: 4rem;
+        z-index: 999;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- LOADER -->
+    <div class="loader left"></div>
+    <div class="loader right"></div>
+    <div id="loader-indicator">
+      <svg stroke="currentColor" viewBox="0 0 24 24">
+        <style>
+          .spinner {
+            transform-origin: center;
+            animation: rotate 2s linear infinite;
+          }
+          .spinner circle {
+            stroke-linecap: round;
+            animation: grow 1.5s ease-in-out infinite;
+          }
+          @keyframes rotate {
+            to {
+              transform: rotate(360deg);
+            }
+          }
+          @keyframes grow {
+            0% {
+              stroke-dasharray: 0 150;
+              stroke-dashoffset: 0;
+            }
+            50% {
+              stroke-dasharray: 42 150;
+              stroke-dashoffset: -16;
+            }
+            95%,
+            100% {
+              stroke-dasharray: 42 150;
+              stroke-dashoffset: -59;
+            }
+          }
+        </style>
+        <g class="spinner">
+          <circle cx="12" cy="12" r="9.5" fill="none" stroke-width="2"></circle>
+        </g>
+      </svg>
+    </div>
+    <!-- END LOADER -->
+
+    <main id="smooth-wrapper">
+      <div id="smooth-content">
+        <custom-header></custom-header>
+
+        <header-section></header-section>
+
+        <div class="flex w-full justify-center px-4">
+          <h2 class="max-w-7xl w-full split-chars">Feature Sections</h2>
+        </div>
+
+        <!-- ===== 1. SIMPLE GRID ===== -->
+        <section class="sect">
+          <div class="sect-container">
+            <custom-frame title="Simple Grid">
+              <div class="w-full bg-background p-6 md:p-12">
+                <div class="max-w-7xl mx-auto">
+                  <div class="text-center max-w-2xl mx-auto mb-16">
+                    <span
+                      class="inline-flex items-center gap-2 px-3 py-1 text-xs font-semibold tracking-widest uppercase rounded-full bg-foreground text-text-secondary border border-border mb-6"
+                    >
+                      <svg
+                        class="size-3.5"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <polygon
+                          points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                        />
+                      </svg>
+                      Features
+                    </span>
+                    <h3>Everything you need to build modern apps</h3>
+                    <p class="mt-4 text-text-secondary md:text-base">
+                      Powerful tools and features designed to streamline your
+                      workflow and help you deliver exceptional products faster.
+                    </p>
+                  </div>
+
+                  <div
+                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+                  >
+                    <!-- Feature 1 -->
+                    <div class="flex flex-col gap-4">
+                      <div
+                        class="flex items-center justify-center size-12 rounded-xl bg-primary text-primary-contrast"
+                      >
+                        <svg
+                          class="size-6"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                        </svg>
+                      </div>
+                      <h4>Lightning Fast</h4>
+                      <p class="text-text-secondary">
+                        Optimized for performance. Every millisecond counts when
+                        building products your users love.
+                      </p>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div class="flex flex-col gap-4">
+                      <div
+                        class="flex items-center justify-center size-12 rounded-xl bg-primary text-primary-contrast"
+                      >
+                        <svg
+                          class="size-6"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <rect width="18" height="18" x="3" y="3" rx="2" />
+                          <path d="M3 9h18" />
+                          <path d="M9 21V9" />
+                        </svg>
+                      </div>
+                      <h4>Responsive Layout</h4>
+                      <p class="text-text-secondary">
+                        Every component is fully responsive out of the box.
+                        Mobile-first, desktop-ready.
+                      </p>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="flex flex-col gap-4">
+                      <div
+                        class="flex items-center justify-center size-12 rounded-xl bg-primary text-primary-contrast"
+                      >
+                        <svg
+                          class="size-6"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path
+                            d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"
+                          />
+                        </svg>
+                      </div>
+                      <h4>Secure by Default</h4>
+                      <p class="text-text-secondary">
+                        Built with security best practices. Your data stays safe
+                        with end-to-end encryption.
+                      </p>
+                    </div>
+
+                    <!-- Feature 4 -->
+                    <div class="flex flex-col gap-4">
+                      <div
+                        class="flex items-center justify-center size-12 rounded-xl bg-primary text-primary-contrast"
+                      >
+                        <svg
+                          class="size-6"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <circle cx="12" cy="12" r="10" />
+                          <path d="M12 6v6l4 2" />
+                        </svg>
+                      </div>
+                      <h4>Real-time Sync</h4>
+                      <p class="text-text-secondary">
+                        Changes are synced instantly across all devices. No
+                        delays, no conflicts.
+                      </p>
+                    </div>
+
+                    <!-- Feature 5 -->
+                    <div class="flex flex-col gap-4">
+                      <div
+                        class="flex items-center justify-center size-12 rounded-xl bg-primary text-primary-contrast"
+                      >
+                        <svg
+                          class="size-6"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                          <circle cx="9" cy="7" r="4" />
+                          <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                          <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                        </svg>
+                      </div>
+                      <h4>Team Collaboration</h4>
+                      <p class="text-text-secondary">
+                        Work together seamlessly with built-in collaboration
+                        tools and role-based access.
+                      </p>
+                    </div>
+
+                    <!-- Feature 6 -->
+                    <div class="flex flex-col gap-4">
+                      <div
+                        class="flex items-center justify-center size-12 rounded-xl bg-primary text-primary-contrast"
+                      >
+                        <svg
+                          class="size-6"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path
+                            d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"
+                          />
+                          <circle cx="12" cy="12" r="3" />
+                        </svg>
+                      </div>
+                      <h4>Easy Configuration</h4>
+                      <p class="text-text-secondary">
+                        Simple configuration that scales. Get started in minutes
+                        with sensible defaults.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </custom-frame>
+          </div>
+        </section>
+
+        <!-- ===== 2. ICON CARDS ===== -->
+        <section class="sect">
+          <div class="sect-container">
+            <custom-frame title="Icon Cards">
+              <div class="w-full bg-background p-6 md:p-12">
+                <div class="max-w-7xl mx-auto">
+                  <div class="text-center max-w-2xl mx-auto mb-16">
+                    <h3>Built for developers, loved by teams</h3>
+                    <p class="mt-4 text-text-secondary md:text-base">
+                      A complete toolkit designed to accelerate every stage of
+                      your development process.
+                    </p>
+                  </div>
+
+                  <div
+                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+                  >
+                    <!-- Card 1 -->
+                    <div
+                      class="group flex flex-col gap-4 p-8 rounded-2xl border border-border bg-background hover:border-border-hover hover:shadow-lg transition-all duration-400"
+                    >
+                      <div
+                        class="flex items-center justify-center size-14 rounded-2xl bg-foreground group-hover:bg-primary group-hover:text-primary-contrast transition-colors duration-400"
+                      >
+                        <svg
+                          class="size-7"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <polyline points="16 18 22 12 16 6" />
+                          <polyline points="8 6 2 12 8 18" />
+                        </svg>
+                      </div>
+                      <h4>Developer-First API</h4>
+                      <p class="text-text-secondary">
+                        Clean, well-documented APIs that follow RESTful
+                        conventions. Ship integrations in hours, not weeks.
+                      </p>
+                      <a
+                        href="#"
+                        class="flex items-center gap-2 text-sm font-semibold mt-auto group-hover:gap-3 transition-all duration-400"
+                      >
+                        Learn more
+                        <svg
+                          class="size-4"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path d="M5 12h14" />
+                          <path d="m12 5 7 7-7 7" />
+                        </svg>
+                      </a>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div
+                      class="group flex flex-col gap-4 p-8 rounded-2xl border border-border bg-background hover:border-border-hover hover:shadow-lg transition-all duration-400"
+                    >
+                      <div
+                        class="flex items-center justify-center size-14 rounded-2xl bg-foreground group-hover:bg-primary group-hover:text-primary-contrast transition-colors duration-400"
+                      >
+                        <svg
+                          class="size-7"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path
+                            d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"
+                          />
+                          <polyline points="3.3 7 12 12 20.7 7" />
+                          <line x1="12" x2="12" y1="22" y2="12" />
+                        </svg>
+                      </div>
+                      <h4>Modular Architecture</h4>
+                      <p class="text-text-secondary">
+                        Use only what you need. Tree-shakeable modules mean
+                        smaller bundles and faster load times.
+                      </p>
+                      <a
+                        href="#"
+                        class="flex items-center gap-2 text-sm font-semibold mt-auto group-hover:gap-3 transition-all duration-400"
+                      >
+                        Learn more
+                        <svg
+                          class="size-4"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path d="M5 12h14" />
+                          <path d="m12 5 7 7-7 7" />
+                        </svg>
+                      </a>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div
+                      class="group flex flex-col gap-4 p-8 rounded-2xl border border-border bg-background hover:border-border-hover hover:shadow-lg transition-all duration-400"
+                    >
+                      <div
+                        class="flex items-center justify-center size-14 rounded-2xl bg-foreground group-hover:bg-primary group-hover:text-primary-contrast transition-colors duration-400"
+                      >
+                        <svg
+                          class="size-7"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path d="M3 3v18h18" />
+                          <path d="m19 9-5 5-4-4-3 3" />
+                        </svg>
+                      </div>
+                      <h4>Advanced Analytics</h4>
+                      <p class="text-text-secondary">
+                        Track everything that matters with real-time dashboards
+                        and custom reports. Data-driven decisions made easy.
+                      </p>
+                      <a
+                        href="#"
+                        class="flex items-center gap-2 text-sm font-semibold mt-auto group-hover:gap-3 transition-all duration-400"
+                      >
+                        Learn more
+                        <svg
+                          class="size-4"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path d="M5 12h14" />
+                          <path d="m12 5 7 7-7 7" />
+                        </svg>
+                      </a>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div
+                      class="group flex flex-col gap-4 p-8 rounded-2xl border border-border bg-background hover:border-border-hover hover:shadow-lg transition-all duration-400"
+                    >
+                      <div
+                        class="flex items-center justify-center size-14 rounded-2xl bg-foreground group-hover:bg-primary group-hover:text-primary-contrast transition-colors duration-400"
+                      >
+                        <svg
+                          class="size-7"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <rect width="20" height="14" x="2" y="3" rx="2" />
+                          <line x1="8" x2="16" y1="21" y2="21" />
+                          <line x1="12" x2="12" y1="17" y2="21" />
+                        </svg>
+                      </div>
+                      <h4>Cross-Platform</h4>
+                      <p class="text-text-secondary">
+                        Build once, deploy everywhere. Native-like performance
+                        on web, iOS, Android, and desktop.
+                      </p>
+                      <a
+                        href="#"
+                        class="flex items-center gap-2 text-sm font-semibold mt-auto group-hover:gap-3 transition-all duration-400"
+                      >
+                        Learn more
+                        <svg
+                          class="size-4"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path d="M5 12h14" />
+                          <path d="m12 5 7 7-7 7" />
+                        </svg>
+                      </a>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div
+                      class="group flex flex-col gap-4 p-8 rounded-2xl border border-border bg-background hover:border-border-hover hover:shadow-lg transition-all duration-400"
+                    >
+                      <div
+                        class="flex items-center justify-center size-14 rounded-2xl bg-foreground group-hover:bg-primary group-hover:text-primary-contrast transition-colors duration-400"
+                      >
+                        <svg
+                          class="size-7"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path
+                            d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"
+                          />
+                        </svg>
+                      </div>
+                      <h4>Instant Deploys</h4>
+                      <p class="text-text-secondary">
+                        Push to deploy with zero-downtime. Automatic rollbacks
+                        keep your users always on the latest stable version.
+                      </p>
+                      <a
+                        href="#"
+                        class="flex items-center gap-2 text-sm font-semibold mt-auto group-hover:gap-3 transition-all duration-400"
+                      >
+                        Learn more
+                        <svg
+                          class="size-4"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path d="M5 12h14" />
+                          <path d="m12 5 7 7-7 7" />
+                        </svg>
+                      </a>
+                    </div>
+
+                    <!-- Card 6 -->
+                    <div
+                      class="group flex flex-col gap-4 p-8 rounded-2xl border border-border bg-background hover:border-border-hover hover:shadow-lg transition-all duration-400"
+                    >
+                      <div
+                        class="flex items-center justify-center size-14 rounded-2xl bg-foreground group-hover:bg-primary group-hover:text-primary-contrast transition-colors duration-400"
+                      >
+                        <svg
+                          class="size-7"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path d="M17 18a2 2 0 0 0-2-2H9a2 2 0 0 0-2 2" />
+                          <rect width="18" height="18" x="3" y="4" rx="2" />
+                          <circle cx="12" cy="10" r="2" />
+                          <line x1="8" x2="8" y1="2" y2="4" />
+                          <line x1="16" x2="16" y1="2" y2="4" />
+                        </svg>
+                      </div>
+                      <h4>24/7 Support</h4>
+                      <p class="text-text-secondary">
+                        Dedicated support team available around the clock.
+                        Average response time under 5 minutes.
+                      </p>
+                      <a
+                        href="#"
+                        class="flex items-center gap-2 text-sm font-semibold mt-auto group-hover:gap-3 transition-all duration-400"
+                      >
+                        Learn more
+                        <svg
+                          class="size-4"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path d="M5 12h14" />
+                          <path d="m12 5 7 7-7 7" />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </custom-frame>
+          </div>
+        </section>
+
+        <!-- ===== 3. SPLIT WITH IMAGE ===== -->
+        <section class="sect">
+          <div class="sect-container">
+            <custom-frame title="Split with Image">
+              <div class="w-full bg-background p-6 md:p-12">
+                <div class="max-w-7xl mx-auto">
+                  <div
+                    class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center"
+                  >
+                    <!-- Text content -->
+                    <div class="flex flex-col gap-8">
+                      <div>
+                        <span
+                          class="inline-flex items-center gap-2 px-3 py-1 text-xs font-semibold tracking-widest uppercase rounded-full bg-foreground text-text-secondary border border-border mb-6"
+                        >
+                          Why choose us
+                        </span>
+                        <h3>Ship faster with the tools you already love</h3>
+                        <p class="mt-4 text-text-secondary md:text-base">
+                          We integrate seamlessly into your existing stack. No
+                          context-switching, no learning curve—just results.
+                        </p>
+                      </div>
+
+                      <div class="flex flex-col gap-6">
+                        <!-- Item 1 -->
+                        <div class="flex gap-4">
+                          <div
+                            class="flex shrink-0 items-center justify-center size-10 rounded-lg bg-foreground border border-border"
+                          >
+                            <svg
+                              class="size-5"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            >
+                              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                              <path d="m9 11 3 3L22 4" />
+                            </svg>
+                          </div>
+                          <div>
+                            <h6 class="font-semibold">Zero-config setup</h6>
+                            <p class="text-text-secondary mt-1">
+                              Install with a single command and start building
+                              immediately. No tedious configuration required.
+                            </p>
+                          </div>
+                        </div>
+
+                        <!-- Item 2 -->
+                        <div class="flex gap-4">
+                          <div
+                            class="flex shrink-0 items-center justify-center size-10 rounded-lg bg-foreground border border-border"
+                          >
+                            <svg
+                              class="size-5"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            >
+                              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                              <path d="m9 11 3 3L22 4" />
+                            </svg>
+                          </div>
+                          <div>
+                            <h6 class="font-semibold">Type-safe by design</h6>
+                            <p class="text-text-secondary mt-1">
+                              Full TypeScript support with auto-generated types.
+                              Catch bugs at compile time, not in production.
+                            </p>
+                          </div>
+                        </div>
+
+                        <!-- Item 3 -->
+                        <div class="flex gap-4">
+                          <div
+                            class="flex shrink-0 items-center justify-center size-10 rounded-lg bg-foreground border border-border"
+                          >
+                            <svg
+                              class="size-5"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            >
+                              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                              <path d="m9 11 3 3L22 4" />
+                            </svg>
+                          </div>
+                          <div>
+                            <h6 class="font-semibold">Built-in testing</h6>
+                            <p class="text-text-secondary mt-1">
+                              Integrated test runner with snapshot testing,
+                              coverage reports, and CI/CD pipeline support.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Image -->
+                    <div class="relative">
+                      <div
+                        class="aspect-[4/3] rounded-2xl overflow-hidden border border-border shadow-xl"
+                      >
+                        <img
+                          src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=600&fit=crop"
+                          alt="Developer workspace"
+                          class="w-full h-full object-cover"
+                        />
+                      </div>
+                      <div
+                        class="absolute -bottom-4 -right-4 -z-10 w-full h-full rounded-2xl bg-foreground border border-border"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </custom-frame>
+          </div>
+        </section>
+
+        <!-- ===== 4. BENTO GRID ===== -->
+        <section class="sect">
+          <div class="sect-container">
+            <custom-frame title="Bento Grid">
+              <div class="w-full bg-background p-6 md:p-12">
+                <div class="max-w-7xl mx-auto">
+                  <div class="text-center max-w-2xl mx-auto mb-16">
+                    <h3>A better way to build</h3>
+                    <p class="mt-4 text-text-secondary md:text-base">
+                      From prototyping to production, our platform covers every
+                      step of the way.
+                    </p>
+                  </div>
+
+                  <div
+                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
+                  >
+                    <!-- Bento 1 - Large -->
+                    <div
+                      class="md:col-span-2 relative overflow-hidden rounded-2xl border border-border bg-foreground p-8 md:p-10"
+                    >
+                      <div class="relative z-10 max-w-md">
+                        <div
+                          class="flex items-center justify-center size-12 rounded-xl bg-primary text-primary-contrast mb-4"
+                        >
+                          <svg
+                            class="size-6"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path d="M3 3v18h18" />
+                            <path d="m19 9-5 5-4-4-3 3" />
+                          </svg>
+                        </div>
+                        <h4>Powerful Analytics Dashboard</h4>
+                        <p class="text-text-secondary mt-2">
+                          Visualize your data with interactive charts, real-time
+                          metrics, and customizable dashboards that give your
+                          team the insights they need.
+                        </p>
+                      </div>
+                      <div
+                        class="absolute top-6 right-6 w-64 h-44 md:w-80 md:h-56 rounded-xl overflow-hidden border border-border shadow-lg hidden md:block"
+                      >
+                        <img
+                          src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop"
+                          alt="Analytics dashboard"
+                          class="w-full h-full object-cover"
+                        />
+                      </div>
+                    </div>
+
+                    <!-- Bento 2 -->
+                    <div
+                      class="relative overflow-hidden rounded-2xl border border-border bg-foreground p-8"
+                    >
+                      <div
+                        class="flex items-center justify-center size-12 rounded-xl bg-primary text-primary-contrast mb-4"
+                      >
+                        <svg
+                          class="size-6"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path
+                            d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"
+                          />
+                          <path d="m9 12 2 2 4-4" />
+                        </svg>
+                      </div>
+                      <h4>Enterprise Security</h4>
+                      <p class="text-text-secondary mt-2">
+                        SOC 2, GDPR, and HIPAA compliant. Role-based access
+                        control and audit logs included.
+                      </p>
+                    </div>
+
+                    <!-- Bento 3 -->
+                    <div
+                      class="relative overflow-hidden rounded-2xl border border-border bg-foreground p-8"
+                    >
+                      <div
+                        class="flex items-center justify-center size-12 rounded-xl bg-primary text-primary-contrast mb-4"
+                      >
+                        <svg
+                          class="size-6"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <circle cx="12" cy="12" r="3" />
+                          <path
+                            d="M12 1v6m0 6v6m8.66-14.5-5.2 3m-6.92 4-5.2 3M22.66 17.5l-5.2-3m-6.92-4-5.2-3"
+                          />
+                        </svg>
+                      </div>
+                      <h4>Workflow Automations</h4>
+                      <p class="text-text-secondary mt-2">
+                        Create custom workflows with our visual builder. No code
+                        required—but fully extensible with code.
+                      </p>
+                    </div>
+
+                    <!-- Bento 4 - Large -->
+                    <div
+                      class="md:col-span-2 relative overflow-hidden rounded-2xl border border-border bg-primary text-primary-contrast p-8 md:p-10 selection-contrast"
+                    >
+                      <div class="relative z-10 max-w-lg">
+                        <div
+                          class="flex items-center justify-center size-12 rounded-xl bg-primary-contrast text-primary mb-4"
+                        >
+                          <svg
+                            class="size-6"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path
+                              d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"
+                            />
+                            <circle cx="9" cy="7" r="4" />
+                            <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                          </svg>
+                        </div>
+                        <h4>Collaborate in Real-time</h4>
+                        <p class="opacity-80 mt-2">
+                          Invite your team, assign roles, leave comments, and
+                          track changes—all in a single shared workspace that
+                          updates live.
+                        </p>
+                        <div class="flex -space-x-2 mt-6">
+                          <img
+                            src="https://i.pravatar.cc/80?img=11"
+                            alt="Team member"
+                            class="size-10 rounded-full border-2 border-primary object-cover"
+                          />
+                          <img
+                            src="https://i.pravatar.cc/80?img=12"
+                            alt="Team member"
+                            class="size-10 rounded-full border-2 border-primary object-cover"
+                          />
+                          <img
+                            src="https://i.pravatar.cc/80?img=16"
+                            alt="Team member"
+                            class="size-10 rounded-full border-2 border-primary object-cover"
+                          />
+                          <img
+                            src="https://i.pravatar.cc/80?img=20"
+                            alt="Team member"
+                            class="size-10 rounded-full border-2 border-primary object-cover"
+                          />
+                          <div
+                            class="size-10 rounded-full border-2 border-primary bg-primary-contrast text-primary flex items-center justify-center text-xs font-bold"
+                          >
+                            +8
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </custom-frame>
+          </div>
+        </section>
+
+        <custom-cta></custom-cta>
+
+        <custom-footer></custom-footer>
+      </div>
+    </main>
+  </body>
+</html>
