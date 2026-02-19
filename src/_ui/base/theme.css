@@ -13,6 +13,23 @@
   --color-text: var(--color-neutral-950);
   --color-text-secondary: var(--color-neutral-700);
 
+  --color-success: var(--color-emerald-500);
+  --color-success-contrast: var(--color-emerald-50);
+  --color-success-light: var(--color-emerald-100);
+  --color-success-dark: var(--color-emerald-800);
+  --color-warning: var(--color-amber-500);
+  --color-warning-contrast: var(--color-amber-50);
+  --color-warning-light: var(--color-amber-100);
+  --color-warning-dark: var(--color-amber-800);
+  --color-error: var(--color-rose-500);
+  --color-error-contrast: var(--color-rose-50);
+  --color-error-light: var(--color-rose-100);
+  --color-error-dark: var(--color-rose-800);
+  --color-info: var(--color-sky-500);
+  --color-info-contrast: var(--color-sky-50);
+  --color-info-light: var(--color-sky-100);
+  --color-info-dark: var(--color-sky-800);
+
   --breakpoint-xs: 30rem;
   --breakpoint-2xl: 90rem;
 }
