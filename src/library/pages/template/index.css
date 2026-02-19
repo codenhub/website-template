@@ -1,5 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 @import "tailwindcss";
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 
 @theme {
   --color-primary: var(--color-neutral-950);
@@ -11,25 +11,14 @@
   --color-border: var(--color-neutral-300);
   --color-border-hover: var(--color-neutral-600);
   --color-background: var(--color-neutral-50);
-  --color-foreground: var(--color-neutral-200);
+  --color-foreground: var(--color-neutral-100);
+  --color-surface: var(--color-neutral-200);
   --color-text: var(--color-neutral-950);
   --color-text-secondary: var(--color-neutral-700);
 }
 
-@font-face {
-  font-family: "Inter";
-  src: url("/assets/fonts/Inter-Variable.woff2") format("woff2");
-  font-weight: 100 900;
-  font-style: normal;
-  font-display: swap;
-}
-
-@utility font-title {
-  font-family: "Bebas Neue", "Inter", "Segoe UI", system-ui, sans-serif;
-}
-
 @utility font-default {
-  font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+  font-family: "Inter", system-ui, sans-serif;
 }
 
 @layer base {
@@ -68,15 +57,15 @@
   }
 
   h1 {
-    @apply text-7xl md:text-8xl font-title tracking-tight;
+    @apply text-5xl md:text-7xl font-bold tracking-tight;
   }
 
   h2 {
-    @apply text-5xl md:text-6xl font-title tracking-tight;
+    @apply text-3xl md:text-5xl font-bold tracking-tight;
   }
 
   h3 {
-    @apply text-3xl font-semibold tracking-tight;
+    @apply text-2xl font-semibold tracking-tight;
   }
 
   h4 {
@@ -96,7 +85,9 @@
   a {
     @apply text-sm font-normal tracking-wider;
   }
+}
 
+@layer components {
   .sect {
     @apply flex flex-col gap-8 px-4 py-16 items-center justify-center;
   }
