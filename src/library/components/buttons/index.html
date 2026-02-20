@@ -470,6 +470,97 @@
 
         <section class="sect">
           <div class="sect-container">
+            <custom-frame title="Button Group">
+              <div
+                class="flex flex-col gap-8 items-center justify-center w-full p-12 bg-background"
+              >
+                <div class="inline-flex rounded-md shadow-sm" role="group">
+                  <button
+                    type="button"
+                    class="px-4 py-2 text-sm font-medium text-text bg-background border border-border rounded-l-md hover:bg-foreground hover:text-primary transition-colors duration-200"
+                  >
+                    Day
+                  </button>
+                  <button
+                    type="button"
+                    class="px-4 py-2 text-sm font-medium text-primary bg-foreground border-t border-b border-border hover:bg-foreground hover:text-primary transition-colors duration-200"
+                  >
+                    Week
+                  </button>
+                  <button
+                    type="button"
+                    class="px-4 py-2 text-sm font-medium text-text bg-background border border-border rounded-r-md hover:bg-foreground hover:text-primary transition-colors duration-200"
+                  >
+                    Month
+                  </button>
+                </div>
+
+                <div class="inline-flex rounded-md shadow-sm" role="group">
+                  <button
+                    type="button"
+                    class="inline-flex items-center justify-center size-10 text-text bg-background border border-border rounded-l-md hover:bg-foreground hover:text-primary transition-colors duration-200"
+                    aria-label="Align left"
+                  >
+                    <svg
+                      class="size-4"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <line x1="21" x2="3" y1="6" y2="6" />
+                      <line x1="15" x2="3" y1="12" y2="12" />
+                      <line x1="17" x2="3" y1="18" y2="18" />
+                    </svg>
+                  </button>
+                  <button
+                    type="button"
+                    class="inline-flex items-center justify-center size-10 text-text bg-background border-t border-b border-r border-border hover:bg-foreground hover:text-primary transition-colors duration-200"
+                    aria-label="Align center"
+                  >
+                    <svg
+                      class="size-4"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <line x1="21" x2="3" y1="6" y2="6" />
+                      <line x1="19" x2="5" y1="12" y2="12" />
+                      <line x1="17" x2="7" y1="18" y2="18" />
+                    </svg>
+                  </button>
+                  <button
+                    type="button"
+                    class="inline-flex items-center justify-center size-10 text-text bg-background border-t border-b border-r border-border rounded-r-md hover:bg-foreground hover:text-primary transition-colors duration-200"
+                    aria-label="Align right"
+                  >
+                    <svg
+                      class="size-4"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <line x1="21" x2="3" y1="6" y2="6" />
+                      <line x1="21" x2="9" y1="12" y2="12" />
+                      <line x1="21" x2="7" y1="18" y2="18" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </custom-frame>
+          </div>
+        </section>
+
+        <section class="sect">
+          <div class="sect-container">
             <custom-frame title="Loading">
               <div
                 class="flex gap-8 items-center justify-center w-full flex-wrap p-12 bg-background"
