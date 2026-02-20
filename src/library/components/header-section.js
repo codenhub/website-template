@@ -42,6 +42,16 @@ class HeaderSection extends HTMLElement {
               <span class="px-2 py-1 bg-surface rounded-full text-sm">6</span>
             </a>
             <a
+              href="/library/components/blog/"
+              class="flex items-center gap-2 px-4 py-2 rounded-xl border border-border hover:border-border-hover transition-colors duration-400"
+            >
+              <svg viewBox="0 0 24 24" fill="none" class="size-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2" /><path d="M18 14h-8" /><path d="M15 18h-5" /><path d="M10 6h8v4h-8V6Z" />
+              </svg>
+              <p class="font-medium mr-2">Blog</p>
+              <span class="px-2 py-1 bg-surface rounded-full text-sm">3</span>
+            </a>
+            <a
               href="/library/components/buttons/"
               class="flex items-center gap-2 px-4 py-2 rounded-xl border border-border hover:border-border-hover transition-colors duration-400"
             >
@@ -94,6 +104,16 @@ class HeaderSection extends HTMLElement {
               </svg>
               <p class="font-medium mr-2">FAQ</p>
               <span class="px-2 py-1 bg-surface rounded-full text-sm">5</span>
+            </a>
+            <a
+              href="/library/components/features/"
+              class="flex items-center gap-2 px-4 py-2 rounded-xl border border-border hover:border-border-hover transition-colors duration-400"
+            >
+              <svg viewBox="0 0 24 24" fill="none" class="size-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+              </svg>
+              <p class="font-medium mr-2">Features</p>
+              <span class="px-2 py-1 bg-surface rounded-full text-sm">4</span>
             </a>
             <a
               href="/library/components/footers/"
@@ -152,26 +172,6 @@ class HeaderSection extends HTMLElement {
               <span class="px-2 py-1 bg-surface rounded-full text-sm">5</span>
             </a>
             <a
-              href="/library/components/testimonials/"
-              class="flex items-center gap-2 px-4 py-2 rounded-xl border border-border hover:border-border-hover transition-colors duration-400"
-            >
-              <svg viewBox="0 0 24 24" fill="none" class="size-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
-              </svg>
-              <p class="font-medium mr-2">Testimonials</p>
-              <span class="px-2 py-1 bg-surface rounded-full text-sm">3</span>
-            </a>
-            <a
-              href="/library/components/features/"
-              class="flex items-center gap-2 px-4 py-2 rounded-xl border border-border hover:border-border-hover transition-colors duration-400"
-            >
-              <svg viewBox="0 0 24 24" fill="none" class="size-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-              </svg>
-              <p class="font-medium mr-2">Features</p>
-              <span class="px-2 py-1 bg-surface rounded-full text-sm">4</span>
-            </a>
-            <a
               href="/library/components/stats/"
               class="flex items-center gap-2 px-4 py-2 rounded-xl border border-border hover:border-border-hover transition-colors duration-400"
             >
@@ -179,6 +179,16 @@ class HeaderSection extends HTMLElement {
                 <path d="M3 3v18h18" /><path d="M18 17V9" /><path d="M13 17V5" /><path d="M8 17v-3" />
               </svg>
               <p class="font-medium mr-2">Stats</p>
+              <span class="px-2 py-1 bg-surface rounded-full text-sm">4</span>
+            </a>
+            <a
+              href="/library/components/steps/"
+              class="flex items-center gap-2 px-4 py-2 rounded-xl border border-border hover:border-border-hover transition-colors duration-400"
+            >
+              <svg viewBox="0 0 24 24" fill="none" class="size-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 20h9" /><path d="M16.376 3.622a1 1 0 0 1 3.002 3.002L7.368 18.635a2 2 0 0 1-.855.506l-2.872.838a.5.5 0 0 1-.62-.62l.838-2.872a2 2 0 0 1 .506-.854z" /><path d="m15 5 3 3" />
+              </svg>
+              <p class="font-medium mr-2">Steps</p>
               <span class="px-2 py-1 bg-surface rounded-full text-sm">4</span>
             </a>
             <a
@@ -192,34 +202,14 @@ class HeaderSection extends HTMLElement {
               <span class="px-2 py-1 bg-surface rounded-full text-sm">3</span>
             </a>
             <a
-              href="/library/components/logo-cloud/"
+              href="/library/components/testimonials/"
               class="flex items-center gap-2 px-4 py-2 rounded-xl border border-border hover:border-border-hover transition-colors duration-400"
             >
               <svg viewBox="0 0 24 24" fill="none" class="size-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <rect width="7" height="7" x="3" y="3" rx="1" /><rect width="7" height="7" x="14" y="3" rx="1" /><rect width="7" height="7" x="14" y="14" rx="1" /><rect width="7" height="7" x="3" y="14" rx="1" />
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
               </svg>
-              <p class="font-medium mr-2">Logo Cloud</p>
-              <span class="px-2 py-1 bg-surface rounded-full text-sm">4</span>
-            </a>
-            <a
-              href="/library/components/blog/"
-              class="flex items-center gap-2 px-4 py-2 rounded-xl border border-border hover:border-border-hover transition-colors duration-400"
-            >
-              <svg viewBox="0 0 24 24" fill="none" class="size-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2" /><path d="M18 14h-8" /><path d="M15 18h-5" /><path d="M10 6h8v4h-8V6Z" />
-              </svg>
-              <p class="font-medium mr-2">Blog</p>
+              <p class="font-medium mr-2">Testimonials</p>
               <span class="px-2 py-1 bg-surface rounded-full text-sm">3</span>
-            </a>
-            <a
-              href="/library/components/steps/"
-              class="flex items-center gap-2 px-4 py-2 rounded-xl border border-border hover:border-border-hover transition-colors duration-400"
-            >
-              <svg viewBox="0 0 24 24" fill="none" class="size-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M12 20h9" /><path d="M16.376 3.622a1 1 0 0 1 3.002 3.002L7.368 18.635a2 2 0 0 1-.855.506l-2.872.838a.5.5 0 0 1-.62-.62l.838-2.872a2 2 0 0 1 .506-.854z" /><path d="m15 5 3 3" />
-              </svg>
-              <p class="font-medium mr-2">Steps</p>
-              <span class="px-2 py-1 bg-surface rounded-full text-sm">4</span>
             </a>
           </div>
         </div>
