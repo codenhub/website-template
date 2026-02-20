@@ -6,14 +6,11 @@ export default function deferAllCssPlugin() {
       order: "post",
       handler(html) {
         const cssLinks = [];
-        const transformedHtml = html.replace(
-          /<link rel="stylesheet"([^>]*)>/g,
-          (match, attrs) => {
-            cssLinks.push(`<link rel="stylesheet"${attrs}>`);
+        const transformedHtml = html.replace(/<link rel="stylesheet"([^>]*)>/g, (match, attrs) => {
+          cssLinks.push(`<link rel="stylesheet"${attrs}>`);
 
-            return `<link rel="preload" as="style"${attrs} onload="this.onload=null;this.rel='stylesheet'">`;
-          },
-        );
+          return `<link rel="preload" as="style"${attrs} onload="this.onload=null;this.rel='stylesheet'">`;
+        });
 
         if (cssLinks.length === 0) {
           return transformedHtml;
