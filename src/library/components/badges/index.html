@@ -315,6 +315,127 @@
           </div>
         </section>
 
+        <section class="sect">
+          <div class="sect-container">
+            <custom-frame title="With Icon">
+              <div
+                class="flex gap-4 items-center justify-center w-full flex-wrap p-12 bg-background"
+              >
+                <span
+                  class="inline-flex items-center gap-1.5 px-3 py-1 text-sm font-medium rounded-md border border-border text-text"
+                >
+                  <svg
+                    class="size-4 text-text-secondary"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"
+                    ></path>
+                  </svg>
+                  Purchased
+                </span>
+                <span
+                  class="inline-flex items-center gap-1.5 px-3 py-1 text-sm font-medium rounded-md border border-border text-text"
+                >
+                  <svg
+                    class="size-4 text-text-secondary"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                  Pending
+                </span>
+                <span
+                  class="inline-flex items-center gap-1.5 px-3 py-1 text-sm font-medium rounded-md border border-border text-text"
+                >
+                  <svg
+                    class="size-4 text-text-secondary"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                  </svg>
+                  Update Available
+                </span>
+              </div>
+            </custom-frame>
+          </div>
+        </section>
+
+        <section class="sect">
+          <div class="sect-container">
+            <custom-frame title="Dismissible">
+              <div
+                class="flex gap-4 items-center justify-center w-full flex-wrap p-12 bg-background"
+              >
+                <span
+                  class="inline-flex items-center gap-1.5 px-3 py-1 text-sm font-medium rounded-md bg-foreground text-text border border-border"
+                >
+                  Filter: Active
+                  <button
+                    type="button"
+                    class="inline-flex items-center justify-center size-4 rounded-full text-text-secondary hover:bg-neutral-200 hover:text-text focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+                  >
+                    <svg
+                      class="size-3"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <line x1="18" y1="6" x2="6" y2="18"></line>
+                      <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                    <span class="sr-only">Remove filter</span>
+                  </button>
+                </span>
+                <span
+                  class="inline-flex items-center gap-1.5 px-3 py-1 text-sm font-medium rounded-md bg-foreground text-text border border-border"
+                >
+                  Category: UI
+                  <button
+                    type="button"
+                    class="inline-flex items-center justify-center size-4 rounded-full text-text-secondary hover:bg-neutral-200 hover:text-text focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+                  >
+                    <svg
+                      class="size-3"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <line x1="18" y1="6" x2="6" y2="18"></line>
+                      <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                    <span class="sr-only">Remove category</span>
+                  </button>
+                </span>
+              </div>
+            </custom-frame>
+          </div>
+        </section>
+
         <custom-cta></custom-cta>
 
         <custom-footer></custom-footer>

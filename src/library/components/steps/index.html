@@ -630,6 +630,223 @@
           </div>
         </section>
 
+        <section class="sect">
+          <div class="sect-container">
+            <custom-frame title="Interactive progress steps">
+              <div class="w-full bg-background p-4 md:p-6">
+                <div class="max-w-3xl mx-auto">
+                  <div class="text-center mb-16">
+                    <h3>Project Onboarding</h3>
+                    <p class="mt-4 text-text-secondary md:text-base">
+                      Complete these active steps to fully configure your
+                      project.
+                    </p>
+                  </div>
+
+                  <div class="flex flex-col">
+                    <!-- Step 1: Completed -->
+                    <div class="group relative flex gap-6 pb-12">
+                      <div
+                        class="absolute left-[1.1875rem] top-10 bottom-0 w-px bg-success/30"
+                      ></div>
+                      <div
+                        class="relative shrink-0 flex items-center justify-center size-10 rounded-full bg-success text-success-contrast z-10"
+                      >
+                        <svg
+                          class="size-5"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                      </div>
+                      <div
+                        class="flex-1 pt-1 opacity-70 transition-opacity group-hover:opacity-100"
+                      >
+                        <h5 class="line-through decoration-success/50">
+                          Create Organization
+                        </h5>
+                        <p
+                          class="mt-2 text-text-secondary line-through decoration-text-secondary/30"
+                        >
+                          Set up your workspace and invite early team members to
+                          collaborate.
+                        </p>
+                      </div>
+                    </div>
+
+                    <!-- Step 2: Active -->
+                    <div class="group relative flex gap-6 pb-12">
+                      <div
+                        class="absolute left-[1.1875rem] top-10 bottom-0 w-px bg-border group-hover:bg-primary transition-colors duration-400"
+                      ></div>
+                      <div
+                        class="relative shrink-0 flex items-center justify-center size-10 rounded-full bg-primary text-primary-contrast z-10"
+                      >
+                        <span class="font-title text-sm">2</span>
+                      </div>
+                      <div class="flex-1 bg-foreground p-6 rounded-2xl">
+                        <h5 class="text-primary">Connect Repository</h5>
+                        <p class="mt-2 text-text-secondary">
+                          Link your GitHub, GitLab, or Bitbucket account to
+                          import your codebase.
+                        </p>
+                        <button class="primary-btn mt-4 py-2 px-4 text-sm">
+                          Connect GitHub
+                        </button>
+                      </div>
+                    </div>
+
+                    <!-- Step 3: Upcoming -->
+                    <div class="group relative flex gap-6 pb-12">
+                      <div
+                        class="absolute left-[1.1875rem] top-10 bottom-0 w-px bg-border"
+                      ></div>
+                      <div
+                        class="relative shrink-0 flex items-center justify-center size-10 rounded-full bg-foreground text-text-secondary z-10"
+                      >
+                        <span class="font-title text-sm">3</span>
+                      </div>
+                      <div
+                        class="flex-1 pt-1 opacity-50 transition-opacity group-hover:opacity-80 duration-400"
+                      >
+                        <h5>Configure Build Settings</h5>
+                        <p class="mt-2 text-text-secondary">
+                          Define environment variables, build commands, and
+                          output directories.
+                        </p>
+                      </div>
+                    </div>
+
+                    <!-- Step 4: Upcoming (Last) -->
+                    <div class="group relative flex gap-6">
+                      <div
+                        class="relative shrink-0 flex items-center justify-center size-10 rounded-full bg-foreground text-text-secondary z-10"
+                      >
+                        <span class="font-title text-sm">4</span>
+                      </div>
+                      <div
+                        class="flex-1 pt-1 opacity-50 transition-opacity group-hover:opacity-80 duration-400"
+                      >
+                        <h5>Deploy Application</h5>
+                        <p class="mt-2 text-text-secondary">
+                          Trigger your first production build and take your
+                          project live to the world.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </custom-frame>
+          </div>
+        </section>
+
+        <section class="sect">
+          <div class="sect-container">
+            <custom-frame title="Primary background">
+              <div
+                class="w-full bg-primary text-primary-contrast py-20 px-4 md:px-6 flex flex-col items-center justify-center"
+              >
+                <div class="w-full max-w-7xl flex flex-col gap-16">
+                  <div class="text-center max-w-2xl mx-auto">
+                    <h3 class="text-3xl md:text-5xl font-bold mb-6">
+                      Seamless Integration
+                    </h3>
+                    <p class="text-lg">
+                      Start building instantly. Our four-step process takes you
+                      from idea to deployment in record time with zero friction.
+                    </p>
+                  </div>
+
+                  <div class="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
+                    <!-- Connector Line -->
+                    <div
+                      class="hidden md:block absolute top-10 left-[12.5%] right-[12.5%] h-0.5 bg-gradient-to-r from-primary-hover/30 via-accent/30 to-primary-hover/30"
+                    ></div>
+
+                    <!-- Step 1 -->
+                    <div
+                      class="group relative flex flex-col items-center text-center gap-6"
+                    >
+                      <div
+                        class="relative z-10 flex items-center justify-center size-20 rounded-3xl bg-primary-hover group-hover:-translate-y-2 transition duration-400"
+                      >
+                        <span class="text-3xl font-black">1</span>
+                      </div>
+                      <div>
+                        <h4 class="text-xl font-bold mb-3">Connect Source</h4>
+                        <p class="text-sm leading-relaxed">
+                          Authorize access to your GitHub or GitLab repository
+                          with a single click.
+                        </p>
+                      </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div
+                      class="group relative flex flex-col items-center text-center gap-6"
+                    >
+                      <div
+                        class="relative z-10 flex items-center justify-center size-20 rounded-3xl bg-primary-hover group-hover:-translate-y-2 transition duration-400"
+                      >
+                        <span class="text-3xl font-black">2</span>
+                      </div>
+                      <div>
+                        <h4 class="text-xl font-bold mb-3">Configure Build</h4>
+                        <p class="text-sm leading-relaxed">
+                          Our system automatically detects your framework and
+                          sets up build commands.
+                        </p>
+                      </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div
+                      class="group relative flex flex-col items-center text-center gap-6"
+                    >
+                      <div
+                        class="relative z-10 flex items-center justify-center size-20 rounded-3xl bg-primary-hover group-hover:-translate-y-2 transition duration-400"
+                      >
+                        <span class="text-3xl font-black">3</span>
+                      </div>
+                      <div>
+                        <h4 class="text-xl font-bold mb-3">Add Domain</h4>
+                        <p class="text-sm leading-relaxed">
+                          Map your custom domain instantly with our automated
+                          DNS and free SSL configuration.
+                        </p>
+                      </div>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div
+                      class="group relative flex flex-col items-center text-center gap-6"
+                    >
+                      <div
+                        class="relative z-10 flex items-center justify-center size-20 rounded-3xl bg-primary-hover group-hover:-translate-y-2 transition duration-400"
+                      >
+                        <span class="text-3xl font-black">4</span>
+                      </div>
+                      <div>
+                        <h4 class="text-xl font-bold mb-3">Push & Deploy</h4>
+                        <p class="text-sm leading-relaxed">
+                          Push to main to trigger global deployment. Watch your
+                          changes go live worldwide.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </custom-frame>
+          </div>
+        </section>
+
         <custom-cta></custom-cta>
 
         <custom-footer></custom-footer>

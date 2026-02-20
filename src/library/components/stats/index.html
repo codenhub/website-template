@@ -369,59 +369,236 @@
 
         <section class="sect">
           <div class="sect-container">
-            <custom-frame title="Dark Banner">
-              <div
-                class="w-full bg-primary text-primary-contrast p-8 md:p-16 selection-contrast"
-              >
+            <custom-frame title="With side image">
+              <div class="w-full bg-background p-4 md:p-6">
                 <div class="max-w-7xl mx-auto">
-                  <div class="text-center max-w-2xl mx-auto mb-12">
-                    <h3>Results that speak for themselves</h3>
-                    <p class="mt-4 opacity-70 md:text-base">
-                      Join hundreds of companies already seeing measurable
-                      improvements in velocity and quality.
+                  <div
+                    class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center"
+                  >
+                    <div
+                      class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden"
+                    >
+                      <img
+                        src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80"
+                        alt="Dashboard metrics"
+                        class="absolute inset-0 w-full h-full object-cover"
+                      />
+                      <div
+                        class="absolute inset-0 bg-gradient-to-tr from-primary/30 to-transparent mix-blend-multiply"
+                      ></div>
+                    </div>
+
+                    <div class="flex flex-col gap-8">
+                      <div>
+                        <span
+                          class="inline-flex items-center gap-2 px-3 py-1 text-xs font-semibold tracking-widest uppercase rounded-full bg-primary/10 text-primary mb-6"
+                          >Our Impact</span
+                        >
+                        <h3>Measurable results across the globe</h3>
+                        <p class="mt-4 text-text-secondary md:text-base">
+                          Our platform empowers organizations to scale
+                          efficiently, offering robust infrastructure and
+                          insightful analytics to drive business forward.
+                        </p>
+                      </div>
+
+                      <div class="grid grid-cols-2 gap-x-6 gap-y-8">
+                        <div
+                          class="flex flex-col gap-1 border-l-2 border-primary pl-4"
+                        >
+                          <p
+                            class="text-3xl font-title tracking-tight text-text"
+                          >
+                            200+
+                          </p>
+                          <p class="text-sm font-semibold">
+                            Enterprise clients
+                          </p>
+                          <p class="text-xs text-text-secondary">
+                            Using our premium plans
+                          </p>
+                        </div>
+                        <div
+                          class="flex flex-col gap-1 border-l-2 border-primary pl-4"
+                        >
+                          <p
+                            class="text-3xl font-title tracking-tight text-text"
+                          >
+                            99.99%
+                          </p>
+                          <p class="text-sm font-semibold">Guaranteed uptime</p>
+                          <p class="text-xs text-text-secondary">
+                            Zero planned downtime
+                          </p>
+                        </div>
+                        <div
+                          class="flex flex-col gap-1 border-l-2 border-primary pl-4"
+                        >
+                          <p
+                            class="text-3xl font-title tracking-tight text-text"
+                          >
+                            15M
+                          </p>
+                          <p class="text-sm font-semibold">
+                            Daily transactions
+                          </p>
+                          <p class="text-xs text-text-secondary">
+                            Processed flawlessly
+                          </p>
+                        </div>
+                        <div
+                          class="flex flex-col gap-1 border-l-2 border-primary pl-4"
+                        >
+                          <p
+                            class="text-3xl font-title tracking-tight text-text"
+                          >
+                            24/7
+                          </p>
+                          <p class="text-sm font-semibold">Global support</p>
+                          <p class="text-xs text-text-secondary">
+                            With &lt;15m response time
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </custom-frame>
+          </div>
+        </section>
+
+        <section class="sect">
+          <div class="sect-container">
+            <custom-frame title="Primary background grid">
+              <div
+                class="w-full bg-primary text-primary-contrast py-20 px-4 md:px-6 overflow-hidden flex items-center justify-center"
+              >
+                <div
+                  class="relative w-full max-w-7xl z-10 flex flex-col gap-16"
+                >
+                  <div class="text-center max-w-3xl mx-auto">
+                    <h3 class="text-3xl md:text-5xl font-bold text-white mb-6">
+                      Metrics that matter
+                    </h3>
+                    <p class="text-white/70 text-lg">
+                      We've built a robust platform that scales with your
+                      business, delivering unparalleled performance and
+                      reliability around the clock.
                     </p>
                   </div>
 
-                  <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-4">
+                  <div
+                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 xl:gap-8"
+                  >
                     <div
-                      class="flex flex-col items-center gap-2 p-6 rounded-2xl bg-primary-contrast/5"
+                      class="group flex flex-col items-center text-center p-8 rounded-3xl bg-primary-contrast/5 hover:bg-primary-contrast/10 transition duration-400 hover:-translate-y-2"
                     >
-                      <p class="text-4xl md:text-5xl font-title tracking-tight">
-                        3x
+                      <div
+                        class="flex items-center justify-center size-14 mx-auto rounded-2xl bg-primary-contrast/10 text-primary-contrast mb-6"
+                      >
+                        <svg
+                          class="size-6"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                          <circle cx="9" cy="7" r="4" />
+                          <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                          <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                        </svg>
+                      </div>
+                      <p
+                        class="text-4xl md:text-5xl font-black tracking-tight mb-2"
+                      >
+                        2.5M+
                       </p>
-                      <p class="text-sm opacity-70 text-center tracking-wider">
-                        Faster development
-                      </p>
+                      <p class="font-medium">Active Users</p>
                     </div>
+
                     <div
-                      class="flex flex-col items-center gap-2 p-6 rounded-2xl bg-primary-contrast/5"
+                      class="group flex flex-col items-center text-center p-8 rounded-3xl bg-primary-contrast/5 hover:bg-primary-contrast/10 transition duration-400 hover:-translate-y-2"
                     >
-                      <p class="text-4xl md:text-5xl font-title tracking-tight">
-                        60%
+                      <div
+                        class="flex items-center justify-center size-14 mx-auto rounded-2xl bg-primary-contrast/10 text-primary-contrast mb-6"
+                      >
+                        <svg
+                          class="size-6"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <rect width="20" height="14" x="2" y="5" rx="2" />
+                          <line x1="2" x2="22" y1="10" y2="10" />
+                        </svg>
+                      </div>
+                      <p
+                        class="text-4xl md:text-5xl font-black tracking-tight mb-2"
+                      >
+                        $500M
                       </p>
-                      <p class="text-sm opacity-70 text-center tracking-wider">
-                        Less boilerplate
-                      </p>
+                      <p class="font-medium">Volume Processed</p>
                     </div>
+
                     <div
-                      class="flex flex-col items-center gap-2 p-6 rounded-2xl bg-primary-contrast/5"
+                      class="group flex flex-col items-center text-center p-8 rounded-3xl bg-primary-contrast/5 hover:bg-primary-contrast/10 transition duration-400 hover:-translate-y-2"
                     >
-                      <p class="text-4xl md:text-5xl font-title tracking-tight">
-                        45%
+                      <div
+                        class="flex items-center justify-center size-14 mx-auto rounded-2xl bg-primary-contrast/10 text-primary-contrast mb-6"
+                      >
+                        <svg
+                          class="size-6"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+                        </svg>
+                      </div>
+                      <p
+                        class="text-4xl md:text-5xl font-black tracking-tight mb-2"
+                      >
+                        99.99%
                       </p>
-                      <p class="text-sm opacity-70 text-center tracking-wider">
-                        Cost reduction
-                      </p>
+                      <p class="font-medium">Guaranteed Uptime</p>
                     </div>
+
                     <div
-                      class="flex flex-col items-center gap-2 p-6 rounded-2xl bg-primary-contrast/5"
+                      class="group flex flex-col items-center text-center p-8 rounded-3xl bg-primary-contrast/5 hover:bg-primary-contrast/10 transition duration-300 hover:-translate-y-2 overflow-hidden"
                     >
-                      <p class="text-4xl md:text-5xl font-title tracking-tight">
-                        24/7
+                      <div
+                        class="flex items-center justify-center size-14 mx-auto rounded-2xl bg-primary-contrast/10 text-primary-contrast mb-6"
+                      >
+                        <svg
+                          class="size-6"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <polygon
+                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                          />
+                        </svg>
+                      </div>
+                      <p
+                        class="text-4xl md:text-5xl font-black tracking-tight mb-2"
+                      >
+                        4.9/5
                       </p>
-                      <p class="text-sm opacity-70 text-center tracking-wider">
-                        Expert support
-                      </p>
+                      <p class="font-medium">Customer Rating</p>
                     </div>
                   </div>
                 </div>
