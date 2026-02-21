@@ -68,18 +68,10 @@ class Header extends HTMLElement {
       if (direction === "up") {
         header.classList.remove("-translate-y-1/1");
         if (currentScrollY > 0) {
-          header.classList.add(
-            "border-border",
-            "bg-background/80",
-            "backdrop-blur-sm",
-          );
+          header.classList.add("border-border", "bg-background/80", "backdrop-blur-sm");
           header.classList.remove("border-transparent");
         } else {
-          header.classList.remove(
-            "border-border",
-            "bg-background/80",
-            "backdrop-blur-sm",
-          );
+          header.classList.remove("border-border", "bg-background/80", "backdrop-blur-sm");
           header.classList.add("border-transparent");
         }
       }

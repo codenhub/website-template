@@ -1,0 +1,635 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Coden Agency" />
+    <meta name="copyright" content="Coden Agency" />
+    <meta
+      name="description"
+      content="A curated collection of reusable blog and content card components built with TailwindCSS. Browse grid, list, featured, and minimal blog layouts."
+    />
+
+    <title>Blog – Components Library</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="../../../_ui/main.css" />
+    <script type="module" src="../../../_ui/components/index.js" defer></script>
+    <script type="module" src="../../../_ui/main.js" defer></script>
+    <script type="module" src="../header-section.js" defer></script>
+    <style>
+      .loader {
+        background-color: oklch(98.5% 0 0);
+        position: fixed;
+        inset: 0;
+        transform: skewX(10deg);
+        transition: all 800ms ease;
+        border: none;
+        z-index: 999;
+
+        &.left {
+          transform: skewX(10deg) translateX(-20%);
+          &.loaded {
+            transform: skewX(10deg) translateX(-120%);
+          }
+        }
+        &.right {
+          transform: skewX(10deg) translateX(20%);
+          &.loaded {
+            transform: skewX(10deg) translateX(120%);
+          }
+        }
+      }
+      #loader-indicator {
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        color: oklch(20.5% 0 0);
+        width: 4rem;
+        height: 4rem;
+        z-index: 999;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- LOADER -->
+    <div class="loader left"></div>
+    <div class="loader right"></div>
+    <div id="loader-indicator">
+      <svg stroke="currentColor" viewBox="0 0 24 24">
+        <style>
+          .spinner {
+            transform-origin: center;
+            animation: rotate 2s linear infinite;
+          }
+          .spinner circle {
+            stroke-linecap: round;
+            animation: grow 1.5s ease-in-out infinite;
+          }
+          @keyframes rotate {
+            to {
+              transform: rotate(360deg);
+            }
+          }
+          @keyframes grow {
+            0% {
+              stroke-dasharray: 0 150;
+              stroke-dashoffset: 0;
+            }
+            50% {
+              stroke-dasharray: 42 150;
+              stroke-dashoffset: -16;
+            }
+            95%,
+            100% {
+              stroke-dasharray: 42 150;
+              stroke-dashoffset: -59;
+            }
+          }
+        </style>
+        <g class="spinner">
+          <circle cx="12" cy="12" r="9.5" fill="none" stroke-width="2"></circle>
+        </g>
+      </svg>
+    </div>
+    <!-- END LOADER -->
+
+    <main id="smooth-wrapper">
+      <div id="smooth-content">
+        <custom-header></custom-header>
+
+        <header-section></header-section>
+
+        <div class="flex w-full justify-center px-4">
+          <h2 class="max-w-7xl w-full split-chars">Blog Sections</h2>
+        </div>
+
+        <section class="sect">
+          <div class="sect-container">
+            <custom-frame title="Three column grid">
+              <div class="w-full bg-background p-6 md:p-12">
+                <div class="max-w-7xl mx-auto">
+                  <div
+                    class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-12"
+                  >
+                    <div>
+                      <span
+                        class="inline-flex items-center gap-2 px-3 py-1 text-xs font-semibold tracking-widest uppercase rounded-full bg-foreground text-text-secondary mb-6"
+                      >
+                        Blog
+                      </span>
+                      <h3>Latest articles</h3>
+                      <p class="mt-3 text-text-secondary md:text-base max-w-xl">
+                        Insights, tutorials, and updates from our team.
+                      </p>
+                    </div>
+                    <a href="#" class="flex items-center gap-2 text-sm font-semibold shrink-0">
+                      View all posts
+                      <svg
+                        class="size-4"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path d="M5 12h14" />
+                        <path d="m12 5 7 7-7 7" />
+                      </svg>
+                    </a>
+                  </div>
+
+                  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Post 1 -->
+                    <a href="#" class="group flex flex-col gap-4">
+                      <div class="aspect-[16/10] rounded-2xl overflow-hidden bg-foreground">
+                        <img
+                          src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&h=375&fit=crop"
+                          alt="Blog post cover"
+                          class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        />
+                      </div>
+                      <div class="flex items-center gap-3">
+                        <span
+                          class="px-3 py-1 text-xs font-medium rounded-full bg-primary text-primary-contrast"
+                        >
+                          Engineering
+                        </span>
+                        <span class="text-xs text-text-secondary">Feb 15, 2026</span>
+                      </div>
+                      <h4
+                        class="group-hover:text-text-secondary transition-colors duration-400 -mt-1"
+                      >
+                        Building scalable APIs with edge functions
+                      </h4>
+                      <p class="text-text-secondary">
+                        Learn how to deploy serverless functions at the edge for faster response
+                        times and better user experiences.
+                      </p>
+                      <div class="flex items-center gap-3 mt-auto">
+                        <img
+                          src="https://i.pravatar.cc/80?img=11"
+                          alt="Author"
+                          class="size-8 rounded-full object-cover"
+                        />
+                        <p class="text-xs font-medium">Alex Morgan</p>
+                      </div>
+                    </a>
+
+                    <!-- Post 2 -->
+                    <a href="#" class="group flex flex-col gap-4">
+                      <div class="aspect-[16/10] rounded-2xl overflow-hidden bg-foreground">
+                        <img
+                          src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=600&h=375&fit=crop"
+                          alt="Blog post cover"
+                          class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        />
+                      </div>
+                      <div class="flex items-center gap-3">
+                        <span
+                          class="px-3 py-1 text-xs font-medium rounded-full bg-primary text-primary-contrast"
+                        >
+                          Design
+                        </span>
+                        <span class="text-xs text-text-secondary">Feb 10, 2026</span>
+                      </div>
+                      <h4
+                        class="group-hover:text-text-secondary transition-colors duration-400 -mt-1"
+                      >
+                        Design systems that scale with your team
+                      </h4>
+                      <p class="text-text-secondary">
+                        Practical tips for building and maintaining a design system that grows
+                        alongside your product.
+                      </p>
+                      <div class="flex items-center gap-3 mt-auto">
+                        <img
+                          src="https://i.pravatar.cc/80?img=12"
+                          alt="Author"
+                          class="size-8 rounded-full object-cover"
+                        />
+                        <p class="text-xs font-medium">Sarah Chen</p>
+                      </div>
+                    </a>
+
+                    <!-- Post 3 -->
+                    <a href="#" class="group flex flex-col gap-4">
+                      <div class="aspect-[16/10] rounded-2xl overflow-hidden bg-foreground">
+                        <img
+                          src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=375&fit=crop"
+                          alt="Blog post cover"
+                          class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        />
+                      </div>
+                      <div class="flex items-center gap-3">
+                        <span
+                          class="px-3 py-1 text-xs font-medium rounded-full bg-primary text-primary-contrast"
+                        >
+                          Product
+                        </span>
+                        <span class="text-xs text-text-secondary">Feb 5, 2026</span>
+                      </div>
+                      <h4
+                        class="group-hover:text-text-secondary transition-colors duration-400 -mt-1"
+                      >
+                        Metrics that matter for SaaS growth
+                      </h4>
+                      <p class="text-text-secondary">
+                        The key performance indicators every SaaS founder should track—and the
+                        vanity metrics to ignore.
+                      </p>
+                      <div class="flex items-center gap-3 mt-auto">
+                        <img
+                          src="https://i.pravatar.cc/80?img=16"
+                          alt="Author"
+                          class="size-8 rounded-full object-cover"
+                        />
+                        <p class="text-xs font-medium">Marcus Rivera</p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </custom-frame>
+          </div>
+        </section>
+
+        <section class="sect">
+          <div class="sect-container">
+            <custom-frame title="Featured + side list">
+              <div class="w-full bg-background p-6 md:p-12">
+                <div class="max-w-7xl mx-auto">
+                  <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <!-- Featured post -->
+                    <a href="#" class="group flex flex-col gap-5">
+                      <div class="aspect-[16/10] rounded-2xl overflow-hidden bg-foreground">
+                        <img
+                          src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&h=500&fit=crop"
+                          alt="Featured post cover"
+                          class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        />
+                      </div>
+                      <div class="flex items-center gap-3">
+                        <span
+                          class="px-3 py-1 text-xs font-medium rounded-full bg-primary text-primary-contrast"
+                        >
+                          Featured
+                        </span>
+                        <span class="text-xs text-text-secondary">Feb 18, 2026</span>
+                      </div>
+                      <h3 class="group-hover:text-text-secondary transition-colors duration-400">
+                        The future of full-stack development
+                      </h3>
+                      <p class="text-text-secondary md:text-base">
+                        From server components to edge computing, we explore the technologies
+                        shaping the next decade of web development and how to prepare your team.
+                      </p>
+                      <div class="flex items-center gap-3 mt-auto">
+                        <img
+                          src="https://i.pravatar.cc/80?img=20"
+                          alt="Author"
+                          class="size-10 rounded-full object-cover"
+                        />
+                        <div>
+                          <p class="text-sm font-medium">Maya Patel</p>
+                          <p class="text-xs text-text-secondary">8 min read</p>
+                        </div>
+                      </div>
+                    </a>
+
+                    <!-- Side list -->
+                    <div class="flex flex-col divide-y divide-border">
+                      <a href="#" class="group flex gap-5 py-5 first:pt-0">
+                        <div class="shrink-0 w-28 h-20 rounded-xl overflow-hidden bg-foreground">
+                          <img
+                            src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=200&h=140&fit=crop"
+                            alt="Post thumbnail"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                          />
+                        </div>
+                        <div class="flex flex-col gap-1.5 min-w-0">
+                          <span class="text-xs text-text-secondary">Feb 15, 2026</span>
+                          <h6
+                            class="font-semibold group-hover:text-text-secondary transition-colors duration-400 line-clamp-2"
+                          >
+                            Building scalable APIs with edge functions
+                          </h6>
+                          <p class="text-xs text-text-secondary">5 min read</p>
+                        </div>
+                      </a>
+
+                      <a href="#" class="group flex gap-5 py-5">
+                        <div class="shrink-0 w-28 h-20 rounded-xl overflow-hidden bg-foreground">
+                          <img
+                            src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=200&h=140&fit=crop"
+                            alt="Post thumbnail"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                          />
+                        </div>
+                        <div class="flex flex-col gap-1.5 min-w-0">
+                          <span class="text-xs text-text-secondary">Feb 10, 2026</span>
+                          <h6
+                            class="font-semibold group-hover:text-text-secondary transition-colors duration-400 line-clamp-2"
+                          >
+                            Design systems that scale with your team
+                          </h6>
+                          <p class="text-xs text-text-secondary">4 min read</p>
+                        </div>
+                      </a>
+
+                      <a href="#" class="group flex gap-5 py-5">
+                        <div class="shrink-0 w-28 h-20 rounded-xl overflow-hidden bg-foreground">
+                          <img
+                            src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=200&h=140&fit=crop"
+                            alt="Post thumbnail"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                          />
+                        </div>
+                        <div class="flex flex-col gap-1.5 min-w-0">
+                          <span class="text-xs text-text-secondary">Feb 5, 2026</span>
+                          <h6
+                            class="font-semibold group-hover:text-text-secondary transition-colors duration-400 line-clamp-2"
+                          >
+                            Metrics that matter for SaaS growth
+                          </h6>
+                          <p class="text-xs text-text-secondary">6 min read</p>
+                        </div>
+                      </a>
+
+                      <a href="#" class="group flex gap-5 py-5 last:pb-0">
+                        <div class="shrink-0 w-28 h-20 rounded-xl overflow-hidden bg-foreground">
+                          <img
+                            src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=200&h=140&fit=crop"
+                            alt="Post thumbnail"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                          />
+                        </div>
+                        <div class="flex flex-col gap-1.5 min-w-0">
+                          <span class="text-xs text-text-secondary">Jan 28, 2026</span>
+                          <h6
+                            class="font-semibold group-hover:text-text-secondary transition-colors duration-400 line-clamp-2"
+                          >
+                            Migrating from REST to GraphQL: a practical guide
+                          </h6>
+                          <p class="text-xs text-text-secondary">7 min read</p>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </custom-frame>
+          </div>
+        </section>
+
+        <!-- ===== 3. MINIMAL LIST ===== -->
+        <section class="sect">
+          <div class="sect-container">
+            <custom-frame title="Minimal List">
+              <div class="w-full bg-background p-6 md:p-12">
+                <div class="max-w-3xl mx-auto">
+                  <div class="text-center mb-12">
+                    <h3>From the blog</h3>
+                    <p class="mt-3 text-text-secondary md:text-base">
+                      Thoughts on building products, growing teams, and everything in between.
+                    </p>
+                  </div>
+
+                  <div class="flex flex-col divide-y divide-border">
+                    <a
+                      href="#"
+                      class="group flex flex-col md:flex-row md:items-center gap-2 md:gap-8 py-6 first:pt-0"
+                    >
+                      <span class="text-xs text-text-secondary shrink-0 md:w-28">Feb 18, 2026</span>
+                      <h5
+                        class="flex-1 group-hover:text-text-secondary transition-colors duration-400"
+                      >
+                        The future of full-stack development
+                      </h5>
+                      <svg
+                        class="size-5 text-text-secondary shrink-0 opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all duration-400 hidden md:block"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path d="M5 12h14" />
+                        <path d="m12 5 7 7-7 7" />
+                      </svg>
+                    </a>
+
+                    <a
+                      href="#"
+                      class="group flex flex-col md:flex-row md:items-center gap-2 md:gap-8 py-6"
+                    >
+                      <span class="text-xs text-text-secondary shrink-0 md:w-28">Feb 15, 2026</span>
+                      <h5
+                        class="flex-1 group-hover:text-text-secondary transition-colors duration-400"
+                      >
+                        Building scalable APIs with edge functions
+                      </h5>
+                      <svg
+                        class="size-5 text-text-secondary shrink-0 opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all duration-400 hidden md:block"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path d="M5 12h14" />
+                        <path d="m12 5 7 7-7 7" />
+                      </svg>
+                    </a>
+
+                    <a
+                      href="#"
+                      class="group flex flex-col md:flex-row md:items-center gap-2 md:gap-8 py-6"
+                    >
+                      <span class="text-xs text-text-secondary shrink-0 md:w-28">Feb 10, 2026</span>
+                      <h5
+                        class="flex-1 group-hover:text-text-secondary transition-colors duration-400"
+                      >
+                        Design systems that scale with your team
+                      </h5>
+                      <svg
+                        class="size-5 text-text-secondary shrink-0 opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all duration-400 hidden md:block"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path d="M5 12h14" />
+                        <path d="m12 5 7 7-7 7" />
+                      </svg>
+                    </a>
+
+                    <a
+                      href="#"
+                      class="group flex flex-col md:flex-row md:items-center gap-2 md:gap-8 py-6"
+                    >
+                      <span class="text-xs text-text-secondary shrink-0 md:w-28">Feb 5, 2026</span>
+                      <h5
+                        class="flex-1 group-hover:text-text-secondary transition-colors duration-400"
+                      >
+                        Metrics that matter for SaaS growth
+                      </h5>
+                      <svg
+                        class="size-5 text-text-secondary shrink-0 opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all duration-400 hidden md:block"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path d="M5 12h14" />
+                        <path d="m12 5 7 7-7 7" />
+                      </svg>
+                    </a>
+
+                    <a
+                      href="#"
+                      class="group flex flex-col md:flex-row md:items-center gap-2 md:gap-8 py-6 last:pb-0"
+                    >
+                      <span class="text-xs text-text-secondary shrink-0 md:w-28">Jan 28, 2026</span>
+                      <h5
+                        class="flex-1 group-hover:text-text-secondary transition-colors duration-400"
+                      >
+                        Migrating from REST to GraphQL
+                      </h5>
+                      <svg
+                        class="size-5 text-text-secondary shrink-0 opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all duration-400 hidden md:block"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path d="M5 12h14" />
+                        <path d="m12 5 7 7-7 7" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </custom-frame>
+          </div>
+        </section>
+
+        <section class="sect">
+          <div class="sect-container">
+            <custom-frame title="Alternating layout">
+              <div class="w-full bg-background p-4 md:p-6">
+                <div class="max-w-7xl mx-auto flex flex-col gap-12 md:gap-24">
+                  <!-- Post 1 (Image Right) -->
+                  <div class="flex flex-col md:flex-row items-center gap-8 md:gap-16 group">
+                    <div class="flex-1 order-2 md:order-1 flex flex-col gap-4">
+                      <div class="flex items-center gap-3">
+                        <span
+                          class="px-3 py-1 text-xs font-bold uppercase tracking-wider rounded-full bg-surface"
+                        >
+                          Case Study
+                        </span>
+                        <span class="text-xs text-text-secondary">Mar 10, 2026</span>
+                      </div>
+                      <h3 class="group-hover:text-primary transition-colors duration-400">
+                        Restructuring our database for 10x performance
+                      </h3>
+                      <p class="text-text-secondary md:text-lg leading-relaxed mt-2">
+                        Discover the engineering decisions and migration strategies that allowed us
+                        to handle millions of concurrent queries without breaking a sweat.
+                      </p>
+                      <a
+                        href="#"
+                        class="inline-flex items-center gap-2 mt-4 font-semibold text-primary hover:text-primary-hover hover:gap-4 transition-all duration-400"
+                      >
+                        Read full story
+                        <svg
+                          class="size-4"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                      </a>
+                    </div>
+                    <div
+                      class="flex-1 order-1 md:order-2 w-full aspect-[4/3] rounded-3xl overflow-hidden"
+                    >
+                      <img
+                        src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80"
+                        alt="Database analytics"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                      />
+                    </div>
+                  </div>
+
+                  <!-- Post 2 (Image Left) -->
+                  <div class="flex flex-col md:flex-row items-center gap-8 md:gap-16 group">
+                    <div class="flex-1 order-1 w-full aspect-[4/3] rounded-3xl overflow-hidden">
+                      <img
+                        src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&q=80"
+                        alt="Team meeting"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                      />
+                    </div>
+                    <div class="flex-1 order-2 flex flex-col gap-4">
+                      <div class="flex items-center gap-3">
+                        <span
+                          class="px-3 py-1 text-xs font-bold uppercase tracking-wider rounded-full bg-surface"
+                        >
+                          Culture
+                        </span>
+                        <span class="text-xs text-text-secondary">Feb 28, 2026</span>
+                      </div>
+                      <h3 class="group-hover:text-primary transition-colors duration-400">
+                        Why we shifted to asynchronous communication
+                      </h3>
+                      <p class="text-text-secondary md:text-lg leading-relaxed mt-2">
+                        How cancelling 80% of our recurring meetings led to higher productivity,
+                        better documentation, and happier team members globally.
+                      </p>
+                      <a
+                        href="#"
+                        class="inline-flex items-center gap-2 mt-4 font-semibold text-primary hover:text-primary-hover hover:gap-4 transition-all duration-400"
+                      >
+                        Read full story
+                        <svg
+                          class="size-4"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </custom-frame>
+          </div>
+        </section>
+
+        <custom-cta></custom-cta>
+
+        <custom-footer></custom-footer>
+      </div>
+    </main>
+  </body>
+</html>

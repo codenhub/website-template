@@ -106,8 +106,7 @@ function highlightTag(tagStr) {
   let rest = tagStr.slice(tagOpen[0].length);
 
   // Parse attributes iteratively
-  const ATTR_REGEX =
-    /([\w@:.\-]+)(?:(\s*=\s*)("[^"]*"|'[^']*'|[^\s>]*))?|(\/?>)/g;
+  const ATTR_REGEX = /([\w@:.\-]+)(?:(\s*=\s*)("[^"]*"|'[^']*'|[^\s>]*))?|(\/?>)/g;
   let attrMatch;
 
   while ((attrMatch = ATTR_REGEX.exec(rest)) !== null) {
@@ -146,9 +145,7 @@ function highlightTag(tagStr) {
 function collectParentStyles() {
   const parts = [];
 
-  for (const node of document.querySelectorAll(
-    'link[rel="stylesheet"], style',
-  )) {
+  for (const node of document.querySelectorAll('link[rel="stylesheet"], style')) {
     if (node.tagName === "LINK") {
       parts.push(`<link rel="stylesheet" href="${node.href}" />`);
     } else {
@@ -313,8 +310,7 @@ class Frame extends HTMLElement {
     if (!iframe) return;
 
     try {
-      const iframeDoc =
-        iframe.contentDocument || iframe.contentWindow?.document;
+      const iframeDoc = iframe.contentDocument || iframe.contentWindow?.document;
       if (!iframeDoc) return;
 
       iframe.style.height = "0";
@@ -333,8 +329,7 @@ class Frame extends HTMLElement {
 
     // Use ResizeObserver on the iframe body when possible
     try {
-      const iframeDoc =
-        iframe.contentDocument || iframe.contentWindow?.document;
+      const iframeDoc = iframe.contentDocument || iframe.contentWindow?.document;
       if (iframeDoc) {
         this.#resizeObserver = new ResizeObserver(() => {
           this.#syncIframeHeight();
@@ -381,10 +376,7 @@ class Frame extends HTMLElement {
         this.#q(".frame-preview")?.classList.toggle("hidden", !isPreview);
         this.#q(".frame-code")?.classList.toggle("hidden", isPreview);
 
-        this.#q(".frame-viewport-group")?.classList.toggle(
-          "hidden",
-          !isPreview,
-        );
+        this.#q(".frame-viewport-group")?.classList.toggle("hidden", !isPreview);
         this.#q(".frame-width-label")?.classList.toggle("hidden", !isPreview);
 
         const copyBtn = this.#q(".frame-copy");
@@ -448,10 +440,7 @@ class Frame extends HTMLElement {
 
     const onMove = (e) => {
       const maxW = container.offsetWidth;
-      const newW = Math.max(
-        MIN_WIDTH,
-        Math.min(startW + e.clientX - startX, maxW),
-      );
+      const newW = Math.max(MIN_WIDTH, Math.min(startW + e.clientX - startX, maxW));
       sizer.style.width = `${newW}px`;
       label.textContent = newW >= maxW - 2 ? "100%" : `${newW}px`;
       this.#syncIframeHeight();

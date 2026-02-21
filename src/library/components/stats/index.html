@@ -1,0 +1,472 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Coden Agency" />
+    <meta name="copyright" content="Coden Agency" />
+    <meta
+      name="description"
+      content="A curated collection of reusable stats and metrics components built with TailwindCSS. Browse simple, card, and icon-based statistics layouts."
+    />
+
+    <title>Stats – Components Library</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="../../../_ui/main.css" />
+    <script type="module" src="../../../_ui/components/index.js" defer></script>
+    <script type="module" src="../../../_ui/main.js" defer></script>
+    <script type="module" src="../header-section.js" defer></script>
+    <style>
+      .loader {
+        background-color: oklch(98.5% 0 0);
+        position: fixed;
+        inset: 0;
+        transform: skewX(10deg);
+        transition: all 800ms ease;
+        border: none;
+        z-index: 999;
+
+        &.left {
+          transform: skewX(10deg) translateX(-20%);
+          &.loaded {
+            transform: skewX(10deg) translateX(-120%);
+          }
+        }
+        &.right {
+          transform: skewX(10deg) translateX(20%);
+          &.loaded {
+            transform: skewX(10deg) translateX(120%);
+          }
+        }
+      }
+      #loader-indicator {
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        color: oklch(20.5% 0 0);
+        width: 4rem;
+        height: 4rem;
+        z-index: 999;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- LOADER -->
+    <div class="loader left"></div>
+    <div class="loader right"></div>
+    <div id="loader-indicator">
+      <svg stroke="currentColor" viewBox="0 0 24 24">
+        <style>
+          .spinner {
+            transform-origin: center;
+            animation: rotate 2s linear infinite;
+          }
+          .spinner circle {
+            stroke-linecap: round;
+            animation: grow 1.5s ease-in-out infinite;
+          }
+          @keyframes rotate {
+            to {
+              transform: rotate(360deg);
+            }
+          }
+          @keyframes grow {
+            0% {
+              stroke-dasharray: 0 150;
+              stroke-dashoffset: 0;
+            }
+            50% {
+              stroke-dasharray: 42 150;
+              stroke-dashoffset: -16;
+            }
+            95%,
+            100% {
+              stroke-dasharray: 42 150;
+              stroke-dashoffset: -59;
+            }
+          }
+        </style>
+        <g class="spinner">
+          <circle cx="12" cy="12" r="9.5" fill="none" stroke-width="2"></circle>
+        </g>
+      </svg>
+    </div>
+    <!-- END LOADER -->
+
+    <main id="smooth-wrapper">
+      <div id="smooth-content">
+        <custom-header></custom-header>
+
+        <header-section></header-section>
+
+        <div class="flex w-full justify-center px-4">
+          <h2 class="max-w-7xl w-full split-chars">Stats Sections</h2>
+        </div>
+
+        <section class="sect">
+          <div class="sect-container">
+            <custom-frame title="Simple row">
+              <div class="w-full bg-background p-6 md:p-12">
+                <div class="max-w-7xl mx-auto">
+                  <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 text-center">
+                    <div class="flex flex-col gap-2">
+                      <p class="text-4xl md:text-5xl font-title tracking-tight">10K+</p>
+                      <p class="text-sm text-text-secondary tracking-widest uppercase">
+                        Active users
+                      </p>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                      <p class="text-4xl md:text-5xl font-title tracking-tight">99.9%</p>
+                      <p class="text-sm text-text-secondary tracking-widest uppercase">Uptime</p>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                      <p class="text-4xl md:text-5xl font-title tracking-tight">2M+</p>
+                      <p class="text-sm text-text-secondary tracking-widest uppercase">
+                        API requests/day
+                      </p>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                      <p class="text-4xl md:text-5xl font-title tracking-tight">150+</p>
+                      <p class="text-sm text-text-secondary tracking-widest uppercase">Countries</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </custom-frame>
+          </div>
+        </section>
+
+        <section class="sect">
+          <div class="sect-container">
+            <custom-frame title="With dividers">
+              <div class="w-full bg-background p-6 md:p-12">
+                <div class="max-w-7xl mx-auto">
+                  <div class="text-center max-w-2xl mx-auto mb-12">
+                    <h3>Trusted by thousands of teams</h3>
+                    <p class="mt-4 text-text-secondary md:text-base">
+                      Numbers that reflect our commitment to excellence and the trust of our growing
+                      community.
+                    </p>
+                  </div>
+
+                  <div class="flex flex-wrap justify-center items-center gap-8 md:gap-0">
+                    <div class="flex flex-col items-center gap-2 px-8 md:px-12">
+                      <p class="text-5xl md:text-6xl font-title tracking-tight">8K+</p>
+                      <p class="text-sm text-text-secondary tracking-wider">Projects shipped</p>
+                    </div>
+                    <div class="hidden md:block w-px h-16 bg-border" aria-hidden="true"></div>
+                    <div class="flex flex-col items-center gap-2 px-8 md:px-12">
+                      <p class="text-5xl md:text-6xl font-title tracking-tight">50M+</p>
+                      <p class="text-sm text-text-secondary tracking-wider">End users reached</p>
+                    </div>
+                    <div class="hidden md:block w-px h-16 bg-border" aria-hidden="true"></div>
+                    <div class="flex flex-col items-center gap-2 px-8 md:px-12">
+                      <p class="text-5xl md:text-6xl font-title tracking-tight">4.9</p>
+                      <p class="text-sm text-text-secondary tracking-wider">Average rating</p>
+                    </div>
+                    <div class="hidden md:block w-px h-16 bg-border" aria-hidden="true"></div>
+                    <div class="flex flex-col items-center gap-2 px-8 md:px-12">
+                      <p class="text-5xl md:text-6xl font-title tracking-tight">&lt;1min</p>
+                      <p class="text-sm text-text-secondary tracking-wider">Setup time</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </custom-frame>
+          </div>
+        </section>
+
+        <section class="sect">
+          <div class="sect-container">
+            <custom-frame title="Cards">
+              <div class="w-full bg-background p-6 md:p-12">
+                <div class="max-w-7xl mx-auto">
+                  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Card 1 -->
+                    <div class="flex flex-col gap-3 p-6 rounded-2xl bg-foreground">
+                      <div class="flex items-center justify-center size-10 rounded-lg bg-surface">
+                        <svg
+                          class="size-5"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path d="m22 12-4-4v3H3v2h15v3z" />
+                        </svg>
+                      </div>
+                      <p class="text-3xl md:text-4xl font-title tracking-tight">+340%</p>
+                      <div>
+                        <p class="text-sm font-semibold">Revenue growth</p>
+                        <p class="text-xs text-text-secondary mt-0.5">Year over year increase</p>
+                      </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="flex flex-col gap-3 p-6 rounded-2xl bg-foreground">
+                      <div class="flex items-center justify-center size-10 rounded-lg bg-surface">
+                        <svg
+                          class="size-5"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                          <circle cx="9" cy="7" r="4" />
+                          <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                          <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                        </svg>
+                      </div>
+                      <p class="text-3xl md:text-4xl font-title tracking-tight">12,500</p>
+                      <div>
+                        <p class="text-sm font-semibold">Active users</p>
+                        <p class="text-xs text-text-secondary mt-0.5">Across 80+ countries</p>
+                      </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="flex flex-col gap-3 p-6 rounded-2xl bg-foreground">
+                      <div class="flex items-center justify-center size-10 rounded-lg bg-surface">
+                        <svg
+                          class="size-5"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <circle cx="12" cy="12" r="10" />
+                          <path d="M12 6v6l4 2" />
+                        </svg>
+                      </div>
+                      <p class="text-3xl md:text-4xl font-title tracking-tight">99.99%</p>
+                      <div>
+                        <p class="text-sm font-semibold">Uptime SLA</p>
+                        <p class="text-xs text-text-secondary mt-0.5">Guaranteed availability</p>
+                      </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="flex flex-col gap-3 p-6 rounded-2xl bg-foreground">
+                      <div class="flex items-center justify-center size-10 rounded-lg bg-surface">
+                        <svg
+                          class="size-5"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path
+                            d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"
+                          />
+                        </svg>
+                      </div>
+                      <p class="text-3xl md:text-4xl font-title tracking-tight">4.9/5</p>
+                      <div>
+                        <p class="text-sm font-semibold">Customer rating</p>
+                        <p class="text-xs text-text-secondary mt-0.5">Based on 2,000+ reviews</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </custom-frame>
+          </div>
+        </section>
+
+        <section class="sect">
+          <div class="sect-container">
+            <custom-frame title="With side image">
+              <div class="w-full bg-background p-4 md:p-6">
+                <div class="max-w-7xl mx-auto">
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden">
+                      <img
+                        src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80"
+                        alt="Dashboard metrics"
+                        class="absolute inset-0 w-full h-full object-cover"
+                      />
+                      <div
+                        class="absolute inset-0 bg-gradient-to-tr from-primary/30 to-transparent mix-blend-multiply"
+                      ></div>
+                    </div>
+
+                    <div class="flex flex-col gap-8">
+                      <div>
+                        <span
+                          class="inline-flex items-center gap-2 px-3 py-1 text-xs font-semibold tracking-widest uppercase rounded-full bg-primary/10 text-primary mb-6"
+                        >
+                          Our Impact
+                        </span>
+                        <h3>Measurable results across the globe</h3>
+                        <p class="mt-4 text-text-secondary md:text-base">
+                          Our platform empowers organizations to scale efficiently, offering robust
+                          infrastructure and insightful analytics to drive business forward.
+                        </p>
+                      </div>
+
+                      <div class="grid grid-cols-2 gap-x-6 gap-y-8">
+                        <div class="flex flex-col gap-1 border-l-2 border-primary pl-4">
+                          <p class="text-3xl font-title tracking-tight text-text">200+</p>
+                          <p class="text-sm font-semibold">Enterprise clients</p>
+                          <p class="text-xs text-text-secondary">Using our premium plans</p>
+                        </div>
+                        <div class="flex flex-col gap-1 border-l-2 border-primary pl-4">
+                          <p class="text-3xl font-title tracking-tight text-text">99.99%</p>
+                          <p class="text-sm font-semibold">Guaranteed uptime</p>
+                          <p class="text-xs text-text-secondary">Zero planned downtime</p>
+                        </div>
+                        <div class="flex flex-col gap-1 border-l-2 border-primary pl-4">
+                          <p class="text-3xl font-title tracking-tight text-text">15M</p>
+                          <p class="text-sm font-semibold">Daily transactions</p>
+                          <p class="text-xs text-text-secondary">Processed flawlessly</p>
+                        </div>
+                        <div class="flex flex-col gap-1 border-l-2 border-primary pl-4">
+                          <p class="text-3xl font-title tracking-tight text-text">24/7</p>
+                          <p class="text-sm font-semibold">Global support</p>
+                          <p class="text-xs text-text-secondary">With &lt;15m response time</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </custom-frame>
+          </div>
+        </section>
+
+        <section class="sect">
+          <div class="sect-container">
+            <custom-frame title="Primary background grid">
+              <div
+                class="w-full bg-primary text-primary-contrast py-20 px-4 md:px-6 overflow-hidden flex items-center justify-center"
+              >
+                <div class="relative w-full max-w-7xl z-10 flex flex-col gap-16">
+                  <div class="text-center max-w-3xl mx-auto">
+                    <h3 class="text-3xl md:text-5xl font-bold text-white mb-6">
+                      Metrics that matter
+                    </h3>
+                    <p class="text-white/70 text-lg">
+                      We've built a robust platform that scales with your business, delivering
+                      unparalleled performance and reliability around the clock.
+                    </p>
+                  </div>
+
+                  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 xl:gap-8">
+                    <div
+                      class="group flex flex-col items-center text-center p-8 rounded-3xl bg-primary-contrast/5 hover:bg-primary-contrast/10 transition duration-400 hover:-translate-y-2"
+                    >
+                      <div
+                        class="flex items-center justify-center size-14 mx-auto rounded-2xl bg-primary-contrast/10 text-primary-contrast mb-6"
+                      >
+                        <svg
+                          class="size-6"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                          <circle cx="9" cy="7" r="4" />
+                          <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                          <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                        </svg>
+                      </div>
+                      <p class="text-4xl md:text-5xl font-black tracking-tight mb-2">2.5M+</p>
+                      <p class="font-medium">Active Users</p>
+                    </div>
+
+                    <div
+                      class="group flex flex-col items-center text-center p-8 rounded-3xl bg-primary-contrast/5 hover:bg-primary-contrast/10 transition duration-400 hover:-translate-y-2"
+                    >
+                      <div
+                        class="flex items-center justify-center size-14 mx-auto rounded-2xl bg-primary-contrast/10 text-primary-contrast mb-6"
+                      >
+                        <svg
+                          class="size-6"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <rect width="20" height="14" x="2" y="5" rx="2" />
+                          <line x1="2" x2="22" y1="10" y2="10" />
+                        </svg>
+                      </div>
+                      <p class="text-4xl md:text-5xl font-black tracking-tight mb-2">$500M</p>
+                      <p class="font-medium">Volume Processed</p>
+                    </div>
+
+                    <div
+                      class="group flex flex-col items-center text-center p-8 rounded-3xl bg-primary-contrast/5 hover:bg-primary-contrast/10 transition duration-400 hover:-translate-y-2"
+                    >
+                      <div
+                        class="flex items-center justify-center size-14 mx-auto rounded-2xl bg-primary-contrast/10 text-primary-contrast mb-6"
+                      >
+                        <svg
+                          class="size-6"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+                        </svg>
+                      </div>
+                      <p class="text-4xl md:text-5xl font-black tracking-tight mb-2">99.99%</p>
+                      <p class="font-medium">Guaranteed Uptime</p>
+                    </div>
+
+                    <div
+                      class="group flex flex-col items-center text-center p-8 rounded-3xl bg-primary-contrast/5 hover:bg-primary-contrast/10 transition duration-300 hover:-translate-y-2 overflow-hidden"
+                    >
+                      <div
+                        class="flex items-center justify-center size-14 mx-auto rounded-2xl bg-primary-contrast/10 text-primary-contrast mb-6"
+                      >
+                        <svg
+                          class="size-6"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <polygon
+                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                          />
+                        </svg>
+                      </div>
+                      <p class="text-4xl md:text-5xl font-black tracking-tight mb-2">4.9/5</p>
+                      <p class="font-medium">Customer Rating</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </custom-frame>
+          </div>
+        </section>
+
+        <custom-cta></custom-cta>
+
+        <custom-footer></custom-footer>
+      </div>
+    </main>
+  </body>
+</html>
