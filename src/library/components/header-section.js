@@ -113,7 +113,7 @@ class HeaderSection extends HTMLElement {
                 <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
               </svg>
               <p class="font-medium mr-2">Features</p>
-              <span class="px-2 py-1 bg-surface rounded-full text-sm">1</span>
+              <span class="px-2 py-1 bg-surface rounded-full text-sm">6</span>
             </a>
             <a
               href="/library/components/footers/"
