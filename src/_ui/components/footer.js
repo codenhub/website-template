@@ -13,34 +13,17 @@ class Footer extends HTMLElement {
               <a href="#">
                 <img src="/logo.svg" alt="Logo" class="h-10 object-contain invert" />
               </a>
-              <p class="max-w-sm">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                pharetra, nibh quis convallis mattis, est mauris pretium
-                magna.
-              </p>
+              <p class="max-w-sm">A complete website template built with Vite + TailwindCSS.</p>
             </div>
             <div class="flex flex-col w-fit gap-2 min-w-36">
-              <p class="mb-2"><b>Solutions</b></p>
-              <a href="#">Solution 1</a>
-              <a href="#">Solution 2</a>
-              <a href="#">Solution 3</a>
-              <a href="#">Solution 4</a>
-              <a href="#">Solution 5</a>
+              <a href="/library/" class="mb-2"><b>Library</b></a>
+              <a href="/library/components/">Components</a>
+              <a href="/library/pages/">Pages</a>
             </div>
             <div class="flex flex-col w-fit gap-2 min-w-36">
-              <p class="mb-2"><b>Help</b></p>
-              <a href="#">Customer service</a>
-              <a href="#">Forum</a>
-              <a href="#">FAQ</a>
-              <a href="#">Privacy policy</a>
-              <a href="#">Terms of use</a>
-            </div>
-            <div class="flex flex-col w-fit gap-2 min-w-36">
-              <p class="mb-2"><b>Company</b></p>
-              <a href="#">Who we are</a>
-              <a href="#">Our team</a>
-              <a href="#">Work with us</a>
-              <a href="#">Contact us</a>
+              <p class="mb-2"><b>Template</b></p>
+              <a href="https://github.com/codenhub/website-template" target="_blank">Source code</a>
+              <a href="/credits/">Credits</a>
             </div>
           </div>
           <div class="flex w-full flex-wrap gap-4 items-center justify-between pt-4 border-t border-border">
