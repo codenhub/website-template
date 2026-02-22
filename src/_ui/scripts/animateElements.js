@@ -87,12 +87,12 @@ export default function animateElements() {
 
       gsap.from(split.chars, {
         opacity: 0.2,
-        duration: 0.1,
+        duration: 0.01,
         ease: "power1.inOut",
         stagger: { amount: 0.8 },
         scrollTrigger: {
           trigger: el,
-          start: "top 90%",
+          start: "top 95%",
           toggleActions: "play none none none",
         },
       });

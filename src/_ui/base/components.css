@@ -36,7 +36,7 @@
   }
 
   .card {
-    @apply flex flex-col p-8 gap-4 border bg-background border-border rounded-xl shadow-primary/10 hover:shadow-md hover:border-border-hover transition-[box-shadow,border] duration-400;
+    @apply flex flex-col p-8 gap-4 border bg-background border-border rounded-xl hover:border-border-hover transition-colors duration-400;
   }
 
   .frame-tab {

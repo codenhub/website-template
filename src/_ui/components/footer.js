@@ -110,7 +110,7 @@ class Footer extends HTMLElement {
       ease: "power1.inOut",
       scrollTrigger: {
         trigger: "footer",
-        start: "top 120%",
+        start: "top 100%",
         end: "bottom bottom",
         scrub: true,
         toggleActions: "play none none none",
