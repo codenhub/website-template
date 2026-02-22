@@ -250,6 +250,7 @@ class Frame extends HTMLElement {
             .hl-punct   { color: #7c8896; }
             .hl-value   { color: #a5d6ff; }
             .hl-comment { color: #546370; font-style: italic; }
+            ::selection { background-color: #f1f5f9; color: #020617; }
           </style>
           <pre class="p-4 text-xs leading-relaxed text-[#c9d1d9] font-mono whitespace-pre overflow-x-auto"><code>${highlightHtml(codeText)}</code></pre>
         </div>
