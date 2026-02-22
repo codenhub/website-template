@@ -11,6 +11,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: "./src/index.html",
+        credits: "./src/credits/index.html",
         components: "./src/library/components/index.html",
         alerts: "./src/library/components/alerts/index.html",
         badges: "./src/library/components/badges/index.html",

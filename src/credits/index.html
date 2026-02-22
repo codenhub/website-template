@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Coden Agency" />
+    <title>Credits - Website template by Coden</title>
+    <meta name="description" content="Credits and attributions for the Website Template project." />
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="../_ui/main.css" />
+    <script type="module" src="../_ui/main.js" defer></script>
+    <script type="module" src="../_ui/components/index.js" defer></script>
+    <style>
+      .loader {
+        background-color: oklch(98.5% 0 0);
+        position: fixed;
+        inset: 0;
+        transform: skewX(10deg);
+        transition: all 800ms ease;
+        border: none;
+        z-index: 999;
+
+        &.left {
+          transform: skewX(10deg) translateX(-20%);
+
+          &.loaded {
+            transform: skewX(10deg) translateX(-120%);
+          }
+        }
+
+        &.right {
+          transform: skewX(10deg) translateX(20%);
+
+          &.loaded {
+            transform: skewX(10deg) translateX(120%);
+          }
+        }
+      }
+      #loader-indicator {
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        color: oklch(20.5% 0 0);
+        width: 4rem;
+        height: 4rem;
+        z-index: 999;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- LOADER -->
+    <div class="loader left"></div>
+    <div class="loader right"></div>
+    <div id="loader-indicator">
+      <svg stroke="currentColor" viewBox="0 0 24 24">
+        <style>
+          .spinner {
+            transform-origin: center;
+            animation: rotate 2s linear infinite;
+          }
+
+          .spinner circle {
+            stroke-linecap: round;
+            animation: grow 1.5s ease-in-out infinite;
+          }
+
+          @keyframes rotate {
+            to {
+              transform: rotate(360deg);
+            }
+          }
+
+          @keyframes grow {
+            0% {
+              stroke-dasharray: 0 150;
+              stroke-dashoffset: 0;
+            }
+
+            50% {
+              stroke-dasharray: 42 150;
+              stroke-dashoffset: -16;
+            }
+
+            95%,
+            100% {
+              stroke-dasharray: 42 150;
+              stroke-dashoffset: -59;
+            }
+          }
+        </style>
+        <g class="spinner">
+          <circle cx="12" cy="12" r="9.5" fill="none" stroke-width="2"></circle>
+        </g>
+      </svg>
+    </div>
+    <!-- END LOADER -->
+
+    <custom-header fixed></custom-header>
+
+    <main id="smooth-wrapper">
+      <div id="smooth-content">
+        <section class="sect min-h-screen pt-32 pb-20 justify-start">
+          <div class="sect-container flex-col gap-12 items-start">
+            <h1 class="split-chars text-6xl md:text-8xl">Credits</h1>
+            <p class="text-xl split-text max-w-2xl">
+              This project is built on the shoulders of giants. Here are the technologies and
+              platforms that made it possible.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
+              <!-- MAIN TECHNOLOGY -->
+              <div class="card slide-up-in">
+                <h3 class="text-2xl font-bold mb-4">Main Technology</h3>
+                <div>
+                  <svg viewBox="0 0 167 21" fill="none" class="h-8 text-black">
+                    <path
+                      class="fill-sky-400"
+                      d="M17.183 0C12.6 0 9.737 2.291 8.59 6.873c1.719-2.29 3.723-3.15 6.014-2.577 1.307.326 2.242 1.274 3.275 2.324 1.685 1.71 3.635 3.689 7.894 3.689 4.582 0 7.445-2.291 8.591-6.872-1.718 2.29-3.723 3.15-6.013 2.576-1.308-.326-2.243-1.274-3.276-2.324C23.39 1.98 21.44 0 17.183 0ZM8.59 10.309C4.01 10.309 1.145 12.6 0 17.182c1.718-2.291 3.723-3.15 6.013-2.577 1.308.326 2.243 1.274 3.276 2.324 1.685 1.71 3.635 3.689 7.894 3.689 4.582 0 7.445-2.29 8.59-6.872-1.718 2.29-3.722 3.15-6.013 2.577-1.307-.327-2.242-1.276-3.276-2.325-1.684-1.71-3.634-3.689-7.893-3.689Z"
+                    ></path>
+                    <path
+                      fill="currentColor"
+                      d="M51.547 8.688h-3v5.803c0 1.548 1.016 1.524 3 1.427v2.346c-4.015.483-5.611-.629-5.611-3.773V8.688H43.71V6.172h2.225V2.925l2.612-.774v4.021h2.998v2.516Zm11.43-2.516h2.61v12.092h-2.61v-1.741c-.92 1.28-2.346 2.055-4.233 2.055-3.288 0-6.021-2.78-6.021-6.36 0-3.603 2.733-6.36 6.021-6.36 1.886 0 3.313.774 4.233 2.032V6.172Zm-3.821 9.915c2.176 0 3.82-1.62 3.82-3.87 0-2.248-1.644-3.868-3.82-3.868-2.177 0-3.821 1.62-3.821 3.869s1.644 3.87 3.82 3.87ZM69.94 4.36a1.687 1.687 0 0 1-1.668-1.669c.002-.443.179-.868.491-1.18a1.662 1.662 0 0 1 2.354 0c.312.312.49.737.491 1.18 0 .895-.75 1.669-1.668 1.669Zm-1.306 13.905V6.172h2.612v12.092h-2.612Zm5.635 0V.609h2.611v17.654H74.27ZM93.834 6.172h2.757l-3.797 12.092h-2.563l-2.516-8.15-2.539 8.15h-2.563L78.816 6.172h2.757l2.346 8.343 2.54-8.343h2.49l2.514 8.343 2.37-8.343ZM99.83 4.36c-.92 0-1.669-.774-1.669-1.669.002-.443.18-.868.492-1.18a1.661 1.661 0 0 1 2.354 0c.313.312.49.737.492 1.18 0 .895-.75 1.669-1.669 1.669Zm-1.306 13.905V6.172h2.612v12.092h-2.612ZM110.52 5.858c2.708 0 4.643 1.838 4.643 4.982v7.423h-2.612v-7.158c0-1.838-1.064-2.804-2.708-2.804-1.717 0-3.071 1.015-3.071 3.482v6.48h-2.612V6.174h2.612V7.72c.798-1.257 2.103-1.862 3.748-1.862Zm17.024-4.522h2.612v16.927h-2.612v-1.741c-.918 1.282-2.345 2.055-4.231 2.055-3.289 0-6.022-2.78-6.022-6.36 0-3.603 2.733-6.36 6.022-6.36 1.886 0 3.313.774 4.231 2.032V1.336Zm-3.821 14.751c2.177 0 3.821-1.62 3.821-3.87 0-2.248-1.644-3.868-3.821-3.868-2.176 0-3.82 1.62-3.82 3.869s1.644 3.87 3.82 3.87Zm15.187 2.49c-3.651 0-6.384-2.78-6.384-6.36 0-3.602 2.733-6.359 6.384-6.359 2.37 0 4.426 1.233 5.393 3.12l-2.249 1.306c-.532-1.137-1.717-1.863-3.168-1.863-2.128 0-3.748 1.62-3.748 3.797 0 2.176 1.62 3.797 3.748 3.797 1.451 0 2.636-.75 3.216-1.863l2.249 1.282c-1.015 1.91-3.071 3.144-5.441 3.144Zm9.746-9.068c0 2.201 6.505.87 6.505 5.345 0 2.419-2.104 3.724-4.716 3.724-2.418 0-4.159-1.089-4.933-2.83l2.249-1.305c.387 1.088 1.355 1.74 2.684 1.74 1.161 0 2.056-.386 2.056-1.354 0-2.151-6.505-.942-6.505-5.27 0-2.274 1.959-3.701 4.425-3.701 1.983 0 3.628.92 4.474 2.515l-2.2 1.233c-.436-.943-1.283-1.378-2.274-1.378-.943 0-1.765.41-1.765 1.281Zm11.148 0c0 2.201 6.505.87 6.505 5.345 0 2.419-2.104 3.724-4.716 3.724-2.418 0-4.158-1.089-4.933-2.83l2.249-1.305c.387 1.088 1.354 1.74 2.684 1.74 1.161 0 2.056-.386 2.056-1.354 0-2.151-6.505-.942-6.505-5.27 0-2.274 1.959-3.701 4.426-3.701 1.982 0 3.627.92 4.473 2.515l-2.2 1.233c-.435-.943-1.282-1.378-2.273-1.378-.944 0-1.766.41-1.766 1.281Z"
+                    ></path>
+                  </svg>
+                </div>
+                <p class="text-text-secondary mt-2 mb-4 italic">
+                  "Rapidly build modern websites without ever leaving your HTML."
+                </p>
+                <p>
+                  This project was only possible thanks to the TailwindCSS team and community. We
+                  highly recommend checking them out if you haven't already.
+                </p>
+                <a href="https://tailwindcss.com" target="_blank" class="primary-btn w-fit">
+                  Visit Website
+                </a>
+              </div>
+
+              <!-- ASSET PLATFORMS -->
+              <div class="card slide-up-in lg:row-span-2">
+                <h3 class="text-2xl font-bold">Assets & Resources</h3>
+                <p class="text-text-secondary mb-4">
+                  Special thanks to these incredible platforms for providing the visual assets that
+                  bring this template to life:
+                </p>
+
+                <div class="flex flex-col gap-6">
+                  <div class="flex items-center gap-4">
+                    <div class="size-10 bg-surface rounded-lg flex items-center justify-center">
+                      <svg viewBox="0 0 32 32" class="size-6">
+                        <path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path>
+                      </svg>
+                    </div>
+                    <div class="flex flex-col">
+                      <a
+                        href="https://unsplash.com"
+                        target="_blank"
+                        class="font-bold hover:text-primary transition-colors"
+                      >
+                        Unsplash
+                      </a>
+                      <span class="text-sm text-text-secondary">High-quality photography</span>
+                    </div>
+                  </div>
+
+                  <div class="flex items-center gap-4">
+                    <div
+                      class="size-10 bg-surface rounded-lg flex items-center justify-center font-bold"
+                    >
+                      <svg viewBox="0 0 19 22" class="size-6">
+                        <style>
+                          .a {
+                            fill: #6b9bd2;
+                          }
+                          .b {
+                            fill: #f7f7f7;
+                          }
+                        </style>
+                        <path
+                          class="a"
+                          d="m2.1 0h14.7q0.4 0 0.8 0.2 0.4 0.1 0.7 0.4 0.3 0.3 0.4 0.7 0.2 0.4 0.2 0.8v17.8q0 0.4-0.2 0.8-0.1 0.4-0.4 0.7-0.3 0.3-0.7 0.4-0.4 0.2-0.8 0.2h-14.7q-0.4 0-0.8-0.2-0.3-0.1-0.6-0.4-0.3-0.3-0.5-0.7-0.1-0.4-0.1-0.8v-17.8q0-0.4 0.1-0.8 0.2-0.4 0.5-0.7 0.3-0.3 0.6-0.4 0.4-0.2 0.8-0.2z"
+                        />
+                        <path
+                          class="b"
+                          d="m9.9 15.4q0-0.2 0-0.4 0-0.2 0-0.3 0-0.2 0.1-0.4 0-0.2 0.1-0.3 0.1-0.2 0.1-0.3 0.1-0.2 0.2-0.3 0.1-0.2 0.2-0.3 0.1-0.1 0.2-0.3 0.1-0.1 0.2-0.2 0.2-0.1 0.3-0.2 0.1-0.1 0.3-0.2 0.1-0.1 0.3-0.1 0.1-0.1 0.3-0.2 0.1 0 0.3 0 0.2-0.1 0.3-0.1 0.2 0 0.3 0 0.2 0 0.4 0 0.1 0 0.3 0.1 0.2 0 0.3 0 0.2 0.1 0.3 0.2 0.2 0 0.3 0.1 0.2 0.1 0.3 0.2 0.1 0.1 0.3 0.2 0.1 0.1 0.2 0.2 0.1 0.2 0.2 0.3 0.1 0.1 0.2 0.3 0.1 0.1 0.2 0.3 0 0.1 0.1 0.3 0.1 0.1 0.1 0.3 0.1 0.2 0.1 0.4 0 0.1 0 0.3 0.1 0.2 0.1 0.4 0 0.2-0.1 0.3 0 0.2 0 0.4 0 0.2-0.1 0.3 0 0.2-0.1 0.4-0.1 0.1-0.1 0.3-0.1 0.1-0.2 0.3-0.1 0.1-0.2 0.3-0.1 0.1-0.2 0.2-0.1 0.1-0.2 0.2-0.2 0.2-0.3 0.3-0.1 0-0.3 0.1-0.1 0.1-0.3 0.2-0.1 0.1-0.3 0.1-0.1 0.1-0.3 0.1-0.2 0-0.3 0-0.2 0.1-0.4 0.1-0.1 0-0.3-0.1-0.1 0-0.3 0-0.2 0-0.3-0.1-0.2 0-0.3-0.1-0.2-0.1-0.3-0.2-0.2-0.1-0.3-0.1-0.1-0.1-0.3-0.3-0.1-0.1-0.2-0.2-0.1-0.1-0.2-0.2-0.1-0.2-0.2-0.3-0.1-0.2-0.2-0.3 0-0.2-0.1-0.3-0.1-0.2-0.1-0.4-0.1-0.1-0.1-0.3 0-0.2 0-0.4 0-0.1 0-0.3zm1.3 0q0 0.1 0 0.2 0 0.1 0.1 0.2 0 0.1 0 0.2 0 0.1 0.1 0.2 0 0.1 0.1 0.2 0 0.1 0.1 0.2 0 0 0.1 0.1 0 0.1 0.1 0.2 0.1 0 0.1 0.1 0.1 0.1 0.2 0.1 0 0.1 0.1 0.1 0.1 0.1 0.2 0.1 0.1 0.1 0.2 0.1 0.1 0 0.2 0 0.1 0.1 0.2 0.1 0.1 0 0.1 0 0.1 0 0.2 0 0.1 0 0.2-0.1 0.1 0 0.2 0 0.1 0 0.2-0.1 0.1 0 0.2-0.1 0.1 0 0.1-0.1 0.1 0 0.2-0.1 0.1-0.1 0.1-0.1 0.1-0.1 0.2-0.2 0-0.1 0.1-0.1 0-0.1 0.1-0.2 0-0.1 0-0.2 0.1-0.1 0.1-0.2 0-0.1 0.1-0.2 0-0.1 0-0.2 0-0.1 0-0.2 0-0.1 0-0.2 0-0.1 0-0.2-0.1-0.1-0.1-0.2 0-0.1-0.1-0.2 0-0.1 0-0.2-0.1-0.1-0.1-0.2-0.1-0.1-0.1-0.2-0.1 0-0.2-0.1 0-0.1-0.1-0.1-0.1-0.1-0.2-0.2 0 0-0.1-0.1-0.1 0-0.2-0.1-0.1 0-0.2 0-0.1-0.1-0.2-0.1-0.1 0-0.2 0-0.1 0-0.2 0 0 0-0.1 0-0.1 0-0.2 0-0.1 0-0.2 0.1-0.1 0-0.2 0-0.1 0.1-0.2 0.1-0.1 0.1-0.1 0.1-0.1 0.1-0.2 0.2 0 0-0.1 0.1-0.1 0.1-0.1 0.1-0.1 0.1-0.1 0.2-0.1 0.1-0.1 0.2-0.1 0.1-0.1 0.2-0.1 0.1-0.1 0.2 0 0.1 0 0.2-0.1 0.1-0.1 0.2 0 0.1 0 0.2z"
+                        />
+                        <path
+                          class="b"
+                          d="m8.3 14.5q0 0.1 0 0.2 0 0.1 0 0.3 0 0.1-0.1 0.2 0 0.1-0.1 0.2 0 0.1-0.1 0.2 0 0.1-0.1 0.2 0 0.1-0.1 0.2-0.1 0.1-0.2 0.2-0.1 0.1-0.2 0.2 0 0-0.1 0.1-0.1 0.1-0.2 0.1-0.1 0.1-0.2 0.1-0.2 0.1-0.3 0.1-0.1 0-0.2 0.1-0.1 0-0.2 0-0.2 0-0.3 0h-1.4v2h-1.5v-6.8h2.9q0.1 0 0.3 0 0.1 0 0.2 0 0.1 0 0.2 0.1 0.1 0 0.3 0.1 0.2 0.1 0.4 0.2 0.2 0.1 0.3 0.3 0.2 0.1 0.3 0.3 0.1 0.2 0.2 0.4 0.1 0.2 0.1 0.3 0.1 0.1 0.1 0.2 0 0.1 0 0.2 0 0.2 0 0.3zm-3.8 1h1.4q0.1 0 0.1 0 0.1 0 0.1 0 0.1-0.1 0.1-0.1 0.1 0 0.1 0 0.1 0 0.2-0.1 0 0 0.1-0.1 0.1-0.1 0.1-0.2 0.1 0 0.1-0.1 0.1-0.2 0.1-0.3 0-0.1 0-0.3 0-0.1-0.1-0.2-0.1-0.2-0.2-0.3 0 0-0.1-0.1-0.1 0-0.1-0.1-0.1 0-0.2-0.1-0.1 0-0.2 0h-1.5c0 0 0 2 0 2z"
+                        />
+                        <path
+                          class="b"
+                          d="m12.3 8.3h3.2v1.5h-4.9v-6.8h4.9v1.5h-3.2v1.1h2.6v1.5h-2.6z"
+                        />
+                        <path
+                          class="b"
+                          d="m5.4 7.8h-0.7v2h-1.5v-6.8h2.9q0.1 0 0.3 0 0.1 0 0.2 0.1 0.1 0 0.2 0 0.1 0.1 0.3 0.1 0.2 0.1 0.4 0.2 0.2 0.1 0.3 0.3 0.2 0.2 0.3 0.4 0.1 0.2 0.2 0.4 0.1 0.1 0.1 0.2 0.1 0.1 0.1 0.2 0 0.2 0 0.3 0 0.1 0 0.2 0 0.1 0 0.2 0 0.1 0 0.2 0 0.1 0 0.2-0.1 0.1-0.1 0.2 0 0-0.1 0.1 0 0.1 0 0.2-0.1 0.1-0.1 0.1-0.1 0.1-0.1 0.2-0.1 0.1-0.1 0.1-0.1 0.1-0.1 0.2-0.1 0-0.2 0.1 0 0.1-0.1 0.1-0.1 0.1-0.1 0.1-0.1 0.1-0.2 0.1-0.1 0.1-0.2 0.1 0 0-0.1 0.1l1.5 2.1h-1.8zm-0.8-1.4h1.5q0 0 0.1 0 0 0 0.1 0 0 0 0.1-0.1 0 0 0.1 0 0.1 0 0.1-0.1 0.1 0 0.2-0.1 0.1-0.1 0.1-0.2 0.1 0 0.1-0.1 0-0.1 0-0.1 0.1-0.1 0.1-0.1 0-0.1 0-0.1 0-0.1 0-0.1 0-0.1 0-0.2 0-0.1-0.1-0.2 0-0.1-0.1-0.1 0-0.1-0.1-0.2 0 0-0.1-0.1-0.1 0-0.2-0.1 0 0-0.1-0.1-0.1 0-0.2 0h-1.6c0 0 0 2 0 2z"
+                        />
+                      </svg>
+                    </div>
+                    <div class="flex flex-col">
+                      <a
+                        href="https://svgrepo.com"
+                        target="_blank"
+                        class="font-bold hover:text-primary transition-colors"
+                      >
+                        SVGRepo
+                      </a>
+                      <span class="text-sm text-text-secondary">Vector icons and graphics</span>
+                    </div>
+                  </div>
+
+                  <div class="flex items-center gap-4">
+                    <div
+                      class="size-10 bg-surface rounded-lg flex items-center justify-center font-bold"
+                    >
+                      <svg viewBox="0 0 40 40" class="size-6">
+                        <g transform="translate(-248 -15)">
+                          <path
+                            fill="transparent"
+                            d="M268 15a20 20 0 1 1-20 20 20 20 0 0 1 20-20"
+                          ></path>
+                          <circle
+                            cx="6"
+                            cy="6"
+                            r="6"
+                            fill="#fff"
+                            transform="translate(263 29)"
+                          ></circle>
+                          <path
+                            d="M266.497 15.026a19.7 19.7 0 0 0-6.976 1.842 20.16 20.16 0 0 0-8.267 7.156 20.12 20.12 0 0 0-2.823 15.123 20.4 20.4 0 0 0 4.024 8.447 26 26 0 0 0 3.283 3.213 20.3 20.3 0 0 0 12.261 4.194 20.085 20.085 0 0 0 18.726-12.971 19.6 19.6 0 0 0 1.261-6.346 20.017 20.017 0 0 0-16.885-20.468 32 32 0 0 0-4.604-.19m3.363 1.151a18.78 18.78 0 0 1 13.848 8.327 18.85 18.85 0 0 1-1.311 22.72 10 10 0 0 1-2.012 1.972c-.04 0-.08-.19-.08-.43a2.87 2.87 0 0 0-2.042-2.322 11 11 0 0 0-1.361-.2c-2.182-.16-3.563-.44-4.013-.821-.27-.23-.29-.3-.29-.971a1.55 1.55 0 0 0-.751-1.571 33.8 33.8 0 0 0-6.456-.591 1.66 1.66 0 0 0-.861.981 2.9 2.9 0 0 1-.761 1.291c-.681.661-1.581.891-4.584 1.181-.911.09-1.942.22-2.3.31a2.89 2.89 0 0 0-2.2 1.671 2 2 0 0 1-.25.47c-.02 0-.38-.42-.811-.931a18.88 18.88 0 0 1 4.064-28.114 18.77 18.77 0 0 1 12.171-2.972"
+                          ></path>
+                          <path
+                            d="M266.947 25.014a9 9 0 0 0-6.305 5.295 19 19 0 0 0-.791 3.1c-.25 1.251-.57 2.732-.711 3.273a4.37 4.37 0 0 0-.04 2.752 3.18 3.18 0 0 0 1.752 1.742 3 3 0 0 0 .6.19l.22-.48a4.8 4.8 0 0 1 1.121-1.5c.05 0 .03.21-.05.47s-.17.7-.21.961l-.06.48.42-.03c.42-.03.43-.04.55-.5.12-.5.4-.981.55-.981.06 0 .1.32.1.711v.721l.651-.07c1.091-.11 6-.07 7.386.06.731.07 1.731.12 2.222.12a2.3 2.3 0 0 0 1.411-.26 3.88 3.88 0 0 0 1.6-1.762 10.2 10.2 0 0 0 .22-2.923 16.8 16.8 0 0 0-.48-5.545 7.9 7.9 0 0 0-2.192-3.463 7.86 7.86 0 0 0-3.413-2.112 5.8 5.8 0 0 0-2.452-.35 9.5 9.5 0 0 0-2.099.101m5.425 8.437.28.53h1.441l.03-.831.03-.821.24.6a6.4 6.4 0 0 1 .16 3.253 5.7 5.7 0 0 1-5.5 4.3 5.37 5.37 0 0 1-3.953-1.691 5.42 5.42 0 0 1-1.551-5.134 4.6 4.6 0 0 1 .29-.951c.15-.27.15-.26.16.49v.781h7.716l-.07-.38c-.03-.2-.12-.611-.19-.911l-.14-.54.39.38a4 4 0 0 1 .667.926Z"
+                          ></path>
+                        </g>
+                      </svg>
+                    </div>
+                    <div class="flex flex-col">
+                      <a
+                        href="https://undraw.co"
+                        target="_blank"
+                        class="font-bold hover:text-primary transition-colors"
+                      >
+                        unDraw
+                      </a>
+                      <span class="text-sm text-text-secondary">Open-source illustrations</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- LICENSE -->
+              <div class="card slide-up-in gap-0">
+                <h3 class="text-2xl font-bold mb-4">Project License</h3>
+                <p>
+                  This template is released under the
+                  <a
+                    href="https://github.com/codenhub/website-template?tab=MIT-1-ov-file"
+                    target="_blank"
+                    class="font-bold underline transition-colors"
+                  >
+                    MIT License
+                  </a>
+                  .
+                </p>
+                <p>You are free to use this template for personal or commercial projects.</p>
+              </div>
+
+              <!-- TECH STACK -->
+              <div class="card slide-up-in md:col-span-2">
+                <h3 class="text-2xl font-bold mb-2">Full Technology Stack</h3>
+                <div class="flex flex-wrap gap-4">
+                  <div
+                    class="flex flex-col gap-2 p-4 bg-foreground rounded-lg flex-1 min-w-[150px]"
+                  >
+                    <span class="text-xs uppercase tracking-widest text-text-secondary font-bold">
+                      Bundler
+                    </span>
+                    <span class="text-xl font-bold flex items-center gap-2">
+                      <img src="/assets/images/vite.webp" alt="Vite" class="h-8 object-contain" />
+                      Vite
+                    </span>
+                  </div>
+                  <div
+                    class="flex flex-col gap-2 p-4 bg-foreground rounded-lg flex-1 min-w-[150px]"
+                  >
+                    <span class="text-xs uppercase tracking-widest text-text-secondary font-bold">
+                      Styling
+                    </span>
+                    <span class="text-xl font-bold flex items-center gap-2">
+                      <img
+                        src="/assets/images/tailwindcss.webp"
+                        alt="Tailwind CSS"
+                        class="h-8 object-contain"
+                      />
+                      Tailwind CSS
+                    </span>
+                  </div>
+                  <div
+                    class="flex flex-col gap-2 p-4 bg-foreground rounded-lg flex-1 min-w-[150px]"
+                  >
+                    <span class="text-xs uppercase tracking-widest text-text-secondary font-bold">
+                      Animations
+                    </span>
+                    <span class="text-xl font-bold flex items-center gap-2">
+                      <img src="/assets/images/gsap.webp" alt="GSAP" class="h-8 object-contain" />
+                      GSAP
+                    </span>
+                  </div>
+                  <div
+                    class="flex flex-col gap-2 p-4 bg-foreground rounded-lg flex-1 min-w-[150px]"
+                  >
+                    <span class="text-xs uppercase tracking-widest text-text-secondary font-bold">
+                      Hosting
+                    </span>
+                    <span class="text-xl font-bold flex items-center gap-2">
+                      <img
+                        src="/assets/images/cloudflare.webp"
+                        alt="Cloudflare Workers"
+                        class="h-8 object-contain"
+                      />
+                      Cloudflare
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <custom-footer></custom-footer>
+      </div>
+    </main>
+  </body>
+</html>
