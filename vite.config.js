@@ -27,6 +27,7 @@ export default defineConfig({
         headers: "./src/library/components/headers/index.html",
         heroes: "./src/library/components/heroes/index.html",
         inputs: "./src/library/components/inputs/index.html",
+        loaders: "./src/library/components/loaders/index.html",
         pricing: "./src/library/components/pricing/index.html",
         stats: "./src/library/components/stats/index.html",
         steps: "./src/library/components/steps/index.html",

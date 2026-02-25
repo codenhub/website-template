@@ -173,6 +173,16 @@ class HeaderSection extends HTMLElement {
               <span class="px-2 py-1 bg-surface rounded-full text-sm">8</span>
             </a>
             <a
+              href="/library/components/loaders/"
+              class="flex items-center gap-2 px-4 py-2 rounded-xl border border-border hover:border-border-hover transition-colors duration-400"
+            >
+              <svg viewBox="0 0 24 24" fill="none" class="size-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 3V6M12 18V21M6 12H3M21 12H18M5.63672 5.63672L7.75977 7.75977M16.2422 16.2422L18.3633 18.3633M18.3652 5.63477L16.2441 7.75586M7.75781 16.2422L5.63477 18.3652" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <p class="font-medium mr-2">Loaders</p>
+              <span class="px-2 py-1 bg-surface rounded-full text-sm">26</span>
+            </a>
+            <a
               href="/library/components/pricing/"
               class="flex items-center gap-2 px-4 py-2 rounded-xl border border-border hover:border-border-hover transition-colors duration-400"
             >

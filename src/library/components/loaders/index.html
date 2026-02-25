@@ -1,0 +1,1319 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Coden Agency" />
+    <meta name="copyright" content="Coden Agency" />
+    <meta
+      name="description"
+      content="A curated collection of reusable loaders built with TailwindCSS."
+    />
+
+    <title>Loaders - Components Library</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="../../../_ui/main.css" />
+    <script type="module" src="../../../_ui/components/index.js" defer></script>
+    <script type="module" src="../../../_ui/main.js" defer></script>
+    <script type="module" src="../header-section.js" defer></script>
+    <style>
+      .loader {
+        background-color: oklch(98.5% 0 0);
+        position: fixed;
+        inset: 0;
+        transform: skewX(10deg);
+        transition: all 800ms ease;
+        border: none;
+        z-index: 999;
+
+        &.left {
+          transform: skewX(10deg) translateX(-20%);
+          &.loaded {
+            transform: skewX(10deg) translateX(-120%);
+          }
+        }
+        &.right {
+          transform: skewX(10deg) translateX(20%);
+          &.loaded {
+            transform: skewX(10deg) translateX(120%);
+          }
+        }
+      }
+      #loader-indicator {
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        color: oklch(20.5% 0 0);
+        width: 4rem;
+        height: 4rem;
+        z-index: 999;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- LOADER -->
+    <div class="loader left"></div>
+    <div class="loader right"></div>
+    <div id="loader-indicator">
+      <svg stroke="currentColor" viewBox="0 0 24 24">
+        <style>
+          .spinner {
+            transform-origin: center;
+            animation: rotate 2s linear infinite;
+          }
+          .spinner circle {
+            stroke-linecap: round;
+            animation: grow 1.5s ease-in-out infinite;
+          }
+          @keyframes rotate {
+            to {
+              transform: rotate(360deg);
+            }
+          }
+          @keyframes grow {
+            0% {
+              stroke-dasharray: 0 150;
+              stroke-dashoffset: 0;
+            }
+            50% {
+              stroke-dasharray: 42 150;
+              stroke-dashoffset: -16;
+            }
+            95%,
+            100% {
+              stroke-dasharray: 42 150;
+              stroke-dashoffset: -59;
+            }
+          }
+        </style>
+        <g class="spinner">
+          <circle cx="12" cy="12" r="9.5" fill="none" stroke-width="2"></circle>
+        </g>
+      </svg>
+    </div>
+    <!-- END LOADER -->
+
+    <main id="smooth-wrapper">
+      <div id="smooth-content">
+        <custom-header></custom-header>
+
+        <header-section></header-section>
+
+        <div class="flex w-full justify-center px-4">
+          <h2 class="max-w-7xl w-full split-chars">Inputs</h2>
+        </div>
+
+        <section class="sect">
+          <div class="sect-container">
+            <custom-frame title="Standard spinners">
+              <div class="w-full p-8 md:p-12 bg-background">
+                <div
+                  class="flex gap-8 items-center justify-center w-full flex-wrap max-w-7xl mx-auto"
+                >
+                  <svg stroke="currentColor" viewBox="0 0 24 24" class="size-12">
+                    <style>
+                      .spinner {
+                        transform-origin: center;
+                        animation: rotate 2s linear infinite;
+                      }
+                      .spinner circle {
+                        stroke-linecap: round;
+                        animation: grow 1.5s ease-in-out infinite;
+                      }
+                      @keyframes rotate {
+                        to {
+                          transform: rotate(360deg);
+                        }
+                      }
+                      @keyframes grow {
+                        0% {
+                          stroke-dasharray: 0 150;
+                          stroke-dashoffset: 0;
+                        }
+                        50% {
+                          stroke-dasharray: 42 150;
+                          stroke-dashoffset: -16;
+                        }
+                        95%,
+                        100% {
+                          stroke-dasharray: 42 150;
+                          stroke-dashoffset: -59;
+                        }
+                      }
+                    </style>
+                    <g class="spinner">
+                      <circle cx="12" cy="12" r="9.5" fill="none" stroke-width="2"></circle>
+                    </g>
+                  </svg>
+                  <div
+                    class="size-12 rounded-full border-3 border-text/20 border-t-text animate-spin"
+                  ></div>
+                  <div
+                    class="size-12 rounded-full border-3 border-text border-b-text/20 animate-spin"
+                  ></div>
+                  <div
+                    class="size-12 rounded-full border-3 border-text border-b-transparent animate-spin"
+                  ></div>
+                  <svg class="size-12" viewBox="0 0 24 24">
+                    <style>
+                      .spinner_1KD7 {
+                        animation: spinner_6QnB 1.2s infinite;
+                      }
+                      .spinner_MJg4 {
+                        animation-delay: 0.1s;
+                      }
+                      .spinner_sj9X {
+                        animation-delay: 0.2s;
+                      }
+                      .spinner_WwCl {
+                        animation-delay: 0.3s;
+                      }
+                      .spinner_vy2J {
+                        animation-delay: 0.4s;
+                      }
+                      .spinner_os1F {
+                        animation-delay: 0.5s;
+                      }
+                      .spinner_l1Tw {
+                        animation-delay: 0.6s;
+                      }
+                      .spinner_WNEg {
+                        animation-delay: 0.7s;
+                      }
+                      .spinner_kugV {
+                        animation-delay: 0.8s;
+                      }
+                      .spinner_4zOl {
+                        animation-delay: 0.9s;
+                      }
+                      .spinner_7he2 {
+                        animation-delay: 1s;
+                      }
+                      .spinner_SeO7 {
+                        animation-delay: 1.1s;
+                      }
+                      @keyframes spinner_6QnB {
+                        0%,
+                        50% {
+                          animation-timing-function: cubic-bezier(0.27, 0.42, 0.37, 0.99);
+                          r: 0;
+                        }
+                        25% {
+                          animation-timing-function: cubic-bezier(0.53, 0, 0.61, 0.73);
+                          r: 2px;
+                        }
+                      }
+                    </style>
+                    <circle class="spinner_1KD7" cx="12" cy="3" r="0" />
+                    <circle class="spinner_1KD7 spinner_MJg4" cx="16.50" cy="4.21" r="0" />
+                    <circle class="spinner_1KD7 spinner_SeO7" cx="7.50" cy="4.21" r="0" />
+                    <circle class="spinner_1KD7 spinner_sj9X" cx="19.79" cy="7.50" r="0" />
+                    <circle class="spinner_1KD7 spinner_7he2" cx="4.21" cy="7.50" r="0" />
+                    <circle class="spinner_1KD7 spinner_WwCl" cx="21.00" cy="12.00" r="0" />
+                    <circle class="spinner_1KD7 spinner_4zOl" cx="3.00" cy="12.00" r="0" />
+                    <circle class="spinner_1KD7 spinner_vy2J" cx="19.79" cy="16.50" r="0" />
+                    <circle class="spinner_1KD7 spinner_kugV" cx="4.21" cy="16.50" r="0" />
+                    <circle class="spinner_1KD7 spinner_os1F" cx="16.50" cy="19.79" r="0" />
+                    <circle class="spinner_1KD7 spinner_WNEg" cx="7.50" cy="19.79" r="0" />
+                    <circle class="spinner_1KD7 spinner_l1Tw" cx="12" cy="21" r="0" />
+                  </svg>
+                  <svg class="size-12" viewBox="0 0 24 24">
+                    <style>
+                      .spinner_Wezc {
+                        transform-origin: center;
+                        animation: spinner_Oiah 0.75s step-end infinite;
+                      }
+                      @keyframes spinner_Oiah {
+                        8.3% {
+                          transform: rotate(30deg);
+                        }
+                        16.6% {
+                          transform: rotate(60deg);
+                        }
+                        25% {
+                          transform: rotate(90deg);
+                        }
+                        33.3% {
+                          transform: rotate(120deg);
+                        }
+                        41.6% {
+                          transform: rotate(150deg);
+                        }
+                        50% {
+                          transform: rotate(180deg);
+                        }
+                        58.3% {
+                          transform: rotate(210deg);
+                        }
+                        66.6% {
+                          transform: rotate(240deg);
+                        }
+                        75% {
+                          transform: rotate(270deg);
+                        }
+                        83.3% {
+                          transform: rotate(300deg);
+                        }
+                        91.6% {
+                          transform: rotate(330deg);
+                        }
+                        100% {
+                          transform: rotate(360deg);
+                        }
+                      }
+                    </style>
+                    <g class="spinner_Wezc">
+                      <circle cx="12" cy="2.5" r="1.5" opacity=".14" />
+                      <circle cx="16.75" cy="3.77" r="1.5" opacity=".29" />
+                      <circle cx="20.23" cy="7.25" r="1.5" opacity=".43" />
+                      <circle cx="21.50" cy="12.00" r="1.5" opacity=".57" />
+                      <circle cx="20.23" cy="16.75" r="1.5" opacity=".71" />
+                      <circle cx="16.75" cy="20.23" r="1.5" opacity=".86" />
+                      <circle cx="12" cy="21.5" r="1.5" />
+                    </g>
+                  </svg>
+                  <svg viewBox="0 0 24 24" class="size-12">
+                    <style>
+                      .spinner_EUy1 {
+                        animation: spinner_grm3 1.2s infinite;
+                      }
+                      .spinner_f6oS {
+                        animation-delay: 0.1s;
+                      }
+                      .spinner_g3nX {
+                        animation-delay: 0.2s;
+                      }
+                      .spinner_nvEs {
+                        animation-delay: 0.3s;
+                      }
+                      .spinner_MaNM {
+                        animation-delay: 0.4s;
+                      }
+                      .spinner_4nle {
+                        animation-delay: 0.5s;
+                      }
+                      .spinner_ZETM {
+                        animation-delay: 0.6s;
+                      }
+                      .spinner_HXuO {
+                        animation-delay: 0.7s;
+                      }
+                      .spinner_YaQo {
+                        animation-delay: 0.8s;
+                      }
+                      .spinner_GOx1 {
+                        animation-delay: 0.9s;
+                      }
+                      .spinner_4vv9 {
+                        animation-delay: 1s;
+                      }
+                      .spinner_NTs9 {
+                        animation-delay: 1.1s;
+                      }
+                      .spinner_auJJ {
+                        transform-origin: center;
+                        animation: spinner_T3O6 6s linear infinite;
+                      }
+                      @keyframes spinner_grm3 {
+                        0%,
+                        50% {
+                          animation-timing-function: cubic-bezier(0.27, 0.42, 0.37, 0.99);
+                          r: 1px;
+                        }
+                        25% {
+                          animation-timing-function: cubic-bezier(0.53, 0, 0.61, 0.73);
+                          r: 2px;
+                        }
+                      }
+                      @keyframes spinner_T3O6 {
+                        0% {
+                          transform: rotate(360deg);
+                        }
+                        100% {
+                          transform: rotate(0deg);
+                        }
+                      }
+                    </style>
+                    <g class="spinner_auJJ">
+                      <circle class="spinner_EUy1" cx="12" cy="3" r="1" />
+                      <circle class="spinner_EUy1 spinner_f6oS" cx="16.50" cy="4.21" r="1" />
+                      <circle class="spinner_EUy1 spinner_NTs9" cx="7.50" cy="4.21" r="1" />
+                      <circle class="spinner_EUy1 spinner_g3nX" cx="19.79" cy="7.50" r="1" />
+                      <circle class="spinner_EUy1 spinner_4vv9" cx="4.21" cy="7.50" r="1" />
+                      <circle class="spinner_EUy1 spinner_nvEs" cx="21.00" cy="12.00" r="1" />
+                      <circle class="spinner_EUy1 spinner_GOx1" cx="3.00" cy="12.00" r="1" />
+                      <circle class="spinner_EUy1 spinner_MaNM" cx="19.79" cy="16.50" r="1" />
+                      <circle class="spinner_EUy1 spinner_YaQo" cx="4.21" cy="16.50" r="1" />
+                      <circle class="spinner_EUy1 spinner_4nle" cx="16.50" cy="19.79" r="1" />
+                      <circle class="spinner_EUy1 spinner_HXuO" cx="7.50" cy="19.79" r="1" />
+                      <circle class="spinner_EUy1 spinner_ZETM" cx="12" cy="21" r="1" />
+                    </g>
+                  </svg>
+                  <svg class="size-12" viewBox="0 0 24 24">
+                    <style>
+                      .spinner_GuJz {
+                        transform-origin: center;
+                        animation: spinner_STY6 1.5s linear infinite;
+                      }
+                      @keyframes spinner_STY6 {
+                        100% {
+                          transform: rotate(360deg);
+                        }
+                      }
+                    </style>
+                    <g class="spinner_GuJz">
+                      <circle cx="3" cy="12" r="2" />
+                      <circle cx="21" cy="12" r="2" />
+                      <circle cx="12" cy="21" r="2" />
+                      <circle cx="12" cy="3" r="2" />
+                      <circle cx="5.64" cy="5.64" r="2" />
+                      <circle cx="18.36" cy="18.36" r="2" />
+                      <circle cx="5.64" cy="18.36" r="2" />
+                      <circle cx="18.36" cy="5.64" r="2" />
+                    </g>
+                  </svg>
+                  <svg class="size-12" viewBox="0 0 24 24">
+                    <style>
+                      .spinner_OSmW {
+                        transform-origin: center;
+                        animation: spinner_T6mA 0.75s step-end infinite;
+                      }
+                      @keyframes spinner_T6mA {
+                        8.3% {
+                          transform: rotate(30deg);
+                        }
+                        16.6% {
+                          transform: rotate(60deg);
+                        }
+                        25% {
+                          transform: rotate(90deg);
+                        }
+                        33.3% {
+                          transform: rotate(120deg);
+                        }
+                        41.6% {
+                          transform: rotate(150deg);
+                        }
+                        50% {
+                          transform: rotate(180deg);
+                        }
+                        58.3% {
+                          transform: rotate(210deg);
+                        }
+                        66.6% {
+                          transform: rotate(240deg);
+                        }
+                        75% {
+                          transform: rotate(270deg);
+                        }
+                        83.3% {
+                          transform: rotate(300deg);
+                        }
+                        91.6% {
+                          transform: rotate(330deg);
+                        }
+                        100% {
+                          transform: rotate(360deg);
+                        }
+                      }
+                    </style>
+                    <g class="spinner_OSmW">
+                      <rect x="11" y="1" width="2" height="5" opacity=".14" />
+                      <rect
+                        x="11"
+                        y="1"
+                        width="2"
+                        height="5"
+                        transform="rotate(30 12 12)"
+                        opacity=".29"
+                      />
+                      <rect
+                        x="11"
+                        y="1"
+                        width="2"
+                        height="5"
+                        transform="rotate(60 12 12)"
+                        opacity=".43"
+                      />
+                      <rect
+                        x="11"
+                        y="1"
+                        width="2"
+                        height="5"
+                        transform="rotate(90 12 12)"
+                        opacity=".57"
+                      />
+                      <rect
+                        x="11"
+                        y="1"
+                        width="2"
+                        height="5"
+                        transform="rotate(120 12 12)"
+                        opacity=".71"
+                      />
+                      <rect
+                        x="11"
+                        y="1"
+                        width="2"
+                        height="5"
+                        transform="rotate(150 12 12)"
+                        opacity=".86"
+                      />
+                      <rect x="11" y="1" width="2" height="5" transform="rotate(180 12 12)" />
+                    </g>
+                  </svg>
+                </div>
+              </div>
+            </custom-frame>
+
+            <custom-frame title="Dots">
+              <div class="w-full p-8 md:p-12 bg-background">
+                <div class="w-full max-w-7xl mx-auto flex justify-center items-center gap-8">
+                  <svg class="size-12" viewBox="0 0 24 24">
+                    <style>
+                      .spinner_qM83 {
+                        animation: spinner_8HQG 1.05s infinite;
+                      }
+                      .spinner_oXPr {
+                        animation-delay: 0.1s;
+                      }
+                      .spinner_ZTLf {
+                        animation-delay: 0.2s;
+                      }
+                      @keyframes spinner_8HQG {
+                        0%,
+                        57.14% {
+                          animation-timing-function: cubic-bezier(0.33, 0.66, 0.66, 1);
+                          transform: translate(0);
+                        }
+                        28.57% {
+                          animation-timing-function: cubic-bezier(0.33, 0, 0.66, 0.33);
+                          transform: translateY(-6px);
+                        }
+                        100% {
+                          transform: translate(0);
+                        }
+                      }
+                    </style>
+                    <circle class="spinner_qM83" cx="4" cy="12" r="3" />
+                    <circle class="spinner_qM83 spinner_oXPr" cx="12" cy="12" r="3" />
+                    <circle class="spinner_qM83 spinner_ZTLf" cx="20" cy="12" r="3" />
+                  </svg>
+                  <svg class="size-12" viewBox="0 0 24 24">
+                    <style>
+                      .spinner_S1WN {
+                        animation: spinner_MGfb 0.8s linear infinite;
+                        animation-delay: -0.8s;
+                      }
+                      .spinner_Km9P {
+                        animation-delay: -0.65s;
+                      }
+                      .spinner_JApP {
+                        animation-delay: -0.5s;
+                      }
+                      @keyframes spinner_MGfb {
+                        93.75%,
+                        100% {
+                          opacity: 0.2;
+                        }
+                      }
+                    </style>
+                    <circle class="spinner_S1WN" cx="4" cy="12" r="3" />
+                    <circle class="spinner_S1WN spinner_Km9P" cx="12" cy="12" r="3" />
+                    <circle class="spinner_S1WN spinner_JApP" cx="20" cy="12" r="3" />
+                  </svg>
+                  <svg class="size-12" viewBox="0 0 24 24">
+                    <style>
+                      .spinner_nOfF {
+                        animation: spinner_qtyZ 2s cubic-bezier(0.36, 0.6, 0.31, 1) infinite;
+                      }
+                      .spinner_fVhf {
+                        animation-delay: -0.5s;
+                      }
+                      .spinner_piVe {
+                        animation-delay: -1s;
+                      }
+                      .spinner_MSNs {
+                        animation-delay: -1.5s;
+                      }
+                      @keyframes spinner_qtyZ {
+                        0% {
+                          r: 0;
+                        }
+                        25% {
+                          r: 3px;
+                          cx: 4px;
+                        }
+                        50% {
+                          r: 3px;
+                          cx: 12px;
+                        }
+                        75% {
+                          r: 3px;
+                          cx: 20px;
+                        }
+                        100% {
+                          r: 0;
+                          cx: 20px;
+                        }
+                      }
+                    </style>
+                    <circle class="spinner_nOfF" cx="4" cy="12" r="3" />
+                    <circle class="spinner_nOfF spinner_fVhf" cx="4" cy="12" r="3" />
+                    <circle class="spinner_nOfF spinner_piVe" cx="4" cy="12" r="3" />
+                    <circle class="spinner_nOfF spinner_MSNs" cx="4" cy="12" r="3" />
+                  </svg>
+                  <svg class="size-12" viewBox="0 0 24 24">
+                    <style>
+                      .spinner_HIK5 {
+                        transform-origin: center;
+                        animation: spinner_XVY9 1s cubic-bezier(0.36, 0.6, 0.31, 1) infinite;
+                      }
+                      @keyframes spinner_XVY9 {
+                        50% {
+                          transform: rotate(180deg);
+                        }
+                        100% {
+                          transform: rotate(360deg);
+                        }
+                      }
+                    </style>
+                    <circle cx="12" cy="12" r="3" />
+                    <g class="spinner_HIK5">
+                      <circle cx="4" cy="12" r="3" />
+                      <circle cx="20" cy="12" r="3" />
+                    </g>
+                  </svg>
+                  <svg class="size-12" viewBox="0 0 24 24">
+                    <style>
+                      .spinner_b2T7 {
+                        animation: spinner_xe7Q 0.8s linear infinite;
+                      }
+                      .spinner_YRVV {
+                        animation-delay: -0.65s;
+                      }
+                      .spinner_c9oY {
+                        animation-delay: -0.5s;
+                      }
+                      @keyframes spinner_xe7Q {
+                        93.75%,
+                        100% {
+                          r: 3px;
+                        }
+                        46.875% {
+                          r: 0.2px;
+                        }
+                      }
+                    </style>
+                    <circle class="spinner_b2T7" cx="4" cy="12" r="3" />
+                    <circle class="spinner_b2T7 spinner_YRVV" cx="12" cy="12" r="3" />
+                    <circle class="spinner_b2T7 spinner_c9oY" cx="20" cy="12" r="3" />
+                  </svg>
+                  <svg class="size-12" viewBox="0 0 24 24">
+                    <style>
+                      .spinner_I8Q1 {
+                        animation: spinner_qhi1 0.75s linear infinite;
+                      }
+                      .spinner_vrS7 {
+                        animation-delay: -0.375s;
+                      }
+                      @keyframes spinner_qhi1 {
+                        0%,
+                        100% {
+                          r: 1.5px;
+                        }
+                        50% {
+                          r: 3px;
+                        }
+                      }
+                    </style>
+                    <circle class="spinner_I8Q1" cx="4" cy="12" r="1.5" />
+                    <circle class="spinner_I8Q1 spinner_vrS7" cx="12" cy="12" r="3" />
+                    <circle class="spinner_I8Q1" cx="20" cy="12" r="1.5" />
+                  </svg>
+                  <svg class="size-12" viewBox="0 0 24 24">
+                    <style>
+                      .spinner_rXNP {
+                        animation: spinner_YeBj 0.8s infinite;
+                      }
+                      @keyframes spinner_YeBj {
+                        0% {
+                          animation-timing-function: cubic-bezier(0.33, 0, 0.66, 0.33);
+                          cy: 5px;
+                        }
+                        46.875% {
+                          cy: 20px;
+                          rx: 4px;
+                          ry: 4px;
+                        }
+                        50% {
+                          animation-timing-function: cubic-bezier(0.33, 0.66, 0.66, 1);
+                          cy: 20.5px;
+                          rx: 4.8px;
+                          ry: 3px;
+                        }
+                        53.125% {
+                          rx: 4px;
+                          ry: 4px;
+                        }
+                        100% {
+                          cy: 5px;
+                        }
+                      }
+                    </style>
+                    <ellipse class="spinner_rXNP" cx="12" cy="5" rx="4" ry="4" />
+                  </svg>
+                  <svg class="size-12" viewBox="0 0 24 24">
+                    <style>
+                      .spinner_8XMC {
+                        animation: spinner_0zVw 2s infinite;
+                      }
+                      .spinner_WWWR {
+                        animation: spinner_Aojx 2s infinite;
+                      }
+                      .spinner_LvYV {
+                        transform-origin: center;
+                        animation: spinner_xygp 0.75s linear infinite;
+                      }
+                      @keyframes spinner_0zVw {
+                        0% {
+                          animation-timing-function: cubic-bezier(0.36, 0.62, 0.43, 0.99);
+                          cx: 5px;
+                        }
+                        50% {
+                          animation-timing-function: cubic-bezier(0.79, 0, 0.58, 0.57);
+                          cx: 8px;
+                        }
+                      }
+                      @keyframes spinner_Aojx {
+                        0% {
+                          animation-timing-function: cubic-bezier(0.36, 0.62, 0.43, 0.99);
+                          cx: 19px;
+                        }
+                        50% {
+                          animation-timing-function: cubic-bezier(0.79, 0, 0.58, 0.57);
+                          cx: 16px;
+                        }
+                      }
+                      @keyframes spinner_xygp {
+                        100% {
+                          transform: rotate(360deg);
+                        }
+                      }
+                    </style>
+                    <defs>
+                      <filter id="spinner-gF01">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="1" result="y" />
+                        <feColorMatrix
+                          in="y"
+                          mode="matrix"
+                          values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 18 -7"
+                          result="z"
+                        />
+                        <feBlend in="SourceGraphic" in2="z" />
+                      </filter>
+                    </defs>
+                    <g class="spinner_LvYV" filter="url(#spinner-gF01)">
+                      <circle class="spinner_8XMC" cx="5" cy="12" r="4" />
+                      <circle class="spinner_WWWR" cx="19" cy="12" r="4" />
+                    </g>
+                  </svg>
+                  <svg class="size-12" viewBox="0 0 24 24">
+                    <style>
+                      .spinner_mHwL {
+                        animation: spinner_OeFQ 0.75s cubic-bezier(0.56, 0.52, 0.17, 0.98) infinite;
+                      }
+                      .spinner_ote2 {
+                        animation: spinner_ZEPt 0.75s cubic-bezier(0.56, 0.52, 0.17, 0.98) infinite;
+                      }
+                      @keyframes spinner_OeFQ {
+                        0% {
+                          cx: 4px;
+                          r: 3px;
+                        }
+                        50% {
+                          cx: 9px;
+                          r: 8px;
+                        }
+                      }
+                      @keyframes spinner_ZEPt {
+                        0% {
+                          cx: 15px;
+                          r: 8px;
+                        }
+                        50% {
+                          cx: 20px;
+                          r: 3px;
+                        }
+                      }
+                    </style>
+                    <defs>
+                      <filter id="spinner-gF00">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="1.5" result="y" />
+                        <feColorMatrix
+                          in="y"
+                          mode="matrix"
+                          values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 18 -7"
+                          result="z"
+                        />
+                        <feBlend in="SourceGraphic" in2="z" />
+                      </filter>
+                    </defs>
+                    <g filter="url(#spinner-gF00)">
+                      <circle class="spinner_mHwL" cx="4" cy="12" r="3" />
+                      <circle class="spinner_ote2" cx="15" cy="12" r="8" />
+                    </g>
+                  </svg>
+                </div>
+              </div>
+            </custom-frame>
+
+            <custom-frame title="Bars">
+              <div class="w-full p-8 md:p-12 bg-background">
+                <div class="w-full max-w-7xl mx-auto flex items-center justify-center gap-8">
+                  <svg class="size-12" viewBox="0 0 24 24">
+                    <style>
+                      .spinner_GmWz {
+                        animation: spinner_Ctle 0.8s linear infinite;
+                        animation-delay: -0.8s;
+                      }
+                      .spinner_NuDr {
+                        animation-delay: -0.65s;
+                      }
+                      .spinner_OlQ0 {
+                        animation-delay: -0.5s;
+                      }
+                      @keyframes spinner_Ctle {
+                        93.75%,
+                        100% {
+                          opacity: 0.2;
+                        }
+                      }
+                    </style>
+                    <rect class="spinner_GmWz" x="1" y="4" width="6" height="14" />
+                    <rect class="spinner_GmWz spinner_NuDr" x="9" y="4" width="6" height="14" />
+                    <rect class="spinner_GmWz spinner_OlQ0" x="17" y="4" width="6" height="14" />
+                  </svg>
+                  <svg class="size-12" viewBox="0 0 24 24">
+                    <style>
+                      .spinner_jCIR {
+                        animation: spinner_B8Vq 0.9s linear infinite;
+                        animation-delay: -0.9s;
+                      }
+                      .spinner_upm8 {
+                        animation-delay: -0.8s;
+                      }
+                      .spinner_2eL5 {
+                        animation-delay: -0.7s;
+                      }
+                      .spinner_Rp9l {
+                        animation-delay: -0.6s;
+                      }
+                      .spinner_dy3W {
+                        animation-delay: -0.5s;
+                      }
+                      @keyframes spinner_B8Vq {
+                        0%,
+                        66.66% {
+                          animation-timing-function: cubic-bezier(0.36, 0.61, 0.3, 0.98);
+                          y: 6px;
+                          height: 12px;
+                        }
+                        33.33% {
+                          animation-timing-function: cubic-bezier(0.36, 0.61, 0.3, 0.98);
+                          y: 1px;
+                          height: 22px;
+                        }
+                      }
+                    </style>
+                    <rect class="spinner_jCIR" x="1" y="6" width="2.8" height="12" />
+                    <rect class="spinner_jCIR spinner_upm8" x="5.8" y="6" width="2.8" height="12" />
+                    <rect
+                      class="spinner_jCIR spinner_2eL5"
+                      x="10.6"
+                      y="6"
+                      width="2.8"
+                      height="12"
+                    />
+                    <rect
+                      class="spinner_jCIR spinner_Rp9l"
+                      x="15.4"
+                      y="6"
+                      width="2.8"
+                      height="12"
+                    />
+                    <rect
+                      class="spinner_jCIR spinner_dy3W"
+                      x="20.2"
+                      y="6"
+                      width="2.8"
+                      height="12"
+                    />
+                  </svg>
+                  <svg class="size-12" viewBox="0 0 24 24">
+                    <style>
+                      .spinner_hzlK {
+                        animation: spinner_vc4H 0.8s linear infinite;
+                        animation-delay: -0.8s;
+                      }
+                      .spinner_koGT {
+                        animation-delay: -0.65s;
+                      }
+                      .spinner_YF1u {
+                        animation-delay: -0.5s;
+                      }
+                      @keyframes spinner_vc4H {
+                        0% {
+                          y: 1px;
+                          height: 22px;
+                        }
+                        93.75% {
+                          y: 5px;
+                          height: 14px;
+                          opacity: 0.2;
+                        }
+                      }
+                    </style>
+                    <rect class="spinner_hzlK" x="1" y="1" width="6" height="22" />
+                    <rect class="spinner_hzlK spinner_koGT" x="9" y="1" width="6" height="22" />
+                    <rect class="spinner_hzlK spinner_YF1u" x="17" y="1" width="6" height="22" />
+                  </svg>
+                  <svg class="size-12" viewBox="0 0 24 24">
+                    <style>
+                      .spinner_7uc5 {
+                        animation: spinner_3l8F 0.9s linear infinite;
+                        animation-delay: -0.9s;
+                      }
+                      .spinner_RibN {
+                        animation-delay: -0.7s;
+                      }
+                      .spinner_ZAxd {
+                        animation-delay: -0.5s;
+                      }
+                      @keyframes spinner_3l8F {
+                        0%,
+                        66.66% {
+                          animation-timing-function: cubic-bezier(0.14, 0.73, 0.34, 1);
+                          y: 6px;
+                          height: 12px;
+                        }
+                        33.33% {
+                          animation-timing-function: cubic-bezier(0.65, 0.26, 0.82, 0.45);
+                          y: 1px;
+                          height: 22px;
+                        }
+                      }
+                    </style>
+                    <rect class="spinner_7uc5 spinner_ZAxd" x="1" y="6" width="2.8" height="12" />
+                    <rect class="spinner_7uc5 spinner_RibN" x="5.8" y="6" width="2.8" height="12" />
+                    <rect class="spinner_7uc5" x="10.6" y="6" width="2.8" height="12" />
+                    <rect
+                      class="spinner_7uc5 spinner_RibN"
+                      x="15.4"
+                      y="6"
+                      width="2.8"
+                      height="12"
+                    />
+                    <rect
+                      class="spinner_7uc5 spinner_ZAxd"
+                      x="20.2"
+                      y="6"
+                      width="2.8"
+                      height="12"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </custom-frame>
+
+            <custom-frame title="Blocks">
+              <div class="w-full p-8 md:p-12 bg-background">
+                <div class="w-full max-w-7xl flex items-center justify-center gap-8">
+                  <svg class="size-12" viewBox="0 0 24 24">
+                    <style>
+                      .spinner_LWk7 {
+                        animation:
+                          spinner_GWy6 1.2s linear infinite,
+                          spinner_BNNO 1.2s linear infinite;
+                      }
+                      .spinner_yOMU {
+                        animation:
+                          spinner_GWy6 1.2s linear infinite,
+                          spinner_pVqn 1.2s linear infinite;
+                        animation-delay: 0.15s;
+                      }
+                      .spinner_KS4S {
+                        animation:
+                          spinner_GWy6 1.2s linear infinite,
+                          spinner_6uKB 1.2s linear infinite;
+                        animation-delay: 0.3s;
+                      }
+                      .spinner_zVee {
+                        animation:
+                          spinner_GWy6 1.2s linear infinite,
+                          spinner_Qw4x 1.2s linear infinite;
+                        animation-delay: 0.45s;
+                      }
+                      @keyframes spinner_GWy6 {
+                        0%,
+                        50% {
+                          width: 9px;
+                          height: 9px;
+                        }
+                        10% {
+                          width: 11px;
+                          height: 11px;
+                        }
+                      }
+                      @keyframes spinner_BNNO {
+                        0%,
+                        50% {
+                          x: 1.5px;
+                          y: 1.5px;
+                        }
+                        10% {
+                          x: 0.5px;
+                          y: 0.5px;
+                        }
+                      }
+                      @keyframes spinner_pVqn {
+                        0%,
+                        50% {
+                          x: 13.5px;
+                          y: 1.5px;
+                        }
+                        10% {
+                          x: 12.5px;
+                          y: 0.5px;
+                        }
+                      }
+                      @keyframes spinner_6uKB {
+                        0%,
+                        50% {
+                          x: 13.5px;
+                          y: 13.5px;
+                        }
+                        10% {
+                          x: 12.5px;
+                          y: 12.5px;
+                        }
+                      }
+                      @keyframes spinner_Qw4x {
+                        0%,
+                        50% {
+                          x: 1.5px;
+                          y: 13.5px;
+                        }
+                        10% {
+                          x: 0.5px;
+                          y: 12.5px;
+                        }
+                      }
+                    </style>
+                    <rect class="spinner_LWk7" x="1.5" y="1.5" rx="1" width="9" height="9" />
+                    <rect class="spinner_yOMU" x="13.5" y="1.5" rx="1" width="9" height="9" />
+                    <rect class="spinner_KS4S" x="13.5" y="13.5" rx="1" width="9" height="9" />
+                    <rect class="spinner_zVee" x="1.5" y="13.5" rx="1" width="9" height="9" />
+                  </svg>
+                  <svg class="size-12" viewBox="0 0 24 24">
+                    <style>
+                      .spinner_9Mto {
+                        animation: spinner_5GqJ 1.6s linear infinite;
+                        animation-delay: -1.6s;
+                      }
+                      .spinner_bb12 {
+                        animation-delay: -1s;
+                      }
+                      @keyframes spinner_5GqJ {
+                        12.5% {
+                          x: 13px;
+                          y: 1px;
+                        }
+                        25% {
+                          x: 13px;
+                          y: 1px;
+                        }
+                        37.5% {
+                          x: 13px;
+                          y: 13px;
+                        }
+                        50% {
+                          x: 13px;
+                          y: 13px;
+                        }
+                        62.5% {
+                          x: 1px;
+                          y: 13px;
+                        }
+                        75% {
+                          x: 1px;
+                          y: 13px;
+                        }
+                        87.5% {
+                          x: 1px;
+                          y: 1px;
+                        }
+                      }
+                    </style>
+                    <rect class="spinner_9Mto" x="1" y="1" rx="1" width="10" height="10" />
+                    <rect
+                      class="spinner_9Mto spinner_bb12"
+                      x="1"
+                      y="1"
+                      rx="1"
+                      width="10"
+                      height="10"
+                    />
+                  </svg>
+                  <svg class="size-12" viewBox="0 0 24 24">
+                    <style>
+                      .spinner_9y7u {
+                        animation: spinner_fUkk 2.4s linear infinite;
+                        animation-delay: -2.4s;
+                      }
+                      .spinner_DF2s {
+                        animation-delay: -1.6s;
+                      }
+                      .spinner_q27e {
+                        animation-delay: -0.8s;
+                      }
+                      @keyframes spinner_fUkk {
+                        8.33% {
+                          x: 13px;
+                          y: 1px;
+                        }
+                        25% {
+                          x: 13px;
+                          y: 1px;
+                        }
+                        33.3% {
+                          x: 13px;
+                          y: 13px;
+                        }
+                        50% {
+                          x: 13px;
+                          y: 13px;
+                        }
+                        58.33% {
+                          x: 1px;
+                          y: 13px;
+                        }
+                        75% {
+                          x: 1px;
+                          y: 13px;
+                        }
+                        83.33% {
+                          x: 1px;
+                          y: 1px;
+                        }
+                      }
+                    </style>
+                    <rect class="spinner_9y7u" x="1" y="1" rx="1" width="10" height="10" />
+                    <rect
+                      class="spinner_9y7u spinner_DF2s"
+                      x="1"
+                      y="1"
+                      rx="1"
+                      width="10"
+                      height="10"
+                    />
+                    <rect
+                      class="spinner_9y7u spinner_q27e"
+                      x="1"
+                      y="1"
+                      rx="1"
+                      width="10"
+                      height="10"
+                    />
+                  </svg>
+                  <svg class="size-12" viewBox="0 0 24 24">
+                    <style>
+                      .spinner_zWVm {
+                        animation:
+                          spinner_5QiW 1.2s linear infinite,
+                          spinner_PnZo 1.2s linear infinite;
+                      }
+                      .spinner_gfyD {
+                        animation:
+                          spinner_5QiW 1.2s linear infinite,
+                          spinner_4j7o 1.2s linear infinite;
+                        animation-delay: 0.1s;
+                      }
+                      .spinner_T5JJ {
+                        animation:
+                          spinner_5QiW 1.2s linear infinite,
+                          spinner_fLK4 1.2s linear infinite;
+                        animation-delay: 0.1s;
+                      }
+                      .spinner_E3Wz {
+                        animation:
+                          spinner_5QiW 1.2s linear infinite,
+                          spinner_tDji 1.2s linear infinite;
+                        animation-delay: 0.2s;
+                      }
+                      .spinner_g2vs {
+                        animation:
+                          spinner_5QiW 1.2s linear infinite,
+                          spinner_CMiT 1.2s linear infinite;
+                        animation-delay: 0.2s;
+                      }
+                      .spinner_ctYB {
+                        animation:
+                          spinner_5QiW 1.2s linear infinite,
+                          spinner_cHKR 1.2s linear infinite;
+                        animation-delay: 0.2s;
+                      }
+                      .spinner_BDNj {
+                        animation:
+                          spinner_5QiW 1.2s linear infinite,
+                          spinner_Re6e 1.2s linear infinite;
+                        animation-delay: 0.3s;
+                      }
+                      .spinner_rCw3 {
+                        animation:
+                          spinner_5QiW 1.2s linear infinite,
+                          spinner_EJmJ 1.2s linear infinite;
+                        animation-delay: 0.3s;
+                      }
+                      .spinner_Rszm {
+                        animation:
+                          spinner_5QiW 1.2s linear infinite,
+                          spinner_YJOP 1.2s linear infinite;
+                        animation-delay: 0.4s;
+                      }
+                      @keyframes spinner_5QiW {
+                        0%,
+                        50% {
+                          width: 7.33px;
+                          height: 7.33px;
+                        }
+                        25% {
+                          width: 1.33px;
+                          height: 1.33px;
+                        }
+                      }
+                      @keyframes spinner_PnZo {
+                        0%,
+                        50% {
+                          x: 1px;
+                          y: 1px;
+                        }
+                        25% {
+                          x: 4px;
+                          y: 4px;
+                        }
+                      }
+                      @keyframes spinner_4j7o {
+                        0%,
+                        50% {
+                          x: 8.33px;
+                          y: 1px;
+                        }
+                        25% {
+                          x: 11.33px;
+                          y: 4px;
+                        }
+                      }
+                      @keyframes spinner_fLK4 {
+                        0%,
+                        50% {
+                          x: 1px;
+                          y: 8.33px;
+                        }
+                        25% {
+                          x: 4px;
+                          y: 11.33px;
+                        }
+                      }
+                      @keyframes spinner_tDji {
+                        0%,
+                        50% {
+                          x: 15.66px;
+                          y: 1px;
+                        }
+                        25% {
+                          x: 18.66px;
+                          y: 4px;
+                        }
+                      }
+                      @keyframes spinner_CMiT {
+                        0%,
+                        50% {
+                          x: 8.33px;
+                          y: 8.33px;
+                        }
+                        25% {
+                          x: 11.33px;
+                          y: 11.33px;
+                        }
+                      }
+                      @keyframes spinner_cHKR {
+                        0%,
+                        50% {
+                          x: 1px;
+                          y: 15.66px;
+                        }
+                        25% {
+                          x: 4px;
+                          y: 18.66px;
+                        }
+                      }
+                      @keyframes spinner_Re6e {
+                        0%,
+                        50% {
+                          x: 15.66px;
+                          y: 8.33px;
+                        }
+                        25% {
+                          x: 18.66px;
+                          y: 11.33px;
+                        }
+                      }
+                      @keyframes spinner_EJmJ {
+                        0%,
+                        50% {
+                          x: 8.33px;
+                          y: 15.66px;
+                        }
+                        25% {
+                          x: 11.33px;
+                          y: 18.66px;
+                        }
+                      }
+                      @keyframes spinner_YJOP {
+                        0%,
+                        50% {
+                          x: 15.66px;
+                          y: 15.66px;
+                        }
+                        25% {
+                          x: 18.66px;
+                          y: 18.66px;
+                        }
+                      }
+                    </style>
+                    <rect class="spinner_zWVm" x="1" y="1" width="7.33" height="7.33" />
+                    <rect class="spinner_gfyD" x="8.33" y="1" width="7.33" height="7.33" />
+                    <rect class="spinner_T5JJ" x="1" y="8.33" width="7.33" height="7.33" />
+                    <rect class="spinner_E3Wz" x="15.66" y="1" width="7.33" height="7.33" />
+                    <rect class="spinner_g2vs" x="8.33" y="8.33" width="7.33" height="7.33" />
+                    <rect class="spinner_ctYB" x="1" y="15.66" width="7.33" height="7.33" />
+                    <rect class="spinner_BDNj" x="15.66" y="8.33" width="7.33" height="7.33" />
+                    <rect class="spinner_rCw3" x="8.33" y="15.66" width="7.33" height="7.33" />
+                    <rect class="spinner_Rszm" x="15.66" y="15.66" width="7.33" height="7.33" />
+                  </svg>
+                </div>
+              </div>
+            </custom-frame>
+          </div>
+        </section>
+
+        <custom-cta></custom-cta>
+
+        <custom-footer></custom-footer>
+      </div>
+    </main>
+  </body>
+</html>
