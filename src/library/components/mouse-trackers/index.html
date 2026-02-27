@@ -107,11 +107,52 @@
 
         <section class="sect">
           <div class="sect-container">
-            <custom-frame title="Quote cards">
-              <div class="w-full p-4 md:p-6 bg-background">
+            <custom-frame title="Simple dot">
+              <div class="w-full min-h-64 bg-background">
                 <div
                   class="flex gap-6 items-stretch justify-center w-full flex-wrap max-w-7xl mx-auto"
-                ></div>
+                >
+                  <div
+                    id="tracker-1"
+                    class="size-4 bg-primary rounded-full fixed z-99 top-0 left-0 -translate-x-1/2 -translate-y-1/2"
+                  ></div>
+                  <script>
+                    const tracker = document.getElementById("tracker-1");
+                    document.addEventListener("mousemove", (e) => {
+                      tracker.animate(
+                        {
+                          left: `${e.clientX}px`,
+                          top: `${e.clientY}px`,
+                        },
+                        { duration: 400, fill: "forwards" },
+                      );
+                    });
+                  </script>
+                </div>
+              </div>
+            </custom-frame>
+            <custom-frame title="Bordered circle">
+              <div class="w-full min-h-64 bg-background">
+                <div
+                  class="flex gap-6 items-stretch justify-center w-full flex-wrap max-w-7xl mx-auto"
+                >
+                  <div
+                    id="tracker-2"
+                    class="size-16 bg-primary/10 border border-primary rounded-full fixed z-99 top-0 left-0 -translate-x-1/2 -translate-y-1/2"
+                  ></div>
+                  <script>
+                    const tracker2 = document.getElementById("tracker-2");
+                    document.addEventListener("mousemove", (e) => {
+                      tracker2.animate(
+                        {
+                          left: `${e.clientX}px`,
+                          top: `${e.clientY}px`,
+                        },
+                        { duration: 400, fill: "forwards" },
+                      );
+                    });
+                  </script>
+                </div>
               </div>
             </custom-frame>
           </div>
