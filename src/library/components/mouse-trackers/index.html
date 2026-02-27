@@ -114,7 +114,7 @@
                 >
                   <div
                     id="tracker-1"
-                    class="size-4 bg-primary rounded-full fixed z-99 top-0 left-0 -translate-x-1/2 -translate-y-1/2"
+                    class="size-4 bg-primary rounded-full fixed z-99 top-0 left-0 -translate-x-1/2 -translate-y-1/2 pointer-events-none"
                   ></div>
                   <script>
                     const tracker = document.getElementById("tracker-1");
@@ -138,7 +138,7 @@
                 >
                   <div
                     id="tracker-2"
-                    class="size-16 bg-primary/10 border border-primary rounded-full fixed z-99 top-0 left-0 -translate-x-1/2 -translate-y-1/2"
+                    class="size-16 bg-primary/10 border border-primary rounded-full fixed z-99 top-0 left-0 -translate-x-1/2 -translate-y-1/2 pointer-events-none"
                   ></div>
                   <script>
                     const tracker2 = document.getElementById("tracker-2");
@@ -151,6 +151,122 @@
                         { duration: 400, fill: "forwards" },
                       );
                     });
+                  </script>
+                </div>
+              </div>
+            </custom-frame>
+
+            <custom-frame title="Multi-dot trail">
+              <div class="w-full min-h-64 bg-background">
+                <div
+                  class="flex gap-6 items-stretch justify-center w-full flex-wrap max-w-7xl mx-auto"
+                >
+                  <div
+                    id="trail-1"
+                    class="size-4 bg-primary rounded-full fixed z-99 top-0 left-0 -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+                  ></div>
+                  <div
+                    id="trail-2"
+                    class="size-3 bg-primary/70 rounded-full fixed z-99 top-0 left-0 -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+                  ></div>
+                  <div
+                    id="trail-3"
+                    class="size-2 bg-primary/40 rounded-full fixed z-99 top-0 left-0 -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+                  ></div>
+                  <div
+                    id="trail-4"
+                    class="size-1.5 bg-primary/20 rounded-full fixed z-99 top-0 left-0 -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+                  ></div>
+                  <script>
+                    {
+                      const dots = [
+                        { el: document.getElementById("trail-1"), delay: 0 },
+                        { el: document.getElementById("trail-2"), delay: 100 },
+                        { el: document.getElementById("trail-3"), delay: 200 },
+                        { el: document.getElementById("trail-4"), delay: 300 },
+                      ];
+                      document.addEventListener("mousemove", (e) => {
+                        dots.forEach((dot) => {
+                          dot.el.animate(
+                            {
+                              left: `${e.clientX}px`,
+                              top: `${e.clientY}px`,
+                            },
+                            { duration: 400 + dot.delay, fill: "forwards" },
+                          );
+                        });
+                      });
+                    }
+                  </script>
+                </div>
+              </div>
+            </custom-frame>
+
+            <custom-frame title="Glow">
+              <div class="w-full min-h-64 bg-background">
+                <div
+                  class="flex gap-6 items-stretch justify-center w-full flex-wrap max-w-7xl mx-auto"
+                >
+                  <div
+                    id="glow-tracker"
+                    class="size-32 bg-primary/20 rounded-full fixed z-99 top-0 left-0 -translate-x-1/2 -translate-y-1/2 blur-3xl pointer-events-none"
+                  ></div>
+                  <script>
+                    {
+                      const glow = document.getElementById("glow-tracker");
+                      document.addEventListener("mousemove", (e) => {
+                        glow.animate(
+                          {
+                            left: `${e.clientX}px`,
+                            top: `${e.clientY}px`,
+                          },
+                          {
+                            duration: 1000,
+                            fill: "forwards",
+                            easing: "ease-out",
+                          },
+                        );
+                      });
+                    }
+                  </script>
+                </div>
+              </div>
+            </custom-frame>
+
+            <custom-frame title="Stretchy velocity blob">
+              <div class="w-full min-h-64 bg-background">
+                <div
+                  class="flex gap-6 items-stretch justify-center w-full flex-wrap max-w-7xl mx-auto"
+                >
+                  <div
+                    id="stretchy-tracker"
+                    class="size-4 bg-primary rounded-full fixed z-99 top-0 left-0 -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+                  ></div>
+                  <script>
+                    {
+                      const tracker = document.getElementById("stretchy-tracker");
+                      let lastX = 0;
+                      let lastY = 0;
+
+                      document.addEventListener("mousemove", (e) => {
+                        const dx = e.clientX - lastX;
+                        const dy = e.clientY - lastY;
+                        const speed = Math.min(Math.sqrt(dx * dx + dy * dy) / 20, 0.5);
+                        const angle = (Math.atan2(dy, dx) * 180) / Math.PI;
+
+                        tracker.animate(
+                          {
+                            left: `${e.clientX}px`,
+                            top: `${e.clientY}px`,
+                            transform: `rotate(${angle}deg) scale(${1 + speed}, ${1 - speed * 0.5})`,
+                          },
+                          { duration: 400, fill: "forwards" },
+                        );
+
+                        lastX = e.clientX;
+                        lastY = e.clientY;
+                      });
+                    }
                   </script>
                 </div>
               </div>
