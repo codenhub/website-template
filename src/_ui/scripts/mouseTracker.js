@@ -1,32 +1,30 @@
-export default function initMouseTracker() {
-  const mouseTracker = document.createElement("div");
-  mouseTracker.classList.add("mouse-tracker");
-  document.body.appendChild(mouseTracker);
+const mouseTracker = document.createElement("div");
+mouseTracker.classList.add("mouse-tracker");
+document.body.appendChild(mouseTracker);
 
-  let moveTimer;
+let moveTimer;
 
-  const cursorMoving = () => {
-    mouseTracker.classList.add("moving");
+const cursorMoving = () => {
+  mouseTracker.classList.add("moving");
 
-    clearTimeout(moveTimer);
-    moveTimer = setTimeout(() => {
-      mouseTracker.classList.remove("moving");
-    }, 100);
-  };
+  clearTimeout(moveTimer);
+  moveTimer = setTimeout(() => {
+    mouseTracker.classList.remove("moving");
+  }, 100);
+};
 
-  document.addEventListener("mousemove", async (e) => {
-    const { clientX, clientY } = e;
+document.addEventListener("mousemove", async (e) => {
+  const { clientX, clientY } = e;
 
-    mouseTracker.animate(
-      {
-        left: `${clientX}px`,
-        top: `${clientY}px`,
-      },
-      { duration: 400, fill: "forwards" },
-    );
+  mouseTracker.animate(
+    {
+      left: `${clientX}px`,
+      top: `${clientY}px`,
+    },
+    { duration: 400, fill: "forwards" },
+  );
 
-    cursorMoving();
-  });
+  cursorMoving();
+});
 
-  document.addEventListener("scroll", cursorMoving);
-}
+document.addEventListener("scroll", cursorMoving);
