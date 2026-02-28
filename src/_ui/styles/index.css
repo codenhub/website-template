@@ -51,6 +51,15 @@
     @apply select-none;
   }
 
+  ::selection {
+    @apply bg-primary text-primary-contrast;
+  }
+
+  .selection-contrast::selection,
+  .selection-contrast *::selection {
+    @apply bg-background text-text;
+  }
+
   h1 {
     @apply text-6xl md:text-8xl font-title tracking-tight;
   }
