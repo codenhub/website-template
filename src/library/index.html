@@ -10,7 +10,7 @@
       content="A curated collection of reusable UI components built with TailwindCSS. Browse buttons, cards, headers, footers, and more."
     />
 
-    <title>Components Library</title>
+    <title>UI Library</title>
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="stylesheet" href="../_ui/main.css" />
     <script type="module" src="../_ui/components/index.js" defer></script>
@@ -110,7 +110,7 @@
         <section class="sect relative overflow-hidden">
           <div class="sect-container text-center">
             <span
-              class="flex items-center gap-2 px-4 py-2 rounded-full border border-border bg-foreground text-text-secondary text-xs font-medium tracking-widest uppercase slide-down-in"
+              class="flex items-center gap-2 px-4 py-2 rounded-full bg-surface text-text-secondary text-xs font-medium tracking-widest uppercase slide-down-in"
             >
               <svg
                 viewBox="0 0 800 800"
@@ -168,22 +168,22 @@
         <section class="sect">
           <div class="sect-container flex-row flex-wrap justify-center gap-12 max-md:gap-6">
             <div class="flex flex-col items-center gap-1 slide-right-in">
-              <p class="text-3xl font-title tracking-tight">70+</p>
+              <p class="text-3xl md:text-5xl font-title tracking-tight">100+</p>
               <p class="text-xs text-text-secondary tracking-widest uppercase">Components</p>
             </div>
             <div class="w-px h-10 bg-border max-md:hidden" aria-hidden="true"></div>
             <div class="flex flex-col items-center gap-1 slide-up-in">
-              <p class="text-3xl font-title tracking-tight">6+</p>
+              <p class="text-3xl md:text-5xl font-title tracking-tight">5+</p>
               <p class="text-xs text-text-secondary tracking-widest uppercase">Pages</p>
             </div>
             <div class="w-px h-10 bg-border max-md:hidden" aria-hidden="true"></div>
             <div class="flex flex-col items-center gap-1 slide-up-in">
-              <p class="text-3xl font-title tracking-tight">100%</p>
+              <p class="text-3xl md:text-5xl font-title tracking-tight">100%</p>
               <p class="text-xs text-text-secondary tracking-widest uppercase">TailwindCSS</p>
             </div>
             <div class="w-px h-10 bg-border max-md:hidden" aria-hidden="true"></div>
             <div class="flex flex-col items-center gap-1 slide-left-in">
-              <p class="text-3xl font-title tracking-tight">Free &</p>
+              <p class="text-3xl md:text-5xl font-title tracking-tight">Free &</p>
               <p class="text-xs text-text-secondary tracking-widest uppercase">Open source</p>
             </div>
           </div>
@@ -192,18 +192,39 @@
         <!-- AVAILABLE COMPONENTS -->
         <section id="components" class="sect">
           <div class="sect-container">
-            <h2 class="split-chars">Available Components</h2>
+            <div class="flex items-center w-full justify-between">
+              <h2 class="split-chars">Components</h2>
+              <a href="./components/" class="flex items-center gap-2 text-sm font-semibold">
+                View all components
+                <img
+                  src="/assets/icons/arrow-up.svg"
+                  alt="Arrow icon"
+                  class="size-4 rotate-90 group-hover:translate-x-1 transition-transform duration-400"
+                />
+              </a>
+            </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
-              <!-- BUTTONS -->
-              <a id="component-buttons" href="./buttons/" class="group card slide-up-in">
+              <!-- BLOG -->
+              <a id="component-blog" href="./components/blog/" class="group card slide-up-in">
                 <div class="flex justify-between">
                   <div
                     class="flex items-center justify-center size-12 rounded-lg bg-foreground group-hover:bg-primary group-hover:text-primary-contrast transition-colors duration-400"
                   >
-                    <svg viewBox="0 0 1920 1920" class="size-6" fill="currentColor">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      class="size-6"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
                       <path
-                        d="M0 426.667C0 191.025 191.025 0 426.667 0c235.641 0 426.666 191.025 426.666 426.667 0 235.641-191.025 426.666-426.666 426.666C191.025 853.333 0 662.308 0 426.667zm853.333 640.003V1920H0v-853.33h853.333zM1360 1920v-346.67h-346.67v-160H1360v-346.66h160v346.66h346.67v160H1520V1920h-160zm560-1066.667L1440 0 960 853.333h960z"
+                        d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"
                       />
+                      <path d="M18 14h-8" />
+                      <path d="M15 18h-5" />
+                      <path d="M10 6h8v4h-8V6Z" />
                     </svg>
                   </div>
                   <span
@@ -212,10 +233,9 @@
                     4 variants
                   </span>
                 </div>
-                <h4>Buttons</h4>
+                <h4>Blog</h4>
                 <p class="text-text-secondary -mt-2">
-                  Flat, shadow, outline, and neobrutalism styles with primary, secondary, and ghost
-                  variants.
+                  Three column grid, featured with side list, and minimal list blog post layouts.
                 </p>
                 <button class="flex items-center gap-2 text-sm font-semibold mt-auto">
                   View component
@@ -242,74 +262,12 @@
                   <span
                     class="px-2 py-1 text-xs rounded-full bg-foreground text-text-secondary size-fit"
                   >
-                    5 variants
+                    10 variants
                   </span>
                 </div>
                 <h4>Cards</h4>
                 <p class="text-text-secondary -mt-2">
                   Flat, border, neobrutalism, glassmorphism, and neumorphism card layouts.
-                </p>
-                <button class="flex items-center gap-2 text-sm font-semibold mt-auto">
-                  View component
-                  <img
-                    src="/assets/icons/arrow-up.svg"
-                    alt="Arrow icon"
-                    class="size-4 rotate-90 group-hover:translate-x-1 transition-transform duration-400"
-                  />
-                </button>
-              </a>
-
-              <!-- HEADERS -->
-              <a id="component-buttons" href="./buttons/" class="group card slide-up-in">
-                <div class="flex justify-between">
-                  <div
-                    class="flex items-center justify-center size-12 rounded-lg bg-foreground group-hover:bg-primary group-hover:text-primary-contrast transition-colors duration-400"
-                  >
-                    <svg viewBox="0 0 35 35" fill="currentColor" class="size-6 rotate-180">
-                      <path d="M0,0v25.366h35V0H0z M32.879,23.245H2.121V2.121h30.758V23.245z" />
-                      <rect y="28.283" width="35" height="6.717" />
-                    </svg>
-                  </div>
-                  <span
-                    class="px-2 py-1 text-xs rounded-full bg-foreground text-text-secondary size-fit"
-                  >
-                    3 variants
-                  </span>
-                </div>
-                <h4>Headers</h4>
-                <p class="text-text-secondary -mt-2">
-                  Default, centered, and dropdown navigation headers with responsive mobile menus.
-                </p>
-                <button class="flex items-center gap-2 text-sm font-semibold mt-auto">
-                  View component
-                  <img
-                    src="/assets/icons/arrow-up.svg"
-                    alt="Arrow icon"
-                    class="size-4 rotate-90 group-hover:translate-x-1 transition-transform duration-400"
-                  />
-                </button>
-              </a>
-
-              <!-- FOOTERS -->
-              <a id="component-buttons" href="./buttons/" class="group card slide-up-in">
-                <div class="flex justify-between">
-                  <div
-                    class="flex items-center justify-center size-12 rounded-lg bg-foreground group-hover:bg-primary group-hover:text-primary-contrast transition-colors duration-400"
-                  >
-                    <svg viewBox="0 0 35 35" fill="currentColor" class="size-6">
-                      <path d="M0,0v25.366h35V0H0z M32.879,23.245H2.121V2.121h30.758V23.245z" />
-                      <rect y="28.283" width="35" height="6.717" />
-                    </svg>
-                  </div>
-                  <span
-                    class="px-2 py-1 text-xs rounded-full bg-foreground text-text-secondary size-fit"
-                  >
-                    5 variants
-                  </span>
-                </div>
-                <h4>Footers</h4>
-                <p class="text-text-secondary -mt-2">
-                  Default, light, top-rounded, full-rounded, and glassmorphism footer layouts.
                 </p>
                 <button class="flex items-center gap-2 text-sm font-semibold mt-auto">
                   View component
@@ -344,46 +302,12 @@
                   <span
                     class="px-2 py-1 text-xs rounded-full bg-foreground text-text-secondary size-fit"
                   >
-                    3 variants
+                    11 variants
                   </span>
                 </div>
                 <h4>Call to Action</h4>
                 <p class="text-text-secondary -mt-2">
                   Flat, background image, and neobrutalism CTA banners with dual-button layouts.
-                </p>
-                <button class="flex items-center gap-2 text-sm font-semibold mt-auto">
-                  View component
-                  <img
-                    src="/assets/icons/arrow-up.svg"
-                    alt="Arrow icon"
-                    class="size-4 rotate-90 group-hover:translate-x-1 transition-transform duration-400"
-                  />
-                </button>
-              </a>
-
-              <!-- CONTACT -->
-              <a id="component-buttons" href="./buttons/" class="group card slide-up-in">
-                <div class="flex justify-between">
-                  <div
-                    class="flex items-center justify-center size-12 rounded-lg bg-foreground group-hover:bg-primary group-hover:text-primary-contrast transition-colors duration-400"
-                  >
-                    <svg viewBox="0 0 24 24" fill="currentColor" class="size-6">
-                      <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
-                        d="M3.58579 2.58579C3 3.17157 3 4.11438 3 6V16C3 18.8284 3 20.2426 3.87868 21.1213C4.51998 21.7626 5.44655 21.9359 7 21.9827V19C7 18.4477 7.44772 18 8 18C8.55228 18 9 18.4477 9 19L9 22H15V19C15 18.4477 15.4477 18 16 18C16.5523 18 17 18.4477 17 19L17 21.9827C18.5534 21.9359 19.48 21.7626 20.1213 21.1213C21 20.2426 21 18.8284 21 16V6C21 4.11438 21 3.17157 20.4142 2.58579C19.8284 2 18.8856 2 17 2H7C5.11438 2 4.17157 2 3.58579 2.58579ZM8 8C7.44772 8 7 8.44772 7 9C7 9.55228 7.44772 10 8 10H16C16.5523 10 17 9.55228 17 9C17 8.44772 16.5523 8 16 8H8ZM8 14L16 14C16.5523 14 17 13.5523 17 13C17 12.4477 16.5523 12 16 12L8 12C7.44772 12 7 12.4477 7 13C7 13.5523 7.44772 14 8 14Z"
-                      />
-                    </svg>
-                  </div>
-                  <span
-                    class="px-2 py-1 text-xs rounded-full bg-foreground text-text-secondary size-fit"
-                  >
-                    2 variants
-                  </span>
-                </div>
-                <h4>Contact</h4>
-                <p class="text-text-secondary -mt-2">
-                  Form with map and info cards with map layouts, including embedded Google Maps.
                 </p>
                 <button class="flex items-center gap-2 text-sm font-semibold mt-auto">
                   View component
@@ -439,167 +363,26 @@
                 </button>
               </a>
 
-              <!-- STATS -->
-              <a id="component-stats" href="./components/stats/" class="group card slide-up-in">
+              <!-- FOOTERS -->
+              <a id="component-buttons" href="./buttons/" class="group card slide-up-in">
                 <div class="flex justify-between">
                   <div
                     class="flex items-center justify-center size-12 rounded-lg bg-foreground group-hover:bg-primary group-hover:text-primary-contrast transition-colors duration-400"
                   >
-                    <svg
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      class="size-6"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    >
-                      <path d="M3 3v18h18" />
-                      <path d="M18 17V9" />
-                      <path d="M13 17V5" />
-                      <path d="M8 17v-3" />
+                    <svg viewBox="0 0 35 35" fill="currentColor" class="size-6">
+                      <path d="M0,0v25.366h35V0H0z M32.879,23.245H2.121V2.121h30.758V23.245z" />
+                      <rect y="28.283" width="35" height="6.717" />
                     </svg>
                   </div>
                   <span
                     class="px-2 py-1 text-xs rounded-full bg-foreground text-text-secondary size-fit"
                   >
-                    4 variants
+                    5 variants
                   </span>
                 </div>
-                <h4>Stats</h4>
+                <h4>Footers</h4>
                 <p class="text-text-secondary -mt-2">
-                  Simple row, dividers, cards with icons, and dark banner statistics sections.
-                </p>
-                <button class="flex items-center gap-2 text-sm font-semibold mt-auto">
-                  View component
-                  <img
-                    src="/assets/icons/arrow-up.svg"
-                    alt="Arrow icon"
-                    class="size-4 rotate-90 group-hover:translate-x-1 transition-transform duration-400"
-                  />
-                </button>
-              </a>
-
-              <!-- TEAM -->
-              <a id="component-team" href="./components/team/" class="group card slide-up-in">
-                <div class="flex justify-between">
-                  <div
-                    class="flex items-center justify-center size-12 rounded-lg bg-foreground group-hover:bg-primary group-hover:text-primary-contrast transition-colors duration-400"
-                  >
-                    <svg
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      class="size-6"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    >
-                      <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-                      <circle cx="9" cy="7" r="4" />
-                      <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
-                      <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-                    </svg>
-                  </div>
-                  <span
-                    class="px-2 py-1 text-xs rounded-full bg-foreground text-text-secondary size-fit"
-                  >
-                    3 variants
-                  </span>
-                </div>
-                <h4>Team</h4>
-                <p class="text-text-secondary -mt-2">
-                  Simple grid, cards with bio, and compact list team member layouts with social
-                  links.
-                </p>
-                <button class="flex items-center gap-2 text-sm font-semibold mt-auto">
-                  View component
-                  <img
-                    src="/assets/icons/arrow-up.svg"
-                    alt="Arrow icon"
-                    class="size-4 rotate-90 group-hover:translate-x-1 transition-transform duration-400"
-                  />
-                </button>
-              </a>
-
-              <!-- LOGO CLOUD -->
-              <a
-                id="component-logo-cloud"
-                href="./components/logo-cloud/"
-                class="group card slide-up-in"
-              >
-                <div class="flex justify-between">
-                  <div
-                    class="flex items-center justify-center size-12 rounded-lg bg-foreground group-hover:bg-primary group-hover:text-primary-contrast transition-colors duration-400"
-                  >
-                    <svg
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      class="size-6"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    >
-                      <rect width="7" height="7" x="3" y="3" rx="1" />
-                      <rect width="7" height="7" x="14" y="3" rx="1" />
-                      <rect width="7" height="7" x="14" y="14" rx="1" />
-                      <rect width="7" height="7" x="3" y="14" rx="1" />
-                    </svg>
-                  </div>
-                  <span
-                    class="px-2 py-1 text-xs rounded-full bg-foreground text-text-secondary size-fit"
-                  >
-                    4 variants
-                  </span>
-                </div>
-                <h4>Logo Cloud</h4>
-                <p class="text-text-secondary -mt-2">
-                  Simple row, bordered grid, infinite marquee, and dark statement partner logo
-                  sections.
-                </p>
-                <button class="flex items-center gap-2 text-sm font-semibold mt-auto">
-                  View component
-                  <img
-                    src="/assets/icons/arrow-up.svg"
-                    alt="Arrow icon"
-                    class="size-4 rotate-90 group-hover:translate-x-1 transition-transform duration-400"
-                  />
-                </button>
-              </a>
-
-              <!-- BLOG -->
-              <a id="component-blog" href="./components/blog/" class="group card slide-up-in">
-                <div class="flex justify-between">
-                  <div
-                    class="flex items-center justify-center size-12 rounded-lg bg-foreground group-hover:bg-primary group-hover:text-primary-contrast transition-colors duration-400"
-                  >
-                    <svg
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      class="size-6"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    >
-                      <path
-                        d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"
-                      />
-                      <path d="M18 14h-8" />
-                      <path d="M15 18h-5" />
-                      <path d="M10 6h8v4h-8V6Z" />
-                    </svg>
-                  </div>
-                  <span
-                    class="px-2 py-1 text-xs rounded-full bg-foreground text-text-secondary size-fit"
-                  >
-                    3 variants
-                  </span>
-                </div>
-                <h4>Blog</h4>
-                <p class="text-text-secondary -mt-2">
-                  Three column grid, featured with side list, and minimal list blog post layouts.
+                  Default, light, top-rounded, full-rounded, and glassmorphism footer layouts.
                 </p>
                 <button class="flex items-center gap-2 text-sm font-semibold mt-auto">
                   View component
@@ -636,10 +419,10 @@
                   <span
                     class="px-2 py-1 text-xs rounded-full bg-foreground text-text-secondary size-fit"
                   >
-                    4 variants
+                    6 variants
                   </span>
                 </div>
-                <h4>Steps & Timeline</h4>
+                <h4>Steps & timeline</h4>
                 <p class="text-text-secondary -mt-2">
                   Horizontal steps, vertical timeline, icon steps, and alternating cards process
                   layouts.
