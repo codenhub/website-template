@@ -1,4 +1,4 @@
-@reference "./_ui/main.css";
+@reference "./_ui/styles/index.css";
 
 @layer components {
   .testimonial {

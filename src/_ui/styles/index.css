@@ -1,3 +1,8 @@
+@import "tailwindcss";
+
+@import "./components.css";
+@import "./theme.css";
+
 @font-face {
   font-family: "Bebas Neue";
   src: url("/assets/fonts/BebasNeue-Regular.woff2") format("woff2");
@@ -23,15 +28,27 @@
 }
 
 @layer base {
-  ::selection {
-    background: var(--color-primary);
-    color: var(--color-primary-contrast);
+  ::-webkit-scrollbar {
+    width: calc(var(--spacing) * 4);
   }
 
-  .selection-contrast::selection,
-  .selection-contrast *::selection {
-    background: var(--color-primary-contrast);
-    color: var(--color-primary);
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-primary);
+    border: var(--spacing) solid var(--color-background);
+    border-radius: calc(var(--spacing) * 2);
+  }
+
+  html,
+  body {
+    @apply flex flex-col min-h-screen overflow-x-hidden bg-background text-text font-default;
+  }
+
+  button {
+    @apply not-disabled:cursor-pointer;
+  }
+
+  img {
+    @apply select-none;
   }
 
   h1 {
