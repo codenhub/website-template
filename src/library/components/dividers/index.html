@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Coden Agency" />
+    <meta name="copyright" content="Coden Agency" />
+    <meta
+      name="description"
+      content="A curated collection of reusable divider components built with TailwindCSS. Browse simple, text, and gradient divider styles."
+    />
+
+    <title>Dividers – Components Library</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="../../../_ui/styles/index.css" />
+    <script type="module" src="../../../_ui/components/index.js" defer></script>
+    <script type="module" src="../../../_ui/scripts/index.js" defer></script>
+    <script type="module" src="../header-section.js" defer></script>
+    <style>
+      .loader {
+        background-color: oklch(98.5% 0 0);
+        position: fixed;
+        inset: 0;
+        transform: skewX(10deg);
+        transition: all 800ms ease;
+        border: none;
+        z-index: 999;
+
+        &.left {
+          transform: skewX(10deg) translateX(-20%);
+          &.loaded {
+            transform: skewX(10deg) translateX(-120%);
+          }
+        }
+        &.right {
+          transform: skewX(10deg) translateX(20%);
+          &.loaded {
+            transform: skewX(10deg) translateX(120%);
+          }
+        }
+      }
+      #loader-indicator {
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        color: oklch(20.5% 0 0);
+        width: 4rem;
+        height: 4rem;
+        z-index: 999;
+      }
+
+      details[open] summary svg {
+        transform: rotate(180deg);
+      }
+      details summary svg {
+        transition: transform 300ms ease;
+      }
+      details > div {
+        overflow: hidden;
+        max-height: 0;
+        transition:
+          max-height 300ms ease,
+          padding 300ms ease;
+      }
+      details[open] > div {
+        max-height: 200px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- LOADER -->
+    <div class="loader left"></div>
+    <div class="loader right"></div>
+    <div id="loader-indicator">
+      <svg stroke="currentColor" viewBox="0 0 24 24">
+        <style>
+          .spinner {
+            transform-origin: center;
+            animation: rotate 2s linear infinite;
+          }
+          .spinner circle {
+            stroke-linecap: round;
+            animation: grow 1.5s ease-in-out infinite;
+          }
+          @keyframes rotate {
+            to {
+              transform: rotate(360deg);
+            }
+          }
+          @keyframes grow {
+            0% {
+              stroke-dasharray: 0 150;
+              stroke-dashoffset: 0;
+            }
+            50% {
+              stroke-dasharray: 42 150;
+              stroke-dashoffset: -16;
+            }
+            95%,
+            100% {
+              stroke-dasharray: 42 150;
+              stroke-dashoffset: -59;
+            }
+          }
+        </style>
+        <g class="spinner">
+          <circle cx="12" cy="12" r="9.5" fill="none" stroke-width="2"></circle>
+        </g>
+      </svg>
+    </div>
+    <!-- END LOADER -->
+
+    <main id="smooth-wrapper">
+      <div id="smooth-content">
+        <custom-header></custom-header>
+
+        <header-section></header-section>
+
+        <div class="flex w-full justify-center px-4">
+          <h2 class="max-w-7xl w-full split-chars">Dividers</h2>
+        </div>
+
+        <section class="sect">
+          <div class="sect-container gap-24">
+            <custom-frame title="Simple diagonal">
+              <div class="w-full self-stretch bg-background pt-8">
+                <div
+                  class="w-full h-16 bg-primary"
+                  style="clip-path: polygon(100% 0, 0% 100%, 100% 100%)"
+                ></div>
+              </div>
+            </custom-frame>
+
+            <custom-frame title="Double diagonal">
+              <div class="w-full self-stretch bg-background pt-8">
+                <div class="w-full h-16 relative">
+                  <div
+                    class="absolute inset-0 bg-fuchsia-700"
+                    style="clip-path: polygon(100% 0, 20% 100%, 100% 100%)"
+                  ></div>
+                  <div
+                    class="absolute inset-0 bg-fuchsia-950"
+                    style="clip-path: polygon(100% 40%, 0% 100%, 100% 100%)"
+                  ></div>
+                </div>
+              </div>
+            </custom-frame>
+
+            <custom-frame title="Crossed diagonal">
+              <div class="w-full self-stretch bg-background pt-8">
+                <div class="w-full h-16 relative">
+                  <div
+                    class="absolute inset-0 bg-violet-700"
+                    style="clip-path: polygon(0 0, 0 100%, 100% 100%)"
+                  ></div>
+                  <div
+                    class="absolute inset-0 bg-violet-950"
+                    style="clip-path: polygon(100% 0, 0% 100%, 100% 100%)"
+                  ></div>
+                </div>
+              </div>
+            </custom-frame>
+
+            <custom-frame title="Waves">
+              <div class="w-full self-stretch bg-background pt-8">
+                <div class="w-full h-24">
+                  <svg class="w-full h-24" viewBox="0 24 150 28 " preserveAspectRatio="none">
+                    <style>
+                      .parallax1 > use {
+                        animation: wave-anim-1 10s linear infinite;
+                        &:nth-child(1) {
+                          animation-delay: -2s;
+                        }
+                      }
+                      .parallax2 > use {
+                        animation: wave-anim-2 8s linear infinite;
+                        &:nth-child(1) {
+                          animation-delay: -2s;
+                        }
+                      }
+                      .parallax3 > use {
+                        animation: wave-anim-3 6s linear infinite;
+                        &:nth-child(1) {
+                          animation-delay: -2s;
+                        }
+                      }
+                      .parallax4 > use {
+                        animation: wave-anim-4 4s linear infinite;
+                        &:nth-child(1) {
+                          animation-delay: -2s;
+                        }
+                      }
+                      @keyframes wave-anim-1 {
+                        0% {
+                          transform: translate(85px, 0%);
+                        }
+                        100% {
+                          transform: translate(-90px, 0%);
+                        }
+                      }
+                      @keyframes wave-anim-2 {
+                        0% {
+                          transform: translate(-90px, 0%);
+                        }
+                        100% {
+                          transform: translate(85px, 0%);
+                        }
+                      }
+                      @keyframes wave-anim-3 {
+                        0% {
+                          transform: translate(85px, 0%);
+                        }
+                        100% {
+                          transform: translate(-90px, 0%);
+                        }
+                      }
+                      @keyframes wave-anim-4 {
+                        0% {
+                          transform: translate(-90px, 0%);
+                        }
+                        100% {
+                          transform: translate(85px, 0%);
+                        }
+                      }
+                    </style>
+                    <defs>
+                      <path
+                        id="gentle-wave"
+                        d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
+                      />
+                    </defs>
+                    <g class="parallax1">
+                      <use xlink:href="#gentle-wave" x="50" y="3" fill="#bfdbfe" />
+                    </g>
+                    <g class="parallax2">
+                      <use xlink:href="#gentle-wave" x="50" y="0" fill="#60a5fa" />
+                    </g>
+                    <g class="parallax3">
+                      <use xlink:href="#gentle-wave" x="50" y="9" fill="#2563eb" />
+                    </g>
+                    <g class="parallax4">
+                      <use xlink:href="#gentle-wave" x="50" y="6" fill="#1e40af" />
+                    </g>
+                  </svg>
+                </div>
+              </div>
+            </custom-frame>
+          </div>
+        </section>
+
+        <custom-cta></custom-cta>
+
+        <custom-footer></custom-footer>
+      </div>
+    </main>
+  </body>
+</html>
