@@ -160,7 +160,7 @@ class HeaderSection extends HTMLElement {
                 <rect y="28.283" width="35" height="6.717" />
               </svg>
               <p class="font-medium mr-2">Headers</p>
-              <span class="px-2 py-1 bg-surface rounded-full text-sm">6</span>
+              <span class="px-2 py-1 bg-surface rounded-full text-sm">9</span>
             </a>
             <a
               href="/library/components/heroes/"
@@ -206,7 +206,7 @@ class HeaderSection extends HTMLElement {
                 </g>
               </svg>
               <p class="font-medium mr-2">Mouse trackers</p>
-              <span class="px-2 py-1 bg-surface rounded-full text-sm">5</span>
+              <span class="px-2 py-1 bg-surface rounded-full text-sm">13</span>
             </a>
             <a
               href="/library/components/pricing/"
@@ -256,7 +256,7 @@ class HeaderSection extends HTMLElement {
                 <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
               </svg>
               <p class="font-medium mr-2">Testimonials</p>
-              <span class="px-2 py-1 bg-surface rounded-full text-sm">3</span>
+              <span class="px-2 py-1 bg-surface rounded-full text-sm">9</span>
             </a>
           </div>
         </div>

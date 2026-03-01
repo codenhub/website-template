@@ -271,6 +271,475 @@
                 </div>
               </div>
             </custom-frame>
+
+            <custom-frame title="Ripple rings">
+              <div class="w-full min-h-96 bg-background relative overflow-hidden">
+                <div
+                  class="flex gap-6 items-center justify-center w-full h-96 max-w-7xl mx-auto text-text-secondary text-lg"
+                >
+                  Move your mouse to create ripples
+                </div>
+                <script>
+                  {
+                    const rippleContainer = document.currentScript.closest(".min-h-96");
+                    let lastRippleTime = 0;
+                    rippleContainer.addEventListener("mousemove", (e) => {
+                      const now = Date.now();
+                      if (now - lastRippleTime < 120) return;
+                      lastRippleTime = now;
+                      const rect = rippleContainer.getBoundingClientRect();
+                      const ring = document.createElement("div");
+                      ring.style.cssText = `
+                        position:absolute;
+                        left:${e.clientX - rect.left}px;
+                        top:${e.clientY - rect.top}px;
+                        width:0;height:0;
+                        border:2px solid currentColor;
+                        border-radius:50%;
+                        pointer-events:none;
+                        transform:translate(-50%,-50%);
+                        opacity:0.6;
+                      `;
+                      ring.className = "text-primary";
+                      rippleContainer.appendChild(ring);
+                      ring.animate(
+                        [
+                          { width: "0px", height: "0px", opacity: 0.7 },
+                          { width: "120px", height: "120px", opacity: 0 },
+                        ],
+                        { duration: 800, easing: "ease-out", fill: "forwards" },
+                      );
+                      setTimeout(() => ring.remove(), 850);
+                    });
+                  }
+                </script>
+              </div>
+            </custom-frame>
+
+            <custom-frame title="Spotlight reveal">
+              <div class="w-full min-h-96 bg-primary relative overflow-hidden">
+                <div class="flex items-center justify-center w-full h-96 max-w-7xl mx-auto">
+                  <p class="text-primary-contrast text-4xl font-bold text-center select-none px-8">
+                    Hidden treasure revealed by your cursor ✦
+                  </p>
+                </div>
+                <div
+                  id="spotlight-overlay"
+                  class="absolute inset-0 bg-primary pointer-events-none"
+                  style="
+                    mask-image: radial-gradient(circle 0px at 50% 50%, transparent 0%, black 100%);
+                    -webkit-mask-image: radial-gradient(
+                      circle 0px at 50% 50%,
+                      transparent 0%,
+                      black 100%
+                    );
+                  "
+                ></div>
+                <script>
+                  {
+                    const overlay = document.getElementById("spotlight-overlay");
+                    const container = overlay.parentElement;
+                    container.addEventListener("mousemove", (e) => {
+                      const rect = container.getBoundingClientRect();
+                      const x = e.clientX - rect.left;
+                      const y = e.clientY - rect.top;
+                      const gradient = `radial-gradient(circle 100px at ${x}px ${y}px, transparent 0%, black 100%)`;
+                      overlay.style.maskImage = gradient;
+                      overlay.style.webkitMaskImage = gradient;
+                    });
+                    container.addEventListener("mouseleave", () => {
+                      overlay.style.maskImage =
+                        "radial-gradient(circle 0px at 50% 50%, transparent 0%, black 100%)";
+                      overlay.style.webkitMaskImage =
+                        "radial-gradient(circle 0px at 50% 50%, transparent 0%, black 100%)";
+                    });
+                  }
+                </script>
+              </div>
+            </custom-frame>
+
+            <custom-frame title="Particle burst">
+              <div
+                id="particle-container"
+                class="w-full min-h-96 bg-background relative overflow-hidden"
+              >
+                <div
+                  class="flex items-center justify-center w-full h-96 max-w-7xl mx-auto text-text-secondary text-lg"
+                >
+                  Move fast for more particles
+                </div>
+                <script>
+                  {
+                    const particleBox = document.getElementById("particle-container");
+                    const colors = [
+                      "var(--color-primary)",
+                      "var(--color-accent)",
+                      "var(--color-info)",
+                      "var(--color-warning)",
+                      "var(--color-error)",
+                    ];
+                    let lastPTime = 0;
+                    particleBox.addEventListener("mousemove", (e) => {
+                      const now = Date.now();
+                      if (now - lastPTime < 40) return;
+                      lastPTime = now;
+                      const rect = particleBox.getBoundingClientRect();
+                      const count = 3;
+                      for (let i = 0; i < count; i++) {
+                        const p = document.createElement("div");
+                        const size = Math.random() * 6 + 3;
+                        const angle = Math.random() * Math.PI * 2;
+                        const dist = Math.random() * 60 + 20;
+                        const dx = Math.cos(angle) * dist;
+                        const dy = Math.sin(angle) * dist;
+                        const startX = e.clientX - rect.left;
+                        const startY = e.clientY - rect.top;
+                        p.style.cssText = `
+                          position:absolute;
+                          left:${startX}px;
+                          top:${startY}px;
+                          width:${size}px;
+                          height:${size}px;
+                          background:${colors[Math.floor(Math.random() * colors.length)]};
+                          border-radius:50%;
+                          pointer-events:none;
+                        `;
+                        particleBox.appendChild(p);
+                        p.animate(
+                          [
+                            {
+                              transform: "translate(-50%,-50%) scale(1)",
+                              opacity: 1,
+                            },
+                            {
+                              transform: `translate(calc(-50% + ${dx}px), calc(-50% + ${dy}px)) scale(0)`,
+                              opacity: 0,
+                            },
+                          ],
+                          {
+                            duration: 600 + Math.random() * 400,
+                            easing: "ease-out",
+                            fill: "forwards",
+                          },
+                        );
+                        setTimeout(() => p.remove(), 1100);
+                      }
+                    });
+                  }
+                </script>
+              </div>
+            </custom-frame>
+
+            <custom-frame title="Crosshair">
+              <div class="w-full min-h-96 bg-background relative overflow-hidden">
+                <div class="flex items-center justify-center w-full h-96 max-w-7xl mx-auto">
+                  <div
+                    id="crosshair-h"
+                    class="fixed z-99 pointer-events-none top-0 left-0"
+                    style="
+                      width: 100vw;
+                      height: 1px;
+                      background: linear-gradient(
+                        90deg,
+                        transparent 0%,
+                        var(--color-primary) 30%,
+                        var(--color-primary) 70%,
+                        transparent 100%
+                      );
+                      opacity: 0.3;
+                    "
+                  ></div>
+                  <div
+                    id="crosshair-v"
+                    class="fixed z-99 pointer-events-none top-0 left-0"
+                    style="
+                      width: 1px;
+                      height: 100vh;
+                      background: linear-gradient(
+                        180deg,
+                        transparent 0%,
+                        var(--color-primary) 30%,
+                        var(--color-primary) 70%,
+                        transparent 100%
+                      );
+                      opacity: 0.3;
+                    "
+                  ></div>
+                  <div
+                    id="crosshair-dot"
+                    class="size-2 bg-primary rounded-full fixed z-99 top-0 left-0 -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+                  ></div>
+                  <div
+                    id="crosshair-label"
+                    class="fixed z-99 pointer-events-none top-0 left-0 text-xs font-mono bg-primary text-primary-contrast px-2 py-1 rounded"
+                  >
+                    0, 0
+                  </div>
+                </div>
+                <script>
+                  {
+                    const hLine = document.getElementById("crosshair-h");
+                    const vLine = document.getElementById("crosshair-v");
+                    const dot = document.getElementById("crosshair-dot");
+                    const label = document.getElementById("crosshair-label");
+                    document.addEventListener("mousemove", (e) => {
+                      hLine.style.top = `${e.clientY}px`;
+                      vLine.style.left = `${e.clientX}px`;
+                      dot.style.left = `${e.clientX}px`;
+                      dot.style.top = `${e.clientY}px`;
+                      label.style.left = `${e.clientX + 14}px`;
+                      label.style.top = `${e.clientY + 14}px`;
+                      label.textContent = `${e.clientX}, ${e.clientY}`;
+                    });
+                  }
+                </script>
+              </div>
+            </custom-frame>
+
+            <custom-frame title="Ink trail">
+              <div class="w-full min-h-96 bg-background relative overflow-hidden">
+                <canvas
+                  id="ink-canvas"
+                  class="absolute inset-0 w-full h-full pointer-events-none"
+                ></canvas>
+                <div
+                  class="flex items-center justify-center w-full h-96 max-w-7xl mx-auto text-text-secondary text-lg relative z-10"
+                >
+                  Draw with your mouse
+                </div>
+                <script>
+                  {
+                    const canvas = document.getElementById("ink-canvas");
+                    const ctx = canvas.getContext("2d");
+                    const wrapper = canvas.parentElement;
+                    let isDrawing = false;
+                    let lastInkX = 0;
+                    let lastInkY = 0;
+
+                    const resizeCanvas = () => {
+                      canvas.width = wrapper.offsetWidth;
+                      canvas.height = wrapper.offsetHeight;
+                    };
+                    resizeCanvas();
+                    window.addEventListener("resize", resizeCanvas);
+
+                    const getComputedColor = () => {
+                      return (
+                        getComputedStyle(wrapper).getPropertyValue("--color-primary").trim() ||
+                        "#0a0a0a"
+                      );
+                    };
+
+                    wrapper.style.pointerEvents = "auto";
+                    wrapper.addEventListener("mouseenter", (e) => {
+                      isDrawing = true;
+                      const rect = wrapper.getBoundingClientRect();
+                      lastInkX = e.clientX - rect.left;
+                      lastInkY = e.clientY - rect.top;
+                    });
+                    wrapper.addEventListener("mouseleave", () => {
+                      isDrawing = false;
+                    });
+                    wrapper.addEventListener("mousemove", (e) => {
+                      if (!isDrawing) return;
+                      const rect = wrapper.getBoundingClientRect();
+                      const x = e.clientX - rect.left;
+                      const y = e.clientY - rect.top;
+                      const dx = x - lastInkX;
+                      const dy = y - lastInkY;
+                      const speed = Math.sqrt(dx * dx + dy * dy);
+                      const lineWidth = Math.max(1, 8 - speed * 0.1);
+                      ctx.beginPath();
+                      ctx.moveTo(lastInkX, lastInkY);
+                      ctx.lineTo(x, y);
+                      ctx.strokeStyle = getComputedColor();
+                      ctx.lineWidth = lineWidth;
+                      ctx.lineCap = "round";
+                      ctx.lineJoin = "round";
+                      ctx.globalAlpha = 0.4;
+                      ctx.stroke();
+                      lastInkX = x;
+                      lastInkY = y;
+                    });
+
+                    /* Slow fade */
+                    const fadeInk = () => {
+                      ctx.globalCompositeOperation = "destination-out";
+                      ctx.fillStyle = "rgba(0,0,0,0.02)";
+                      ctx.fillRect(0, 0, canvas.width, canvas.height);
+                      ctx.globalCompositeOperation = "source-over";
+                      requestAnimationFrame(fadeInk);
+                    };
+                    fadeInk();
+                  }
+                </script>
+              </div>
+            </custom-frame>
+
+            <custom-frame title="Gradient orbit">
+              <div class="w-full min-h-96 bg-background relative overflow-hidden">
+                <div
+                  class="flex items-center justify-center w-full h-96 max-w-7xl mx-auto text-text-secondary text-lg"
+                >
+                  Two orbs orbit your cursor
+                </div>
+                <div
+                  id="orbit-a"
+                  class="fixed z-99 pointer-events-none top-0 left-0 -translate-x-1/2 -translate-y-1/2 rounded-full"
+                  style="
+                    width: 12px;
+                    height: 12px;
+                    background: linear-gradient(135deg, var(--color-info), var(--color-primary));
+                  "
+                ></div>
+                <div
+                  id="orbit-b"
+                  class="fixed z-99 pointer-events-none top-0 left-0 -translate-x-1/2 -translate-y-1/2 rounded-full"
+                  style="
+                    width: 8px;
+                    height: 8px;
+                    background: linear-gradient(135deg, var(--color-warning), var(--color-error));
+                  "
+                ></div>
+                <script>
+                  {
+                    const orbA = document.getElementById("orbit-a");
+                    const orbB = document.getElementById("orbit-b");
+                    let mouseOX = 0;
+                    let mouseOY = 0;
+                    let orbAngle = 0;
+
+                    document.addEventListener("mousemove", (e) => {
+                      mouseOX = e.clientX;
+                      mouseOY = e.clientY;
+                    });
+
+                    const animateOrbit = () => {
+                      orbAngle += 0.04;
+                      const radiusA = 30;
+                      const radiusB = 30;
+                      const axA = mouseOX + Math.cos(orbAngle) * radiusA;
+                      const ayA = mouseOY + Math.sin(orbAngle) * radiusA;
+                      const axB = mouseOX + Math.cos(orbAngle + Math.PI) * radiusB;
+                      const ayB = mouseOY + Math.sin(orbAngle + Math.PI) * radiusB;
+                      orbA.style.left = `${axA}px`;
+                      orbA.style.top = `${ayA}px`;
+                      orbB.style.left = `${axB}px`;
+                      orbB.style.top = `${ayB}px`;
+                      requestAnimationFrame(animateOrbit);
+                    };
+                    animateOrbit();
+                  }
+                </script>
+              </div>
+            </custom-frame>
+
+            <custom-frame title="Spring emoji">
+              <div class="w-full min-h-96 bg-background relative overflow-hidden">
+                <div class="flex items-center justify-center w-full h-96 max-w-7xl mx-auto">
+                  <div
+                    id="spring-emoji"
+                    class="fixed z-99 pointer-events-none top-0 left-0 text-3xl select-none"
+                    style="transform: translate(-50%, -50%)"
+                  >
+                    ✦
+                  </div>
+                </div>
+                <script>
+                  {
+                    const emoji = document.getElementById("spring-emoji");
+                    let emojiX = 0;
+                    let emojiY = 0;
+                    let emojiVX = 0;
+                    let emojiVY = 0;
+                    let targetX = 0;
+                    let targetY = 0;
+                    const stiffness = 0.08;
+                    const damping = 0.7;
+
+                    document.addEventListener("mousemove", (e) => {
+                      targetX = e.clientX;
+                      targetY = e.clientY;
+                    });
+
+                    const springAnimate = () => {
+                      const forceX = (targetX - emojiX) * stiffness;
+                      const forceY = (targetY - emojiY) * stiffness;
+                      emojiVX = (emojiVX + forceX) * damping;
+                      emojiVY = (emojiVY + forceY) * damping;
+                      emojiX += emojiVX;
+                      emojiY += emojiVY;
+                      const speed = Math.sqrt(emojiVX * emojiVX + emojiVY * emojiVY);
+                      const scale = 1 + Math.min(speed * 0.03, 0.6);
+                      const rotation = emojiVX * 3;
+                      emoji.style.left = `${emojiX}px`;
+                      emoji.style.top = `${emojiY}px`;
+                      emoji.style.transform = `translate(-50%,-50%) scale(${scale}) rotate(${rotation}deg)`;
+                      requestAnimationFrame(springAnimate);
+                    };
+                    springAnimate();
+                  }
+                </script>
+              </div>
+            </custom-frame>
+
+            <custom-frame title="Magnetic text">
+              <div class="w-full min-h-96 bg-background relative overflow-hidden">
+                <div class="flex items-center justify-center w-full h-96 max-w-7xl mx-auto">
+                  <p
+                    id="magnetic-text"
+                    class="text-5xl md:text-7xl font-bold text-text select-none tracking-tight text-center px-4"
+                  >
+                    Magnetic
+                  </p>
+                </div>
+                <script>
+                  {
+                    const textEl = document.getElementById("magnetic-text");
+                    const text = textEl.textContent;
+                    textEl.textContent = "";
+                    const spans = [];
+                    for (const char of text) {
+                      const span = document.createElement("span");
+                      span.textContent = char;
+                      span.style.display = "inline-block";
+                      span.style.transition = "transform 0.3s ease-out";
+                      if (char === " ") span.style.width = "0.3em";
+                      textEl.appendChild(span);
+                      spans.push(span);
+                    }
+                    const container = textEl.closest(".min-h-96");
+                    container.addEventListener("mousemove", (e) => {
+                      const rect = container.getBoundingClientRect();
+                      const mx = e.clientX - rect.left;
+                      const my = e.clientY - rect.top;
+                      spans.forEach((span) => {
+                        const sRect = span.getBoundingClientRect();
+                        const sx = sRect.left + sRect.width / 2 - rect.left;
+                        const sy = sRect.top + sRect.height / 2 - rect.top;
+                        const dx = mx - sx;
+                        const dy = my - sy;
+                        const dist = Math.sqrt(dx * dx + dy * dy);
+                        const maxDist = 150;
+                        if (dist < maxDist) {
+                          const force = (1 - dist / maxDist) * 20;
+                          const moveX = (dx / dist) * force;
+                          const moveY = (dy / dist) * force;
+                          span.style.transform = `translate(${moveX}px, ${moveY}px)`;
+                        } else {
+                          span.style.transform = "translate(0,0)";
+                        }
+                      });
+                    });
+                    container.addEventListener("mouseleave", () => {
+                      spans.forEach((span) => {
+                        span.style.transform = "translate(0,0)";
+                      });
+                    });
+                  }
+                </script>
+              </div>
+            </custom-frame>
           </div>
         </section>
 

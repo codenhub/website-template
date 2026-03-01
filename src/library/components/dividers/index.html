@@ -49,23 +49,6 @@
         height: 4rem;
         z-index: 999;
       }
-
-      details[open] summary svg {
-        transform: rotate(180deg);
-      }
-      details summary svg {
-        transition: transform 300ms ease;
-      }
-      details > div {
-        overflow: hidden;
-        max-height: 0;
-        transition:
-          max-height 300ms ease,
-          padding 300ms ease;
-      }
-      details[open] > div {
-        max-height: 200px;
-      }
     </style>
   </head>
 
