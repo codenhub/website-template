@@ -103,7 +103,7 @@ class HeaderSection extends HTMLElement {
                 <path d="M3 12L21 12"/>
               </svg>
               <p class="font-medium mr-2">Dividers</p>
-              <span class="px-2 py-1 bg-surface rounded-full text-sm">4</span>
+              <span class="px-2 py-1 bg-surface rounded-full text-sm">17</span>
             </a>
             <a
               href="/library/components/faq/"

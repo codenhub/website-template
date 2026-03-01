@@ -163,6 +163,45 @@
               </div>
             </custom-frame>
 
+            <custom-frame title="Triangle">
+              <div class="w-full self-stretch bg-background pt-8">
+                <div class="w-full h-16 relative">
+                  <div
+                    class="absolute inset-0 bg-sky-900"
+                    style="clip-path: polygon(50% 0%, 0% 100%, 100% 100%)"
+                  ></div>
+                </div>
+              </div>
+            </custom-frame>
+
+            <custom-frame title="Layered mountains">
+              <div class="w-full self-stretch bg-background pt-8">
+                <div class="w-full h-28 relative overflow-hidden">
+                  <svg
+                    class="w-full h-full absolute inset-0"
+                    viewBox="0 0 1200 120"
+                    preserveAspectRatio="none"
+                  >
+                    <!-- Back layer -->
+                    <path
+                      d="M0 80 L150 30 L300 70 L450 20 L600 60 L750 25 L900 65 L1050 15 L1200 55 L1200 120 L0 120 Z"
+                      fill="oklch(50% 0.12 250 / 0.4)"
+                    />
+                    <!-- Middle layer -->
+                    <path
+                      d="M0 90 L100 50 L200 80 L350 35 L500 75 L650 40 L800 70 L950 30 L1100 65 L1200 45 L1200 120 L0 120 Z"
+                      fill="oklch(40% 0.12 250 / 0.6)"
+                    />
+                    <!-- Front layer -->
+                    <path
+                      d="M0 95 L80 65 L180 90 L300 50 L420 85 L550 55 L680 80 L820 45 L940 75 L1060 50 L1200 70 L1200 120 L0 120 Z"
+                      fill="oklch(30% 0.12 250 / 0.8)"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </custom-frame>
+
             <custom-frame title="Waves">
               <div class="w-full self-stretch bg-background pt-8">
                 <div class="w-full h-24">
@@ -243,6 +282,286 @@
                     <g class="parallax4">
                       <use xlink:href="#gentle-wave" x="50" y="6" fill="#1e40af" />
                     </g>
+                  </svg>
+                </div>
+              </div>
+            </custom-frame>
+
+            <custom-frame title="Stacked curves">
+              <div class="w-full self-stretch bg-background pt-8">
+                <div class="w-full h-24 relative overflow-hidden">
+                  <svg
+                    class="w-full h-full absolute inset-0"
+                    viewBox="0 0 1200 100"
+                    preserveAspectRatio="none"
+                  >
+                    <path
+                      d="M0 60 Q300 0 600 60 Q900 120 1200 60 L1200 100 L0 100 Z"
+                      fill="oklch(65% 0.15 340 / 0.3)"
+                    />
+                    <path
+                      d="M0 70 Q300 20 600 70 Q900 120 1200 70 L1200 100 L0 100 Z"
+                      fill="oklch(55% 0.15 340 / 0.5)"
+                    />
+                    <path
+                      d="M0 80 Q300 40 600 80 Q900 120 1200 80 L1200 100 L0 100 Z"
+                      fill="oklch(45% 0.15 340 / 0.8)"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </custom-frame>
+
+            <custom-frame title="Curved arc">
+              <div class="w-full self-stretch bg-background pt-8">
+                <div class="w-full h-20 relative overflow-hidden">
+                  <div
+                    class="absolute inset-0 bg-primary"
+                    style="clip-path: ellipse(60% 100% at 50% 100%)"
+                  ></div>
+                </div>
+              </div>
+            </custom-frame>
+
+            <custom-frame title="Inverted curve">
+              <div class="w-full self-stretch bg-background pt-8">
+                <div class="w-full h-20 relative bg-primary overflow-hidden">
+                  <div
+                    class="absolute inset-0 bg-background"
+                    style="clip-path: ellipse(55% 100% at 50% 0%)"
+                  ></div>
+                </div>
+              </div>
+            </custom-frame>
+
+            <custom-frame title="Zigzag">
+              <div class="w-full self-stretch bg-background pt-8">
+                <div class="w-full h-16">
+                  <svg class="w-full h-16" viewBox="0 0 1200 80" preserveAspectRatio="none">
+                    <path
+                      d="M0 0 L40 60 L80 0 L120 60 L160 0 L200 60 L240 0 L280 60 L320 0 L360 60 L400 0 L440 60 L480 0 L520 60 L560 0 L600 60 L640 0 L680 60 L720 0 L760 60 L800 0 L840 60 L880 0 L920 60 L960 0 L1000 60 L1040 0 L1080 60 L1120 0 L1160 60 L1200 0 L1200 80 L0 80 Z"
+                      fill="oklch(25% 0.05 280)"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </custom-frame>
+
+            <custom-frame title="Torn paper">
+              <div class="w-full self-stretch bg-background pt-8">
+                <div class="w-full h-16">
+                  <svg class="w-full h-16" viewBox="0 0 1200 60" preserveAspectRatio="none">
+                    <path
+                      d="M0 25 Q20 10 40 28 Q55 35 70 20 Q90 8 110 22 Q125 32 140 18 Q160 5 180 24 Q195 33 210 15 Q230 6 250 26 Q265 34 280 20 Q300 7 320 25 Q335 35 350 17 Q370 4 390 23 Q405 32 420 14 Q440 3 460 27 Q475 36 490 19 Q510 8 530 24 Q545 33 560 16 Q580 5 600 28 Q615 37 630 21 Q650 9 670 26 Q685 34 700 18 Q720 6 740 25 Q755 35 770 15 Q790 3 810 22 Q825 31 840 13 Q860 4 880 27 Q895 36 910 20 Q930 8 950 24 Q965 33 980 17 Q1000 5 1020 26 Q1035 35 1050 19 Q1070 7 1090 23 Q1105 32 1120 14 Q1140 3 1160 28 Q1175 37 1200 22 L1200 60 L0 60 Z"
+                      fill="oklch(40% 0.08 50)"
+                    />
+                    <path
+                      d="M0 25 Q20 10 40 28 Q55 35 70 20 Q90 8 110 22 Q125 32 140 18 Q160 5 180 24 Q195 33 210 15 Q230 6 250 26 Q265 34 280 20 Q300 7 320 25 Q335 35 350 17 Q370 4 390 23 Q405 32 420 14 Q440 3 460 27 Q475 36 490 19 Q510 8 530 24 Q545 33 560 16 Q580 5 600 28 Q615 37 630 21 Q650 9 670 26 Q685 34 700 18 Q720 6 740 25 Q755 35 770 15 Q790 3 810 22 Q825 31 840 13 Q860 4 880 27 Q895 36 910 20 Q930 8 950 24 Q965 33 980 17 Q1000 5 1020 26 Q1035 35 1050 19 Q1070 7 1090 23 Q1105 32 1120 14 Q1140 3 1160 28 Q1175 37 1200 22"
+                      fill="none"
+                      stroke="oklch(55% 0.08 50)"
+                      stroke-width="1.5"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </custom-frame>
+
+            <custom-frame title="Gradient fade">
+              <div class="w-full self-stretch bg-background pt-8">
+                <div
+                  class="w-full h-24"
+                  style="
+                    background: linear-gradient(
+                      to bottom,
+                      transparent 0%,
+                      oklch(70% 0.15 280 / 0.3) 30%,
+                      oklch(60% 0.2 280) 60%,
+                      oklch(30% 0.1 280) 100%
+                    );
+                  "
+                ></div>
+              </div>
+            </custom-frame>
+
+            <custom-frame title="Noise texture fade">
+              <div class="w-full self-stretch bg-background pt-8">
+                <div class="w-full h-20 relative overflow-hidden">
+                  <svg class="absolute inset-0 w-full h-full">
+                    <defs>
+                      <filter id="noise-filter">
+                        <feTurbulence
+                          type="fractalNoise"
+                          baseFrequency="0.65"
+                          numOctaves="3"
+                          stitchTiles="stitch"
+                        />
+                        <feColorMatrix type="saturate" values="0" />
+                      </filter>
+                    </defs>
+                    <rect width="100%" height="100%" filter="url(#noise-filter)" opacity="0.15" />
+                  </svg>
+                  <div
+                    class="absolute inset-0"
+                    style="
+                      background: linear-gradient(
+                        to bottom,
+                        transparent,
+                        oklch(35% 0.05 280 / 0.6) 40%,
+                        oklch(25% 0.05 280) 100%
+                      );
+                    "
+                  ></div>
+                </div>
+              </div>
+            </custom-frame>
+
+            <custom-frame title="Pulse line">
+              <div class="w-full self-stretch bg-background py-8">
+                <div class="w-full h-20 flex items-center justify-center relative">
+                  <style>
+                    .pulse-line-path {
+                      stroke-dasharray: 2000;
+                      stroke-dashoffset: 2000;
+                      animation: pulse-draw 3s ease-in-out infinite;
+                    }
+                    @keyframes pulse-draw {
+                      0% {
+                        stroke-dashoffset: 2000;
+                      }
+                      50% {
+                        stroke-dashoffset: 0;
+                      }
+                      100% {
+                        stroke-dashoffset: -2000;
+                      }
+                    }
+                  </style>
+                  <svg class="w-full h-full" viewBox="0 0 1200 80" preserveAspectRatio="none">
+                    <path
+                      class="pulse-line-path"
+                      d="M0 40 L200 40 L220 40 L240 10 L260 70 L280 20 L300 60 L320 30 L340 50 L360 35 L380 45 L400 40 L600 40 L620 40 L640 15 L660 65 L680 25 L700 55 L720 35 L740 48 L760 40 L1200 40"
+                      fill="none"
+                      stroke="oklch(75% 0.2 160)"
+                      stroke-width="2.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <!-- Glow layer -->
+                    <path
+                      class="pulse-line-path"
+                      d="M0 40 L200 40 L220 40 L240 10 L260 70 L280 20 L300 60 L320 30 L340 50 L360 35 L380 45 L400 40 L600 40 L620 40 L640 15 L660 65 L680 25 L700 55 L720 35 L740 48 L760 40 L1200 40"
+                      fill="none"
+                      stroke="oklch(75% 0.2 160)"
+                      stroke-width="6"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      opacity="0.3"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </custom-frame>
+
+            <custom-frame title="Diamond chain">
+              <div class="w-full self-stretch bg-background py-8">
+                <div
+                  class="w-full h-16 flex items-center justify-center gap-0 relative overflow-hidden"
+                >
+                  <style>
+                    .diamond-chain {
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      width: 100%;
+                      height: 100%;
+                    }
+                    .diamond-chain svg {
+                      flex-shrink: 0;
+                    }
+                  </style>
+                  <svg class="w-full h-full" viewBox="0 0 1200 64" preserveAspectRatio="none">
+                    <!-- Horizontal line -->
+                    <line
+                      x1="0"
+                      y1="32"
+                      x2="1200"
+                      y2="32"
+                      stroke="oklch(65% 0.18 280)"
+                      stroke-width="1"
+                    />
+                    <!-- Diamonds -->
+                    <g fill="none" stroke="oklch(65% 0.18 280)" stroke-width="1.5">
+                      <polygon points="100,12 120,32 100,52 80,32" />
+                      <polygon points="200,16 216,32 200,48 184,32" />
+                      <polygon points="300,12 320,32 300,52 280,32" />
+                      <polygon points="400,16 416,32 400,48 384,32" />
+                      <polygon points="500,12 520,32 500,52 480,32" />
+                      <polygon points="600,8 624,32 600,56 576,32" />
+                      <polygon points="700,12 720,32 700,52 680,32" />
+                      <polygon points="800,16 816,32 800,48 784,32" />
+                      <polygon points="900,12 920,32 900,52 880,32" />
+                      <polygon points="1000,16 1016,32 1000,48 984,32" />
+                      <polygon points="1100,12 1120,32 1100,52 1080,32" />
+                    </g>
+                    <!-- Center diamond filled -->
+                    <polygon
+                      points="600,8 624,32 600,56 576,32"
+                      fill="oklch(65% 0.18 280 / 0.15)"
+                      stroke="oklch(65% 0.18 280)"
+                      stroke-width="1.5"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </custom-frame>
+
+            <custom-frame title="Gradient glow line">
+              <div class="w-full self-stretch bg-background py-8">
+                <div class="w-full h-16 flex items-center justify-center relative">
+                  <style>
+                    .glow-line {
+                      width: 80%;
+                      height: 2px;
+                      background: linear-gradient(
+                        90deg,
+                        transparent,
+                        oklch(75% 0.25 330),
+                        oklch(75% 0.2 280),
+                        oklch(75% 0.25 200),
+                        transparent
+                      );
+                      border-radius: 999px;
+                      position: relative;
+                    }
+                    .glow-line::after {
+                      content: "";
+                      position: absolute;
+                      inset: -6px -4px;
+                      background: linear-gradient(
+                        90deg,
+                        transparent,
+                        oklch(75% 0.25 330 / 0.4),
+                        oklch(75% 0.2 280 / 0.4),
+                        oklch(75% 0.25 200 / 0.4),
+                        transparent
+                      );
+                      border-radius: 999px;
+                      filter: blur(8px);
+                    }
+                  </style>
+                  <div class="glow-line"></div>
+                </div>
+              </div>
+            </custom-frame>
+
+            <custom-frame title="Chevron arrow">
+              <div class="w-full self-stretch bg-background py-8">
+                <div class="w-full h-16">
+                  <svg class="w-full h-16" viewBox="0 0 1200 60" preserveAspectRatio="none">
+                    <path
+                      d="M0 0 L600 40 L1200 0 L1200 20 L600 60 L0 20 Z"
+                      fill="oklch(50% 0.15 160)"
+                    />
                   </svg>
                 </div>
               </div>
