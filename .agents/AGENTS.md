@@ -3,8 +3,11 @@
 ## Before you start
 
 - Check `src/_ui/styles/theme.css` for available CSS tokens before touching any color, spacing, typography, or sizing value.
-- Scan existing components for patterns and conventions before introducing new ones.
 - If the visual intent is unclear, ask. Don't guess on design decisions.
+
+## More info
+
+- [LP_WORKFLOW.md](./LP_WORKFLOW.md): Workflow for building landing pages.
 
 ## Styling hierarchy
 
