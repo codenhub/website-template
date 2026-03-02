@@ -3,66 +3,36 @@
     "name": "Reference",
     "description": "This is a reference for the objects below, not a variant. Each field is an example or description of its content.",
     "location": "The line range where the component is located (e.g. #L10-L20 means the component is between line 10 and 20). The range may not be exact, so leave a margin of error.",
-    "tags": [
-      "reference",
-      "description",
-      "example"
-    ]
+    "tags": ["reference", "description", "example"]
   },
   {
     "name": "Simple row",
     "description": "Stats section with single-row metric strip for quick KPI scanning.",
     "location": "#L110-L137",
-    "tags": [
-      "stats",
-      "simple",
-      "row",
-      "metrics"
-    ]
+    "tags": ["stats", "simple", "row", "metrics"]
   },
   {
     "name": "With dividers",
     "description": "Stats section with metric row separated by visible vertical dividers.",
     "location": "#L138-L172",
-    "tags": [
-      "stats",
-      "dividers",
-      "metrics"
-    ]
+    "tags": ["stats", "dividers", "metrics"]
   },
   {
     "name": "Cards",
     "description": "Stats section with stacked contact cards focused on address, phone, and email data.",
     "location": "#L173-L273",
-    "tags": [
-      "stats",
-      "cards",
-      "stacked",
-      "content-blocks",
-      "metrics"
-    ]
+    "tags": ["stats", "cards", "stacked", "content-blocks", "metrics"]
   },
   {
     "name": "With side image",
     "description": "Stats section with stats content paired with a supporting side image.",
     "location": "#L274-L329",
-    "tags": [
-      "stats",
-      "side",
-      "image",
-      "metrics"
-    ]
+    "tags": ["stats", "side", "image", "metrics"]
   },
   {
     "name": "Primary background grid",
     "description": "Stats section with stats presented on a strong primary-background grid.",
     "location": "#L330-L442",
-    "tags": [
-      "stats",
-      "primary",
-      "background",
-      "grid",
-      "metrics"
-    ]
+    "tags": ["stats", "primary", "background", "grid", "metrics"]
   }
 ]

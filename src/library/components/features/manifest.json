@@ -3,79 +3,42 @@
     "name": "Reference",
     "description": "This is a reference for the objects below, not a variant. Each field is an example or description of its content.",
     "location": "The line range where the component is located (e.g. #L10-L20 means the component is between line 10 and 20). The range may not be exact, so leave a margin of error.",
-    "tags": [
-      "reference",
-      "description",
-      "example"
-    ]
+    "tags": ["reference", "description", "example"]
   },
   {
     "name": "Split with image",
     "description": "Feature section with split feature layout pairing text content with a visual panel.",
     "location": "#L110-L226",
-    "tags": [
-      "features",
-      "split",
-      "image",
-      "product-highlights"
-    ]
+    "tags": ["features", "split", "image", "product-highlights"]
   },
   {
     "name": "Product storytelling",
     "description": "Feature section with narrative product section with sequential value messaging.",
     "location": "#L228-L337",
-    "tags": [
-      "features",
-      "product",
-      "storytelling",
-      "product-highlights"
-    ]
+    "tags": ["features", "product", "storytelling", "product-highlights"]
   },
   {
     "name": "Feature composition",
     "description": "Feature section with composed multi-block feature arrangement for mixed content types.",
     "location": "#L339-L438",
-    "tags": [
-      "features",
-      "feature",
-      "composition",
-      "product-highlights"
-    ]
+    "tags": ["features", "feature", "composition", "product-highlights"]
   },
   {
     "name": "Visual Performance Highlight",
     "description": "Feature section with performance-focused block with visual KPI emphasis.",
     "location": "#L440-L496",
-    "tags": [
-      "features",
-      "visual",
-      "performance",
-      "highlight",
-      "product-highlights"
-    ]
+    "tags": ["features", "visual", "performance", "highlight", "product-highlights"]
   },
   {
     "name": "Interactive tabbed showcase",
     "description": "Feature section with tabbed interaction that swaps feature content panels.",
     "location": "#L498-L675",
-    "tags": [
-      "features",
-      "interactive",
-      "tabbed",
-      "showcase",
-      "product-highlights"
-    ]
+    "tags": ["features", "interactive", "tabbed", "showcase", "product-highlights"]
   },
   {
     "name": "Visual hotspots showcase",
     "description": "Feature section with image hotspot interactions that reveal contextual feature details.",
     "location": "#L677-L793",
-    "tags": [
-      "features",
-      "visual",
-      "hotspots",
-      "showcase",
-      "product-highlights"
-    ]
+    "tags": ["features", "visual", "hotspots", "showcase", "product-highlights"]
   }
 ]

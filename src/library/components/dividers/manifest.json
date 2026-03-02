@@ -3,196 +3,108 @@
     "name": "Reference",
     "description": "This is a reference for the objects below, not a variant. Each field is an example or description of its content.",
     "location": "The line range where the component is located (e.g. #L10-L20 means the component is between line 10 and 20). The range may not be exact, so leave a margin of error.",
-    "tags": [
-      "reference",
-      "description",
-      "example"
-    ]
+    "tags": ["reference", "description", "example"]
   },
   {
     "name": "Simple diagonal",
     "description": "Section divider with single diagonal SVG edge between sections.",
     "location": "#L110-L117",
-    "tags": [
-      "dividers",
-      "simple",
-      "diagonal",
-      "section-separator"
-    ]
+    "tags": ["dividers", "simple", "diagonal", "section-separator"]
   },
   {
     "name": "Double diagonal",
     "description": "Section divider with stacked dual-diagonal cut creating layered section separation.",
     "location": "#L119-L132",
-    "tags": [
-      "dividers",
-      "double",
-      "diagonal",
-      "section-separator"
-    ]
+    "tags": ["dividers", "double", "diagonal", "section-separator"]
   },
   {
     "name": "Crossed diagonal",
     "description": "Section divider with crossed diagonal lines for an angular transition effect.",
     "location": "#L134-L147",
-    "tags": [
-      "dividers",
-      "crossed",
-      "diagonal",
-      "section-separator"
-    ]
+    "tags": ["dividers", "crossed", "diagonal", "section-separator"]
   },
   {
     "name": "Triangle",
     "description": "Section divider with single triangular separator wedge between blocks.",
     "location": "#L149-L158",
-    "tags": [
-      "dividers",
-      "triangle",
-      "section-separator"
-    ]
+    "tags": ["dividers", "triangle", "section-separator"]
   },
   {
     "name": "Layered mountains",
     "description": "Section divider with multi-peak layered shape divider inspired by mountain silhouettes.",
     "location": "#L160-L186",
-    "tags": [
-      "dividers",
-      "layered",
-      "mountains",
-      "section-separator"
-    ]
+    "tags": ["dividers", "layered", "mountains", "section-separator"]
   },
   {
     "name": "Waves",
     "description": "Section divider with curved wave separators with repeating crest shapes.",
     "location": "#L188-L271",
-    "tags": [
-      "dividers",
-      "waves",
-      "section-separator"
-    ]
+    "tags": ["dividers", "waves", "section-separator"]
   },
   {
     "name": "Stacked curves",
     "description": "Section divider with multiple curve layers for soft tiered separation.",
     "location": "#L273-L296",
-    "tags": [
-      "dividers",
-      "stacked",
-      "curves",
-      "section-separator"
-    ]
+    "tags": ["dividers", "stacked", "curves", "section-separator"]
   },
   {
     "name": "Curved arc",
     "description": "Section divider with single arc-shaped divider with smooth curvature.",
     "location": "#L298-L307",
-    "tags": [
-      "dividers",
-      "curved",
-      "arc",
-      "section-separator"
-    ]
+    "tags": ["dividers", "curved", "arc", "section-separator"]
   },
   {
     "name": "Inverted curve",
     "description": "Section divider with inverted arc shape dipping into the next section.",
     "location": "#L309-L318",
-    "tags": [
-      "dividers",
-      "inverted",
-      "curve",
-      "section-separator"
-    ]
+    "tags": ["dividers", "inverted", "curve", "section-separator"]
   },
   {
     "name": "Zigzag",
     "description": "Section divider with repeating zigzag edge for sharp rhythmic separation.",
     "location": "#L320-L331",
-    "tags": [
-      "dividers",
-      "zigzag",
-      "section-separator"
-    ]
+    "tags": ["dividers", "zigzag", "section-separator"]
   },
   {
     "name": "Torn paper",
     "description": "Section divider with ragged torn-edge style divider for textured transitions.",
     "location": "#L333-L350",
-    "tags": [
-      "dividers",
-      "torn",
-      "paper",
-      "section-separator"
-    ]
+    "tags": ["dividers", "torn", "paper", "section-separator"]
   },
   {
     "name": "Gradient fade",
     "description": "Section divider with gradient fade line that softly blends two sections.",
     "location": "#L352-L367",
-    "tags": [
-      "dividers",
-      "gradient",
-      "fade",
-      "section-separator"
-    ]
+    "tags": ["dividers", "gradient", "fade", "section-separator"]
   },
   {
     "name": "Noise texture fade",
     "description": "Section divider with faded divider with noise texture overlay for grain.",
     "location": "#L369-L399",
-    "tags": [
-      "dividers",
-      "noise",
-      "texture",
-      "fade",
-      "section-separator"
-    ]
+    "tags": ["dividers", "noise", "texture", "fade", "section-separator"]
   },
   {
     "name": "Pulse line",
     "description": "Section divider with animated pulse line divider for subtle motion emphasis.",
     "location": "#L401-L446",
-    "tags": [
-      "dividers",
-      "pulse",
-      "line",
-      "section-separator"
-    ]
+    "tags": ["dividers", "pulse", "line", "section-separator"]
   },
   {
     "name": "Diamond chain",
     "description": "Section divider with repeating diamond motif along a horizontal separator.",
     "location": "#L448-L499",
-    "tags": [
-      "dividers",
-      "diamond",
-      "chain",
-      "section-separator"
-    ]
+    "tags": ["dividers", "diamond", "chain", "section-separator"]
   },
   {
     "name": "Gradient glow line",
     "description": "Section divider with glowing gradient line used as a luminous separator.",
     "location": "#L501-L538",
-    "tags": [
-      "dividers",
-      "gradient",
-      "glow",
-      "line",
-      "section-separator"
-    ]
+    "tags": ["dividers", "gradient", "glow", "line", "section-separator"]
   },
   {
     "name": "Chevron arrow",
     "description": "Section divider with chevron arrow motif guiding visual flow between sections.",
     "location": "#L540-L551",
-    "tags": [
-      "dividers",
-      "chevron",
-      "arrow",
-      "section-separator"
-    ]
+    "tags": ["dividers", "chevron", "arrow", "section-separator"]
   }
 ]

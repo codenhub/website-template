@@ -3,131 +3,72 @@
     "name": "Reference",
     "description": "This is a reference for the objects below, not a variant. Each field is an example or description of its content.",
     "location": "The line range where the component is located (e.g. #L10-L20 means the component is between line 10 and 20). The range may not be exact, so leave a margin of error.",
-    "tags": [
-      "reference",
-      "description",
-      "example"
-    ]
+    "tags": ["reference", "description", "example"]
   },
   {
     "name": "Flat",
     "description": "Card component with solid styling without border, glow, or heavy depth.",
     "location": "#L118-L159",
-    "tags": [
-      "cards",
-      "flat",
-      "solid",
-      "minimal",
-      "content-cards"
-    ]
+    "tags": ["cards", "flat", "solid", "minimal", "content-cards"]
   },
   {
     "name": "Bordered",
     "description": "Card component with card containers with clear border definition and low fill.",
     "location": "#L160-L217",
-    "tags": [
-      "cards",
-      "bordered",
-      "content-cards"
-    ]
+    "tags": ["cards", "bordered", "content-cards"]
   },
   {
     "name": "Neobrutalism",
     "description": "Card component with high-contrast neobrutalist styling with hard edges and bold outlines.",
     "location": "#L218-L275",
-    "tags": [
-      "cards",
-      "neobrutalism",
-      "high-contrast",
-      "bold-outline",
-      "content-cards"
-    ]
+    "tags": ["cards", "neobrutalism", "high-contrast", "bold-outline", "content-cards"]
   },
   {
     "name": "Glassmorphism",
     "description": "Card component with translucent glass-style surfaces with blur and layered depth.",
     "location": "#L276-L341",
-    "tags": [
-      "cards",
-      "glassmorphism",
-      "translucent",
-      "blurred",
-      "content-cards"
-    ]
+    "tags": ["cards", "glassmorphism", "translucent", "blurred", "content-cards"]
   },
   {
     "name": "Flat with icon",
     "description": "Card component with flat card surfaces with icon-led headings.",
     "location": "#L342-L437",
-    "tags": [
-      "cards",
-      "flat",
-      "icon",
-      "content-cards"
-    ]
+    "tags": ["cards", "flat", "icon", "content-cards"]
   },
   {
     "name": "Bordered with icon",
     "description": "Card component with outlined cards that pair icon badges with text blocks.",
     "location": "#L438-L515",
-    "tags": [
-      "cards",
-      "bordered",
-      "icon",
-      "content-cards"
-    ]
+    "tags": ["cards", "bordered", "icon", "content-cards"]
   },
   {
     "name": "Image cards",
     "description": "Card component with media-led cards with top image previews.",
     "location": "#L516-L637",
-    "tags": [
-      "cards",
-      "image",
-      "content-cards"
-    ]
+    "tags": ["cards", "image", "content-cards"]
   },
   {
     "name": "Image split",
     "description": "Card component with split card layout separating image and text columns.",
     "location": "#L638-L758",
-    "tags": [
-      "cards",
-      "image",
-      "split",
-      "content-cards"
-    ]
+    "tags": ["cards", "image", "split", "content-cards"]
   },
   {
     "name": "Horizontal image card",
     "description": "Card component with horizontal card with side image and adjacent content.",
     "location": "#L759-L789",
-    "tags": [
-      "cards",
-      "horizontal",
-      "image",
-      "card",
-      "content-cards"
-    ]
+    "tags": ["cards", "horizontal", "image", "card", "content-cards"]
   },
   {
     "name": "Profile cards",
     "description": "Card component with person-profile cards with avatar, role, and social metadata.",
     "location": "#L790-L939",
-    "tags": [
-      "cards",
-      "profile",
-      "content-cards"
-    ]
+    "tags": ["cards", "profile", "content-cards"]
   },
   {
     "name": "Color cards",
     "description": "Card component with accent-color background cards for category or status grouping.",
     "location": "#L941-L1020",
-    "tags": [
-      "cards",
-      "color",
-      "content-cards"
-    ]
+    "tags": ["cards", "color", "content-cards"]
   }
 ]

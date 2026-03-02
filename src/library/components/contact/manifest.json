@@ -3,56 +3,30 @@
     "name": "Reference",
     "description": "This is a reference for the objects below, not a variant. Each field is an example or description of its content.",
     "location": "The line range where the component is located (e.g. #L10-L20 means the component is between line 10 and 20). The range may not be exact, so leave a margin of error.",
-    "tags": [
-      "reference",
-      "description",
-      "example"
-    ]
+    "tags": ["reference", "description", "example"]
   },
   {
     "name": "Form + map",
     "description": "Contact section with a contact form paired with an embedded location map.",
     "location": "#L118-L167",
-    "tags": [
-      "contact",
-      "form",
-      "map",
-      "contact-info"
-    ]
+    "tags": ["contact", "form", "map", "contact-info"]
   },
   {
     "name": "Cards + map",
     "description": "Contact section with contact detail cards combined with a map block.",
     "location": "#L168-L276",
-    "tags": [
-      "contact",
-      "cards",
-      "map",
-      "contact-info"
-    ]
+    "tags": ["contact", "cards", "map", "contact-info"]
   },
   {
     "name": "Split primary w/form",
     "description": "Contact section with two-column split with a primary info panel and form area.",
     "location": "#L277-L370",
-    "tags": [
-      "contact",
-      "split",
-      "primary",
-      "form",
-      "contact-info"
-    ]
+    "tags": ["contact", "split", "primary", "form", "contact-info"]
   },
   {
     "name": "Cards",
     "description": "Contact section with stacked contact cards focused on address, phone, and email data.",
     "location": "#L371-L478",
-    "tags": [
-      "contact",
-      "cards",
-      "stacked",
-      "content-blocks",
-      "contact-info"
-    ]
+    "tags": ["contact", "cards", "stacked", "content-blocks", "contact-info"]
   }
 ]

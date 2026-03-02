@@ -3,54 +3,30 @@
     "name": "Reference",
     "description": "This is a reference for the objects below, not a variant. Each field is an example or description of its content.",
     "location": "The line range where the component is located (e.g. #L10-L20 means the component is between line 10 and 20). The range may not be exact, so leave a margin of error.",
-    "tags": [
-      "reference",
-      "description",
-      "example"
-    ]
+    "tags": ["reference", "description", "example"]
   },
   {
     "name": "Flat with featured",
     "description": "Pricing section with flat pricing cards with one highlighted featured plan.",
     "location": "#L138-L402",
-    "tags": [
-      "pricing",
-      "flat",
-      "featured",
-      "plans"
-    ]
+    "tags": ["pricing", "flat", "featured", "plans"]
   },
   {
     "name": "Border with toggle",
     "description": "Pricing section with outlined pricing cards plus billing-period toggle control.",
     "location": "#L403-L643",
-    "tags": [
-      "pricing",
-      "border",
-      "toggle",
-      "plans"
-    ]
+    "tags": ["pricing", "border", "toggle", "plans"]
   },
   {
     "name": "Two-column minimal",
     "description": "Pricing section with minimal two-column plan comparison layout.",
     "location": "#L644-L896",
-    "tags": [
-      "pricing",
-      "two-column",
-      "minimal",
-      "plans"
-    ]
+    "tags": ["pricing", "two-column", "minimal", "plans"]
   },
   {
     "name": "Comparison table",
     "description": "Pricing section with feature-by-feature pricing matrix across multiple plans.",
     "location": "#L897-L1140",
-    "tags": [
-      "pricing",
-      "comparison",
-      "table",
-      "plans"
-    ]
+    "tags": ["pricing", "comparison", "table", "plans"]
   }
 ]
