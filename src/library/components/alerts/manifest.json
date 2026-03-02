@@ -1,0 +1,78 @@
+[
+  {
+    "name": "Reference",
+    "description": "This is a reference for the objects below, not a variant. Each field is an example or description of its content.",
+    "location": "The line range where the component is located (e.g. #L10-L20 means the component is between line 10 and 20). The range may not be exact, so leave a margin of error.",
+    "tags": [
+      "reference",
+      "description",
+      "example"
+    ]
+  },
+  {
+    "name": "Flat",
+    "description": "Alert component with solid styling without border, glow, or heavy depth.",
+    "location": "#L110-L190",
+    "tags": [
+      "alerts",
+      "flat",
+      "solid",
+      "minimal",
+      "feedback"
+    ]
+  },
+  {
+    "name": "Light",
+    "description": "Alert component with soft low-contrast styling for subtle status messaging.",
+    "location": "#L191-L273",
+    "tags": [
+      "alerts",
+      "light",
+      "feedback"
+    ]
+  },
+  {
+    "name": "With border",
+    "description": "Alert component with outlined container with a visible stroke around the message.",
+    "location": "#L274-L368",
+    "tags": [
+      "alerts",
+      "border",
+      "feedback"
+    ]
+  },
+  {
+    "name": "Left accent",
+    "description": "Alert component with a vertical accent stripe on the left edge for status emphasis.",
+    "location": "#L369-L455",
+    "tags": [
+      "alerts",
+      "left",
+      "accent",
+      "feedback"
+    ]
+  },
+  {
+    "name": "With dismiss button",
+    "description": "Alert component with an inline close action so users can hide the message.",
+    "location": "#L456-L534",
+    "tags": [
+      "alerts",
+      "dismiss",
+      "button",
+      "feedback"
+    ]
+  },
+  {
+    "name": "Neobrutalism",
+    "description": "Alert component with high-contrast neobrutalist styling with hard edges and bold outlines.",
+    "location": "#L535-L615",
+    "tags": [
+      "alerts",
+      "neobrutalism",
+      "high-contrast",
+      "bold-outline",
+      "feedback"
+    ]
+  }
+]

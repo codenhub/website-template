@@ -1,0 +1,66 @@
+[
+  {
+    "name": "Reference",
+    "description": "This is a reference for the objects below, not a variant. Each field is an example or description of its content.",
+    "location": "The line range where the component is located (e.g. #L10-L20 means the component is between line 10 and 20). The range may not be exact, so leave a margin of error.",
+    "tags": [
+      "reference",
+      "description",
+      "example"
+    ]
+  },
+  {
+    "name": "Simple accordion",
+    "description": "FAQ section with accordion interaction with one-question-at-a-time expansion.",
+    "location": "#L127-L232",
+    "tags": [
+      "faq",
+      "simple",
+      "accordion",
+      "help-content"
+    ]
+  },
+  {
+    "name": "Bordered cards",
+    "description": "FAQ section with separate bordered question cards with clearer item boundaries.",
+    "location": "#L233-L346",
+    "tags": [
+      "faq",
+      "bordered",
+      "cards",
+      "help-content"
+    ]
+  },
+  {
+    "name": "With background",
+    "description": "FAQ section with faq block on a contrasting background panel.",
+    "location": "#L347-L452",
+    "tags": [
+      "faq",
+      "background",
+      "help-content"
+    ]
+  },
+  {
+    "name": "Static",
+    "description": "FAQ section with non-collapsible static answers displayed without interaction.",
+    "location": "#L453-L503",
+    "tags": [
+      "faq",
+      "static",
+      "non-interactive",
+      "always-visible",
+      "help-content"
+    ]
+  },
+  {
+    "name": "Grid",
+    "description": "FAQ section with multi-column faq item grid instead of a single stacked list.",
+    "location": "#L504-L558",
+    "tags": [
+      "faq",
+      "grid",
+      "help-content"
+    ]
+  }
+]

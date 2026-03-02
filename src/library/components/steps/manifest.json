@@ -1,0 +1,76 @@
+[
+  {
+    "name": "Reference",
+    "description": "This is a reference for the objects below, not a variant. Each field is an example or description of its content.",
+    "location": "The line range where the component is located (e.g. #L10-L20 means the component is between line 10 and 20). The range may not be exact, so leave a margin of error.",
+    "tags": [
+      "reference",
+      "description",
+      "example"
+    ]
+  },
+  {
+    "name": "Horizontal steps",
+    "description": "Steps section with left-to-right step sequence for process overviews.",
+    "location": "#L110-L176",
+    "tags": [
+      "steps",
+      "horizontal",
+      "process-flow"
+    ]
+  },
+  {
+    "name": "Vertical timeline",
+    "description": "Steps section with top-to-bottom timeline structure for staged progress.",
+    "location": "#L177-L308",
+    "tags": [
+      "steps",
+      "vertical",
+      "timeline",
+      "process-flow"
+    ]
+  },
+  {
+    "name": "Icon steps",
+    "description": "Steps section with step items led by icons for faster recognition.",
+    "location": "#L309-L469",
+    "tags": [
+      "steps",
+      "icon",
+      "process-flow"
+    ]
+  },
+  {
+    "name": "Alternating cards",
+    "description": "Steps section with alternating side cards to visualize progression stages.",
+    "location": "#L470-L575",
+    "tags": [
+      "steps",
+      "alternating",
+      "cards",
+      "process-flow"
+    ]
+  },
+  {
+    "name": "Interactive progress steps",
+    "description": "Steps section with interactive stepper with active and completed states.",
+    "location": "#L576-L676",
+    "tags": [
+      "steps",
+      "interactive",
+      "progress",
+      "process-flow"
+    ]
+  },
+  {
+    "name": "Primary background",
+    "description": "Steps section with process section on a high-contrast primary background.",
+    "location": "#L677-L761",
+    "tags": [
+      "steps",
+      "primary",
+      "background",
+      "process-flow"
+    ]
+  }
+]

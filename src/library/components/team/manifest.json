@@ -1,0 +1,80 @@
+[
+  {
+    "name": "Reference",
+    "description": "This is a reference for the objects below, not a variant. Each field is an example or description of its content.",
+    "location": "The line range where the component is located (e.g. #L10-L20 means the component is between line 10 and 20). The range may not be exact, so leave a margin of error.",
+    "tags": [
+      "reference",
+      "description",
+      "example"
+    ]
+  },
+  {
+    "name": "Simple grid",
+    "description": "Team section with regular evenly spaced grid for balanced card or item scanning.",
+    "location": "#L110-L293",
+    "tags": [
+      "team",
+      "simple",
+      "grid",
+      "people"
+    ]
+  },
+  {
+    "name": "Cards with bio",
+    "description": "Team section with member cards with bio snippets and profile details.",
+    "location": "#L294-L482",
+    "tags": [
+      "team",
+      "cards",
+      "bio",
+      "people"
+    ]
+  },
+  {
+    "name": "Compact list",
+    "description": "Team section with compact list layout for dense team directories.",
+    "location": "#L483-L636",
+    "tags": [
+      "team",
+      "compact",
+      "list",
+      "people"
+    ]
+  },
+  {
+    "name": "Image overlay",
+    "description": "Team section with team photos with text and actions over image overlays.",
+    "location": "#L637-L783",
+    "tags": [
+      "team",
+      "image",
+      "overlay",
+      "people"
+    ]
+  },
+  {
+    "name": "Primary background grid",
+    "description": "Team section with stats presented on a strong primary-background grid.",
+    "location": "#L784-L933",
+    "tags": [
+      "team",
+      "primary",
+      "background",
+      "grid",
+      "people"
+    ]
+  },
+  {
+    "name": "Featured member split",
+    "description": "Team section with split layout highlighting one featured member beside list.",
+    "location": "#L934-L1064",
+    "tags": [
+      "team",
+      "featured",
+      "member",
+      "split",
+      "people"
+    ]
+  }
+]

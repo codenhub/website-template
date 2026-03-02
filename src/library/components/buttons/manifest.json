@@ -1,0 +1,141 @@
+[
+  {
+    "name": "Reference",
+    "description": "This is a reference for the objects below, not a variant. Each field is an example or description of its content.",
+    "location": "The line range where the component is located (e.g. #L10-L20 means the component is between line 10 and 20). The range may not be exact, so leave a margin of error.",
+    "tags": [
+      "reference",
+      "description",
+      "example"
+    ]
+  },
+  {
+    "name": "Flat",
+    "description": "Button set with solid styling without border, glow, or heavy depth.",
+    "location": "#L118-L143",
+    "tags": [
+      "buttons",
+      "flat",
+      "solid",
+      "minimal",
+      "actions"
+    ]
+  },
+  {
+    "name": "Shadow",
+    "description": "Button set with elevated styling that relies on drop-shadow depth.",
+    "location": "#L144-L169",
+    "tags": [
+      "buttons",
+      "shadow",
+      "actions"
+    ]
+  },
+  {
+    "name": "Outline",
+    "description": "Button set with transparent or low-fill styling with a strong outline treatment.",
+    "location": "#L170-L195",
+    "tags": [
+      "buttons",
+      "outline",
+      "actions"
+    ]
+  },
+  {
+    "name": "Neobrutalism",
+    "description": "Button set with high-contrast neobrutalist styling with hard edges and bold outlines.",
+    "location": "#L196-L216",
+    "tags": [
+      "buttons",
+      "neobrutalism",
+      "high-contrast",
+      "bold-outline",
+      "actions"
+    ]
+  },
+  {
+    "name": "With icon",
+    "description": "Button set with icon-plus-label actions for clearer intent cues.",
+    "location": "#L217-L295",
+    "tags": [
+      "buttons",
+      "icon",
+      "actions"
+    ]
+  },
+  {
+    "name": "Icon only",
+    "description": "Button set with icon-only circular and square controls without label text.",
+    "location": "#L296-L383",
+    "tags": [
+      "buttons",
+      "icon",
+      "actions"
+    ]
+  },
+  {
+    "name": "Sizes",
+    "description": "Button set with size scale examples for small, medium, and large controls.",
+    "location": "#L384-L409",
+    "tags": [
+      "buttons",
+      "sizes",
+      "actions"
+    ]
+  },
+  {
+    "name": "Pill",
+    "description": "Button set with fully rounded pill shape for compact labels or actions.",
+    "location": "#L410-L430",
+    "tags": [
+      "buttons",
+      "pill",
+      "actions"
+    ]
+  },
+  {
+    "name": "Button Group",
+    "description": "Button set with segmented grouped actions displayed as a unified control.",
+    "location": "#L431-L516",
+    "tags": [
+      "buttons",
+      "button",
+      "group",
+      "actions"
+    ]
+  },
+  {
+    "name": "Loading",
+    "description": "Button set with loading states with spinners and disabled interaction feedback.",
+    "location": "#L517-L569",
+    "tags": [
+      "buttons",
+      "loading",
+      "spinner",
+      "disabled-state",
+      "actions"
+    ]
+  },
+  {
+    "name": "Gradient",
+    "description": "Button set with gradient-filled actions for visual prominence.",
+    "location": "#L570-L590",
+    "tags": [
+      "buttons",
+      "gradient",
+      "actions"
+    ]
+  },
+  {
+    "name": "Glassmorphism",
+    "description": "Button set with translucent glass-style surfaces with blur and layered depth.",
+    "location": "#L591-L611",
+    "tags": [
+      "buttons",
+      "glassmorphism",
+      "translucent",
+      "blurred",
+      "actions"
+    ]
+  }
+]

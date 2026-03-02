@@ -1,0 +1,66 @@
+[
+  {
+    "name": "Reference",
+    "description": "This is a reference for the objects below, not a variant. Each field is an example or description of its content.",
+    "location": "The line range where the component is located (e.g. #L10-L20 means the component is between line 10 and 20). The range may not be exact, so leave a margin of error.",
+    "tags": [
+      "reference",
+      "description",
+      "example"
+    ]
+  },
+  {
+    "name": "Multi-column primary",
+    "description": "Footer section with multi-column footer with primary nav and utility links.",
+    "location": "#L113-L215",
+    "tags": [
+      "footers",
+      "multi-column",
+      "primary",
+      "site-footer"
+    ]
+  },
+  {
+    "name": "Minimal centered",
+    "description": "Footer section with centered minimal footer with reduced links and compact spacing.",
+    "location": "#L216-L295",
+    "tags": [
+      "footers",
+      "minimal",
+      "centered",
+      "site-footer"
+    ]
+  },
+  {
+    "name": "Newsletter + links",
+    "description": "Footer section with footer combining newsletter signup and grouped navigation links.",
+    "location": "#L296-L384",
+    "tags": [
+      "footers",
+      "newsletter",
+      "links",
+      "site-footer"
+    ]
+  },
+  {
+    "name": "Simple one-line",
+    "description": "Footer section with single-line footer row for copyright and compact links.",
+    "location": "#L385-L440",
+    "tags": [
+      "footers",
+      "simple",
+      "one-line",
+      "site-footer"
+    ]
+  },
+  {
+    "name": "Top-rounded",
+    "description": "Footer section with footer container with rounded top corners and boxed treatment.",
+    "location": "#L441-L545",
+    "tags": [
+      "footers",
+      "top-rounded",
+      "site-footer"
+    ]
+  }
+]

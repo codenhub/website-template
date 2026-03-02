@@ -1,0 +1,97 @@
+[
+  {
+    "name": "Reference",
+    "description": "This is a reference for the objects below, not a variant. Each field is an example or description of its content.",
+    "location": "The line range where the component is located (e.g. #L10-L20 means the component is between line 10 and 20). The range may not be exact, so leave a margin of error.",
+    "tags": [
+      "reference",
+      "description",
+      "example"
+    ]
+  },
+  {
+    "name": "Default",
+    "description": "Form input pattern with a standard baseline structure for general-purpose use.",
+    "location": "#L110-L127",
+    "tags": [
+      "inputs",
+      "default",
+      "baseline",
+      "standard",
+      "forms"
+    ]
+  },
+  {
+    "name": "With helper text",
+    "description": "Form input pattern with field with helper and validation guidance text below input.",
+    "location": "#L128-L159",
+    "tags": [
+      "inputs",
+      "helper",
+      "text",
+      "forms"
+    ]
+  },
+  {
+    "name": "With icon",
+    "description": "Form input pattern with icon-plus-label actions for clearer intent cues.",
+    "location": "#L160-L222",
+    "tags": [
+      "inputs",
+      "icon",
+      "forms"
+    ]
+  },
+  {
+    "name": "With addon",
+    "description": "Form input pattern with input with prefixed or suffixed addon elements.",
+    "location": "#L223-L259",
+    "tags": [
+      "inputs",
+      "addon",
+      "forms"
+    ]
+  },
+  {
+    "name": "Textarea",
+    "description": "Form input pattern with multi-line text entry field for longer responses.",
+    "location": "#L260-L276",
+    "tags": [
+      "inputs",
+      "textarea",
+      "forms"
+    ]
+  },
+  {
+    "name": "Select",
+    "description": "Form input pattern with dropdown select control for predefined option lists.",
+    "location": "#L277-L306",
+    "tags": [
+      "inputs",
+      "select",
+      "forms"
+    ]
+  },
+  {
+    "name": "Floating Label",
+    "description": "Form input pattern with floating label pattern that moves on focus or input.",
+    "location": "#L307-L358",
+    "tags": [
+      "inputs",
+      "floating",
+      "label",
+      "forms"
+    ]
+  },
+  {
+    "name": "Checkboxes & Radios",
+    "description": "Form input pattern with grouped checkbox and radio controls for multi/single choice.",
+    "location": "#L359-L464",
+    "tags": [
+      "inputs",
+      "checkboxes",
+      "radios",
+      "forms"
+    ]
+  }
+]

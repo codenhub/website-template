@@ -1,0 +1,292 @@
+{
+  "name": "Components library map",
+  "description": "A map of UI components for LLM discovery and usage. Each category has its own manifest.json file with an array of variants.",
+  "categories": [
+    {
+      "name": "Alerts",
+      "description": "Status and feedback alert blocks including flat, bordered, accent, dismissible, and neobrutalist treatments.",
+      "path": "./alerts/index.html",
+      "variants": 6,
+      "tags": [
+        "alerts",
+        "status-feedback",
+        "inline-messaging",
+        "dismissible",
+        "severity-styles"
+      ]
+    },
+    {
+      "name": "Badges",
+      "description": "Compact label badges for status, categories, and metadata in flat, outline, pill, icon, and dismissible styles.",
+      "path": "./badges/index.html",
+      "variants": 8,
+      "tags": [
+        "badges",
+        "labels",
+        "status-indicators",
+        "pill-style",
+        "metadata"
+      ]
+    },
+    {
+      "name": "Blog",
+      "description": "Blog post listing layouts spanning multi-column grids, featured-plus-list compositions, and minimal reading-first lists.",
+      "path": "./blog/index.html",
+      "variants": 4,
+      "tags": [
+        "blog",
+        "article-listing",
+        "content-grid",
+        "featured-post",
+        "editorial-layout"
+      ]
+    },
+    {
+      "name": "Buttons",
+      "description": "Action button styles covering flat, outline, icon, grouped, loading, gradient, and glass-like treatments.",
+      "path": "./buttons/index.html",
+      "variants": 12,
+      "tags": [
+        "buttons",
+        "actions",
+        "icon-buttons",
+        "button-groups",
+        "loading-states"
+      ]
+    },
+    {
+      "name": "Cards",
+      "description": "Card patterns for text, icon, image, profile, and color-led content blocks across flat, bordered, and expressive styles.",
+      "path": "./cards/index.html",
+      "variants": 11,
+      "tags": [
+        "cards",
+        "content-cards",
+        "image-cards",
+        "profile-cards",
+        "surface-styles"
+      ]
+    },
+    {
+      "name": "Contact",
+      "description": "Contact section compositions combining forms, map embeds, and information cards in split and stacked layouts.",
+      "path": "./contact/index.html",
+      "variants": 4,
+      "tags": [
+        "contact",
+        "forms",
+        "map-embed",
+        "contact-info",
+        "split-layout"
+      ]
+    },
+    {
+      "name": "CTA",
+      "description": "Call-to-action sections with centered, split, banner, newsletter, metric-supported, and neobrutalist presentation modes.",
+      "path": "./cta/index.html",
+      "variants": 11,
+      "tags": [
+        "cta",
+        "conversion",
+        "newsletter-signup",
+        "banner",
+        "split-layout"
+      ]
+    },
+    {
+      "name": "Dividers",
+      "description": "Decorative and utility section separators including diagonals, waves, curves, textured fades, and animated lines.",
+      "path": "./dividers/index.html",
+      "variants": 17,
+      "tags": [
+        "dividers",
+        "section-separators",
+        "svg-shapes",
+        "decorative",
+        "transitions"
+      ]
+    },
+    {
+      "name": "FAQ",
+      "description": "FAQ presentation patterns including accordion, bordered card, static, background panel, and grid-based answer layouts.",
+      "path": "./faq/index.html",
+      "variants": 5,
+      "tags": [
+        "faq",
+        "help-content",
+        "accordion",
+        "question-answer",
+        "knowledge-base"
+      ]
+    },
+    {
+      "name": "Features",
+      "description": "Feature storytelling sections with split layouts, tabbed interactions, visual highlights, and hotspot-driven showcases.",
+      "path": "./features/index.html",
+      "variants": 6,
+      "tags": [
+        "features",
+        "product-highlights",
+        "storytelling",
+        "interactive-tabs",
+        "hotspots"
+      ]
+    },
+    {
+      "name": "Footers",
+      "description": "Footer patterns from compact one-line bars to multi-column, newsletter, and rounded-container layouts.",
+      "path": "./footers/index.html",
+      "variants": 5,
+      "tags": [
+        "footers",
+        "site-footer",
+        "link-groups",
+        "newsletter",
+        "multi-column"
+      ]
+    },
+    {
+      "name": "Grids",
+      "description": "Grid-based content systems including simple, icon-card, bento, asymmetric, row, and illustrated feature arrangements.",
+      "path": "./grids/index.html",
+      "variants": 7,
+      "tags": [
+        "grids",
+        "layout-grid",
+        "bento",
+        "icon-cards",
+        "illustrated"
+      ]
+    },
+    {
+      "name": "Headers",
+      "description": "Header and navbar variants with dropdown menus, announcement bars, search, floating bars, and CTA-focused splits.",
+      "path": "./headers/index.html",
+      "variants": 9,
+      "tags": [
+        "headers",
+        "navigation",
+        "navbar",
+        "dropdown-menu",
+        "announcement-bar"
+      ]
+    },
+    {
+      "name": "Heroes",
+      "description": "Hero section starters for centered, image-supported, and background-image-first landing page intros.",
+      "path": "./heroes/index.html",
+      "variants": 4,
+      "tags": [
+        "heroes",
+        "landing-hero",
+        "headline-section",
+        "background-image",
+        "centered-layout"
+      ]
+    },
+    {
+      "name": "Inputs",
+      "description": "Form input patterns for helper text, icons, addons, textarea, select, floating labels, and choice controls.",
+      "path": "./inputs/index.html",
+      "variants": 8,
+      "tags": [
+        "inputs",
+        "forms",
+        "text-fields",
+        "floating-label",
+        "checkbox-radio"
+      ]
+    },
+    {
+      "name": "Loaders",
+      "description": "Loading animation sets including spinner, dot, bar, and block-based motion variants.",
+      "path": "./loaders/index.html",
+      "variants": 4,
+      "tags": [
+        "loaders",
+        "loading-indicators",
+        "spinners",
+        "dot-loader",
+        "skeleton-alternatives"
+      ]
+    },
+    {
+      "name": "Mouse Trackers",
+      "description": "Pointer-reactive effects such as trails, blobs, ripples, spotlights, particles, magnetic text, and cursor overlays.",
+      "path": "./mouse-trackers/index.html",
+      "variants": 13,
+      "tags": [
+        "mouse-trackers",
+        "cursor-effects",
+        "pointer-interaction",
+        "motion-effects",
+        "hover-reactive"
+      ]
+    },
+    {
+      "name": "Pricing",
+      "description": "Pricing section layouts featuring featured plans, billing toggles, minimal columns, and comparison matrices.",
+      "path": "./pricing/index.html",
+      "variants": 4,
+      "tags": [
+        "pricing",
+        "plans",
+        "billing-toggle",
+        "comparison-table",
+        "saas-pricing"
+      ]
+    },
+    {
+      "name": "Stats",
+      "description": "Metrics and KPI display sections in rows, cards, divided groups, image-side compositions, and highlighted backgrounds.",
+      "path": "./stats/index.html",
+      "variants": 5,
+      "tags": [
+        "stats",
+        "metrics",
+        "kpi",
+        "data-highlights",
+        "number-cards"
+      ]
+    },
+    {
+      "name": "Steps",
+      "description": "Process and timeline sections for horizontal flows, vertical timelines, icon-led steps, and interactive progress states.",
+      "path": "./steps/index.html",
+      "variants": 6,
+      "tags": [
+        "steps",
+        "process-flow",
+        "timeline",
+        "progress-stepper",
+        "onboarding"
+      ]
+    },
+    {
+      "name": "Team",
+      "description": "Team member presentation layouts including simple grids, bio cards, compact lists, overlays, and featured-member splits.",
+      "path": "./team/index.html",
+      "variants": 6,
+      "tags": [
+        "team",
+        "people",
+        "member-cards",
+        "staff-directory",
+        "profile-grid"
+      ]
+    },
+    {
+      "name": "Testimonials",
+      "description": "Social proof layouts for quote cards, ratings, avatar grids, masonry feeds, stats bars, and gradient accents.",
+      "path": "./testimonials/index.html",
+      "variants": 11,
+      "tags": [
+        "testimonials",
+        "social-proof",
+        "customer-quotes",
+        "ratings",
+        "masonry-layout"
+      ]
+    }
+  ]
+}
