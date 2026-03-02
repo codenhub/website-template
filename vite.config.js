@@ -36,7 +36,6 @@ export default defineConfig({
         team: "./src/library/components/team/index.html",
         testimonials: "./src/library/components/testimonials/index.html",
         pages: "./src/library/pages/index.html",
-        lumenLeaf: "./src/library/pages/lumen-leaf/index.html",
       },
     },
   },
