@@ -1,6 +1,6 @@
 import { defineConfig } from "vite";
 import tailwindcss from "@tailwindcss/vite";
-import { deferCssPlugin } from "./plugins";
+import { addLoaderPlugin, deferCssPlugin } from "./plugins";
 
 export default defineConfig({
   root: "./src",
@@ -39,5 +39,5 @@ export default defineConfig({
       },
     },
   },
-  plugins: [tailwindcss(), deferCssPlugin()],
+  plugins: [tailwindcss(), addLoaderPlugin(), deferCssPlugin()],
 });
