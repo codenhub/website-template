@@ -18,7 +18,7 @@ class Header extends HTMLElement {
                 <svg class="size-4 transition-transform duration-400 group-hover:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                   <path d="m6 9 6 6 6-6"/>
                 </svg>
-                <div class="flex flex-col gap-2 min-w-3xs rounded-xl border border-border p-2 absolute top-full left-1/2 -translate-x-1/2 translate-y-4 bg-background opacity-0 group-hover:opacity-100 transition-opacity duration-400 z-50">
+                <div class="flex flex-col gap-2 min-w-3xs rounded-xl border border-border p-2 absolute top-full left-1/2 -translate-x-1/2 translate-y-4 bg-background opacity-0 scale-0 origin-top group-hover:opacity-100 group-hover:scale-100 transition-all duration-400 z-50">
                   <a href="/library/components/" class="flex items-center gap-2 p-2 rounded-lg hover:bg-foreground transition duration-400">
                     <div class="flex items-center justify-center size-10 bg-surface rounded-lg">
                       <svg
