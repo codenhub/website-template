@@ -1,6 +1,6 @@
 const STYLESHEET_RE =
-  /<link\b(?=[^>]*\brel\s*=\s*(?:"stylesheet"|'stylesheet'|stylesheet)\b)(?=[^>]*\bhref\s*=)[^>]*\/?\s*>/gi;
-const STYLESHEET_REL_ATTR_RE = /\brel\s*=\s*(?:"stylesheet"|'stylesheet'|stylesheet)\b/i;
+  /<link\b(?=[^>]*\brel\s*=\s*(?:"stylesheet"|'stylesheet'|stylesheet(?=[\s>])))(?=[^>]*\bhref\s*=)[^>]*\/?\s*>/gi;
+const STYLESHEET_REL_ATTR_RE = /\brel\s*=\s*(?:"stylesheet"|'stylesheet'|stylesheet(?=[\s>]))/i;
 const LINK_TAG_END_RE = /\/?\s*>$/;
 
 export default function deferCssPlugin() {
