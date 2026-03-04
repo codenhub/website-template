@@ -23,30 +23,24 @@ This is a minimal, opinionated template for static websites. Use the structure a
 
 ## Project structure
 
-- src/
-  - \_public/ - static files copied as-is to build output.
-    - assets/ - images, icons, fonts
-    - robots.txt - search engine crawlers instructions
-    - sitemap.xml - the sitemap of the website
-  - \_ui/ - interface core.
-    - base/ - global CSS styling.
-    - components/ - reusable UI pieces.
-    - scripts/ - global JS scripts.
-    - main.\* - JS/CSS entry.
-  - index.html - entry HTML.
-- package.json - scripts and deps.
-- README.md - this file.
-- vite.config.js - Vite configuration.
-- wrangler-toml - Cloudflare workers configuration
+```
+website-template/
+├── .agents/             # AI agents instructions
+├── plugins/             # Vite plugins
+├── src/                 # Website source code
+│   ├── _public/         # Static assets copied as-is to build output
+│   ├── _ui/             # Interface core 
+│   │   ├── components/  # Reusable UI components (WebComponents)
+│   │   ├── scripts/     # UI logic
+│   │   └── styles/      # Global styles
+│   ├── library/         # All components and page templates
+│   ├── */index.html     # Other pages
+│   └── index.*          # Entry points for homepage
+├── vite.config.js       # Vite configuration
+└── wrangler.toml        # Cloudflare workers configuration
+```
 
 This layout keeps runnable code in src/, static assets in public/ and build config at the repo root.
-
-## Technology stack
-
-- Vite - fast dev server and build tool.
-- TailwindCSS - utility-first styling, good for small teams and rapid iterations.
-- Prettier - code formatting.
-- GSAP - performant animations when you need more control.
 
 ## Good for
 
