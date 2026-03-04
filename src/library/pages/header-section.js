@@ -1,4 +1,4 @@
-class HeaderSection extends HTMLElement {
+class PagesHeaderSection extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
       <section class="sect relative overflow-hidden">
@@ -16,4 +16,4 @@ class HeaderSection extends HTMLElement {
   }
 }
 
-customElements.define("header-section", HeaderSection);
+customElements.define("pages-header-section", PagesHeaderSection);
