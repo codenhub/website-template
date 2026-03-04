@@ -47,6 +47,171 @@ document.addEventListener("DOMContentLoaded", () => {
       );
       setTimeout(() => ring.remove(), 850);
     });
+
+    gsap.utils.toArray(".split-text").forEach((el) => {
+      const split = SplitText.create(el, { type: "lines", mask: "lines" });
+      gsap.from(split.lines, {
+        opacity: 0,
+        y: 20,
+        filter: "blur(10px)",
+        duration: 0.4,
+        ease: "power1.inOut",
+        stagger: 0.2,
+        scrollTrigger: {
+          trigger: el,
+          start: "top bottom",
+          toggleActions: "play none none none",
+        },
+      });
+    });
+
+    gsap.utils.toArray(".split-chars").forEach((el) => {
+      const split = SplitText.create(el, { type: "chars, words" });
+      gsap.from(split.chars, {
+        opacity: 0,
+        y: 20,
+        filter: "blur(10px)",
+        duration: 0.4,
+        ease: "power1.inOut",
+        stagger: { amount: 0.4 },
+        scrollTrigger: {
+          trigger: el,
+          start: "top bottom",
+          toggleActions: "play none none none",
+        },
+      });
+    });
+
+    gsap.utils.toArray(".grow-in").forEach((el) => {
+      gsap.from(el, {
+        opacity: 0,
+        scale: 0.4,
+        filter: "blur(10px)",
+        duration: 0.8,
+        ease: "power1.inOut",
+        scrollTrigger: {
+          trigger: el,
+          start: "top bottom",
+          toggleActions: "play none none none",
+        },
+      });
+    });
+
+    gsap.utils.toArray(".grow-in-stagger-out").forEach((el) => {
+      const items = el.querySelectorAll(".grow-in-stagger-inn");
+      gsap.from(items, {
+        opacity: 0,
+        scale: 0.4,
+        filter: "blur(10px)",
+        duration: 0.8,
+        ease: "power1.inOut",
+        stagger: { amount: 0.4 },
+        scrollTrigger: {
+          trigger: el,
+          start: "top bottom",
+          toggleActions: "play none none none",
+        },
+      });
+    });
+
+    gsap.utils.toArray(".slide-in-stagger-out").forEach((el) => {
+      const items = el.querySelectorAll(".slide-in-stagger-inn");
+      gsap.from(items, {
+        opacity: 0,
+        yPercent: 80,
+        filter: "blur(10px)",
+        duration: 0.8,
+        ease: "power1.inOut",
+        stagger: { amount: 0.4 },
+        scrollTrigger: {
+          trigger: el,
+          start: "top bottom",
+          toggleActions: "play none none none",
+        },
+      });
+    });
+
+    gsap.utils.toArray(".slide-up-in").forEach((el) => {
+      gsap.from(el, {
+        opacity: 0,
+        yPercent: 80,
+        filter: "blur(10px)",
+        duration: 0.8,
+        ease: "power1.inOut",
+        scrollTrigger: {
+          trigger: el,
+          start: "top bottom",
+          toggleActions: "play none none none",
+        },
+      });
+    });
+
+    gsap.utils.toArray(".slide-up-divider").forEach((el) => {
+      gsap.from(el, {
+        yPercent: 80,
+        duration: 0.8,
+        ease: "power1.inOut",
+        scrollTrigger: {
+          trigger: el,
+          start: "top bottom",
+          toggleActions: "play none none none",
+        },
+      });
+    });
+
+    gsap.from("#divider-ellipse", {
+      scaleY: 0,
+      duration: 0.8,
+      ease: "power1.inOut",
+      scrollTrigger: {
+        trigger: "#divider-ellipse",
+        start: "top bottom",
+        toggleActions: "play none none none",
+      },
+    });
+
+    gsap.utils.toArray(".slide-left-in").forEach((el) => {
+      gsap.from(el, {
+        opacity: 0,
+        xPercent: 80,
+        filter: "blur(10px)",
+        duration: 0.8,
+        ease: "power1.inOut",
+        scrollTrigger: {
+          trigger: el,
+          start: "top bottom",
+          toggleActions: "play none none none",
+        },
+      });
+    });
+
+    gsap.utils.toArray(".slide-right-in").forEach((el) => {
+      gsap.from(el, {
+        opacity: 0,
+        xPercent: -80,
+        filter: "blur(10px)",
+        duration: 0.8,
+        ease: "power1.inOut",
+        scrollTrigger: {
+          trigger: el,
+          start: "top bottom",
+          toggleActions: "play none none none",
+        },
+      });
+    });
+
+    gsap.from("#steps-line", {
+      scaleX: 0,
+      transformOrigin: "left",
+      duration: 0.8,
+      delay: 0.4,
+      ease: "power1.inOut",
+      scrollTrigger: {
+        trigger: "#steps-line",
+        start: "top bottom",
+        toggleActions: "play none none none",
+      },
+    });
   });
 
   const smoother = ScrollSmoother.create({
