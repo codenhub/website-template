@@ -16,6 +16,29 @@
     <script type="module" src="../../../_ui/components/index.js"></script>
     <script type="module" src="../../../_ui/scripts/index.js"></script>
     <script type="module" src="../header-section.js"></script>
+    <style>
+      @reference "../../../_ui/styles/index.css";
+
+      .billing-toggle {
+        @apply relative w-12 h-7 rounded-full bg-accent cursor-pointer border-none p-0;
+        transition: background-color 0.3s ease;
+
+        &::after {
+          content: "";
+          @apply absolute top-0.5 left-0.5 size-6 rounded-full bg-background;
+          transition: transform 0.3s ease;
+          box-shadow: 0 1px 3px rgb(0 0 0 / 0.15);
+        }
+
+        &.active {
+          @apply bg-primary;
+
+          &::after {
+            transform: translateX(1.25rem);
+          }
+        }
+      }
+    </style>
   </head>
 
   <body>
@@ -305,12 +328,13 @@
                 <div class="flex items-center gap-3">
                   <span class="text-sm font-medium text-text">Monthly</span>
                   <button
-                    class="billing-toggle min-h-11 min-w-11 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 transition duration-300"
+                    class="billing-toggle focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50"
                     role="switch"
                     aria-checked="false"
                     aria-label="Toggle annual billing"
                     data-billing-toggle
                   ></button>
+                  <span class="text-sm font-medium text-text">Annualy</span>
                   <span
                     class="px-3 py-1 text-sm font-medium rounded-full bg-success-light text-success-dark"
                   >
@@ -537,6 +561,22 @@
                     </a>
                   </div>
                 </div>
+                <script>
+                  document.querySelectorAll("[data-billing-toggle]").forEach((toggle) => {
+                    toggle.addEventListener("click", () => {
+                      toggle.classList.toggle("active");
+                      const isActive = toggle.classList.contains("active");
+                      toggle.setAttribute("aria-checked", String(isActive));
+
+                      document
+                        .querySelectorAll(".price-monthly")
+                        .forEach((el) => el.classList.toggle("hidden"));
+                      document
+                        .querySelectorAll(".price-annual")
+                        .forEach((el) => el.classList.toggle("hidden"));
+                    });
+                  });
+                </script>
               </div>
             </custom-frame>
             <custom-frame title="Two-column minimal">
@@ -1050,24 +1090,5 @@
         <custom-footer></custom-footer>
       </div>
     </main>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        document.querySelectorAll("[data-billing-toggle]").forEach((toggle) => {
-          toggle.addEventListener("click", () => {
-            toggle.classList.toggle("active");
-            const isActive = toggle.classList.contains("active");
-            toggle.setAttribute("aria-checked", String(isActive));
-
-            const container = toggle.closest(".custom-frame") || document;
-            container
-              .querySelectorAll(".price-monthly")
-              .forEach((element) => element.classList.toggle("hidden"));
-            container
-              .querySelectorAll(".price-annual")
-              .forEach((element) => element.classList.toggle("hidden"));
-          });
-        });
-      });
-    </script>
   </body>
 </html>
