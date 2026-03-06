@@ -13,9 +13,9 @@
     <title>Alerts - Components Library</title>
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="stylesheet" href="../../../_ui/styles/index.css" />
-    <script type="module" src="../../../_ui/components/index.js" defer></script>
-    <script type="module" src="../../../_ui/scripts/index.js" defer></script>
-    <script type="module" src="../header-section.js" defer></script>
+    <script type="module" src="../../../_ui/components/index.js"></script>
+    <script type="module" src="../../../_ui/scripts/index.js"></script>
+    <script type="module" src="../header-section.js"></script>
   </head>
 
   <body>
@@ -34,7 +34,7 @@
             <custom-frame title="Flat">
               <div class="flex w-full items-center justify-center p-4 bg-background">
                 <div class="flex flex-col gap-4 w-full max-w-3xl">
-                  <div class="flex items-center gap-2 p-4 rounded-lg bg-info text-info-contrast">
+                  <div role="status" class="flex items-center gap-2 p-4 rounded-lg bg-info text-info-contrast">
                     <svg
                       class="size-5 shrink-0"
                       viewBox="0 0 24 24"
@@ -53,7 +53,7 @@
                     </p>
                   </div>
                   <div
-                    class="flex items-center gap-2 p-4 rounded-lg bg-success text-success-contrast"
+                    role="status" class="flex items-center gap-2 p-4 rounded-lg bg-success text-success-contrast"
                   >
                     <svg
                       class="size-5 shrink-0"
@@ -70,7 +70,7 @@
                     <p class="text-sm font-medium">Success! Your changes have been saved.</p>
                   </div>
                   <div
-                    class="flex items-center gap-2 p-4 rounded-lg bg-warning text-warning-contrast"
+                    role="alert" class="flex items-center gap-2 p-4 rounded-lg bg-warning text-warning-contrast"
                   >
                     <svg
                       class="size-5 shrink-0"
@@ -91,7 +91,7 @@
                       Warning! Please review your input before proceeding.
                     </p>
                   </div>
-                  <div class="flex items-center gap-2 p-4 rounded-lg bg-error text-error-contrast">
+                  <div role="alert" class="flex items-center gap-2 p-4 rounded-lg bg-error text-error-contrast">
                     <svg
                       class="size-5 shrink-0"
                       viewBox="0 0 24 24"
@@ -115,7 +115,7 @@
             <custom-frame title="Light">
               <div class="flex w-full items-center justify-center p-4 bg-background">
                 <div class="flex flex-col gap-4 w-full max-w-3xl">
-                  <div class="flex items-center gap-2 p-4 rounded-lg bg-info-light text-info-dark">
+                  <div role="status" class="flex items-center gap-2 p-4 rounded-lg bg-info-light text-info-dark">
                     <svg
                       class="size-5 shrink-0"
                       viewBox="0 0 24 24"
@@ -134,7 +134,7 @@
                     </p>
                   </div>
                   <div
-                    class="flex items-center gap-2 p-4 rounded-lg bg-success-light text-success-dark"
+                    role="status" class="flex items-center gap-2 p-4 rounded-lg bg-success-light text-success-dark"
                   >
                     <svg
                       class="size-5 shrink-0"
@@ -151,7 +151,7 @@
                     <p class="text-sm font-medium">Success! Your changes have been saved.</p>
                   </div>
                   <div
-                    class="flex items-center gap-2 p-4 rounded-lg bg-warning-light text-warning-dark"
+                    role="alert" class="flex items-center gap-2 p-4 rounded-lg bg-warning-light text-warning-dark"
                   >
                     <svg
                       class="size-5 shrink-0"
@@ -173,7 +173,7 @@
                     </p>
                   </div>
                   <div
-                    class="flex items-center gap-2 p-4 rounded-lg bg-error-light text-error-dark"
+                    role="alert" class="flex items-center gap-2 p-4 rounded-lg bg-error-light text-error-dark"
                   >
                     <svg
                       class="size-5 shrink-0"
@@ -199,7 +199,7 @@
               <div class="flex w-full items-center justify-center p-4 bg-background">
                 <div class="flex flex-col gap-4 w-full max-w-3xl">
                   <div
-                    class="flex items-center gap-2 p-4 rounded-lg bg-info-light text-info-dark border border-info"
+                    role="status" class="flex items-center gap-2 p-4 rounded-lg bg-info-light text-info-dark border border-info"
                   >
                     <svg
                       class="size-5 shrink-0"
@@ -222,7 +222,7 @@
                     </div>
                   </div>
                   <div
-                    class="flex items-center gap-2 p-4 rounded-lg bg-success-light text-success-dark border border-success"
+                    role="status" class="flex items-center gap-2 p-4 rounded-lg bg-success-light text-success-dark border border-success"
                   >
                     <svg
                       class="size-5 shrink-0"
@@ -242,7 +242,7 @@
                     </div>
                   </div>
                   <div
-                    class="flex items-center gap-2 p-4 rounded-lg bg-warning-light text-warning-dark border border-warning"
+                    role="alert" class="flex items-center gap-2 p-4 rounded-lg bg-warning-light text-warning-dark border border-warning"
                   >
                     <svg
                       class="size-5 shrink-0"
@@ -265,7 +265,7 @@
                     </div>
                   </div>
                   <div
-                    class="flex items-center gap-2 p-4 rounded-lg bg-error-light text-error-dark border border-error"
+                    role="alert" class="flex items-center gap-2 p-4 rounded-lg bg-error-light text-error-dark border border-error"
                   >
                     <svg
                       class="size-5 shrink-0"
@@ -294,7 +294,7 @@
               <div class="flex items-center justify-center p-4 w-full bg-background">
                 <div class="flex flex-col gap-4 w-full max-w-3xl">
                   <div
-                    class="flex items-center gap-2 p-4 rounded-r-lg bg-info-light text-info-dark border-l-4 border-info"
+                    role="status" class="flex items-center gap-2 p-4 rounded-r-lg bg-info-light text-info-dark border-l-4 border-info"
                   >
                     <svg
                       class="size-5 shrink-0"
@@ -314,7 +314,7 @@
                     </p>
                   </div>
                   <div
-                    class="flex items-center gap-2 p-4 rounded-r-lg bg-success-light text-success-dark border-l-4 border-success"
+                    role="status" class="flex items-center gap-2 p-4 rounded-r-lg bg-success-light text-success-dark border-l-4 border-success"
                   >
                     <svg
                       class="size-5 shrink-0"
@@ -333,7 +333,7 @@
                     </p>
                   </div>
                   <div
-                    class="flex items-center gap-2 p-4 rounded-r-lg bg-warning-light text-warning-dark border-l-4 border-warning"
+                    role="alert" class="flex items-center gap-2 p-4 rounded-r-lg bg-warning-light text-warning-dark border-l-4 border-warning"
                   >
                     <svg
                       class="size-5 shrink-0"
@@ -355,7 +355,7 @@
                     </p>
                   </div>
                   <div
-                    class="flex items-center gap-2 p-4 rounded-r-lg bg-error-light text-error-dark border-l-4 border-error"
+                    role="alert" class="flex items-center gap-2 p-4 rounded-r-lg bg-error-light text-error-dark border-l-4 border-error"
                   >
                     <svg
                       class="size-5 shrink-0"
@@ -381,7 +381,7 @@
               <div class="flex w-full items-center justify-center p-4 bg-background">
                 <div class="flex flex-col gap-4 w-full max-w-3xl">
                   <div
-                    class="flex items-center justify-between gap-2 p-4 rounded-lg bg-info-light text-info-dark border border-info"
+                    role="status" class="flex items-center justify-between gap-2 p-4 rounded-lg bg-info-light text-info-dark border border-info"
                   >
                     <div class="flex items-center gap-2">
                       <svg
@@ -420,7 +420,7 @@
                     </button>
                   </div>
                   <div
-                    class="flex items-center justify-between gap-2 p-4 rounded-lg bg-success-light text-success-dark border border-success"
+                    role="status" class="flex items-center justify-between gap-2 p-4 rounded-lg bg-success-light text-success-dark border border-success"
                   >
                     <div class="flex items-center gap-2">
                       <svg
@@ -462,7 +462,7 @@
               <div class="flex w-full items-center justify-center p-4 bg-background">
                 <div class="flex flex-col gap-4 w-full max-w-3xl">
                   <div
-                    class="flex items-center gap-2 p-4 bg-info text-info-contrast border-2 border-neutral-950 shadow-[4px_4px_0_#0a0a0a]"
+                    role="status" class="flex items-center gap-2 p-4 bg-info text-info-contrast border-2 border-neutral-950 shadow-[4px_4px_0_#0a0a0a]"
                   >
                     <svg
                       class="size-5 shrink-0"
@@ -480,7 +480,7 @@
                     <p class="text-sm font-bold">Heads up! This action cannot be undone.</p>
                   </div>
                   <div
-                    class="flex items-center gap-2 p-4 bg-success text-success-contrast border-2 border-neutral-950 shadow-[4px_4px_0_#0a0a0a]"
+                    role="status" class="flex items-center gap-2 p-4 bg-success text-success-contrast border-2 border-neutral-950 shadow-[4px_4px_0_#0a0a0a]"
                   >
                     <svg
                       class="size-5 shrink-0"
@@ -497,7 +497,7 @@
                     <p class="text-sm font-bold">All done! Your project has been deployed.</p>
                   </div>
                   <div
-                    class="flex items-center gap-2 p-4 bg-warning text-warning-contrast border-2 border-neutral-950 shadow-[4px_4px_0_#0a0a0a]"
+                    role="alert" class="flex items-center gap-2 p-4 bg-warning text-warning-contrast border-2 border-neutral-950 shadow-[4px_4px_0_#0a0a0a]"
                   >
                     <svg
                       class="size-5 shrink-0"
@@ -519,7 +519,7 @@
                     </p>
                   </div>
                   <div
-                    class="flex items-center gap-2 p-4 bg-error text-error-contrast border-2 border-neutral-950 shadow-[4px_4px_0_#0a0a0a]"
+                    role="alert" class="flex items-center gap-2 p-4 bg-error text-error-contrast border-2 border-neutral-950 shadow-[4px_4px_0_#0a0a0a]"
                   >
                     <svg
                       class="size-5 shrink-0"
