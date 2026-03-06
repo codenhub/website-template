@@ -318,7 +318,7 @@
                       <div class="pt-4">
                         <a
                           href="#"
-                          class="inline-flex items-center text-sm font-semibold gap-0 hover:gap-2 transition-all duration-400"
+                          class="inline-flex items-center gap-0 px-1 min-h-11 text-sm font-semibold hover:gap-2 focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background focus-visible:outline-none  transition-all duration-400"
                         >
                           Explore the dashboard
                           <svg
@@ -439,15 +439,26 @@
                         </p>
                       </div>
 
-                      <div class="flex flex-col gap-4" id="feature-tabs-nav">
+                      <div
+                        class="flex flex-col gap-4"
+                        id="feature-tabs-nav"
+                        role="tablist"
+                        aria-label="Feature showcase tabs"
+                      >
                         <!-- Tab 1 -->
                         <button
-                          class="group active flex flex-col p-6 rounded-2xl border border-border bg-background hover:bg-foreground transition-all duration-400 text-left"
+                          id="tab-trigger-data"
+                          type="button"
+                          role="tab"
+                          aria-selected="true"
+                          aria-controls="tab-data"
+                          tabindex="0"
+                          class="group active flex flex-col p-6 min-h-11 rounded-2xl border border-border text-left bg-background hover:bg-foreground focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background focus-visible:outline-none  disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 transition-all duration-400"
                           data-target="tab-data"
                         >
                           <div class="flex items-center gap-3">
                             <div
-                              class="size-8 rounded-lg bg-surface flex items-center justify-center group-[.active]:bg-primary group-[.active]:text-primary-contrast transition-colors"
+                              class="flex items-center justify-center size-8 rounded-lg bg-surface group-[.active]:bg-primary group-[.active]:text-primary-contrast transition-colors duration-200"
                             >
                               <svg
                                 class="size-4"
@@ -464,7 +475,7 @@
                             <h5 class="font-bold">Real-time Data Processing</h5>
                           </div>
                           <p
-                            class="text-sm text-text-secondary group-[.active]:mt-2 opacity-0 max-h-0 group-[.active]:opacity-100 group-[.active]:max-h-100 transition-all duration-400 overflow-hidden"
+                            class="max-h-0 overflow-hidden text-sm text-text-secondary opacity-0 group-[.active]:mt-2 group-[.active]:max-h-100 group-[.active]:opacity-100 transition-all duration-400"
                           >
                             Process millions of events per second with sub-millisecond latency. Our
                             distributed engine scales automatically to meet your demand.
@@ -472,12 +483,18 @@
                         </button>
                         <!-- Tab 2 -->
                         <button
-                          class="group flex flex-col p-6 rounded-2xl border border-border bg-background hover:bg-foreground transition-all duration-400 text-left"
+                          id="tab-trigger-security"
+                          type="button"
+                          role="tab"
+                          aria-selected="false"
+                          aria-controls="tab-security"
+                          tabindex="-1"
+                          class="group flex flex-col p-6 min-h-11 rounded-2xl border border-border text-left bg-background hover:bg-foreground focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background focus-visible:outline-none  disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 transition-all duration-400"
                           data-target="tab-security"
                         >
                           <div class="flex items-center gap-3">
                             <div
-                              class="size-8 rounded-lg bg-surface flex items-center justify-center group-[.active]:bg-primary group-[.active]:text-primary-contrast transition-colors"
+                              class="flex items-center justify-center size-8 rounded-lg bg-surface group-[.active]:bg-primary group-[.active]:text-primary-contrast transition-colors duration-200"
                             >
                               <svg
                                 class="size-4"
@@ -493,7 +510,7 @@
                             <h5 class="font-bold">Zero-Trust Security</h5>
                           </div>
                           <p
-                            class="text-sm text-text-secondary group-[.active]:mt-2 opacity-0 max-h-0 group-[.active]:opacity-100 group-[.active]:max-h-100 transition-all duration-400 overflow-hidden"
+                            class="max-h-0 overflow-hidden text-sm text-text-secondary opacity-0 group-[.active]:mt-2 group-[.active]:max-h-100 group-[.active]:opacity-100 transition-all duration-400"
                           >
                             Every request is authenticated and authorized. We use end-to-end
                             encryption and comply with global standards like GDPR and SOC2.
@@ -501,12 +518,18 @@
                         </button>
                         <!-- Tab 3 -->
                         <button
-                          class="group flex flex-col p-6 rounded-2xl border border-border bg-background hover:bg-foreground transition-all duration-400 text-left"
+                          id="tab-trigger-ai"
+                          type="button"
+                          role="tab"
+                          aria-selected="false"
+                          aria-controls="tab-ai"
+                          tabindex="-1"
+                          class="group flex flex-col p-6 min-h-11 rounded-2xl border border-border text-left bg-background hover:bg-foreground focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background focus-visible:outline-none  disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 transition-all duration-400"
                           data-target="tab-ai"
                         >
                           <div class="flex items-center gap-3">
                             <div
-                              class="size-8 rounded-lg bg-surface flex items-center justify-center group-[.active]:bg-primary group-[.active]:text-primary-contrast transition-colors"
+                              class="flex items-center justify-center size-8 rounded-lg bg-surface group-[.active]:bg-primary group-[.active]:text-primary-contrast transition-colors duration-200"
                             >
                               <svg
                                 class="size-4"
@@ -524,7 +547,7 @@
                             <h5 class="font-bold">AI Predictive Insights</h5>
                           </div>
                           <p
-                            class="text-sm text-text-secondary group-[.active]:mt-2 opacity-0 max-h-0 group-[.active]:opacity-100 group-[.active]:max-h-100 transition-all duration-400 overflow-hidden"
+                            class="max-h-0 overflow-hidden text-sm text-text-secondary opacity-0 group-[.active]:mt-2 group-[.active]:max-h-100 group-[.active]:opacity-100 transition-all duration-400"
                           >
                             Identify trends before they become problems. Our AI models predict
                             future performance and recommend optimizations in real-time.
@@ -538,7 +561,9 @@
                     >
                       <div
                         id="tab-data"
-                        class="feature-panel absolute inset-0 opacity-100 transition-opacity duration-400 z-10"
+                        role="tabpanel"
+                        aria-labelledby="tab-trigger-data"
+                        class="feature-panel absolute inset-0 z-10 opacity-100 transition-opacity duration-400"
                       >
                         <img
                           src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1000&q=80"
@@ -548,7 +573,10 @@
                       </div>
                       <div
                         id="tab-security"
-                        class="feature-panel absolute inset-0 opacity-0 transition-opacity duration-400 z-0"
+                        role="tabpanel"
+                        aria-labelledby="tab-trigger-security"
+                        hidden
+                        class="feature-panel absolute inset-0 z-0 opacity-0 transition-opacity duration-400"
                       >
                         <img
                           src="https://images.unsplash.com/photo-1563986768609-322da13575f3?w=1000&q=80"
@@ -558,7 +586,10 @@
                       </div>
                       <div
                         id="tab-ai"
-                        class="feature-panel absolute inset-0 opacity-0 transition-opacity duration-400 z-0"
+                        role="tabpanel"
+                        aria-labelledby="tab-trigger-ai"
+                        hidden
+                        class="feature-panel absolute inset-0 z-0 opacity-0 transition-opacity duration-400"
                       >
                         <img
                           src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1000&q=80"
@@ -579,16 +610,24 @@
                       btn.addEventListener("click", () => {
                         const target = btn.dataset.target;
 
-                        btns.forEach((b) => b.classList.remove("active"));
+                        btns.forEach((b) => {
+                          b.classList.remove("active");
+                          b.setAttribute("aria-selected", "false");
+                          b.tabIndex = -1;
+                        });
                         btn.classList.add("active");
+                        btn.setAttribute("aria-selected", "true");
+                        btn.tabIndex = 0;
 
                         panels.forEach((p) => {
                           if (p.id === target) {
                             p.classList.add("opacity-100", "z-10");
                             p.classList.remove("opacity-0", "z-0");
+                            p.hidden = false;
                           } else {
                             p.classList.add("opacity-0", "z-0");
                             p.classList.remove("opacity-100", "z-10");
+                            p.hidden = true;
                           }
                         });
                       });

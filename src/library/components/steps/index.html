@@ -529,7 +529,7 @@
                         </svg>
                       </div>
                       <div
-                        class="flex-1 pt-1 opacity-70 transition-opacity group-hover:opacity-100"
+                        class="flex-1 pt-1 opacity-70 group-hover:opacity-100 transition-opacity duration-200"
                       >
                         <h5 class="line-through decoration-success/50">Create Organization</h5>
                         <p
@@ -555,7 +555,11 @@
                         <p class="mt-2 text-text-secondary">
                           Link your GitHub, GitLab, or Bitbucket account to import your codebase.
                         </p>
-                        <button class="primary-btn mt-4 py-2 px-4 text-sm">Connect GitHub</button>
+                        <button
+                          class="primary-btn mt-4 px-4 py-2 min-h-[44px] text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background  disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 transition duration-300"
+                        >
+                          Connect GitHub
+                        </button>
                       </div>
                     </div>
 

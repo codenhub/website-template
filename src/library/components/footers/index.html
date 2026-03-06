@@ -91,7 +91,7 @@
                         aria-label="See our GitHub profile"
                         href="https://github.com/codenhub/"
                         target="_blank"
-                        class="size-6"
+                        class="size-5 rounded-md focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background focus-visible:outline-none  transition-transform duration-300"
                       >
                         <svg viewBox="0 0 20 20" fill="currentColor">
                           <path
@@ -104,7 +104,7 @@
                         aria-label="See our Instagram profile"
                         href="https://instagram.com/coden.agency"
                         target="_blank"
-                        class="size-6"
+                        class="size-5 rounded-md focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background focus-visible:outline-none  transition-transform duration-300"
                       >
                         <svg viewBox="0 0 24 24" fill="currentColor">
                           <path
@@ -126,7 +126,7 @@
                         aria-label="See our X/Twitter profile"
                         href="https://x.com/codenagency"
                         target="_blank"
-                        class="size-6"
+                        class="size-5 rounded-md focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background focus-visible:outline-none  transition-transform duration-300"
                       >
                         <svg viewBox="0 0 24 24" fill="currentColor">
                           <path
@@ -146,19 +146,34 @@
                     <img src="/logo.svg" alt="Logo" class="h-10 object-contain" />
                   </a>
                   <nav class="flex flex-wrap justify-center gap-x-8 gap-y-3">
-                    <a href="#" class="text-text-secondary hover:text-text transition-colors">
+                    <a
+                      href="#"
+                      class="text-text-secondary hover:text-text focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background focus-visible:outline-none  transition-colors duration-200"
+                    >
                       About
                     </a>
-                    <a href="#" class="text-text-secondary hover:text-text transition-colors">
+                    <a
+                      href="#"
+                      class="text-text-secondary hover:text-text focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background focus-visible:outline-none  transition-colors duration-200"
+                    >
                       Features
                     </a>
-                    <a href="#" class="text-text-secondary hover:text-text transition-colors">
+                    <a
+                      href="#"
+                      class="text-text-secondary hover:text-text focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background focus-visible:outline-none  transition-colors duration-200"
+                    >
                       Pricing
                     </a>
-                    <a href="#" class="text-text-secondary hover:text-text transition-colors">
+                    <a
+                      href="#"
+                      class="text-text-secondary hover:text-text focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background focus-visible:outline-none  transition-colors duration-200"
+                    >
                       Blog
                     </a>
-                    <a href="#" class="text-text-secondary hover:text-text transition-colors">
+                    <a
+                      href="#"
+                      class="text-text-secondary hover:text-text focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background focus-visible:outline-none  transition-colors duration-200"
+                    >
                       Contact
                     </a>
                   </nav>
@@ -167,7 +182,7 @@
                       aria-label="GitHub"
                       href="https://github.com/codenhub/"
                       target="_blank"
-                      class="size-5 text-text-secondary hover:text-text transition-colors"
+                      class="size-5 rounded-md text-text-secondary hover:text-text focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background focus-visible:outline-none  transition-colors duration-200"
                     >
                       <svg viewBox="0 0 20 20" fill="currentColor">
                         <path
@@ -180,7 +195,7 @@
                       aria-label="Instagram"
                       href="https://instagram.com/coden.agency"
                       target="_blank"
-                      class="size-5 text-text-secondary hover:text-text transition-colors"
+                      class="size-5 rounded-md text-text-secondary hover:text-text focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background focus-visible:outline-none  transition-colors duration-200"
                     >
                       <svg viewBox="0 0 24 24" fill="currentColor">
                         <path
@@ -202,7 +217,7 @@
                       aria-label="X/Twitter"
                       href="https://x.com/codenagency"
                       target="_blank"
-                      class="size-5 text-text-secondary hover:text-text transition-colors"
+                      class="size-5 rounded-md text-text-secondary hover:text-text focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background focus-visible:outline-none  transition-colors duration-200"
                     >
                       <svg viewBox="0 0 24 24" fill="currentColor">
                         <path
@@ -232,15 +247,17 @@
                         Subscribe to our newsletter for the latest updates, resources, and
                         announcements.
                       </p>
-                      <form class="flex gap-2 max-w-sm" onsubmit="event.preventDefault();">
+                      <form class="flex gap-2 max-w-sm" data-newsletter-form>
+                        <label class="sr-only" for="newsletter-email">Email address</label>
                         <input
+                          id="newsletter-email"
                           type="email"
                           placeholder="Enter your email"
                           class="flex-1 min-w-0"
                           required
                         />
                         <button
-                          class="bg-primary hover:bg-primary-hover text-primary-contrast font-semibold flex w-fit items-center justify-center px-4 py-2 gap-2 min-h-10 rounded-md transition-colors duration-400 shrink-0"
+                          class="flex w-fit items-center justify-center gap-2 px-4 py-2 min-h-10 shrink-0 rounded-md font-semibold bg-primary text-primary-contrast hover:bg-primary-hover focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background focus-visible:outline-none  disabled:opacity-50 disabled:cursor-not-allowed disabled:pointer-events-none transition-colors duration-200"
                         >
                           Subscribe
                         </button>
@@ -282,7 +299,7 @@
                         aria-label="GitHub"
                         href="https://github.com/codenhub/"
                         target="_blank"
-                        class="size-5 text-text-secondary hover:text-text transition-colors"
+                        class="size-5 rounded-md text-text-secondary hover:text-text focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background focus-visible:outline-none  transition-colors duration-200"
                       >
                         <svg viewBox="0 0 20 20" fill="currentColor">
                           <path
@@ -295,7 +312,7 @@
                         aria-label="X/Twitter"
                         href="https://x.com/codenagency"
                         target="_blank"
-                        class="size-5 text-text-secondary hover:text-text transition-colors"
+                        class="size-5 rounded-md text-text-secondary hover:text-text focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background focus-visible:outline-none  transition-colors duration-200"
                       >
                         <svg viewBox="0 0 24 24" fill="currentColor">
                           <path
@@ -319,19 +336,19 @@
                   <nav class="flex gap-6">
                     <a
                       href="#"
-                      class="text-sm text-text-secondary hover:text-text transition-colors"
+                      class="text-sm text-text-secondary hover:text-text focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background focus-visible:outline-none  transition-colors duration-200"
                     >
                       Privacy
                     </a>
                     <a
                       href="#"
-                      class="text-sm text-text-secondary hover:text-text transition-colors"
+                      class="text-sm text-text-secondary hover:text-text focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background focus-visible:outline-none  transition-colors duration-200"
                     >
                       Terms
                     </a>
                     <a
                       href="#"
-                      class="text-sm text-text-secondary hover:text-text transition-colors"
+                      class="text-sm text-text-secondary hover:text-text focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background focus-visible:outline-none  transition-colors duration-200"
                     >
                       Cookies
                     </a>
@@ -340,7 +357,7 @@
                     <a
                       aria-label="GitHub"
                       href="#"
-                      class="size-4 text-text-secondary hover:text-text transition-colors"
+                      class="size-5 rounded-md text-text-secondary hover:text-text focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background focus-visible:outline-none  transition-colors duration-200"
                     >
                       <svg viewBox="0 0 20 20" fill="currentColor">
                         <path
@@ -352,7 +369,7 @@
                     <a
                       aria-label="X/Twitter"
                       href="#"
-                      class="size-4 text-text-secondary hover:text-text transition-colors"
+                      class="size-5 rounded-md text-text-secondary hover:text-text focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background focus-visible:outline-none  transition-colors duration-200"
                     >
                       <svg viewBox="0 0 24 24" fill="currentColor">
                         <path
@@ -420,7 +437,7 @@
                           aria-label="GitHub"
                           href="https://github.com/codenhub/"
                           target="_blank"
-                          class="size-6"
+                          class="size-5 rounded-md focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background focus-visible:outline-none  transition-transform duration-300"
                         >
                           <svg viewBox="0 0 20 20" fill="currentColor">
                             <path
@@ -433,7 +450,7 @@
                           aria-label="Instagram"
                           href="https://instagram.com/coden.agency"
                           target="_blank"
-                          class="size-6"
+                          class="size-5 rounded-md focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background focus-visible:outline-none  transition-transform duration-300"
                         >
                           <svg viewBox="0 0 24 24" fill="currentColor">
                             <path
@@ -455,7 +472,7 @@
                           aria-label="X/Twitter"
                           href="https://x.com/codenagency"
                           target="_blank"
-                          class="size-6"
+                          class="size-5 rounded-md focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background focus-visible:outline-none  transition-transform duration-300"
                         >
                           <svg viewBox="0 0 24 24" fill="currentColor">
                             <path
@@ -477,5 +494,12 @@
         <custom-footer></custom-footer>
       </div>
     </main>
+    <script>
+      document.querySelectorAll("[data-newsletter-form]").forEach((formElement) => {
+        formElement.addEventListener("submit", (event) => {
+          event.preventDefault();
+        });
+      });
+    </script>
   </body>
 </html>
