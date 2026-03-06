@@ -40,14 +40,14 @@
       <div id="smooth-content">
         <!-- HERO -->
         <section class="sect py-0">
-          <div class="sect-container min-h-screen md:flex-row max-md:pt-24">
-            <div class="flex flex-3 flex-col gap-4 w-full">
+          <div class="sect-container min-h-screen max-md:pt-24 md:flex-row">
+            <div class="flex w-full flex-3 flex-col gap-4">
               <h1 class="split-chars" style="font-size: 4.5rem">The ultimate website template</h1>
-              <p class="text-xl max-w-xl split-text">
+              <p class="split-text max-w-xl text-xl">
                 A complete template built with Vite + TailwindCSS and GSAP. Includes smooth and
                 ready-to-use animations, SEO configs, and a scalable structure.
               </p>
-              <div class="flex gap-4 mt-4">
+              <div class="mt-4 flex gap-4">
                 <a
                   href="https://github.com/codenhub/website-template"
                   target="_blank"
@@ -66,7 +66,7 @@
             </div>
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="flex flex-4 w-full"
+              class="flex w-full flex-4"
               viewBox="0 0 480 400"
               fill="none"
             >
@@ -397,23 +397,23 @@
         <!-- METRICS -->
         <section class="sect counters">
           <div
-            class="sect-container gap-x-8 gap-y-12 flex-row flex-wrap items-center justify-center md:justify-between"
+            class="sect-container flex-row flex-wrap items-center justify-center gap-x-8 gap-y-12 md:justify-between"
           >
-            <div class="flex flex-col items-center gap-4 slide-right-in">
+            <div class="slide-right-in flex flex-col items-center gap-4">
               <h2 class="text-7xl md:text-8xl">
                 +
                 <span class="counter" data-target="700">0</span>
               </h2>
               <p class="text-lg">Projects completed</p>
             </div>
-            <div class="flex flex-col items-center gap-4 slide-right-in">
+            <div class="slide-right-in flex flex-col items-center gap-4">
               <h2 class="text-7xl md:text-8xl">
                 +
                 <span class="counter" data-target="250">0</span>
               </h2>
               <p class="text-lg">Clients satisfied</p>
             </div>
-            <div class="flex flex-col items-center gap-4 slide-left-in">
+            <div class="slide-left-in flex flex-col items-center gap-4">
               <h2 class="text-7xl md:text-8xl">
                 +
                 <span class="counter" data-target="10">0</span>
@@ -421,7 +421,7 @@
               </h2>
               <p class="text-lg">Active users</p>
             </div>
-            <div class="flex flex-col items-center gap-4 slide-left-in">
+            <div class="slide-left-in flex flex-col items-center gap-4">
               <h2 class="text-7xl md:text-8xl">
                 <span class="counter" data-target="100">0</span>
                 %
@@ -436,13 +436,13 @@
         <section class="sect" id="why-this-template">
           <div class="sect-container">
             <h2 class="split-chars">Why choose this template?</h2>
-            <p class="text-center split-text max-w-2xl mx-auto">
+            <p class="split-text mx-auto max-w-2xl text-center">
               We stand out from the competition with our unique approach, exceptional service, and
               proven track record of success.
             </p>
 
-            <div class="flex gap-8 flex-wrap">
-              <div class="card flex-1 min-w-xs">
+            <div class="flex flex-wrap gap-8">
+              <div class="card min-w-xs flex-1">
                 <h3>Save a lot of time</h3>
                 <p>
                   Tired of repeating setup work? Just copy this template and start editing/building
@@ -450,7 +450,7 @@
                 </p>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  class="flex w-64 ml-auto mt-12 -mb-26 lg:-mb-32"
+                  class="mt-12 -mb-26 ml-auto flex w-64 lg:-mb-32"
                   viewBox="0 0 619 809"
                   fill="none"
                 >
@@ -611,7 +611,7 @@
                   />
                 </svg>
               </div>
-              <div class="card flex-1 min-w-xs overflow-hidden">
+              <div class="card min-w-xs flex-1 overflow-hidden">
                 <h3>Use for anything</h3>
                 <p>
                   Use it for a landing page, a portfolio, a company website, literally any kind of
@@ -619,7 +619,7 @@
                 </p>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  class="flex mt-4 -mr-12 -mb-24"
+                  class="mt-4 -mr-12 -mb-24 flex"
                   viewBox="0 0 385 267"
                   fill="none"
                 >
@@ -733,7 +733,7 @@
                   </g>
                 </svg>
               </div>
-              <div class="card flex-1 min-w-xs">
+              <div class="card min-w-xs flex-1">
                 <h3>Ready-to-use effects</h3>
                 <p>
                   Transitions, animations, hover effects, components, typography and more, all ready
@@ -756,13 +756,13 @@
         <section class="sect" id="features">
           <div class="sect-container">
             <h2 class="split-chars">Features</h2>
-            <p class="text-center split-text max-w-2xl mx-auto">
+            <p class="split-text mx-auto max-w-2xl text-center">
               Carefully built features that you won't find in other templates.
             </p>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+            <div class="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2">
               <!-- FEATURE 1 -->
-              <div class="flex gap-6 items-start slide-right-in">
+              <div class="slide-right-in flex items-start gap-6">
                 <img src="/assets/icons/docs.svg" alt="Documentation icon" class="size-12" />
                 <div class="flex flex-col gap-2">
                   <h3 class="text-2xl">Well documented</h3>
@@ -774,7 +774,7 @@
               </div>
 
               <!-- FEATURE 2 -->
-              <div class="flex gap-6 items-start slide-left-in">
+              <div class="slide-left-in flex items-start gap-6">
                 <img src="/assets/icons/integration.svg" alt="Integration icon" class="size-12" />
                 <div class="flex flex-col gap-2">
                   <h3 class="text-2xl">Easy integration</h3>
@@ -786,7 +786,7 @@
               </div>
 
               <!-- FEATURE 3 -->
-              <div class="flex gap-6 items-start slide-right-in">
+              <div class="slide-right-in flex items-start gap-6">
                 <img src="/assets/icons/lightning.svg" alt="Lightning icon" class="size-12" />
                 <div class="flex flex-col gap-2">
                   <h3 class="text-2xl">Lightning fast</h3>
@@ -798,7 +798,7 @@
               </div>
 
               <!-- FEATURE 4 -->
-              <div class="flex gap-6 items-start slide-left-in">
+              <div class="slide-left-in flex items-start gap-6">
                 <img src="/assets/icons/feather.svg" alt="Feather icon" class="size-12" />
                 <div class="flex flex-col gap-2">
                   <h3 class="text-2xl">Light weight</h3>
@@ -810,7 +810,7 @@
               </div>
 
               <!-- FEATURE 5 -->
-              <div class="flex gap-6 items-start slide-right-in">
+              <div class="slide-right-in flex items-start gap-6">
                 <img src="/assets/icons/organization.svg" alt="Organization icon" class="size-12" />
                 <div class="flex flex-col gap-2">
                   <h3 class="text-2xl">Scalable structure</h3>
@@ -822,7 +822,7 @@
               </div>
 
               <!-- FEATURE 6 -->
-              <div class="flex gap-6 items-start slide-left-in">
+              <div class="slide-left-in flex items-start gap-6">
                 <img src="/assets/icons/animations.svg" alt="Animations icon" class="size-12" />
                 <div class="flex flex-col gap-2">
                   <h3 class="text-2xl">Amazing UI/UX</h3>
@@ -841,11 +841,11 @@
           <div class="sect-container">
             <h2 class="split-chars">Getting started</h2>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
+            <div class="relative grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
               <div class="flex flex-col gap-5">
                 <div class="flex items-center gap-4">
                   <div
-                    class="flex shrink-0 items-center justify-center size-12 rounded-xl bg-surface"
+                    class="bg-surface flex size-12 shrink-0 items-center justify-center rounded-xl"
                   >
                     <svg
                       class="size-6"
@@ -860,11 +860,11 @@
                       <polyline points="8 6 2 12 8 18"></polyline>
                     </svg>
                   </div>
-                  <div class="hidden lg:block flex-1 h-px bg-border" aria-hidden="true"></div>
+                  <div class="bg-border hidden h-px flex-1 lg:block" aria-hidden="true"></div>
                 </div>
                 <div>
                   <p
-                    class="text-xs font-semibold tracking-widest uppercase text-text-secondary mb-2"
+                    class="text-text-secondary mb-2 text-xs font-semibold tracking-widest uppercase"
                   >
                     Step 1
                   </p>
@@ -878,7 +878,7 @@
               <div class="flex flex-col gap-5">
                 <div class="flex items-center gap-4">
                   <div
-                    class="flex shrink-0 items-center justify-center size-12 rounded-xl bg-surface"
+                    class="bg-surface flex size-12 shrink-0 items-center justify-center rounded-xl"
                   >
                     <svg
                       class="size-6"
@@ -896,11 +896,11 @@
                       <line x1="12" y1="22.08" x2="12" y2="12"></line>
                     </svg>
                   </div>
-                  <div class="hidden lg:block flex-1 h-px bg-border" aria-hidden="true"></div>
+                  <div class="bg-border hidden h-px flex-1 lg:block" aria-hidden="true"></div>
                 </div>
                 <div>
                   <p
-                    class="text-xs font-semibold tracking-widest uppercase text-text-secondary mb-2"
+                    class="text-text-secondary mb-2 text-xs font-semibold tracking-widest uppercase"
                   >
                     Step 2
                   </p>
@@ -915,7 +915,7 @@
               <div class="flex flex-col gap-5">
                 <div class="flex items-center gap-4">
                   <div
-                    class="flex shrink-0 items-center justify-center size-12 rounded-xl bg-surface"
+                    class="bg-surface flex size-12 shrink-0 items-center justify-center rounded-xl"
                   >
                     <svg
                       class="size-6"
@@ -932,11 +932,11 @@
                       <circle cx="12" cy="12" r="3"></circle>
                     </svg>
                   </div>
-                  <div class="hidden lg:block flex-1 h-px bg-border" aria-hidden="true"></div>
+                  <div class="bg-border hidden h-px flex-1 lg:block" aria-hidden="true"></div>
                 </div>
                 <div>
                   <p
-                    class="text-xs font-semibold tracking-widest uppercase text-text-secondary mb-2"
+                    class="text-text-secondary mb-2 text-xs font-semibold tracking-widest uppercase"
                   >
                     Step 3
                   </p>
@@ -950,7 +950,7 @@
               <div class="flex flex-col gap-5">
                 <div class="flex items-center gap-4">
                   <div
-                    class="flex shrink-0 items-center justify-center size-12 rounded-xl bg-primary text-primary-contrast"
+                    class="bg-primary text-primary-contrast flex size-12 shrink-0 items-center justify-center rounded-xl"
                   >
                     <svg
                       class="size-6"
@@ -969,7 +969,7 @@
                 </div>
                 <div>
                   <p
-                    class="text-xs font-semibold tracking-widest uppercase text-text-secondary mb-2"
+                    class="text-text-secondary mb-2 text-xs font-semibold tracking-widest uppercase"
                   >
                     Step 4
                   </p>
@@ -987,12 +987,12 @@
         <section class="sect" id="testimonials">
           <div class="sect-container">
             <h2 class="split-chars">What our clients say</h2>
-            <p class="text-center split-text max-w-2xl mx-auto">
+            <p class="split-text mx-auto max-w-2xl text-center">
               Don't just take our word for it. Here's what our satisfied clients have to say about
               working with us.
             </p>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
               <!-- TESTIMONIAL 1 -->
               <div class="card testimonial slide-up-in">
                 <custom-rating></custom-rating>
@@ -1002,7 +1002,7 @@
                 </p>
                 <div>
                   <h3
-                    class="size-12 bg-primary text-primary-contrast rounded-full flex items-center justify-center font-bold text-base"
+                    class="bg-primary text-primary-contrast flex size-12 items-center justify-center rounded-full text-base font-bold"
                   >
                     SM
                   </h3>
@@ -1022,7 +1022,7 @@
                 </p>
                 <div>
                   <h3
-                    class="size-12 bg-primary text-primary-contrast rounded-full flex items-center justify-center font-bold text-base"
+                    class="bg-primary text-primary-contrast flex size-12 items-center justify-center rounded-full text-base font-bold"
                   >
                     JD
                   </h3>
@@ -1042,7 +1042,7 @@
                 </p>
                 <div>
                   <h3
-                    class="size-12 bg-primary text-primary-contrast rounded-full flex items-center justify-center font-bold text-base"
+                    class="bg-primary text-primary-contrast flex size-12 items-center justify-center rounded-full text-base font-bold"
                   >
                     ER
                   </h3>
@@ -1062,7 +1062,7 @@
                 </p>
                 <div>
                   <h3
-                    class="size-12 bg-primary text-primary-contrast rounded-full flex items-center justify-center font-bold text-base"
+                    class="bg-primary text-primary-contrast flex size-12 items-center justify-center rounded-full text-base font-bold"
                   >
                     MT
                   </h3>
@@ -1082,7 +1082,7 @@
                 </p>
                 <div>
                   <h3
-                    class="size-12 bg-primary text-primary-contrast rounded-full flex items-center justify-center font-bold text-base"
+                    class="bg-primary text-primary-contrast flex size-12 items-center justify-center rounded-full text-base font-bold"
                   >
                     LC
                   </h3>
@@ -1102,7 +1102,7 @@
                 </p>
                 <div>
                   <h3
-                    class="size-12 bg-primary text-primary-contrast rounded-full flex items-center justify-center font-bold text-base"
+                    class="bg-primary text-primary-contrast flex size-12 items-center justify-center rounded-full text-base font-bold"
                   >
                     DW
                   </h3>
@@ -1121,7 +1121,7 @@
         <section class="sect" id="faq">
           <div class="sect-container">
             <h2 class="split-chars">Frequently asked questions</h2>
-            <div class="flex flex-col gap-4 w-full">
+            <div class="flex w-full flex-col gap-4">
               <!-- QUESTION 1 -->
               <div class="card faq-item slide-up-in">
                 <div class="question">

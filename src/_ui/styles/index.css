@@ -40,7 +40,7 @@
 
   html,
   body {
-    @apply flex flex-col min-h-screen overflow-x-hidden bg-background text-text font-default;
+    @apply bg-background text-text font-default flex min-h-screen flex-col overflow-x-hidden;
   }
 
   button {
@@ -61,11 +61,11 @@
   }
 
   h1 {
-    @apply text-6xl md:text-8xl font-title tracking-tight;
+    @apply font-title text-6xl tracking-tight md:text-8xl;
   }
 
   h2 {
-    @apply text-5xl md:text-6xl font-title tracking-tight;
+    @apply font-title text-5xl tracking-tight md:text-6xl;
   }
 
   h3 {
