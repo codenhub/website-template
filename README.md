@@ -40,7 +40,7 @@ website-template/
 └── wrangler.toml        # Cloudflare workers configuration
 ```
 
-This layout keeps runnable code in src/, static assets in public/ and build config at the repo root.
+This layout keeps runnable code in src/ and configuration at the root.
 
 ## Good for
 

@@ -83,7 +83,7 @@ const LOADER_BODY = `
   </div>
   <noscript>
     <style>
-      .loader { display: none !important; }
+      .loader, #loader-indicator { display: none !important; }
     </style>
   </noscript>
   <script>
