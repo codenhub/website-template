@@ -13,9 +13,9 @@
     <title>Team – Components Library</title>
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="stylesheet" href="../../../_ui/styles/index.css" />
-    <script type="module" src="../../../_ui/components/index.js" defer></script>
-    <script type="module" src="../../../_ui/scripts/index.js" defer></script>
-    <script type="module" src="../header-section.js" defer></script>
+    <script type="module" src="../../../_ui/components/index.js"></script>
+    <script type="module" src="../../../_ui/scripts/index.js"></script>
+    <script type="module" src="../header-section.js"></script>
   </head>
 
   <body>
@@ -26,47 +26,47 @@
         <components-header-section></components-header-section>
 
         <div class="flex w-full justify-center px-4">
-          <h2 class="max-w-7xl w-full split-chars">Team Sections</h2>
+          <h2 class="split-chars w-full max-w-7xl">Team Sections</h2>
         </div>
 
         <section class="sect">
           <div class="sect-container gap-24">
             <custom-frame title="Simple grid">
-              <div class="w-full bg-background p-4 md:p-6">
-                <div class="max-w-7xl mx-auto">
-                  <div class="text-center max-w-2xl mx-auto mb-16">
+              <div class="bg-background w-full p-4 md:p-6">
+                <div class="mx-auto max-w-7xl">
+                  <div class="mx-auto mb-16 max-w-2xl text-center">
                     <span
-                      class="inline-flex items-center gap-2 px-3 py-1 text-xs font-semibold tracking-widest uppercase rounded-full bg-foreground text-text-secondary mb-6"
+                      class="bg-foreground text-text-secondary mb-6 inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-semibold tracking-widest uppercase"
                     >
                       Our team
                     </span>
                     <h3>The people behind the product</h3>
-                    <p class="mt-4 text-text-secondary md:text-base">
+                    <p class="text-text-secondary mt-4 md:text-base">
                       A diverse team of builders, designers, and thinkers united by the goal of
                       making your workflow effortless.
                     </p>
                   </div>
 
-                  <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                  <div class="grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-4">
                     <!-- Member 1 -->
-                    <div class="group flex flex-col items-center text-center gap-4">
+                    <div class="group flex flex-col items-center gap-4 text-center">
                       <div
-                        class="relative w-full aspect-square rounded-2xl overflow-hidden bg-foreground"
+                        class="bg-foreground relative aspect-square w-full overflow-hidden rounded-2xl"
                       >
                         <img
                           src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face"
                           alt="Alex Morgan"
-                          class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                          class="h-full w-full object-cover transition-transform duration-400 group-hover:scale-105"
                         />
                       </div>
                       <div>
                         <h6 class="font-semibold">Alex Morgan</h6>
-                        <p class="text-text-secondary text-xs mt-1">CEO & Co-founder</p>
+                        <p class="text-text-secondary mt-1 text-xs">CEO & Co-founder</p>
                       </div>
                       <div class="flex gap-3">
                         <a
                           href="#"
-                          class="text-text-secondary hover:text-text transition-colors"
+                          class="text-text-secondary hover:text-text focus-visible:ring-primary focus-visible:ring-offset-background inline-flex size-11 items-center justify-center transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
                           aria-label="Twitter"
                         >
                           <svg class="size-4" viewBox="0 0 24 24" fill="currentColor">
@@ -77,7 +77,7 @@
                         </a>
                         <a
                           href="#"
-                          class="text-text-secondary hover:text-text transition-colors"
+                          class="text-text-secondary hover:text-text focus-visible:ring-primary focus-visible:ring-offset-background inline-flex size-11 items-center justify-center transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
                           aria-label="LinkedIn"
                         >
                           <svg class="size-4" viewBox="0 0 24 24" fill="currentColor">
@@ -90,24 +90,24 @@
                     </div>
 
                     <!-- Member 2 -->
-                    <div class="group flex flex-col items-center text-center gap-4">
+                    <div class="group flex flex-col items-center gap-4 text-center">
                       <div
-                        class="relative w-full aspect-square rounded-2xl overflow-hidden bg-foreground"
+                        class="bg-foreground relative aspect-square w-full overflow-hidden rounded-2xl"
                       >
                         <img
                           src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop&crop=face"
                           alt="Sarah Chen"
-                          class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                          class="h-full w-full object-cover transition-transform duration-400 group-hover:scale-105"
                         />
                       </div>
                       <div>
                         <h6 class="font-semibold">Sarah Chen</h6>
-                        <p class="text-text-secondary text-xs mt-1">CTO & Co-founder</p>
+                        <p class="text-text-secondary mt-1 text-xs">CTO & Co-founder</p>
                       </div>
                       <div class="flex gap-3">
                         <a
                           href="#"
-                          class="text-text-secondary hover:text-text transition-colors"
+                          class="text-text-secondary hover:text-text focus-visible:ring-primary focus-visible:ring-offset-background inline-flex size-11 items-center justify-center transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
                           aria-label="Twitter"
                         >
                           <svg class="size-4" viewBox="0 0 24 24" fill="currentColor">
@@ -118,7 +118,7 @@
                         </a>
                         <a
                           href="#"
-                          class="text-text-secondary hover:text-text transition-colors"
+                          class="text-text-secondary hover:text-text focus-visible:ring-primary focus-visible:ring-offset-background inline-flex size-11 items-center justify-center transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
                           aria-label="LinkedIn"
                         >
                           <svg class="size-4" viewBox="0 0 24 24" fill="currentColor">
@@ -131,24 +131,24 @@
                     </div>
 
                     <!-- Member 3 -->
-                    <div class="group flex flex-col items-center text-center gap-4">
+                    <div class="group flex flex-col items-center gap-4 text-center">
                       <div
-                        class="relative w-full aspect-square rounded-2xl overflow-hidden bg-foreground"
+                        class="bg-foreground relative aspect-square w-full overflow-hidden rounded-2xl"
                       >
                         <img
                           src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face"
                           alt="Marcus Rivera"
-                          class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                          class="h-full w-full object-cover transition-transform duration-400 group-hover:scale-105"
                         />
                       </div>
                       <div>
                         <h6 class="font-semibold">Marcus Rivera</h6>
-                        <p class="text-text-secondary text-xs mt-1">Head of Design</p>
+                        <p class="text-text-secondary mt-1 text-xs">Head of Design</p>
                       </div>
                       <div class="flex gap-3">
                         <a
                           href="#"
-                          class="text-text-secondary hover:text-text transition-colors"
+                          class="text-text-secondary hover:text-text focus-visible:ring-primary focus-visible:ring-offset-background inline-flex size-11 items-center justify-center transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
                           aria-label="Twitter"
                         >
                           <svg class="size-4" viewBox="0 0 24 24" fill="currentColor">
@@ -159,7 +159,7 @@
                         </a>
                         <a
                           href="#"
-                          class="text-text-secondary hover:text-text transition-colors"
+                          class="text-text-secondary hover:text-text focus-visible:ring-primary focus-visible:ring-offset-background inline-flex size-11 items-center justify-center transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
                           aria-label="LinkedIn"
                         >
                           <svg class="size-4" viewBox="0 0 24 24" fill="currentColor">
@@ -172,24 +172,24 @@
                     </div>
 
                     <!-- Member 4 -->
-                    <div class="group flex flex-col items-center text-center gap-4">
+                    <div class="group flex flex-col items-center gap-4 text-center">
                       <div
-                        class="relative w-full aspect-square rounded-2xl overflow-hidden bg-foreground"
+                        class="bg-foreground relative aspect-square w-full overflow-hidden rounded-2xl"
                       >
                         <img
                           src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=400&h=400&fit=crop&crop=face"
                           alt="Maya Patel"
-                          class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                          class="h-full w-full object-cover transition-transform duration-400 group-hover:scale-105"
                         />
                       </div>
                       <div>
                         <h6 class="font-semibold">Maya Patel</h6>
-                        <p class="text-text-secondary text-xs mt-1">Lead Engineer</p>
+                        <p class="text-text-secondary mt-1 text-xs">Lead Engineer</p>
                       </div>
                       <div class="flex gap-3">
                         <a
                           href="#"
-                          class="text-text-secondary hover:text-text transition-colors"
+                          class="text-text-secondary hover:text-text focus-visible:ring-primary focus-visible:ring-offset-background inline-flex size-11 items-center justify-center transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
                           aria-label="Twitter"
                         >
                           <svg class="size-4" viewBox="0 0 24 24" fill="currentColor">
@@ -200,7 +200,7 @@
                         </a>
                         <a
                           href="#"
-                          class="text-text-secondary hover:text-text transition-colors"
+                          class="text-text-secondary hover:text-text focus-visible:ring-primary focus-visible:ring-offset-background inline-flex size-11 items-center justify-center transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
                           aria-label="LinkedIn"
                         >
                           <svg class="size-4" viewBox="0 0 24 24" fill="currentColor">
@@ -216,41 +216,41 @@
               </div>
             </custom-frame>
             <custom-frame title="Cards with bio">
-              <div class="w-full bg-background p-4 md:p-6">
-                <div class="max-w-7xl mx-auto">
-                  <div class="text-center max-w-2xl mx-auto mb-16">
+              <div class="bg-background w-full p-4 md:p-6">
+                <div class="mx-auto max-w-7xl">
+                  <div class="mx-auto mb-16 max-w-2xl text-center">
                     <h3>Meet our leadership</h3>
-                    <p class="mt-4 text-text-secondary md:text-base">
+                    <p class="text-text-secondary mt-4 md:text-base">
                       Experienced leaders driving innovation, each bringing unique expertise to the
                       table.
                     </p>
                   </div>
 
-                  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
                     <!-- Card 1 -->
                     <div
-                      class="group flex flex-col rounded-2xl border border-border overflow-hidden hover:border-border-hover transition-all duration-400"
+                      class="group border-border hover:border-border-hover flex flex-col overflow-hidden rounded-2xl border transition-all duration-400"
                     >
-                      <div class="relative h-64 overflow-hidden bg-foreground">
+                      <div class="bg-foreground relative h-64 overflow-hidden">
                         <img
                           src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&h=400&fit=crop&crop=face"
                           alt="James Wilson"
-                          class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                          class="h-full w-full object-cover transition-transform duration-400 group-hover:scale-105"
                         />
                       </div>
-                      <div class="p-6 flex flex-col gap-3">
+                      <div class="flex flex-col gap-3 p-6">
                         <div>
                           <h5>James Wilson</h5>
-                          <p class="text-text-secondary text-xs mt-0.5">Chief Executive Officer</p>
+                          <p class="text-text-secondary mt-0.5 text-xs">Chief Executive Officer</p>
                         </div>
                         <p class="text-text-secondary text-sm">
                           15+ years in enterprise SaaS. Previously VP of Product at a Fortune 500
                           company. Passionate about building tools that empower teams.
                         </p>
-                        <div class="flex gap-3 mt-auto pt-2">
+                        <div class="mt-auto flex gap-3 pt-2">
                           <a
                             href="#"
-                            class="text-text-secondary hover:text-text transition-colors"
+                            class="text-text-secondary hover:text-text focus-visible:ring-primary focus-visible:ring-offset-background inline-flex size-11 items-center justify-center transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
                             aria-label="Twitter"
                           >
                             <svg class="size-4" viewBox="0 0 24 24" fill="currentColor">
@@ -261,7 +261,7 @@
                           </a>
                           <a
                             href="#"
-                            class="text-text-secondary hover:text-text transition-colors"
+                            class="text-text-secondary hover:text-text focus-visible:ring-primary focus-visible:ring-offset-background inline-flex size-11 items-center justify-center transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
                             aria-label="LinkedIn"
                           >
                             <svg class="size-4" viewBox="0 0 24 24" fill="currentColor">
@@ -272,7 +272,7 @@
                           </a>
                           <a
                             href="#"
-                            class="text-text-secondary hover:text-text transition-colors"
+                            class="text-text-secondary hover:text-text focus-visible:ring-primary focus-visible:ring-offset-background inline-flex size-11 items-center justify-center transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
                             aria-label="GitHub"
                           >
                             <svg class="size-4" viewBox="0 0 24 24" fill="currentColor">
@@ -287,28 +287,28 @@
 
                     <!-- Card 2 -->
                     <div
-                      class="group flex flex-col rounded-2xl border border-border overflow-hidden hover:border-border-hover transition-all duration-400"
+                      class="group border-border hover:border-border-hover flex flex-col overflow-hidden rounded-2xl border transition-all duration-400"
                     >
-                      <div class="relative h-64 overflow-hidden bg-foreground">
+                      <div class="bg-foreground relative h-64 overflow-hidden">
                         <img
                           src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=400&fit=crop&crop=face"
                           alt="Elena Rodriguez"
-                          class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                          class="h-full w-full object-cover transition-transform duration-400 group-hover:scale-105"
                         />
                       </div>
-                      <div class="p-6 flex flex-col gap-3">
+                      <div class="flex flex-col gap-3 p-6">
                         <div>
                           <h5>Elena Rodriguez</h5>
-                          <p class="text-text-secondary text-xs mt-0.5">Chief Technology Officer</p>
+                          <p class="text-text-secondary mt-0.5 text-xs">Chief Technology Officer</p>
                         </div>
                         <p class="text-text-secondary text-sm">
                           Former Staff Engineer at a leading tech company. Specializes in
                           distributed systems and developer experience.
                         </p>
-                        <div class="flex gap-3 mt-auto pt-2">
+                        <div class="mt-auto flex gap-3 pt-2">
                           <a
                             href="#"
-                            class="text-text-secondary hover:text-text transition-colors"
+                            class="text-text-secondary hover:text-text focus-visible:ring-primary focus-visible:ring-offset-background inline-flex size-11 items-center justify-center transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
                             aria-label="Twitter"
                           >
                             <svg class="size-4" viewBox="0 0 24 24" fill="currentColor">
@@ -319,7 +319,7 @@
                           </a>
                           <a
                             href="#"
-                            class="text-text-secondary hover:text-text transition-colors"
+                            class="text-text-secondary hover:text-text focus-visible:ring-primary focus-visible:ring-offset-background inline-flex size-11 items-center justify-center transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
                             aria-label="LinkedIn"
                           >
                             <svg class="size-4" viewBox="0 0 24 24" fill="currentColor">
@@ -330,7 +330,7 @@
                           </a>
                           <a
                             href="#"
-                            class="text-text-secondary hover:text-text transition-colors"
+                            class="text-text-secondary hover:text-text focus-visible:ring-primary focus-visible:ring-offset-background inline-flex size-11 items-center justify-center transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
                             aria-label="GitHub"
                           >
                             <svg class="size-4" viewBox="0 0 24 24" fill="currentColor">
@@ -345,28 +345,28 @@
 
                     <!-- Card 3 -->
                     <div
-                      class="group flex flex-col rounded-2xl border border-border overflow-hidden hover:border-border-hover transition-all duration-400"
+                      class="group border-border hover:border-border-hover flex flex-col overflow-hidden rounded-2xl border transition-all duration-400"
                     >
-                      <div class="relative h-64 overflow-hidden bg-foreground">
+                      <div class="bg-foreground relative h-64 overflow-hidden">
                         <img
                           src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=600&h=400&fit=crop&crop=face"
                           alt="David Kim"
-                          class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                          class="h-full w-full object-cover transition-transform duration-400 group-hover:scale-105"
                         />
                       </div>
-                      <div class="p-6 flex flex-col gap-3">
+                      <div class="flex flex-col gap-3 p-6">
                         <div>
                           <h5>David Kim</h5>
-                          <p class="text-text-secondary text-xs mt-0.5">VP of Engineering</p>
+                          <p class="text-text-secondary mt-0.5 text-xs">VP of Engineering</p>
                         </div>
                         <p class="text-text-secondary text-sm">
                           Open-source advocate with 10+ years of experience. Built and scaled
                           engineering teams from 5 to 100+ engineers.
                         </p>
-                        <div class="flex gap-3 mt-auto pt-2">
+                        <div class="mt-auto flex gap-3 pt-2">
                           <a
                             href="#"
-                            class="text-text-secondary hover:text-text transition-colors"
+                            class="text-text-secondary hover:text-text focus-visible:ring-primary focus-visible:ring-offset-background inline-flex size-11 items-center justify-center transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
                             aria-label="Twitter"
                           >
                             <svg class="size-4" viewBox="0 0 24 24" fill="currentColor">
@@ -377,7 +377,7 @@
                           </a>
                           <a
                             href="#"
-                            class="text-text-secondary hover:text-text transition-colors"
+                            class="text-text-secondary hover:text-text focus-visible:ring-primary focus-visible:ring-offset-background inline-flex size-11 items-center justify-center transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
                             aria-label="LinkedIn"
                           >
                             <svg class="size-4" viewBox="0 0 24 24" fill="currentColor">
@@ -388,7 +388,7 @@
                           </a>
                           <a
                             href="#"
-                            class="text-text-secondary hover:text-text transition-colors"
+                            class="text-text-secondary hover:text-text focus-visible:ring-primary focus-visible:ring-offset-background inline-flex size-11 items-center justify-center transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
                             aria-label="GitHub"
                           >
                             <svg class="size-4" viewBox="0 0 24 24" fill="currentColor">
@@ -405,22 +405,25 @@
               </div>
             </custom-frame>
             <custom-frame title="Compact list">
-              <div class="w-full bg-background p-4 md:p-6">
-                <div class="max-w-7xl mx-auto">
-                  <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+              <div class="bg-background w-full p-4 md:p-6">
+                <div class="mx-auto max-w-7xl">
+                  <div class="grid grid-cols-1 items-start gap-12 lg:grid-cols-2">
                     <!-- Text -->
                     <div>
                       <span
-                        class="inline-flex items-center gap-2 px-3 py-1 text-xs font-semibold tracking-widest uppercase rounded-full bg-foreground text-text-secondary mb-6"
+                        class="bg-foreground text-text-secondary mb-6 inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-semibold tracking-widest uppercase"
                       >
                         We're hiring
                       </span>
                       <h3>Work with us</h3>
-                      <p class="mt-4 text-text-secondary md:text-base">
+                      <p class="text-text-secondary mt-4 md:text-base">
                         We're a remote-first team spread across 12 time zones. We value async
                         communication, deep work, and shipping things that matter.
                       </p>
-                      <a href="#" class="primary-btn mt-6">
+                      <a
+                        href="#"
+                        class="primary-btn focus-visible:ring-primary focus-visible:ring-offset-background mt-6 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
+                      >
                         View open positions
                         <svg
                           class="size-4"
@@ -438,20 +441,20 @@
                     </div>
 
                     <!-- Team list -->
-                    <div class="flex flex-col divide-y divide-border">
+                    <div class="divide-border flex flex-col divide-y">
                       <div class="flex items-center gap-4 py-5 first:pt-0 last:pb-0">
                         <img
                           src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face"
                           alt="Alex Morgan"
                           class="size-14 rounded-full object-cover"
                         />
-                        <div class="flex-1 min-w-0">
-                          <h6 class="font-semibold truncate">Alex Morgan</h6>
+                        <div class="min-w-0 flex-1">
+                          <h6 class="truncate font-semibold">Alex Morgan</h6>
                           <p class="text-text-secondary text-xs">CEO & Co-founder</p>
                         </div>
                         <a
                           href="#"
-                          class="text-text-secondary hover:text-text transition-colors shrink-0"
+                          class="text-text-secondary hover:text-text focus-visible:ring-primary focus-visible:ring-offset-background inline-flex size-11 shrink-0 items-center justify-center transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
                           aria-label="LinkedIn"
                         >
                           <svg class="size-5" viewBox="0 0 24 24" fill="currentColor">
@@ -468,13 +471,13 @@
                           alt="Sarah Chen"
                           class="size-14 rounded-full object-cover"
                         />
-                        <div class="flex-1 min-w-0">
-                          <h6 class="font-semibold truncate">Sarah Chen</h6>
+                        <div class="min-w-0 flex-1">
+                          <h6 class="truncate font-semibold">Sarah Chen</h6>
                           <p class="text-text-secondary text-xs">CTO & Co-founder</p>
                         </div>
                         <a
                           href="#"
-                          class="text-text-secondary hover:text-text transition-colors shrink-0"
+                          class="text-text-secondary hover:text-text focus-visible:ring-primary focus-visible:ring-offset-background inline-flex size-11 shrink-0 items-center justify-center transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
                           aria-label="LinkedIn"
                         >
                           <svg class="size-5" viewBox="0 0 24 24" fill="currentColor">
@@ -491,13 +494,13 @@
                           alt="Marcus Rivera"
                           class="size-14 rounded-full object-cover"
                         />
-                        <div class="flex-1 min-w-0">
-                          <h6 class="font-semibold truncate">Marcus Rivera</h6>
+                        <div class="min-w-0 flex-1">
+                          <h6 class="truncate font-semibold">Marcus Rivera</h6>
                           <p class="text-text-secondary text-xs">Head of Design</p>
                         </div>
                         <a
                           href="#"
-                          class="text-text-secondary hover:text-text transition-colors shrink-0"
+                          class="text-text-secondary hover:text-text focus-visible:ring-primary focus-visible:ring-offset-background inline-flex size-11 shrink-0 items-center justify-center transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
                           aria-label="LinkedIn"
                         >
                           <svg class="size-5" viewBox="0 0 24 24" fill="currentColor">
@@ -514,13 +517,13 @@
                           alt="Maya Patel"
                           class="size-14 rounded-full object-cover"
                         />
-                        <div class="flex-1 min-w-0">
-                          <h6 class="font-semibold truncate">Maya Patel</h6>
+                        <div class="min-w-0 flex-1">
+                          <h6 class="truncate font-semibold">Maya Patel</h6>
                           <p class="text-text-secondary text-xs">Lead Engineer</p>
                         </div>
                         <a
                           href="#"
-                          class="text-text-secondary hover:text-text transition-colors shrink-0"
+                          class="text-text-secondary hover:text-text focus-visible:ring-primary focus-visible:ring-offset-background inline-flex size-11 shrink-0 items-center justify-center transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
                           aria-label="LinkedIn"
                         >
                           <svg class="size-5" viewBox="0 0 24 24" fill="currentColor">
@@ -537,13 +540,13 @@
                           alt="David Kim"
                           class="size-14 rounded-full object-cover"
                         />
-                        <div class="flex-1 min-w-0">
-                          <h6 class="font-semibold truncate">David Kim</h6>
+                        <div class="min-w-0 flex-1">
+                          <h6 class="truncate font-semibold">David Kim</h6>
                           <p class="text-text-secondary text-xs">VP of Engineering</p>
                         </div>
                         <a
                           href="#"
-                          class="text-text-secondary hover:text-text transition-colors shrink-0"
+                          class="text-text-secondary hover:text-text focus-visible:ring-primary focus-visible:ring-offset-background inline-flex size-11 shrink-0 items-center justify-center transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
                           aria-label="LinkedIn"
                         >
                           <svg class="size-5" viewBox="0 0 24 24" fill="currentColor">
@@ -559,38 +562,38 @@
               </div>
             </custom-frame>
             <custom-frame title="Image overlay">
-              <div class="w-full bg-background p-4 md:p-6">
-                <div class="max-w-7xl mx-auto">
-                  <div class="text-center max-w-2xl mx-auto mb-16">
+              <div class="bg-background w-full p-4 md:p-6">
+                <div class="mx-auto max-w-7xl">
+                  <div class="mx-auto mb-16 max-w-2xl text-center">
                     <h3>The Creative Minds</h3>
-                    <p class="mt-4 text-text-secondary md:text-base">
+                    <p class="text-text-secondary mt-4 md:text-base">
                       Passionate designers and developers working together to craft extraordinary
                       digital experiences.
                     </p>
                   </div>
 
-                  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
                     <!-- Member 1 -->
-                    <div class="group relative rounded-2xl overflow-hidden aspect-[4/5] isolate">
+                    <div class="group relative isolate aspect-[4/5] overflow-hidden rounded-2xl">
                       <img
                         src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=600&h=800&fit=crop&crop=faces"
                         alt="Julianne Moore"
-                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        class="absolute inset-0 h-full w-full object-cover transition-transform duration-400 group-hover:scale-110"
                       />
                       <div
                         class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80 transition-opacity duration-300 group-hover:opacity-100"
                       ></div>
                       <div
-                        class="absolute inset-x-0 bottom-0 p-6 flex flex-col justify-end transform translate-y-4 transition-transform duration-300 group-hover:translate-y-0"
+                        class="absolute inset-x-0 bottom-0 flex translate-y-4 transform flex-col justify-end p-6 transition-transform duration-300 group-hover:translate-y-0"
                       >
-                        <h5 class="text-white font-semibold">Julianne Moore</h5>
-                        <p class="text-white/80 text-sm mt-1">Creative Director</p>
+                        <h5 class="font-semibold text-white">Julianne Moore</h5>
+                        <p class="mt-1 text-sm text-white/80">Creative Director</p>
                         <div
                           class="mt-4 flex gap-3 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
                         >
                           <a
                             href="#"
-                            class="text-white hover:text-white/80 transition-colors"
+                            class="focus-visible:ring-primary focus-visible:ring-offset-background inline-flex size-11 items-center justify-center text-white transition-colors duration-200 hover:text-white/80 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
                             aria-label="Twitter"
                           >
                             <svg class="size-5" viewBox="0 0 24 24" fill="currentColor">
@@ -601,7 +604,7 @@
                           </a>
                           <a
                             href="#"
-                            class="text-white hover:text-white/80 transition-colors"
+                            class="focus-visible:ring-primary focus-visible:ring-offset-background inline-flex size-11 items-center justify-center text-white transition-colors duration-200 hover:text-white/80 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
                             aria-label="LinkedIn"
                           >
                             <svg class="size-5" viewBox="0 0 24 24" fill="currentColor">
@@ -615,26 +618,26 @@
                     </div>
 
                     <!-- Member 2 -->
-                    <div class="group relative rounded-2xl overflow-hidden aspect-[4/5] isolate">
+                    <div class="group relative isolate aspect-[4/5] overflow-hidden rounded-2xl">
                       <img
                         src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=600&h=800&fit=crop&crop=faces"
                         alt="Elias Thompson"
-                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        class="absolute inset-0 h-full w-full object-cover transition-transform duration-400 group-hover:scale-110"
                       />
                       <div
                         class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80 transition-opacity duration-300 group-hover:opacity-100"
                       ></div>
                       <div
-                        class="absolute inset-x-0 bottom-0 p-6 flex flex-col justify-end transform translate-y-4 transition-transform duration-300 group-hover:translate-y-0"
+                        class="absolute inset-x-0 bottom-0 flex translate-y-4 transform flex-col justify-end p-6 transition-transform duration-300 group-hover:translate-y-0"
                       >
-                        <h5 class="text-white font-semibold">Elias Thompson</h5>
-                        <p class="text-white/80 text-sm mt-1">Lead Developer</p>
+                        <h5 class="font-semibold text-white">Elias Thompson</h5>
+                        <p class="mt-1 text-sm text-white/80">Lead Developer</p>
                         <div
                           class="mt-4 flex gap-3 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
                         >
                           <a
                             href="#"
-                            class="text-white hover:text-white/80 transition-colors"
+                            class="focus-visible:ring-primary focus-visible:ring-offset-background inline-flex size-11 items-center justify-center text-white transition-colors duration-200 hover:text-white/80 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
                             aria-label="Twitter"
                           >
                             <svg class="size-5" viewBox="0 0 24 24" fill="currentColor">
@@ -645,7 +648,7 @@
                           </a>
                           <a
                             href="#"
-                            class="text-white hover:text-white/80 transition-colors"
+                            class="focus-visible:ring-primary focus-visible:ring-offset-background inline-flex size-11 items-center justify-center text-white transition-colors duration-200 hover:text-white/80 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
                             aria-label="LinkedIn"
                           >
                             <svg class="size-5" viewBox="0 0 24 24" fill="currentColor">
@@ -659,26 +662,26 @@
                     </div>
 
                     <!-- Member 3 -->
-                    <div class="group relative rounded-2xl overflow-hidden aspect-[4/5] isolate">
+                    <div class="group relative isolate aspect-[4/5] overflow-hidden rounded-2xl">
                       <img
                         src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=600&h=800&fit=crop&crop=faces"
                         alt="Mia Chang"
-                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        class="absolute inset-0 h-full w-full object-cover transition-transform duration-400 group-hover:scale-110"
                       />
                       <div
                         class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80 transition-opacity duration-300 group-hover:opacity-100"
                       ></div>
                       <div
-                        class="absolute inset-x-0 bottom-0 p-6 flex flex-col justify-end transform translate-y-4 transition-transform duration-300 group-hover:translate-y-0"
+                        class="absolute inset-x-0 bottom-0 flex translate-y-4 transform flex-col justify-end p-6 transition-transform duration-300 group-hover:translate-y-0"
                       >
-                        <h5 class="text-white font-semibold">Mia Chang</h5>
-                        <p class="text-white/80 text-sm mt-1">Product Designer</p>
+                        <h5 class="font-semibold text-white">Mia Chang</h5>
+                        <p class="mt-1 text-sm text-white/80">Product Designer</p>
                         <div
                           class="mt-4 flex gap-3 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
                         >
                           <a
                             href="#"
-                            class="text-white hover:text-white/80 transition-colors"
+                            class="focus-visible:ring-primary focus-visible:ring-offset-background inline-flex size-11 items-center justify-center text-white transition-colors duration-200 hover:text-white/80 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
                             aria-label="Twitter"
                           >
                             <svg class="size-5" viewBox="0 0 24 24" fill="currentColor">
@@ -689,7 +692,7 @@
                           </a>
                           <a
                             href="#"
-                            class="text-white hover:text-white/80 transition-colors"
+                            class="focus-visible:ring-primary focus-visible:ring-offset-background inline-flex size-11 items-center justify-center text-white transition-colors duration-200 hover:text-white/80 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
                             aria-label="LinkedIn"
                           >
                             <svg class="size-5" viewBox="0 0 24 24" fill="currentColor">
@@ -707,37 +710,38 @@
             </custom-frame>
             <custom-frame title="Primary background grid">
               <div
-                class="w-full bg-primary text-primary-contrast py-20 px-4 md:px-6 flex flex-col items-center justify-center"
+                class="bg-primary text-primary-contrast flex w-full flex-col items-center justify-center px-4 py-20 md:px-6"
               >
-                <div class="w-full max-w-7xl flex flex-col gap-16">
-                  <div class="text-center max-w-2xl mx-auto">
-                    <h3 class="text-3xl md:text-5xl font-bold mb-6">Meet the Innovators</h3>
-                    <p class="opacity-80 text-lg">
+                <div class="flex w-full max-w-7xl flex-col gap-16">
+                  <div class="mx-auto max-w-2xl text-center">
+                    <h3 class="mb-6 text-3xl font-bold md:text-5xl">Meet the Innovators</h3>
+                    <p class="text-lg opacity-80">
                       Our diverse team of experts is dedicated to pushing the boundaries of what's
                       possible and delivering exceptional results.
                     </p>
                   </div>
 
-                  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+                  <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:gap-8 lg:grid-cols-4">
                     <!-- Member 1 -->
                     <div
-                      class="rounded-3xl p-6 bg-primary-contrast/5 flex flex-col items-center text-center hover:-translate-y-2 transition-transform duration-400"
+                      class="bg-primary-contrast/5 flex flex-col items-center rounded-3xl p-6 text-center transition-transform duration-400 hover:-translate-y-2"
                     >
                       <img
                         src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face"
                         alt="Alex Morgan"
-                        class="size-32 rounded-full object-cover mb-6"
+                        class="mb-6 size-32 rounded-full object-cover"
                       />
-                      <h4 class="text-xl font-bold mb-1">Alex Morgan</h4>
-                      <p class="text-accent font-medium text-sm mb-4">CEO & Founder</p>
-                      <p class="opacity-80 text-sm mb-6 line-clamp-2">
+                      <h4 class="mb-1 text-xl font-bold">Alex Morgan</h4>
+                      <p class="text-accent mb-4 text-sm font-medium">CEO & Founder</p>
+                      <p class="mb-6 line-clamp-2 text-sm opacity-80">
                         Visionary leader with 15 years in tech, driving our mission to revolutionize
                         the industry.
                       </p>
                       <div class="mt-auto flex gap-3">
                         <a
                           href="#"
-                          class="flex items-center justify-center size-10 rounded-full bg-primary-contrast text-primary hover:bg-primary hover:text-primary-contrast transition-colors"
+                          class="bg-primary-contrast text-primary hover:bg-primary hover:text-primary-contrast focus-visible:ring-primary focus-visible:ring-offset-background flex size-11 items-center justify-center rounded-full transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
+                          aria-label="Twitter"
                         >
                           <svg class="size-4" viewBox="0 0 24 24" fill="currentColor">
                             <path
@@ -747,7 +751,8 @@
                         </a>
                         <a
                           href="#"
-                          class="flex items-center justify-center size-10 rounded-full bg-primary-contrast text-primary hover:bg-primary hover:text-primary-contrast transition-colors"
+                          class="bg-primary-contrast text-primary hover:bg-primary hover:text-primary-contrast focus-visible:ring-primary focus-visible:ring-offset-background flex size-11 items-center justify-center rounded-full transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
+                          aria-label="LinkedIn"
                         >
                           <svg class="size-4" viewBox="0 0 24 24" fill="currentColor">
                             <path
@@ -760,22 +765,23 @@
 
                     <!-- Member 2 -->
                     <div
-                      class="rounded-3xl p-6 bg-primary-contrast/5 flex flex-col items-center text-center hover:-translate-y-2 transition-transform duration-400"
+                      class="bg-primary-contrast/5 flex flex-col items-center rounded-3xl p-6 text-center transition-transform duration-400 hover:-translate-y-2"
                     >
                       <img
                         src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop&crop=face"
                         alt="Sarah Chen"
-                        class="size-32 rounded-full object-cover mb-6"
+                        class="mb-6 size-32 rounded-full object-cover"
                       />
-                      <h4 class="text-xl font-bold mb-1">Sarah Chen</h4>
-                      <p class="text-accent font-medium text-sm mb-4">CTO</p>
-                      <p class="opacity-80 text-sm mb-6 line-clamp-2">
+                      <h4 class="mb-1 text-xl font-bold">Sarah Chen</h4>
+                      <p class="text-accent mb-4 text-sm font-medium">CTO</p>
+                      <p class="mb-6 line-clamp-2 text-sm opacity-80">
                         Architecture mastermind building scalable systems for the modern web.
                       </p>
                       <div class="mt-auto flex gap-3">
                         <a
                           href="#"
-                          class="flex items-center justify-center size-10 rounded-full bg-primary-contrast text-primary hover:bg-primary hover:text-primary-contrast transition-colors"
+                          class="bg-primary-contrast text-primary hover:bg-primary hover:text-primary-contrast focus-visible:ring-primary focus-visible:ring-offset-background flex size-11 items-center justify-center rounded-full transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
+                          aria-label="Twitter"
                         >
                           <svg class="size-4" viewBox="0 0 24 24" fill="currentColor">
                             <path
@@ -785,7 +791,8 @@
                         </a>
                         <a
                           href="#"
-                          class="flex items-center justify-center size-10 rounded-full bg-primary-contrast text-primary hover:bg-primary hover:text-primary-contrast transition-colors"
+                          class="bg-primary-contrast text-primary hover:bg-primary hover:text-primary-contrast focus-visible:ring-primary focus-visible:ring-offset-background flex size-11 items-center justify-center rounded-full transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
+                          aria-label="LinkedIn"
                         >
                           <svg class="size-4" viewBox="0 0 24 24" fill="currentColor">
                             <path
@@ -798,22 +805,23 @@
 
                     <!-- Member 3 -->
                     <div
-                      class="rounded-3xl p-6 bg-primary-contrast/5 flex flex-col items-center text-center hover:-translate-y-2 transition-transform duration-400"
+                      class="bg-primary-contrast/5 flex flex-col items-center rounded-3xl p-6 text-center transition-transform duration-400 hover:-translate-y-2"
                     >
                       <img
                         src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face"
                         alt="Marcus Rivera"
-                        class="size-32 rounded-full object-cover mb-6"
+                        class="mb-6 size-32 rounded-full object-cover"
                       />
-                      <h4 class="text-xl font-bold mb-1">Marcus Rivera</h4>
-                      <p class="text-accent font-medium text-sm mb-4">Head of Design</p>
-                      <p class="opacity-80 text-sm mb-6 line-clamp-2">
+                      <h4 class="mb-1 text-xl font-bold">Marcus Rivera</h4>
+                      <p class="text-accent mb-4 text-sm font-medium">Head of Design</p>
+                      <p class="mb-6 line-clamp-2 text-sm opacity-80">
                         Award-winning designer creating intuitive and breathtaking user experiences.
                       </p>
                       <div class="mt-auto flex gap-3">
                         <a
                           href="#"
-                          class="flex items-center justify-center size-10 rounded-full bg-primary-contrast text-primary hover:bg-primary hover:text-primary-contrast transition-colors"
+                          class="bg-primary-contrast text-primary hover:bg-primary hover:text-primary-contrast focus-visible:ring-primary focus-visible:ring-offset-background flex size-11 items-center justify-center rounded-full transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
+                          aria-label="LinkedIn"
                         >
                           <svg class="size-4" viewBox="0 0 24 24" fill="currentColor">
                             <path
@@ -826,22 +834,23 @@
 
                     <!-- Member 4 -->
                     <div
-                      class="rounded-3xl p-6 bg-primary-contrast/5 flex flex-col items-center text-center hover:-translate-y-2 transition-transform duration-400"
+                      class="bg-primary-contrast/5 flex flex-col items-center rounded-3xl p-6 text-center transition-transform duration-400 hover:-translate-y-2"
                     >
                       <img
                         src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=400&h=400&fit=crop&crop=face"
                         alt="Maya Patel"
-                        class="size-32 rounded-full object-cover mb-6"
+                        class="mb-6 size-32 rounded-full object-cover"
                       />
-                      <h4 class="text-xl font-bold mb-1">Maya Patel</h4>
-                      <p class="text-accent font-medium text-sm mb-4">Lead Engineer</p>
-                      <p class="opacity-80 text-sm mb-6 line-clamp-2">
+                      <h4 class="mb-1 text-xl font-bold">Maya Patel</h4>
+                      <p class="text-accent mb-4 text-sm font-medium">Lead Engineer</p>
+                      <p class="mb-6 line-clamp-2 text-sm opacity-80">
                         Pioneering edge computing solutions and optimizing performance metrics.
                       </p>
                       <div class="mt-auto flex gap-3">
                         <a
                           href="#"
-                          class="flex items-center justify-center size-10 rounded-full bg-primary-contrast text-primary hover:bg-primary hover:text-primary-contrast transition-colors"
+                          class="bg-primary-contrast text-primary hover:bg-primary hover:text-primary-contrast focus-visible:ring-primary focus-visible:ring-offset-background flex size-11 items-center justify-center rounded-full transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
+                          aria-label="Twitter"
                         >
                           <svg class="size-4" viewBox="0 0 24 24" fill="currentColor">
                             <path
@@ -856,31 +865,31 @@
               </div>
             </custom-frame>
             <custom-frame title="Featured member split">
-              <div class="w-full bg-background p-4 md:p-6 lg:py-20">
-                <div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-12 lg:gap-16">
+              <div class="bg-background w-full p-4 md:p-6 lg:py-20">
+                <div class="mx-auto flex max-w-7xl flex-col gap-12 lg:flex-row lg:gap-16">
                   <!-- Featured Member (Left) -->
-                  <div class="flex-1 w-full lg:max-w-md flex flex-col gap-6">
+                  <div class="flex w-full flex-1 flex-col gap-6 lg:max-w-md">
                     <div
-                      class="relative w-full aspect-[4/5] rounded-3xl overflow-hidden bg-foreground"
+                      class="bg-foreground relative aspect-[4/5] w-full overflow-hidden rounded-3xl"
                     >
                       <img
                         src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=800&h=1000&fit=crop&crop=face"
                         alt="James Wilson"
-                        class="w-full h-full object-cover"
+                        class="h-full w-full object-cover"
                       />
                     </div>
                     <div>
-                      <h3 class="text-2xl md:text-3xl font-bold">James Wilson</h3>
-                      <p class="text-primary font-medium mt-1">Chief Executive Officer</p>
-                      <p class="mt-4 text-text-secondary">
+                      <h3 class="text-2xl font-bold md:text-3xl">James Wilson</h3>
+                      <p class="text-primary mt-1 font-medium">Chief Executive Officer</p>
+                      <p class="text-text-secondary mt-4">
                         "We believe that great software is built by great teams. Our goal is to
                         create products that make people's lives easier and their work more
                         efficient."
                       </p>
-                      <div class="flex gap-4 mt-6">
+                      <div class="mt-6 flex gap-4">
                         <a
                           href="#"
-                          class="flex items-center justify-center size-10 rounded-full bg-foreground text-text hover:bg-primary hover:text-primary-contrast transition-colors"
+                          class="bg-foreground text-text hover:bg-primary hover:text-primary-contrast focus-visible:ring-primary focus-visible:ring-offset-background flex size-11 items-center justify-center rounded-full transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
                           aria-label="LinkedIn"
                         >
                           <svg class="size-4" viewBox="0 0 24 24" fill="currentColor">
@@ -891,7 +900,7 @@
                         </a>
                         <a
                           href="#"
-                          class="flex items-center justify-center size-10 rounded-full bg-foreground text-text hover:bg-primary hover:text-primary-contrast transition-colors"
+                          class="bg-foreground text-text hover:bg-primary hover:text-primary-contrast focus-visible:ring-primary focus-visible:ring-offset-background flex size-11 items-center justify-center rounded-full transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
                           aria-label="Twitter"
                         >
                           <svg class="size-4" viewBox="0 0 24 24" fill="currentColor">
@@ -905,17 +914,17 @@
                   </div>
 
                   <!-- Other Team Members (Right) -->
-                  <div class="flex-1 w-full pt-4 lg:pt-0">
+                  <div class="w-full flex-1 pt-4 lg:pt-0">
                     <div class="mb-10">
                       <span
-                        class="inline-flex items-center gap-2 px-3 py-1 text-xs font-semibold tracking-widest uppercase rounded-full bg-foreground text-text-secondary mb-4"
+                        class="bg-foreground text-text-secondary mb-4 inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-semibold tracking-widest uppercase"
                       >
                         Leadership team
                       </span>
                       <h4 class="text-2xl font-bold">Driving continuous innovation</h4>
                     </div>
 
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-10">
+                    <div class="grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2">
                       <!-- Member 1 -->
                       <div class="flex flex-col gap-4">
                         <img
@@ -924,8 +933,8 @@
                           class="size-24 rounded-full object-cover"
                         />
                         <div>
-                          <h6 class="font-semibold text-lg">Sarah Chen</h6>
-                          <p class="text-primary text-sm font-medium mb-2">CTO</p>
+                          <h6 class="text-lg font-semibold">Sarah Chen</h6>
+                          <p class="text-primary mb-2 text-sm font-medium">CTO</p>
                           <p class="text-text-secondary text-sm">
                             Architecture mastermind building scalable systems for the modern web.
                           </p>
@@ -940,8 +949,8 @@
                           class="size-24 rounded-full object-cover"
                         />
                         <div>
-                          <h6 class="font-semibold text-lg">Marcus Rivera</h6>
-                          <p class="text-primary text-sm font-medium mb-2">Head of Design</p>
+                          <h6 class="text-lg font-semibold">Marcus Rivera</h6>
+                          <p class="text-primary mb-2 text-sm font-medium">Head of Design</p>
                           <p class="text-text-secondary text-sm">
                             Award-winning designer creating intuitive and breathtaking user
                             experiences.
@@ -957,8 +966,8 @@
                           class="size-24 rounded-full object-cover"
                         />
                         <div>
-                          <h6 class="font-semibold text-lg">Maya Patel</h6>
-                          <p class="text-primary text-sm font-medium mb-2">Lead Engineer</p>
+                          <h6 class="text-lg font-semibold">Maya Patel</h6>
+                          <p class="text-primary mb-2 text-sm font-medium">Lead Engineer</p>
                           <p class="text-text-secondary text-sm">
                             Pioneering edge computing solutions and optimizing performance metrics.
                           </p>
@@ -973,8 +982,8 @@
                           class="size-24 rounded-full object-cover"
                         />
                         <div>
-                          <h6 class="font-semibold text-lg">Alex Morgan</h6>
-                          <p class="text-primary text-sm font-medium mb-2">COO</p>
+                          <h6 class="text-lg font-semibold">Alex Morgan</h6>
+                          <p class="text-primary mb-2 text-sm font-medium">COO</p>
                           <p class="text-text-secondary text-sm">
                             Operations expert ensuring everything runs smoothly across worldwide
                             teams.

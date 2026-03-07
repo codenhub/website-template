@@ -7,12 +7,12 @@
     }
 
     & > div {
-      @apply flex items-center gap-4 mt-auto;
+      @apply mt-auto flex items-center gap-4;
     }
   }
 
   .faq-item {
-    @apply p-4 gap-0 cursor-pointer;
+    @apply cursor-pointer gap-0 p-4;
 
     & .question {
       @apply flex items-center justify-between;

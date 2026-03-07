@@ -13,9 +13,9 @@
     <title>Inputs - Components Library</title>
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="stylesheet" href="../../../_ui/styles/index.css" />
-    <script type="module" src="../../../_ui/components/index.js" defer></script>
-    <script type="module" src="../../../_ui/scripts/index.js" defer></script>
-    <script type="module" src="../header-section.js" defer></script>
+    <script type="module" src="../../../_ui/components/index.js"></script>
+    <script type="module" src="../../../_ui/scripts/index.js"></script>
+    <script type="module" src="../header-section.js"></script>
   </head>
 
   <body>
@@ -26,69 +26,77 @@
         <components-header-section></components-header-section>
 
         <div class="flex w-full justify-center px-4">
-          <h2 class="max-w-7xl w-full split-chars">Inputs</h2>
+          <h2 class="split-chars w-full max-w-7xl">Inputs</h2>
         </div>
 
         <section class="sect">
           <div class="sect-container gap-24">
             <custom-frame title="Default">
-              <div class="w-full p-8 md:p-12 bg-background">
-                <div class="flex gap-8 items-end justify-center w-full flex-wrap max-w-5xl mx-auto">
-                  <div class="flex flex-col gap-2 flex-1 min-w-64">
-                    <label class="text-sm font-medium text-text">Name</label>
-                    <input type="text" placeholder="John Doe" />
+              <div class="bg-background w-full p-8 md:p-12">
+                <div class="mx-auto flex w-full max-w-5xl flex-wrap items-end justify-center gap-8">
+                  <div class="flex min-w-64 flex-1 flex-col gap-2">
+                    <label for="default-name" class="text-text text-sm font-medium">Name</label>
+                    <input id="default-name" type="text" placeholder="John Doe" />
                   </div>
-                  <div class="flex flex-col gap-2 flex-1 min-w-64">
-                    <label class="text-sm font-medium text-text">Email</label>
-                    <input type="email" placeholder="john@example.com" />
+                  <div class="flex min-w-64 flex-1 flex-col gap-2">
+                    <label for="default-email" class="text-text text-sm font-medium">Email</label>
+                    <input id="default-email" type="email" placeholder="john@example.com" />
                   </div>
-                  <div class="flex flex-col gap-2 flex-1 min-w-64">
-                    <label class="text-sm font-medium text-text">Password</label>
-                    <input type="password" placeholder="••••••••" />
+                  <div class="flex min-w-64 flex-1 flex-col gap-2">
+                    <label for="default-password" class="text-text text-sm font-medium">
+                      Password
+                    </label>
+                    <input id="default-password" type="password" placeholder="••••••••" />
                   </div>
                 </div>
               </div>
             </custom-frame>
             <custom-frame title="With helper text">
-              <div class="w-full p-8 md:p-12 bg-background">
+              <div class="bg-background w-full p-8 md:p-12">
                 <div
-                  class="flex gap-8 items-start justify-center w-full flex-wrap max-w-5xl mx-auto"
+                  class="mx-auto flex w-full max-w-5xl flex-wrap items-start justify-center gap-8"
                 >
-                  <div class="flex flex-col gap-2 flex-1 min-w-64">
-                    <label class="text-sm font-medium text-text">Email</label>
-                    <input type="email" placeholder="john@example.com" />
-                    <p class="text-xs text-text-secondary">We'll never share your email.</p>
+                  <div class="flex min-w-64 flex-1 flex-col gap-2">
+                    <label for="helper-email" class="text-text text-sm font-medium">Email</label>
+                    <input id="helper-email" type="email" placeholder="john@example.com" />
+                    <p class="text-text-secondary text-xs">We'll never share your email.</p>
                   </div>
-                  <div class="flex flex-col gap-2 flex-1 min-w-64">
-                    <label class="text-sm font-medium text-text">Password</label>
+                  <div class="flex min-w-64 flex-1 flex-col gap-2">
+                    <label for="helper-password" class="text-text text-sm font-medium">
+                      Password
+                    </label>
                     <input
+                      id="helper-password"
                       type="password"
                       placeholder="••••••••"
-                      class="border-red-500! focus:ring-red-500!"
+                      class="border-error! focus:ring-error!"
                     />
-                    <p class="text-xs text-red-600">Password must be at least 8 characters.</p>
+                    <p class="text-error text-xs">Password must be at least 8 characters.</p>
                   </div>
-                  <div class="flex flex-col gap-2 flex-1 min-w-64">
-                    <label class="text-sm font-medium text-text">Username</label>
+                  <div class="flex min-w-64 flex-1 flex-col gap-2">
+                    <label for="helper-username" class="text-text text-sm font-medium">
+                      Username
+                    </label>
                     <input
+                      id="helper-username"
                       type="text"
                       placeholder="johndoe"
                       value="johndoe"
-                      class="border-emerald-500! focus:ring-emerald-500!"
+                      class="border-success! focus:ring-success!"
                     />
-                    <p class="text-xs text-emerald-600">Username is available!</p>
+                    <p class="text-success text-xs">Username is available!</p>
                   </div>
                 </div>
               </div>
             </custom-frame>
             <custom-frame title="With icon">
-              <div class="w-full p-8 md:p-12 bg-background">
-                <div class="flex gap-8 items-end justify-center w-full flex-wrap max-w-5xl mx-auto">
-                  <div class="flex flex-col gap-2 flex-1 min-w-64">
-                    <label class="text-sm font-medium text-text">Search</label>
+              <div class="bg-background w-full p-8 md:p-12">
+                <div class="mx-auto flex w-full max-w-5xl flex-wrap items-end justify-center gap-8">
+                  <div class="flex min-w-64 flex-1 flex-col gap-2">
+                    <label for="icon-search" class="text-text text-sm font-medium">Search</label>
                     <div class="relative">
                       <svg
-                        class="absolute left-3 top-1/2 -translate-y-1/2 size-4 text-text-secondary pointer-events-none"
+                        class="text-text-secondary pointer-events-none absolute top-1/2 left-3 size-4 -translate-y-1/2"
                         viewBox="0 0 24 24"
                         fill="none"
                         stroke="currentColor"
@@ -99,14 +107,19 @@
                         <circle cx="11" cy="11" r="8" />
                         <path d="m21 21-4.35-4.35" />
                       </svg>
-                      <input type="text" placeholder="Search..." class="w-full pl-10!" />
+                      <input
+                        id="icon-search"
+                        type="text"
+                        placeholder="Search..."
+                        class="w-full pl-10!"
+                      />
                     </div>
                   </div>
-                  <div class="flex flex-col gap-2 flex-1 min-w-64">
-                    <label class="text-sm font-medium text-text">Website</label>
+                  <div class="flex min-w-64 flex-1 flex-col gap-2">
+                    <label for="icon-website" class="text-text text-sm font-medium">Website</label>
                     <div class="relative">
                       <svg
-                        class="absolute left-3 top-1/2 -translate-y-1/2 size-4 text-text-secondary pointer-events-none"
+                        class="text-text-secondary pointer-events-none absolute top-1/2 left-3 size-4 -translate-y-1/2"
                         viewBox="0 0 24 24"
                         fill="none"
                         stroke="currentColor"
@@ -120,14 +133,19 @@
                           d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
                         />
                       </svg>
-                      <input type="url" placeholder="https://example.com" class="w-full pl-10!" />
+                      <input
+                        id="icon-website"
+                        type="url"
+                        placeholder="https://example.com"
+                        class="w-full pl-10!"
+                      />
                     </div>
                   </div>
-                  <div class="flex flex-col gap-2 flex-1 min-w-64">
-                    <label class="text-sm font-medium text-text">Email</label>
+                  <div class="flex min-w-64 flex-1 flex-col gap-2">
+                    <label for="icon-email" class="text-text text-sm font-medium">Email</label>
                     <div class="relative">
                       <svg
-                        class="absolute left-3 top-1/2 -translate-y-1/2 size-4 text-text-secondary pointer-events-none"
+                        class="text-text-secondary pointer-events-none absolute top-1/2 left-3 size-4 -translate-y-1/2"
                         viewBox="0 0 24 24"
                         fill="none"
                         stroke="currentColor"
@@ -138,41 +156,52 @@
                         <rect width="20" height="16" x="2" y="4" rx="2" />
                         <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
                       </svg>
-                      <input type="email" placeholder="john@example.com" class="w-full pl-10!" />
+                      <input
+                        id="icon-email"
+                        type="email"
+                        placeholder="john@example.com"
+                        class="w-full pl-10!"
+                      />
                     </div>
                   </div>
                 </div>
               </div>
             </custom-frame>
             <custom-frame title="With addon">
-              <div class="w-full p-8 md:p-12 bg-background">
-                <div class="flex gap-8 items-end justify-center w-full flex-wrap max-w-5xl mx-auto">
-                  <div class="flex flex-col gap-2 flex-1 min-w-64">
-                    <label class="text-sm font-medium text-text">Website</label>
+              <div class="bg-background w-full p-8 md:p-12">
+                <div class="mx-auto flex w-full max-w-5xl flex-wrap items-end justify-center gap-8">
+                  <div class="flex min-w-64 flex-1 flex-col gap-2">
+                    <label for="addon-website" class="text-text text-sm font-medium">Website</label>
                     <div class="flex">
                       <span
-                        class="inline-flex items-center px-3 text-sm font-medium text-text-secondary bg-foreground border border-r-0 border-accent rounded-l-md"
+                        class="text-text-secondary bg-foreground border-accent inline-flex items-center rounded-l-md border border-r-0 px-3 text-sm font-medium"
                       >
                         https://
                       </span>
-                      <input type="text" placeholder="example.com" class="flex-1 rounded-l-none!" />
+                      <input
+                        id="addon-website"
+                        type="text"
+                        placeholder="example.com"
+                        class="flex-1 rounded-l-none!"
+                      />
                     </div>
                   </div>
-                  <div class="flex flex-col gap-2 flex-1 min-w-64">
-                    <label class="text-sm font-medium text-text">Price</label>
+                  <div class="flex min-w-64 flex-1 flex-col gap-2">
+                    <label for="addon-price" class="text-text text-sm font-medium">Price</label>
                     <div class="flex">
                       <span
-                        class="inline-flex items-center px-3 text-sm font-medium text-text-secondary bg-foreground border border-r-0 border-accent rounded-l-md"
+                        class="text-text-secondary bg-foreground border-accent inline-flex items-center rounded-l-md border border-r-0 px-3 text-sm font-medium"
                       >
                         $
                       </span>
                       <input
+                        id="addon-price"
                         type="number"
                         placeholder="0.00"
                         class="flex-1 rounded-l-none! rounded-r-none!"
                       />
                       <span
-                        class="inline-flex items-center px-3 text-sm font-medium text-text-secondary bg-foreground border border-l-0 border-accent rounded-r-md"
+                        class="text-text-secondary bg-foreground border-accent inline-flex items-center rounded-r-md border border-l-0 px-3 text-sm font-medium"
                       >
                         USD
                       </span>
@@ -182,29 +211,42 @@
               </div>
             </custom-frame>
             <custom-frame title="Textarea">
-              <div class="w-full p-8 md:p-12 bg-background">
+              <div class="bg-background w-full p-8 md:p-12">
                 <div
-                  class="flex gap-8 items-start justify-center w-full flex-wrap max-w-5xl mx-auto"
+                  class="mx-auto flex w-full max-w-5xl flex-wrap items-start justify-center gap-8"
                 >
-                  <div class="flex flex-col gap-2 flex-1 min-w-64">
-                    <label class="text-sm font-medium text-text">Message</label>
-                    <textarea rows="4" placeholder="Write your message..."></textarea>
+                  <div class="flex min-w-64 flex-1 flex-col gap-2">
+                    <label for="textarea-message" class="text-text text-sm font-medium">
+                      Message
+                    </label>
+                    <textarea
+                      id="textarea-message"
+                      rows="4"
+                      placeholder="Write your message..."
+                    ></textarea>
                   </div>
-                  <div class="flex flex-col gap-2 flex-1 min-w-64">
-                    <label class="text-sm font-medium text-text">Bio</label>
-                    <textarea rows="4" placeholder="Tell us about yourself..."></textarea>
-                    <p class="text-xs text-text-secondary text-right">0/500</p>
+                  <div class="flex min-w-64 flex-1 flex-col gap-2">
+                    <label for="textarea-bio" class="text-text text-sm font-medium">Bio</label>
+                    <textarea
+                      id="textarea-bio"
+                      rows="4"
+                      placeholder="Tell us about yourself..."
+                    ></textarea>
+                    <p class="text-text-secondary text-right text-xs">0/500</p>
                   </div>
                 </div>
               </div>
             </custom-frame>
             <custom-frame title="Select">
-              <div class="w-full p-8 md:p-12 bg-background">
-                <div class="flex gap-8 items-end justify-center w-full flex-wrap max-w-5xl mx-auto">
-                  <div class="flex flex-col gap-2 flex-1 min-w-64">
-                    <label class="text-sm font-medium text-text">Country</label>
+              <div class="bg-background w-full p-8 md:p-12">
+                <div class="mx-auto flex w-full max-w-5xl flex-wrap items-end justify-center gap-8">
+                  <div class="flex min-w-64 flex-1 flex-col gap-2">
+                    <label for="select-country" class="text-text text-sm font-medium">
+                      Country
+                    </label>
                     <select
-                      class="flex p-2 min-h-10 rounded-md border border-accent focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-200 bg-background appearance-none cursor-pointer"
+                      id="select-country"
+                      class="border-accent focus:ring-primary bg-background flex min-h-10 cursor-pointer appearance-none rounded-md border p-2 transition-all duration-200 focus:ring-2 focus:outline-none"
                     >
                       <option>Select a country</option>
                       <option>United States</option>
@@ -213,10 +255,11 @@
                       <option>Japan</option>
                     </select>
                   </div>
-                  <div class="flex flex-col gap-2 flex-1 min-w-64">
-                    <label class="text-sm font-medium text-text">Role</label>
+                  <div class="flex min-w-64 flex-1 flex-col gap-2">
+                    <label for="select-role" class="text-text text-sm font-medium">Role</label>
                     <select
-                      class="flex p-2 min-h-10 rounded-md border border-accent focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-200 bg-background appearance-none cursor-pointer"
+                      id="select-role"
+                      class="border-accent focus:ring-primary bg-background flex min-h-10 cursor-pointer appearance-none rounded-md border p-2 transition-all duration-200 focus:ring-2 focus:outline-none"
                     >
                       <option>Select a role</option>
                       <option>Developer</option>
@@ -229,49 +272,49 @@
               </div>
             </custom-frame>
             <custom-frame title="Floating Label">
-              <div class="w-full p-8 md:p-12 bg-background">
-                <div class="flex gap-8 items-end justify-center w-full flex-wrap max-w-5xl mx-auto">
-                  <div class="flex flex-col gap-2 flex-1 min-w-64 relative">
+              <div class="bg-background w-full p-8 md:p-12">
+                <div class="mx-auto flex w-full max-w-5xl flex-wrap items-end justify-center gap-8">
+                  <div class="relative flex min-w-64 flex-1 flex-col gap-2">
                     <input
                       type="text"
-                      id="floating_email"
-                      class="block px-2.5 pb-2.5 pt-4 w-full text-sm text-text bg-transparent rounded-md border border-border appearance-none focus:outline-none focus:ring-0 focus:border-primary peer"
+                      id="floating-email"
+                      class="text-text border-border focus:border-primary peer block w-full appearance-none rounded-md border bg-transparent px-2.5 pt-4 pb-2.5 text-sm focus:ring-0 focus:outline-none"
                       placeholder=" "
                     />
                     <label
-                      for="floating_email"
-                      class="absolute text-sm text-text-secondary duration-300 transform -translate-y-4 scale-75 top-2 left-1.5 z-10 origin-[0] bg-background px-1 peer-focus:text-primary peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 cursor-text"
+                      for="floating-email"
+                      class="text-text-secondary bg-background peer-focus:text-primary absolute top-2 left-1.5 z-10 origin-[0] -translate-y-4 scale-75 transform cursor-text px-1 text-sm duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-4 peer-focus:scale-75"
                     >
                       Email address
                     </label>
                   </div>
-                  <div class="flex flex-col gap-2 flex-1 min-w-64 relative">
+                  <div class="relative flex min-w-64 flex-1 flex-col gap-2">
                     <input
                       type="password"
-                      id="floating_password"
-                      class="block px-2.5 pb-2.5 pt-4 w-full text-sm text-text bg-transparent rounded-md border border-border appearance-none focus:outline-none focus:ring-0 focus:border-primary peer"
+                      id="floating-password"
+                      class="text-text border-border focus:border-primary peer block w-full appearance-none rounded-md border bg-transparent px-2.5 pt-4 pb-2.5 text-sm focus:ring-0 focus:outline-none"
                       placeholder=" "
                     />
                     <label
-                      for="floating_password"
-                      class="absolute text-sm text-text-secondary duration-300 transform -translate-y-4 scale-75 top-2 left-1.5 z-10 origin-[0] bg-background px-1 peer-focus:text-primary peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 cursor-text"
+                      for="floating-password"
+                      class="text-text-secondary bg-background peer-focus:text-primary absolute top-2 left-1.5 z-10 origin-[0] -translate-y-4 scale-75 transform cursor-text px-1 text-sm duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-4 peer-focus:scale-75"
                     >
                       Password
                     </label>
                   </div>
-                  <div class="flex flex-col gap-2 flex-1 min-w-64">
+                  <div class="flex min-w-64 flex-1 flex-col gap-2">
                     <div
-                      class="relative bg-foreground rounded-t-md border-b-2 border-border focus-within:border-primary transition-colors"
+                      class="bg-foreground border-border focus-within:border-primary relative rounded-t-md border-b-2 transition-colors"
                     >
                       <input
                         type="text"
-                        id="floating_filled"
-                        class="block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-text bg-transparent appearance-none focus:outline-none focus:ring-0 peer border-none"
+                        id="floating-filled"
+                        class="text-text peer block w-full appearance-none rounded-t-lg border-none bg-transparent px-2.5 pt-5 pb-2.5 text-sm focus:ring-0 focus:outline-none"
                         placeholder=" "
                       />
                       <label
-                        for="floating_filled"
-                        class="absolute text-sm text-text-secondary duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] start-2.5 peer-focus:text-primary peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 cursor-text"
+                        for="floating-filled"
+                        class="text-text-secondary peer-focus:text-primary absolute start-2.5 top-4 z-10 origin-[0] -translate-y-4 scale-75 transform cursor-text text-sm duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:-translate-y-4 peer-focus:scale-75"
                       >
                         Filled style
                       </label>
@@ -281,106 +324,123 @@
               </div>
             </custom-frame>
             <custom-frame title="Checkboxes & Radios">
-              <div class="w-full p-8 md:p-12 bg-background">
+              <div class="bg-background w-full p-8 md:p-12">
                 <div
-                  class="flex gap-16 items-start justify-center w-full flex-wrap max-w-5xl mx-auto"
+                  class="mx-auto flex w-full max-w-5xl flex-wrap items-start justify-center gap-16"
                 >
-                  <div class="flex flex-col gap-4 flex-1 min-w-48">
-                    <label class="text-sm font-bold text-text mb-2">Checkboxes</label>
-                    <div class="flex items-center gap-3">
+                  <div class="flex min-w-48 flex-1 flex-col gap-4">
+                    <p class="text-text mb-2 text-sm font-bold">Checkboxes</p>
+                    <div class="flex min-h-11 items-center gap-3">
                       <input
                         id="checkbox-1"
                         type="checkbox"
-                        class="size-4 text-primary bg-foreground border-border rounded focus:ring-0 cursor-pointer transition-colors"
+                        class="text-primary bg-foreground border-border size-4 cursor-pointer rounded transition-colors focus:ring-0"
                         checked
                       />
-                      <label for="checkbox-1" class="text-sm font-medium text-text cursor-pointer">
+                      <label for="checkbox-1" class="text-text cursor-pointer text-sm font-medium">
                         Checked Default
                       </label>
                     </div>
-                    <div class="flex items-center gap-3">
+                    <div class="flex min-h-11 items-center gap-3">
                       <input
                         id="checkbox-2"
                         type="checkbox"
-                        class="size-4 text-primary bg-foreground border-border rounded focus:ring-0 cursor-pointer transition-colors"
+                        class="text-primary bg-foreground border-border size-4 cursor-pointer rounded transition-colors focus:ring-0"
                       />
-                      <label for="checkbox-2" class="text-sm font-medium text-text cursor-pointer">
+                      <label for="checkbox-2" class="text-text cursor-pointer text-sm font-medium">
                         Unchecked Default
                       </label>
                     </div>
-                    <div class="flex items-center gap-3">
+                    <div class="flex min-h-11 items-center gap-3">
                       <input
                         id="checkbox-3"
                         type="checkbox"
-                        class="size-4 text-primary bg-foreground border-border rounded opacity-50 cursor-not-allowed"
+                        class="text-primary bg-foreground border-border size-4 cursor-not-allowed rounded opacity-50"
                         disabled
                       />
                       <label
                         for="checkbox-3"
-                        class="text-sm font-medium text-text-secondary cursor-not-allowed"
+                        class="text-text-secondary cursor-not-allowed text-sm font-medium"
                       >
                         Disabled Option
                       </label>
                     </div>
                   </div>
 
-                  <div class="flex flex-col gap-4 flex-1 min-w-48">
-                    <label class="text-sm font-bold text-text mb-2">Radios</label>
-                    <div class="flex items-center gap-3">
+                  <div class="flex min-w-48 flex-1 flex-col gap-4">
+                    <p class="text-text mb-2 text-sm font-bold">Radios</p>
+                    <div class="flex min-h-11 items-center gap-3">
                       <input
                         id="radio-1"
                         type="radio"
                         name="radio-group"
-                        class="size-4 text-primary bg-foreground border-border focus:ring-0 cursor-pointer transition-colors"
+                        class="text-primary bg-foreground border-border size-4 cursor-pointer transition-colors focus:ring-0"
                         checked
                       />
-                      <label for="radio-1" class="text-sm font-medium text-text cursor-pointer">
+                      <label for="radio-1" class="text-text cursor-pointer text-sm font-medium">
                         Selected Option
                       </label>
                     </div>
-                    <div class="flex items-center gap-3">
+                    <div class="flex min-h-11 items-center gap-3">
                       <input
                         id="radio-2"
                         type="radio"
                         name="radio-group"
-                        class="size-4 text-primary bg-foreground border-border focus:ring-0 cursor-pointer transition-colors"
+                        class="text-primary bg-foreground border-border size-4 cursor-pointer transition-colors focus:ring-0"
                       />
-                      <label for="radio-2" class="text-sm font-medium text-text cursor-pointer">
+                      <label for="radio-2" class="text-text cursor-pointer text-sm font-medium">
                         Alternative Option
                       </label>
                     </div>
-                    <div class="flex items-center gap-3">
+                    <div class="flex min-h-11 items-center gap-3">
                       <input
                         id="radio-3"
                         type="radio"
                         name="radio-group-2"
-                        class="size-4 text-primary bg-foreground border-border opacity-50 cursor-not-allowed"
+                        class="text-primary bg-foreground border-border size-4 cursor-not-allowed opacity-50"
                         disabled
                       />
                       <label
                         for="radio-3"
-                        class="text-sm font-medium text-text-secondary cursor-not-allowed"
+                        class="text-text-secondary cursor-not-allowed text-sm font-medium"
                       >
                         Disabled Option
                       </label>
                     </div>
                   </div>
 
-                  <div class="flex flex-col gap-4 flex-1 min-w-48">
-                    <label class="text-sm font-bold text-text mb-2">Toggle Switch</label>
-                    <label class="inline-flex items-center cursor-pointer">
-                      <input type="checkbox" value="" class="sr-only peer" checked />
+                  <div class="flex min-w-48 flex-1 flex-col gap-4">
+                    <p class="text-text mb-2 text-sm font-bold">Toggle Switch</p>
+                    <label class="inline-flex min-h-11 cursor-pointer items-center">
+                      <input
+                        type="checkbox"
+                        value=""
+                        role="switch"
+                        aria-label="Enabled"
+                        aria-checked="true"
+                        class="peer sr-only"
+                        data-switch
+                        checked
+                      />
                       <div
-                        class="relative w-11 h-6 bg-border rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-border after:border after:rounded-full after:h-5 after:w-5 after:transition after:duration-400 transition duration-400 peer-checked:bg-primary"
+                        class="bg-border peer after:border-border peer-checked:bg-primary relative h-6 w-11 rounded-full transition duration-400 after:absolute after:start-[2px] after:top-[2px] after:h-5 after:w-5 after:rounded-full after:border after:bg-white after:transition after:duration-400 after:content-[''] peer-checked:after:translate-x-full peer-checked:after:border-white rtl:peer-checked:after:-translate-x-full"
                       ></div>
-                      <span class="ms-3 text-sm font-medium text-text">Enabled</span>
+                      <span class="text-text ms-3 text-sm font-medium">Enabled</span>
                     </label>
-                    <label class="inline-flex items-center cursor-pointer mt-2">
-                      <input type="checkbox" value="" class="sr-only peer" />
+                    <label class="mt-2 inline-flex min-h-11 cursor-pointer items-center">
+                      <input
+                        type="checkbox"
+                        value=""
+                        role="switch"
+                        aria-label="Disabled"
+                        aria-checked="false"
+                        class="peer sr-only"
+                        data-switch
+                      />
                       <div
-                        class="relative w-11 h-6 bg-border rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-border after:border after:rounded-full after:h-5 after:w-5 after:transition after:duration-400 transition duration-400 peer-checked:bg-primary"
+                        class="bg-border peer after:border-border peer-checked:bg-primary relative h-6 w-11 rounded-full transition duration-400 after:absolute after:start-[2px] after:top-[2px] after:h-5 after:w-5 after:rounded-full after:border after:bg-white after:transition after:duration-400 after:content-[''] peer-checked:after:translate-x-full peer-checked:after:border-white rtl:peer-checked:after:-translate-x-full"
                       ></div>
-                      <span class="ms-3 text-sm font-medium text-text">Disabled</span>
+                      <span class="text-text ms-3 text-sm font-medium">Disabled</span>
                     </label>
                   </div>
                 </div>
@@ -394,5 +454,14 @@
         <custom-footer></custom-footer>
       </div>
     </main>
+    <script>
+      const switches = document.querySelectorAll("[data-switch]");
+
+      for (const switchInput of switches) {
+        switchInput.addEventListener("change", () => {
+          switchInput.setAttribute("aria-checked", String(switchInput.checked));
+        });
+      }
+    </script>
   </body>
 </html>

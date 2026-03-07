@@ -27,7 +27,7 @@
         <section class="sect relative overflow-hidden">
           <div class="sect-container text-center">
             <span
-              class="flex items-center gap-2 px-4 py-2 rounded-full bg-surface text-text-secondary text-xs font-medium tracking-widest uppercase slide-down-in"
+              class="bg-surface text-text-secondary slide-down-in flex items-center gap-2 rounded-full px-4 py-2 text-xs font-medium tracking-widest uppercase"
             >
               <svg
                 viewBox="0 0 800 800"
@@ -51,11 +51,11 @@
               Open-source UI Kit
             </span>
             <h1 class="split-chars">UI Library</h1>
-            <p class="text-lg tracking-normal max-w-2xl text-text-secondary -mt-6 split-text">
+            <p class="text-text-secondary split-text -mt-6 max-w-2xl text-lg tracking-normal">
               A curated collection of production-ready UI components & pages. Copy, paste, and
               customize to ship faster.
             </p>
-            <div class="flex gap-3 mt-2 slide-up-in">
+            <div class="slide-up-in mt-2 flex gap-3">
               <a href="#components" class="primary-btn">
                 <img
                   src="/assets/icons/arrow-up.svg"
@@ -84,24 +84,24 @@
         <!-- STATS BAR -->
         <section class="sect">
           <div class="sect-container flex-row flex-wrap justify-center gap-12 max-md:gap-6">
-            <div class="flex flex-col items-center gap-1 slide-right-in">
-              <p class="text-3xl md:text-5xl font-title tracking-tight">100+</p>
-              <p class="text-xs text-text-secondary tracking-widest uppercase">Components</p>
+            <div class="slide-right-in flex flex-col items-center gap-1">
+              <p class="font-title text-3xl tracking-tight md:text-5xl">100+</p>
+              <p class="text-text-secondary text-xs tracking-widest uppercase">Components</p>
             </div>
-            <div class="w-px h-10 bg-border max-md:hidden" aria-hidden="true"></div>
-            <div class="flex flex-col items-center gap-1 slide-up-in">
-              <p class="text-3xl md:text-5xl font-title tracking-tight">5+</p>
-              <p class="text-xs text-text-secondary tracking-widest uppercase">Pages</p>
+            <div class="bg-border h-10 w-px max-md:hidden" aria-hidden="true"></div>
+            <div class="slide-up-in flex flex-col items-center gap-1">
+              <p class="font-title text-3xl tracking-tight md:text-5xl">5+</p>
+              <p class="text-text-secondary text-xs tracking-widest uppercase">Pages</p>
             </div>
-            <div class="w-px h-10 bg-border max-md:hidden" aria-hidden="true"></div>
-            <div class="flex flex-col items-center gap-1 slide-up-in">
-              <p class="text-3xl md:text-5xl font-title tracking-tight">100%</p>
-              <p class="text-xs text-text-secondary tracking-widest uppercase">TailwindCSS</p>
+            <div class="bg-border h-10 w-px max-md:hidden" aria-hidden="true"></div>
+            <div class="slide-up-in flex flex-col items-center gap-1">
+              <p class="font-title text-3xl tracking-tight md:text-5xl">100%</p>
+              <p class="text-text-secondary text-xs tracking-widest uppercase">TailwindCSS</p>
             </div>
-            <div class="w-px h-10 bg-border max-md:hidden" aria-hidden="true"></div>
-            <div class="flex flex-col items-center gap-1 slide-left-in">
-              <p class="text-3xl md:text-5xl font-title tracking-tight">Free &</p>
-              <p class="text-xs text-text-secondary tracking-widest uppercase">Open source</p>
+            <div class="bg-border h-10 w-px max-md:hidden" aria-hidden="true"></div>
+            <div class="slide-left-in flex flex-col items-center gap-1">
+              <p class="font-title text-3xl tracking-tight md:text-5xl">Free &</p>
+              <p class="text-text-secondary text-xs tracking-widest uppercase">Open source</p>
             </div>
           </div>
         </section>
@@ -109,23 +109,23 @@
         <!-- AVAILABLE COMPONENTS -->
         <section id="components" class="sect">
           <div class="sect-container">
-            <div class="flex items-center w-full justify-between">
+            <div class="flex w-full items-center justify-between">
               <h2 class="split-chars">Components</h2>
               <a href="./components/" class="flex items-center gap-2 text-sm font-semibold">
                 View all components
                 <img
                   src="/assets/icons/arrow-up.svg"
                   alt="Arrow icon"
-                  class="size-4 rotate-90 group-hover:translate-x-1 transition-transform duration-400"
+                  class="size-4 rotate-90 transition-transform duration-400 group-hover:translate-x-1"
                 />
               </a>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
+            <div class="grid w-full grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
               <!-- BLOG -->
               <a id="component-blog" href="./components/blog/" class="group card slide-up-in">
                 <div class="flex justify-between">
                   <div
-                    class="flex items-center justify-center size-12 rounded-lg bg-foreground group-hover:bg-primary group-hover:text-primary-contrast transition-colors duration-400"
+                    class="bg-foreground group-hover:bg-primary group-hover:text-primary-contrast flex size-12 items-center justify-center rounded-lg transition-colors duration-400"
                   >
                     <svg
                       viewBox="0 0 24 24"
@@ -145,7 +145,7 @@
                     </svg>
                   </div>
                   <span
-                    class="px-2 py-1 text-xs rounded-full bg-foreground text-text-secondary size-fit"
+                    class="bg-foreground text-text-secondary size-fit rounded-full px-2 py-1 text-xs"
                   >
                     4 variants
                   </span>
@@ -154,12 +154,12 @@
                 <p class="text-text-secondary -mt-2">
                   Three column grid, featured with side list, and minimal list blog post layouts.
                 </p>
-                <button class="flex items-center gap-2 text-sm font-semibold mt-auto">
+                <button class="mt-auto flex items-center gap-2 text-sm font-semibold">
                   View component
                   <img
                     src="/assets/icons/arrow-up.svg"
                     alt="Arrow icon"
-                    class="size-4 rotate-90 group-hover:translate-x-1 transition-transform duration-400"
+                    class="size-4 rotate-90 transition-transform duration-400 group-hover:translate-x-1"
                   />
                 </button>
               </a>
@@ -168,7 +168,7 @@
               <a id="component-buttons" href="./buttons/" class="group card slide-up-in">
                 <div class="flex justify-between">
                   <div
-                    class="flex items-center justify-center size-12 rounded-lg bg-foreground group-hover:bg-primary group-hover:text-primary-contrast transition-colors duration-400"
+                    class="bg-foreground group-hover:bg-primary group-hover:text-primary-contrast flex size-12 items-center justify-center rounded-lg transition-colors duration-400"
                   >
                     <svg viewBox="0 0 16 16" fill="currentColor" class="size-6">
                       <path d="M13 0H3V2H13V0Z" />
@@ -177,7 +177,7 @@
                     </svg>
                   </div>
                   <span
-                    class="px-2 py-1 text-xs rounded-full bg-foreground text-text-secondary size-fit"
+                    class="bg-foreground text-text-secondary size-fit rounded-full px-2 py-1 text-xs"
                   >
                     10 variants
                   </span>
@@ -186,12 +186,12 @@
                 <p class="text-text-secondary -mt-2">
                   Flat, border, neobrutalism, glassmorphism, and neumorphism card layouts.
                 </p>
-                <button class="flex items-center gap-2 text-sm font-semibold mt-auto">
+                <button class="mt-auto flex items-center gap-2 text-sm font-semibold">
                   View component
                   <img
                     src="/assets/icons/arrow-up.svg"
                     alt="Arrow icon"
-                    class="size-4 rotate-90 group-hover:translate-x-1 transition-transform duration-400"
+                    class="size-4 rotate-90 transition-transform duration-400 group-hover:translate-x-1"
                   />
                 </button>
               </a>
@@ -200,7 +200,7 @@
               <a id="component-buttons" href="./buttons/" class="group card slide-up-in">
                 <div class="flex justify-between">
                   <div
-                    class="flex items-center justify-center size-12 rounded-lg bg-foreground group-hover:bg-primary group-hover:text-primary-contrast transition-colors duration-400"
+                    class="bg-foreground group-hover:bg-primary group-hover:text-primary-contrast flex size-12 items-center justify-center rounded-lg transition-colors duration-400"
                   >
                     <svg
                       viewBox="0 0 24 24"
@@ -217,7 +217,7 @@
                     </svg>
                   </div>
                   <span
-                    class="px-2 py-1 text-xs rounded-full bg-foreground text-text-secondary size-fit"
+                    class="bg-foreground text-text-secondary size-fit rounded-full px-2 py-1 text-xs"
                   >
                     11 variants
                   </span>
@@ -226,12 +226,12 @@
                 <p class="text-text-secondary -mt-2">
                   Flat, background image, and neobrutalism CTA banners with dual-button layouts.
                 </p>
-                <button class="flex items-center gap-2 text-sm font-semibold mt-auto">
+                <button class="mt-auto flex items-center gap-2 text-sm font-semibold">
                   View component
                   <img
                     src="/assets/icons/arrow-up.svg"
                     alt="Arrow icon"
-                    class="size-4 rotate-90 group-hover:translate-x-1 transition-transform duration-400"
+                    class="size-4 rotate-90 transition-transform duration-400 group-hover:translate-x-1"
                   />
                 </button>
               </a>
@@ -244,7 +244,7 @@
               >
                 <div class="flex justify-between">
                   <div
-                    class="flex items-center justify-center size-12 rounded-lg bg-foreground group-hover:bg-primary group-hover:text-primary-contrast transition-colors duration-400"
+                    class="bg-foreground group-hover:bg-primary group-hover:text-primary-contrast flex size-12 items-center justify-center rounded-lg transition-colors duration-400"
                   >
                     <svg
                       viewBox="0 0 24 24"
@@ -261,7 +261,7 @@
                     </svg>
                   </div>
                   <span
-                    class="px-2 py-1 text-xs rounded-full bg-foreground text-text-secondary size-fit"
+                    class="bg-foreground text-text-secondary size-fit rounded-full px-2 py-1 text-xs"
                   >
                     4 variants
                   </span>
@@ -270,12 +270,12 @@
                 <p class="text-text-secondary -mt-2">
                   Simple grid, icon cards, split with image, and bento grid feature section layouts.
                 </p>
-                <button class="flex items-center gap-2 text-sm font-semibold mt-auto">
+                <button class="mt-auto flex items-center gap-2 text-sm font-semibold">
                   View component
                   <img
                     src="/assets/icons/arrow-up.svg"
                     alt="Arrow icon"
-                    class="size-4 rotate-90 group-hover:translate-x-1 transition-transform duration-400"
+                    class="size-4 rotate-90 transition-transform duration-400 group-hover:translate-x-1"
                   />
                 </button>
               </a>
@@ -284,7 +284,7 @@
               <a id="component-buttons" href="./buttons/" class="group card slide-up-in">
                 <div class="flex justify-between">
                   <div
-                    class="flex items-center justify-center size-12 rounded-lg bg-foreground group-hover:bg-primary group-hover:text-primary-contrast transition-colors duration-400"
+                    class="bg-foreground group-hover:bg-primary group-hover:text-primary-contrast flex size-12 items-center justify-center rounded-lg transition-colors duration-400"
                   >
                     <svg viewBox="0 0 35 35" fill="currentColor" class="size-6">
                       <path d="M0,0v25.366h35V0H0z M32.879,23.245H2.121V2.121h30.758V23.245z" />
@@ -292,7 +292,7 @@
                     </svg>
                   </div>
                   <span
-                    class="px-2 py-1 text-xs rounded-full bg-foreground text-text-secondary size-fit"
+                    class="bg-foreground text-text-secondary size-fit rounded-full px-2 py-1 text-xs"
                   >
                     5 variants
                   </span>
@@ -301,12 +301,12 @@
                 <p class="text-text-secondary -mt-2">
                   Default, light, top-rounded, full-rounded, and glassmorphism footer layouts.
                 </p>
-                <button class="flex items-center gap-2 text-sm font-semibold mt-auto">
+                <button class="mt-auto flex items-center gap-2 text-sm font-semibold">
                   View component
                   <img
                     src="/assets/icons/arrow-up.svg"
                     alt="Arrow icon"
-                    class="size-4 rotate-90 group-hover:translate-x-1 transition-transform duration-400"
+                    class="size-4 rotate-90 transition-transform duration-400 group-hover:translate-x-1"
                   />
                 </button>
               </a>
@@ -315,7 +315,7 @@
               <a id="component-steps" href="./components/steps/" class="group card slide-up-in">
                 <div class="flex justify-between">
                   <div
-                    class="flex items-center justify-center size-12 rounded-lg bg-foreground group-hover:bg-primary group-hover:text-primary-contrast transition-colors duration-400"
+                    class="bg-foreground group-hover:bg-primary group-hover:text-primary-contrast flex size-12 items-center justify-center rounded-lg transition-colors duration-400"
                   >
                     <svg
                       viewBox="0 0 24 24"
@@ -334,7 +334,7 @@
                     </svg>
                   </div>
                   <span
-                    class="px-2 py-1 text-xs rounded-full bg-foreground text-text-secondary size-fit"
+                    class="bg-foreground text-text-secondary size-fit rounded-full px-2 py-1 text-xs"
                   >
                     6 variants
                   </span>
@@ -344,12 +344,12 @@
                   Horizontal steps, vertical timeline, icon steps, and alternating cards process
                   layouts.
                 </p>
-                <button class="flex items-center gap-2 text-sm font-semibold mt-auto">
+                <button class="mt-auto flex items-center gap-2 text-sm font-semibold">
                   View component
                   <img
                     src="/assets/icons/arrow-up.svg"
                     alt="Arrow icon"
-                    class="size-4 rotate-90 group-hover:translate-x-1 transition-transform duration-400"
+                    class="size-4 rotate-90 transition-transform duration-400 group-hover:translate-x-1"
                   />
                 </button>
               </a>

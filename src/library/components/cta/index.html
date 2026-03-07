@@ -13,9 +13,9 @@
     <title>Call to Action - Components Library</title>
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="stylesheet" href="../../../_ui/styles/index.css" />
-    <script type="module" src="../../../_ui/components/index.js" defer></script>
-    <script type="module" src="../../../_ui/scripts/index.js" defer></script>
-    <script type="module" src="../header-section.js" defer></script>
+    <script type="module" src="../../../_ui/components/index.js"></script>
+    <script type="module" src="../../../_ui/scripts/index.js"></script>
+    <script type="module" src="../header-section.js"></script>
   </head>
 
   <body>
@@ -26,189 +26,173 @@
         <components-header-section></components-header-section>
 
         <div class="flex w-full justify-center px-4">
-          <h2 class="max-w-7xl w-full split-chars">Call to Action</h2>
+          <h2 class="split-chars w-full max-w-7xl">Call to Action</h2>
         </div>
 
         <div class="sect">
           <div class="sect-container gap-24">
             <custom-frame title="Centered simple">
               <div
-                class="flex flex-col items-center text-center max-w-7xl w-full px-6 py-16 gap-4 rounded-xl bg-foreground"
+                class="bg-foreground flex w-full max-w-7xl flex-col items-center gap-4 rounded-xl px-6 py-16 text-center"
               >
-                <p class="text-sm font-semibold text-text-secondary uppercase tracking-wider">
+                <p class="text-text-secondary text-sm font-semibold tracking-wider uppercase">
                   Get started
                 </p>
-                <h3 class="text-3xl md:text-4xl font-bold text-text max-w-2xl">
+                <h3 class="text-text max-w-2xl text-3xl font-bold md:text-4xl">
                   Boost your productivity today
                 </h3>
-                <p class="max-w-xl text-text-secondary">
+                <p class="text-text-secondary max-w-xl">
                   Start building for free. No credit card required. Upgrade anytime as your team
                   grows.
                 </p>
-                <div class="flex flex-col sm:flex-row gap-3 mt-2">
+                <div class="mt-2 flex flex-col gap-3 sm:flex-row">
                   <button
-                    class="bg-primary hover:bg-primary-hover text-primary-contrast font-semibold flex w-fit items-center justify-center px-4 py-2 gap-2 min-h-10 rounded-md transition-colors duration-400"
+                    class="bg-primary text-primary-contrast hover:bg-primary-hover focus-visible:ring-primary focus-visible:ring-offset-background flex min-h-11 w-fit items-center justify-center gap-2 rounded-md px-4 py-2 font-semibold transition-colors duration-400 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50"
                   >
                     Start free trial
                   </button>
                   <button
-                    class="bg-accent hover:bg-accent-hover text-accent-contrast font-semibold flex w-fit items-center justify-center px-4 py-2 gap-2 min-h-10 rounded-md transition-colors duration-400"
+                    class="bg-accent text-accent-contrast hover:bg-accent-hover focus-visible:ring-primary focus-visible:ring-offset-background flex min-h-11 w-fit items-center justify-center gap-2 rounded-md px-4 py-2 font-semibold transition-colors duration-400 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50"
                   >
                     Talk to sales
                   </button>
                 </div>
               </div>
             </custom-frame>
-          </div>
-        </div>
 
-        <div class="sect">
-          <div class="sect-container">
             <custom-frame title="Centered with background image">
               <div
-                class="relative overflow-hidden z-1 flex flex-col items-center text-center max-w-7xl w-full px-6 py-16 gap-4 rounded-xl bg-primary text-primary-contrast"
+                class="bg-primary text-primary-contrast relative z-1 flex w-full max-w-7xl flex-col items-center gap-4 overflow-hidden rounded-xl px-6 py-16 text-center"
               >
                 <img
                   src="/assets/images/coding.webp"
                   alt="Coding background"
-                  class="absolute inset-0 size-full -z-1 object-cover opacity-20"
+                  class="absolute inset-0 -z-1 size-full object-cover opacity-20"
                 />
-                <p class="text-sm font-semibold opacity-70 uppercase tracking-wider">
+                <p class="text-sm font-semibold tracking-wider uppercase opacity-70">
                   Build faster
                 </p>
-                <h3 class="text-3xl md:text-4xl font-bold max-w-2xl">
+                <h3 class="max-w-2xl text-3xl font-bold md:text-4xl">
                   Ship your next project in record time
                 </h3>
                 <p class="max-w-xl opacity-80">
                   Join thousands of teams already using our platform. Get started in minutes, not
                   hours.
                 </p>
-                <div class="flex flex-col sm:flex-row gap-3 mt-2">
+                <div class="mt-2 flex flex-col gap-3 sm:flex-row">
                   <button
-                    class="bg-background text-text hover:bg-foreground font-semibold flex w-fit items-center justify-center px-5 py-2.5 gap-2 min-h-10 rounded-md transition-colors duration-400"
+                    class="bg-background text-text hover:bg-foreground focus-visible:ring-primary focus-visible:ring-offset-background flex min-h-11 w-fit items-center justify-center gap-2 rounded-md px-5 py-2.5 font-semibold transition-colors duration-400 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50"
                   >
                     Get started
                   </button>
                   <button
-                    class="bg-transparent hover:bg-white/10 text-primary-contrast font-semibold flex w-fit items-center justify-center px-5 py-2.5 gap-2 min-h-10 rounded-md border border-white/30 transition-colors duration-400"
+                    class="text-primary-contrast focus-visible:ring-primary focus-visible:ring-offset-background flex min-h-11 w-fit items-center justify-center gap-2 rounded-md border border-white/30 bg-transparent px-5 py-2.5 font-semibold transition-colors duration-400 hover:bg-white/10 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50"
                   >
                     Learn more
                   </button>
                 </div>
               </div>
             </custom-frame>
-          </div>
-        </div>
 
-        <div class="sect">
-          <div class="sect-container">
             <custom-frame title="Centered minimal">
               <div
-                class="flex flex-col items-center text-center max-w-7xl w-full px-6 py-16 gap-4 bg-background"
+                class="bg-background flex w-full max-w-7xl flex-col items-center gap-4 px-6 py-16 text-center"
               >
-                <h3 class="text-3xl md:text-4xl font-bold text-text max-w-2xl">
+                <h3 class="text-text max-w-2xl text-3xl font-bold md:text-4xl">
                   Ready to dive in?
                 </h3>
-                <p class="max-w-md text-text-secondary">
+                <p class="text-text-secondary max-w-md">
                   Start your free 14-day trial. No credit card required.
                 </p>
                 <button
-                  class="bg-primary hover:bg-primary-hover text-primary-contrast font-semibold flex w-fit items-center justify-center px-4 py-2 gap-2 min-h-10 rounded-md transition-colors duration-400 mt-2"
+                  class="bg-primary text-primary-contrast hover:bg-primary-hover focus-visible:ring-primary focus-visible:ring-offset-background mt-2 flex min-h-11 w-fit items-center justify-center gap-2 rounded-md px-4 py-2 font-semibold transition-colors duration-400 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50"
                 >
                   Get started
                 </button>
               </div>
             </custom-frame>
-          </div>
-        </div>
 
-        <div class="sect">
-          <div class="sect-container">
             <custom-frame title="Left content, right image">
               <div
-                class="flex flex-col md:flex-row items-center max-w-7xl w-full bg-foreground rounded-2xl overflow-hidden"
+                class="bg-foreground flex w-full max-w-7xl flex-col items-center overflow-hidden rounded-2xl md:flex-row"
               >
-                <div class="flex-1 flex flex-col justify-center p-8 md:p-12 gap-5">
-                  <p class="text-sm font-semibold text-text-secondary uppercase tracking-wider">
+                <div class="flex flex-1 flex-col justify-center gap-5 p-8 md:p-12">
+                  <p class="text-text-secondary text-sm font-semibold tracking-wider uppercase">
                     For developers
                   </p>
-                  <h3 class="text-3xl md:text-4xl font-bold text-text">Ready to get started?</h3>
+                  <h3 class="text-text text-3xl font-bold md:text-4xl">Ready to get started?</h3>
                   <p class="text-text-secondary">
                     Join thousands of developers building beautiful applications with our tools.
                     Start your free trial today.
                   </p>
-                  <div class="flex flex-col sm:flex-row gap-3">
+                  <div class="flex flex-col gap-3 sm:flex-row">
                     <button
-                      class="bg-primary hover:bg-primary-hover text-primary-contrast font-semibold flex w-fit items-center justify-center px-4 py-2 gap-2 min-h-10 rounded-md transition-colors duration-400"
+                      class="bg-primary text-primary-contrast hover:bg-primary-hover focus-visible:ring-primary focus-visible:ring-offset-background flex min-h-11 w-fit items-center justify-center gap-2 rounded-md px-4 py-2 font-semibold transition-colors duration-400 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50"
                     >
                       Get started
                     </button>
                     <button
-                      class="bg-accent hover:bg-accent-hover text-accent-contrast font-semibold flex w-fit items-center justify-center px-4 py-2 gap-2 min-h-10 rounded-md transition-colors duration-400"
+                      class="bg-accent text-accent-contrast hover:bg-accent-hover focus-visible:ring-primary focus-visible:ring-offset-background flex min-h-11 w-fit items-center justify-center gap-2 rounded-md px-4 py-2 font-semibold transition-colors duration-400 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50"
                     >
                       View docs
                     </button>
                   </div>
-                  <div class="flex items-center gap-3 text-sm text-text-secondary mt-2">
+                  <div class="text-text-secondary mt-2 flex items-center gap-3 text-sm">
                     <div class="flex -space-x-2">
                       <img
                         src="https://i.pravatar.cc/100?img=1"
                         alt="User"
-                        class="w-8 h-8 rounded-full border-2 border-foreground"
+                        class="border-foreground h-8 w-8 rounded-full border-2"
                       />
                       <img
                         src="https://i.pravatar.cc/100?img=2"
                         alt="User"
-                        class="w-8 h-8 rounded-full border-2 border-foreground"
+                        class="border-foreground h-8 w-8 rounded-full border-2"
                       />
                       <img
                         src="https://i.pravatar.cc/100?img=3"
                         alt="User"
-                        class="w-8 h-8 rounded-full border-2 border-foreground"
+                        class="border-foreground h-8 w-8 rounded-full border-2"
                       />
                     </div>
                     <p>Joined by 10,000+ developers</p>
                   </div>
                 </div>
-                <div class="flex-1 w-full min-h-64 md:min-h-96 relative">
+                <div class="relative min-h-64 w-full flex-1 md:min-h-96">
                   <img
                     src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop"
                     alt="Team collaboration"
-                    class="absolute inset-0 w-full h-full object-cover"
+                    class="absolute inset-0 h-full w-full object-cover"
                   />
                 </div>
               </div>
             </custom-frame>
-          </div>
-        </div>
 
-        <div class="sect">
-          <div class="sect-container">
             <custom-frame title="Left image, right content">
               <div
-                class="flex flex-col-reverse md:flex-row items-center max-w-7xl w-full rounded-2xl overflow-hidden border border-border bg-background"
+                class="border-border bg-background flex w-full max-w-7xl flex-col-reverse items-center overflow-hidden rounded-2xl border md:flex-row"
               >
-                <div class="flex-1 w-full min-h-64 md:min-h-96 relative">
+                <div class="relative min-h-64 w-full flex-1 md:min-h-96">
                   <img
                     src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=2070&auto=format&fit=crop"
                     alt="Working together"
-                    class="absolute inset-0 w-full h-full object-cover"
+                    class="absolute inset-0 h-full w-full object-cover"
                   />
                 </div>
-                <div class="flex-1 flex flex-col justify-center p-8 md:p-12 gap-5">
-                  <h3 class="text-3xl md:text-4xl font-bold text-text">Scale without limits</h3>
+                <div class="flex flex-1 flex-col justify-center gap-5 p-8 md:p-12">
+                  <h3 class="text-text text-3xl font-bold md:text-4xl">Scale without limits</h3>
                   <p class="text-text-secondary">
                     Our infrastructure grows with your business. From prototype to production-scale
                     — we've got you covered.
                   </p>
-                  <div class="flex flex-col sm:flex-row gap-3">
+                  <div class="flex flex-col gap-3 sm:flex-row">
                     <button
-                      class="bg-primary hover:bg-primary-hover text-primary-contrast font-semibold flex w-fit items-center justify-center px-4 py-2 gap-2 min-h-10 rounded-md transition-colors duration-400"
+                      class="bg-primary text-primary-contrast hover:bg-primary-hover focus-visible:ring-primary focus-visible:ring-offset-background flex min-h-11 w-fit items-center justify-center gap-2 rounded-md px-4 py-2 font-semibold transition-colors duration-400 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50"
                     >
                       Start building
                     </button>
                     <button
-                      class="bg-accent hover:bg-accent-hover text-accent-contrast font-semibold flex w-fit items-center justify-center px-4 py-2 gap-2 min-h-10 rounded-md transition-colors duration-400"
+                      class="bg-accent text-accent-contrast hover:bg-accent-hover focus-visible:ring-primary focus-visible:ring-offset-background flex min-h-11 w-fit items-center justify-center gap-2 rounded-md px-4 py-2 font-semibold transition-colors duration-400 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50"
                     >
                       See case studies
                     </button>
@@ -216,85 +200,87 @@
                 </div>
               </div>
             </custom-frame>
-          </div>
-        </div>
 
-        <div class="sect">
-          <div class="sect-container">
             <custom-frame title="Newletter">
               <div
-                class="w-full max-w-7xl px-6 py-16 md:py-20 bg-neutral-900 rounded-2xl text-center"
+                class="w-full max-w-7xl rounded-2xl bg-neutral-900 px-6 py-16 text-center md:py-20"
               >
-                <div class="flex flex-col items-center gap-5 max-w-2xl mx-auto">
-                  <h3 class="text-3xl md:text-4xl font-bold text-white tracking-tight">
+                <div class="mx-auto flex max-w-2xl flex-col items-center gap-5">
+                  <h3 class="text-3xl font-bold tracking-tight text-white md:text-4xl">
                     Stay ahead of the curve
                   </h3>
-                  <p class="text-neutral-400 md:text-lg max-w-lg">
+                  <p class="max-w-lg text-neutral-400 md:text-lg">
                     Get the latest updates, articles, and resources sent straight to your inbox once
                     a week. No spam, ever.
                   </p>
 
                   <form
-                    class="w-full max-w-md flex flex-col sm:flex-row gap-3 mt-2"
-                    onsubmit="event.preventDefault();"
+                    id="newsletter-form"
+                    class="mt-2 flex w-full max-w-md flex-col gap-3 sm:flex-row"
                   >
+                    <label class="sr-only" for="newsletter-email">Email address</label>
                     <input
+                      id="newsletter-email"
                       type="email"
                       placeholder="Enter your email"
-                      class="flex-1 px-4 py-2.5 rounded-md bg-white/10 border border-white/15 text-white placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-white/30 transition-all"
+                      class="min-h-11 flex-1 rounded-md border border-white/15 bg-white/10 px-4 py-2.5 text-white placeholder-neutral-500 transition-all duration-200 focus:ring-2 focus:ring-white/30 focus:outline-none"
                       required
                     />
                     <button
-                      class="px-5 py-2.5 rounded-md bg-white text-neutral-900 font-semibold hover:bg-neutral-200 transition-colors"
+                      class="focus-visible:ring-primary focus-visible:ring-offset-background flex min-h-11 items-center justify-center rounded-md bg-white px-5 py-2.5 font-semibold text-neutral-900 transition-colors duration-200 hover:bg-neutral-200 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50"
                     >
                       Subscribe
                     </button>
                   </form>
 
-                  <p class="text-neutral-500 text-sm">
+                  <p class="text-sm text-neutral-500">
                     We care about your data in our
-                    <a href="#" class="underline hover:text-neutral-300">privacy policy</a>
+                    <a
+                      href="#"
+                      class="focus-visible:ring-primary focus-visible:ring-offset-background underline transition-colors duration-200 hover:text-neutral-300 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none active:opacity-80"
+                    >
+                      privacy policy
+                    </a>
                     .
                   </p>
                 </div>
               </div>
             </custom-frame>
-          </div>
-        </div>
 
-        <div class="sect">
-          <div class="sect-container">
             <custom-frame title="Newletter inline">
               <div
-                class="w-full max-w-7xl flex flex-col md:flex-row items-center justify-between gap-6 px-8 py-10 rounded-2xl border border-border bg-background"
+                class="border-border bg-background flex w-full max-w-7xl flex-col items-center justify-between gap-6 rounded-2xl border px-8 py-10 md:flex-row"
               >
                 <div class="flex flex-col gap-2 md:max-w-md">
-                  <h3 class="text-xl font-bold text-text">Subscribe to our newsletter</h3>
+                  <h3 class="text-text text-xl font-bold">Subscribe to our newsletter</h3>
                   <p class="text-text-secondary text-sm">
                     The latest news, articles, and resources, sent to your inbox weekly.
                   </p>
                 </div>
                 <form
-                  class="flex flex-col sm:flex-row gap-3 w-full md:w-auto"
-                  onsubmit="event.preventDefault();"
+                  id="newsletter-inline-form"
+                  class="flex w-full flex-col gap-3 sm:flex-row md:w-auto"
                 >
-                  <input type="email" placeholder="Enter your email" class="sm:min-w-64" required />
+                  <label class="sr-only" for="newsletter-inline-email">Email address</label>
+                  <input
+                    id="newsletter-inline-email"
+                    type="email"
+                    placeholder="Enter your email"
+                    class="min-h-11 sm:min-w-64"
+                    required
+                  />
                   <button
-                    class="bg-primary hover:bg-primary-hover text-primary-contrast font-semibold flex w-fit items-center px-4 py-2 gap-2 min-h-10 rounded-md transition-colors duration-400 justify-center"
+                    class="bg-primary text-primary-contrast hover:bg-primary-hover focus-visible:ring-primary focus-visible:ring-offset-background flex min-h-11 w-fit items-center justify-center gap-2 rounded-md px-4 py-2 font-semibold transition-colors duration-400 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50"
                   >
                     Subscribe
                   </button>
                 </form>
               </div>
             </custom-frame>
-          </div>
-        </div>
 
-        <div class="sect">
-          <div class="sect-container">
             <custom-frame title="Simple banner">
               <div
-                class="w-full max-w-7xl flex flex-col sm:flex-row items-center justify-between gap-4 px-6 py-4 rounded-xl bg-primary text-primary-contrast"
+                class="bg-primary text-primary-contrast flex w-full max-w-7xl flex-col items-center justify-between gap-4 rounded-xl px-6 py-4 sm:flex-row"
               >
                 <div class="flex items-center gap-3">
                   <svg
@@ -314,11 +300,16 @@
                   </svg>
                   <p class="text-sm font-medium">
                     Big news! We're excited to announce our Series A funding.
-                    <a href="#" class="underline ml-1 font-semibold">Read more &rarr;</a>
+                    <a
+                      href="#"
+                      class="focus-visible:ring-primary focus-visible:ring-offset-background ml-1 font-semibold underline transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none active:opacity-80"
+                    >
+                      Read more &rarr;
+                    </a>
                   </p>
                 </div>
                 <button
-                  class="text-sm opacity-70 hover:opacity-100 transition-opacity shrink-0"
+                  class="focus-visible:ring-primary focus-visible:ring-offset-background flex min-h-11 min-w-11 shrink-0 items-center justify-center text-sm opacity-70 transition-opacity duration-200 hover:opacity-100 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50"
                   aria-label="Dismiss"
                 >
                   <svg
@@ -334,94 +325,82 @@
                 </button>
               </div>
             </custom-frame>
-          </div>
-        </div>
 
-        <div class="sect">
-          <div class="sect-container">
             <custom-frame title="Banner with CTA">
               <div
-                class="w-full max-w-7xl flex flex-col sm:flex-row items-center justify-between gap-4 px-6 py-4 rounded-xl border border-border bg-foreground"
+                class="border-border bg-foreground flex w-full max-w-7xl flex-col items-center justify-between gap-4 rounded-xl border px-6 py-4 sm:flex-row"
               >
-                <p class="text-sm text-text">
+                <p class="text-text text-sm">
                   <span class="font-semibold">Free trial available.</span>
                   Try our pro features for 14 days — no strings attached.
                 </p>
                 <button
-                  class="bg-primary hover:bg-primary-hover text-primary-contrast font-semibold flex w-fit items-center justify-center px-4 py-2 gap-2 min-h-10 rounded-md transition-colors duration-400 text-sm shrink-0"
+                  class="bg-primary text-primary-contrast hover:bg-primary-hover focus-visible:ring-primary focus-visible:ring-offset-background flex min-h-11 w-fit shrink-0 items-center justify-center gap-2 rounded-md px-4 py-2 text-sm font-semibold transition-colors duration-400 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50"
                 >
                   Start free trial
                 </button>
               </div>
             </custom-frame>
-          </div>
-        </div>
 
-        <div class="sect">
-          <div class="sect-container">
             <custom-frame title="With Stats">
               <div
-                class="bg-background w-full max-w-7xl flex flex-col lg:flex-row gap-10 lg:gap-16 items-center px-6 py-16"
+                class="bg-background flex w-full max-w-7xl flex-col items-center gap-10 px-6 py-16 lg:flex-row lg:gap-16"
               >
-                <div class="flex-1 flex flex-col gap-5">
-                  <h3 class="text-3xl md:text-4xl font-bold text-text">
+                <div class="flex flex-1 flex-col gap-5">
+                  <h3 class="text-text text-3xl font-bold md:text-4xl">
                     Trusted by teams worldwide
                   </h3>
                   <p class="text-text-secondary max-w-lg">
                     We help companies of all sizes build better products. Start your journey today
                     and see the difference.
                   </p>
-                  <div class="flex flex-col sm:flex-row gap-3">
+                  <div class="flex flex-col gap-3 sm:flex-row">
                     <button
-                      class="bg-primary hover:bg-primary-hover text-primary-contrast font-semibold flex w-fit items-center justify-center px-4 py-2 gap-2 min-h-10 rounded-md transition-colors duration-400"
+                      class="bg-primary text-primary-contrast hover:bg-primary-hover focus-visible:ring-primary focus-visible:ring-offset-background flex min-h-11 w-fit items-center justify-center gap-2 rounded-md px-4 py-2 font-semibold transition-colors duration-400 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50"
                     >
                       Get started
                     </button>
                     <button
-                      class="bg-accent hover:bg-accent-hover text-accent-contrast font-semibold flex w-fit items-center justify-center px-4 py-2 gap-2 min-h-10 rounded-md transition-colors duration-400"
+                      class="bg-accent text-accent-contrast hover:bg-accent-hover focus-visible:ring-primary focus-visible:ring-offset-background flex min-h-11 w-fit items-center justify-center gap-2 rounded-md px-4 py-2 font-semibold transition-colors duration-400 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50"
                     >
                       Contact sales
                     </button>
                   </div>
                 </div>
                 <div
-                  class="flex-1 grid grid-cols-2 gap-px bg-border rounded-xl overflow-hidden border border-border"
+                  class="bg-border border-border grid flex-1 grid-cols-2 gap-px overflow-hidden rounded-xl border"
                 >
-                  <div class="flex flex-col gap-1 p-6 md:p-8 bg-background">
-                    <span class="text-3xl md:text-4xl font-bold text-text">8K+</span>
-                    <span class="text-sm text-text-secondary">Active users</span>
+                  <div class="bg-background flex flex-col gap-1 p-6 md:p-8">
+                    <span class="text-text text-3xl font-bold md:text-4xl">8K+</span>
+                    <span class="text-text-secondary text-sm">Active users</span>
                   </div>
-                  <div class="flex flex-col gap-1 p-6 md:p-8 bg-background">
-                    <span class="text-3xl md:text-4xl font-bold text-text">99.9%</span>
-                    <span class="text-sm text-text-secondary">Uptime</span>
+                  <div class="bg-background flex flex-col gap-1 p-6 md:p-8">
+                    <span class="text-text text-3xl font-bold md:text-4xl">99.9%</span>
+                    <span class="text-text-secondary text-sm">Uptime</span>
                   </div>
-                  <div class="flex flex-col gap-1 p-6 md:p-8 bg-background">
-                    <span class="text-3xl md:text-4xl font-bold text-text">12M+</span>
-                    <span class="text-sm text-text-secondary">API requests/day</span>
+                  <div class="bg-background flex flex-col gap-1 p-6 md:p-8">
+                    <span class="text-text text-3xl font-bold md:text-4xl">12M+</span>
+                    <span class="text-text-secondary text-sm">API requests/day</span>
                   </div>
-                  <div class="flex flex-col gap-1 p-6 md:p-8 bg-background">
-                    <span class="text-3xl md:text-4xl font-bold text-text">200+</span>
-                    <span class="text-sm text-text-secondary">Integrations</span>
+                  <div class="bg-background flex flex-col gap-1 p-6 md:p-8">
+                    <span class="text-text text-3xl font-bold md:text-4xl">200+</span>
+                    <span class="text-text-secondary text-sm">Integrations</span>
                   </div>
                 </div>
               </div>
             </custom-frame>
-          </div>
-        </div>
 
-        <div class="sect">
-          <div class="sect-container">
             <custom-frame title="Neobrutalism">
               <div
-                class="relative overflow-hidden z-1 flex flex-col m-4 items-center text-center max-w-7xl w-full px-6 py-16 gap-4 border-2 border-neutral-950 shadow-[4px_4px_0_#0a0a0a]"
+                class="relative z-1 m-4 flex w-full max-w-7xl flex-col items-center gap-4 overflow-hidden border-2 border-neutral-950 px-6 py-16 text-center shadow-[4px_4px_0_#0a0a0a]"
               >
                 <img
                   src="/assets/images/neobrutalism.webp"
                   alt="Coding background"
-                  class="absolute inset-0 size-full -z-1 object-cover"
+                  class="absolute inset-0 -z-1 size-full object-cover"
                 />
                 <h3
-                  class="text-3xl md:text-4xl font-bold text-neutral-50 text-shadow-[3px_3px_0_#0a0a0a]"
+                  class="text-3xl font-bold text-neutral-50 text-shadow-[3px_3px_0_#0a0a0a] md:text-4xl"
                 >
                   Call to Action
                 </h3>
@@ -429,14 +408,14 @@
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi alias tenetur
                   veritatis quibusdam repellat.
                 </p>
-                <div class="flex flex-col sm:flex-row gap-4 mt-2">
+                <div class="mt-2 flex flex-col gap-4 sm:flex-row">
                   <button
-                    class="bg-primary text-primary-contrast flex w-fit px-5 py-2.5 font-semibold border-2 border-neutral-950 shadow-[4px_4px_0_#0a0a0a] hover:shadow-[2px_2px_0_#0a0a0a] hover:translate-0.5 active:shadow-[0_0_0_#0a0a0a] active:translate-1 transition duration-400"
+                    class="bg-primary text-primary-contrast focus-visible:ring-primary focus-visible:ring-offset-background flex min-h-11 w-fit border-2 border-neutral-950 px-5 py-2.5 font-semibold shadow-[4px_4px_0_#0a0a0a] transition duration-400 hover:translate-0.5 hover:shadow-[2px_2px_0_#0a0a0a] focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none active:translate-1 active:shadow-[0_0_0_#0a0a0a] disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50"
                   >
                     Click me
                   </button>
                   <button
-                    class="bg-accent text-accent-contrast flex w-fit px-5 py-2.5 font-semibold border-2 border-neutral-950 shadow-[4px_4px_0_#0a0a0a] hover:shadow-[2px_2px_0_#0a0a0a] hover:translate-0.5 active:shadow-[0_0_0_#0a0a0a] active:translate-1 transition duration-400"
+                    class="bg-accent text-accent-contrast focus-visible:ring-primary focus-visible:ring-offset-background flex min-h-11 w-fit border-2 border-neutral-950 px-5 py-2.5 font-semibold shadow-[4px_4px_0_#0a0a0a] transition duration-400 hover:translate-0.5 hover:shadow-[2px_2px_0_#0a0a0a] focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none active:translate-1 active:shadow-[0_0_0_#0a0a0a] disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50"
                   >
                     Learn more
                   </button>
@@ -445,6 +424,23 @@
             </custom-frame>
           </div>
         </div>
+
+        <script>
+          const newsletterForm = document.getElementById("newsletter-form");
+          const newsletterInlineForm = document.getElementById("newsletter-inline-form");
+
+          if (newsletterForm) {
+            newsletterForm.addEventListener("submit", (event) => {
+              event.preventDefault();
+            });
+          }
+
+          if (newsletterInlineForm) {
+            newsletterInlineForm.addEventListener("submit", (event) => {
+              event.preventDefault();
+            });
+          }
+        </script>
 
         <custom-cta></custom-cta>
 

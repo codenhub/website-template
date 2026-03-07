@@ -13,9 +13,32 @@
     <title>Pricing - Components Library</title>
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="stylesheet" href="../../../_ui/styles/index.css" />
-    <script type="module" src="../../../_ui/components/index.js" defer></script>
-    <script type="module" src="../../../_ui/scripts/index.js" defer></script>
-    <script type="module" src="../header-section.js" defer></script>
+    <script type="module" src="../../../_ui/components/index.js"></script>
+    <script type="module" src="../../../_ui/scripts/index.js"></script>
+    <script type="module" src="../header-section.js"></script>
+    <style>
+      @reference "../../../_ui/styles/index.css";
+
+      .billing-toggle {
+        @apply bg-accent relative h-7 w-12 cursor-pointer rounded-full border-none p-0;
+        transition: background-color 0.3s ease;
+
+        &::after {
+          content: "";
+          @apply bg-background absolute top-0.5 left-0.5 size-6 rounded-full;
+          transition: transform 0.3s ease;
+          box-shadow: 0 1px 3px rgb(0 0 0 / 0.15);
+        }
+
+        &.active {
+          @apply bg-primary;
+
+          &::after {
+            transform: translateX(1.25rem);
+          }
+        }
+      }
+    </style>
   </head>
 
   <body>
@@ -26,35 +49,35 @@
         <components-header-section></components-header-section>
 
         <div class="flex w-full justify-center px-4">
-          <h2 class="max-w-7xl w-full split-chars">Pricing</h2>
+          <h2 class="split-chars w-full max-w-7xl">Pricing</h2>
         </div>
 
         <section class="sect">
           <div class="sect-container gap-24">
             <custom-frame title="Flat with featured">
-              <div class="w-full p-4 md:p-6 bg-background">
+              <div class="bg-background w-full p-4 md:p-6">
                 <div
-                  class="flex gap-6 items-stretch justify-center w-full flex-wrap max-w-7xl mx-auto"
+                  class="mx-auto flex w-full max-w-7xl flex-wrap items-stretch justify-center gap-6"
                 >
                   <!-- Starter -->
-                  <div class="flex flex-col flex-1 min-w-72 p-8 gap-6 rounded-xl bg-foreground">
+                  <div class="bg-foreground flex min-w-72 flex-1 flex-col gap-6 rounded-xl p-8">
                     <div class="flex flex-col gap-2">
-                      <p class="text-sm font-semibold text-text-secondary uppercase tracking-wider">
+                      <p class="text-text-secondary text-sm font-semibold tracking-wider uppercase">
                         Starter
                       </p>
                       <div class="flex items-baseline gap-1">
-                        <span class="text-4xl font-bold text-text">$9</span>
+                        <span class="text-text text-4xl font-bold">$9</span>
                         <span class="text-text-secondary">/month</span>
                       </div>
-                      <p class="text-sm text-text-secondary">
+                      <p class="text-text-secondary text-sm">
                         Perfect for side projects and experiments.
                       </p>
                     </div>
                     <hr class="border-border" />
-                    <ul class="flex flex-col gap-3 flex-1">
+                    <ul class="flex flex-1 flex-col gap-3">
                       <li class="flex items-center gap-2 text-sm">
                         <svg
-                          class="size-4 text-emerald-600 shrink-0"
+                          class="text-success size-4 shrink-0"
                           viewBox="0 0 24 24"
                           fill="none"
                           stroke="currentColor"
@@ -66,7 +89,7 @@
                       </li>
                       <li class="flex items-center gap-2 text-sm">
                         <svg
-                          class="size-4 text-emerald-600 shrink-0"
+                          class="text-success size-4 shrink-0"
                           viewBox="0 0 24 24"
                           fill="none"
                           stroke="currentColor"
@@ -78,7 +101,7 @@
                       </li>
                       <li class="flex items-center gap-2 text-sm">
                         <svg
-                          class="size-4 text-emerald-600 shrink-0"
+                          class="text-success size-4 shrink-0"
                           viewBox="0 0 24 24"
                           fill="none"
                           stroke="currentColor"
@@ -88,7 +111,7 @@
                         </svg>
                         Basic analytics
                       </li>
-                      <li class="flex items-center gap-2 text-sm text-text-secondary">
+                      <li class="text-text-secondary flex items-center gap-2 text-sm">
                         <svg
                           class="size-4 shrink-0"
                           viewBox="0 0 24 24"
@@ -101,7 +124,7 @@
                         </svg>
                         Priority support
                       </li>
-                      <li class="flex items-center gap-2 text-sm text-text-secondary">
+                      <li class="text-text-secondary flex items-center gap-2 text-sm">
                         <svg
                           class="size-4 shrink-0"
                           viewBox="0 0 24 24"
@@ -115,24 +138,25 @@
                         Custom domain
                       </li>
                     </ul>
-                    <button
-                      class="bg-accent hover:bg-accent-hover text-accent-contrast font-semibold flex items-center px-4 py-2 gap-2 min-h-10 rounded-md transition-colors duration-400 w-full justify-center"
+                    <a
+                      href="#"
+                      class="bg-accent text-accent-contrast hover:bg-accent-hover focus-visible:ring-primary focus-visible:ring-offset-background flex min-h-11 w-full items-center justify-center gap-2 rounded-md px-4 py-2 font-semibold transition-colors duration-400 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50"
                     >
                       Get started
-                    </button>
+                    </a>
                   </div>
 
                   <!-- Pro (Featured) -->
                   <div
-                    class="flex flex-col flex-1 min-w-72 p-8 gap-6 rounded-xl bg-primary text-primary-contrast relative overflow-hidden"
+                    class="bg-primary text-primary-contrast relative flex min-w-72 flex-1 flex-col gap-6 overflow-hidden rounded-xl p-8"
                   >
                     <span
-                      class="absolute top-0 right-0 bg-accent text-accent-contrast text-xs font-bold px-4 py-2 rounded-bl-xl uppercase tracking-wider"
+                      class="bg-accent text-accent-contrast absolute top-0 right-0 rounded-bl-xl px-4 py-2 text-xs font-bold tracking-wider uppercase"
                     >
                       Popular
                     </span>
                     <div class="flex flex-col gap-2">
-                      <p class="text-sm font-semibold opacity-80 uppercase tracking-wider">Pro</p>
+                      <p class="text-sm font-semibold tracking-wider uppercase opacity-80">Pro</p>
                       <div class="flex items-baseline gap-1">
                         <span class="text-4xl font-bold">$29</span>
                         <span class="opacity-80">/month</span>
@@ -140,10 +164,10 @@
                       <p class="text-sm opacity-80">Best for growing teams and businesses.</p>
                     </div>
                     <hr class="border-neutral-700" />
-                    <ul class="flex flex-col gap-3 flex-1">
+                    <ul class="flex flex-1 flex-col gap-3">
                       <li class="flex items-center gap-2 text-sm">
                         <svg
-                          class="size-4 text-emerald-400 shrink-0"
+                          class="text-success size-4 shrink-0"
                           viewBox="0 0 24 24"
                           fill="none"
                           stroke="currentColor"
@@ -155,7 +179,7 @@
                       </li>
                       <li class="flex items-center gap-2 text-sm">
                         <svg
-                          class="size-4 text-emerald-400 shrink-0"
+                          class="text-success size-4 shrink-0"
                           viewBox="0 0 24 24"
                           fill="none"
                           stroke="currentColor"
@@ -167,7 +191,7 @@
                       </li>
                       <li class="flex items-center gap-2 text-sm">
                         <svg
-                          class="size-4 text-emerald-400 shrink-0"
+                          class="text-success size-4 shrink-0"
                           viewBox="0 0 24 24"
                           fill="none"
                           stroke="currentColor"
@@ -179,7 +203,7 @@
                       </li>
                       <li class="flex items-center gap-2 text-sm">
                         <svg
-                          class="size-4 text-emerald-400 shrink-0"
+                          class="text-success size-4 shrink-0"
                           viewBox="0 0 24 24"
                           fill="none"
                           stroke="currentColor"
@@ -203,32 +227,33 @@
                         Custom domain
                       </li>
                     </ul>
-                    <button
-                      class="bg-background text-text hover:bg-foreground font-semibold flex w-full items-center justify-center px-4 py-2 gap-2 min-h-10 rounded-md transition-colors duration-400"
+                    <a
+                      href="#"
+                      class="bg-background text-text hover:bg-foreground focus-visible:ring-primary focus-visible:ring-offset-background flex min-h-11 w-full items-center justify-center gap-2 rounded-md px-4 py-2 font-semibold transition-colors duration-400 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50"
                     >
                       Get started
-                    </button>
+                    </a>
                   </div>
 
                   <!-- Enterprise -->
-                  <div class="flex flex-col flex-1 min-w-72 p-8 gap-6 rounded-xl bg-foreground">
+                  <div class="bg-foreground flex min-w-72 flex-1 flex-col gap-6 rounded-xl p-8">
                     <div class="flex flex-col gap-2">
-                      <p class="text-sm font-semibold text-text-secondary uppercase tracking-wider">
+                      <p class="text-text-secondary text-sm font-semibold tracking-wider uppercase">
                         Enterprise
                       </p>
                       <div class="flex items-baseline gap-1">
-                        <span class="text-4xl font-bold text-text">$99</span>
+                        <span class="text-text text-4xl font-bold">$99</span>
                         <span class="text-text-secondary">/month</span>
                       </div>
-                      <p class="text-sm text-text-secondary">
+                      <p class="text-text-secondary text-sm">
                         For large-scale teams with advanced needs.
                       </p>
                     </div>
                     <hr class="border-border" />
-                    <ul class="flex flex-col gap-3 flex-1">
+                    <ul class="flex flex-1 flex-col gap-3">
                       <li class="flex items-center gap-2 text-sm">
                         <svg
-                          class="size-4 text-emerald-600 shrink-0"
+                          class="text-success size-4 shrink-0"
                           viewBox="0 0 24 24"
                           fill="none"
                           stroke="currentColor"
@@ -240,7 +265,7 @@
                       </li>
                       <li class="flex items-center gap-2 text-sm">
                         <svg
-                          class="size-4 text-emerald-600 shrink-0"
+                          class="text-success size-4 shrink-0"
                           viewBox="0 0 24 24"
                           fill="none"
                           stroke="currentColor"
@@ -252,7 +277,7 @@
                       </li>
                       <li class="flex items-center gap-2 text-sm">
                         <svg
-                          class="size-4 text-emerald-600 shrink-0"
+                          class="text-success size-4 shrink-0"
                           viewBox="0 0 24 24"
                           fill="none"
                           stroke="currentColor"
@@ -264,7 +289,7 @@
                       </li>
                       <li class="flex items-center gap-2 text-sm">
                         <svg
-                          class="size-4 text-emerald-600 shrink-0"
+                          class="text-success size-4 shrink-0"
                           viewBox="0 0 24 24"
                           fill="none"
                           stroke="currentColor"
@@ -276,7 +301,7 @@
                       </li>
                       <li class="flex items-center gap-2 text-sm">
                         <svg
-                          class="size-4 text-emerald-600 shrink-0"
+                          class="text-success size-4 shrink-0"
                           viewBox="0 0 24 24"
                           fill="none"
                           stroke="currentColor"
@@ -287,60 +312,58 @@
                         Custom domain
                       </li>
                     </ul>
-                    <button
-                      class="bg-primary hover:bg-primary-hover text-primary-contrast font-semibold flex items-center px-4 py-2 gap-2 min-h-10 rounded-md transition-colors duration-400 w-full justify-center"
+                    <a
+                      href="#"
+                      class="bg-primary text-primary-contrast hover:bg-primary-hover focus-visible:ring-primary focus-visible:ring-offset-background flex min-h-11 w-full items-center justify-center gap-2 rounded-md px-4 py-2 font-semibold transition-colors duration-400 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50"
                     >
                       Contact sales
-                    </button>
+                    </a>
                   </div>
                 </div>
               </div>
             </custom-frame>
             <custom-frame title="Border with toggle">
-              <div class="w-full p-4 md:p-6 bg-background flex flex-col items-center gap-8">
+              <div class="bg-background flex w-full flex-col items-center gap-8 p-4 md:p-6">
                 <!-- Billing Toggle -->
                 <div class="flex items-center gap-3">
-                  <span class="text-sm font-medium text-text">Monthly</span>
+                  <span class="text-text text-sm font-medium">Monthly</span>
                   <button
-                    class="billing-toggle"
+                    class="billing-toggle focus-visible:ring-primary focus-visible:ring-offset-background focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50"
                     role="switch"
                     aria-checked="false"
                     aria-label="Toggle annual billing"
-                    onclick="this.classList.toggle('active'); this.setAttribute('aria-checked', this.classList.contains('active'));
-                      const container = this.closest('.custom-frame') || document;
-                      container.querySelectorAll('.price-monthly').forEach(el => el.classList.toggle('hidden'));
-                      container.querySelectorAll('.price-annual').forEach(el => el.classList.toggle('hidden'));
-                    "
+                    data-billing-toggle
                   ></button>
+                  <span class="text-text text-sm font-medium">Annualy</span>
                   <span
-                    class="px-3 py-1 text-sm font-medium rounded-full bg-success-light text-success-dark"
+                    class="bg-success-light text-success-dark rounded-full px-3 py-1 text-sm font-medium"
                   >
                     Save 20%
                   </span>
                 </div>
 
                 <div
-                  class="flex gap-6 items-stretch justify-center w-full flex-wrap max-w-7xl mx-auto"
+                  class="mx-auto flex w-full max-w-7xl flex-wrap items-stretch justify-center gap-6"
                 >
                   <!-- Basic -->
                   <div
-                    class="flex flex-col flex-1 min-w-72 p-8 gap-6 rounded-xl border border-border hover:border-border-hover hover:shadow-md transition duration-400"
+                    class="border-border hover:border-border-hover flex min-w-72 flex-1 flex-col gap-6 rounded-xl border p-8 transition duration-400 hover:shadow-md"
                   >
                     <div class="flex flex-col gap-2">
-                      <p class="text-sm font-semibold text-text-secondary uppercase tracking-wider">
+                      <p class="text-text-secondary text-sm font-semibold tracking-wider uppercase">
                         Basic
                       </p>
                       <div class="flex items-baseline gap-1">
-                        <span class="text-4xl font-bold text-text price-monthly">Free</span>
-                        <span class="text-4xl font-bold text-text price-annual hidden">Free</span>
+                        <span class="text-text price-monthly text-4xl font-bold">Free</span>
+                        <span class="text-text price-annual hidden text-4xl font-bold">Free</span>
                       </div>
-                      <p class="text-sm text-text-secondary">Get started with the essentials.</p>
+                      <p class="text-text-secondary text-sm">Get started with the essentials.</p>
                     </div>
                     <hr class="border-border" />
-                    <ul class="flex flex-col gap-3 flex-1">
+                    <ul class="flex flex-1 flex-col gap-3">
                       <li class="flex items-center gap-2 text-sm">
                         <svg
-                          class="size-4 text-emerald-600 shrink-0"
+                          class="text-success size-4 shrink-0"
                           viewBox="0 0 24 24"
                           fill="none"
                           stroke="currentColor"
@@ -352,7 +375,7 @@
                       </li>
                       <li class="flex items-center gap-2 text-sm">
                         <svg
-                          class="size-4 text-emerald-600 shrink-0"
+                          class="text-success size-4 shrink-0"
                           viewBox="0 0 24 24"
                           fill="none"
                           stroke="currentColor"
@@ -364,7 +387,7 @@
                       </li>
                       <li class="flex items-center gap-2 text-sm">
                         <svg
-                          class="size-4 text-emerald-600 shrink-0"
+                          class="text-success size-4 shrink-0"
                           viewBox="0 0 24 24"
                           fill="none"
                           stroke="currentColor"
@@ -375,39 +398,40 @@
                         Community support
                       </li>
                     </ul>
-                    <button
-                      class="bg-accent hover:bg-accent-hover text-accent-contrast font-semibold flex items-center px-4 py-2 gap-2 min-h-10 rounded-md transition-colors duration-400 w-full justify-center"
+                    <a
+                      href="#"
+                      class="bg-accent text-accent-contrast hover:bg-accent-hover focus-visible:ring-primary focus-visible:ring-offset-background flex min-h-11 w-full items-center justify-center gap-2 rounded-md px-4 py-2 font-semibold transition-colors duration-400 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50"
                     >
                       Get started
-                    </button>
+                    </a>
                   </div>
 
                   <!-- Pro (Featured) -->
                   <div
-                    class="flex flex-col flex-1 min-w-72 p-8 gap-6 rounded-xl border-2 border-primary shadow-md relative"
+                    class="border-primary relative flex min-w-72 flex-1 flex-col gap-6 rounded-xl border-2 p-8 shadow-md"
                   >
                     <span
-                      class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-primary text-primary-contrast text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider"
+                      class="bg-primary text-primary-contrast absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full px-3 py-1 text-xs font-bold tracking-wider uppercase"
                     >
                       Most popular
                     </span>
                     <div class="flex flex-col gap-2">
-                      <p class="text-sm font-semibold text-text-secondary uppercase tracking-wider">
+                      <p class="text-text-secondary text-sm font-semibold tracking-wider uppercase">
                         Pro
                       </p>
                       <div class="flex items-baseline gap-1">
-                        <span class="text-4xl font-bold text-text price-monthly">$19</span>
+                        <span class="text-text price-monthly text-4xl font-bold">$19</span>
                         <span class="text-text-secondary price-monthly">/month</span>
-                        <span class="text-4xl font-bold text-text price-annual hidden">$15</span>
+                        <span class="text-text price-annual hidden text-4xl font-bold">$15</span>
                         <span class="text-text-secondary price-annual hidden">/month</span>
                       </div>
-                      <p class="text-sm text-text-secondary">Everything you need to grow.</p>
+                      <p class="text-text-secondary text-sm">Everything you need to grow.</p>
                     </div>
                     <hr class="border-border" />
-                    <ul class="flex flex-col gap-3 flex-1">
+                    <ul class="flex flex-1 flex-col gap-3">
                       <li class="flex items-center gap-2 text-sm">
                         <svg
-                          class="size-4 text-emerald-600 shrink-0"
+                          class="text-success size-4 shrink-0"
                           viewBox="0 0 24 24"
                           fill="none"
                           stroke="currentColor"
@@ -419,7 +443,7 @@
                       </li>
                       <li class="flex items-center gap-2 text-sm">
                         <svg
-                          class="size-4 text-emerald-600 shrink-0"
+                          class="text-success size-4 shrink-0"
                           viewBox="0 0 24 24"
                           fill="none"
                           stroke="currentColor"
@@ -431,7 +455,7 @@
                       </li>
                       <li class="flex items-center gap-2 text-sm">
                         <svg
-                          class="size-4 text-emerald-600 shrink-0"
+                          class="text-success size-4 shrink-0"
                           viewBox="0 0 24 24"
                           fill="none"
                           stroke="currentColor"
@@ -443,7 +467,7 @@
                       </li>
                       <li class="flex items-center gap-2 text-sm">
                         <svg
-                          class="size-4 text-emerald-600 shrink-0"
+                          class="text-success size-4 shrink-0"
                           viewBox="0 0 24 24"
                           fill="none"
                           stroke="currentColor"
@@ -454,34 +478,35 @@
                         API access
                       </li>
                     </ul>
-                    <button
-                      class="bg-primary hover:bg-primary-hover text-primary-contrast font-semibold flex items-center px-4 py-2 gap-2 min-h-10 rounded-md transition-colors duration-400 w-full justify-center"
+                    <a
+                      href="#"
+                      class="bg-primary text-primary-contrast hover:bg-primary-hover focus-visible:ring-primary focus-visible:ring-offset-background flex min-h-11 w-full items-center justify-center gap-2 rounded-md px-4 py-2 font-semibold transition-colors duration-400 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50"
                     >
                       Get started
-                    </button>
+                    </a>
                   </div>
 
                   <!-- Team -->
                   <div
-                    class="flex flex-col flex-1 min-w-72 p-8 gap-6 rounded-xl border border-border hover:border-border-hover hover:shadow-md transition duration-400"
+                    class="border-border hover:border-border-hover flex min-w-72 flex-1 flex-col gap-6 rounded-xl border p-8 transition duration-400 hover:shadow-md"
                   >
                     <div class="flex flex-col gap-2">
-                      <p class="text-sm font-semibold text-text-secondary uppercase tracking-wider">
+                      <p class="text-text-secondary text-sm font-semibold tracking-wider uppercase">
                         Team
                       </p>
                       <div class="flex items-baseline gap-1">
-                        <span class="text-4xl font-bold text-text price-monthly">$49</span>
+                        <span class="text-text price-monthly text-4xl font-bold">$49</span>
                         <span class="text-text-secondary price-monthly">/month</span>
-                        <span class="text-4xl font-bold text-text price-annual hidden">$39</span>
+                        <span class="text-text price-annual hidden text-4xl font-bold">$39</span>
                         <span class="text-text-secondary price-annual hidden">/month</span>
                       </div>
-                      <p class="text-sm text-text-secondary">Collaboration tools for teams.</p>
+                      <p class="text-text-secondary text-sm">Collaboration tools for teams.</p>
                     </div>
                     <hr class="border-border" />
-                    <ul class="flex flex-col gap-3 flex-1">
+                    <ul class="flex flex-1 flex-col gap-3">
                       <li class="flex items-center gap-2 text-sm">
                         <svg
-                          class="size-4 text-emerald-600 shrink-0"
+                          class="text-success size-4 shrink-0"
                           viewBox="0 0 24 24"
                           fill="none"
                           stroke="currentColor"
@@ -493,7 +518,7 @@
                       </li>
                       <li class="flex items-center gap-2 text-sm">
                         <svg
-                          class="size-4 text-emerald-600 shrink-0"
+                          class="text-success size-4 shrink-0"
                           viewBox="0 0 24 24"
                           fill="none"
                           stroke="currentColor"
@@ -505,7 +530,7 @@
                       </li>
                       <li class="flex items-center gap-2 text-sm">
                         <svg
-                          class="size-4 text-emerald-600 shrink-0"
+                          class="text-success size-4 shrink-0"
                           viewBox="0 0 24 24"
                           fill="none"
                           stroke="currentColor"
@@ -517,7 +542,7 @@
                       </li>
                       <li class="flex items-center gap-2 text-sm">
                         <svg
-                          class="size-4 text-emerald-600 shrink-0"
+                          class="text-success size-4 shrink-0"
                           viewBox="0 0 24 24"
                           fill="none"
                           stroke="currentColor"
@@ -528,44 +553,62 @@
                         SSO integration
                       </li>
                     </ul>
-                    <button
-                      class="bg-primary hover:bg-primary-hover text-primary-contrast font-semibold flex items-center px-4 py-2 gap-2 min-h-10 rounded-md transition-colors duration-400 w-full justify-center"
+                    <a
+                      href="#"
+                      class="bg-primary text-primary-contrast hover:bg-primary-hover focus-visible:ring-primary focus-visible:ring-offset-background flex min-h-11 w-full items-center justify-center gap-2 rounded-md px-4 py-2 font-semibold transition-colors duration-400 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50"
                     >
                       Contact sales
-                    </button>
+                    </a>
                   </div>
                 </div>
+                <script>
+                  document.querySelectorAll("[data-billing-toggle]").forEach((toggle) => {
+                    toggle.addEventListener("click", () => {
+                      toggle.classList.toggle("active");
+                      const isActive = toggle.classList.contains("active");
+                      toggle.setAttribute("aria-checked", String(isActive));
+
+                      document
+                        .querySelectorAll(".price-monthly")
+                        .forEach((el) => el.classList.toggle("hidden"));
+                      document
+                        .querySelectorAll(".price-annual")
+                        .forEach((el) => el.classList.toggle("hidden"));
+                    });
+                  });
+                </script>
               </div>
             </custom-frame>
             <custom-frame title="Two-column minimal">
-              <div class="w-full p-4 md:p-6 bg-background">
+              <div class="bg-background w-full p-4 md:p-6">
                 <div
-                  class="flex gap-6 items-stretch justify-center w-full flex-wrap max-w-7xl mx-auto"
+                  class="mx-auto flex w-full max-w-7xl flex-wrap items-stretch justify-center gap-6"
                 >
                   <!-- Free -->
-                  <div class="flex flex-col flex-1 min-w-72 p-8 gap-6 rounded-xl bg-foreground">
+                  <div class="bg-foreground flex min-w-72 flex-1 flex-col gap-6 rounded-xl p-8">
                     <div class="flex flex-col gap-1">
-                      <p class="text-sm font-semibold text-text-secondary uppercase tracking-wider">
+                      <p class="text-text-secondary text-sm font-semibold tracking-wider uppercase">
                         Free
                       </p>
-                      <div class="flex items-baseline gap-1 mt-1">
-                        <span class="text-4xl font-bold text-text">$0</span>
+                      <div class="mt-1 flex items-baseline gap-1">
+                        <span class="text-text text-4xl font-bold">$0</span>
                         <span class="text-text-secondary">/month</span>
                       </div>
-                      <p class="text-sm text-text-secondary mt-2">
+                      <p class="text-text-secondary mt-2 text-sm">
                         For individuals getting started.
                       </p>
                     </div>
-                    <button
-                      class="bg-accent hover:bg-accent-hover text-accent-contrast font-semibold flex items-center px-4 py-2 gap-2 min-h-10 rounded-md transition-colors duration-400 w-full justify-center"
+                    <a
+                      href="#"
+                      class="bg-accent text-accent-contrast hover:bg-accent-hover focus-visible:ring-primary focus-visible:ring-offset-background flex min-h-11 w-full items-center justify-center gap-2 rounded-md px-4 py-2 font-semibold transition-colors duration-400 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50"
                     >
                       Get started
-                    </button>
+                    </a>
                     <hr class="border-border" />
                     <ul class="flex flex-col gap-3">
                       <li class="flex items-center gap-2 text-sm">
                         <svg
-                          class="size-4 text-emerald-600 shrink-0"
+                          class="text-success size-4 shrink-0"
                           viewBox="0 0 24 24"
                           fill="none"
                           stroke="currentColor"
@@ -577,7 +620,7 @@
                       </li>
                       <li class="flex items-center gap-2 text-sm">
                         <svg
-                          class="size-4 text-emerald-600 shrink-0"
+                          class="text-success size-4 shrink-0"
                           viewBox="0 0 24 24"
                           fill="none"
                           stroke="currentColor"
@@ -589,7 +632,7 @@
                       </li>
                       <li class="flex items-center gap-2 text-sm">
                         <svg
-                          class="size-4 text-emerald-600 shrink-0"
+                          class="text-success size-4 shrink-0"
                           viewBox="0 0 24 24"
                           fill="none"
                           stroke="currentColor"
@@ -601,7 +644,7 @@
                       </li>
                       <li class="flex items-center gap-2 text-sm">
                         <svg
-                          class="size-4 text-emerald-600 shrink-0"
+                          class="text-success size-4 shrink-0"
                           viewBox="0 0 24 24"
                           fill="none"
                           stroke="currentColor"
@@ -616,35 +659,36 @@
 
                   <!-- Pro -->
                   <div
-                    class="flex flex-col flex-1 min-w-72 p-8 gap-6 rounded-xl border-2 border-primary relative overflow-hidden"
+                    class="border-primary relative flex min-w-72 flex-1 flex-col gap-6 overflow-hidden rounded-xl border-2 p-8"
                   >
                     <span
-                      class="absolute top-0 right-0 bg-primary text-primary-contrast text-xs font-bold px-3 py-1 rounded-bl-xl uppercase tracking-wider"
+                      class="bg-primary text-primary-contrast absolute top-0 right-0 rounded-bl-xl px-3 py-1 text-xs font-bold tracking-wider uppercase"
                     >
                       Recommended
                     </span>
                     <div class="flex flex-col gap-1">
-                      <p class="text-sm font-semibold text-text-secondary uppercase tracking-wider">
+                      <p class="text-text-secondary text-sm font-semibold tracking-wider uppercase">
                         Pro
                       </p>
-                      <div class="flex items-baseline gap-1 mt-1">
-                        <span class="text-4xl font-bold text-text">$29</span>
+                      <div class="mt-1 flex items-baseline gap-1">
+                        <span class="text-text text-4xl font-bold">$29</span>
                         <span class="text-text-secondary">/month</span>
                       </div>
-                      <p class="text-sm text-text-secondary mt-2">
+                      <p class="text-text-secondary mt-2 text-sm">
                         For teams that need more power.
                       </p>
                     </div>
-                    <button
-                      class="bg-primary hover:bg-primary-hover text-primary-contrast font-semibold flex items-center px-4 py-2 gap-2 min-h-10 rounded-md transition-colors duration-400 w-full justify-center"
+                    <a
+                      href="#"
+                      class="bg-primary text-primary-contrast hover:bg-primary-hover focus-visible:ring-primary focus-visible:ring-offset-background flex min-h-11 w-full items-center justify-center gap-2 rounded-md px-4 py-2 font-semibold transition-colors duration-400 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50"
                     >
                       Get started
-                    </button>
+                    </a>
                     <hr class="border-border" />
                     <ul class="flex flex-col gap-3">
                       <li class="flex items-center gap-2 text-sm">
                         <svg
-                          class="size-4 text-emerald-600 shrink-0"
+                          class="text-success size-4 shrink-0"
                           viewBox="0 0 24 24"
                           fill="none"
                           stroke="currentColor"
@@ -656,7 +700,7 @@
                       </li>
                       <li class="flex items-center gap-2 text-sm">
                         <svg
-                          class="size-4 text-emerald-600 shrink-0"
+                          class="text-success size-4 shrink-0"
                           viewBox="0 0 24 24"
                           fill="none"
                           stroke="currentColor"
@@ -668,7 +712,7 @@
                       </li>
                       <li class="flex items-center gap-2 text-sm">
                         <svg
-                          class="size-4 text-emerald-600 shrink-0"
+                          class="text-success size-4 shrink-0"
                           viewBox="0 0 24 24"
                           fill="none"
                           stroke="currentColor"
@@ -680,7 +724,7 @@
                       </li>
                       <li class="flex items-center gap-2 text-sm">
                         <svg
-                          class="size-4 text-emerald-600 shrink-0"
+                          class="text-success size-4 shrink-0"
                           viewBox="0 0 24 24"
                           fill="none"
                           stroke="currentColor"
@@ -692,7 +736,7 @@
                       </li>
                       <li class="flex items-center gap-2 text-sm">
                         <svg
-                          class="size-4 text-emerald-600 shrink-0"
+                          class="text-success size-4 shrink-0"
                           viewBox="0 0 24 24"
                           fill="none"
                           stroke="currentColor"
@@ -704,7 +748,7 @@
                       </li>
                       <li class="flex items-center gap-2 text-sm">
                         <svg
-                          class="size-4 text-emerald-600 shrink-0"
+                          class="text-success size-4 shrink-0"
                           viewBox="0 0 24 24"
                           fill="none"
                           stroke="currentColor"
@@ -718,28 +762,29 @@
                   </div>
 
                   <!-- Custom -->
-                  <div class="flex flex-col flex-1 min-w-72 p-8 gap-6 rounded-xl bg-foreground">
+                  <div class="bg-foreground flex min-w-72 flex-1 flex-col gap-6 rounded-xl p-8">
                     <div class="flex flex-col gap-1">
-                      <p class="text-sm font-semibold text-text-secondary uppercase tracking-wider">
+                      <p class="text-text-secondary text-sm font-semibold tracking-wider uppercase">
                         Enterprise
                       </p>
-                      <div class="flex items-center gap-1 mt-1">
-                        <h3 class="text-3xl font-bold text-text">Custom</h3>
+                      <div class="mt-1 flex items-center gap-1">
+                        <h3 class="text-text text-3xl font-bold">Custom</h3>
                       </div>
-                      <p class="text-sm text-text-secondary mt-2">
+                      <p class="text-text-secondary mt-2 text-sm">
                         Tailored solutions for your specific needs.
                       </p>
                     </div>
-                    <button
-                      class="bg-accent hover:bg-accent-hover text-accent-contrast font-semibold flex items-center px-4 py-2 gap-2 min-h-10 rounded-md transition-colors duration-400 w-full justify-center"
+                    <a
+                      href="#"
+                      class="bg-accent text-accent-contrast hover:bg-accent-hover focus-visible:ring-primary focus-visible:ring-offset-background flex min-h-11 w-full items-center justify-center gap-2 rounded-md px-4 py-2 font-semibold transition-colors duration-400 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50"
                     >
                       Contact Sales
-                    </button>
+                    </a>
                     <hr class="border-border" />
                     <ul class="flex flex-col gap-3">
                       <li class="flex items-center gap-2 text-sm">
                         <svg
-                          class="size-4 text-emerald-600 shrink-0"
+                          class="text-success size-4 shrink-0"
                           viewBox="0 0 24 24"
                           fill="none"
                           stroke="currentColor"
@@ -751,7 +796,7 @@
                       </li>
                       <li class="flex items-center gap-2 text-sm">
                         <svg
-                          class="size-4 text-emerald-600 shrink-0"
+                          class="text-success size-4 shrink-0"
                           viewBox="0 0 24 24"
                           fill="none"
                           stroke="currentColor"
@@ -763,7 +808,7 @@
                       </li>
                       <li class="flex items-center gap-2 text-sm">
                         <svg
-                          class="size-4 text-emerald-600 shrink-0"
+                          class="text-success size-4 shrink-0"
                           viewBox="0 0 24 24"
                           fill="none"
                           stroke="currentColor"
@@ -775,7 +820,7 @@
                       </li>
                       <li class="flex items-center gap-2 text-sm">
                         <svg
-                          class="size-4 text-emerald-600 shrink-0"
+                          class="text-success size-4 shrink-0"
                           viewBox="0 0 24 24"
                           fill="none"
                           stroke="currentColor"
@@ -791,75 +836,75 @@
               </div>
             </custom-frame>
             <custom-frame title="Comparison table">
-              <div class="w-full p-4 md:p-6 bg-background">
-                <div class="w-full max-w-7xl mx-auto overflow-x-auto">
+              <div class="bg-background w-full p-4 md:p-6">
+                <div class="mx-auto w-full max-w-7xl overflow-x-auto">
                   <table class="w-full text-sm">
                     <thead>
-                      <tr class="border-b-2 border-border">
-                        <th class="py-4 pr-4 text-left font-semibold text-text">Features</th>
-                        <th class="py-4 px-4 text-center font-semibold text-text">
+                      <tr class="border-border border-b-2">
+                        <th class="text-text py-4 pr-4 text-left font-semibold">Features</th>
+                        <th class="text-text px-4 py-4 text-center font-semibold">
                           <div class="flex flex-col items-center gap-1">
                             <span>Basic</span>
                             <span class="text-2xl font-bold">Free</span>
                           </div>
                         </th>
                         <th
-                          class="py-4 px-4 text-center font-semibold text-text bg-primary/5 rounded-t-lg"
+                          class="text-text bg-primary/5 rounded-t-lg px-4 py-4 text-center font-semibold"
                         >
                           <div class="flex flex-col items-center gap-1">
                             <span
-                              class="bg-primary text-primary-contrast text-xs font-bold px-2 py-0.5 rounded-full"
+                              class="bg-primary text-primary-contrast rounded-full px-2 py-0.5 text-xs font-bold"
                             >
                               Popular
                             </span>
                             <span>Pro</span>
                             <span class="text-2xl font-bold">$19</span>
-                            <span class="text-xs text-text-secondary font-normal">/month</span>
+                            <span class="text-text-secondary text-xs font-normal">/month</span>
                           </div>
                         </th>
-                        <th class="py-4 pl-4 text-center font-semibold text-text">
+                        <th class="text-text py-4 pl-4 text-center font-semibold">
                           <div class="flex flex-col items-center gap-1">
                             <span>Enterprise</span>
                             <span class="text-2xl font-bold">$99</span>
-                            <span class="text-xs text-text-secondary font-normal">/month</span>
+                            <span class="text-text-secondary text-xs font-normal">/month</span>
                           </div>
                         </th>
                       </tr>
                     </thead>
                     <tbody>
-                      <tr class="border-b border-border">
-                        <td class="py-3 pr-4 text-text">Projects</td>
-                        <td class="py-3 px-4 text-center text-text-secondary">1</td>
-                        <td class="py-3 px-4 text-center text-text-secondary bg-primary/5">10</td>
-                        <td class="py-3 pl-4 text-center text-text-secondary">Unlimited</td>
+                      <tr class="border-border border-b">
+                        <td class="text-text py-3 pr-4">Projects</td>
+                        <td class="text-text-secondary px-4 py-3 text-center">1</td>
+                        <td class="text-text-secondary bg-primary/5 px-4 py-3 text-center">10</td>
+                        <td class="text-text-secondary py-3 pl-4 text-center">Unlimited</td>
                       </tr>
-                      <tr class="border-b border-border">
-                        <td class="py-3 pr-4 text-text">Storage</td>
-                        <td class="py-3 px-4 text-center text-text-secondary">500 MB</td>
-                        <td class="py-3 px-4 text-center text-text-secondary bg-primary/5">
+                      <tr class="border-border border-b">
+                        <td class="text-text py-3 pr-4">Storage</td>
+                        <td class="text-text-secondary px-4 py-3 text-center">500 MB</td>
+                        <td class="text-text-secondary bg-primary/5 px-4 py-3 text-center">
                           20 GB
                         </td>
-                        <td class="py-3 pl-4 text-center text-text-secondary">500 GB</td>
+                        <td class="text-text-secondary py-3 pl-4 text-center">500 GB</td>
                       </tr>
-                      <tr class="border-b border-border">
-                        <td class="py-3 pr-4 text-text">Team members</td>
-                        <td class="py-3 px-4 text-center text-text-secondary">1</td>
-                        <td class="py-3 px-4 text-center text-text-secondary bg-primary/5">5</td>
-                        <td class="py-3 pl-4 text-center text-text-secondary">Unlimited</td>
+                      <tr class="border-border border-b">
+                        <td class="text-text py-3 pr-4">Team members</td>
+                        <td class="text-text-secondary px-4 py-3 text-center">1</td>
+                        <td class="text-text-secondary bg-primary/5 px-4 py-3 text-center">5</td>
+                        <td class="text-text-secondary py-3 pl-4 text-center">Unlimited</td>
                       </tr>
-                      <tr class="border-b border-border">
-                        <td class="py-3 pr-4 text-text">Analytics</td>
-                        <td class="py-3 px-4 text-center text-text-secondary">Basic</td>
-                        <td class="py-3 px-4 text-center text-text-secondary bg-primary/5">
+                      <tr class="border-border border-b">
+                        <td class="text-text py-3 pr-4">Analytics</td>
+                        <td class="text-text-secondary px-4 py-3 text-center">Basic</td>
+                        <td class="text-text-secondary bg-primary/5 px-4 py-3 text-center">
                           Advanced
                         </td>
-                        <td class="py-3 pl-4 text-center text-text-secondary">Custom</td>
+                        <td class="text-text-secondary py-3 pl-4 text-center">Custom</td>
                       </tr>
-                      <tr class="border-b border-border">
-                        <td class="py-3 pr-4 text-text">API access</td>
-                        <td class="py-3 px-4 text-center">
+                      <tr class="border-border border-b">
+                        <td class="text-text py-3 pr-4">API access</td>
+                        <td class="px-4 py-3 text-center">
                           <svg
-                            class="size-4 text-text-secondary mx-auto"
+                            class="text-text-secondary mx-auto size-4"
                             viewBox="0 0 24 24"
                             fill="none"
                             stroke="currentColor"
@@ -869,9 +914,9 @@
                             <path d="m6 6 12 12" />
                           </svg>
                         </td>
-                        <td class="py-3 px-4 text-center bg-primary/5">
+                        <td class="bg-primary/5 px-4 py-3 text-center">
                           <svg
-                            class="size-4 text-emerald-600 mx-auto"
+                            class="text-success mx-auto size-4"
                             viewBox="0 0 24 24"
                             fill="none"
                             stroke="currentColor"
@@ -882,7 +927,7 @@
                         </td>
                         <td class="py-3 pl-4 text-center">
                           <svg
-                            class="size-4 text-emerald-600 mx-auto"
+                            class="text-success mx-auto size-4"
                             viewBox="0 0 24 24"
                             fill="none"
                             stroke="currentColor"
@@ -892,11 +937,11 @@
                           </svg>
                         </td>
                       </tr>
-                      <tr class="border-b border-border">
-                        <td class="py-3 pr-4 text-text">Priority support</td>
-                        <td class="py-3 px-4 text-center">
+                      <tr class="border-border border-b">
+                        <td class="text-text py-3 pr-4">Priority support</td>
+                        <td class="px-4 py-3 text-center">
                           <svg
-                            class="size-4 text-text-secondary mx-auto"
+                            class="text-text-secondary mx-auto size-4"
                             viewBox="0 0 24 24"
                             fill="none"
                             stroke="currentColor"
@@ -906,9 +951,9 @@
                             <path d="m6 6 12 12" />
                           </svg>
                         </td>
-                        <td class="py-3 px-4 text-center bg-primary/5">
+                        <td class="bg-primary/5 px-4 py-3 text-center">
                           <svg
-                            class="size-4 text-emerald-600 mx-auto"
+                            class="text-success mx-auto size-4"
                             viewBox="0 0 24 24"
                             fill="none"
                             stroke="currentColor"
@@ -919,7 +964,7 @@
                         </td>
                         <td class="py-3 pl-4 text-center">
                           <svg
-                            class="size-4 text-emerald-600 mx-auto"
+                            class="text-success mx-auto size-4"
                             viewBox="0 0 24 24"
                             fill="none"
                             stroke="currentColor"
@@ -929,11 +974,11 @@
                           </svg>
                         </td>
                       </tr>
-                      <tr class="border-b border-border">
-                        <td class="py-3 pr-4 text-text">Custom domain</td>
-                        <td class="py-3 px-4 text-center">
+                      <tr class="border-border border-b">
+                        <td class="text-text py-3 pr-4">Custom domain</td>
+                        <td class="px-4 py-3 text-center">
                           <svg
-                            class="size-4 text-text-secondary mx-auto"
+                            class="text-text-secondary mx-auto size-4"
                             viewBox="0 0 24 24"
                             fill="none"
                             stroke="currentColor"
@@ -943,47 +988,9 @@
                             <path d="m6 6 12 12" />
                           </svg>
                         </td>
-                        <td class="py-3 px-4 text-center bg-primary/5">
+                        <td class="bg-primary/5 px-4 py-3 text-center">
                           <svg
-                            class="size-4 text-text-secondary mx-auto"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="2"
-                          >
-                            <path d="M18 6 6 18" />
-                            <path d="m6 6 12 12" />
-                          </svg>
-                        </td>
-                        <td class="py-3 pl-4 text-center">
-                          <svg
-                            class="size-4 text-emerald-600 mx-auto"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="2.5"
-                          >
-                            <polyline points="20 6 9 17 4 12" />
-                          </svg>
-                        </td>
-                      </tr>
-                      <tr class="border-b border-border">
-                        <td class="py-3 pr-4 text-text">SSO</td>
-                        <td class="py-3 px-4 text-center">
-                          <svg
-                            class="size-4 text-text-secondary mx-auto"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="2"
-                          >
-                            <path d="M18 6 6 18" />
-                            <path d="m6 6 12 12" />
-                          </svg>
-                        </td>
-                        <td class="py-3 px-4 text-center bg-primary/5">
-                          <svg
-                            class="size-4 text-text-secondary mx-auto"
+                            class="text-text-secondary mx-auto size-4"
                             viewBox="0 0 24 24"
                             fill="none"
                             stroke="currentColor"
@@ -995,7 +1002,45 @@
                         </td>
                         <td class="py-3 pl-4 text-center">
                           <svg
-                            class="size-4 text-emerald-600 mx-auto"
+                            class="text-success mx-auto size-4"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2.5"
+                          >
+                            <polyline points="20 6 9 17 4 12" />
+                          </svg>
+                        </td>
+                      </tr>
+                      <tr class="border-border border-b">
+                        <td class="text-text py-3 pr-4">SSO</td>
+                        <td class="px-4 py-3 text-center">
+                          <svg
+                            class="text-text-secondary mx-auto size-4"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                          >
+                            <path d="M18 6 6 18" />
+                            <path d="m6 6 12 12" />
+                          </svg>
+                        </td>
+                        <td class="bg-primary/5 px-4 py-3 text-center">
+                          <svg
+                            class="text-text-secondary mx-auto size-4"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                          >
+                            <path d="M18 6 6 18" />
+                            <path d="m6 6 12 12" />
+                          </svg>
+                        </td>
+                        <td class="py-3 pl-4 text-center">
+                          <svg
+                            class="text-success mx-auto size-4"
                             viewBox="0 0 24 24"
                             fill="none"
                             stroke="currentColor"
@@ -1008,25 +1053,28 @@
                       <tr>
                         <td class="py-4 pr-4"></td>
                         <td class="p-4">
-                          <button
-                            class="bg-accent hover:bg-accent-hover text-accent-contrast font-semibold flex items-center px-4 py-2 gap-2 min-h-10 rounded-md transition-colors duration-400 w-full justify-center"
+                          <a
+                            href="#"
+                            class="bg-accent text-accent-contrast hover:bg-accent-hover focus-visible:ring-primary focus-visible:ring-offset-background flex min-h-11 w-full items-center justify-center gap-2 rounded-md px-4 py-2 font-semibold transition-colors duration-400 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50"
                           >
                             Get started
-                          </button>
+                          </a>
                         </td>
-                        <td class="p-4 bg-primary/5 rounded-b-lg">
-                          <button
-                            class="bg-primary hover:bg-primary-hover text-primary-contrast font-semibold flex items-center px-4 py-2 gap-2 min-h-10 rounded-md transition-colors duration-400 w-full justify-center"
+                        <td class="bg-primary/5 rounded-b-lg p-4">
+                          <a
+                            href="#"
+                            class="bg-primary text-primary-contrast hover:bg-primary-hover focus-visible:ring-primary focus-visible:ring-offset-background flex min-h-11 w-full items-center justify-center gap-2 rounded-md px-4 py-2 font-semibold transition-colors duration-400 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50"
                           >
                             Get started
-                          </button>
+                          </a>
                         </td>
                         <td class="p-4">
-                          <button
-                            class="bg-primary hover:bg-primary-hover text-primary-contrast font-semibold flex items-center px-4 py-2 gap-2 min-h-10 rounded-md transition-colors duration-400 w-full justify-center"
+                          <a
+                            href="#"
+                            class="bg-primary text-primary-contrast hover:bg-primary-hover focus-visible:ring-primary focus-visible:ring-offset-background flex min-h-11 w-full items-center justify-center gap-2 rounded-md px-4 py-2 font-semibold transition-colors duration-400 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50"
                           >
                             Contact sales
-                          </button>
+                          </a>
                         </td>
                       </tr>
                     </tbody>

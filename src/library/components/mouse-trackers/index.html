@@ -7,15 +7,15 @@
     <meta name="copyright" content="Coden Agency" />
     <meta
       name="description"
-      content="A curated collection of reusable testimonial components built with TailwindCSS. Browse quote cards, avatar testimonials, and grid layouts."
+      content="A curated collection of reusable mouse trail effects built with vanilla JavaScript and CSS/TailwindCSS."
     />
 
-    <title>Mouse tracker - Components Library</title>
+    <title>Mouse trackers - Components Library</title>
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="stylesheet" href="../../../_ui/styles/index.css" />
-    <script type="module" src="../../../_ui/components/index.js" defer></script>
-    <script type="module" src="../../../_ui/scripts/index.js" defer></script>
-    <script type="module" src="../header-section.js" defer></script>
+    <script type="module" src="../../../_ui/components/index.js"></script>
+    <script type="module" src="../../../_ui/scripts/index.js"></script>
+    <script type="module" src="../header-section.js"></script>
   </head>
 
   <body>
@@ -26,19 +26,19 @@
         <components-header-section></components-header-section>
 
         <div class="flex w-full justify-center px-4">
-          <h2 class="max-w-7xl w-full split-chars">Mouse trackers</h2>
+          <h2 class="split-chars w-full max-w-7xl">Mouse trackers</h2>
         </div>
 
         <section class="sect">
           <div class="sect-container gap-24">
             <custom-frame title="Simple dot">
-              <div class="w-full min-h-96 bg-background">
+              <div class="bg-background min-h-96 w-full">
                 <div
-                  class="flex gap-6 items-stretch justify-center w-full flex-wrap max-w-7xl mx-auto"
+                  class="mx-auto flex w-full max-w-7xl flex-wrap items-stretch justify-center gap-6"
                 >
                   <div
                     id="tracker-1"
-                    class="size-4 bg-primary rounded-full fixed z-99 top-0 left-0 -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+                    class="bg-primary pointer-events-none fixed top-0 left-0 z-99 size-4 -translate-x-1/2 -translate-y-1/2 rounded-full"
                   ></div>
                   <script>
                     const tracker = document.getElementById("tracker-1");
@@ -56,13 +56,13 @@
               </div>
             </custom-frame>
             <custom-frame title="Bordered circle">
-              <div class="w-full min-h-96 bg-background">
+              <div class="bg-background min-h-96 w-full">
                 <div
-                  class="flex gap-6 items-stretch justify-center w-full flex-wrap max-w-7xl mx-auto"
+                  class="mx-auto flex w-full max-w-7xl flex-wrap items-stretch justify-center gap-6"
                 >
                   <div
                     id="tracker-2"
-                    class="size-16 bg-primary/10 border border-primary rounded-full fixed z-99 top-0 left-0 -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+                    class="bg-primary/10 border-primary pointer-events-none fixed top-0 left-0 z-99 size-16 -translate-x-1/2 -translate-y-1/2 rounded-full border"
                   ></div>
                   <script>
                     const tracker2 = document.getElementById("tracker-2");
@@ -81,25 +81,25 @@
             </custom-frame>
 
             <custom-frame title="Multi-dot trail">
-              <div class="w-full min-h-96 bg-background">
+              <div class="bg-background min-h-96 w-full">
                 <div
-                  class="flex gap-6 items-stretch justify-center w-full flex-wrap max-w-7xl mx-auto"
+                  class="mx-auto flex w-full max-w-7xl flex-wrap items-stretch justify-center gap-6"
                 >
                   <div
                     id="trail-1"
-                    class="size-4 bg-primary rounded-full fixed z-99 top-0 left-0 -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+                    class="bg-primary pointer-events-none fixed top-0 left-0 z-99 size-4 -translate-x-1/2 -translate-y-1/2 rounded-full"
                   ></div>
                   <div
                     id="trail-2"
-                    class="size-3 bg-primary/70 rounded-full fixed z-99 top-0 left-0 -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+                    class="bg-primary/70 pointer-events-none fixed top-0 left-0 z-99 size-3 -translate-x-1/2 -translate-y-1/2 rounded-full"
                   ></div>
                   <div
                     id="trail-3"
-                    class="size-2 bg-primary/40 rounded-full fixed z-99 top-0 left-0 -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+                    class="bg-primary/40 pointer-events-none fixed top-0 left-0 z-99 size-2 -translate-x-1/2 -translate-y-1/2 rounded-full"
                   ></div>
                   <div
                     id="trail-4"
-                    class="size-1.5 bg-primary/20 rounded-full fixed z-99 top-0 left-0 -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+                    class="bg-primary/20 pointer-events-none fixed top-0 left-0 z-99 size-1.5 -translate-x-1/2 -translate-y-1/2 rounded-full"
                   ></div>
                   <script>
                     {
@@ -127,13 +127,13 @@
             </custom-frame>
 
             <custom-frame title="Glow">
-              <div class="w-full min-h-96 bg-background">
+              <div class="bg-background min-h-96 w-full">
                 <div
-                  class="flex gap-6 items-stretch justify-center w-full flex-wrap max-w-7xl mx-auto"
+                  class="mx-auto flex w-full max-w-7xl flex-wrap items-stretch justify-center gap-6"
                 >
                   <div
                     id="glow-tracker"
-                    class="size-32 bg-primary/20 rounded-full fixed z-99 top-0 left-0 -translate-x-1/2 -translate-y-1/2 blur-3xl pointer-events-none"
+                    class="bg-primary/20 pointer-events-none fixed top-0 left-0 z-99 size-32 -translate-x-1/2 -translate-y-1/2 rounded-full blur-3xl"
                   ></div>
                   <script>
                     {
@@ -158,13 +158,13 @@
             </custom-frame>
 
             <custom-frame title="Stretchy velocity blob">
-              <div class="w-full min-h-96 bg-background">
+              <div class="bg-background min-h-96 w-full">
                 <div
-                  class="flex gap-6 items-stretch justify-center w-full flex-wrap max-w-7xl mx-auto"
+                  class="mx-auto flex w-full max-w-7xl flex-wrap items-stretch justify-center gap-6"
                 >
                   <div
                     id="stretchy-tracker"
-                    class="size-4 bg-primary rounded-full fixed z-99 top-0 left-0 -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+                    class="bg-primary pointer-events-none fixed top-0 left-0 z-99 size-4 -translate-x-1/2 -translate-y-1/2 rounded-full"
                   ></div>
                   <script>
                     {
@@ -197,9 +197,9 @@
             </custom-frame>
 
             <custom-frame title="Ripple rings">
-              <div class="w-full min-h-96 bg-background relative overflow-hidden">
+              <div class="bg-background relative min-h-96 w-full overflow-hidden">
                 <div
-                  class="flex gap-6 items-center justify-center w-full h-96 max-w-7xl mx-auto text-text-secondary text-lg"
+                  class="text-text-secondary mx-auto flex h-96 w-full max-w-7xl items-center justify-center gap-6 text-lg"
                 >
                   Move your mouse to create ripples
                 </div>
@@ -241,15 +241,15 @@
             </custom-frame>
 
             <custom-frame title="Spotlight reveal">
-              <div class="w-full min-h-96 bg-primary relative overflow-hidden">
-                <div class="flex items-center justify-center w-full h-96 max-w-7xl mx-auto">
-                  <p class="text-primary-contrast text-4xl font-bold text-center select-none px-8">
+              <div class="bg-primary relative min-h-96 w-full overflow-hidden">
+                <div class="mx-auto flex h-96 w-full max-w-7xl items-center justify-center">
+                  <p class="text-primary-contrast px-8 text-center text-4xl font-bold select-none">
                     Hidden treasure revealed by your cursor ✦
                   </p>
                 </div>
                 <div
                   id="spotlight-overlay"
-                  class="absolute inset-0 bg-primary pointer-events-none"
+                  class="bg-primary pointer-events-none absolute inset-0"
                   style="
                     mask-image: radial-gradient(circle 0px at 50% 50%, transparent 0%, black 100%);
                     -webkit-mask-image: radial-gradient(
@@ -285,10 +285,10 @@
             <custom-frame title="Particle burst">
               <div
                 id="particle-container"
-                class="w-full min-h-96 bg-background relative overflow-hidden"
+                class="bg-background relative min-h-96 w-full overflow-hidden"
               >
                 <div
-                  class="flex items-center justify-center w-full h-96 max-w-7xl mx-auto text-text-secondary text-lg"
+                  class="text-text-secondary mx-auto flex h-96 w-full max-w-7xl items-center justify-center text-lg"
                 >
                   Move fast for more particles
                 </div>
@@ -355,11 +355,11 @@
             </custom-frame>
 
             <custom-frame title="Crosshair">
-              <div class="w-full min-h-96 bg-background relative overflow-hidden">
-                <div class="flex items-center justify-center w-full h-96 max-w-7xl mx-auto">
+              <div class="bg-background relative min-h-96 w-full overflow-hidden">
+                <div class="mx-auto flex h-96 w-full max-w-7xl items-center justify-center">
                   <div
                     id="crosshair-h"
-                    class="fixed z-99 pointer-events-none top-0 left-0"
+                    class="pointer-events-none fixed top-0 left-0 z-99"
                     style="
                       width: 100vw;
                       height: 1px;
@@ -375,7 +375,7 @@
                   ></div>
                   <div
                     id="crosshair-v"
-                    class="fixed z-99 pointer-events-none top-0 left-0"
+                    class="pointer-events-none fixed top-0 left-0 z-99"
                     style="
                       width: 1px;
                       height: 100vh;
@@ -391,11 +391,11 @@
                   ></div>
                   <div
                     id="crosshair-dot"
-                    class="size-2 bg-primary rounded-full fixed z-99 top-0 left-0 -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+                    class="bg-primary pointer-events-none fixed top-0 left-0 z-99 size-2 -translate-x-1/2 -translate-y-1/2 rounded-full"
                   ></div>
                   <div
                     id="crosshair-label"
-                    class="fixed z-99 pointer-events-none top-0 left-0 text-xs font-mono bg-primary text-primary-contrast px-2 py-1 rounded"
+                    class="bg-primary text-primary-contrast pointer-events-none fixed top-0 left-0 z-99 rounded px-2 py-1 font-mono text-xs"
                   >
                     0, 0
                   </div>
@@ -421,13 +421,13 @@
             </custom-frame>
 
             <custom-frame title="Ink trail">
-              <div class="w-full min-h-96 bg-background relative overflow-hidden">
+              <div class="bg-background relative min-h-96 w-full overflow-hidden">
                 <canvas
                   id="ink-canvas"
-                  class="absolute inset-0 w-full h-full pointer-events-none"
+                  class="pointer-events-none absolute inset-0 h-full w-full"
                 ></canvas>
                 <div
-                  class="flex items-center justify-center w-full h-96 max-w-7xl mx-auto text-text-secondary text-lg relative z-10"
+                  class="text-text-secondary relative z-10 mx-auto flex h-96 w-full max-w-7xl items-center justify-center text-lg"
                 >
                   Draw with your mouse
                 </div>
@@ -501,15 +501,15 @@
             </custom-frame>
 
             <custom-frame title="Gradient orbit">
-              <div class="w-full min-h-96 bg-background relative overflow-hidden">
+              <div class="bg-background relative min-h-96 w-full overflow-hidden">
                 <div
-                  class="flex items-center justify-center w-full h-96 max-w-7xl mx-auto text-text-secondary text-lg"
+                  class="text-text-secondary mx-auto flex h-96 w-full max-w-7xl items-center justify-center text-lg"
                 >
                   Two orbs orbit your cursor
                 </div>
                 <div
                   id="orbit-a"
-                  class="fixed z-99 pointer-events-none top-0 left-0 -translate-x-1/2 -translate-y-1/2 rounded-full"
+                  class="pointer-events-none fixed top-0 left-0 z-99 -translate-x-1/2 -translate-y-1/2 rounded-full"
                   style="
                     width: 12px;
                     height: 12px;
@@ -518,7 +518,7 @@
                 ></div>
                 <div
                   id="orbit-b"
-                  class="fixed z-99 pointer-events-none top-0 left-0 -translate-x-1/2 -translate-y-1/2 rounded-full"
+                  class="pointer-events-none fixed top-0 left-0 z-99 -translate-x-1/2 -translate-y-1/2 rounded-full"
                   style="
                     width: 8px;
                     height: 8px;
@@ -559,11 +559,11 @@
             </custom-frame>
 
             <custom-frame title="Spring emoji">
-              <div class="w-full min-h-96 bg-background relative overflow-hidden">
-                <div class="flex items-center justify-center w-full h-96 max-w-7xl mx-auto">
+              <div class="bg-background relative min-h-96 w-full overflow-hidden">
+                <div class="mx-auto flex h-96 w-full max-w-7xl items-center justify-center">
                   <div
                     id="spring-emoji"
-                    class="fixed z-99 pointer-events-none top-0 left-0 text-3xl select-none"
+                    class="pointer-events-none fixed top-0 left-0 z-99 text-3xl select-none"
                     style="transform: translate(-50%, -50%)"
                   >
                     ✦
@@ -608,11 +608,11 @@
             </custom-frame>
 
             <custom-frame title="Magnetic text">
-              <div class="w-full min-h-96 bg-background relative overflow-hidden">
-                <div class="flex items-center justify-center w-full h-96 max-w-7xl mx-auto">
+              <div class="bg-background relative min-h-96 w-full overflow-hidden">
+                <div class="mx-auto flex h-96 w-full max-w-7xl items-center justify-center">
                   <p
                     id="magnetic-text"
-                    class="text-5xl md:text-7xl font-bold text-text select-none tracking-tight text-center px-4"
+                    class="text-text px-4 text-center text-5xl font-bold tracking-tight select-none md:text-7xl"
                   >
                     Magnetic
                   </p>

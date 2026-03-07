@@ -29,7 +29,7 @@ website-template/
 ├── plugins/             # Vite plugins
 ├── src/                 # Website source code
 │   ├── _public/         # Static assets copied as-is to build output
-│   ├── _ui/             # Interface core 
+│   ├── _ui/             # Interface core
 │   │   ├── components/  # Reusable UI components (WebComponents)
 │   │   ├── scripts/     # UI logic
 │   │   └── styles/      # Global styles

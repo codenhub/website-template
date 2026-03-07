@@ -26,51 +26,51 @@
         <components-header-section></components-header-section>
 
         <div class="flex w-full justify-center px-4">
-          <h2 class="max-w-7xl w-full split-chars">Featured</h2>
+          <h2 class="split-chars w-full max-w-7xl">Featured</h2>
         </div>
 
         <section class="sect">
           <div class="sect-container flex-col gap-6">
             <custom-frame title="Badges">
               <div
-                class="flex gap-4 items-center justify-center w-full flex-wrap p-12 bg-background"
+                class="bg-background flex w-full flex-wrap items-center justify-center gap-4 p-12"
               >
                 <span
-                  class="px-3 py-1 text-sm font-medium rounded-md bg-primary text-primary-contrast"
+                  class="bg-primary text-primary-contrast rounded-md px-3 py-1 text-sm font-medium"
                 >
                   Primary
                 </span>
                 <span
-                  class="px-4 py-1 text-sm font-medium rounded-full bg-accent text-accent-contrast"
+                  class="bg-accent text-accent-contrast rounded-full px-4 py-1 text-sm font-medium"
                 >
                   Secondary
                 </span>
                 <span
-                  class="px-3 py-1 text-sm font-medium rounded-md bg-success-light text-success-dark"
+                  class="bg-success-light text-success-dark rounded-md px-3 py-1 text-sm font-medium"
                 >
                   Success
                 </span>
                 <span
-                  class="px-3 py-1 text-sm font-medium rounded-md border border-warning text-warning"
+                  class="border-warning text-warning rounded-md border px-3 py-1 text-sm font-medium"
                 >
                   Warning
                 </span>
                 <span
-                  class="px-3 py-1 text-sm font-bold bg-error text-error-contrast border-2 border-neutral-950 shadow-[2px_2px_0_#0a0a0a]"
+                  class="bg-error text-error-contrast border-2 border-neutral-950 px-3 py-1 text-sm font-bold shadow-[2px_2px_0_#0a0a0a]"
                 >
                   Error
                 </span>
                 <span
-                  class="inline-flex items-center gap-1.5 px-3 py-1 text-sm font-medium rounded-full bg-info-light text-info-dark border border-info"
+                  class="bg-info-light text-info-dark border-info inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-sm font-medium"
                 >
-                  <span class="size-2 rounded-full bg-info"></span>
+                  <span class="bg-info size-2 rounded-full"></span>
                   In review
                 </span>
               </div>
             </custom-frame>
             <a
               href="/library/components/badges/"
-              class="flex items-center gap-2 hover:gap-4 font-semibold text-text-secondary transition-all duration-400"
+              class="text-text-secondary focus-visible:ring-primary focus-visible:ring-offset-background flex min-h-11 items-center gap-2 px-1 font-semibold transition-all duration-400 hover:gap-4 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
             >
               See more
               <svg
@@ -93,10 +93,10 @@
           <div class="sect-container flex-col gap-6">
             <custom-frame title="Buttons">
               <div
-                class="flex gap-6 items-center justify-center w-full flex-wrap p-8 bg-background"
+                class="bg-background flex w-full flex-wrap items-center justify-center gap-6 p-8"
               >
                 <button
-                  class="bg-primary hover:bg-primary-hover text-primary-contrast font-semibold flex w-fit items-center justify-center px-4 py-2 gap-2 min-h-10 rounded-md transition-colors duration-400"
+                  class="bg-primary text-primary-contrast hover:bg-primary-hover focus-visible:ring-primary focus-visible:ring-offset-background flex min-h-11 w-fit items-center justify-center gap-2 rounded-md px-4 py-2 text-sm font-semibold transition-colors duration-400 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50"
                 >
                   <svg
                     class="size-4"
@@ -113,17 +113,18 @@
                   Continue
                 </button>
                 <button
-                  class="bg-accent hover:bg-accent-hover text-accent-contrast font-semibold flex w-fit items-center justify-center px-4 py-2 min-h-10 rounded-md transition-colors duration-400"
+                  class="bg-accent text-accent-contrast hover:bg-accent-hover focus-visible:ring-primary focus-visible:ring-offset-background flex min-h-11 w-fit items-center justify-center rounded-md px-4 py-2 text-sm font-semibold transition-colors duration-400 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50"
                 >
                   Secondary
                 </button>
                 <button
-                  class="bg-transparent hover:bg-primary text-text hover:text-primary-contrast font-semibold flex w-fit items-center justify-center px-4 py-2 min-h-10 rounded-md border border-primary transition-colors duration-400"
+                  class="border-primary text-text hover:bg-primary hover:text-primary-contrast focus-visible:ring-primary focus-visible:ring-offset-background flex min-h-11 w-fit items-center justify-center rounded-md border bg-transparent px-4 py-2 text-sm font-semibold transition-colors duration-400 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50"
                 >
                   Outline
                 </button>
                 <button
-                  class="bg-primary hover:bg-primary-hover text-primary-contrast flex items-center justify-center size-10 rounded-full transition-colors duration-400"
+                  aria-label="Add to favorites"
+                  class="bg-primary text-primary-contrast hover:bg-primary-hover focus-visible:ring-primary focus-visible:ring-offset-background flex size-11 items-center justify-center rounded-full transition-colors duration-400 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50"
                 >
                   <svg
                     class="size-5"
@@ -140,7 +141,7 @@
                   </svg>
                 </button>
                 <button
-                  class="bg-primary text-primary-contrast flex w-fit px-4 py-2 font-semibold border-2 border-neutral-950 shadow-[4px_4px_0_#0a0a0a] hover:shadow-[2px_2px_0_#0a0a0a] hover:translate-0.5 active:shadow-[0_0_0_#0a0a0a] active:translate-1 transition duration-400"
+                  class="bg-primary text-primary-contrast focus-visible:ring-primary focus-visible:ring-offset-background flex min-h-11 w-fit rounded-md border-2 border-neutral-950 px-4 py-2 text-sm font-semibold shadow-[4px_4px_0_#0a0a0a] transition duration-400 hover:translate-0.5 hover:shadow-[2px_2px_0_#0a0a0a] focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none active:translate-1 active:shadow-[0_0_0_#0a0a0a] disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50"
                 >
                   Neobrutalism
                 </button>
@@ -148,7 +149,7 @@
             </custom-frame>
             <a
               href="/library/components/buttons/"
-              class="flex items-center gap-2 hover:gap-4 font-semibold text-text-secondary transition-all duration-400"
+              class="text-text-secondary focus-visible:ring-primary focus-visible:ring-offset-background flex min-h-11 items-center gap-2 px-1 font-semibold transition-all duration-400 hover:gap-4 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
             >
               See more
               <svg
@@ -170,31 +171,31 @@
         <section class="sect">
           <div class="sect-container flex-col gap-6">
             <custom-frame title="Cards">
-              <div class="w-full p-4 md:p-6 bg-background">
-                <div class="grid grid-cols-1 lg:grid-cols-3 min-h-96 gap-6">
+              <div class="bg-background w-full p-4 md:p-6">
+                <div class="grid min-h-96 grid-cols-1 gap-6 lg:grid-cols-3">
                   <div
-                    class="group flex flex-col min-h-64 h-full justify-end overflow-hidden rounded-xl relative"
+                    class="group relative flex h-full min-h-64 flex-col justify-end overflow-hidden rounded-xl"
                   >
                     <img
                       src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&amp;w=2072&amp;auto=format&amp;fit=crop"
                       alt="Development"
-                      class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-400"
+                      class="absolute inset-0 h-full w-full object-cover transition-transform duration-400 group-hover:scale-105"
                     />
                     <div
                       class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"
                     ></div>
                     <div class="relative p-6 text-neutral-50">
-                      <span class="text-xs font-semibold uppercase tracking-wider">
+                      <span class="text-xs font-semibold tracking-wider uppercase">
                         Development
                       </span>
-                      <h4 class="font-semibold text-lg">Modern web development</h4>
+                      <h4 class="text-lg font-semibold">Modern web development</h4>
                       <p class="text-sm text-neutral-300">
                         Build fast, scalable, and secure web applications with the latest
                         technologies.
                       </p>
                       <a
                         href="#"
-                        class="lg:max-h-0 lg:opacity-0 group-hover:max-h-10 group-hover:opacity-100 text-sm font-semibold flex items-center gap-1 hover:gap-2 max-lg:mt-2 group-hover:mt-2 transition-all duration-400"
+                        class="focus-visible:ring-primary focus-visible:ring-offset-background flex items-center gap-1 text-sm font-semibold transition-all duration-400 group-hover:mt-2 group-hover:max-h-10 group-hover:opacity-100 hover:gap-2 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none max-lg:mt-2 lg:max-h-0 lg:opacity-0"
                       >
                         Read more
                         <svg
@@ -213,27 +214,27 @@
                     </div>
                   </div>
                   <div
-                    class="group flex flex-col min-h-64 h-full justify-end overflow-hidden rounded-xl relative"
+                    class="group relative flex h-full min-h-64 flex-col justify-end overflow-hidden rounded-xl"
                   >
                     <img
                       src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&amp;w=2070&amp;auto=format&amp;fit=crop"
                       alt="Collaboration"
-                      class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-400"
+                      class="absolute inset-0 h-full w-full object-cover transition-transform duration-400 group-hover:scale-105"
                     />
                     <div
                       class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"
                     ></div>
                     <div class="relative p-6 text-neutral-50">
-                      <span class="text-xs font-semibold uppercase tracking-wider">
+                      <span class="text-xs font-semibold tracking-wider uppercase">
                         Collaboration
                       </span>
-                      <h4 class="font-semibold text-lg">Team workflows</h4>
+                      <h4 class="text-lg font-semibold">Team workflows</h4>
                       <p class="text-sm text-neutral-300">
                         Streamline your team's productivity with integrated collaboration tools.
                       </p>
                       <a
                         href="#"
-                        class="lg:max-h-0 lg:opacity-0 group-hover:max-h-10 group-hover:opacity-100 text-sm font-semibold flex items-center gap-1 hover:gap-2 max-lg:mt-2 group-hover:mt-2 transition-all duration-400"
+                        class="focus-visible:ring-primary focus-visible:ring-offset-background flex items-center gap-1 text-sm font-semibold transition-all duration-400 group-hover:mt-2 group-hover:max-h-10 group-hover:opacity-100 hover:gap-2 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none max-lg:mt-2 lg:max-h-0 lg:opacity-0"
                       >
                         Read more
                         <svg
@@ -252,25 +253,25 @@
                     </div>
                   </div>
                   <div
-                    class="group flex flex-col min-h-64 h-full justify-end overflow-hidden rounded-xl relative"
+                    class="group relative flex h-full min-h-64 flex-col justify-end overflow-hidden rounded-xl"
                   >
                     <img
                       src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&amp;w=2070&amp;auto=format&amp;fit=crop"
                       alt="Growth"
-                      class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-400"
+                      class="absolute inset-0 h-full w-full object-cover transition-transform duration-400 group-hover:scale-105"
                     />
                     <div
                       class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"
                     ></div>
                     <div class="relative p-6 text-neutral-50">
-                      <span class="text-xs font-semibold uppercase tracking-wider">Growth</span>
-                      <h4 class="font-semibold text-lg">Scale your business</h4>
+                      <span class="text-xs font-semibold tracking-wider uppercase">Growth</span>
+                      <h4 class="text-lg font-semibold">Scale your business</h4>
                       <p class="text-sm text-neutral-300">
                         From startup to enterprise, scale your operations with confidence.
                       </p>
                       <a
                         href="#"
-                        class="lg:max-h-0 lg:opacity-0 group-hover:max-h-10 group-hover:opacity-100 text-sm font-semibold flex items-center gap-1 hover:gap-2 max-lg:mt-2 group-hover:mt-2 transition-all duration-400"
+                        class="focus-visible:ring-primary focus-visible:ring-offset-background flex items-center gap-1 text-sm font-semibold transition-all duration-400 group-hover:mt-2 group-hover:max-h-10 group-hover:opacity-100 hover:gap-2 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none max-lg:mt-2 lg:max-h-0 lg:opacity-0"
                       >
                         Read more
                         <svg
@@ -293,7 +294,7 @@
             </custom-frame>
             <a
               href="/library/components/cards/"
-              class="flex items-center gap-2 hover:gap-4 font-semibold text-text-secondary transition-all duration-400"
+              class="text-text-secondary focus-visible:ring-primary focus-visible:ring-offset-background flex min-h-11 items-center gap-2 px-1 font-semibold transition-all duration-400 hover:gap-4 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
             >
               See more
               <svg
@@ -316,37 +317,44 @@
           <div class="sect-container flex-col gap-6">
             <custom-frame title="Call to action">
               <div
-                class="w-full max-w-7xl px-6 py-16 md:py-20 bg-neutral-900 rounded-2xl text-center"
+                class="w-full max-w-7xl rounded-2xl bg-neutral-900 px-6 py-16 text-center md:py-20"
               >
-                <div class="flex flex-col items-center gap-5 max-w-2xl mx-auto">
-                  <h3 class="text-3xl md:text-4xl font-bold text-white tracking-tight">
+                <div class="mx-auto flex max-w-2xl flex-col items-center gap-5">
+                  <h3 class="text-3xl font-bold tracking-tight text-white md:text-4xl">
                     Stay ahead of the curve
                   </h3>
-                  <p class="text-neutral-400 md:text-lg max-w-lg">
+                  <p class="max-w-lg text-neutral-400 md:text-lg">
                     Get the latest updates, articles, and resources sent straight to your inbox once
                     a week. No spam, ever.
                   </p>
 
                   <form
-                    class="w-full max-w-md flex flex-col sm:flex-row gap-3 mt-2"
-                    onsubmit="event.preventDefault();"
+                    class="mt-2 flex w-full max-w-md flex-col gap-3 sm:flex-row"
+                    id="cta-subscribe-form"
                   >
+                    <label class="sr-only" for="cta-email">Email address</label>
                     <input
+                      id="cta-email"
                       type="email"
                       placeholder="Enter your email"
-                      class="flex-1 px-4 py-2.5 rounded-md bg-white/10 border border-white/15 text-white placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-white/30 transition-all"
+                      class="min-h-11 flex-1 rounded-md border border-white/15 bg-white/10 px-4 py-2.5 text-white placeholder-neutral-500 transition-all duration-200 focus:ring-2 focus:ring-white/30 focus:outline-none"
                       required=""
                     />
                     <button
-                      class="px-5 py-2.5 rounded-md bg-white text-neutral-900 font-semibold hover:bg-neutral-200 transition-colors"
+                      class="focus-visible:ring-primary focus-visible:ring-offset-background min-h-11 rounded-md bg-white px-5 py-2.5 text-sm font-semibold text-neutral-900 transition-colors duration-200 hover:bg-neutral-200 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50"
                     >
                       Subscribe
                     </button>
                   </form>
 
-                  <p class="text-neutral-500 text-sm">
+                  <p class="text-sm text-neutral-500">
                     We care about your data in our
-                    <a href="#" class="underline hover:text-neutral-300">privacy policy</a>
+                    <a
+                      href="#"
+                      class="focus-visible:ring-primary focus-visible:ring-offset-background underline hover:text-neutral-300 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
+                    >
+                      privacy policy
+                    </a>
                     .
                   </p>
                 </div>
@@ -354,7 +362,7 @@
             </custom-frame>
             <a
               href="/library/components/cta/"
-              class="flex items-center gap-2 hover:gap-4 font-semibold text-text-secondary transition-all duration-400"
+              class="text-text-secondary focus-visible:ring-primary focus-visible:ring-offset-background flex min-h-11 items-center gap-2 px-1 font-semibold transition-all duration-400 hover:gap-4 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
             >
               See more
               <svg
@@ -376,23 +384,23 @@
         <section class="sect">
           <div class="sect-container flex-col gap-6">
             <custom-frame title="Features">
-              <div class="w-full bg-background p-6 md:p-12">
-                <div class="max-w-7xl mx-auto">
-                  <div class="text-center max-w-2xl mx-auto mb-16">
+              <div class="bg-background w-full p-6 md:p-12">
+                <div class="mx-auto max-w-7xl">
+                  <div class="mx-auto mb-16 max-w-2xl text-center">
                     <h3>A better way to build</h3>
-                    <p class="mt-4 text-text-secondary md:text-base">
+                    <p class="text-text-secondary mt-4 md:text-base">
                       From prototyping to production, our platform covers every step of the way.
                     </p>
                   </div>
 
-                  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                  <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
                     <!-- Bento 1 -->
                     <div
-                      class="md:col-span-2 relative overflow-hidden rounded-2xl bg-primary text-primary-contrast p-8 md:p-10"
+                      class="bg-primary text-primary-contrast relative overflow-hidden rounded-2xl p-8 md:col-span-2 md:p-10"
                     >
                       <div class="relative z-10 max-w-md">
                         <div
-                          class="flex items-center justify-center size-12 rounded-xl bg-primary-contrast text-primary mb-4"
+                          class="bg-primary-contrast text-primary mb-4 flex size-12 items-center justify-center rounded-xl"
                         >
                           <svg
                             class="size-6"
@@ -408,26 +416,26 @@
                           </svg>
                         </div>
                         <h4>Powerful Analytics Dashboard</h4>
-                        <p class="opacity-80 mt-2">
+                        <p class="mt-2 opacity-80">
                           Visualize your data with interactive charts, real-time metrics, and
                           customizable dashboards that give your team the insights they need.
                         </p>
                       </div>
                       <div
-                        class="absolute top-6 right-6 w-64 h-44 md:w-80 md:h-56 rounded-xl overflow-hidden hidden md:block"
+                        class="absolute top-6 right-6 hidden h-44 w-64 overflow-hidden rounded-xl md:block md:h-56 md:w-80"
                       >
                         <img
                           src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&amp;h=400&amp;fit=crop"
                           alt="Analytics dashboard"
-                          class="w-full h-full object-cover"
+                          class="h-full w-full object-cover"
                         />
                       </div>
                     </div>
 
                     <!-- Bento 2 -->
-                    <div class="relative overflow-hidden rounded-2xl bg-foreground p-8">
+                    <div class="bg-foreground relative overflow-hidden rounded-2xl p-8">
                       <div
-                        class="flex items-center justify-center size-12 rounded-xl bg-primary text-primary-contrast mb-4"
+                        class="bg-primary text-primary-contrast mb-4 flex size-12 items-center justify-center rounded-xl"
                       >
                         <svg
                           class="size-6"
@@ -450,9 +458,9 @@
                     </div>
 
                     <!-- Bento 3 -->
-                    <div class="relative overflow-hidden rounded-2xl bg-foreground p-8">
+                    <div class="bg-foreground relative overflow-hidden rounded-2xl p-8">
                       <div
-                        class="flex items-center justify-center size-12 rounded-xl bg-primary text-primary-contrast mb-4"
+                        class="bg-primary text-primary-contrast mb-4 flex size-12 items-center justify-center rounded-xl"
                       >
                         <svg
                           class="size-6"
@@ -478,11 +486,11 @@
 
                     <!-- Bento 4 -->
                     <div
-                      class="md:col-span-2 relative overflow-hidden rounded-2xl bg-primary text-primary-contrast p-8 md:p-10 selection-contrast"
+                      class="bg-primary text-primary-contrast selection-contrast relative overflow-hidden rounded-2xl p-8 md:col-span-2 md:p-10"
                     >
                       <div class="relative z-10 max-w-lg">
                         <div
-                          class="flex items-center justify-center size-12 rounded-xl bg-primary-contrast text-primary mb-4"
+                          class="bg-primary-contrast text-primary mb-4 flex size-12 items-center justify-center rounded-xl"
                         >
                           <svg
                             class="size-6"
@@ -500,33 +508,33 @@
                           </svg>
                         </div>
                         <h4>Collaborate in Real-time</h4>
-                        <p class="opacity-80 mt-2">
+                        <p class="mt-2 opacity-80">
                           Invite your team, assign roles, leave comments, and track changes—all in a
                           single shared workspace that updates live.
                         </p>
-                        <div class="flex -space-x-2 mt-6">
+                        <div class="mt-6 flex -space-x-2">
                           <img
                             src="https://i.pravatar.cc/80?img=11"
                             alt="Team member"
-                            class="size-10 rounded-full border-2 border-primary object-cover"
+                            class="border-primary size-10 rounded-full border-2 object-cover"
                           />
                           <img
                             src="https://i.pravatar.cc/80?img=12"
                             alt="Team member"
-                            class="size-10 rounded-full border-2 border-primary object-cover"
+                            class="border-primary size-10 rounded-full border-2 object-cover"
                           />
                           <img
                             src="https://i.pravatar.cc/80?img=16"
                             alt="Team member"
-                            class="size-10 rounded-full border-2 border-primary object-cover"
+                            class="border-primary size-10 rounded-full border-2 object-cover"
                           />
                           <img
                             src="https://i.pravatar.cc/80?img=20"
                             alt="Team member"
-                            class="size-10 rounded-full border-2 border-primary object-cover"
+                            class="border-primary size-10 rounded-full border-2 object-cover"
                           />
                           <div
-                            class="size-10 rounded-full border-2 border-primary bg-primary-contrast text-primary flex items-center justify-center text-xs font-bold"
+                            class="border-primary bg-primary-contrast text-primary flex size-10 items-center justify-center rounded-full border-2 text-xs font-bold"
                           >
                             +8
                           </div>
@@ -539,7 +547,7 @@
             </custom-frame>
             <a
               href="/library/components/features/"
-              class="flex items-center gap-2 hover:gap-4 font-semibold text-text-secondary transition-all duration-400"
+              class="text-text-secondary focus-visible:ring-primary focus-visible:ring-offset-background flex min-h-11 items-center gap-2 px-1 font-semibold transition-all duration-400 hover:gap-4 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
             >
               See more
               <svg
@@ -562,11 +570,11 @@
           <div class="sect-container flex-col gap-6">
             <custom-frame title="Heroes">
               <div
-                class="w-full bg-background p-4 md:p-8 min-h-192 flex items-center justify-center"
+                class="bg-background flex min-h-192 w-full items-center justify-center p-4 md:p-8"
               >
-                <div class="flex flex-col items-center text-center max-w-7xl w-full gap-8">
+                <div class="flex w-full max-w-7xl flex-col items-center gap-8 text-center">
                   <span
-                    class="flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-full bg-foreground text-text"
+                    class="bg-foreground text-text flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium"
                   >
                     <svg
                       class="size-4"
@@ -586,23 +594,23 @@
                     <br />
                     ship
                     <span
-                      class="bg-gradient-to-tl from-primary to-accent bg-clip-text text-transparent"
+                      class="from-primary to-accent bg-gradient-to-tl bg-clip-text text-transparent"
                     >
                       everywhere
                     </span>
                   </h1>
-                  <p class="md:text-lg text-text-secondary max-w-2xl">
+                  <p class="text-text-secondary max-w-2xl md:text-lg">
                     A complete design system with production-ready components. Stop reinventing the
                     wheel and start building products your users will love.
                   </p>
-                  <div class="flex items-center gap-4 mt-2">
+                  <div class="mt-2 flex items-center gap-4">
                     <button
-                      class="flex items-center bg-primary text-primary-contrast px-4 py-2 rounded-md font-semibold hover:bg-primary-hover transition duration-400"
+                      class="bg-primary text-primary-contrast hover:bg-primary-hover focus-visible:ring-primary focus-visible:ring-offset-background flex min-h-11 items-center rounded-md px-4 py-2 text-sm font-semibold transition duration-400 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50"
                     >
                       Get started
                     </button>
                     <button
-                      class="flex gap-2 items-center text-primary font-semibold hover:text-primary-hover transition duration-400"
+                      class="text-primary hover:text-primary-hover focus-visible:ring-primary focus-visible:ring-offset-background flex min-h-11 items-center gap-2 px-1 text-sm font-semibold transition duration-400 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50"
                     >
                       Learn more
                       <svg
@@ -620,31 +628,31 @@
                     </button>
                   </div>
                   <div
-                    class="flex flex-wrap justify-center items-center gap-4 mt-4 text-sm text-text-secondary"
+                    class="text-text-secondary mt-4 flex flex-wrap items-center justify-center gap-4 text-sm"
                   >
                     <div class="flex -space-x-2.5">
                       <img
                         src="https://i.pravatar.cc/80?img=11"
                         alt="User avatar"
-                        class="size-8 rounded-full border-2 border-background object-cover"
+                        class="border-background size-8 rounded-full border-2 object-cover"
                       />
                       <img
                         src="https://i.pravatar.cc/80?img=12"
                         alt="User avatar"
-                        class="size-8 rounded-full border-2 border-background object-cover"
+                        class="border-background size-8 rounded-full border-2 object-cover"
                       />
                       <img
                         src="https://i.pravatar.cc/80?img=16"
                         alt="User avatar"
-                        class="size-8 rounded-full border-2 border-background object-cover"
+                        class="border-background size-8 rounded-full border-2 object-cover"
                       />
                       <img
                         src="https://i.pravatar.cc/80?img=20"
                         alt="User avatar"
-                        class="size-8 rounded-full border-2 border-background object-cover"
+                        class="border-background size-8 rounded-full border-2 object-cover"
                       />
                       <div
-                        class="size-8 aspect-square rounded-full border-2 border-background bg-primary flex items-center justify-center text-xs font-bold text-primary-contrast"
+                        class="border-background bg-primary text-primary-contrast flex aspect-square size-8 items-center justify-center rounded-full border-2 text-xs font-bold"
                       >
                         +2k
                       </div>
@@ -660,7 +668,7 @@
             </custom-frame>
             <a
               href="/library/components/heroes/"
-              class="flex items-center gap-2 hover:gap-4 font-semibold text-text-secondary transition-all duration-400"
+              class="text-text-secondary focus-visible:ring-primary focus-visible:ring-offset-background flex min-h-11 items-center gap-2 px-1 font-semibold transition-all duration-400 hover:gap-4 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
             >
               See more
               <svg
@@ -682,54 +690,54 @@
         <section class="sect">
           <div class="sect-container flex-col gap-6">
             <custom-frame title="Stats">
-              <div class="w-full bg-background p-4 md:p-6">
-                <div class="max-w-7xl mx-auto">
-                  <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                    <div class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden">
+              <div class="bg-background w-full p-4 md:p-6">
+                <div class="mx-auto max-w-7xl">
+                  <div class="grid grid-cols-1 items-center gap-12 md:grid-cols-2">
+                    <div class="relative aspect-[4/3] w-full overflow-hidden rounded-2xl">
                       <img
                         src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&amp;q=80"
                         alt="Dashboard metrics"
-                        class="absolute inset-0 w-full h-full object-cover"
+                        class="absolute inset-0 h-full w-full object-cover"
                       />
                       <div
-                        class="absolute inset-0 bg-gradient-to-tr from-primary/30 to-transparent mix-blend-multiply"
+                        class="from-primary/30 absolute inset-0 bg-gradient-to-tr to-transparent mix-blend-multiply"
                       ></div>
                     </div>
 
                     <div class="flex flex-col gap-8">
                       <div>
                         <span
-                          class="inline-flex items-center gap-2 px-3 py-1 text-xs font-semibold tracking-widest uppercase rounded-full bg-foreground mb-6"
+                          class="bg-foreground mb-6 inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-semibold tracking-widest uppercase"
                         >
                           Our Impact
                         </span>
                         <h3>Measurable results across the globe</h3>
-                        <p class="mt-4 text-text-secondary md:text-base">
+                        <p class="text-text-secondary mt-4 md:text-base">
                           Our platform empowers organizations to scale efficiently, offering robust
                           infrastructure and insightful analytics to drive business forward.
                         </p>
                       </div>
 
                       <div class="grid grid-cols-2 gap-x-6 gap-y-8">
-                        <div class="flex flex-col gap-1 border-l-2 border-primary pl-4">
-                          <p class="text-3xl font-title tracking-tight text-text">200+</p>
+                        <div class="border-primary flex flex-col gap-1 border-l-2 pl-4">
+                          <p class="font-title text-text text-3xl tracking-tight">200+</p>
                           <p class="text-sm font-semibold">Enterprise clients</p>
-                          <p class="text-xs text-text-secondary">Using our premium plans</p>
+                          <p class="text-text-secondary text-xs">Using our premium plans</p>
                         </div>
-                        <div class="flex flex-col gap-1 border-l-2 border-primary pl-4">
-                          <p class="text-3xl font-title tracking-tight text-text">99.99%</p>
+                        <div class="border-primary flex flex-col gap-1 border-l-2 pl-4">
+                          <p class="font-title text-text text-3xl tracking-tight">99.99%</p>
                           <p class="text-sm font-semibold">Guaranteed uptime</p>
-                          <p class="text-xs text-text-secondary">Zero planned downtime</p>
+                          <p class="text-text-secondary text-xs">Zero planned downtime</p>
                         </div>
-                        <div class="flex flex-col gap-1 border-l-2 border-primary pl-4">
-                          <p class="text-3xl font-title tracking-tight text-text">15M</p>
+                        <div class="border-primary flex flex-col gap-1 border-l-2 pl-4">
+                          <p class="font-title text-text text-3xl tracking-tight">15M</p>
                           <p class="text-sm font-semibold">Daily transactions</p>
-                          <p class="text-xs text-text-secondary">Processed flawlessly</p>
+                          <p class="text-text-secondary text-xs">Processed flawlessly</p>
                         </div>
-                        <div class="flex flex-col gap-1 border-l-2 border-primary pl-4">
-                          <p class="text-3xl font-title tracking-tight text-text">24/7</p>
+                        <div class="border-primary flex flex-col gap-1 border-l-2 pl-4">
+                          <p class="font-title text-text text-3xl tracking-tight">24/7</p>
                           <p class="text-sm font-semibold">Global support</p>
-                          <p class="text-xs text-text-secondary">With &lt;15m response time</p>
+                          <p class="text-text-secondary text-xs">With &lt;15m response time</p>
                         </div>
                       </div>
                     </div>
@@ -739,7 +747,7 @@
             </custom-frame>
             <a
               href="/library/components/stats/"
-              class="flex items-center gap-2 hover:gap-4 font-semibold text-text-secondary transition-all duration-400"
+              class="text-text-secondary focus-visible:ring-primary focus-visible:ring-offset-background flex min-h-11 items-center gap-2 px-1 font-semibold transition-all duration-400 hover:gap-4 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
             >
               See more
               <svg
@@ -761,11 +769,11 @@
         <section class="sect">
           <div class="sect-container flex-col gap-6">
             <custom-frame title="Steps">
-              <div class="w-full bg-background p-6 md:p-12">
-                <div class="max-w-3xl mx-auto">
-                  <div class="text-center mb-16">
+              <div class="bg-background w-full p-6 md:p-12">
+                <div class="mx-auto max-w-3xl">
+                  <div class="mb-16 text-center">
                     <h3>Our journey</h3>
-                    <p class="mt-4 text-text-secondary md:text-base">
+                    <p class="text-text-secondary mt-4 md:text-base">
                       Key milestones that shaped who we are today.
                     </p>
                   </div>
@@ -773,18 +781,18 @@
                   <div class="relative">
                     <!-- Vertical line -->
                     <div
-                      class="absolute left-5 md:left-1/2 md:-translate-x-px top-0 bottom-0 w-0.5 bg-border"
+                      class="bg-border absolute top-0 bottom-0 left-5 w-0.5 md:left-1/2 md:-translate-x-px"
                       aria-hidden="true"
                     ></div>
 
                     <div class="flex flex-col gap-12">
                       <!-- Event 1 -->
                       <div
-                        class="relative flex flex-col md:flex-row md:items-center gap-4 md:gap-8"
+                        class="relative flex flex-col gap-4 md:flex-row md:items-center md:gap-8"
                       >
-                        <div class="md:w-1/2 md:text-right md:pr-12 pl-14 md:pl-0">
+                        <div class="pl-14 md:w-1/2 md:pr-12 md:pl-0 md:text-right">
                           <span
-                            class="text-xs font-semibold tracking-widest uppercase text-text-secondary"
+                            class="text-text-secondary text-xs font-semibold tracking-widest uppercase"
                           >
                             January 2024
                           </span>
@@ -795,22 +803,22 @@
                           </p>
                         </div>
                         <div
-                          class="absolute left-2.5 md:left-1/2 md:-translate-x-1/2 top-0 size-5 rounded-full bg-primary border-4 border-background"
+                          class="bg-primary border-background absolute top-0 left-2.5 size-5 rounded-full border-4 md:left-1/2 md:-translate-x-1/2"
                         ></div>
-                        <div class="md:w-1/2 md:pl-12 hidden md:block"></div>
+                        <div class="hidden md:block md:w-1/2 md:pl-12"></div>
                       </div>
 
                       <!-- Event 2 -->
                       <div
-                        class="relative flex flex-col md:flex-row md:items-center gap-4 md:gap-8"
+                        class="relative flex flex-col gap-4 md:flex-row md:items-center md:gap-8"
                       >
-                        <div class="md:w-1/2 md:text-right md:pr-12 hidden md:block"></div>
+                        <div class="hidden md:block md:w-1/2 md:pr-12 md:text-right"></div>
                         <div
-                          class="absolute left-2.5 md:left-1/2 md:-translate-x-1/2 top-0 size-5 rounded-full bg-primary border-4 border-background"
+                          class="bg-primary border-background absolute top-0 left-2.5 size-5 rounded-full border-4 md:left-1/2 md:-translate-x-1/2"
                         ></div>
-                        <div class="md:w-1/2 md:pl-12 pl-14">
+                        <div class="pl-14 md:w-1/2 md:pl-12">
                           <span
-                            class="text-xs font-semibold tracking-widest uppercase text-text-secondary"
+                            class="text-text-secondary text-xs font-semibold tracking-widest uppercase"
                           >
                             June 2024
                           </span>
@@ -824,11 +832,11 @@
 
                       <!-- Event 3 -->
                       <div
-                        class="relative flex flex-col md:flex-row md:items-center gap-4 md:gap-8"
+                        class="relative flex flex-col gap-4 md:flex-row md:items-center md:gap-8"
                       >
-                        <div class="md:w-1/2 md:text-right md:pr-12 pl-14 md:pl-0">
+                        <div class="pl-14 md:w-1/2 md:pr-12 md:pl-0 md:text-right">
                           <span
-                            class="text-xs font-semibold tracking-widest uppercase text-text-secondary"
+                            class="text-text-secondary text-xs font-semibold tracking-widest uppercase"
                           >
                             December 2024
                           </span>
@@ -839,22 +847,22 @@
                           </p>
                         </div>
                         <div
-                          class="absolute left-2.5 md:left-1/2 md:-translate-x-1/2 top-0 size-5 rounded-full bg-primary border-4 border-background"
+                          class="bg-primary border-background absolute top-0 left-2.5 size-5 rounded-full border-4 md:left-1/2 md:-translate-x-1/2"
                         ></div>
-                        <div class="md:w-1/2 md:pl-12 hidden md:block"></div>
+                        <div class="hidden md:block md:w-1/2 md:pl-12"></div>
                       </div>
 
                       <!-- Event 4 -->
                       <div
-                        class="relative flex flex-col md:flex-row md:items-center gap-4 md:gap-8"
+                        class="relative flex flex-col gap-4 md:flex-row md:items-center md:gap-8"
                       >
-                        <div class="md:w-1/2 md:text-right md:pr-12 hidden md:block"></div>
+                        <div class="hidden md:block md:w-1/2 md:pr-12 md:text-right"></div>
                         <div
-                          class="absolute left-2.5 md:left-1/2 md:-translate-x-1/2 top-0 size-5 rounded-full bg-primary border-4 border-background"
+                          class="bg-primary border-background absolute top-0 left-2.5 size-5 rounded-full border-4 md:left-1/2 md:-translate-x-1/2"
                         ></div>
-                        <div class="md:w-1/2 md:pl-12 pl-14">
+                        <div class="pl-14 md:w-1/2 md:pl-12">
                           <span
-                            class="text-xs font-semibold tracking-widest uppercase text-text-secondary"
+                            class="text-text-secondary text-xs font-semibold tracking-widest uppercase"
                           >
                             August 2025
                           </span>
@@ -868,11 +876,11 @@
 
                       <!-- Event 5 -->
                       <div
-                        class="relative flex flex-col md:flex-row md:items-center gap-4 md:gap-8"
+                        class="relative flex flex-col gap-4 md:flex-row md:items-center md:gap-8"
                       >
-                        <div class="md:w-1/2 md:text-right md:pr-12 pl-14 md:pl-0">
+                        <div class="pl-14 md:w-1/2 md:pr-12 md:pl-0 md:text-right">
                           <span
-                            class="text-xs font-semibold tracking-widest uppercase text-text-secondary"
+                            class="text-text-secondary text-xs font-semibold tracking-widest uppercase"
                           >
                             February 2026
                           </span>
@@ -883,9 +891,9 @@
                           </p>
                         </div>
                         <div
-                          class="absolute left-2.5 md:left-1/2 md:-translate-x-1/2 top-0 size-5 rounded-full bg-primary border-4 border-background"
+                          class="bg-primary border-background absolute top-0 left-2.5 size-5 rounded-full border-4 md:left-1/2 md:-translate-x-1/2"
                         ></div>
-                        <div class="md:w-1/2 md:pl-12 hidden md:block"></div>
+                        <div class="hidden md:block md:w-1/2 md:pl-12"></div>
                       </div>
                     </div>
                   </div>
@@ -894,7 +902,7 @@
             </custom-frame>
             <a
               href="/library/components/steps/"
-              class="flex items-center gap-2 hover:gap-4 font-semibold text-text-secondary transition-all duration-400"
+              class="text-text-secondary focus-visible:ring-primary focus-visible:ring-offset-background flex min-h-11 items-center gap-2 px-1 font-semibold transition-all duration-400 hover:gap-4 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
             >
               See more
               <svg
@@ -916,31 +924,31 @@
         <section class="sect">
           <div class="sect-container flex-col gap-6">
             <custom-frame title="Team">
-              <div class="w-full bg-background p-4 md:p-6 lg:py-20">
-                <div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-12 lg:gap-16">
+              <div class="bg-background w-full p-4 md:p-6 lg:py-20">
+                <div class="mx-auto flex max-w-7xl flex-col gap-12 lg:flex-row lg:gap-16">
                   <!-- Featured Member (Left) -->
-                  <div class="flex-1 w-full lg:max-w-md flex flex-col gap-6">
+                  <div class="flex w-full flex-1 flex-col gap-6 lg:max-w-md">
                     <div
-                      class="relative w-full aspect-[4/5] rounded-3xl overflow-hidden bg-foreground"
+                      class="bg-foreground relative aspect-[4/5] w-full overflow-hidden rounded-3xl"
                     >
                       <img
                         src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=800&amp;h=1000&amp;fit=crop&amp;crop=face"
                         alt="James Wilson"
-                        class="w-full h-full object-cover"
+                        class="h-full w-full object-cover"
                       />
                     </div>
                     <div>
-                      <h3 class="text-2xl md:text-3xl font-bold">James Wilson</h3>
-                      <p class="text-primary font-medium mt-1">Chief Executive Officer</p>
-                      <p class="mt-4 text-text-secondary">
+                      <h3 class="text-2xl font-bold md:text-3xl">James Wilson</h3>
+                      <p class="text-primary mt-1 font-medium">Chief Executive Officer</p>
+                      <p class="text-text-secondary mt-4">
                         "We believe that great software is built by great teams. Our goal is to
                         create products that make people's lives easier and their work more
                         efficient."
                       </p>
-                      <div class="flex gap-4 mt-6">
+                      <div class="mt-6 flex gap-4">
                         <a
                           href="#"
-                          class="flex items-center justify-center size-10 rounded-full bg-foreground text-text hover:bg-primary hover:text-primary-contrast transition-colors"
+                          class="bg-foreground text-text hover:bg-primary hover:text-primary-contrast focus-visible:ring-primary focus-visible:ring-offset-background flex size-11 items-center justify-center rounded-full transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
                           aria-label="LinkedIn"
                         >
                           <svg class="size-4" viewBox="0 0 24 24" fill="currentColor">
@@ -951,7 +959,7 @@
                         </a>
                         <a
                           href="#"
-                          class="flex items-center justify-center size-10 rounded-full bg-foreground text-text hover:bg-primary hover:text-primary-contrast transition-colors"
+                          class="bg-foreground text-text hover:bg-primary hover:text-primary-contrast focus-visible:ring-primary focus-visible:ring-offset-background flex size-11 items-center justify-center rounded-full transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
                           aria-label="Twitter"
                         >
                           <svg class="size-4" viewBox="0 0 24 24" fill="currentColor">
@@ -965,17 +973,17 @@
                   </div>
 
                   <!-- Other Team Members (Right) -->
-                  <div class="flex-1 w-full pt-4 lg:pt-0">
+                  <div class="w-full flex-1 pt-4 lg:pt-0">
                     <div class="mb-10">
                       <span
-                        class="inline-flex items-center gap-2 px-3 py-1 text-xs font-semibold tracking-widest uppercase rounded-full bg-foreground text-text-secondary mb-4"
+                        class="bg-foreground text-text-secondary mb-4 inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-semibold tracking-widest uppercase"
                       >
                         Leadership team
                       </span>
                       <h4 class="text-2xl font-bold">Driving continuous innovation</h4>
                     </div>
 
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-10">
+                    <div class="grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2">
                       <!-- Member 1 -->
                       <div class="flex flex-col gap-4">
                         <img
@@ -984,8 +992,8 @@
                           class="size-24 rounded-full object-cover"
                         />
                         <div>
-                          <h6 class="font-semibold text-lg">Sarah Chen</h6>
-                          <p class="text-primary text-sm font-medium mb-2">CTO</p>
+                          <h6 class="text-lg font-semibold">Sarah Chen</h6>
+                          <p class="text-primary mb-2 text-sm font-medium">CTO</p>
                           <p class="text-text-secondary text-sm">
                             Architecture mastermind building scalable systems for the modern web.
                           </p>
@@ -1000,8 +1008,8 @@
                           class="size-24 rounded-full object-cover"
                         />
                         <div>
-                          <h6 class="font-semibold text-lg">Marcus Rivera</h6>
-                          <p class="text-primary text-sm font-medium mb-2">Head of Design</p>
+                          <h6 class="text-lg font-semibold">Marcus Rivera</h6>
+                          <p class="text-primary mb-2 text-sm font-medium">Head of Design</p>
                           <p class="text-text-secondary text-sm">
                             Award-winning designer creating intuitive and breathtaking user
                             experiences.
@@ -1017,8 +1025,8 @@
                           class="size-24 rounded-full object-cover"
                         />
                         <div>
-                          <h6 class="font-semibold text-lg">Maya Patel</h6>
-                          <p class="text-primary text-sm font-medium mb-2">Lead Engineer</p>
+                          <h6 class="text-lg font-semibold">Maya Patel</h6>
+                          <p class="text-primary mb-2 text-sm font-medium">Lead Engineer</p>
                           <p class="text-text-secondary text-sm">
                             Pioneering edge computing solutions and optimizing performance metrics.
                           </p>
@@ -1033,8 +1041,8 @@
                           class="size-24 rounded-full object-cover"
                         />
                         <div>
-                          <h6 class="font-semibold text-lg">Alex Morgan</h6>
-                          <p class="text-primary text-sm font-medium mb-2">COO</p>
+                          <h6 class="text-lg font-semibold">Alex Morgan</h6>
+                          <p class="text-primary mb-2 text-sm font-medium">COO</p>
                           <p class="text-text-secondary text-sm">
                             Operations expert ensuring everything runs smoothly across worldwide
                             teams.
@@ -1048,7 +1056,7 @@
             </custom-frame>
             <a
               href="/library/components/team/"
-              class="flex items-center gap-2 hover:gap-4 font-semibold text-text-secondary transition-all duration-400"
+              class="text-text-secondary focus-visible:ring-primary focus-visible:ring-offset-background flex min-h-11 items-center gap-2 px-1 font-semibold transition-all duration-400 hover:gap-4 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
             >
               See more
               <svg
@@ -1070,33 +1078,33 @@
         <section class="sect">
           <div class="sect-container flex-col gap-6">
             <custom-frame title="Testimonials">
-              <div class="w-full p-4 md:p-6 bg-background">
-                <div class="flex flex-col items-center gap-6 w-full max-w-3xl mx-auto py-8">
-                  <svg class="size-12 text-primary/10" viewBox="0 0 24 24" fill="currentColor">
+              <div class="bg-background w-full p-4 md:p-6">
+                <div class="mx-auto flex w-full max-w-3xl flex-col items-center gap-6 py-8">
+                  <svg class="text-primary/10 size-12" viewBox="0 0 24 24" fill="currentColor">
                     <path
                       d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"
                     ></path>
                   </svg>
-                  <p class="text-xl text-text text-center leading-relaxed">
+                  <p class="text-text text-center text-xl leading-relaxed">
                     "Working with this component library has been a game-changer for our team. We
                     can prototype faster, iterate quicker, and deliver pixel-perfect designs that
                     our clients love."
                   </p>
                   <div class="flex flex-col items-center gap-2">
                     <div
-                      class="size-14 rounded-full bg-primary/10 flex items-center justify-center text-lg font-bold text-primary"
+                      class="bg-primary/10 text-primary flex size-14 items-center justify-center rounded-full text-lg font-bold"
                     >
                       DP
                     </div>
-                    <p class="text-sm font-semibold text-text">Diana Perez</p>
-                    <p class="text-xs text-text-secondary">Head of Design at CreativeLab</p>
+                    <p class="text-text text-sm font-semibold">Diana Perez</p>
+                    <p class="text-text-secondary text-xs">Head of Design at CreativeLab</p>
                   </div>
                 </div>
               </div>
             </custom-frame>
             <a
               href="/library/components/testimonials/"
-              class="flex items-center gap-2 hover:gap-4 font-semibold text-text-secondary transition-all duration-400"
+              class="text-text-secondary focus-visible:ring-primary focus-visible:ring-offset-background flex min-h-11 items-center gap-2 px-1 font-semibold transition-all duration-400 hover:gap-4 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
             >
               See more
               <svg
@@ -1120,5 +1128,14 @@
         <custom-footer></custom-footer>
       </div>
     </main>
+    <script>
+      const ctaSubscribeForm = document.querySelector("#cta-subscribe-form");
+
+      if (ctaSubscribeForm) {
+        ctaSubscribeForm.addEventListener("submit", (event) => {
+          event.preventDefault();
+        });
+      }
+    </script>
   </body>
 </html>

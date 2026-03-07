@@ -13,9 +13,9 @@
     <title>Steps – Components Library</title>
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="stylesheet" href="../../../_ui/styles/index.css" />
-    <script type="module" src="../../../_ui/components/index.js" defer></script>
-    <script type="module" src="../../../_ui/scripts/index.js" defer></script>
-    <script type="module" src="../header-section.js" defer></script>
+    <script type="module" src="../../../_ui/components/index.js"></script>
+    <script type="module" src="../../../_ui/scripts/index.js"></script>
+    <script type="module" src="../header-section.js"></script>
   </head>
 
   <body>
@@ -26,37 +26,37 @@
         <components-header-section></components-header-section>
 
         <div class="flex w-full justify-center px-4">
-          <h2 class="max-w-7xl w-full split-chars">Steps & Timeline</h2>
+          <h2 class="split-chars w-full max-w-7xl">Steps & Timeline</h2>
         </div>
 
         <section class="sect">
           <div class="sect-container gap-24">
             <custom-frame title="Horizontal steps">
-              <div class="w-full bg-background p-6 md:p-12">
-                <div class="max-w-7xl mx-auto">
-                  <div class="text-center max-w-2xl mx-auto mb-16">
+              <div class="bg-background w-full p-6 md:p-12">
+                <div class="mx-auto max-w-7xl">
+                  <div class="mx-auto mb-16 max-w-2xl text-center">
                     <span
-                      class="inline-flex items-center gap-2 px-3 py-1 text-xs font-semibold tracking-widest uppercase rounded-full bg-foreground text-text-secondary mb-6"
+                      class="bg-foreground text-text-secondary mb-6 inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-semibold tracking-widest uppercase"
                     >
                       How it works
                     </span>
                     <h3>Get started in minutes</h3>
-                    <p class="mt-4 text-text-secondary md:text-base">
+                    <p class="text-text-secondary mt-4 md:text-base">
                       Three simple steps to transform how your team builds and ships products.
                     </p>
                   </div>
 
-                  <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+                  <div class="relative grid grid-cols-1 gap-8 md:grid-cols-3">
                     <!-- Connector line (desktop) -->
                     <div
-                      class="hidden md:block absolute top-8 left-[16.67%] right-[16.67%] h-px bg-border"
+                      class="bg-border absolute top-8 right-[16.67%] left-[16.67%] hidden h-px md:block"
                       aria-hidden="true"
                     ></div>
 
                     <!-- Step 1 -->
-                    <div class="relative flex flex-col items-center text-center gap-4">
+                    <div class="relative flex flex-col items-center gap-4 text-center">
                       <div
-                        class="relative z-10 flex items-center justify-center size-16 rounded-full bg-primary text-primary-contrast text-xl font-title"
+                        class="bg-primary text-primary-contrast font-title relative z-10 flex size-16 items-center justify-center rounded-full text-xl"
                       >
                         01
                       </div>
@@ -68,9 +68,9 @@
                     </div>
 
                     <!-- Step 2 -->
-                    <div class="relative flex flex-col items-center text-center gap-4">
+                    <div class="relative flex flex-col items-center gap-4 text-center">
                       <div
-                        class="relative z-10 flex items-center justify-center size-16 rounded-full bg-primary text-primary-contrast text-xl font-title"
+                        class="bg-primary text-primary-contrast font-title relative z-10 flex size-16 items-center justify-center rounded-full text-xl"
                       >
                         02
                       </div>
@@ -82,9 +82,9 @@
                     </div>
 
                     <!-- Step 3 -->
-                    <div class="relative flex flex-col items-center text-center gap-4">
+                    <div class="relative flex flex-col items-center gap-4 text-center">
                       <div
-                        class="relative z-10 flex items-center justify-center size-16 rounded-full bg-primary text-primary-contrast text-xl font-title"
+                        class="bg-primary text-primary-contrast font-title relative z-10 flex size-16 items-center justify-center rounded-full text-xl"
                       >
                         03
                       </div>
@@ -99,11 +99,11 @@
               </div>
             </custom-frame>
             <custom-frame title="Vertical timeline">
-              <div class="w-full bg-background p-6 md:p-12">
-                <div class="max-w-3xl mx-auto">
-                  <div class="text-center mb-16">
+              <div class="bg-background w-full p-6 md:p-12">
+                <div class="mx-auto max-w-3xl">
+                  <div class="mb-16 text-center">
                     <h3>Our journey</h3>
-                    <p class="mt-4 text-text-secondary md:text-base">
+                    <p class="text-text-secondary mt-4 md:text-base">
                       Key milestones that shaped who we are today.
                     </p>
                   </div>
@@ -111,18 +111,18 @@
                   <div class="relative">
                     <!-- Vertical line -->
                     <div
-                      class="absolute left-5 md:left-1/2 md:-translate-x-px top-0 bottom-0 w-0.5 bg-border"
+                      class="bg-border absolute top-0 bottom-0 left-5 w-0.5 md:left-1/2 md:-translate-x-px"
                       aria-hidden="true"
                     ></div>
 
                     <div class="flex flex-col gap-12">
                       <!-- Event 1 -->
                       <div
-                        class="relative flex flex-col md:flex-row md:items-center gap-4 md:gap-8"
+                        class="relative flex flex-col gap-4 md:flex-row md:items-center md:gap-8"
                       >
-                        <div class="md:w-1/2 md:text-right md:pr-12 pl-14 md:pl-0">
+                        <div class="pl-14 md:w-1/2 md:pr-12 md:pl-0 md:text-right">
                           <span
-                            class="text-xs font-semibold tracking-widest uppercase text-text-secondary"
+                            class="text-text-secondary text-xs font-semibold tracking-widest uppercase"
                           >
                             January 2024
                           </span>
@@ -133,22 +133,22 @@
                           </p>
                         </div>
                         <div
-                          class="absolute left-2.5 md:left-1/2 md:-translate-x-1/2 top-0 size-5 rounded-full bg-primary border-4 border-background"
+                          class="bg-primary border-background absolute top-0 left-2.5 size-5 rounded-full border-4 md:left-1/2 md:-translate-x-1/2"
                         ></div>
-                        <div class="md:w-1/2 md:pl-12 hidden md:block"></div>
+                        <div class="hidden md:block md:w-1/2 md:pl-12"></div>
                       </div>
 
                       <!-- Event 2 -->
                       <div
-                        class="relative flex flex-col md:flex-row md:items-center gap-4 md:gap-8"
+                        class="relative flex flex-col gap-4 md:flex-row md:items-center md:gap-8"
                       >
-                        <div class="md:w-1/2 md:text-right md:pr-12 hidden md:block"></div>
+                        <div class="hidden md:block md:w-1/2 md:pr-12 md:text-right"></div>
                         <div
-                          class="absolute left-2.5 md:left-1/2 md:-translate-x-1/2 top-0 size-5 rounded-full bg-primary border-4 border-background"
+                          class="bg-primary border-background absolute top-0 left-2.5 size-5 rounded-full border-4 md:left-1/2 md:-translate-x-1/2"
                         ></div>
-                        <div class="md:w-1/2 md:pl-12 pl-14">
+                        <div class="pl-14 md:w-1/2 md:pl-12">
                           <span
-                            class="text-xs font-semibold tracking-widest uppercase text-text-secondary"
+                            class="text-text-secondary text-xs font-semibold tracking-widest uppercase"
                           >
                             June 2024
                           </span>
@@ -162,11 +162,11 @@
 
                       <!-- Event 3 -->
                       <div
-                        class="relative flex flex-col md:flex-row md:items-center gap-4 md:gap-8"
+                        class="relative flex flex-col gap-4 md:flex-row md:items-center md:gap-8"
                       >
-                        <div class="md:w-1/2 md:text-right md:pr-12 pl-14 md:pl-0">
+                        <div class="pl-14 md:w-1/2 md:pr-12 md:pl-0 md:text-right">
                           <span
-                            class="text-xs font-semibold tracking-widest uppercase text-text-secondary"
+                            class="text-text-secondary text-xs font-semibold tracking-widest uppercase"
                           >
                             December 2024
                           </span>
@@ -177,22 +177,22 @@
                           </p>
                         </div>
                         <div
-                          class="absolute left-2.5 md:left-1/2 md:-translate-x-1/2 top-0 size-5 rounded-full bg-primary border-4 border-background"
+                          class="bg-primary border-background absolute top-0 left-2.5 size-5 rounded-full border-4 md:left-1/2 md:-translate-x-1/2"
                         ></div>
-                        <div class="md:w-1/2 md:pl-12 hidden md:block"></div>
+                        <div class="hidden md:block md:w-1/2 md:pl-12"></div>
                       </div>
 
                       <!-- Event 4 -->
                       <div
-                        class="relative flex flex-col md:flex-row md:items-center gap-4 md:gap-8"
+                        class="relative flex flex-col gap-4 md:flex-row md:items-center md:gap-8"
                       >
-                        <div class="md:w-1/2 md:text-right md:pr-12 hidden md:block"></div>
+                        <div class="hidden md:block md:w-1/2 md:pr-12 md:text-right"></div>
                         <div
-                          class="absolute left-2.5 md:left-1/2 md:-translate-x-1/2 top-0 size-5 rounded-full bg-primary border-4 border-background"
+                          class="bg-primary border-background absolute top-0 left-2.5 size-5 rounded-full border-4 md:left-1/2 md:-translate-x-1/2"
                         ></div>
-                        <div class="md:w-1/2 md:pl-12 pl-14">
+                        <div class="pl-14 md:w-1/2 md:pl-12">
                           <span
-                            class="text-xs font-semibold tracking-widest uppercase text-text-secondary"
+                            class="text-text-secondary text-xs font-semibold tracking-widest uppercase"
                           >
                             August 2025
                           </span>
@@ -206,11 +206,11 @@
 
                       <!-- Event 5 -->
                       <div
-                        class="relative flex flex-col md:flex-row md:items-center gap-4 md:gap-8"
+                        class="relative flex flex-col gap-4 md:flex-row md:items-center md:gap-8"
                       >
-                        <div class="md:w-1/2 md:text-right md:pr-12 pl-14 md:pl-0">
+                        <div class="pl-14 md:w-1/2 md:pr-12 md:pl-0 md:text-right">
                           <span
-                            class="text-xs font-semibold tracking-widest uppercase text-text-secondary"
+                            class="text-text-secondary text-xs font-semibold tracking-widest uppercase"
                           >
                             February 2026
                           </span>
@@ -221,9 +221,9 @@
                           </p>
                         </div>
                         <div
-                          class="absolute left-2.5 md:left-1/2 md:-translate-x-1/2 top-0 size-5 rounded-full bg-primary border-4 border-background"
+                          class="bg-primary border-background absolute top-0 left-2.5 size-5 rounded-full border-4 md:left-1/2 md:-translate-x-1/2"
                         ></div>
-                        <div class="md:w-1/2 md:pl-12 hidden md:block"></div>
+                        <div class="hidden md:block md:w-1/2 md:pl-12"></div>
                       </div>
                     </div>
                   </div>
@@ -231,21 +231,21 @@
               </div>
             </custom-frame>
             <custom-frame title="Icon steps">
-              <div class="w-full bg-background p-6 md:p-12">
-                <div class="max-w-7xl mx-auto">
-                  <div class="text-center max-w-2xl mx-auto mb-16">
+              <div class="bg-background w-full p-6 md:p-12">
+                <div class="mx-auto max-w-7xl">
+                  <div class="mx-auto mb-16 max-w-2xl text-center">
                     <h3>How to get started</h3>
-                    <p class="mt-4 text-text-secondary md:text-base">
+                    <p class="text-text-secondary mt-4 md:text-base">
                       Follow these steps and you'll be up and running in no time.
                     </p>
                   </div>
 
-                  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
+                  <div class="relative grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
                     <!-- Step 1 -->
                     <div class="flex flex-col gap-5">
                       <div class="flex items-center gap-4">
                         <div
-                          class="flex shrink-0 items-center justify-center size-12 rounded-xl bg-surface"
+                          class="bg-surface flex size-12 shrink-0 items-center justify-center rounded-xl"
                         >
                           <svg
                             class="size-6"
@@ -262,11 +262,11 @@
                             <line x1="22" x2="16" y1="11" y2="11" />
                           </svg>
                         </div>
-                        <div class="hidden lg:block flex-1 h-px bg-border" aria-hidden="true"></div>
+                        <div class="bg-border hidden h-px flex-1 lg:block" aria-hidden="true"></div>
                       </div>
                       <div>
                         <p
-                          class="text-xs font-semibold tracking-widest uppercase text-text-secondary mb-2"
+                          class="text-text-secondary mb-2 text-xs font-semibold tracking-widest uppercase"
                         >
                           Step 1
                         </p>
@@ -282,7 +282,7 @@
                     <div class="flex flex-col gap-5">
                       <div class="flex items-center gap-4">
                         <div
-                          class="flex shrink-0 items-center justify-center size-12 rounded-xl bg-surface"
+                          class="bg-surface flex size-12 shrink-0 items-center justify-center rounded-xl"
                         >
                           <svg
                             class="size-6"
@@ -302,11 +302,11 @@
                             <path d="M17 19h4" />
                           </svg>
                         </div>
-                        <div class="hidden lg:block flex-1 h-px bg-border" aria-hidden="true"></div>
+                        <div class="bg-border hidden h-px flex-1 lg:block" aria-hidden="true"></div>
                       </div>
                       <div>
                         <p
-                          class="text-xs font-semibold tracking-widest uppercase text-text-secondary mb-2"
+                          class="text-text-secondary mb-2 text-xs font-semibold tracking-widest uppercase"
                         >
                           Step 2
                         </p>
@@ -322,7 +322,7 @@
                     <div class="flex flex-col gap-5">
                       <div class="flex items-center gap-4">
                         <div
-                          class="flex shrink-0 items-center justify-center size-12 rounded-xl bg-surface"
+                          class="bg-surface flex size-12 shrink-0 items-center justify-center rounded-xl"
                         >
                           <svg
                             class="size-6"
@@ -337,11 +337,11 @@
                             <polyline points="8 6 2 12 8 18" />
                           </svg>
                         </div>
-                        <div class="hidden lg:block flex-1 h-px bg-border" aria-hidden="true"></div>
+                        <div class="bg-border hidden h-px flex-1 lg:block" aria-hidden="true"></div>
                       </div>
                       <div>
                         <p
-                          class="text-xs font-semibold tracking-widest uppercase text-text-secondary mb-2"
+                          class="text-text-secondary mb-2 text-xs font-semibold tracking-widest uppercase"
                         >
                           Step 3
                         </p>
@@ -357,7 +357,7 @@
                     <div class="flex flex-col gap-5">
                       <div class="flex items-center gap-4">
                         <div
-                          class="flex shrink-0 items-center justify-center size-12 rounded-xl bg-primary text-primary-contrast"
+                          class="bg-primary text-primary-contrast flex size-12 shrink-0 items-center justify-center rounded-xl"
                         >
                           <svg
                             class="size-6"
@@ -376,7 +376,7 @@
                       </div>
                       <div>
                         <p
-                          class="text-xs font-semibold tracking-widest uppercase text-text-secondary mb-2"
+                          class="text-text-secondary mb-2 text-xs font-semibold tracking-widest uppercase"
                         >
                           Step 4
                         </p>
@@ -392,11 +392,11 @@
               </div>
             </custom-frame>
             <custom-frame title="Alternating cards">
-              <div class="w-full bg-background p-6 md:p-12">
-                <div class="max-w-4xl mx-auto">
-                  <div class="text-center mb-16">
+              <div class="bg-background w-full p-6 md:p-12">
+                <div class="mx-auto max-w-4xl">
+                  <div class="mb-16 text-center">
                     <h3>Your path to production</h3>
-                    <p class="mt-4 text-text-secondary md:text-base">
+                    <p class="text-text-secondary mt-4 md:text-base">
                       A clear, step-by-step process from discovery to deployment.
                     </p>
                   </div>
@@ -404,7 +404,7 @@
                   <div class="relative">
                     <!-- Vertical line (desktop) -->
                     <div
-                      class="hidden md:block absolute left-1/2 -translate-x-px top-0 bottom-0 w-0.5 bg-border"
+                      class="bg-border absolute top-0 bottom-0 left-1/2 hidden w-0.5 -translate-x-px md:block"
                       aria-hidden="true"
                     ></div>
 
@@ -412,13 +412,13 @@
                       <!-- Card 1 - Left -->
                       <div class="relative flex md:justify-start">
                         <div
-                          class="hidden md:flex absolute left-1/2 -translate-x-1/2 top-6 items-center justify-center size-10 rounded-full bg-primary text-primary-contrast text-sm font-title z-10"
+                          class="bg-primary text-primary-contrast font-title absolute top-6 left-1/2 z-10 hidden size-10 -translate-x-1/2 items-center justify-center rounded-full text-sm md:flex"
                         >
                           01
                         </div>
-                        <div class="w-full md:w-[calc(50%-2rem)] p-6 rounded-2xl bg-foreground">
+                        <div class="bg-foreground w-full rounded-2xl p-6 md:w-[calc(50%-2rem)]">
                           <div
-                            class="flex md:hidden items-center justify-center size-8 rounded-full bg-primary text-primary-contrast text-xs font-title mb-4"
+                            class="bg-primary text-primary-contrast font-title mb-4 flex size-8 items-center justify-center rounded-full text-xs md:hidden"
                           >
                             01
                           </div>
@@ -433,13 +433,13 @@
                       <!-- Card 2 - Right -->
                       <div class="relative flex md:justify-end">
                         <div
-                          class="hidden md:flex absolute left-1/2 -translate-x-1/2 top-6 items-center justify-center size-10 rounded-full bg-primary text-primary-contrast text-sm font-title z-10"
+                          class="bg-primary text-primary-contrast font-title absolute top-6 left-1/2 z-10 hidden size-10 -translate-x-1/2 items-center justify-center rounded-full text-sm md:flex"
                         >
                           02
                         </div>
-                        <div class="w-full md:w-[calc(50%-2rem)] p-6 rounded-2xl bg-foreground">
+                        <div class="bg-foreground w-full rounded-2xl p-6 md:w-[calc(50%-2rem)]">
                           <div
-                            class="flex md:hidden items-center justify-center size-8 rounded-full bg-primary text-primary-contrast text-xs font-title mb-4"
+                            class="bg-primary text-primary-contrast font-title mb-4 flex size-8 items-center justify-center rounded-full text-xs md:hidden"
                           >
                             02
                           </div>
@@ -454,13 +454,13 @@
                       <!-- Card 3 - Left -->
                       <div class="relative flex md:justify-start">
                         <div
-                          class="hidden md:flex absolute left-1/2 -translate-x-1/2 top-6 items-center justify-center size-10 rounded-full bg-primary text-primary-contrast text-sm font-title z-10"
+                          class="bg-primary text-primary-contrast font-title absolute top-6 left-1/2 z-10 hidden size-10 -translate-x-1/2 items-center justify-center rounded-full text-sm md:flex"
                         >
                           03
                         </div>
-                        <div class="w-full md:w-[calc(50%-2rem)] p-6 rounded-2xl bg-foreground">
+                        <div class="bg-foreground w-full rounded-2xl p-6 md:w-[calc(50%-2rem)]">
                           <div
-                            class="flex md:hidden items-center justify-center size-8 rounded-full bg-primary text-primary-contrast text-xs font-title mb-4"
+                            class="bg-primary text-primary-contrast font-title mb-4 flex size-8 items-center justify-center rounded-full text-xs md:hidden"
                           >
                             03
                           </div>
@@ -475,13 +475,13 @@
                       <!-- Card 4 - Right -->
                       <div class="relative flex md:justify-end">
                         <div
-                          class="hidden md:flex absolute left-1/2 -translate-x-1/2 top-6 items-center justify-center size-10 rounded-full bg-primary text-primary-contrast text-sm font-title z-10"
+                          class="bg-primary text-primary-contrast font-title absolute top-6 left-1/2 z-10 hidden size-10 -translate-x-1/2 items-center justify-center rounded-full text-sm md:flex"
                         >
                           04
                         </div>
-                        <div class="w-full md:w-[calc(50%-2rem)] p-6 rounded-2xl bg-foreground">
+                        <div class="bg-foreground w-full rounded-2xl p-6 md:w-[calc(50%-2rem)]">
                           <div
-                            class="flex md:hidden items-center justify-center size-8 rounded-full bg-primary text-primary-contrast text-xs font-title mb-4"
+                            class="bg-primary text-primary-contrast font-title mb-4 flex size-8 items-center justify-center rounded-full text-xs md:hidden"
                           >
                             04
                           </div>
@@ -498,11 +498,11 @@
               </div>
             </custom-frame>
             <custom-frame title="Interactive progress steps">
-              <div class="w-full bg-background p-4 md:p-6">
-                <div class="max-w-3xl mx-auto">
-                  <div class="text-center mb-16">
+              <div class="bg-background w-full p-4 md:p-6">
+                <div class="mx-auto max-w-3xl">
+                  <div class="mb-16 text-center">
                     <h3>Project Onboarding</h3>
-                    <p class="mt-4 text-text-secondary md:text-base">
+                    <p class="text-text-secondary mt-4 md:text-base">
                       Complete these active steps to fully configure your project.
                     </p>
                   </div>
@@ -511,10 +511,10 @@
                     <!-- Step 1: Completed -->
                     <div class="group relative flex gap-6 pb-12">
                       <div
-                        class="absolute left-[1.1875rem] top-10 bottom-0 w-px bg-success/30"
+                        class="bg-success/30 absolute top-10 bottom-0 left-[1.1875rem] w-px"
                       ></div>
                       <div
-                        class="relative shrink-0 flex items-center justify-center size-10 rounded-full bg-success text-success-contrast z-10"
+                        class="bg-success text-success-contrast relative z-10 flex size-10 shrink-0 items-center justify-center rounded-full"
                       >
                         <svg
                           class="size-5"
@@ -529,11 +529,11 @@
                         </svg>
                       </div>
                       <div
-                        class="flex-1 pt-1 opacity-70 transition-opacity group-hover:opacity-100"
+                        class="flex-1 pt-1 opacity-70 transition-opacity duration-200 group-hover:opacity-100"
                       >
-                        <h5 class="line-through decoration-success/50">Create Organization</h5>
+                        <h5 class="decoration-success/50 line-through">Create Organization</h5>
                         <p
-                          class="mt-2 text-text-secondary line-through decoration-text-secondary/30"
+                          class="text-text-secondary decoration-text-secondary/30 mt-2 line-through"
                         >
                           Set up your workspace and invite early team members to collaborate.
                         </p>
@@ -543,35 +543,40 @@
                     <!-- Step 2: Active -->
                     <div class="group relative flex gap-6 pb-12">
                       <div
-                        class="absolute left-[1.1875rem] top-10 bottom-0 w-px bg-border group-hover:bg-primary transition-colors duration-400"
+                        class="bg-border group-hover:bg-primary absolute top-10 bottom-0 left-[1.1875rem] w-px transition-colors duration-400"
                       ></div>
                       <div
-                        class="relative shrink-0 flex items-center justify-center size-10 rounded-full bg-primary text-primary-contrast z-10"
+                        class="bg-primary text-primary-contrast relative z-10 flex size-10 shrink-0 items-center justify-center rounded-full"
                       >
                         <span class="font-title text-sm">2</span>
                       </div>
-                      <div class="flex-1 bg-foreground p-6 rounded-2xl">
+                      <div class="bg-foreground flex-1 rounded-2xl p-6">
                         <h5 class="text-primary">Connect Repository</h5>
-                        <p class="mt-2 text-text-secondary">
+                        <p class="text-text-secondary mt-2">
                           Link your GitHub, GitLab, or Bitbucket account to import your codebase.
                         </p>
-                        <button class="primary-btn mt-4 py-2 px-4 text-sm">Connect GitHub</button>
+                        <a
+                          href="#"
+                          class="primary-btn focus-visible:ring-primary focus-visible:ring-offset-background mt-4 min-h-[44px] px-4 py-2 text-sm transition duration-300 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50"
+                        >
+                          Connect GitHub
+                        </a>
                       </div>
                     </div>
 
                     <!-- Step 3: Upcoming -->
                     <div class="group relative flex gap-6 pb-12">
-                      <div class="absolute left-[1.1875rem] top-10 bottom-0 w-px bg-border"></div>
+                      <div class="bg-border absolute top-10 bottom-0 left-[1.1875rem] w-px"></div>
                       <div
-                        class="relative shrink-0 flex items-center justify-center size-10 rounded-full bg-foreground text-text-secondary z-10"
+                        class="bg-foreground text-text-secondary relative z-10 flex size-10 shrink-0 items-center justify-center rounded-full"
                       >
                         <span class="font-title text-sm">3</span>
                       </div>
                       <div
-                        class="flex-1 pt-1 opacity-50 transition-opacity group-hover:opacity-80 duration-400"
+                        class="flex-1 pt-1 opacity-50 transition-opacity duration-400 group-hover:opacity-80"
                       >
                         <h5>Configure Build Settings</h5>
-                        <p class="mt-2 text-text-secondary">
+                        <p class="text-text-secondary mt-2">
                           Define environment variables, build commands, and output directories.
                         </p>
                       </div>
@@ -580,15 +585,15 @@
                     <!-- Step 4: Upcoming (Last) -->
                     <div class="group relative flex gap-6">
                       <div
-                        class="relative shrink-0 flex items-center justify-center size-10 rounded-full bg-foreground text-text-secondary z-10"
+                        class="bg-foreground text-text-secondary relative z-10 flex size-10 shrink-0 items-center justify-center rounded-full"
                       >
                         <span class="font-title text-sm">4</span>
                       </div>
                       <div
-                        class="flex-1 pt-1 opacity-50 transition-opacity group-hover:opacity-80 duration-400"
+                        class="flex-1 pt-1 opacity-50 transition-opacity duration-400 group-hover:opacity-80"
                       >
                         <h5>Deploy Application</h5>
-                        <p class="mt-2 text-text-secondary">
+                        <p class="text-text-secondary mt-2">
                           Trigger your first production build and take your project live to the
                           world.
                         </p>
@@ -600,32 +605,32 @@
             </custom-frame>
             <custom-frame title="Primary background">
               <div
-                class="w-full bg-primary text-primary-contrast py-20 px-4 md:px-6 flex flex-col items-center justify-center"
+                class="bg-primary text-primary-contrast flex w-full flex-col items-center justify-center px-4 py-20 md:px-6"
               >
-                <div class="w-full max-w-7xl flex flex-col gap-16">
-                  <div class="text-center max-w-2xl mx-auto">
-                    <h3 class="text-3xl md:text-5xl font-bold mb-6">Seamless Integration</h3>
+                <div class="flex w-full max-w-7xl flex-col gap-16">
+                  <div class="mx-auto max-w-2xl text-center">
+                    <h3 class="mb-6 text-3xl font-bold md:text-5xl">Seamless Integration</h3>
                     <p class="text-lg">
                       Start building instantly. Our four-step process takes you from idea to
                       deployment in record time with zero friction.
                     </p>
                   </div>
 
-                  <div class="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
+                  <div class="relative grid grid-cols-1 gap-8 md:grid-cols-4">
                     <!-- Connector Line -->
                     <div
-                      class="hidden md:block absolute top-10 left-[12.5%] right-[12.5%] h-0.5 bg-gradient-to-r from-primary-hover/30 via-accent/30 to-primary-hover/30"
+                      class="from-primary-hover/30 via-accent/30 to-primary-hover/30 absolute top-10 right-[12.5%] left-[12.5%] hidden h-0.5 bg-gradient-to-r md:block"
                     ></div>
 
                     <!-- Step 1 -->
-                    <div class="group relative flex flex-col items-center text-center gap-6">
+                    <div class="group relative flex flex-col items-center gap-6 text-center">
                       <div
-                        class="relative z-10 flex items-center justify-center size-20 rounded-3xl bg-primary-hover group-hover:-translate-y-2 transition duration-400"
+                        class="bg-primary-hover relative z-10 flex size-20 items-center justify-center rounded-3xl transition duration-400 group-hover:-translate-y-2"
                       >
                         <span class="text-3xl font-black">1</span>
                       </div>
                       <div>
-                        <h4 class="text-xl font-bold mb-3">Connect Source</h4>
+                        <h4 class="mb-3 text-xl font-bold">Connect Source</h4>
                         <p class="text-sm leading-relaxed">
                           Authorize access to your GitHub or GitLab repository with a single click.
                         </p>
@@ -633,14 +638,14 @@
                     </div>
 
                     <!-- Step 2 -->
-                    <div class="group relative flex flex-col items-center text-center gap-6">
+                    <div class="group relative flex flex-col items-center gap-6 text-center">
                       <div
-                        class="relative z-10 flex items-center justify-center size-20 rounded-3xl bg-primary-hover group-hover:-translate-y-2 transition duration-400"
+                        class="bg-primary-hover relative z-10 flex size-20 items-center justify-center rounded-3xl transition duration-400 group-hover:-translate-y-2"
                       >
                         <span class="text-3xl font-black">2</span>
                       </div>
                       <div>
-                        <h4 class="text-xl font-bold mb-3">Configure Build</h4>
+                        <h4 class="mb-3 text-xl font-bold">Configure Build</h4>
                         <p class="text-sm leading-relaxed">
                           Our system automatically detects your framework and sets up build
                           commands.
@@ -649,14 +654,14 @@
                     </div>
 
                     <!-- Step 3 -->
-                    <div class="group relative flex flex-col items-center text-center gap-6">
+                    <div class="group relative flex flex-col items-center gap-6 text-center">
                       <div
-                        class="relative z-10 flex items-center justify-center size-20 rounded-3xl bg-primary-hover group-hover:-translate-y-2 transition duration-400"
+                        class="bg-primary-hover relative z-10 flex size-20 items-center justify-center rounded-3xl transition duration-400 group-hover:-translate-y-2"
                       >
                         <span class="text-3xl font-black">3</span>
                       </div>
                       <div>
-                        <h4 class="text-xl font-bold mb-3">Add Domain</h4>
+                        <h4 class="mb-3 text-xl font-bold">Add Domain</h4>
                         <p class="text-sm leading-relaxed">
                           Map your custom domain instantly with our automated DNS and free SSL
                           configuration.
@@ -665,14 +670,14 @@
                     </div>
 
                     <!-- Step 4 -->
-                    <div class="group relative flex flex-col items-center text-center gap-6">
+                    <div class="group relative flex flex-col items-center gap-6 text-center">
                       <div
-                        class="relative z-10 flex items-center justify-center size-20 rounded-3xl bg-primary-hover group-hover:-translate-y-2 transition duration-400"
+                        class="bg-primary-hover relative z-10 flex size-20 items-center justify-center rounded-3xl transition duration-400 group-hover:-translate-y-2"
                       >
                         <span class="text-3xl font-black">4</span>
                       </div>
                       <div>
-                        <h4 class="text-xl font-bold mb-3">Push & Deploy</h4>
+                        <h4 class="mb-3 text-xl font-bold">Push & Deploy</h4>
                         <p class="text-sm leading-relaxed">
                           Push to main to trigger global deployment. Watch your changes go live
                           worldwide.

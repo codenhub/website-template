@@ -13,9 +13,9 @@
     <title>Loaders - Components Library</title>
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="stylesheet" href="../../../_ui/styles/index.css" />
-    <script type="module" src="../../../_ui/components/index.js" defer></script>
-    <script type="module" src="../../../_ui/scripts/index.js" defer></script>
-    <script type="module" src="../header-section.js" defer></script>
+    <script type="module" src="../../../_ui/components/index.js"></script>
+    <script type="module" src="../../../_ui/scripts/index.js"></script>
+    <script type="module" src="../header-section.js"></script>
   </head>
 
   <body>
@@ -26,15 +26,17 @@
         <components-header-section></components-header-section>
 
         <div class="flex w-full justify-center px-4">
-          <h2 class="max-w-7xl w-full split-chars">Loaders</h2>
+          <h2 class="split-chars w-full max-w-7xl">Loaders</h2>
         </div>
 
         <section class="sect">
           <div class="sect-container gap-24">
             <custom-frame title="Standard spinners">
-              <div class="w-full p-8 md:p-12 bg-background">
+              <div class="bg-background w-full p-8 md:p-12">
                 <div
-                  class="flex gap-8 items-center justify-center w-full flex-wrap max-w-7xl mx-auto"
+                  role="status"
+                  aria-label="Standard loading spinner examples"
+                  class="mx-auto flex w-full max-w-7xl flex-wrap items-center justify-center gap-8"
                 >
                   <svg stroke="currentColor" viewBox="0 0 24 24" class="size-12">
                     <style>
@@ -72,13 +74,13 @@
                     </g>
                   </svg>
                   <div
-                    class="size-12 rounded-full border-3 border-text/20 border-t-text animate-spin"
+                    class="border-text/20 border-t-text size-12 animate-spin rounded-full border-3"
                   ></div>
                   <div
-                    class="size-12 rounded-full border-3 border-text border-b-text/20 animate-spin"
+                    class="border-text border-b-text/20 size-12 animate-spin rounded-full border-3"
                   ></div>
                   <div
-                    class="size-12 rounded-full border-3 border-text border-b-transparent animate-spin"
+                    class="border-text size-12 animate-spin rounded-full border-3 border-b-transparent"
                   ></div>
                   <svg class="size-12" viewBox="0 0 24 24">
                     <style>
@@ -393,8 +395,12 @@
             </custom-frame>
 
             <custom-frame title="Dots">
-              <div class="w-full p-8 md:p-12 bg-background">
-                <div class="w-full max-w-7xl mx-auto flex justify-center items-center gap-8">
+              <div class="bg-background w-full p-8 md:p-12">
+                <div
+                  role="status"
+                  aria-label="Dot loader examples"
+                  class="mx-auto flex w-full max-w-7xl items-center justify-center gap-8"
+                >
                   <svg class="size-12" viewBox="0 0 24 24">
                     <style>
                       .spinner_qM83 {
@@ -695,8 +701,12 @@
             </custom-frame>
 
             <custom-frame title="Bars">
-              <div class="w-full p-8 md:p-12 bg-background">
-                <div class="w-full max-w-7xl mx-auto flex items-center justify-center gap-8">
+              <div class="bg-background w-full p-8 md:p-12">
+                <div
+                  role="status"
+                  aria-label="Bar loader examples"
+                  class="mx-auto flex w-full max-w-7xl items-center justify-center gap-8"
+                >
                   <svg class="size-12" viewBox="0 0 24 24">
                     <style>
                       .spinner_GmWz {
@@ -853,8 +863,12 @@
             </custom-frame>
 
             <custom-frame title="Blocks">
-              <div class="w-full p-8 md:p-12 bg-background">
-                <div class="w-full max-w-7xl flex items-center justify-center gap-8">
+              <div class="bg-background w-full p-8 md:p-12">
+                <div
+                  role="status"
+                  aria-label="Block loader examples"
+                  class="flex w-full max-w-7xl items-center justify-center gap-8"
+                >
                   <svg class="size-12" viewBox="0 0 24 24">
                     <style>
                       .spinner_LWk7 {

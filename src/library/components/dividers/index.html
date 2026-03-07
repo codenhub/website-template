@@ -13,9 +13,9 @@
     <title>Dividers – Components Library</title>
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="stylesheet" href="../../../_ui/styles/index.css" />
-    <script type="module" src="../../../_ui/components/index.js" defer></script>
-    <script type="module" src="../../../_ui/scripts/index.js" defer></script>
-    <script type="module" src="../header-section.js" defer></script>
+    <script type="module" src="../../../_ui/components/index.js"></script>
+    <script type="module" src="../../../_ui/scripts/index.js"></script>
+    <script type="module" src="../header-section.js"></script>
   </head>
 
   <body>
@@ -26,23 +26,23 @@
         <components-header-section></components-header-section>
 
         <div class="flex w-full justify-center px-4">
-          <h2 class="max-w-7xl w-full split-chars">Dividers</h2>
+          <h2 class="split-chars w-full max-w-7xl">Dividers</h2>
         </div>
 
         <section class="sect">
           <div class="sect-container gap-24">
             <custom-frame title="Simple diagonal">
-              <div class="w-full self-stretch bg-background pt-8">
+              <div class="bg-background w-full self-stretch pt-8">
                 <div
-                  class="w-full h-16 bg-primary"
+                  class="bg-primary h-16 w-full"
                   style="clip-path: polygon(100% 0, 0% 100%, 100% 100%)"
                 ></div>
               </div>
             </custom-frame>
 
             <custom-frame title="Double diagonal">
-              <div class="w-full self-stretch bg-background pt-8">
-                <div class="w-full h-16 relative">
+              <div class="bg-background w-full self-stretch pt-8">
+                <div class="relative h-16 w-full">
                   <div
                     class="absolute inset-0 bg-fuchsia-700"
                     style="clip-path: polygon(100% 0, 20% 100%, 100% 100%)"
@@ -56,8 +56,8 @@
             </custom-frame>
 
             <custom-frame title="Crossed diagonal">
-              <div class="w-full self-stretch bg-background pt-8">
-                <div class="w-full h-16 relative">
+              <div class="bg-background w-full self-stretch pt-8">
+                <div class="relative h-16 w-full">
                   <div
                     class="absolute inset-0 bg-violet-700"
                     style="clip-path: polygon(0 0, 0 100%, 100% 100%)"
@@ -71,8 +71,8 @@
             </custom-frame>
 
             <custom-frame title="Triangle">
-              <div class="w-full self-stretch bg-background pt-8">
-                <div class="w-full h-16 relative">
+              <div class="bg-background w-full self-stretch pt-8">
+                <div class="relative h-16 w-full">
                   <div
                     class="absolute inset-0 bg-sky-900"
                     style="clip-path: polygon(50% 0%, 0% 100%, 100% 100%)"
@@ -82,10 +82,10 @@
             </custom-frame>
 
             <custom-frame title="Layered mountains">
-              <div class="w-full self-stretch bg-background pt-8">
-                <div class="w-full h-28 relative overflow-hidden">
+              <div class="bg-background w-full self-stretch pt-8">
+                <div class="relative h-28 w-full overflow-hidden">
                   <svg
-                    class="w-full h-full absolute inset-0"
+                    class="absolute inset-0 h-full w-full"
                     viewBox="0 0 1200 120"
                     preserveAspectRatio="none"
                   >
@@ -110,9 +110,9 @@
             </custom-frame>
 
             <custom-frame title="Waves">
-              <div class="w-full self-stretch bg-background pt-8">
-                <div class="w-full h-24">
-                  <svg class="w-full h-24" viewBox="0 24 150 28 " preserveAspectRatio="none">
+              <div class="bg-background w-full self-stretch pt-8">
+                <div class="h-24 w-full">
+                  <svg class="h-24 w-full" viewBox="0 24 150 28 " preserveAspectRatio="none">
                     <style>
                       .parallax1 > use {
                         animation: wave-anim-1 10s linear infinite;
@@ -195,10 +195,10 @@
             </custom-frame>
 
             <custom-frame title="Stacked curves">
-              <div class="w-full self-stretch bg-background pt-8">
-                <div class="w-full h-24 relative overflow-hidden">
+              <div class="bg-background w-full self-stretch pt-8">
+                <div class="relative h-24 w-full overflow-hidden">
                   <svg
-                    class="w-full h-full absolute inset-0"
+                    class="absolute inset-0 h-full w-full"
                     viewBox="0 0 1200 100"
                     preserveAspectRatio="none"
                   >
@@ -220,10 +220,10 @@
             </custom-frame>
 
             <custom-frame title="Curved arc">
-              <div class="w-full self-stretch bg-background pt-8">
-                <div class="w-full h-20 relative overflow-hidden">
+              <div class="bg-background w-full self-stretch pt-8">
+                <div class="relative h-20 w-full overflow-hidden">
                   <div
-                    class="absolute inset-0 bg-primary"
+                    class="bg-primary absolute inset-0"
                     style="clip-path: ellipse(60% 100% at 50% 100%)"
                   ></div>
                 </div>
@@ -231,10 +231,10 @@
             </custom-frame>
 
             <custom-frame title="Inverted curve">
-              <div class="w-full self-stretch bg-background pt-8">
-                <div class="w-full h-20 relative bg-primary overflow-hidden">
+              <div class="bg-background w-full self-stretch pt-8">
+                <div class="bg-primary relative h-20 w-full overflow-hidden">
                   <div
-                    class="absolute inset-0 bg-background"
+                    class="bg-background absolute inset-0"
                     style="clip-path: ellipse(55% 100% at 50% 0%)"
                   ></div>
                 </div>
@@ -242,9 +242,9 @@
             </custom-frame>
 
             <custom-frame title="Zigzag">
-              <div class="w-full self-stretch bg-background pt-8">
-                <div class="w-full h-16">
-                  <svg class="w-full h-16" viewBox="0 0 1200 80" preserveAspectRatio="none">
+              <div class="bg-background w-full self-stretch pt-8">
+                <div class="h-16 w-full">
+                  <svg class="h-16 w-full" viewBox="0 0 1200 80" preserveAspectRatio="none">
                     <path
                       d="M0 0 L40 60 L80 0 L120 60 L160 0 L200 60 L240 0 L280 60 L320 0 L360 60 L400 0 L440 60 L480 0 L520 60 L560 0 L600 60 L640 0 L680 60 L720 0 L760 60 L800 0 L840 60 L880 0 L920 60 L960 0 L1000 60 L1040 0 L1080 60 L1120 0 L1160 60 L1200 0 L1200 80 L0 80 Z"
                       fill="oklch(25% 0.05 280)"
@@ -255,9 +255,9 @@
             </custom-frame>
 
             <custom-frame title="Torn paper">
-              <div class="w-full self-stretch bg-background pt-8">
-                <div class="w-full h-16">
-                  <svg class="w-full h-16" viewBox="0 0 1200 60" preserveAspectRatio="none">
+              <div class="bg-background w-full self-stretch pt-8">
+                <div class="h-16 w-full">
+                  <svg class="h-16 w-full" viewBox="0 0 1200 60" preserveAspectRatio="none">
                     <path
                       d="M0 25 Q20 10 40 28 Q55 35 70 20 Q90 8 110 22 Q125 32 140 18 Q160 5 180 24 Q195 33 210 15 Q230 6 250 26 Q265 34 280 20 Q300 7 320 25 Q335 35 350 17 Q370 4 390 23 Q405 32 420 14 Q440 3 460 27 Q475 36 490 19 Q510 8 530 24 Q545 33 560 16 Q580 5 600 28 Q615 37 630 21 Q650 9 670 26 Q685 34 700 18 Q720 6 740 25 Q755 35 770 15 Q790 3 810 22 Q825 31 840 13 Q860 4 880 27 Q895 36 910 20 Q930 8 950 24 Q965 33 980 17 Q1000 5 1020 26 Q1035 35 1050 19 Q1070 7 1090 23 Q1105 32 1120 14 Q1140 3 1160 28 Q1175 37 1200 22 L1200 60 L0 60 Z"
                       fill="oklch(40% 0.08 50)"
@@ -274,26 +274,17 @@
             </custom-frame>
 
             <custom-frame title="Gradient fade">
-              <div class="w-full self-stretch bg-background pt-8">
+              <div class="bg-background w-full self-stretch pt-8">
                 <div
-                  class="w-full h-24"
-                  style="
-                    background: linear-gradient(
-                      to bottom,
-                      transparent 0%,
-                      oklch(70% 0.15 280 / 0.3) 30%,
-                      oklch(60% 0.2 280) 60%,
-                      oklch(30% 0.1 280) 100%
-                    );
-                  "
+                  class="h-24 w-full bg-[linear-gradient(to_bottom,transparent_0%,oklch(70%_0.15_280_/_0.3)_30%,oklch(60%_0.2_280)_60%,oklch(30%_0.1_280)_100%)]"
                 ></div>
               </div>
             </custom-frame>
 
             <custom-frame title="Noise texture fade">
-              <div class="w-full self-stretch bg-background pt-8">
-                <div class="w-full h-20 relative overflow-hidden">
-                  <svg class="absolute inset-0 w-full h-full">
+              <div class="bg-background w-full self-stretch pt-8">
+                <div class="relative h-20 w-full overflow-hidden">
+                  <svg class="absolute inset-0 h-full w-full">
                     <defs>
                       <filter id="noise-filter">
                         <feTurbulence
@@ -308,23 +299,15 @@
                     <rect width="100%" height="100%" filter="url(#noise-filter)" opacity="0.15" />
                   </svg>
                   <div
-                    class="absolute inset-0"
-                    style="
-                      background: linear-gradient(
-                        to bottom,
-                        transparent,
-                        oklch(35% 0.05 280 / 0.6) 40%,
-                        oklch(25% 0.05 280) 100%
-                      );
-                    "
+                    class="absolute inset-0 bg-[linear-gradient(to_bottom,transparent,oklch(35%_0.05_280_/_0.6)_40%,oklch(25%_0.05_280)_100%)]"
                   ></div>
                 </div>
               </div>
             </custom-frame>
 
             <custom-frame title="Pulse line">
-              <div class="w-full self-stretch bg-background py-8">
-                <div class="w-full h-20 flex items-center justify-center relative">
+              <div class="bg-background w-full self-stretch py-8">
+                <div class="relative flex h-20 w-full items-center justify-center">
                   <style>
                     .pulse-line-path {
                       stroke-dasharray: 2000;
@@ -343,7 +326,7 @@
                       }
                     }
                   </style>
-                  <svg class="w-full h-full" viewBox="0 0 1200 80" preserveAspectRatio="none">
+                  <svg class="h-full w-full" viewBox="0 0 1200 80" preserveAspectRatio="none">
                     <path
                       class="pulse-line-path"
                       d="M0 40 L200 40 L220 40 L240 10 L260 70 L280 20 L300 60 L320 30 L340 50 L360 35 L380 45 L400 40 L600 40 L620 40 L640 15 L660 65 L680 25 L700 55 L720 35 L740 48 L760 40 L1200 40"
@@ -370,9 +353,9 @@
             </custom-frame>
 
             <custom-frame title="Diamond chain">
-              <div class="w-full self-stretch bg-background py-8">
+              <div class="bg-background w-full self-stretch py-8">
                 <div
-                  class="w-full h-16 flex items-center justify-center gap-0 relative overflow-hidden"
+                  class="relative flex h-16 w-full items-center justify-center gap-0 overflow-hidden"
                 >
                   <style>
                     .diamond-chain {
@@ -386,7 +369,7 @@
                       flex-shrink: 0;
                     }
                   </style>
-                  <svg class="w-full h-full" viewBox="0 0 1200 64" preserveAspectRatio="none">
+                  <svg class="h-full w-full" viewBox="0 0 1200 64" preserveAspectRatio="none">
                     <!-- Horizontal line -->
                     <line
                       x1="0"
@@ -423,8 +406,8 @@
             </custom-frame>
 
             <custom-frame title="Gradient glow line">
-              <div class="w-full self-stretch bg-background py-8">
-                <div class="w-full h-16 flex items-center justify-center relative">
+              <div class="bg-background w-full self-stretch py-8">
+                <div class="relative flex h-16 w-full items-center justify-center">
                   <style>
                     .glow-line {
                       width: 80%;
@@ -462,9 +445,9 @@
             </custom-frame>
 
             <custom-frame title="Chevron arrow">
-              <div class="w-full self-stretch bg-background py-8">
-                <div class="w-full h-16">
-                  <svg class="w-full h-16" viewBox="0 0 1200 60" preserveAspectRatio="none">
+              <div class="bg-background w-full self-stretch py-8">
+                <div class="h-16 w-full">
+                  <svg class="h-16 w-full" viewBox="0 0 1200 60" preserveAspectRatio="none">
                     <path
                       d="M0 0 L600 40 L1200 0 L1200 20 L600 60 L0 20 Z"
                       fill="oklch(50% 0.15 160)"

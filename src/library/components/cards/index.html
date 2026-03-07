@@ -13,9 +13,9 @@
     <title>Cards - Components Library</title>
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="stylesheet" href="../../../_ui/styles/index.css" />
-    <script type="module" src="../../../_ui/components/index.js" defer></script>
-    <script type="module" src="../../../_ui/scripts/index.js" defer></script>
-    <script type="module" src="../header-section.js" defer></script>
+    <script type="module" src="../../../_ui/components/index.js"></script>
+    <script type="module" src="../../../_ui/scripts/index.js"></script>
+    <script type="module" src="../header-section.js"></script>
   </head>
 
   <body>
@@ -26,22 +26,22 @@
         <components-header-section></components-header-section>
 
         <div class="flex w-full justify-center px-4">
-          <h2 class="max-w-7xl w-full split-chars">Cards</h2>
+          <h2 class="split-chars w-full max-w-7xl">Cards</h2>
         </div>
 
         <section class="sect">
           <div class="sect-container gap-24">
             <custom-frame title="Flat">
-              <div class="flex max-lg:flex-col gap-4 w-full p-4 bg-background justify-center">
-                <div class="flex gap-4 flex-1 items-center bg-foreground rounded-xl p-8">
-                  <div class="flex flex-1 flex-col gap-4 w-full justify-between">
+              <div class="bg-background flex w-full justify-center gap-4 p-4 max-lg:flex-col">
+                <div class="bg-foreground flex flex-1 items-center gap-4 rounded-xl p-8">
+                  <div class="flex w-full flex-1 flex-col justify-between gap-4">
                     <h3>Lorem ipsum</h3>
                     <p>
                       Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, expedita quasi!
                       Molestias alias maxime ad magni.
                     </p>
                     <button
-                      class="bg-primary hover:bg-primary-hover text-primary-contrast font-semibold flex w-fit items-center justify-center px-4 py-2 gap-2 min-h-10 rounded-md transition-colors duration-400"
+                      class="bg-primary text-primary-contrast hover:bg-primary-hover focus-visible:ring-primary focus-visible:ring-offset-background flex min-h-11 w-fit items-center justify-center gap-2 rounded-md px-4 py-2 text-sm font-semibold transition-[background-color,transform,box-shadow] duration-400 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50"
                     >
                       Learn more
                     </button>
@@ -52,15 +52,15 @@
                     class="size-48 object-contain"
                   />
                 </div>
-                <div class="flex gap-4 flex-1 items-center bg-foreground rounded-xl p-8">
-                  <div class="flex flex-1 flex-col gap-4 w-full justify-between">
+                <div class="bg-foreground flex flex-1 items-center gap-4 rounded-xl p-8">
+                  <div class="flex w-full flex-1 flex-col justify-between gap-4">
                     <h3>Lorem ipsum</h3>
                     <p>
                       Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, expedita quasi!
                       Molestias alias maxime ad magni.
                     </p>
                     <button
-                      class="bg-primary hover:bg-primary-hover text-primary-contrast font-semibold flex w-fit items-center justify-center px-4 py-2 gap-2 min-h-10 rounded-md transition-colors duration-400"
+                      class="bg-primary text-primary-contrast hover:bg-primary-hover focus-visible:ring-primary focus-visible:ring-offset-background flex min-h-11 w-fit items-center justify-center gap-2 rounded-md px-4 py-2 text-sm font-semibold transition-[background-color,transform,box-shadow] duration-400 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50"
                     >
                       Learn more
                     </button>
@@ -74,15 +74,15 @@
               </div>
             </custom-frame>
             <custom-frame title="Bordered">
-              <div class="flex max-lg:flex-col gap-4 w-full p-4 bg-background justify-center">
+              <div class="bg-background flex w-full justify-center gap-4 p-4 max-lg:flex-col">
                 <div
-                  class="flex gap-4 flex-1 items-center rounded-xl p-8 border border-border hover:border-border-hover transition duration-400"
+                  class="border-border hover:border-border-hover flex flex-1 items-center gap-4 rounded-xl border p-8 transition duration-400"
                 >
-                  <div class="flex flex-1 flex-col gap-4 w-full justify-between">
+                  <div class="flex w-full flex-1 flex-col justify-between gap-4">
                     <h3>Lorem ipsum</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                     <button
-                      class="bg-primary hover:bg-primary-hover text-primary-contrast font-semibold flex w-fit items-center justify-center px-4 py-2 gap-2 min-h-10 rounded-md transition-colors duration-400"
+                      class="bg-primary text-primary-contrast hover:bg-primary-hover focus-visible:ring-primary focus-visible:ring-offset-background flex min-h-11 w-fit items-center justify-center gap-2 rounded-md px-4 py-2 text-sm font-semibold transition-[background-color,transform,box-shadow] duration-400 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50"
                     >
                       Learn more
                     </button>
@@ -94,13 +94,13 @@
                   />
                 </div>
                 <div
-                  class="flex gap-4 flex-1 items-center rounded-xl p-8 border border-border hover:border-border-hover transition duration-400"
+                  class="border-border hover:border-border-hover flex flex-1 items-center gap-4 rounded-xl border p-8 transition duration-400"
                 >
-                  <div class="flex flex-1 flex-col gap-4 w-full justify-between">
+                  <div class="flex w-full flex-1 flex-col justify-between gap-4">
                     <h3>Lorem ipsum</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                     <button
-                      class="bg-primary hover:bg-primary-hover text-primary-contrast font-semibold flex w-fit items-center justify-center px-4 py-2 gap-2 min-h-10 rounded-md transition-colors duration-400"
+                      class="bg-primary text-primary-contrast hover:bg-primary-hover focus-visible:ring-primary focus-visible:ring-offset-background flex min-h-11 w-fit items-center justify-center gap-2 rounded-md px-4 py-2 text-sm font-semibold transition-[background-color,transform,box-shadow] duration-400 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50"
                     >
                       Learn more
                     </button>
@@ -112,13 +112,13 @@
                   />
                 </div>
                 <div
-                  class="flex gap-4 flex-1 items-center rounded-xl p-8 border border-border hover:border-border-hover transition duration-400"
+                  class="border-border hover:border-border-hover flex flex-1 items-center gap-4 rounded-xl border p-8 transition duration-400"
                 >
-                  <div class="flex flex-1 flex-col gap-4 w-full justify-between">
+                  <div class="flex w-full flex-1 flex-col justify-between gap-4">
                     <h3>Lorem ipsum</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                     <button
-                      class="bg-primary hover:bg-primary-hover text-primary-contrast font-semibold flex w-fit items-center justify-center px-4 py-2 gap-2 min-h-10 rounded-md transition-colors duration-400"
+                      class="bg-primary text-primary-contrast hover:bg-primary-hover focus-visible:ring-primary focus-visible:ring-offset-background flex min-h-11 w-fit items-center justify-center gap-2 rounded-md px-4 py-2 text-sm font-semibold transition-[background-color,transform,box-shadow] duration-400 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50"
                     >
                       Learn more
                     </button>
@@ -132,15 +132,15 @@
               </div>
             </custom-frame>
             <custom-frame title="Neobrutalism">
-              <div class="flex max-lg:flex-col gap-4 w-full p-4 bg-background justify-center">
+              <div class="bg-background flex w-full justify-center gap-4 p-4 max-lg:flex-col">
                 <div
-                  class="flex gap-4 flex-1 items-center p-8 border-2 border-neutral-950 shadow-[4px_4px_0_#0a0a0a] hover:shadow-[2px_2px_0_#0a0a0a] hover:translate-0.5 transition duration-400"
+                  class="flex flex-1 items-center gap-4 border-2 border-neutral-950 p-8 shadow-[4px_4px_0_#0a0a0a] transition duration-400 hover:translate-0.5 hover:shadow-[2px_2px_0_#0a0a0a]"
                 >
-                  <div class="flex flex-1 flex-col gap-4 w-full justify-between">
+                  <div class="flex w-full flex-1 flex-col justify-between gap-4">
                     <h3>Lorem ipsum</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                     <button
-                      class="bg-primary text-neutral-50 flex w-fit px-4 py-2 font-semibold border-2 border-neutral-950 shadow-[4px_4px_0_#0a0a0a] hover:shadow-[2px_2px_0_#0a0a0a] hover:translate-0.5 active:shadow-[0_0_0_#0a0a0a] active:translate-1 transition duration-400"
+                      class="bg-primary text-primary-contrast focus-visible:ring-primary focus-visible:ring-offset-background flex min-h-11 w-fit items-center justify-center border-2 border-neutral-950 px-4 py-2 text-sm font-semibold shadow-[4px_4px_0_#0a0a0a] transition duration-400 hover:translate-0.5 hover:shadow-[2px_2px_0_#0a0a0a] focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none active:translate-1 active:shadow-[0_0_0_#0a0a0a] disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50"
                     >
                       Learn more
                     </button>
@@ -152,13 +152,13 @@
                   />
                 </div>
                 <div
-                  class="flex gap-4 flex-1 items-center p-8 border-2 border-neutral-950 shadow-[4px_4px_0_#0a0a0a] hover:shadow-[2px_2px_0_#0a0a0a] hover:translate-0.5 transition duration-400"
+                  class="flex flex-1 items-center gap-4 border-2 border-neutral-950 p-8 shadow-[4px_4px_0_#0a0a0a] transition duration-400 hover:translate-0.5 hover:shadow-[2px_2px_0_#0a0a0a]"
                 >
-                  <div class="flex flex-1 flex-col gap-4 w-full justify-between">
+                  <div class="flex w-full flex-1 flex-col justify-between gap-4">
                     <h3>Lorem ipsum</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                     <button
-                      class="bg-primary text-neutral-50 flex w-fit px-4 py-2 font-semibold border-2 border-neutral-950 shadow-[4px_4px_0_#0a0a0a] hover:shadow-[2px_2px_0_#0a0a0a] hover:translate-0.5 active:shadow-[0_0_0_#0a0a0a] active:translate-1 transition duration-400"
+                      class="bg-primary text-primary-contrast focus-visible:ring-primary focus-visible:ring-offset-background flex min-h-11 w-fit items-center justify-center border-2 border-neutral-950 px-4 py-2 text-sm font-semibold shadow-[4px_4px_0_#0a0a0a] transition duration-400 hover:translate-0.5 hover:shadow-[2px_2px_0_#0a0a0a] focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none active:translate-1 active:shadow-[0_0_0_#0a0a0a] disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50"
                     >
                       Learn more
                     </button>
@@ -170,13 +170,13 @@
                   />
                 </div>
                 <div
-                  class="flex gap-4 flex-1 items-center p-8 border-2 border-neutral-950 shadow-[4px_4px_0_#0a0a0a] hover:shadow-[2px_2px_0_#0a0a0a] hover:translate-0.5 transition duration-400"
+                  class="flex flex-1 items-center gap-4 border-2 border-neutral-950 p-8 shadow-[4px_4px_0_#0a0a0a] transition duration-400 hover:translate-0.5 hover:shadow-[2px_2px_0_#0a0a0a]"
                 >
-                  <div class="flex flex-1 flex-col gap-4 w-full justify-between">
+                  <div class="flex w-full flex-1 flex-col justify-between gap-4">
                     <h3>Lorem ipsum</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                     <button
-                      class="bg-primary text-neutral-50 flex w-fit px-4 py-2 font-semibold border-2 border-neutral-950 shadow-[4px_4px_0_#0a0a0a] hover:shadow-[2px_2px_0_#0a0a0a] hover:translate-0.5 active:shadow-[0_0_0_#0a0a0a] active:translate-1 transition duration-400"
+                      class="bg-primary text-primary-contrast focus-visible:ring-primary focus-visible:ring-offset-background flex min-h-11 w-fit items-center justify-center border-2 border-neutral-950 px-4 py-2 text-sm font-semibold shadow-[4px_4px_0_#0a0a0a] transition duration-400 hover:translate-0.5 hover:shadow-[2px_2px_0_#0a0a0a] focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none active:translate-1 active:shadow-[0_0_0_#0a0a0a] disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50"
                     >
                       Learn more
                     </button>
@@ -191,22 +191,22 @@
             </custom-frame>
             <custom-frame title="Glassmorphism">
               <div
-                class="flex max-lg:flex-col gap-4 w-full relative p-4 bg-background justify-center overflow-hidden"
+                class="bg-background relative flex w-full justify-center gap-4 overflow-hidden p-4 max-lg:flex-col"
               >
                 <div
-                  class="absolute size-32 bg-sky-600 rounded-full left-0 top-0 -translate-12"
+                  class="absolute top-0 left-0 size-32 -translate-12 rounded-full bg-sky-600"
                 ></div>
                 <div
-                  class="absolute size-32 bg-rose-600 rounded-full right-0 bottom-0 translate-12"
+                  class="absolute right-0 bottom-0 size-32 translate-12 rounded-full bg-rose-600"
                 ></div>
                 <div
-                  class="flex gap-4 flex-1 items-center p-8 border border-border rounded-xl backdrop-blur-md bg-neutral-50/30 hover:scale-105 hover:-translate-y-2 transition duration-400"
+                  class="border-border flex flex-1 items-center gap-4 rounded-xl border bg-neutral-50/30 p-8 backdrop-blur-md transition duration-400 hover:-translate-y-2 hover:scale-105"
                 >
-                  <div class="flex flex-1 flex-col gap-4 w-full justify-between">
+                  <div class="flex w-full flex-1 flex-col justify-between gap-4">
                     <h3>Lorem ipsum</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                     <button
-                      class="bg-primary hover:bg-primary-hover text-primary-contrast font-semibold flex w-fit items-center justify-center px-4 py-2 gap-2 min-h-10 rounded-md transition-colors duration-400"
+                      class="bg-primary text-primary-contrast hover:bg-primary-hover focus-visible:ring-primary focus-visible:ring-offset-background flex min-h-11 w-fit items-center justify-center gap-2 rounded-md px-4 py-2 text-sm font-semibold transition-[background-color,transform,box-shadow] duration-400 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50"
                     >
                       Learn more
                     </button>
@@ -218,13 +218,13 @@
                   />
                 </div>
                 <div
-                  class="flex gap-4 flex-1 items-center p-8 border border-border rounded-xl backdrop-blur-md bg-neutral-50/30 hover:scale-105 hover:-translate-y-2 transition duration-400"
+                  class="border-border flex flex-1 items-center gap-4 rounded-xl border bg-neutral-50/30 p-8 backdrop-blur-md transition duration-400 hover:-translate-y-2 hover:scale-105"
                 >
-                  <div class="flex flex-1 flex-col gap-4 w-full justify-between">
+                  <div class="flex w-full flex-1 flex-col justify-between gap-4">
                     <h3>Lorem ipsum</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                     <button
-                      class="bg-primary hover:bg-primary-hover text-primary-contrast font-semibold flex w-fit items-center justify-center px-4 py-2 gap-2 min-h-10 rounded-md transition-colors duration-400"
+                      class="bg-primary text-primary-contrast hover:bg-primary-hover focus-visible:ring-primary focus-visible:ring-offset-background flex min-h-11 w-fit items-center justify-center gap-2 rounded-md px-4 py-2 text-sm font-semibold transition-[background-color,transform,box-shadow] duration-400 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50"
                     >
                       Learn more
                     </button>
@@ -236,13 +236,13 @@
                   />
                 </div>
                 <div
-                  class="flex gap-4 flex-1 items-center p-8 border border-border rounded-xl backdrop-blur-md bg-neutral-50/30 hover:scale-105 hover:-translate-y-2 transition duration-400"
+                  class="border-border flex flex-1 items-center gap-4 rounded-xl border bg-neutral-50/30 p-8 backdrop-blur-md transition duration-400 hover:-translate-y-2 hover:scale-105"
                 >
-                  <div class="flex flex-1 flex-col gap-4 w-full justify-between">
+                  <div class="flex w-full flex-1 flex-col justify-between gap-4">
                     <h3>Lorem ipsum</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                     <button
-                      class="bg-primary hover:bg-primary-hover text-primary-contrast font-semibold flex w-fit items-center justify-center px-4 py-2 gap-2 min-h-10 rounded-md transition-colors duration-400"
+                      class="bg-primary text-primary-contrast hover:bg-primary-hover focus-visible:ring-primary focus-visible:ring-offset-background flex min-h-11 w-fit items-center justify-center gap-2 rounded-md px-4 py-2 text-sm font-semibold transition-[background-color,transform,box-shadow] duration-400 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50"
                     >
                       Learn more
                     </button>
@@ -256,11 +256,11 @@
               </div>
             </custom-frame>
             <custom-frame title="Flat with icon">
-              <div class="w-full p-4 md:p-6 bg-background">
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                  <div class="flex flex-col gap-3 p-6 rounded-xl bg-foreground">
+              <div class="bg-background w-full p-4 md:p-6">
+                <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+                  <div class="bg-foreground flex flex-col gap-3 rounded-xl p-6">
                     <div
-                      class="size-10 rounded-lg bg-primary text-primary-contrast flex items-center justify-center"
+                      class="bg-primary text-primary-contrast flex size-10 items-center justify-center rounded-lg"
                     >
                       <svg
                         class="size-5"
@@ -275,14 +275,14 @@
                         <polyline points="12 6 12 12 16 14" />
                       </svg>
                     </div>
-                    <h4 class="font-semibold text-text">Real-time sync</h4>
-                    <p class="text-sm text-text-secondary">
+                    <h4 class="text-text font-semibold">Real-time sync</h4>
+                    <p class="text-text-secondary text-sm">
                       Changes appear instantly across all connected devices.
                     </p>
                   </div>
-                  <div class="flex flex-col gap-3 p-6 rounded-xl bg-foreground">
+                  <div class="bg-foreground flex flex-col gap-3 rounded-xl p-6">
                     <div
-                      class="size-10 rounded-lg bg-primary text-primary-contrast flex items-center justify-center"
+                      class="bg-primary text-primary-contrast flex size-10 items-center justify-center rounded-lg"
                     >
                       <svg
                         class="size-5"
@@ -299,14 +299,14 @@
                         <path d="M16 3.13a4 4 0 0 1 0 7.75" />
                       </svg>
                     </div>
-                    <h4 class="font-semibold text-text">Team collaboration</h4>
-                    <p class="text-sm text-text-secondary">
+                    <h4 class="text-text font-semibold">Team collaboration</h4>
+                    <p class="text-text-secondary text-sm">
                       Work together seamlessly with built-in tools.
                     </p>
                   </div>
-                  <div class="flex flex-col gap-3 p-6 rounded-xl bg-foreground">
+                  <div class="bg-foreground flex flex-col gap-3 rounded-xl p-6">
                     <div
-                      class="size-10 rounded-lg bg-primary text-primary-contrast flex items-center justify-center"
+                      class="bg-primary text-primary-contrast flex size-10 items-center justify-center rounded-lg"
                     >
                       <svg
                         class="size-5"
@@ -320,14 +320,14 @@
                         <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
                       </svg>
                     </div>
-                    <h4 class="font-semibold text-text">Analytics</h4>
-                    <p class="text-sm text-text-secondary">
+                    <h4 class="text-text font-semibold">Analytics</h4>
+                    <p class="text-text-secondary text-sm">
                       Detailed insights and metrics at your fingertips.
                     </p>
                   </div>
-                  <div class="flex flex-col gap-3 p-6 rounded-xl bg-foreground">
+                  <div class="bg-foreground flex flex-col gap-3 rounded-xl p-6">
                     <div
-                      class="size-10 rounded-lg bg-primary text-primary-contrast flex items-center justify-center"
+                      class="bg-primary text-primary-contrast flex size-10 items-center justify-center rounded-lg"
                     >
                       <svg
                         class="size-5"
@@ -343,8 +343,8 @@
                         <line x1="12" y1="17" x2="12" y2="21" />
                       </svg>
                     </div>
-                    <h4 class="font-semibold text-text">Responsive</h4>
-                    <p class="text-sm text-text-secondary">
+                    <h4 class="text-text font-semibold">Responsive</h4>
+                    <p class="text-text-secondary text-sm">
                       Works perfectly across all screen sizes.
                     </p>
                   </div>
@@ -352,14 +352,14 @@
               </div>
             </custom-frame>
             <custom-frame title="Bordered with icon">
-              <div class="w-full p-4 md:p-6 bg-background">
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div class="bg-background w-full p-4 md:p-6">
+                <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
                   <div
-                    class="flex flex-col gap-4 p-6 rounded-xl border border-border hover:border-border-hover transition duration-400"
+                    class="border-border hover:border-border-hover flex flex-col gap-4 rounded-xl border p-6 transition duration-400"
                   >
-                    <div class="size-12 rounded-xl bg-primary/10 flex items-center justify-center">
+                    <div class="bg-primary/10 flex size-12 items-center justify-center rounded-xl">
                       <svg
-                        class="size-6 text-primary"
+                        class="text-primary size-6"
                         viewBox="0 0 24 24"
                         fill="none"
                         stroke="currentColor"
@@ -372,18 +372,18 @@
                         />
                       </svg>
                     </div>
-                    <h4 class="font-semibold text-text text-lg">Smart Automation</h4>
-                    <p class="text-sm text-text-secondary leading-relaxed">
+                    <h4 class="text-text text-lg font-semibold">Smart Automation</h4>
+                    <p class="text-text-secondary text-sm leading-relaxed">
                       Automate repetitive tasks and workflows so your team can focus on what matters
                       most.
                     </p>
                   </div>
                   <div
-                    class="flex flex-col gap-4 p-6 rounded-xl border border-border hover:border-border-hover transition duration-400"
+                    class="border-border hover:border-border-hover flex flex-col gap-4 rounded-xl border p-6 transition duration-400"
                   >
-                    <div class="size-12 rounded-xl bg-primary/10 flex items-center justify-center">
+                    <div class="bg-primary/10 flex size-12 items-center justify-center rounded-xl">
                       <svg
-                        class="size-6 text-primary"
+                        class="text-primary size-6"
                         viewBox="0 0 24 24"
                         fill="none"
                         stroke="currentColor"
@@ -394,18 +394,18 @@
                         <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10" />
                       </svg>
                     </div>
-                    <h4 class="font-semibold text-text text-lg">Enterprise Security</h4>
-                    <p class="text-sm text-text-secondary leading-relaxed">
+                    <h4 class="text-text text-lg font-semibold">Enterprise Security</h4>
+                    <p class="text-text-secondary text-sm leading-relaxed">
                       End-to-end encryption, SOC 2 compliance, and advanced access controls out of
                       the box.
                     </p>
                   </div>
                   <div
-                    class="flex flex-col gap-4 p-6 rounded-xl border border-border hover:border-border-hover transition duration-400"
+                    class="border-border hover:border-border-hover flex flex-col gap-4 rounded-xl border p-6 transition duration-400"
                   >
-                    <div class="size-12 rounded-xl bg-primary/10 flex items-center justify-center">
+                    <div class="bg-primary/10 flex size-12 items-center justify-center rounded-xl">
                       <svg
-                        class="size-6 text-primary"
+                        class="text-primary size-6"
                         viewBox="0 0 24 24"
                         fill="none"
                         stroke="currentColor"
@@ -420,8 +420,8 @@
                         <line x1="12" y1="22.08" x2="12" y2="12" />
                       </svg>
                     </div>
-                    <h4 class="font-semibold text-text text-lg">Scalable Infrastructure</h4>
-                    <p class="text-sm text-text-secondary leading-relaxed">
+                    <h4 class="text-text text-lg font-semibold">Scalable Infrastructure</h4>
+                    <p class="text-text-secondary text-sm leading-relaxed">
                       From prototype to production scale, our infrastructure grows seamlessly with
                       your needs.
                     </p>
@@ -430,31 +430,31 @@
               </div>
             </custom-frame>
             <custom-frame title="Image cards">
-              <div class="w-full p-4 md:p-6 bg-background">
-                <div class="grid grid-cols-1 lg:grid-cols-3 min-h-96 gap-6">
+              <div class="bg-background w-full p-4 md:p-6">
+                <div class="grid min-h-96 grid-cols-1 gap-6 lg:grid-cols-3">
                   <div
-                    class="group flex flex-col min-h-64 h-full justify-end overflow-hidden rounded-xl relative"
+                    class="group relative flex h-full min-h-64 flex-col justify-end overflow-hidden rounded-xl"
                   >
                     <img
                       src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2072&auto=format&fit=crop"
                       alt="Development"
-                      class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-400"
+                      class="absolute inset-0 h-full w-full object-cover transition-transform duration-400 group-hover:scale-105"
                     />
                     <div
                       class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"
                     ></div>
                     <div class="relative p-6 text-neutral-50">
-                      <span class="text-xs font-semibold uppercase tracking-wider">
+                      <span class="text-xs font-semibold tracking-wider uppercase">
                         Development
                       </span>
-                      <h4 class="font-semibold text-lg">Modern web development</h4>
+                      <h4 class="text-lg font-semibold">Modern web development</h4>
                       <p class="text-sm text-neutral-300">
                         Build fast, scalable, and secure web applications with the latest
                         technologies.
                       </p>
                       <a
                         href="#"
-                        class="lg:max-h-0 lg:opacity-0 group-hover:max-h-10 group-hover:opacity-100 text-sm font-semibold flex items-center gap-1 hover:gap-2 max-lg:mt-2 group-hover:mt-2 transition-all duration-400"
+                        class="focus-visible:ring-primary focus-visible:ring-offset-background flex items-center gap-1 px-1 py-2 text-sm font-semibold transition-all duration-400 group-hover:mt-2 group-hover:max-h-11 group-hover:opacity-100 hover:gap-2 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none max-lg:mt-2 lg:max-h-0 lg:opacity-0"
                       >
                         Read more
                         <svg
@@ -473,27 +473,27 @@
                     </div>
                   </div>
                   <div
-                    class="group flex flex-col min-h-64 h-full justify-end overflow-hidden rounded-xl relative"
+                    class="group relative flex h-full min-h-64 flex-col justify-end overflow-hidden rounded-xl"
                   >
                     <img
                       src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop"
                       alt="Collaboration"
-                      class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-400"
+                      class="absolute inset-0 h-full w-full object-cover transition-transform duration-400 group-hover:scale-105"
                     />
                     <div
                       class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"
                     ></div>
                     <div class="relative p-6 text-neutral-50">
-                      <span class="text-xs font-semibold uppercase tracking-wider">
+                      <span class="text-xs font-semibold tracking-wider uppercase">
                         Collaboration
                       </span>
-                      <h4 class="font-semibold text-lg">Team workflows</h4>
+                      <h4 class="text-lg font-semibold">Team workflows</h4>
                       <p class="text-sm text-neutral-300">
                         Streamline your team's productivity with integrated collaboration tools.
                       </p>
                       <a
                         href="#"
-                        class="lg:max-h-0 lg:opacity-0 group-hover:max-h-10 group-hover:opacity-100 text-sm font-semibold flex items-center gap-1 hover:gap-2 max-lg:mt-2 group-hover:mt-2 transition-all duration-400"
+                        class="focus-visible:ring-primary focus-visible:ring-offset-background flex items-center gap-1 px-1 py-2 text-sm font-semibold transition-all duration-400 group-hover:mt-2 group-hover:max-h-11 group-hover:opacity-100 hover:gap-2 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none max-lg:mt-2 lg:max-h-0 lg:opacity-0"
                       >
                         Read more
                         <svg
@@ -512,25 +512,25 @@
                     </div>
                   </div>
                   <div
-                    class="group flex flex-col min-h-64 h-full justify-end overflow-hidden rounded-xl relative"
+                    class="group relative flex h-full min-h-64 flex-col justify-end overflow-hidden rounded-xl"
                   >
                     <img
                       src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=2070&auto=format&fit=crop"
                       alt="Growth"
-                      class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-400"
+                      class="absolute inset-0 h-full w-full object-cover transition-transform duration-400 group-hover:scale-105"
                     />
                     <div
                       class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"
                     ></div>
                     <div class="relative p-6 text-neutral-50">
-                      <span class="text-xs font-semibold uppercase tracking-wider">Growth</span>
-                      <h4 class="font-semibold text-lg">Scale your business</h4>
+                      <span class="text-xs font-semibold tracking-wider uppercase">Growth</span>
+                      <h4 class="text-lg font-semibold">Scale your business</h4>
                       <p class="text-sm text-neutral-300">
                         From startup to enterprise, scale your operations with confidence.
                       </p>
                       <a
                         href="#"
-                        class="lg:max-h-0 lg:opacity-0 group-hover:max-h-10 group-hover:opacity-100 text-sm font-semibold flex items-center gap-1 hover:gap-2 max-lg:mt-2 group-hover:mt-2 transition-all duration-400"
+                        class="focus-visible:ring-primary focus-visible:ring-offset-background flex items-center gap-1 px-1 py-2 text-sm font-semibold transition-all duration-400 group-hover:mt-2 group-hover:max-h-11 group-hover:opacity-100 hover:gap-2 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none max-lg:mt-2 lg:max-h-0 lg:opacity-0"
                       >
                         Read more
                         <svg
@@ -552,30 +552,30 @@
               </div>
             </custom-frame>
             <custom-frame title="Image split">
-              <div class="w-full p-4 md:p-6 bg-background">
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div class="bg-background w-full p-4 md:p-6">
+                <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
                   <div
-                    class="group flex flex-col rounded-xl border border-border hover:border-border-hover overflow-hidden transition duration-400"
+                    class="group border-border hover:border-border-hover flex flex-col overflow-hidden rounded-xl border transition duration-400"
                   >
                     <div class="aspect-[16/10] overflow-hidden">
                       <img
                         src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2072&auto=format&fit=crop"
                         alt="Development"
-                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        class="h-full w-full object-cover transition-transform duration-400 group-hover:scale-105"
                       />
                     </div>
                     <div class="flex flex-col gap-3 p-6">
-                      <span class="text-xs font-semibold uppercase tracking-wider text-primary">
+                      <span class="text-primary text-xs font-semibold tracking-wider uppercase">
                         Development
                       </span>
-                      <h4 class="font-semibold text-text text-lg">Modern web development</h4>
-                      <p class="text-sm text-text-secondary">
+                      <h4 class="text-text text-lg font-semibold">Modern web development</h4>
+                      <p class="text-text-secondary text-sm">
                         Build fast, responsive websites using the latest technologies and best
                         practices.
                       </p>
                       <a
                         href="#"
-                        class="text-sm font-semibold text-primary inline-flex items-center gap-1 mt-1 hover:gap-2 transition-all duration-300"
+                        class="text-primary focus-visible:ring-primary focus-visible:ring-offset-background mt-1 inline-flex min-h-11 items-center gap-1 px-1 py-2 text-sm font-semibold transition-all duration-300 hover:gap-2 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
                       >
                         Read more
                         <svg
@@ -594,26 +594,26 @@
                     </div>
                   </div>
                   <div
-                    class="group flex flex-col rounded-xl border border-border hover:border-border-hover overflow-hidden transition duration-400"
+                    class="group border-border hover:border-border-hover flex flex-col overflow-hidden rounded-xl border transition duration-400"
                   >
                     <div class="aspect-[16/10] overflow-hidden">
                       <img
                         src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop"
                         alt="Collaboration"
-                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        class="h-full w-full object-cover transition-transform duration-400 group-hover:scale-105"
                       />
                     </div>
                     <div class="flex flex-col gap-3 p-6">
-                      <span class="text-xs font-semibold uppercase tracking-wider text-primary">
+                      <span class="text-primary text-xs font-semibold tracking-wider uppercase">
                         Collaboration
                       </span>
-                      <h4 class="font-semibold text-text text-lg">Team workflows</h4>
-                      <p class="text-sm text-text-secondary">
+                      <h4 class="text-text text-lg font-semibold">Team workflows</h4>
+                      <p class="text-text-secondary text-sm">
                         Streamline your team's productivity with integrated collaboration tools.
                       </p>
                       <a
                         href="#"
-                        class="text-sm font-semibold text-primary inline-flex items-center gap-1 mt-1 hover:gap-2 transition-all duration-300"
+                        class="text-primary focus-visible:ring-primary focus-visible:ring-offset-background mt-1 inline-flex min-h-11 items-center gap-1 px-1 py-2 text-sm font-semibold transition-all duration-300 hover:gap-2 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
                       >
                         Read more
                         <svg
@@ -632,26 +632,26 @@
                     </div>
                   </div>
                   <div
-                    class="group flex flex-col rounded-xl border border-border hover:border-border-hover overflow-hidden transition duration-400"
+                    class="group border-border hover:border-border-hover flex flex-col overflow-hidden rounded-xl border transition duration-400"
                   >
                     <div class="aspect-[16/10] overflow-hidden">
                       <img
                         src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=2070&auto=format&fit=crop"
                         alt="Growth"
-                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        class="h-full w-full object-cover transition-transform duration-400 group-hover:scale-105"
                       />
                     </div>
                     <div class="flex flex-col gap-3 p-6">
-                      <span class="text-xs font-semibold uppercase tracking-wider text-primary">
+                      <span class="text-primary text-xs font-semibold tracking-wider uppercase">
                         Growth
                       </span>
-                      <h4 class="font-semibold text-text text-lg">Scale your business</h4>
-                      <p class="text-sm text-text-secondary">
+                      <h4 class="text-text text-lg font-semibold">Scale your business</h4>
+                      <p class="text-text-secondary text-sm">
                         From startup to enterprise, scale your operations with confidence.
                       </p>
                       <a
                         href="#"
-                        class="text-sm font-semibold text-primary inline-flex items-center gap-1 mt-1 hover:gap-2 transition-all duration-300"
+                        class="text-primary focus-visible:ring-primary focus-visible:ring-offset-background mt-1 inline-flex min-h-11 items-center gap-1 px-1 py-2 text-sm font-semibold transition-all duration-300 hover:gap-2 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
                       >
                         Read more
                         <svg
@@ -673,29 +673,29 @@
               </div>
             </custom-frame>
             <custom-frame title="Horizontal image card">
-              <div class="w-full p-4 md:p-6 bg-background">
+              <div class="bg-background w-full p-4 md:p-6">
                 <div
-                  class="group flex flex-col md:flex-row rounded-xl border border-border hover:border-border-hover overflow-hidden transition duration-400"
+                  class="group border-border hover:border-border-hover flex flex-col overflow-hidden rounded-xl border transition duration-400 md:flex-row"
                 >
-                  <div class="w-full md:w-2/5 aspect-[16/10] md:aspect-auto overflow-hidden">
+                  <div class="aspect-[16/10] w-full overflow-hidden md:aspect-auto md:w-2/5">
                     <img
                       src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=2070&auto=format&fit=crop"
                       alt="Laptop code"
-                      class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      class="h-full w-full object-cover transition-transform duration-400 group-hover:scale-105"
                     />
                   </div>
-                  <div class="flex flex-col gap-4 p-8 flex-1 justify-center">
-                    <span class="text-xs font-semibold uppercase tracking-wider text-primary">
+                  <div class="flex flex-1 flex-col justify-center gap-4 p-8">
+                    <span class="text-primary text-xs font-semibold tracking-wider uppercase">
                       Featured
                     </span>
-                    <h4 class="text-xl font-bold text-text">Build with confidence</h4>
+                    <h4 class="text-text text-xl font-bold">Build with confidence</h4>
                     <p class="text-text-secondary">
                       Our production-ready components come with built-in accessibility, responsive
                       design, and performance optimizations so you can ship with confidence.
                     </p>
                     <a
                       href="#"
-                      class="bg-primary hover:bg-primary-hover text-primary-contrast font-semibold flex w-fit items-center justify-center px-4 py-2 gap-2 min-h-10 rounded-md transition-colors duration-400 mt-2"
+                      class="bg-primary text-primary-contrast hover:bg-primary-hover focus-visible:ring-primary focus-visible:ring-offset-background mt-2 flex min-h-11 w-fit items-center justify-center gap-2 rounded-md px-4 py-2 text-sm font-semibold transition-[background-color,transform,box-shadow] duration-400 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
                     >
                       Learn more
                     </a>
@@ -704,24 +704,25 @@
               </div>
             </custom-frame>
             <custom-frame title="Profile cards">
-              <div class="w-full p-4 md:p-6 bg-background">
-                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+              <div class="bg-background w-full p-4 md:p-6">
+                <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-4">
                   <div
-                    class="flex flex-col items-center gap-4 p-6 rounded-xl border border-border hover:border-border-hover transition duration-400 text-center"
+                    class="border-border hover:border-border-hover flex flex-col items-center gap-4 rounded-xl border p-6 text-center transition duration-400"
                   >
                     <img
                       src="https://i.pravatar.cc/200?img=11"
                       alt="Sarah Chen"
-                      class="size-20 rounded-full object-cover border-2 border-border"
+                      class="border-border size-20 rounded-full border-2 object-cover"
                     />
                     <div class="flex flex-col gap-1">
-                      <h4 class="font-semibold text-text">Sarah Chen</h4>
-                      <p class="text-sm text-text-secondary">CEO & Founder</p>
+                      <h4 class="text-text font-semibold">Sarah Chen</h4>
+                      <p class="text-text-secondary text-sm">CEO & Founder</p>
                     </div>
                     <div class="flex gap-3">
                       <a
                         href="#"
-                        class="size-4 text-text-secondary hover:text-text transition-colors"
+                        aria-label="Visit X profile"
+                        class="text-text-secondary hover:text-text focus-visible:ring-primary focus-visible:ring-offset-background inline-flex size-6 items-center justify-center rounded-md transition-[color,transform,box-shadow] duration-200 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
                       >
                         <svg viewBox="0 0 24 24" fill="currentColor">
                           <path
@@ -731,7 +732,8 @@
                       </a>
                       <a
                         href="#"
-                        class="size-4 text-text-secondary hover:text-text transition-colors"
+                        aria-label="Visit GitHub profile"
+                        class="text-text-secondary hover:text-text focus-visible:ring-primary focus-visible:ring-offset-background inline-flex size-6 items-center justify-center rounded-md transition-[color,transform,box-shadow] duration-200 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
                       >
                         <svg viewBox="0 0 20 20" fill="currentColor">
                           <path
@@ -743,21 +745,22 @@
                     </div>
                   </div>
                   <div
-                    class="flex flex-col items-center gap-4 p-6 rounded-xl border border-border hover:border-border-hover transition duration-400 text-center"
+                    class="border-border hover:border-border-hover flex flex-col items-center gap-4 rounded-xl border p-6 text-center transition duration-400"
                   >
                     <img
                       src="https://i.pravatar.cc/200?img=12"
                       alt="Marcus Rivera"
-                      class="size-20 rounded-full object-cover border-2 border-border"
+                      class="border-border size-20 rounded-full border-2 object-cover"
                     />
                     <div class="flex flex-col gap-1">
-                      <h4 class="font-semibold text-text">Marcus Rivera</h4>
-                      <p class="text-sm text-text-secondary">CTO</p>
+                      <h4 class="text-text font-semibold">Marcus Rivera</h4>
+                      <p class="text-text-secondary text-sm">CTO</p>
                     </div>
                     <div class="flex gap-3">
                       <a
                         href="#"
-                        class="size-4 text-text-secondary hover:text-text transition-colors"
+                        aria-label="Visit X profile"
+                        class="text-text-secondary hover:text-text focus-visible:ring-primary focus-visible:ring-offset-background inline-flex size-6 items-center justify-center rounded-md transition-[color,transform,box-shadow] duration-200 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
                       >
                         <svg viewBox="0 0 24 24" fill="currentColor">
                           <path
@@ -767,7 +770,8 @@
                       </a>
                       <a
                         href="#"
-                        class="size-4 text-text-secondary hover:text-text transition-colors"
+                        aria-label="Visit GitHub profile"
+                        class="text-text-secondary hover:text-text focus-visible:ring-primary focus-visible:ring-offset-background inline-flex size-6 items-center justify-center rounded-md transition-[color,transform,box-shadow] duration-200 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
                       >
                         <svg viewBox="0 0 20 20" fill="currentColor">
                           <path
@@ -779,21 +783,22 @@
                     </div>
                   </div>
                   <div
-                    class="flex flex-col items-center gap-4 p-6 rounded-xl border border-border hover:border-border-hover transition duration-400 text-center"
+                    class="border-border hover:border-border-hover flex flex-col items-center gap-4 rounded-xl border p-6 text-center transition duration-400"
                   >
                     <img
                       src="https://i.pravatar.cc/200?img=5"
                       alt="Emily Zhang"
-                      class="size-20 rounded-full object-cover border-2 border-border"
+                      class="border-border size-20 rounded-full border-2 object-cover"
                     />
                     <div class="flex flex-col gap-1">
-                      <h4 class="font-semibold text-text">Emily Zhang</h4>
-                      <p class="text-sm text-text-secondary">Lead Designer</p>
+                      <h4 class="text-text font-semibold">Emily Zhang</h4>
+                      <p class="text-text-secondary text-sm">Lead Designer</p>
                     </div>
                     <div class="flex gap-3">
                       <a
                         href="#"
-                        class="size-4 text-text-secondary hover:text-text transition-colors"
+                        aria-label="Visit X profile"
+                        class="text-text-secondary hover:text-text focus-visible:ring-primary focus-visible:ring-offset-background inline-flex size-6 items-center justify-center rounded-md transition-[color,transform,box-shadow] duration-200 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
                       >
                         <svg viewBox="0 0 24 24" fill="currentColor">
                           <path
@@ -803,7 +808,8 @@
                       </a>
                       <a
                         href="#"
-                        class="size-4 text-text-secondary hover:text-text transition-colors"
+                        aria-label="Visit GitHub profile"
+                        class="text-text-secondary hover:text-text focus-visible:ring-primary focus-visible:ring-offset-background inline-flex size-6 items-center justify-center rounded-md transition-[color,transform,box-shadow] duration-200 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
                       >
                         <svg viewBox="0 0 20 20" fill="currentColor">
                           <path
@@ -815,21 +821,22 @@
                     </div>
                   </div>
                   <div
-                    class="flex flex-col items-center gap-4 p-6 rounded-xl border border-border hover:border-border-hover transition duration-400 text-center"
+                    class="border-border hover:border-border-hover flex flex-col items-center gap-4 rounded-xl border p-6 text-center transition duration-400"
                   >
                     <img
                       src="https://i.pravatar.cc/200?img=8"
                       alt="James Park"
-                      class="size-20 rounded-full object-cover border-2 border-border"
+                      class="border-border size-20 rounded-full border-2 object-cover"
                     />
                     <div class="flex flex-col gap-1">
-                      <h4 class="font-semibold text-text">James Park</h4>
-                      <p class="text-sm text-text-secondary">Head of Engineering</p>
+                      <h4 class="text-text font-semibold">James Park</h4>
+                      <p class="text-text-secondary text-sm">Head of Engineering</p>
                     </div>
                     <div class="flex gap-3">
                       <a
                         href="#"
-                        class="size-4 text-text-secondary hover:text-text transition-colors"
+                        aria-label="Visit X profile"
+                        class="text-text-secondary hover:text-text focus-visible:ring-primary focus-visible:ring-offset-background inline-flex size-6 items-center justify-center rounded-md transition-[color,transform,box-shadow] duration-200 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
                       >
                         <svg viewBox="0 0 24 24" fill="currentColor">
                           <path
@@ -839,7 +846,8 @@
                       </a>
                       <a
                         href="#"
-                        class="size-4 text-text-secondary hover:text-text transition-colors"
+                        aria-label="Visit GitHub profile"
+                        class="text-text-secondary hover:text-text focus-visible:ring-primary focus-visible:ring-offset-background inline-flex size-6 items-center justify-center rounded-md transition-[color,transform,box-shadow] duration-200 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
                       >
                         <svg viewBox="0 0 20 20" fill="currentColor">
                           <path
@@ -855,18 +863,18 @@
             </custom-frame>
 
             <custom-frame title="Color cards">
-              <div class="w-full bg-background p-4 md:p-6">
+              <div class="bg-background w-full p-4 md:p-6">
                 <div
-                  class="w-full max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+                  class="mx-auto grid w-full max-w-7xl grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3"
                 >
                   <div
-                    class="flex flex-col p-6 gap-2 min-h-64 border-2 border-red-600 text-red-600 bg-background hover:bg-red-600 hover:text-background hover:rounded-2xl transition-all duration-400"
+                    class="border-error text-error bg-background hover:bg-error hover:text-error-contrast flex min-h-64 flex-col gap-2 border-2 p-6 transition-all duration-400 hover:rounded-2xl"
                   >
                     <span class="text-sm">Some label</span>
                     <h3>Lorem ipsum dolor sir amet?</h3>
                     <a
                       href="#"
-                      class="mt-auto text-sm font-semibold flex items-center gap-1 hover:gap-2 transition-all duration-400"
+                      class="focus-visible:ring-primary focus-visible:ring-offset-background mt-auto flex min-h-11 items-center gap-1 px-1 py-2 text-sm font-semibold transition-all duration-400 hover:gap-2 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
                     >
                       Learn more
                       <svg
@@ -884,13 +892,13 @@
                     </a>
                   </div>
                   <div
-                    class="flex flex-col p-6 gap-2 min-h-64 border-2 border-emerald-600 text-emerald-600 bg-background hover:bg-emerald-600 hover:text-background hover:rounded-2xl transition-all duration-400"
+                    class="border-success text-success bg-background hover:bg-success hover:text-success-contrast flex min-h-64 flex-col gap-2 border-2 p-6 transition-all duration-400 hover:rounded-2xl"
                   >
                     <span class="text-sm">Some label</span>
                     <h3>Lorem ipsum dolor sir amet?</h3>
                     <a
                       href="#"
-                      class="mt-auto text-sm font-semibold flex items-center gap-1 hover:gap-2 transition-all duration-400"
+                      class="focus-visible:ring-primary focus-visible:ring-offset-background mt-auto flex min-h-11 items-center gap-1 px-1 py-2 text-sm font-semibold transition-all duration-400 hover:gap-2 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
                     >
                       Learn more
                       <svg
@@ -908,13 +916,13 @@
                     </a>
                   </div>
                   <div
-                    class="flex flex-col p-6 gap-2 min-h-64 border-2 border-violet-600 text-violet-600 bg-background hover:bg-violet-600 hover:text-background hover:rounded-2xl transition-all duration-400"
+                    class="border-info text-info bg-background hover:bg-info hover:text-info-contrast flex min-h-64 flex-col gap-2 border-2 p-6 transition-all duration-400 hover:rounded-2xl"
                   >
                     <span class="text-sm">Some label</span>
                     <h3>Lorem ipsum dolor sir amet?</h3>
                     <a
                       href="#"
-                      class="mt-auto text-sm font-semibold flex items-center gap-1 hover:gap-2 transition-all duration-400"
+                      class="focus-visible:ring-primary focus-visible:ring-offset-background mt-auto flex min-h-11 items-center gap-1 px-1 py-2 text-sm font-semibold transition-all duration-400 hover:gap-2 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
                     >
                       Learn more
                       <svg

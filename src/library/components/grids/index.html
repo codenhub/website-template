@@ -10,12 +10,12 @@
       content="A curated collection of reusable feature section components built with TailwindCSS. Browse grid, icon card, split, and bento feature layouts."
     />
 
-    <title>Features – Components Library</title>
+    <title>Grids – Components Library</title>
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="stylesheet" href="../../../_ui/styles/index.css" />
-    <script type="module" src="../../../_ui/components/index.js" defer></script>
-    <script type="module" src="../../../_ui/scripts/index.js" defer></script>
-    <script type="module" src="../header-section.js" defer></script>
+    <script type="module" src="../../../_ui/components/index.js"></script>
+    <script type="module" src="../../../_ui/scripts/index.js"></script>
+    <script type="module" src="../header-section.js"></script>
   </head>
 
   <body>
@@ -26,32 +26,32 @@
         <components-header-section></components-header-section>
 
         <div class="flex w-full justify-center px-4">
-          <h2 class="max-w-7xl w-full split-chars">Grids</h2>
+          <h2 class="split-chars w-full max-w-7xl">Grids</h2>
         </div>
 
         <section class="sect">
           <div class="sect-container gap-24">
             <custom-frame title="Simple grid">
-              <div class="w-full bg-background px-4 md:px-6 py-20">
-                <div class="max-w-7xl mx-auto">
-                  <div class="text-center max-w-2xl mx-auto mb-16">
+              <div class="bg-background w-full px-4 py-20 md:px-6">
+                <div class="mx-auto max-w-7xl">
+                  <div class="mx-auto mb-16 max-w-2xl text-center">
                     <span
-                      class="inline-flex items-center gap-2 px-3 py-1 text-xs font-semibold tracking-widest uppercase rounded-full bg-foreground text-text-secondary mb-6"
+                      class="bg-foreground text-text-secondary mb-6 inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-semibold tracking-widest uppercase"
                     >
                       Features
                     </span>
                     <h3>Everything you need to build modern apps</h3>
-                    <p class="mt-4 text-text-secondary md:text-base">
+                    <p class="text-text-secondary mt-4 md:text-base">
                       Powerful tools and features designed to streamline your workflow and help you
                       deliver exceptional products faster.
                     </p>
                   </div>
 
-                  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
                     <!-- Feature 1 -->
                     <div class="flex flex-col gap-4">
                       <div
-                        class="flex items-center justify-center size-12 rounded-xl bg-primary text-primary-contrast"
+                        class="bg-primary text-primary-contrast flex size-12 items-center justify-center rounded-xl"
                       >
                         <svg
                           class="size-6"
@@ -75,7 +75,7 @@
                     <!-- Feature 2 -->
                     <div class="flex flex-col gap-4">
                       <div
-                        class="flex items-center justify-center size-12 rounded-xl bg-primary text-primary-contrast"
+                        class="bg-primary text-primary-contrast flex size-12 items-center justify-center rounded-xl"
                       >
                         <svg
                           class="size-6"
@@ -101,7 +101,7 @@
                     <!-- Feature 3 -->
                     <div class="flex flex-col gap-4">
                       <div
-                        class="flex items-center justify-center size-12 rounded-xl bg-primary text-primary-contrast"
+                        class="bg-primary text-primary-contrast flex size-12 items-center justify-center rounded-xl"
                       >
                         <svg
                           class="size-6"
@@ -125,7 +125,7 @@
                     <!-- Feature 4 -->
                     <div class="flex flex-col gap-4">
                       <div
-                        class="flex items-center justify-center size-12 rounded-xl bg-primary text-primary-contrast"
+                        class="bg-primary text-primary-contrast flex size-12 items-center justify-center rounded-xl"
                       >
                         <svg
                           class="size-6"
@@ -149,7 +149,7 @@
                     <!-- Feature 5 -->
                     <div class="flex flex-col gap-4">
                       <div
-                        class="flex items-center justify-center size-12 rounded-xl bg-primary text-primary-contrast"
+                        class="bg-primary text-primary-contrast flex size-12 items-center justify-center rounded-xl"
                       >
                         <svg
                           class="size-6"
@@ -176,7 +176,7 @@
                     <!-- Feature 6 -->
                     <div class="flex flex-col gap-4">
                       <div
-                        class="flex items-center justify-center size-12 rounded-xl bg-primary text-primary-contrast"
+                        class="bg-primary text-primary-contrast flex size-12 items-center justify-center rounded-xl"
                       >
                         <svg
                           class="size-6"
@@ -205,23 +205,23 @@
             </custom-frame>
 
             <custom-frame title="Icon cards">
-              <div class="w-full bg-background px-4 md:px-6 py-20">
-                <div class="max-w-7xl mx-auto">
-                  <div class="text-center max-w-2xl mx-auto mb-16">
+              <div class="bg-background w-full px-4 py-20 md:px-6">
+                <div class="mx-auto max-w-7xl">
+                  <div class="mx-auto mb-16 max-w-2xl text-center">
                     <h3>Built for developers, loved by teams</h3>
-                    <p class="mt-4 text-text-secondary md:text-base">
+                    <p class="text-text-secondary mt-4 md:text-base">
                       A complete toolkit designed to accelerate every stage of your development
                       process.
                     </p>
                   </div>
 
-                  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
                     <!-- Card 1 -->
                     <div
-                      class="group flex flex-col gap-4 p-8 rounded-2xl border border-border bg-background hover:border-border-hover transition-colors duration-400"
+                      class="group border-border bg-background hover:border-border-hover flex flex-col gap-4 rounded-2xl border p-8 transition-colors duration-400"
                     >
                       <div
-                        class="flex items-center justify-center size-14 rounded-2xl bg-foreground group-hover:bg-primary group-hover:text-primary-contrast transition-colors duration-400"
+                        class="bg-foreground group-hover:bg-primary group-hover:text-primary-contrast flex size-14 items-center justify-center rounded-2xl transition-colors duration-400"
                       >
                         <svg
                           class="size-7"
@@ -243,7 +243,7 @@
                       </p>
                       <a
                         href="#"
-                        class="flex items-center gap-2 text-sm font-semibold mt-auto group-hover:gap-3 transition-all duration-400"
+                        class="focus-visible:ring-primary focus-visible:ring-offset-background mt-auto flex min-h-11 items-center gap-2 text-sm font-semibold transition-all duration-400 group-hover:gap-3 hover:gap-3 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
                       >
                         Learn more
                         <svg
@@ -263,10 +263,10 @@
 
                     <!-- Card 2 -->
                     <div
-                      class="group flex flex-col gap-4 p-8 rounded-2xl border border-border bg-background hover:border-border-hover transition-colors duration-400"
+                      class="group border-border bg-background hover:border-border-hover flex flex-col gap-4 rounded-2xl border p-8 transition-colors duration-400"
                     >
                       <div
-                        class="flex items-center justify-center size-14 rounded-2xl bg-foreground group-hover:bg-primary group-hover:text-primary-contrast transition-colors duration-400"
+                        class="bg-foreground group-hover:bg-primary group-hover:text-primary-contrast flex size-14 items-center justify-center rounded-2xl transition-colors duration-400"
                       >
                         <svg
                           class="size-7"
@@ -291,7 +291,7 @@
                       </p>
                       <a
                         href="#"
-                        class="flex items-center gap-2 text-sm font-semibold mt-auto group-hover:gap-3 transition-all duration-400"
+                        class="focus-visible:ring-primary focus-visible:ring-offset-background mt-auto flex min-h-11 items-center gap-2 text-sm font-semibold transition-all duration-400 group-hover:gap-3 hover:gap-3 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
                       >
                         Learn more
                         <svg
@@ -311,10 +311,10 @@
 
                     <!-- Card 3 -->
                     <div
-                      class="group flex flex-col gap-4 p-8 rounded-2xl border border-border bg-background hover:border-border-hover transition-colors duration-400"
+                      class="group border-border bg-background hover:border-border-hover flex flex-col gap-4 rounded-2xl border p-8 transition-colors duration-400"
                     >
                       <div
-                        class="flex items-center justify-center size-14 rounded-2xl bg-foreground group-hover:bg-primary group-hover:text-primary-contrast transition-colors duration-400"
+                        class="bg-foreground group-hover:bg-primary group-hover:text-primary-contrast flex size-14 items-center justify-center rounded-2xl transition-colors duration-400"
                       >
                         <svg
                           class="size-7"
@@ -336,7 +336,7 @@
                       </p>
                       <a
                         href="#"
-                        class="flex items-center gap-2 text-sm font-semibold mt-auto group-hover:gap-3 transition-all duration-400"
+                        class="focus-visible:ring-primary focus-visible:ring-offset-background mt-auto flex min-h-11 items-center gap-2 text-sm font-semibold transition-all duration-400 group-hover:gap-3 hover:gap-3 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
                       >
                         Learn more
                         <svg
@@ -356,10 +356,10 @@
 
                     <!-- Card 4 -->
                     <div
-                      class="group flex flex-col gap-4 p-8 rounded-2xl border border-border bg-background hover:border-border-hover transition-colors duration-400"
+                      class="group border-border bg-background hover:border-border-hover flex flex-col gap-4 rounded-2xl border p-8 transition-colors duration-400"
                     >
                       <div
-                        class="flex items-center justify-center size-14 rounded-2xl bg-foreground group-hover:bg-primary group-hover:text-primary-contrast transition-colors duration-400"
+                        class="bg-foreground group-hover:bg-primary group-hover:text-primary-contrast flex size-14 items-center justify-center rounded-2xl transition-colors duration-400"
                       >
                         <svg
                           class="size-7"
@@ -382,7 +382,7 @@
                       </p>
                       <a
                         href="#"
-                        class="flex items-center gap-2 text-sm font-semibold mt-auto group-hover:gap-3 transition-all duration-400"
+                        class="focus-visible:ring-primary focus-visible:ring-offset-background mt-auto flex min-h-11 items-center gap-2 text-sm font-semibold transition-all duration-400 group-hover:gap-3 hover:gap-3 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
                       >
                         Learn more
                         <svg
@@ -402,10 +402,10 @@
 
                     <!-- Card 5 -->
                     <div
-                      class="group flex flex-col gap-4 p-8 rounded-2xl border border-border bg-background hover:border-border-hover transition-colors duration-400"
+                      class="group border-border bg-background hover:border-border-hover flex flex-col gap-4 rounded-2xl border p-8 transition-colors duration-400"
                     >
                       <div
-                        class="flex items-center justify-center size-14 rounded-2xl bg-foreground group-hover:bg-primary group-hover:text-primary-contrast transition-colors duration-400"
+                        class="bg-foreground group-hover:bg-primary group-hover:text-primary-contrast flex size-14 items-center justify-center rounded-2xl transition-colors duration-400"
                       >
                         <svg
                           class="size-7"
@@ -428,7 +428,7 @@
                       </p>
                       <a
                         href="#"
-                        class="flex items-center gap-2 text-sm font-semibold mt-auto group-hover:gap-3 transition-all duration-400"
+                        class="focus-visible:ring-primary focus-visible:ring-offset-background mt-auto flex min-h-11 items-center gap-2 text-sm font-semibold transition-all duration-400 group-hover:gap-3 hover:gap-3 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
                       >
                         Learn more
                         <svg
@@ -448,10 +448,10 @@
 
                     <!-- Card 6 -->
                     <div
-                      class="group flex flex-col gap-4 p-8 rounded-2xl border border-border bg-background hover:border-border-hover transition-colors duration-400"
+                      class="group border-border bg-background hover:border-border-hover flex flex-col gap-4 rounded-2xl border p-8 transition-colors duration-400"
                     >
                       <div
-                        class="flex items-center justify-center size-14 rounded-2xl bg-foreground group-hover:bg-primary group-hover:text-primary-contrast transition-colors duration-400"
+                        class="bg-foreground group-hover:bg-primary group-hover:text-primary-contrast flex size-14 items-center justify-center rounded-2xl transition-colors duration-400"
                       >
                         <svg
                           class="size-7"
@@ -476,7 +476,7 @@
                       </p>
                       <a
                         href="#"
-                        class="flex items-center gap-2 text-sm font-semibold mt-auto group-hover:gap-3 transition-all duration-400"
+                        class="focus-visible:ring-primary focus-visible:ring-offset-background mt-auto flex min-h-11 items-center gap-2 text-sm font-semibold transition-all duration-400 group-hover:gap-3 hover:gap-3 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
                       >
                         Learn more
                         <svg
@@ -499,23 +499,23 @@
             </custom-frame>
 
             <custom-frame title="Bento grid">
-              <div class="w-full bg-background px-4 md:px-6 py-20">
-                <div class="max-w-7xl mx-auto">
-                  <div class="text-center max-w-2xl mx-auto mb-16">
+              <div class="bg-background w-full px-4 py-20 md:px-6">
+                <div class="mx-auto max-w-7xl">
+                  <div class="mx-auto mb-16 max-w-2xl text-center">
                     <h3>A better way to build</h3>
-                    <p class="mt-4 text-text-secondary md:text-base">
+                    <p class="text-text-secondary mt-4 md:text-base">
                       From prototyping to production, our platform covers every step of the way.
                     </p>
                   </div>
 
-                  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                  <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
                     <!-- Bento 1 - Large -->
                     <div
-                      class="group md:col-span-2 relative overflow-hidden rounded-2xl bg-primary text-primary-contrast p-8 md:p-10"
+                      class="group bg-primary text-primary-contrast relative overflow-hidden rounded-2xl p-8 md:col-span-2 md:p-10"
                     >
                       <div class="relative z-10 max-w-md">
                         <div
-                          class="flex items-center justify-center size-12 rounded-xl bg-primary-contrast text-primary mb-4"
+                          class="bg-primary-contrast text-primary mb-4 flex size-12 items-center justify-center rounded-xl"
                         >
                           <svg
                             class="size-6"
@@ -531,26 +531,26 @@
                           </svg>
                         </div>
                         <h4>Powerful Analytics Dashboard</h4>
-                        <p class="opacity-80 mt-2">
+                        <p class="mt-2 opacity-80">
                           Visualize your data with interactive charts, real-time metrics, and
                           customizable dashboards that give your team the insights they need.
                         </p>
                       </div>
                       <div
-                        class="absolute top-6 translate-y-4 group-hover:translate-y-0 right-6 w-64 h-44 md:w-80 md:h-56 rounded-t-xl overflow-hidden hidden md:block transition-transform duration-400"
+                        class="absolute top-6 right-6 hidden h-44 w-64 translate-y-4 overflow-hidden rounded-t-xl transition-transform duration-400 group-hover:translate-y-0 md:block md:h-56 md:w-80"
                       >
                         <img
                           src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop"
                           alt="Analytics dashboard"
-                          class="w-full h-full object-cover"
+                          class="h-full w-full object-cover"
                         />
                       </div>
                     </div>
 
                     <!-- Bento 2 -->
-                    <div class="relative overflow-hidden rounded-2xl bg-foreground p-8">
+                    <div class="bg-foreground relative overflow-hidden rounded-2xl p-8">
                       <div
-                        class="flex items-center justify-center size-12 rounded-xl bg-primary text-primary-contrast mb-4"
+                        class="bg-primary text-primary-contrast mb-4 flex size-12 items-center justify-center rounded-xl"
                       >
                         <svg
                           class="size-6"
@@ -573,9 +573,9 @@
                     </div>
 
                     <!-- Bento 3 -->
-                    <div class="relative overflow-hidden rounded-2xl bg-foreground p-8">
+                    <div class="bg-foreground relative overflow-hidden rounded-2xl p-8">
                       <div
-                        class="flex items-center justify-center size-12 rounded-xl bg-primary text-primary-contrast mb-4"
+                        class="bg-primary text-primary-contrast mb-4 flex size-12 items-center justify-center rounded-xl"
                       >
                         <svg
                           class="size-6"
@@ -601,11 +601,11 @@
 
                     <!-- Bento 4 - Large -->
                     <div
-                      class="md:col-span-2 relative overflow-hidden rounded-2xl bg-primary text-primary-contrast p-8 md:p-10 selection-contrast"
+                      class="bg-primary text-primary-contrast selection-contrast relative overflow-hidden rounded-2xl p-8 md:col-span-2 md:p-10"
                     >
                       <div class="relative z-10 max-w-lg">
                         <div
-                          class="flex items-center justify-center size-12 rounded-xl bg-primary-contrast text-primary mb-4"
+                          class="bg-primary-contrast text-primary mb-4 flex size-12 items-center justify-center rounded-xl"
                         >
                           <svg
                             class="size-6"
@@ -623,33 +623,33 @@
                           </svg>
                         </div>
                         <h4>Collaborate in Real-time</h4>
-                        <p class="opacity-80 mt-2">
+                        <p class="mt-2 opacity-80">
                           Invite your team, assign roles, leave comments, and track changes—all in a
                           single shared workspace that updates live.
                         </p>
-                        <div class="flex -space-x-2 mt-6">
+                        <div class="mt-6 flex -space-x-2">
                           <img
                             src="https://i.pravatar.cc/80?img=11"
                             alt="Team member"
-                            class="size-10 rounded-full border-2 border-primary object-cover"
+                            class="border-primary size-10 rounded-full border-2 object-cover"
                           />
                           <img
                             src="https://i.pravatar.cc/80?img=12"
                             alt="Team member"
-                            class="size-10 rounded-full border-2 border-primary object-cover"
+                            class="border-primary size-10 rounded-full border-2 object-cover"
                           />
                           <img
                             src="https://i.pravatar.cc/80?img=16"
                             alt="Team member"
-                            class="size-10 rounded-full border-2 border-primary object-cover"
+                            class="border-primary size-10 rounded-full border-2 object-cover"
                           />
                           <img
                             src="https://i.pravatar.cc/80?img=20"
                             alt="Team member"
-                            class="size-10 rounded-full border-2 border-primary object-cover"
+                            class="border-primary size-10 rounded-full border-2 object-cover"
                           />
                           <div
-                            class="size-10 rounded-full border-2 border-primary bg-primary-contrast text-primary flex items-center justify-center text-xs font-bold"
+                            class="border-primary bg-primary-contrast text-primary flex size-10 items-center justify-center rounded-full border-2 text-xs font-bold"
                           >
                             +8
                           </div>
@@ -662,21 +662,21 @@
             </custom-frame>
 
             <custom-frame title="Asymmetric bento">
-              <div class="w-full bg-background px-4 md:px-6 py-20">
-                <div class="max-w-7xl mx-auto">
-                  <div class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 gap-4">
+              <div class="bg-background w-full px-4 py-20 md:px-6">
+                <div class="mx-auto max-w-7xl">
+                  <div class="grid grid-cols-1 gap-4 md:grid-cols-4 lg:grid-cols-6">
                     <!-- Large vertical span -->
                     <div
-                      class="md:col-span-2 md:row-span-3 rounded-2xl bg-surface p-8 flex flex-col justify-between overflow-hidden relative r"
+                      class="bg-surface r relative flex flex-col justify-between overflow-hidden rounded-2xl p-8 md:col-span-2 md:row-span-3"
                     >
                       <div class="relative z-10">
-                        <h4 class="text-2xl font-bold mb-4">Centralized Command Center</h4>
+                        <h4 class="mb-4 text-2xl font-bold">Centralized Command Center</h4>
                         <p class="text-text-secondary">
                           Control every aspect of your application from a single, intuitive
                           interface designed for maximum efficiency.
                         </p>
                       </div>
-                      <div class="absolute -bottom-6 -right-6 size-48 opacity-10">
+                      <div class="absolute -right-6 -bottom-6 size-48 opacity-10">
                         <svg viewBox="0 0 24 24" fill="currentColor">
                           <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
                         </svg>
@@ -685,18 +685,18 @@
 
                     <!-- Horizontal span -->
                     <div
-                      class="md:col-span-2 lg:col-span-4 md:row-span-2 rounded-2xl bg-primary text-primary-contrast p-8 flex flex-col justify-end relative overflow-hidden"
+                      class="bg-primary text-primary-contrast relative flex flex-col justify-end overflow-hidden rounded-2xl p-8 md:col-span-2 md:row-span-2 lg:col-span-4"
                     >
-                      <div class="absolute top-0 right-0 w-full h-full opacity-20">
+                      <div class="absolute top-0 right-0 h-full w-full opacity-20">
                         <img
                           src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80"
-                          class="w-full h-full object-cover"
+                          class="h-full w-full object-cover"
                           alt="Analytics"
                         />
                       </div>
                       <div class="relative z-10">
                         <div
-                          class="flex items-center justify-center size-12 rounded-xl bg-primary-contrast text-primary mb-4"
+                          class="bg-primary-contrast text-primary mb-4 flex size-12 items-center justify-center rounded-xl"
                         >
                           <svg
                             class="size-6"
@@ -711,16 +711,16 @@
                             <path d="m19 9-5 5-4-4-3 3" />
                           </svg>
                         </div>
-                        <h4 class="text-2xl font-bold mb-2 text-primary-contrast">
+                        <h4 class="text-primary-contrast mb-2 text-2xl font-bold">
                           Deep Insights & Analytics
                         </h4>
-                        <p class="opacity-80 max-w-md">
+                        <p class="max-w-md opacity-80">
                           Understand your users better than ever before with real-time tracking and
                           predictive modeling.
                         </p>
                         <a
                           href="#"
-                          class="flex items-center gap-2 text-sm font-semibold mt-4 hover:gap-4 transition-all duration-400"
+                          class="focus-visible:ring-primary focus-visible:ring-offset-background mt-4 flex min-h-11 items-center gap-2 text-sm font-semibold transition-all duration-400 hover:gap-4 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
                         >
                           Get a demo
                           <svg
@@ -741,10 +741,10 @@
 
                     <!-- Small square 1 -->
                     <div
-                      class="md:col-span-2 lg:col-span-2 rounded-2xl bg-foreground p-8 flex flex-col justify-center gap-2"
+                      class="bg-foreground flex flex-col justify-center gap-2 rounded-2xl p-8 md:col-span-2 lg:col-span-2"
                     >
                       <div
-                        class="size-10 rounded-xl bg-surface text-primary flex shrink-0 items-center justify-center mb-2"
+                        class="bg-surface text-primary mb-2 flex size-10 shrink-0 items-center justify-center rounded-xl"
                       >
                         <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path
@@ -755,15 +755,15 @@
                         </svg>
                       </div>
                       <h5 class="font-bold">Security First</h5>
-                      <p class="text-sm text-text-secondary">End-to-end encryption for all data.</p>
+                      <p class="text-text-secondary text-sm">End-to-end encryption for all data.</p>
                     </div>
 
                     <!-- Small square 2 -->
                     <div
-                      class="md:col-span-2 lg:col-span-2 rounded-2xl bg-foreground p-8 flex flex-col justify-center gap-2"
+                      class="bg-foreground flex flex-col justify-center gap-2 rounded-2xl p-8 md:col-span-2 lg:col-span-2"
                     >
                       <div
-                        class="size-10 rounded-xl bg-surface text-primary flex shrink-0 items-center justify-center mb-2"
+                        class="bg-surface text-primary mb-2 flex size-10 shrink-0 items-center justify-center rounded-xl"
                       >
                         <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path
@@ -774,7 +774,7 @@
                         </svg>
                       </div>
                       <h5 class="font-bold">Lightning Fast</h5>
-                      <p class="text-sm text-text-secondary">
+                      <p class="text-text-secondary text-sm">
                         Global CDN with edges in 150+ cities.
                       </p>
                     </div>
@@ -784,15 +784,15 @@
             </custom-frame>
 
             <custom-frame title="Row grid">
-              <div class="w-full bg-background px-4 md:px-6 py-20">
-                <div class="max-w-7xl mx-auto">
-                  <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div class="bg-background w-full px-4 py-20 md:px-6">
+                <div class="mx-auto max-w-7xl">
+                  <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
                     <!-- Feature 1 -->
                     <div
-                      class="flex gap-6 p-6 rounded-2xl bg-foreground border border-transparent hover:border-border transition-all duration-400"
+                      class="bg-foreground hover:border-border flex gap-6 rounded-2xl border border-transparent p-6 transition-all duration-400"
                     >
                       <div
-                        class="flex shrink-0 items-center justify-center size-12 rounded-xl bg-primary text-primary-contrast"
+                        class="bg-primary text-primary-contrast flex size-12 shrink-0 items-center justify-center rounded-xl"
                       >
                         <svg
                           class="size-6"
@@ -818,10 +818,10 @@
 
                     <!-- Feature 2 -->
                     <div
-                      class="flex gap-6 p-6 rounded-2xl bg-foreground border border-transparent hover:border-border transition-all duration-400"
+                      class="bg-foreground hover:border-border flex gap-6 rounded-2xl border border-transparent p-6 transition-all duration-400"
                     >
                       <div
-                        class="flex shrink-0 items-center justify-center size-12 rounded-xl bg-primary text-primary-contrast"
+                        class="bg-primary text-primary-contrast flex size-12 shrink-0 items-center justify-center rounded-xl"
                       >
                         <svg
                           class="size-6"
@@ -847,10 +847,10 @@
 
                     <!-- Feature 3 -->
                     <div
-                      class="flex gap-6 p-6 rounded-2xl bg-foreground border border-transparent hover:border-border transition-all duration-400"
+                      class="bg-foreground hover:border-border flex gap-6 rounded-2xl border border-transparent p-6 transition-all duration-400"
                     >
                       <div
-                        class="flex shrink-0 items-center justify-center size-12 rounded-xl bg-primary text-primary-contrast"
+                        class="bg-primary text-primary-contrast flex size-12 shrink-0 items-center justify-center rounded-xl"
                       >
                         <svg
                           class="size-6"
@@ -876,10 +876,10 @@
 
                     <!-- Feature 4 -->
                     <div
-                      class="flex gap-6 p-6 rounded-2xl bg-foreground border border-transparent hover:border-border transition-all duration-400"
+                      class="bg-foreground hover:border-border flex gap-6 rounded-2xl border border-transparent p-6 transition-all duration-400"
                     >
                       <div
-                        class="flex shrink-0 items-center justify-center size-12 rounded-xl bg-primary text-primary-contrast"
+                        class="bg-primary text-primary-contrast flex size-12 shrink-0 items-center justify-center rounded-xl"
                       >
                         <svg
                           class="size-6"
@@ -910,13 +910,13 @@
             </custom-frame>
 
             <custom-frame title="Visual cards">
-              <div class="w-full bg-background px-4 md:px-6 py-20">
-                <div class="max-w-7xl mx-auto">
-                  <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div class="bg-background w-full px-4 py-20 md:px-6">
+                <div class="mx-auto max-w-7xl">
+                  <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
                     <!-- Card 1 -->
-                    <div class="group relative p-8 rounded-2xl bg-foreground overflow-hidden">
+                    <div class="group bg-foreground relative overflow-hidden rounded-2xl p-8">
                       <svg
-                        class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 opacity-4 group-hover:opacity-16 transition-opacity duration-400 pointer-events-none w-full aspect-square"
+                        class="pointer-events-none absolute top-1/2 left-1/2 aspect-square w-full -translate-x-1/2 -translate-y-1/2 opacity-4 transition-opacity duration-400 group-hover:opacity-16"
                         viewBox="0 0 100 100"
                       >
                         <circle
@@ -938,7 +938,7 @@
                       </svg>
                       <div class="relative z-10 flex flex-col items-center text-center">
                         <div
-                          class="size-16 rounded-2xl bg-primary text-primary-contrast flex items-center justify-center mb-6 shadow-sm"
+                          class="bg-primary text-primary-contrast mb-6 flex size-16 items-center justify-center rounded-2xl shadow-sm"
                         >
                           <svg class="size-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path
@@ -948,18 +948,18 @@
                             />
                           </svg>
                         </div>
-                        <h4 class="text-xl mb-3">Global Edge</h4>
+                        <h4 class="mb-3 text-xl">Global Edge</h4>
                         <p class="text-text-secondary text-sm">
                           Deployed across 150+ edge locations for sub-10ms latency world-wide.
                         </p>
                       </div>
                     </div>
                     <!-- Card 2 -->
-                    <div class="group relative p-8 rounded-2xl bg-foreground overflow-hidden">
+                    <div class="group bg-foreground relative overflow-hidden rounded-2xl p-8">
                       <div
-                        class="absolute inset-0 opacity-4 group-hover:opacity-16 transition-opacity duration-400 pointer-events-none"
+                        class="pointer-events-none absolute inset-0 opacity-4 transition-opacity duration-400 group-hover:opacity-16"
                       >
-                        <svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+                        <svg class="h-full w-full" viewBox="0 0 100 100" preserveAspectRatio="none">
                           <path
                             d="M0 50 Q 25 0 50 50 T 100 50"
                             stroke="currentColor"
@@ -976,7 +976,7 @@
                       </div>
                       <div class="relative z-10 flex flex-col items-center text-center">
                         <div
-                          class="size-16 rounded-2xl bg-primary text-primary-contrast flex items-center justify-center mb-6 shadow-sm"
+                          class="bg-primary text-primary-contrast mb-6 flex size-16 items-center justify-center rounded-2xl shadow-sm"
                         >
                           <svg class="size-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path
@@ -986,7 +986,7 @@
                             />
                           </svg>
                         </div>
-                        <h4 class="text-xl mb-3">Advanced Metrics</h4>
+                        <h4 class="mb-3 text-xl">Advanced Metrics</h4>
                         <p class="text-text-secondary text-sm">
                           Deep insights into every request, user interaction, and system performance
                           metric.
@@ -994,9 +994,9 @@
                       </div>
                     </div>
                     <!-- Card 3 -->
-                    <div class="group relative p-8 rounded-2xl bg-foreground overflow-hidden">
+                    <div class="group bg-foreground relative overflow-hidden rounded-2xl p-8">
                       <svg
-                        class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 opacity-4 group-hover:opacity-16 transition-opacity duration-400 pointer-events-none w-full aspect-square"
+                        class="pointer-events-none absolute top-1/2 left-1/2 aspect-square w-full -translate-x-1/2 -translate-y-1/2 opacity-4 transition-opacity duration-400 group-hover:opacity-16"
                         viewBox="0 0 100 100"
                       >
                         <rect
@@ -1022,7 +1022,7 @@
                       </svg>
                       <div class="relative z-10 flex flex-col items-center text-center">
                         <div
-                          class="size-16 rounded-2xl bg-primary text-primary-contrast flex items-center justify-center mb-6 shadow-sm"
+                          class="bg-primary text-primary-contrast mb-6 flex size-16 items-center justify-center rounded-2xl shadow-sm"
                         >
                           <svg class="size-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path
@@ -1032,7 +1032,7 @@
                             />
                           </svg>
                         </div>
-                        <h4 class="text-xl mb-3">Security First</h4>
+                        <h4 class="mb-3 text-xl">Security First</h4>
                         <p class="text-text-secondary text-sm">
                           Bank-level encryption and automated compliance scanning baked into your
                           workflow.
@@ -1045,18 +1045,18 @@
             </custom-frame>
 
             <custom-frame title="Illustrated feature grid">
-              <div class="w-full bg-background px-4 md:px-6 py-20">
-                <div class="max-w-7xl mx-auto">
-                  <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div class="bg-background w-full px-4 py-20 md:px-6">
+                <div class="mx-auto max-w-7xl">
+                  <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
                     <!-- Feature 1 -->
                     <div
-                      class="group flex flex-col gap-8 p-10 rounded-3xl bg-foreground border border-transparent hover:border-border transition-colors duration-400"
+                      class="group bg-foreground hover:border-border flex flex-col gap-8 rounded-3xl border border-transparent p-10 transition-colors duration-400"
                     >
                       <div
-                        class="aspect-square relative flex items-center justify-center bg-background rounded-2xl overflow-hidden"
+                        class="bg-background relative flex aspect-square items-center justify-center overflow-hidden rounded-2xl"
                       >
                         <svg
-                          class="size-3/4 text-primary opacity-80"
+                          class="text-primary size-3/4 opacity-80"
                           viewBox="0 0 100 100"
                           fill="none"
                           stroke="currentColor"
@@ -1069,7 +1069,7 @@
                         </svg>
                       </div>
                       <div>
-                        <h4 class="text-2xl mb-4">Precision Architecture</h4>
+                        <h4 class="mb-4 text-2xl">Precision Architecture</h4>
                         <p class="text-text-secondary leading-relaxed">
                           Built with a focus on modularity and high performance. Every pixel is
                           calculated to provide the best user experience.
@@ -1079,13 +1079,13 @@
 
                     <!-- Feature 2 -->
                     <div
-                      class="group flex flex-col gap-8 p-10 rounded-3xl bg-foreground border border-transparent hover:border-border transition-colors duration-400"
+                      class="group bg-foreground hover:border-border flex flex-col gap-8 rounded-3xl border border-transparent p-10 transition-colors duration-400"
                     >
                       <div
-                        class="aspect-square relative flex items-center justify-center bg-background rounded-2xl overflow-hidden"
+                        class="bg-background relative flex aspect-square items-center justify-center overflow-hidden rounded-2xl"
                       >
                         <svg
-                          class="size-3/4 text-primary opacity-80"
+                          class="text-primary size-3/4 opacity-80"
                           viewBox="0 0 100 100"
                           fill="none"
                           stroke="currentColor"
@@ -1105,7 +1105,7 @@
                         </svg>
                       </div>
                       <div>
-                        <h4 class="text-2xl mb-4">Data-Driven Growth</h4>
+                        <h4 class="mb-4 text-2xl">Data-Driven Growth</h4>
                         <p class="text-text-secondary leading-relaxed">
                           Harness the power of raw data to make informed decisions. Our platform
                           scales with your business needs effortlessly.
@@ -1115,13 +1115,13 @@
 
                     <!-- Feature 3 -->
                     <div
-                      class="group flex flex-col gap-8 p-10 rounded-3xl bg-foreground border border-transparent hover:border-border transition-colors duration-400"
+                      class="group bg-foreground hover:border-border flex flex-col gap-8 rounded-3xl border border-transparent p-10 transition-colors duration-400"
                     >
                       <div
-                        class="aspect-square relative flex items-center justify-center bg-background rounded-2xl overflow-hidden"
+                        class="bg-background relative flex aspect-square items-center justify-center overflow-hidden rounded-2xl"
                       >
                         <svg
-                          class="size-3/4 text-primary opacity-80"
+                          class="text-primary size-3/4 opacity-80"
                           viewBox="0 0 100 100"
                           fill="none"
                           stroke="currentColor"
@@ -1135,7 +1135,7 @@
                         </svg>
                       </div>
                       <div>
-                        <h4 class="text-2xl mb-4">Secure Ecosystem</h4>
+                        <h4 class="mb-4 text-2xl">Secure Ecosystem</h4>
                         <p class="text-text-secondary leading-relaxed">
                           Enterprise-grade security baked into every layer. We prioritize your data
                           safety above all else.
