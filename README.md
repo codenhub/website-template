@@ -48,6 +48,27 @@ This layout keeps runnable code in src/ and configuration at the root.
 - Fast prototyping with Tailwind utilities.
 - Projects where small bundle size and quick iteration matter.
 
+## Working with AI agents
+
+AI agents should start from `.agents/AGENTS.md`, which routes them to the focused guidance for landing-page workflows, project structure, styling, assets, and motion.
+
+Recommended prompt inputs for the best result:
+
+- Company or product name
+- Industry and audience
+- Tone and visual direction
+- Required page sections and priorities
+- Brand colors, logos, screenshots, and icon preferences
+- Any content that must stay final versus placeholder
+
+Agent workflow expectations:
+
+- Reuse `src/library/pages/template/` for new pages
+- Check `src/_ui/styles/theme.css` before introducing new values
+- Use `src/library/components/manifest.json` before opening component HTML
+- Choose components by structural fit first, then adapt visuals
+- Report placeholders, assumptions, and token gaps in the handoff
+
 ## License
 
 The code is available under the [MIT license](LICENSE).
