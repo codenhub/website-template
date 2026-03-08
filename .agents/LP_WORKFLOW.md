@@ -1,74 +1,123 @@
-# Landing Page Workflow
+# Landing page workflow
 
-Follow this workflow exactly, in order. No skipping, merging, reordering, or ad-hoc steps.
+Follow this workflow in order. Do not skip steps or scan broadly without a reason.
 
-## 1. Documentation
+## 1. Read the minimum required context
 
-Check for an existing PRD or brief (`.md`, `.txt`, or similar) in the project or provided context. If none exists, create `PRD.md` inside the page folder (see next step) with this structure:
+Read only these inputs first:
+
+1. The user prompt or brief
+2. `README.md`
+3. `src/library/pages/template/`
+4. `src/_ui/styles/theme.css`
+5. `src/library/components/manifest.json`
+
+Only open additional files when a step below requires them.
+
+## 2. Confirm the brief
+
+- Look for an existing brief or PRD in the provided context or target page folder.
+- If none exists, create `PRD.md` inside the page folder.
+- Use the PRD as the source of truth for section order, content intent, open placeholders, and completion tracking.
+- If the brief is too thin to determine the section list or core message, stop and ask.
+
+Recommended PRD shape:
 
 ```markdown
 # [Page Name] - PRD
 
 ## Company details
 
-- Name, industry, tone/voice, brand colors, target audience, key differentiators, .
+- Name:
+- Industry:
+- Tone:
+- Brand colors:
+- Target audience:
+- Key differentiators:
 
 ## Page skeleton
 
-Ordered list of sections with intent. Example:
-
-1. Header - sticky nav with logo and CTA
-2. Hero - headline, subheadline, primary CTA, background image
-3. Features - 3-column grid
-   ...
+1. Header - intent
+2. Hero - intent
+3. Feature section - intent
 
 ## Implementation plan
 
-- [ ] Section 1
-- [ ] Section 2
-      ...
+- [ ] Header
+- [ ] Hero
+- [ ] Feature section
+
+## Placeholders and assumptions
+
+- Placeholder screenshots:
+- Missing brand assets:
+- Open content assumptions:
 ```
 
-If a PRD already exists, read it fully before proceeding. Don't assume, if the brief is too thin to build from, ask before starting.
+## 3. Set up the page correctly
 
-## 2. Project setup
+- Target location: `src/library/pages/[page-name]/` unless the task says otherwise.
+- If the folder does not exist, copy `src/library/pages/template/`.
+- Do not rebuild the page scaffold by hand.
+- Update metadata first: `title`, `meta description`, and any obvious template placeholders.
 
-Page folder location: `src/library/pages/[company-name]/` (unless told otherwise).
+## 4. Build sections one by one
 
-If the folder doesn't exist, copy `src/library/pages/template/` to `src/library/pages/[company-name]/`. Don't create the files manually, the template already includes the correct HTML wrapper, CSS token imports, and JS setup. Only update surface-level metadata: `<title>`, `<meta name="description">`, and any placeholder comments.
+Work in the same order as the PRD. For each section, use this decision path:
 
-## 3. Section implementation
+1. Match the section intent against `src/library/components/manifest.json` category descriptions and tags.
+2. Open only the best matching category manifest.
+3. Rank variants by structure first: layout, information hierarchy, and interaction pattern.
+4. Use the variant `location` to jump directly to the block in that category `index.html`.
+5. Copy the chosen block into the page and adapt it.
+6. If no component is a good fit, build the section from scratch.
 
-Work through the page skeleton one section at a time, in order. For each section, do the following steps:
+## 5. Manifest-first rules
 
-- **Search first (manifest-driven).** Use `src/library/components/manifest.json` before opening raw HTML.
-  1. Match the section intent (from `PRD.md`) against root manifest `categories[].description` and `categories[].tags`.
-  2. Open the best category manifest at `src/library/components/[category]/manifest.json`.
-  3. Rank variants by `description` and `tags` (layout, interaction, style, use-case).
-  4. Use `location` to jump directly to the right block in `src/library/components/[category]/index.html`.
-  5. Only if the manifest is insufficient, scan the category `index.html` manually.
-- **Selection rule.** Prefer the closest structural match first (layout and interaction), then adapt visuals/content. Do not pick by style alone.
-- **If a match exists:** Copy the component HTML into `index.html` and adapt it. Update content, classes, and structure to fit the page. Don't reference or import, copy directly.
-- **If no match exists:** Build the section from scratch, following the UI/UX guidelines.
-- Mark each section as complete in `PRD.md` as you go.
+- Never start by scanning raw `index.html` files across multiple categories.
+- Never open every category manifest for a single section.
+- Never choose a component only because it looks close visually.
+- Choose the closest structural match, then adapt style, copy, media, and details.
+- If the manifest is insufficient, open only the category file already selected for that section.
 
-**IMPORTANT:** If you have support for subagents, delegate each section to a subagent to prevent context rot. Each subagent should receive: the PRD, `src/library/components/manifest.json`, the chosen category manifest, the relevant component HTML block (if found), the page's current `index.html`, and the token file at `src/_ui/styles/theme.css`.
+## 6. Styling and asset rules during implementation
 
-## 4. Finishing touches
+- Follow `STYLING_RULES.md` for all visual decisions.
+- Follow `ASSETS_AND_ICONS.md` for images, icons, and placeholders.
+- Keep page-specific styling in the page folder unless a shared pattern is clearly being created.
+- Keep placeholder assets and copy obvious and track them in the PRD or handoff.
 
-Once all sections are in place:
+## 7. Motion and interactivity
 
-- **Animations:** Add GSAP scroll-triggered entrance animations for key sections (heroes, features, stats, CTAs). Keep them subtle and purposeful. Respect `prefers-reduced-motion`.
-- **Transitions:** Add hover/focus transitions for interactive elements if not already handled by component styles.
-- **Optimization:** Ensure all images have `alt` text, lazy-loading is set for below-fold images, heading hierarchy is valid, and there are no unused classes or dead markup.
-- **Final check:** Run through the UI/UX self-review checklist.
+- Follow `MOTION_RULES.md`.
+- Add GSAP entrances only for key sections when they improve hierarchy.
+- Respect `prefers-reduced-motion`.
+- Verify anchors, hover states, focus states, and scroll behavior after motion changes.
 
-## 5. Handoff
+## 8. Prevent context rot
 
-Keep the report short. Note only:
+- Stay scoped to the current section.
+- Do not reopen unrelated files once a valid component path is chosen.
+- If subagents are available, delegate by section so each one receives only the PRD, token file, relevant manifests, chosen component block, and current page files.
+- Return to the PRD after each section and mark progress immediately.
 
-- Any **placeholder content** that needs replacing (images, copy, links, brand assets).
-- Any **design decisions** made where the brief was ambiguous.
-- Any **missing tokens** that caused a fallback to Tailwind defaults or arbitrary values.
+## 9. Final validation
 
-The `PRD.md` is the source of truth, it should reflect what was built.
+Before handoff, verify all of the following:
+
+- The page is responsive on mobile and desktop.
+- No required section is missing.
+- No element is invisible because of color, overflow, positioning, or animation state.
+- Transitions and animations feel smooth and do not block interaction.
+- Heading hierarchy, links, alt text, and keyboard access are valid.
+- Code is readable and consistent with the rest of the library.
+- No dead markup, unused selectors, or obvious placeholders were left undocumented.
+
+## 10. Handoff format
+
+Keep the final report short and include only:
+
+- Placeholder content that still needs replacement
+- Design decisions made because the brief was ambiguous
+- Missing tokens that forced Tailwind defaults or arbitrary values
+- Any section built from scratch because the library had no structural match

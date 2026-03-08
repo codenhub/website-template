@@ -1,86 +1,68 @@
 # Agent guidelines
 
-## Before you start
+This file is the entrypoint for AI agents working in this repository.
 
-- Check `src/_ui/styles/theme.css` for available CSS tokens before touching any color, spacing, typography, or sizing value.
-- If the visual intent is unclear, ask. Don't guess on design decisions.
+## Primary goal
 
-## More info
+Generate structured, presentable pages that match the library standards, use the project assets correctly, and do not break layout, motion, or responsiveness.
 
-- [LP_WORKFLOW.md](./LP_WORKFLOW.md): Workflow for building landing pages.
+## Read order
 
-## Styling hierarchy
+Read only what is needed, in this order:
 
-Always prefer in this order:
+1. `README.md` for the project overview and folder map.
+2. `src/library/pages/template/` for the expected page scaffold.
+3. `src/_ui/styles/theme.css` for shared tokens.
+4. `src/library/components/manifest.json` for component discovery.
+5. The category manifest for the section you are building.
+6. The focused document that matches the task:
+   - `PROJECT_STRUCTURE.md`
+   - `STYLING_RULES.md`
+   - `ASSETS_AND_ICONS.md`
+   - `MOTION_RULES.md`
+   - `LP_WORKFLOW.md`
 
-1. CSS tokens from `src/_ui/styles/theme.css` (e.g. `var(--color-primary)`)
-2. Tailwind default utility classes (e.g. `text-sm`, `gap-4`, `bg-slate-600`)
-3. Arbitrary Tailwind values (e.g. `w-[20rem]`) - only when no token or default fits
-4. Inline styles - as last resort, when none of the above solves the problem.
+Do not scan every manifest, every component file, or every page folder unless the task explicitly requires that breadth.
 
-## Tailwind usage
+## Routing
 
-- Tailwind only, no external CSS frameworks.
-- Avoid utility bloat. Extract repeated class combinations into components.
-- Keep class lists readable: group by concern (layout > spacing > typography > color > state).
-- Use `@apply` sparingly and only when a utility pattern is genuinely reused.
+- Building a landing page: read `LP_WORKFLOW.md` and follow it in order.
+- Choosing where code belongs: read `PROJECT_STRUCTURE.md`.
+- Making styling decisions: read `STYLING_RULES.md`.
+- Choosing or replacing icons and images: read `ASSETS_AND_ICONS.md`.
+- Adding or changing animation: read `MOTION_RULES.md`.
 
-## Component quality
+## Hard rules
 
-- Every component must work in isolation with no assumed context.
-- States matter: empty, loading, error, disabled, hover, focus, active.
-- Never hardcode content, use props/slots. No lorem ipsum left in final output.
-- Maintain visual consistency: spacing rhythm, type scale, and color use should feel intentional.
+- Start from structure, not style. Match section intent and layout before adapting visuals.
+- Reuse `src/library/pages/template/` when creating a new page folder. Do not recreate the scaffold manually.
+- Check `src/_ui/styles/theme.css` before introducing colors, spacing, typography, or breakpoints.
+- Use `src/library/components/manifest.json` before opening raw component HTML.
+- Open only the category manifest that matches the current section. Do not browse unrelated categories.
+- Copy component markup into the page and adapt it there. Do not create runtime dependencies between library demo files and page files.
+- Use GSAP only when the motion is meaningful. Respect `prefers-reduced-motion`.
+- Keep placeholder content obvious in the handoff. Never present placeholder copy or media as final brand content.
 
-## Animation & transitions
+## When to stop and ask
 
-- Use GSAP for advanced animations and transitions.
-- Use CSS `transition`/`animation` for simple hover effects.
-- Animate with purpose - motion should guide attention, not decorate.
-- Respect `prefers-reduced-motion`. Wrap GSAP calls accordingly.
-- Keep animations short (150–400ms typical). Avoid animating layout properties (prefer `transform`/`opacity`).
+Ask only if one of these blocks progress:
 
-## Icons & images
+- The brief is too thin to determine page sections or content hierarchy.
+- The task changes a public pattern and multiple valid directions would affect the library standard.
+- Brand direction is required and cannot be inferred from the provided context.
 
-- SVG only for icons, inline or as components. Never use emojis as UI elements.
-- Use FontAwesome as a placeholder if the final icon isn't defined yet.
-- Image placeholders: Unsplash, Picsum, or placeholder.co. Match aspect ratio and context.
-- Always set `alt` text. Decorative images get `alt=""`.
+## Anti-patterns
 
-## Responsive design
+- Do not pick components by visual style alone.
+- Do not scan all manifests hoping for inspiration.
+- Do not leave invisible content, broken anchors, or missing sections.
+- Do not hardcode decorative emojis, random icon sets, or untracked external assets.
+- Do not use inline styles when tokens or utilities already solve the need.
 
-- Mobile-first. Build the small breakpoint first, then scale up.
-- Use Tailwind breakpoints (`sm`, `md`, `lg`, `xl`).
-- Touch targets: minimum 44×44px. No hover-only interactions on mobile.
+## Done criteria
 
-## Accessibility
-
-- Semantic HTML always. Don't use `div` where a `button`, `nav`, or `section` applies.
-- Keyboard navigation must work for all interactive elements.
-- Sufficient color contrast (WCAG AA minimum). Never convey info by color alone.
-- ARIA only when native semantics fall short. Wrong ARIA is worse than none.
-- Focus styles must be visible, don't suppress `:focus-visible`.
-
-## Performance
-
-- No layout thrash. Batch DOM reads and writes, don't interleave them.
-- Lazy-load images below the fold (`loading="lazy"`).
-- Avoid animating properties that trigger reflow (`width`, `height`, `top`, `left`).
-- Keep component render logic lean, no heavy computation in render paths.
-
-## SEO & best practices
-
-- One `h1` per page. Heading hierarchy must be logical and unbroken.
-- Meaningful `title` and `meta description` on page-level work.
-- Avoid `display:none` to hide content that should be indexed.
-- Prefer `<a>` for navigation, `<button>` for actions, never swap them.
-
-## Self-review checklist
-
-- [ ] Styling follows the token > Tailwind > arbitrary hierarchy
-- [ ] All interactive states are handled
-- [ ] Component works on mobile and desktop
-- [ ] Animations respect `prefers-reduced-motion`
-- [ ] No emojis, hardcoded content, or placeholder text left in
-- [ ] Semantic HTML and keyboard navigation verified
-- [ ] No unused classes or dead markup
+- The page is responsive.
+- No required section is missing.
+- No element is unintentionally invisible.
+- Motion and transitions are smooth and purposeful.
+- Code stays readable and aligned with repository conventions.
