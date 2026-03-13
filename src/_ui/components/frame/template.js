@@ -2,7 +2,11 @@ import { MIN_WIDTH } from "./constants.js";
 import { highlightHtml } from "./highlight.js";
 import { ICON_CODE, ICON_COPY, ICON_DESKTOP, ICON_EYE, ICON_MOBILE, ICON_TABLET } from "./icons.js";
 
-export function buildFrameMarkup({ title, codeText }) {
+export function buildFrameMarkup({ title, codeText, attribution }) {
+  const attributionHtml = attribution
+    ? `<p class="text-xs text-text-secondary truncate [&_a]:text-xs [&_a]:underline [&_a]:underline-offset-2">${attribution}</p>`
+    : "";
+
   return `
     <div class="relative flex flex-col w-full h-fit gap-4">
       <!-- Toolbar -->
@@ -58,6 +62,8 @@ export function buildFrameMarkup({ title, codeText }) {
         </style>
         <pre class="p-4 text-xs leading-relaxed text-[#c9d1d9] font-mono whitespace-pre overflow-x-auto"><code>${highlightHtml(codeText)}</code></pre>
       </div>
+
+      ${attributionHtml}
     </div>
   `;
 }
