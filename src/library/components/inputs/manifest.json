@@ -8,49 +8,49 @@
   {
     "name": "Default",
     "description": "Form input pattern with a standard baseline structure for general-purpose use.",
-    "location": "#L110-L127",
+    "location": "#L34-L53",
     "tags": ["inputs", "default", "baseline", "standard", "forms"]
   },
   {
     "name": "With helper text",
     "description": "Form input pattern with field with helper and validation guidance text below input.",
-    "location": "#L128-L159",
+    "location": "#L54-L91",
     "tags": ["inputs", "helper", "text", "forms"]
   },
   {
     "name": "With icon",
     "description": "Form input pattern with icon-plus-label actions for clearer intent cues.",
-    "location": "#L160-L222",
+    "location": "#L92-L169",
     "tags": ["inputs", "icon", "forms"]
   },
   {
     "name": "With addon",
     "description": "Form input pattern with input with prefixed or suffixed addon elements.",
-    "location": "#L223-L259",
+    "location": "#L170-L212",
     "tags": ["inputs", "addon", "forms"]
   },
   {
     "name": "Textarea",
     "description": "Form input pattern with multi-line text entry field for longer responses.",
-    "location": "#L260-L276",
+    "location": "#L213-L239",
     "tags": ["inputs", "textarea", "forms"]
   },
   {
     "name": "Select",
     "description": "Form input pattern with dropdown select control for predefined option lists.",
-    "location": "#L277-L306",
+    "location": "#L240-L273",
     "tags": ["inputs", "select", "forms"]
   },
   {
     "name": "Floating Label",
     "description": "Form input pattern with floating label pattern that moves on focus or input.",
-    "location": "#L307-L358",
+    "location": "#L274-L325",
     "tags": ["inputs", "floating", "label", "forms"]
   },
   {
     "name": "Checkboxes & Radios",
     "description": "Form input pattern with grouped checkbox and radio controls for multi/single choice.",
-    "location": "#L359-L464",
+    "location": "#L326-L448",
     "tags": ["inputs", "checkboxes", "radios", "forms"]
   }
 ]

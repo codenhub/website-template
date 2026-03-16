@@ -8,37 +8,37 @@
   {
     "name": "Horizontal steps",
     "description": "Steps section with left-to-right step sequence for process overviews.",
-    "location": "#L110-L176",
+    "location": "#L34-L100",
     "tags": ["steps", "horizontal", "process-flow"]
   },
   {
     "name": "Vertical timeline",
     "description": "Steps section with top-to-bottom timeline structure for staged progress.",
-    "location": "#L177-L308",
+    "location": "#L101-L232",
     "tags": ["steps", "vertical", "timeline", "process-flow"]
   },
   {
     "name": "Icon steps",
     "description": "Steps section with step items led by icons for faster recognition.",
-    "location": "#L309-L469",
+    "location": "#L233-L393",
     "tags": ["steps", "icon", "process-flow"]
   },
   {
     "name": "Alternating cards",
     "description": "Steps section with alternating side cards to visualize progression stages.",
-    "location": "#L470-L575",
+    "location": "#L394-L499",
     "tags": ["steps", "alternating", "cards", "process-flow"]
   },
   {
     "name": "Interactive progress steps",
     "description": "Steps section with interactive stepper with active and completed states.",
-    "location": "#L576-L676",
+    "location": "#L500-L605",
     "tags": ["steps", "interactive", "progress", "process-flow"]
   },
   {
     "name": "Primary background",
     "description": "Steps section with process section on a high-contrast primary background.",
-    "location": "#L677-L761",
+    "location": "#L606-L690",
     "tags": ["steps", "primary", "background", "process-flow"]
   }
 ]

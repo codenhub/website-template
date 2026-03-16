@@ -8,25 +8,25 @@
   {
     "name": "Flat with featured",
     "description": "Pricing section with flat pricing cards with one highlighted featured plan.",
-    "location": "#L138-L402",
+    "location": "#L57-L324",
     "tags": ["pricing", "flat", "featured", "plans"]
   },
   {
     "name": "Border with toggle",
     "description": "Pricing section with outlined pricing cards plus billing-period toggle control.",
-    "location": "#L403-L643",
+    "location": "#L325-L581",
     "tags": ["pricing", "border", "toggle", "plans"]
   },
   {
     "name": "Two-column minimal",
     "description": "Pricing section with minimal two-column plan comparison layout.",
-    "location": "#L644-L896",
+    "location": "#L582-L837",
     "tags": ["pricing", "two-column", "minimal", "plans"]
   },
   {
     "name": "Comparison table",
     "description": "Pricing section with feature-by-feature pricing matrix across multiple plans.",
-    "location": "#L897-L1140",
+    "location": "#L838-L1084",
     "tags": ["pricing", "comparison", "table", "plans"]
   }
 ]

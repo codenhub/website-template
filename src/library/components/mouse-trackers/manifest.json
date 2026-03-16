@@ -8,79 +8,79 @@
   {
     "name": "Simple dot",
     "description": "Mouse tracker effect with single cursor-following dot indicator.",
-    "location": "#L110-L133",
+    "location": "#L34-L57",
     "tags": ["mouse-trackers", "simple", "dot", "cursor-effects"]
   },
   {
     "name": "Bordered circle",
     "description": "Mouse tracker effect with hollow ring cursor tracker with border-only styling.",
-    "location": "#L134-L157",
+    "location": "#L58-L81",
     "tags": ["mouse-trackers", "bordered", "circle", "cursor-effects"]
   },
   {
     "name": "Multi-dot trail",
     "description": "Mouse tracker effect with trailing sequence of dots that follow pointer movement.",
-    "location": "#L159-L203",
+    "location": "#L83-L127",
     "tags": ["mouse-trackers", "multi-dot", "trail", "cursor-effects"]
   },
   {
     "name": "Glow",
     "description": "Mouse tracker effect with soft glow aura that tracks pointer position.",
-    "location": "#L205-L234",
+    "location": "#L129-L158",
     "tags": ["mouse-trackers", "glow", "cursor-effects"]
   },
   {
     "name": "Stretchy velocity blob",
     "description": "Mouse tracker effect with deformable blob reacting to pointer speed and direction.",
-    "location": "#L236-L273",
+    "location": "#L160-L197",
     "tags": ["mouse-trackers", "stretchy", "velocity", "blob", "cursor-effects"]
   },
   {
     "name": "Ripple rings",
     "description": "Mouse tracker effect with expanding ring ripples triggered by pointer movement.",
-    "location": "#L275-L317",
+    "location": "#L199-L241",
     "tags": ["mouse-trackers", "ripple", "rings", "cursor-effects"]
   },
   {
     "name": "Spotlight reveal",
     "description": "Mouse tracker effect with spotlight mask revealing content around the pointer.",
-    "location": "#L319-L359",
+    "location": "#L243-L283",
     "tags": ["mouse-trackers", "spotlight", "reveal", "cursor-effects"]
   },
   {
     "name": "Particle burst",
     "description": "Mouse tracker effect with particle bursts emitted along pointer movement path.",
-    "location": "#L361-L431",
+    "location": "#L285-L355",
     "tags": ["mouse-trackers", "particle", "burst", "cursor-effects"]
   },
   {
     "name": "Crosshair",
     "description": "Mouse tracker effect with crosshair-style cursor replacement for precision emphasis.",
-    "location": "#L433-L497",
+    "location": "#L357-L421",
     "tags": ["mouse-trackers", "crosshair", "cursor-effects"]
   },
   {
     "name": "Ink trail",
     "description": "Mouse tracker effect with ink-like trail with fluid motion decay behind cursor.",
-    "location": "#L499-L577",
+    "location": "#L423-L501",
     "tags": ["mouse-trackers", "ink", "trail", "cursor-effects"]
   },
   {
     "name": "Gradient orbit",
     "description": "Mouse tracker effect with orbital gradient halo rotating around pointer position.",
-    "location": "#L579-L635",
+    "location": "#L503-L559",
     "tags": ["mouse-trackers", "gradient", "orbit", "cursor-effects"]
   },
   {
     "name": "Spring emoji",
     "description": "Mouse tracker effect with emoji element that follows cursor with spring physics.",
-    "location": "#L637-L684",
+    "location": "#L561-L608",
     "tags": ["mouse-trackers", "spring", "emoji", "cursor-effects"]
   },
   {
     "name": "Magnetic text",
     "description": "Mouse tracker effect with text elements that attract toward nearby pointer movement.",
-    "location": "#L686-L742",
+    "location": "#L610-L666",
     "tags": ["mouse-trackers", "magnetic", "text", "cursor-effects"]
   }
 ]

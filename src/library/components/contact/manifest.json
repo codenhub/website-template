@@ -8,25 +8,25 @@
   {
     "name": "Form + map",
     "description": "Contact section with a contact form paired with an embedded location map.",
-    "location": "#L118-L167",
+    "location": "#L34-L96",
     "tags": ["contact", "form", "map", "contact-info"]
   },
   {
     "name": "Cards + map",
     "description": "Contact section with contact detail cards combined with a map block.",
-    "location": "#L168-L276",
+    "location": "#L97-L217",
     "tags": ["contact", "cards", "map", "contact-info"]
   },
   {
     "name": "Split primary w/form",
     "description": "Contact section with two-column split with a primary info panel and form area.",
-    "location": "#L277-L370",
+    "location": "#L218-L323",
     "tags": ["contact", "split", "primary", "form", "contact-info"]
   },
   {
     "name": "Cards",
     "description": "Contact section with stacked contact cards focused on address, phone, and email data.",
-    "location": "#L371-L478",
+    "location": "#L324-L459",
     "tags": ["contact", "cards", "stacked", "content-blocks", "contact-info"]
   }
 ]

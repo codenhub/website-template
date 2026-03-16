@@ -8,67 +8,67 @@
   {
     "name": "Flat",
     "description": "Card component with solid styling without border, glow, or heavy depth.",
-    "location": "#L118-L159",
+    "location": "#L34-L75",
     "tags": ["cards", "flat", "solid", "minimal", "content-cards"]
   },
   {
     "name": "Bordered",
     "description": "Card component with card containers with clear border definition and low fill.",
-    "location": "#L160-L217",
+    "location": "#L76-L133",
     "tags": ["cards", "bordered", "content-cards"]
   },
   {
     "name": "Neobrutalism",
     "description": "Card component with high-contrast neobrutalist styling with hard edges and bold outlines.",
-    "location": "#L218-L275",
+    "location": "#L134-L191",
     "tags": ["cards", "neobrutalism", "high-contrast", "bold-outline", "content-cards"]
   },
   {
     "name": "Glassmorphism",
     "description": "Card component with translucent glass-style surfaces with blur and layered depth.",
-    "location": "#L276-L341",
+    "location": "#L192-L257",
     "tags": ["cards", "glassmorphism", "translucent", "blurred", "content-cards"]
   },
   {
     "name": "Flat with icon",
     "description": "Card component with flat card surfaces with icon-led headings.",
-    "location": "#L342-L437",
+    "location": "#L258-L353",
     "tags": ["cards", "flat", "icon", "content-cards"]
   },
   {
     "name": "Bordered with icon",
     "description": "Card component with outlined cards that pair icon badges with text blocks.",
-    "location": "#L438-L515",
+    "location": "#L354-L431",
     "tags": ["cards", "bordered", "icon", "content-cards"]
   },
   {
     "name": "Image cards",
     "description": "Card component with media-led cards with top image previews.",
-    "location": "#L516-L637",
+    "location": "#L432-L559",
     "tags": ["cards", "image", "content-cards"]
   },
   {
     "name": "Image split",
     "description": "Card component with split card layout separating image and text columns.",
-    "location": "#L638-L758",
+    "location": "#L560-L686",
     "tags": ["cards", "image", "split", "content-cards"]
   },
   {
     "name": "Horizontal image card",
     "description": "Card component with horizontal card with side image and adjacent content.",
-    "location": "#L759-L789",
+    "location": "#L687-L721",
     "tags": ["cards", "horizontal", "image", "card", "content-cards"]
   },
   {
     "name": "Profile cards",
     "description": "Card component with person-profile cards with avatar, role, and social metadata.",
-    "location": "#L790-L939",
+    "location": "#L722-L882",
     "tags": ["cards", "profile", "content-cards"]
   },
   {
     "name": "Color cards",
     "description": "Card component with accent-color background cards for category or status grouping.",
-    "location": "#L941-L1020",
+    "location": "#L884-L966",
     "tags": ["cards", "color", "content-cards"]
   }
 ]
