@@ -8,37 +8,37 @@
   {
     "name": "Simple grid",
     "description": "Team section with regular evenly spaced grid for balanced card or item scanning.",
-    "location": "#L110-L293",
+    "location": "#L34-L220",
     "tags": ["team", "simple", "grid", "people"]
   },
   {
     "name": "Cards with bio",
     "description": "Team section with member cards with bio snippets and profile details.",
-    "location": "#L294-L482",
+    "location": "#L221-L412",
     "tags": ["team", "cards", "bio", "people"]
   },
   {
     "name": "Compact list",
     "description": "Team section with compact list layout for dense team directories.",
-    "location": "#L483-L636",
+    "location": "#L413-L572",
     "tags": ["team", "compact", "list", "people"]
   },
   {
     "name": "Image overlay",
     "description": "Team section with team photos with text and actions over image overlays.",
-    "location": "#L637-L783",
+    "location": "#L573-L722",
     "tags": ["team", "image", "overlay", "people"]
   },
   {
     "name": "Primary background grid",
     "description": "Team section with stats presented on a strong primary-background grid.",
-    "location": "#L784-L933",
+    "location": "#L723-L881",
     "tags": ["team", "primary", "background", "grid", "people"]
   },
   {
     "name": "Featured member split",
     "description": "Team section with split layout highlighting one featured member beside list.",
-    "location": "#L934-L1064",
+    "location": "#L882-L1015",
     "tags": ["team", "featured", "member", "split", "people"]
   }
 ]

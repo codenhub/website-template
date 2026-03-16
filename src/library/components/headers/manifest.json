@@ -8,55 +8,55 @@
   {
     "name": "Default",
     "description": "Header navigation with a standard baseline structure for general-purpose use.",
-    "location": "#L118-L286",
+    "location": "#L34-L205",
     "tags": ["headers", "default", "baseline", "standard", "site-header"]
   },
   {
     "name": "Pill Nav",
     "description": "Header navigation with rounded pill-style navigation links in the header bar.",
-    "location": "#L288-L429",
+    "location": "#L207-L351",
     "tags": ["headers", "pill", "nav", "site-header"]
   },
   {
     "name": "Centered Logo",
     "description": "Header navigation with centered brand logo with navigation distributed around it.",
-    "location": "#L431-L538",
+    "location": "#L353-L463",
     "tags": ["headers", "centered", "logo", "site-header"]
   },
   {
     "name": "Dark Glassmorphism",
     "description": "Header navigation with dark translucent navigation bar with blur and glass depth.",
-    "location": "#L540-L679",
+    "location": "#L465-L601",
     "tags": ["headers", "dark", "glassmorphism", "site-header"]
   },
   {
     "name": "Announcement Bar",
     "description": "Header navigation with header with a top announcement strip for updates.",
-    "location": "#L681-L819",
+    "location": "#L603-L744",
     "tags": ["headers", "announcement", "bar", "site-header"]
   },
   {
     "name": "Search bar",
     "description": "Header navigation with header variant with integrated prominent search input.",
-    "location": "#L820-L936",
+    "location": "#L745-L867",
     "tags": ["headers", "search", "bar", "site-header"]
   },
   {
     "name": "Menu dropdown",
     "description": "Header navigation with navigation menus with dropdown panels for sub-links.",
-    "location": "#L937-L1285",
+    "location": "#L868-L1219",
     "tags": ["headers", "menu", "dropdown", "site-header"]
   },
   {
     "name": "Floating island",
     "description": "Header navigation with floating rounded navbar detached from page edges.",
-    "location": "#L1286-L1413",
+    "location": "#L1220-L1350",
     "tags": ["headers", "floating", "island", "site-header"]
   },
   {
     "name": "Split CTA",
     "description": "Header navigation with split header layout that gives extra emphasis to CTA actions.",
-    "location": "#L1415-L1568",
+    "location": "#L1352-L1508",
     "tags": ["headers", "split", "cta", "site-header"]
   }
 ]

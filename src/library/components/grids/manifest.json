@@ -8,43 +8,43 @@
   {
     "name": "Simple grid",
     "description": "Grid layout section with regular evenly spaced grid for balanced card or item scanning.",
-    "location": "#L110-L281",
+    "location": "#L34-L205",
     "tags": ["grids", "simple", "grid", "layout"]
   },
   {
     "name": "Icon cards",
     "description": "Grid layout section with grid of icon-led cards with short descriptive copy.",
-    "location": "#L283-L575",
+    "location": "#L207-L499",
     "tags": ["grids", "icon", "cards", "layout"]
   },
   {
     "name": "Bento grid",
     "description": "Grid layout section with bento-style mixed-size tile layout for hierarchy.",
-    "location": "#L577-L738",
+    "location": "#L501-L667",
     "tags": ["grids", "bento", "grid", "layout"]
   },
   {
     "name": "Asymmetric bento",
     "description": "Grid layout section with asymmetric bento grid with intentionally uneven tile spans.",
-    "location": "#L740-L860",
+    "location": "#L669-L793",
     "tags": ["grids", "asymmetric", "bento", "layout"]
   },
   {
     "name": "Row grid",
     "description": "Grid layout section with row-based grid emphasizing horizontal scan flow.",
-    "location": "#L862-L986",
+    "location": "#L795-L919",
     "tags": ["grids", "row", "grid", "layout"]
   },
   {
     "name": "Visual cards",
     "description": "Grid layout section with image-forward cards in a structured grid system.",
-    "location": "#L988-L1121",
+    "location": "#L921-L1054",
     "tags": ["grids", "visual", "cards", "layout"]
   },
   {
     "name": "Illustrated feature grid",
     "description": "Grid layout section with illustrated feature tiles combining artwork with short copy.",
-    "location": "#L1123-L1224",
+    "location": "#L1056-L1157",
     "tags": ["grids", "illustrated", "feature", "grid", "layout"]
   }
 ]

@@ -23,10 +23,15 @@ export class Frame extends HTMLElement {
     this.style.cssText = "display:block;width:100%;";
 
     const title = this.getAttribute("title") || "Component";
+
+    const attributionTemplate = this.querySelector("template[data-attribution]");
+    const attribution = attributionTemplate?.innerHTML.trim() || null;
+    attributionTemplate?.remove();
+
     const rawHtml = this.innerHTML;
     const codeText = dedentHtml(rawHtml);
 
-    this.innerHTML = buildFrameMarkup({ title, codeText });
+    this.innerHTML = buildFrameMarkup({ title, codeText, attribution });
 
     this.#initIframe(rawHtml);
     this.#bindTabs();

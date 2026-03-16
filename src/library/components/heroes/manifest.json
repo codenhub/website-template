@@ -8,25 +8,25 @@
   {
     "name": "Centered",
     "description": "Hero section with center-aligned content stack with balanced vertical rhythm.",
-    "location": "#L110-L207",
+    "location": "#L34-L134",
     "tags": ["heroes", "centered", "single-column", "balanced", "landing"]
   },
   {
     "name": "Centered with image",
     "description": "Hero section with centered headline area with supporting hero image.",
-    "location": "#L208-L249",
+    "location": "#L135-L176",
     "tags": ["heroes", "centered", "image", "landing"]
   },
   {
     "name": "Background image",
     "description": "Hero section with hero content over a full-bleed background image.",
-    "location": "#L250-L294",
+    "location": "#L177-L225",
     "tags": ["heroes", "background", "image", "landing"]
   },
   {
     "name": "Background image centered",
     "description": "Hero section with centered hero copy layered over a background image.",
-    "location": "#L295-L339",
+    "location": "#L226-L274",
     "tags": ["heroes", "background", "image", "centered", "landing"]
   }
 ]

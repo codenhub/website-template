@@ -8,25 +8,25 @@
   {
     "name": "Three column grid",
     "description": "Blog section with a three-column card grid for browsing multiple posts at once.",
-    "location": "#L110-L255",
+    "location": "#L34-L194",
     "tags": ["blog", "three", "column", "grid", "content"]
   },
   {
     "name": "Featured + side list",
     "description": "Blog section with one featured article with a stacked side list of supporting posts.",
-    "location": "#L256-L378",
+    "location": "#L195-L335",
     "tags": ["blog", "featured", "side", "list", "content"]
   },
   {
     "name": "Minimal List",
     "description": "Blog section with a text-first vertical list with minimal visual chrome.",
-    "location": "#L381-L514",
+    "location": "#L337-L470",
     "tags": ["blog", "minimal", "list", "content"]
   },
   {
     "name": "Alternating layout",
     "description": "Blog section with alternating left-right article rows to break visual repetition.",
-    "location": "#L515-L611",
+    "location": "#L471-L572",
     "tags": ["blog", "alternating", "layout", "content"]
   }
 ]

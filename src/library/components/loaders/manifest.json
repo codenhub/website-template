@@ -8,25 +8,25 @@
   {
     "name": "Standard spinners",
     "description": "Loader set with classic circular and ring spinner animations.",
-    "location": "#L110-L469",
+    "location": "#L34-L395",
     "tags": ["loaders", "standard", "spinners", "loading-state"]
   },
   {
     "name": "Dots",
     "description": "Loader set with dot-based loading animations with bounce or pulse motion.",
-    "location": "#L471-L771",
+    "location": "#L397-L701",
     "tags": ["loaders", "dots", "loading-state"]
   },
   {
     "name": "Bars",
     "description": "Loader set with bar loaders with vertical or horizontal activity motion.",
-    "location": "#L773-L929",
+    "location": "#L703-L863",
     "tags": ["loaders", "bars", "loading-state"]
   },
   {
     "name": "Blocks",
     "description": "Loader set with block and square loaders with stepped movement patterns.",
-    "location": "#L931-L1309",
+    "location": "#L865-L1247",
     "tags": ["loaders", "blocks", "loading-state"]
   }
 ]

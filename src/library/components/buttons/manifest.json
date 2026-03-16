@@ -8,73 +8,73 @@
   {
     "name": "Flat",
     "description": "Button set with solid styling without border, glow, or heavy depth.",
-    "location": "#L118-L143",
+    "location": "#L34-L59",
     "tags": ["buttons", "flat", "solid", "minimal", "actions"]
   },
   {
     "name": "Shadow",
     "description": "Button set with elevated styling that relies on drop-shadow depth.",
-    "location": "#L144-L169",
+    "location": "#L60-L85",
     "tags": ["buttons", "shadow", "actions"]
   },
   {
     "name": "Outline",
     "description": "Button set with transparent or low-fill styling with a strong outline treatment.",
-    "location": "#L170-L195",
+    "location": "#L86-L111",
     "tags": ["buttons", "outline", "actions"]
   },
   {
     "name": "Neobrutalism",
     "description": "Button set with high-contrast neobrutalist styling with hard edges and bold outlines.",
-    "location": "#L196-L216",
+    "location": "#L112-L132",
     "tags": ["buttons", "neobrutalism", "high-contrast", "bold-outline", "actions"]
   },
   {
     "name": "With icon",
     "description": "Button set with icon-plus-label actions for clearer intent cues.",
-    "location": "#L217-L295",
+    "location": "#L133-L211",
     "tags": ["buttons", "icon", "actions"]
   },
   {
     "name": "Icon only",
     "description": "Button set with icon-only circular and square controls without label text.",
-    "location": "#L296-L383",
+    "location": "#L212-L304",
     "tags": ["buttons", "icon", "actions"]
   },
   {
     "name": "Sizes",
     "description": "Button set with size scale examples for small, medium, and large controls.",
-    "location": "#L384-L409",
+    "location": "#L305-L330",
     "tags": ["buttons", "sizes", "actions"]
   },
   {
     "name": "Pill",
     "description": "Button set with fully rounded pill shape for compact labels or actions.",
-    "location": "#L410-L430",
+    "location": "#L331-L351",
     "tags": ["buttons", "pill", "actions"]
   },
   {
     "name": "Button Group",
     "description": "Button set with segmented grouped actions displayed as a unified control.",
-    "location": "#L431-L516",
+    "location": "#L352-L437",
     "tags": ["buttons", "button", "group", "actions"]
   },
   {
     "name": "Loading",
     "description": "Button set with loading states with spinners and disabled interaction feedback.",
-    "location": "#L517-L569",
+    "location": "#L438-L491",
     "tags": ["buttons", "loading", "spinner", "disabled-state", "actions"]
   },
   {
     "name": "Gradient",
     "description": "Button set with gradient-filled actions for visual prominence.",
-    "location": "#L570-L590",
+    "location": "#L492-L512",
     "tags": ["buttons", "gradient", "actions"]
   },
   {
     "name": "Glassmorphism",
     "description": "Button set with translucent glass-style surfaces with blur and layered depth.",
-    "location": "#L591-L611",
+    "location": "#L513-L533",
     "tags": ["buttons", "glassmorphism", "translucent", "blurred", "actions"]
   }
 ]

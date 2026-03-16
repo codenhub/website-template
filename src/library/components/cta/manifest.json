@@ -8,67 +8,67 @@
   {
     "name": "Centered simple",
     "description": "CTA section with centered headline and actions in a compact block.",
-    "location": "#L118-L145",
+    "location": "#L34-L61",
     "tags": ["cta", "centered", "simple", "conversion"]
   },
   {
     "name": "Centered with background image",
     "description": "CTA section with centered call-to-action over a background image hero.",
-    "location": "#L151-L183",
+    "location": "#L63-L99",
     "tags": ["cta", "centered", "background", "image", "conversion"]
   },
   {
     "name": "Centered minimal",
     "description": "CTA section with minimal centered copy with reduced decoration and spacing.",
-    "location": "#L189-L205",
+    "location": "#L101-L117",
     "tags": ["cta", "centered", "minimal", "conversion"]
   },
   {
     "name": "Left content, right image",
     "description": "CTA section with split layout with text/actions left and image right.",
-    "location": "#L211-L265",
+    "location": "#L119-L178",
     "tags": ["cta", "left", "content", "right", "image", "conversion"]
   },
   {
     "name": "Left image, right content",
     "description": "CTA section with split layout with image left and text/actions right.",
-    "location": "#L271-L302",
+    "location": "#L180-L215",
     "tags": ["cta", "left", "image", "right", "content", "conversion"]
   },
   {
     "name": "Newletter",
     "description": "CTA section with newsletter signup focus with email capture and submit action.",
-    "location": "#L308-L345",
+    "location": "#L217-L261",
     "tags": ["cta", "newsletter", "conversion"]
   },
   {
     "name": "Newletter inline",
     "description": "CTA section with single-row inline newsletter form with compact controls.",
-    "location": "#L351-L373",
+    "location": "#L263-L292",
     "tags": ["cta", "newsletter", "inline", "conversion"]
   },
   {
     "name": "Simple banner",
     "description": "CTA section with full-width banner strip with concise message and action.",
-    "location": "#L379-L420",
+    "location": "#L294-L340",
     "tags": ["cta", "simple", "banner", "conversion"]
   },
   {
     "name": "Banner with CTA",
     "description": "CTA section with banner bar with emphasized call-to-action button grouping.",
-    "location": "#L426-L440",
+    "location": "#L342-L356",
     "tags": ["cta", "banner", "conversion"]
   },
   {
     "name": "With Stats",
     "description": "CTA section with call-to-action block that includes supporting metric highlights.",
-    "location": "#L446-L492",
+    "location": "#L358-L404",
     "tags": ["cta", "stats", "conversion"]
   },
   {
     "name": "Neobrutalism",
     "description": "CTA section with high-contrast neobrutalist styling with hard edges and bold outlines.",
-    "location": "#L498-L529",
+    "location": "#L406-L437",
     "tags": ["cta", "neobrutalism", "high-contrast", "bold-outline", "conversion"]
   }
 ]

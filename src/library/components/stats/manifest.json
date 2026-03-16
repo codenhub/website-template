@@ -8,31 +8,31 @@
   {
     "name": "Simple row",
     "description": "Stats section with single-row metric strip for quick KPI scanning.",
-    "location": "#L110-L137",
+    "location": "#L34-L61",
     "tags": ["stats", "simple", "row", "metrics"]
   },
   {
     "name": "With dividers",
     "description": "Stats section with metric row separated by visible vertical dividers.",
-    "location": "#L138-L172",
+    "location": "#L62-L96",
     "tags": ["stats", "dividers", "metrics"]
   },
   {
     "name": "Cards",
     "description": "Stats section with stacked contact cards focused on address, phone, and email data.",
-    "location": "#L173-L273",
+    "location": "#L97-L197",
     "tags": ["stats", "cards", "stacked", "content-blocks", "metrics"]
   },
   {
     "name": "With side image",
     "description": "Stats section with stats content paired with a supporting side image.",
-    "location": "#L274-L329",
+    "location": "#L198-L257",
     "tags": ["stats", "side", "image", "metrics"]
   },
   {
     "name": "Primary background grid",
     "description": "Stats section with stats presented on a strong primary-background grid.",
-    "location": "#L330-L442",
+    "location": "#L258-L370",
     "tags": ["stats", "primary", "background", "grid", "metrics"]
   }
 ]

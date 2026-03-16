@@ -8,37 +8,37 @@
   {
     "name": "Flat",
     "description": "Alert component with solid styling without border, glow, or heavy depth.",
-    "location": "#L110-L190",
+    "location": "#L34-L122",
     "tags": ["alerts", "flat", "solid", "minimal", "feedback"]
   },
   {
     "name": "Light",
     "description": "Alert component with soft low-contrast styling for subtle status messaging.",
-    "location": "#L191-L273",
+    "location": "#L123-L211",
     "tags": ["alerts", "light", "feedback"]
   },
   {
     "name": "With border",
     "description": "Alert component with outlined container with a visible stroke around the message.",
-    "location": "#L274-L368",
+    "location": "#L212-L310",
     "tags": ["alerts", "border", "feedback"]
   },
   {
     "name": "Left accent",
     "description": "Alert component with a vertical accent stripe on the left edge for status emphasis.",
-    "location": "#L369-L455",
+    "location": "#L311-L401",
     "tags": ["alerts", "left", "accent", "feedback"]
   },
   {
     "name": "With dismiss button",
     "description": "Alert component with an inline close action so users can hide the message.",
-    "location": "#L456-L534",
+    "location": "#L402-L484",
     "tags": ["alerts", "dismiss", "button", "feedback"]
   },
   {
     "name": "Neobrutalism",
     "description": "Alert component with high-contrast neobrutalist styling with hard edges and bold outlines.",
-    "location": "#L535-L615",
+    "location": "#L485-L569",
     "tags": ["alerts", "neobrutalism", "high-contrast", "bold-outline", "feedback"]
   }
 ]

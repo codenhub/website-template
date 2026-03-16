@@ -8,67 +8,67 @@
   {
     "name": "Quote cards",
     "description": "Testimonial section with testimonial quotes displayed as individual cards.",
-    "location": "#L110-L183",
+    "location": "#L34-L107",
     "tags": ["testimonials", "quote", "cards", "social-proof"]
   },
   {
     "name": "With star rating",
     "description": "Testimonial section with testimonials that include explicit star-rating indicators.",
-    "location": "#L184-L329",
+    "location": "#L108-L257",
     "tags": ["testimonials", "star", "rating", "social-proof"]
   },
   {
     "name": "Centered",
     "description": "Testimonial section with center-aligned content stack with balanced vertical rhythm.",
-    "location": "#L330-L354",
+    "location": "#L258-L282",
     "tags": ["testimonials", "centered", "single-column", "balanced", "social-proof"]
   },
   {
     "name": "Large feature quote",
     "description": "Testimonial section with single oversized quote block for flagship testimonial.",
-    "location": "#L355-L413",
+    "location": "#L283-L341",
     "tags": ["testimonials", "large", "feature", "quote", "social-proof"]
   },
   {
     "name": "Minimal with top border",
     "description": "Testimonial section with minimal testimonial styling accented by a top border.",
-    "location": "#L414-L478",
+    "location": "#L342-L406",
     "tags": ["testimonials", "minimal", "top", "border", "social-proof"]
   },
   {
     "name": "Avatar grid",
     "description": "Testimonial section with avatar-led testimonial grid for person-first social proof.",
-    "location": "#L479-L552",
+    "location": "#L407-L480",
     "tags": ["testimonials", "avatar", "grid", "social-proof"]
   },
   {
     "name": "Dark inverted",
     "description": "Testimonial section with dark theme testimonial treatment with inverted contrast.",
-    "location": "#L553-L632",
+    "location": "#L481-L560",
     "tags": ["testimonials", "dark", "inverted", "social-proof"]
   },
   {
     "name": "Masonry columns",
     "description": "Testimonial section with staggered masonry testimonial columns with variable card heights.",
-    "location": "#L633-L725",
+    "location": "#L561-L653",
     "tags": ["testimonials", "masonry", "columns", "social-proof"]
   },
   {
     "name": "Social proof cards",
     "description": "Testimonial section with social-proof card mix with names, roles, and outcomes.",
-    "location": "#L726-L853",
+    "location": "#L654-L781",
     "tags": ["testimonials", "social", "proof", "cards", "social-proof"]
   },
   {
     "name": "Stats bar",
     "description": "Testimonial section with testimonial section paired with a supporting metrics bar.",
-    "location": "#L854-L943",
+    "location": "#L782-L871",
     "tags": ["testimonials", "stats", "bar", "social-proof"]
   },
   {
     "name": "Gradient accent cards",
     "description": "Testimonial section with testimonial cards with gradient accent backgrounds.",
-    "location": "#L944-L1018",
+    "location": "#L872-L946",
     "tags": ["testimonials", "gradient", "accent", "cards", "social-proof"]
   }
 ]

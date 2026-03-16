@@ -8,49 +8,49 @@
   {
     "name": "Flat",
     "description": "Badge component with solid styling without border, glow, or heavy depth.",
-    "location": "#L118-L149",
+    "location": "#L34-L65",
     "tags": ["badges", "flat", "solid", "minimal", "labels"]
   },
   {
     "name": "Outline",
     "description": "Badge component with transparent or low-fill styling with a strong outline treatment.",
-    "location": "#L150-L183",
+    "location": "#L66-L99",
     "tags": ["badges", "outline", "labels"]
   },
   {
     "name": "Pill",
     "description": "Badge component with fully rounded pill shape for compact labels or actions.",
-    "location": "#L184-L217",
+    "location": "#L100-L133",
     "tags": ["badges", "pill", "labels"]
   },
   {
     "name": "Dot indicator",
     "description": "Badge component with a leading status dot paired with compact label text.",
-    "location": "#L218-L247",
+    "location": "#L134-L163",
     "tags": ["badges", "dot", "indicator", "labels"]
   },
   {
     "name": "Neobrutalism",
     "description": "Badge component with high-contrast neobrutalist styling with hard edges and bold outlines.",
-    "location": "#L248-L278",
+    "location": "#L164-L194",
     "tags": ["badges", "neobrutalism", "high-contrast", "bold-outline", "labels"]
   },
   {
     "name": "Soft",
     "description": "Badge component with muted background fills and gentle contrast for secondary emphasis.",
-    "location": "#L279-L305",
+    "location": "#L195-L221",
     "tags": ["badges", "soft", "labels"]
   },
   {
     "name": "With Icon",
     "description": "Badge component with a leading icon paired with the label for quick scanning.",
-    "location": "#L306-L362",
+    "location": "#L222-L278",
     "tags": ["badges", "icon", "labels"]
   },
   {
     "name": "Dismissible",
     "description": "Badge component with a removable chip pattern with an explicit close action.",
-    "location": "#L363-L414",
+    "location": "#L279-L332",
     "tags": ["badges", "dismissible", "labels"]
   }
 ]
