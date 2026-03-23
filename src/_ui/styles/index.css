@@ -87,5 +87,4 @@
   .selection-contrast *::selection {
     @apply bg-background text-text;
   }
-
 }

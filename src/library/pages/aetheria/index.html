@@ -110,46 +110,46 @@
       </style>
     </noscript>
 
-    <header class="flex w-full items-center p-4 justify-center bg-background">
+    <header class="bg-background flex w-full items-center justify-center p-4">
       <div class="sect-container flex-row justify-between">
         <a href="#" class="text-label flex items-center gap-2">
           <img src="./logo.svg" alt="Logo" class="h-8 object-contain" />
           <span class="text-xl font-bold">Aetheria</span>
         </a>
 
-        <div class="hidden md:flex items-center">
-          <nav class="flex bg-foreground rounded-full p-1.5 gap-0.5">
+        <div class="hidden items-center md:flex">
+          <nav class="bg-foreground flex gap-0.5 rounded-full p-1.5">
             <a
               href="#"
-              class="text-label px-4 py-2 rounded-full bg-primary text-primary-contrast text-sm font-medium transition-all duration-400 shadow-sm"
+              class="text-label bg-primary text-primary-contrast rounded-full px-4 py-2 text-sm font-medium shadow-sm transition-all duration-400"
             >
               Home
             </a>
             <a
               href="#"
-              class="text-label px-4 py-2 rounded-full text-sm font-medium text-text-secondary hover:bg-surface hover:text-text transition-all duration-400"
+              class="text-label text-text-secondary hover:bg-surface hover:text-text rounded-full px-4 py-2 text-sm font-medium transition-all duration-400"
             >
               Features
             </a>
             <a
               href="#"
-              class="text-label px-4 py-2 rounded-full text-sm font-medium text-text-secondary hover:bg-surface hover:text-text transition-all duration-400"
+              class="text-label text-text-secondary hover:bg-surface hover:text-text rounded-full px-4 py-2 text-sm font-medium transition-all duration-400"
             >
               Pricing
             </a>
             <a
               href="#"
-              class="text-label px-4 py-2 rounded-full text-sm font-medium text-text-secondary hover:bg-surface hover:text-text transition-all duration-400"
+              class="text-label text-text-secondary hover:bg-surface hover:text-text rounded-full px-4 py-2 text-sm font-medium transition-all duration-400"
             >
               About
             </a>
           </nav>
         </div>
 
-        <div class="hidden md:flex gap-3 items-center">
+        <div class="hidden items-center gap-3 md:flex">
           <a
             href="#"
-            class="text-label flex items-center gap-2 text-sm font-semibold text-text-secondary hover:text-text transition-colors duration-400"
+            class="text-label text-text-secondary hover:text-text flex items-center gap-2 text-sm font-semibold transition-colors duration-400"
           >
             Sign in
             <svg
@@ -167,7 +167,7 @@
           </a>
           <a
             href="#"
-            class="text-label bg-primary hover:bg-primary-hover text-primary-contrast font-semibold flex w-fit items-center justify-center px-4 py-2 gap-2 min-h-10 rounded-full transition-colors duration-400"
+            class="text-label bg-primary hover:bg-primary-hover text-primary-contrast flex min-h-10 w-fit items-center justify-center gap-2 rounded-full px-4 py-2 font-semibold transition-colors duration-400"
           >
             Get Early Access
           </a>
@@ -176,54 +176,57 @@
         <!-- MOBILE NAV -->
         <div class="flex md:hidden">
           <input type="checkbox" id="mobile-menu-2" class="peer sr-only" />
-          <label class="text-label flex flex-col w-6 gap-1.5 py-2 cursor-pointer" for="mobile-menu-2">
+          <label
+            class="text-label flex w-6 cursor-pointer flex-col gap-1.5 py-2"
+            for="mobile-menu-2"
+          >
             <div
-              class="w-full h-0.5 bg-text rounded-full transition-all duration-400 origin-center peer-checked:rotate-45 peer-checked:translate-y-1"
+              class="bg-text h-0.5 w-full origin-center rounded-full transition-all duration-400 peer-checked:translate-y-1 peer-checked:rotate-45"
             ></div>
             <div
-              class="w-full h-0.5 bg-text rounded-full transition-all duration-400 peer-checked:opacity-0 peer-checked:scale-x-0"
+              class="bg-text h-0.5 w-full rounded-full transition-all duration-400 peer-checked:scale-x-0 peer-checked:opacity-0"
             ></div>
             <div
-              class="w-full h-0.5 bg-text rounded-full transition-all duration-400 origin-center peer-checked:-rotate-45 peer-checked:-translate-y-1"
+              class="bg-text h-0.5 w-full origin-center rounded-full transition-all duration-400 peer-checked:-translate-y-1 peer-checked:-rotate-45"
             ></div>
           </label>
           <div
-            class="absolute flex top-18 inset-x-0 bg-background shadow-lg p-4 max-h-0 opacity-0 overflow-hidden peer-checked:max-h-112 peer-checked:opacity-100 transition-all duration-500 ease-in-out z-50"
+            class="bg-background absolute inset-x-0 top-18 z-50 flex max-h-0 overflow-hidden p-4 opacity-0 shadow-lg transition-all duration-500 ease-in-out peer-checked:max-h-112 peer-checked:opacity-100"
             style="interpolate-size: allow-keywords"
           >
-            <nav class="flex flex-col w-full gap-1">
+            <nav class="flex w-full flex-col gap-1">
               <a
                 href="#"
-                class="text-label flex w-full items-center justify-center py-3 px-4 rounded-full text-base font-medium bg-foreground text-text"
+                class="text-label bg-foreground text-text flex w-full items-center justify-center rounded-full px-4 py-3 text-base font-medium"
               >
                 Home
               </a>
               <a
                 href="#"
-                class="text-label flex w-full items-center justify-center py-3 px-4 rounded-full text-base font-medium text-text-secondary hover:bg-foreground hover:text-text transition-colors duration-300"
+                class="text-label text-text-secondary hover:bg-foreground hover:text-text flex w-full items-center justify-center rounded-full px-4 py-3 text-base font-medium transition-colors duration-300"
               >
                 Features
               </a>
               <a
                 href="#"
-                class="text-label flex w-full items-center justify-center py-3 px-4 rounded-full text-base font-medium text-text-secondary hover:bg-foreground hover:text-text transition-colors duration-300"
+                class="text-label text-text-secondary hover:bg-foreground hover:text-text flex w-full items-center justify-center rounded-full px-4 py-3 text-base font-medium transition-colors duration-300"
               >
                 Pricing
               </a>
               <a
                 href="#"
-                class="text-label flex w-full items-center justify-center py-3 px-4 rounded-full text-base font-medium text-text-secondary hover:bg-foreground hover:text-text transition-colors duration-300"
+                class="text-label text-text-secondary hover:bg-foreground hover:text-text flex w-full items-center justify-center rounded-full px-4 py-3 text-base font-medium transition-colors duration-300"
               >
                 About
               </a>
-              <div class="h-px bg-border my-2"></div>
+              <div class="bg-border my-2 h-px"></div>
               <a
                 href="#"
-                class="text-label flex w-full items-center justify-center py-3 text-sm font-semibold text-text-secondary hover:text-text transition-colors duration-300"
+                class="text-label text-text-secondary hover:text-text flex w-full items-center justify-center py-3 text-sm font-semibold transition-colors duration-300"
               >
                 Sign in
                 <svg
-                  class="size-4 ml-1.5"
+                  class="ml-1.5 size-4"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
@@ -237,7 +240,7 @@
               </a>
               <a
                 href="#"
-                class="text-label bg-primary hover:bg-primary-hover text-primary-contrast font-semibold flex w-full items-center justify-center px-4 py-3 gap-2 rounded-full transition-colors duration-400"
+                class="text-label bg-primary hover:bg-primary-hover text-primary-contrast flex w-full items-center justify-center gap-2 rounded-full px-4 py-3 font-semibold transition-colors duration-400"
               >
                 Get Early Access
               </a>
@@ -252,7 +255,7 @@
         <div class="sect min-h-screen text-center">
           <div class="sect-container">
             <span
-              class="flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-full bg-foreground text-text grow-in"
+              class="bg-foreground text-text grow-in flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium"
             >
               <svg
                 class="size-4"
@@ -271,22 +274,22 @@
               Your Peak Performance
               <br />
               is a
-              <span class="bg-linear-to-tl from-primary to-accent bg-clip-text text-transparent">
+              <span class="from-primary to-accent bg-linear-to-tl bg-clip-text text-transparent">
                 Science
               </span>
             </h1>
-            <p class="text-body md:text-lg text-text-secondary max-w-2xl split-text">
+            <p class="text-body text-text-secondary split-text max-w-2xl md:text-lg">
               Aetheria syncs with your wearable data to build a custom biological roadmap for your
               day. Maximize focus, eliminate burnout, and sleep like a pro.
             </p>
-            <div class="flex items-center gap-4 mt-2">
+            <div class="mt-2 flex items-center gap-4">
               <button
-                class="text-label flex items-center bg-primary text-primary-contrast px-4 py-2 rounded-md font-semibold hover:bg-primary-hover transition-colors duration-400 grow-in"
+                class="text-label bg-primary text-primary-contrast hover:bg-primary-hover grow-in flex items-center rounded-md px-4 py-2 font-semibold transition-colors duration-400"
               >
                 Get Early Access
               </button>
               <button
-                class="text-label flex gap-2 items-center text-primary font-semibold hover:text-primary-hover transition-colors duration-400 grow-in"
+                class="text-label text-primary hover:text-primary-hover grow-in flex items-center gap-2 font-semibold transition-colors duration-400"
               >
                 Learn more
                 <svg
@@ -304,31 +307,31 @@
               </button>
             </div>
             <div
-              class="flex flex-wrap justify-center items-center gap-4 mt-4 text-sm text-text-secondary"
+              class="text-text-secondary mt-4 flex flex-wrap items-center justify-center gap-4 text-sm"
             >
-              <div class="flex -space-x-2.5 grow-in-stagger-out">
+              <div class="grow-in-stagger-out flex -space-x-2.5">
                 <img
                   src="https://i.pravatar.cc/80?img=11"
                   alt="User avatar"
-                  class="size-8 rounded-full border-2 border-background object-cover grow-in-stagger-inn"
+                  class="border-background grow-in-stagger-inn size-8 rounded-full border-2 object-cover"
                 />
                 <img
                   src="https://i.pravatar.cc/80?img=12"
                   alt="User avatar"
-                  class="size-8 rounded-full border-2 border-background object-cover grow-in-stagger-inn"
+                  class="border-background grow-in-stagger-inn size-8 rounded-full border-2 object-cover"
                 />
                 <img
                   src="https://i.pravatar.cc/80?img=16"
                   alt="User avatar"
-                  class="size-8 rounded-full border-2 border-background object-cover grow-in-stagger-inn"
+                  class="border-background grow-in-stagger-inn size-8 rounded-full border-2 object-cover"
                 />
                 <img
                   src="https://i.pravatar.cc/80?img=20"
                   alt="User avatar"
-                  class="size-8 rounded-full border-2 border-background object-cover grow-in-stagger-inn"
+                  class="border-background grow-in-stagger-inn size-8 rounded-full border-2 object-cover"
                 />
                 <div
-                  class="size-8 aspect-square rounded-full border-2 border-background bg-primary flex items-center justify-center text-xs font-bold text-primary-contrast grow-in-stagger-inn"
+                  class="border-background bg-primary text-primary-contrast grow-in-stagger-inn flex aspect-square size-8 items-center justify-center rounded-full border-2 text-xs font-bold"
                 >
                   +2k
                 </div>
@@ -345,18 +348,18 @@
         <div class="sect">
           <div class="sect-container">
             <h2 class="text-title-lg split-chars">The problem</h2>
-            <p class="text-body max-w-xl text-center split-text">
+            <p class="text-body split-text max-w-xl text-center">
               8 hours of sleep is a myth—you need
               <strong>your</strong>
               hours.
             </p>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 slide-in-stagger-out">
+            <div class="slide-in-stagger-out grid grid-cols-1 gap-8 md:grid-cols-3">
               <!-- Card 1 -->
               <div
-                class="group relative p-8 rounded-2xl bg-foreground overflow-hidden slide-in-stagger-inn"
+                class="group bg-foreground slide-in-stagger-inn relative overflow-hidden rounded-2xl p-8"
               >
                 <svg
-                  class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 opacity-4 group-hover:opacity-16 transition-opacity duration-400 pointer-events-none w-full aspect-square"
+                  class="pointer-events-none absolute top-1/2 left-1/2 aspect-square w-full -translate-x-1/2 -translate-y-1/2 opacity-4 transition-opacity duration-400 group-hover:opacity-16"
                   viewBox="0 0 100 100"
                 >
                   <circle
@@ -378,7 +381,7 @@
                 </svg>
                 <div class="relative z-10 flex flex-col items-center text-center">
                   <div
-                    class="size-16 rounded-2xl bg-primary text-primary-contrast flex items-center justify-center mb-6 shadow-sm"
+                    class="bg-primary text-primary-contrast mb-6 flex size-16 items-center justify-center rounded-2xl shadow-sm"
                   >
                     <svg
                       viewBox="0 0 24 24"
@@ -393,7 +396,7 @@
                       <path d="M12 6v6" />
                     </svg>
                   </div>
-                  <h4 class="text-title-sm text-xl mb-3">Afternoon Slumps</h4>
+                  <h4 class="text-title-sm mb-3 text-xl">Afternoon Slumps</h4>
                   <p class="text-body text-text-secondary text-sm">
                     The 3 PM wall isn't inevitable. It's a rhythm mismatch. Sync your caffeine to
                     your cortisol.
@@ -402,12 +405,12 @@
               </div>
               <!-- Card 2 -->
               <div
-                class="group relative p-8 rounded-2xl bg-foreground overflow-hidden slide-in-stagger-inn"
+                class="group bg-foreground slide-in-stagger-inn relative overflow-hidden rounded-2xl p-8"
               >
                 <div
-                  class="absolute inset-0 opacity-4 group-hover:opacity-16 transition-opacity duration-400 pointer-events-none"
+                  class="pointer-events-none absolute inset-0 opacity-4 transition-opacity duration-400 group-hover:opacity-16"
                 >
-                  <svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+                  <svg class="h-full w-full" viewBox="0 0 100 100" preserveAspectRatio="none">
                     <path
                       d="M0 50 Q 25 0 50 50 T 100 50"
                       stroke="currentColor"
@@ -424,7 +427,7 @@
                 </div>
                 <div class="relative z-10 flex flex-col items-center text-center">
                   <div
-                    class="size-16 rounded-2xl bg-primary text-primary-contrast flex items-center justify-center mb-6 shadow-sm"
+                    class="bg-primary text-primary-contrast mb-6 flex size-16 items-center justify-center rounded-2xl shadow-sm"
                   >
                     <svg
                       viewBox="0 0 24 24"
@@ -445,7 +448,7 @@
                       <path d="M12 5V2.5" />
                     </svg>
                   </div>
-                  <h4 class="text-title-sm text-xl mb-3">Foggy Mornings</h4>
+                  <h4 class="text-title-sm mb-3 text-xl">Foggy Mornings</h4>
                   <p class="text-body text-text-secondary text-sm">
                     Stop fighting your biology. Wake up when your hormones are primed for alertness.
                   </p>
@@ -453,10 +456,10 @@
               </div>
               <!-- Card 3 -->
               <div
-                class="group relative p-8 rounded-2xl bg-foreground overflow-hidden slide-in-stagger-inn"
+                class="group bg-foreground slide-in-stagger-inn relative overflow-hidden rounded-2xl p-8"
               >
                 <svg
-                  class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 opacity-4 group-hover:opacity-16 transition-opacity duration-400 pointer-events-none w-full aspect-square"
+                  class="pointer-events-none absolute top-1/2 left-1/2 aspect-square w-full -translate-x-1/2 -translate-y-1/2 opacity-4 transition-opacity duration-400 group-hover:opacity-16"
                   viewBox="0 0 100 100"
                 >
                   <rect
@@ -482,7 +485,7 @@
                 </svg>
                 <div class="relative z-10 flex flex-col items-center text-center">
                   <div
-                    class="size-16 rounded-2xl bg-primary text-primary-contrast flex items-center justify-center mb-6 shadow-sm"
+                    class="bg-primary text-primary-contrast mb-6 flex size-16 items-center justify-center rounded-2xl shadow-sm"
                   >
                     <svg
                       viewBox="0 0 24 24"
@@ -502,7 +505,7 @@
                       <path d="M20 12h2" />
                     </svg>
                   </div>
-                  <h4 class="text-title-sm text-xl mb-3">Restless Nights</h4>
+                  <h4 class="text-title-sm mb-3 text-xl">Restless Nights</h4>
                   <p class="text-body text-text-secondary text-sm">
                     Quality beats quantity. Optimize your sleep stages for deep recovery and REM.
                   </p>
@@ -514,32 +517,32 @@
 
         <div class="sect">
           <div class="sect-container">
-            <div class="text-center max-w-2xl mx-auto">
+            <div class="mx-auto max-w-2xl text-center">
               <span
-                class="inline-flex items-center gap-2 px-3 py-1 text-xs font-semibold tracking-widest uppercase rounded-full bg-foreground text-text-secondary mb-6"
+                class="bg-foreground text-text-secondary mb-6 inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-semibold tracking-widest uppercase"
               >
                 The Aetheria Engine
               </span>
               <h2 class="text-title-lg split-chars">Your Biological Roadmap</h2>
-              <p class="text-body mt-4 text-text-secondary md:text-base split-text">
+              <p class="text-body text-text-secondary split-text mt-4 md:text-base">
                 Three simple steps to sync your productivity with your unique circadian rhythm.
               </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative grow-in-stagger-out">
+            <div class="grow-in-stagger-out relative grid grid-cols-1 gap-8 md:grid-cols-3">
               <!-- Connector line (desktop) -->
               <div
                 id="steps-line"
-                class="hidden md:block absolute top-8 left-[16.67%] right-[16.67%] h-px bg-primary/40"
+                class="bg-primary/40 absolute top-8 right-[16.67%] left-[16.67%] hidden h-px md:block"
                 aria-hidden="true"
               ></div>
 
               <!-- Step 1 -->
               <div
-                class="relative flex flex-col items-center text-center gap-4 grow-in-stagger-inn"
+                class="grow-in-stagger-inn relative flex flex-col items-center gap-4 text-center"
               >
                 <div
-                  class="relative z-10 flex items-center justify-center size-16 rounded-full bg-primary text-primary-contrast text-xl font-title"
+                  class="bg-primary text-primary-contrast font-title relative z-10 flex size-16 items-center justify-center rounded-full text-xl"
                 >
                   01
                 </div>
@@ -552,10 +555,10 @@
 
               <!-- Step 2 -->
               <div
-                class="relative flex flex-col items-center text-center gap-4 grow-in-stagger-inn"
+                class="grow-in-stagger-inn relative flex flex-col items-center gap-4 text-center"
               >
                 <div
-                  class="relative z-10 flex items-center justify-center size-16 rounded-full bg-primary text-primary-contrast text-xl font-title"
+                  class="bg-primary text-primary-contrast font-title relative z-10 flex size-16 items-center justify-center rounded-full text-xl"
                 >
                   02
                 </div>
@@ -568,10 +571,10 @@
 
               <!-- Step 3 -->
               <div
-                class="relative flex flex-col items-center text-center gap-4 grow-in-stagger-inn"
+                class="grow-in-stagger-inn relative flex flex-col items-center gap-4 text-center"
               >
                 <div
-                  class="relative z-10 flex items-center justify-center size-16 rounded-full bg-primary text-primary-contrast text-xl font-title"
+                  class="bg-primary text-primary-contrast font-title relative z-10 flex size-16 items-center justify-center rounded-full text-xl"
                 >
                   03
                 </div>
@@ -586,34 +589,34 @@
         </div>
 
         <div class="w-full self-stretch">
-          <div class="w-full h-20 relative bg-primary overflow-hidden">
+          <div class="bg-primary relative h-20 w-full overflow-hidden">
             <div
               id="divider-ellipse"
-              class="absolute -mt-0.5 inset-0 bg-background origin-top"
+              class="bg-background absolute inset-0 -mt-0.5 origin-top"
               style="clip-path: ellipse(55% 100% at 50% 0%)"
             ></div>
           </div>
         </div>
         <div class="sect bg-primary text-primary-contrast selection-contrast">
           <div class="sect-container">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+            <div class="grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-12">
               <!-- Feature 1 -->
-              <div class="flex flex-col gap-8 group slide-right-in">
+              <div class="group slide-right-in flex flex-col gap-8">
                 <div
-                  class="aspect-4/5 rounded-2xl overflow-hidden bg-background transition-all duration-400 group-hover:-translate-y-3"
+                  class="bg-background aspect-4/5 overflow-hidden rounded-2xl transition-all duration-400 group-hover:-translate-y-3"
                 >
                   <img
                     src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=800&q=80"
                     alt="Deep Work Focus"
-                    class="w-full h-full object-cover transition-transform duration-400 group-hover:scale-110"
+                    class="h-full w-full object-cover transition-transform duration-400 group-hover:scale-110"
                   />
                 </div>
                 <div class="px-2">
                   <div
-                    class="size-12 rounded-2xl bg-foreground flex items-center justify-center mb-4 transition-colors duration-400 group-hover:bg-surface"
+                    class="bg-foreground group-hover:bg-surface mb-4 flex size-12 items-center justify-center rounded-2xl transition-colors duration-400"
                   >
                     <svg
-                      class="size-6 text-primary"
+                      class="text-primary size-6"
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="currentColor"
@@ -631,22 +634,22 @@
                 </div>
               </div>
               <!-- Feature 2 -->
-              <div class="flex flex-col gap-8 md:mt-16 group slide-up-in">
+              <div class="group slide-up-in flex flex-col gap-8 md:mt-16">
                 <div
-                  class="aspect-4/5 rounded-2xl overflow-hidden bg-background transition-all duration-400 group-hover:-translate-y-3"
+                  class="bg-background aspect-4/5 overflow-hidden rounded-2xl transition-all duration-400 group-hover:-translate-y-3"
                 >
                   <img
                     src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=800&q=80"
                     alt="Nutritional Timing"
-                    class="w-full h-full object-cover transition-transform duration-400 group-hover:scale-110"
+                    class="h-full w-full object-cover transition-transform duration-400 group-hover:scale-110"
                   />
                 </div>
                 <div class="px-2">
                   <div
-                    class="size-12 rounded-2xl bg-foreground flex items-center justify-center mb-4 transition-colors duration-400 group-hover:bg-surface"
+                    class="bg-foreground group-hover:bg-surface mb-4 flex size-12 items-center justify-center rounded-2xl transition-colors duration-400"
                   >
                     <svg
-                      class="size-6 text-primary"
+                      class="text-primary size-6"
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="currentColor"
@@ -663,22 +666,22 @@
                 </div>
               </div>
               <!-- Feature 3 -->
-              <div class="flex flex-col gap-8 group slide-left-in">
+              <div class="group slide-left-in flex flex-col gap-8">
                 <div
-                  class="aspect-4/5 rounded-2xl overflow-hidden bg-background transition-all duration-400 group-hover:-translate-y-3"
+                  class="bg-background aspect-4/5 overflow-hidden rounded-2xl transition-all duration-400 group-hover:-translate-y-3"
                 >
                   <img
                     src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=800&q=80"
                     alt="Recovery Scoring"
-                    class="w-full h-full object-cover transition-transform duration-400 group-hover:scale-110"
+                    class="h-full w-full object-cover transition-transform duration-400 group-hover:scale-110"
                   />
                 </div>
                 <div class="px-2">
                   <div
-                    class="size-12 rounded-2xl bg-foreground flex items-center justify-center mb-4 transition-colors duration-400 group-hover:bg-surface"
+                    class="bg-foreground group-hover:bg-surface mb-4 flex size-12 items-center justify-center rounded-2xl transition-colors duration-400"
                   >
                     <svg
-                      class="size-6 text-primary"
+                      class="text-primary size-6"
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="currentColor"
@@ -697,10 +700,10 @@
             </div>
           </div>
         </div>
-        <div class="w-full self-stretch rotate-180">
-          <div class="w-full h-20 relative overflow-hidden">
+        <div class="w-full rotate-180 self-stretch">
+          <div class="relative h-20 w-full overflow-hidden">
             <div
-              class="absolute inset-0 bg-primary slide-up-divider"
+              class="bg-primary slide-up-divider absolute inset-0"
               style="clip-path: ellipse(60% 100% at 50% 100%)"
             ></div>
           </div>
@@ -709,16 +712,16 @@
         <div class="sect">
           <div class="sect-container">
             <h2 class="text-title-lg split-chars">Testimonials</h2>
-            <p class="text-body text-center max-w-xl split-text">
+            <p class="text-body split-text max-w-xl text-center">
               Don't believe us? Here's what our customers say.
             </p>
             <div
-              class="flex gap-6 items-stretch justify-center w-full flex-wrap max-w-7xl mx-auto grow-in-stagger-out"
+              class="grow-in-stagger-out mx-auto flex w-full max-w-7xl flex-wrap items-stretch justify-center gap-6"
             >
               <div
-                class="flex flex-col flex-1 min-w-80 p-8 gap-6 rounded-xl bg-foreground grow-in-stagger-inn"
+                class="bg-foreground grow-in-stagger-inn flex min-w-80 flex-1 flex-col gap-6 rounded-xl p-8"
               >
-                <svg class="size-8 text-surface" viewBox="0 0 24 24" fill="currentColor">
+                <svg class="text-surface size-8" viewBox="0 0 24 24" fill="currentColor">
                   <path
                     d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"
                   ></path>
@@ -727,22 +730,22 @@
                   "Aetheria didn't give me more hours in the day; it gave me more 'me' in the hours
                   I have."
                 </p>
-                <div class="flex items-center gap-3 mt-auto">
+                <div class="mt-auto flex items-center gap-3">
                   <div
-                    class="size-10 rounded-full bg-surface flex items-center justify-center text-sm font-bold text-primary"
+                    class="bg-surface text-primary flex size-10 items-center justify-center rounded-full text-sm font-bold"
                   >
                     SK
                   </div>
                   <div>
-                    <p class="text-body text-sm font-semibold text-text">Sarah K.</p>
-                    <p class="text-body text-xs text-text-secondary">Verified Bio-Hacker</p>
+                    <p class="text-body text-text text-sm font-semibold">Sarah K.</p>
+                    <p class="text-body text-text-secondary text-xs">Verified Bio-Hacker</p>
                   </div>
                 </div>
               </div>
               <div
-                class="flex flex-col flex-1 min-w-80 p-8 gap-6 rounded-xl bg-foreground grow-in-stagger-inn"
+                class="bg-foreground grow-in-stagger-inn flex min-w-80 flex-1 flex-col gap-6 rounded-xl p-8"
               >
-                <svg class="size-8 text-surface" viewBox="0 0 24 24" fill="currentColor">
+                <svg class="text-surface size-8" viewBox="0 0 24 24" fill="currentColor">
                   <path
                     d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"
                   ></path>
@@ -751,22 +754,22 @@
                   "Finally, someone did something useful with my wearable data. My afternoon crashes
                   are a thing of the past."
                 </p>
-                <div class="flex items-center gap-3 mt-auto">
+                <div class="mt-auto flex items-center gap-3">
                   <div
-                    class="size-10 rounded-full bg-surface flex items-center justify-center text-sm font-bold text-primary"
+                    class="bg-surface text-primary flex size-10 items-center justify-center rounded-full text-sm font-bold"
                   >
                     JL
                   </div>
                   <div>
-                    <p class="text-body text-sm font-semibold text-text">James L.</p>
-                    <p class="text-body text-xs text-text-secondary">Software Architect</p>
+                    <p class="text-body text-text text-sm font-semibold">James L.</p>
+                    <p class="text-body text-text-secondary text-xs">Software Architect</p>
                   </div>
                 </div>
               </div>
               <div
-                class="flex flex-col flex-1 min-w-80 p-8 gap-6 rounded-xl bg-foreground grow-in-stagger-inn"
+                class="bg-foreground grow-in-stagger-inn flex min-w-80 flex-1 flex-col gap-6 rounded-xl p-8"
               >
-                <svg class="size-8 text-surface" viewBox="0 0 24 24" fill="currentColor">
+                <svg class="text-surface size-8" viewBox="0 0 24 24" fill="currentColor">
                   <path
                     d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"
                   ></path>
@@ -775,22 +778,22 @@
                   "The 'Focus Windows' feature is a game changer. I've never been more productive in
                   my 10 years as a founder."
                 </p>
-                <div class="flex items-center gap-3 mt-auto">
+                <div class="mt-auto flex items-center gap-3">
                   <div
-                    class="size-10 rounded-full bg-surface flex items-center justify-center text-sm font-bold text-primary"
+                    class="bg-surface text-primary flex size-10 items-center justify-center rounded-full text-sm font-bold"
                   >
                     MR
                   </div>
                   <div>
-                    <p class="text-body text-sm font-semibold text-text">Marcus R.</p>
-                    <p class="text-body text-xs text-text-secondary">Founder & Ultra-Runner</p>
+                    <p class="text-body text-text text-sm font-semibold">Marcus R.</p>
+                    <p class="text-body text-text-secondary text-xs">Founder & Ultra-Runner</p>
                   </div>
                 </div>
               </div>
               <div
-                class="flex flex-col flex-1 min-w-80 p-8 gap-6 rounded-xl bg-foreground grow-in-stagger-inn"
+                class="bg-foreground grow-in-stagger-inn flex min-w-80 flex-1 flex-col gap-6 rounded-xl p-8"
               >
-                <svg class="size-8 text-surface" viewBox="0 0 24 24" fill="currentColor">
+                <svg class="text-surface size-8" viewBox="0 0 24 24" fill="currentColor">
                   <path
                     d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"
                   ></path>
@@ -799,22 +802,22 @@
                   "The circadian mapping is remarkably accurate. It aligns perfectly with clinical
                   gold-standard rhythms."
                 </p>
-                <div class="flex items-center gap-3 mt-auto">
+                <div class="mt-auto flex items-center gap-3">
                   <div
-                    class="size-10 rounded-full bg-surface flex items-center justify-center text-sm font-bold text-primary"
+                    class="bg-surface text-primary flex size-10 items-center justify-center rounded-full text-sm font-bold"
                   >
                     AT
                   </div>
                   <div>
-                    <p class="text-body text-sm font-semibold text-text">Dr. Aris T.</p>
-                    <p class="text-body text-xs text-text-secondary">Sleep Researcher</p>
+                    <p class="text-body text-text text-sm font-semibold">Dr. Aris T.</p>
+                    <p class="text-body text-text-secondary text-xs">Sleep Researcher</p>
                   </div>
                 </div>
               </div>
               <div
-                class="flex flex-col flex-1 min-w-80 p-8 gap-6 rounded-xl bg-foreground grow-in-stagger-inn"
+                class="bg-foreground grow-in-stagger-inn flex min-w-80 flex-1 flex-col gap-6 rounded-xl p-8"
               >
-                <svg class="size-8 text-surface" viewBox="0 0 24 24" fill="currentColor">
+                <svg class="text-surface size-8" viewBox="0 0 24 24" fill="currentColor">
                   <path
                     d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"
                   ></path>
@@ -823,22 +826,22 @@
                   "I recommend Aetheria to all my executive clients. It's the first tool that
                   actually bridges data and action."
                 </p>
-                <div class="flex items-center gap-3 mt-auto">
+                <div class="mt-auto flex items-center gap-3">
                   <div
-                    class="size-10 rounded-full bg-surface flex items-center justify-center text-sm font-bold text-primary"
+                    class="bg-surface text-primary flex size-10 items-center justify-center rounded-full text-sm font-bold"
                   >
                     LG
                   </div>
                   <div>
-                    <p class="text-body text-sm font-semibold text-text">Leo G.</p>
-                    <p class="text-body text-xs text-text-secondary">Performance Coach</p>
+                    <p class="text-body text-text text-sm font-semibold">Leo G.</p>
+                    <p class="text-body text-text-secondary text-xs">Performance Coach</p>
                   </div>
                 </div>
               </div>
               <div
-                class="flex flex-col flex-1 min-w-80 p-8 gap-6 rounded-xl bg-foreground grow-in-stagger-inn"
+                class="bg-foreground grow-in-stagger-inn flex min-w-80 flex-1 flex-col gap-6 rounded-xl p-8"
               >
-                <svg class="size-8 text-surface" viewBox="0 0 24 24" fill="currentColor">
+                <svg class="text-surface size-8" viewBox="0 0 24 24" fill="currentColor">
                   <path
                     d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"
                   ></path>
@@ -846,15 +849,15 @@
                 <p class="text-body text-text leading-relaxed">
                   "My deep work sessions are now twice as effective. Pure bio-synced genius."
                 </p>
-                <div class="flex items-center gap-3 mt-auto">
+                <div class="mt-auto flex items-center gap-3">
                   <div
-                    class="size-10 rounded-full bg-surface flex items-center justify-center text-sm font-bold text-primary"
+                    class="bg-surface text-primary flex size-10 items-center justify-center rounded-full text-sm font-bold"
                   >
                     SV
                   </div>
                   <div>
-                    <p class="text-body text-sm font-semibold text-text">Sofia V.</p>
-                    <p class="text-body text-xs text-text-secondary">Creative Lead</p>
+                    <p class="text-body text-text text-sm font-semibold">Sofia V.</p>
+                    <p class="text-body text-text-secondary text-xs">Creative Lead</p>
                   </div>
                 </div>
               </div>
@@ -866,29 +869,31 @@
           <div class="sect-container">
             <h2 class="text-title-lg split-chars">Pricing</h2>
             <div
-              class="flex gap-6 items-stretch justify-center w-full flex-wrap max-w-7xl mx-auto slide-in-stagger-out"
+              class="slide-in-stagger-out mx-auto flex w-full max-w-7xl flex-wrap items-stretch justify-center gap-6"
             >
               <!-- Starter -->
               <div
-                class="flex flex-col flex-1 min-w-72 p-8 gap-6 rounded-xl bg-foreground slide-in-stagger-inn"
+                class="bg-foreground slide-in-stagger-inn flex min-w-72 flex-1 flex-col gap-6 rounded-xl p-8"
               >
                 <div class="flex flex-col gap-2">
-                  <p class="text-body text-sm font-semibold text-text-secondary uppercase tracking-wider">
+                  <p
+                    class="text-body text-text-secondary text-sm font-semibold tracking-wider uppercase"
+                  >
                     The Core
                   </p>
                   <div class="flex items-baseline gap-1">
-                    <span class="text-4xl font-bold text-text">$19</span>
+                    <span class="text-text text-4xl font-bold">$19</span>
                     <span class="text-text-secondary">/month</span>
                   </div>
-                  <p class="text-body text-sm text-text-secondary">
+                  <p class="text-body text-text-secondary text-sm">
                     Basic rhythm tracking and focus windows.
                   </p>
                 </div>
                 <hr class="border-border" />
-                <ul class="flex flex-col gap-3 flex-1">
+                <ul class="flex flex-1 flex-col gap-3">
                   <li class="flex items-center gap-2 text-sm">
                     <svg
-                      class="size-4 text-emerald-600 shrink-0"
+                      class="size-4 shrink-0 text-emerald-600"
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="currentColor"
@@ -900,7 +905,7 @@
                   </li>
                   <li class="flex items-center gap-2 text-sm">
                     <svg
-                      class="size-4 text-emerald-600 shrink-0"
+                      class="size-4 shrink-0 text-emerald-600"
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="currentColor"
@@ -912,7 +917,7 @@
                   </li>
                   <li class="flex items-center gap-2 text-sm">
                     <svg
-                      class="size-4 text-emerald-600 shrink-0"
+                      class="size-4 shrink-0 text-emerald-600"
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="currentColor"
@@ -922,7 +927,7 @@
                     </svg>
                     Oura & Apple Health Sync
                   </li>
-                  <li class="flex items-center gap-2 text-sm text-text-secondary">
+                  <li class="text-text-secondary flex items-center gap-2 text-sm">
                     <svg
                       class="size-4 shrink-0"
                       viewBox="0 0 24 24"
@@ -935,7 +940,7 @@
                     </svg>
                     AI Coaching
                   </li>
-                  <li class="flex items-center gap-2 text-sm text-text-secondary">
+                  <li class="text-text-secondary flex items-center gap-2 text-sm">
                     <svg
                       class="size-4 shrink-0"
                       viewBox="0 0 24 24"
@@ -950,7 +955,7 @@
                   </li>
                 </ul>
                 <button
-                  class="text-label bg-accent hover:bg-accent-hover text-accent-contrast font-semibold flex items-center px-4 py-2 gap-2 min-h-10 rounded-md transition-colors duration-400 w-full justify-center"
+                  class="text-label bg-accent hover:bg-accent-hover text-accent-contrast flex min-h-10 w-full items-center justify-center gap-2 rounded-md px-4 py-2 font-semibold transition-colors duration-400"
                 >
                   Get started
                 </button>
@@ -958,28 +963,30 @@
 
               <!-- Pro (Featured) -->
               <div
-                class="flex flex-col flex-1 min-w-72 p-8 gap-6 rounded-xl bg-primary text-primary-contrast relative overflow-hidden slide-in-stagger-inn"
+                class="bg-primary text-primary-contrast slide-in-stagger-inn relative flex min-w-72 flex-1 flex-col gap-6 overflow-hidden rounded-xl p-8"
               >
                 <span
-                  class="absolute top-0 right-0 bg-accent text-accent-contrast text-xs font-bold px-4 py-2 rounded-bl-xl tracking-wider"
+                  class="bg-accent text-accent-contrast absolute top-0 right-0 rounded-bl-xl px-4 py-2 text-xs font-bold tracking-wider"
                 >
                   Popular
                 </span>
                 <div class="flex flex-col gap-2">
-                  <p class="text-body text-sm font-semibold opacity-80 uppercase tracking-wider">
+                  <p class="text-body text-sm font-semibold tracking-wider uppercase opacity-80">
                     The Optimizer
                   </p>
                   <div class="flex items-baseline gap-1">
                     <span class="text-4xl font-bold">$49</span>
                     <span class="opacity-80">/month</span>
                   </div>
-                  <p class="text-body text-sm opacity-80">AI coaching + full biometric integration.</p>
+                  <p class="text-body text-sm opacity-80">
+                    AI coaching + full biometric integration.
+                  </p>
                 </div>
                 <hr class="border-neutral-700" />
-                <ul class="flex flex-col gap-3 flex-1">
+                <ul class="flex flex-1 flex-col gap-3">
                   <li class="flex items-center gap-2 text-sm">
                     <svg
-                      class="size-4 text-emerald-400 shrink-0"
+                      class="size-4 shrink-0 text-emerald-400"
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="currentColor"
@@ -991,7 +998,7 @@
                   </li>
                   <li class="flex items-center gap-2 text-sm">
                     <svg
-                      class="size-4 text-emerald-400 shrink-0"
+                      class="size-4 shrink-0 text-emerald-400"
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="currentColor"
@@ -1003,7 +1010,7 @@
                   </li>
                   <li class="flex items-center gap-2 text-sm">
                     <svg
-                      class="size-4 text-emerald-400 shrink-0"
+                      class="size-4 shrink-0 text-emerald-400"
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="currentColor"
@@ -1015,7 +1022,7 @@
                   </li>
                   <li class="flex items-center gap-2 text-sm">
                     <svg
-                      class="size-4 text-emerald-400 shrink-0"
+                      class="size-4 shrink-0 text-emerald-400"
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="currentColor"
@@ -1027,7 +1034,7 @@
                   </li>
                   <li class="flex items-center gap-2 text-sm">
                     <svg
-                      class="size-4 text-emerald-400 shrink-0"
+                      class="size-4 shrink-0 text-emerald-400"
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="currentColor"
@@ -1039,7 +1046,7 @@
                   </li>
                 </ul>
                 <button
-                  class="text-label bg-background text-text hover:bg-foreground font-semibold flex w-full items-center justify-center px-4 py-2 gap-2 min-h-10 rounded-md transition-colors duration-400"
+                  class="text-label bg-background text-text hover:bg-foreground flex min-h-10 w-full items-center justify-center gap-2 rounded-md px-4 py-2 font-semibold transition-colors duration-400"
                 >
                   Get started
                 </button>
@@ -1047,23 +1054,27 @@
 
               <!-- Enterprise -->
               <div
-                class="flex flex-col flex-1 min-w-72 p-8 gap-6 rounded-xl bg-foreground slide-in-stagger-inn"
+                class="bg-foreground slide-in-stagger-inn flex min-w-72 flex-1 flex-col gap-6 rounded-xl p-8"
               >
                 <div class="flex flex-col gap-2">
-                  <p class="text-body text-sm font-semibold text-text-secondary uppercase tracking-wider">
+                  <p
+                    class="text-body text-text-secondary text-sm font-semibold tracking-wider uppercase"
+                  >
                     The Sentinel
                   </p>
                   <div class="flex items-baseline gap-1">
-                    <span class="text-4xl font-bold text-text">$99</span>
+                    <span class="text-text text-4xl font-bold">$99</span>
                     <span class="text-text-secondary">/month</span>
                   </div>
-                  <p class="text-body text-sm text-text-secondary">1-on-1 coaching + blood panel analysis.</p>
+                  <p class="text-body text-text-secondary text-sm">
+                    1-on-1 coaching + blood panel analysis.
+                  </p>
                 </div>
                 <hr class="border-border" />
-                <ul class="flex flex-col gap-3 flex-1">
+                <ul class="flex flex-1 flex-col gap-3">
                   <li class="flex items-center gap-2 text-sm">
                     <svg
-                      class="size-4 text-emerald-600 shrink-0"
+                      class="size-4 shrink-0 text-emerald-600"
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="currentColor"
@@ -1075,7 +1086,7 @@
                   </li>
                   <li class="flex items-center gap-2 text-sm">
                     <svg
-                      class="size-4 text-emerald-600 shrink-0"
+                      class="size-4 shrink-0 text-emerald-600"
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="currentColor"
@@ -1087,7 +1098,7 @@
                   </li>
                   <li class="flex items-center gap-2 text-sm">
                     <svg
-                      class="size-4 text-emerald-600 shrink-0"
+                      class="size-4 shrink-0 text-emerald-600"
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="currentColor"
@@ -1099,7 +1110,7 @@
                   </li>
                   <li class="flex items-center gap-2 text-sm">
                     <svg
-                      class="size-4 text-emerald-600 shrink-0"
+                      class="size-4 shrink-0 text-emerald-600"
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="currentColor"
@@ -1111,7 +1122,7 @@
                   </li>
                   <li class="flex items-center gap-2 text-sm">
                     <svg
-                      class="size-4 text-emerald-600 shrink-0"
+                      class="size-4 shrink-0 text-emerald-600"
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="currentColor"
@@ -1123,7 +1134,7 @@
                   </li>
                 </ul>
                 <button
-                  class="text-label bg-primary hover:bg-primary-hover text-primary-contrast font-semibold flex items-center px-4 py-2 gap-2 min-h-10 rounded-md transition-colors duration-400 w-full justify-center"
+                  class="text-label bg-primary hover:bg-primary-hover text-primary-contrast flex min-h-10 w-full items-center justify-center gap-2 rounded-md px-4 py-2 font-semibold transition-colors duration-400"
                 >
                   Contact sales
                 </button>
@@ -1134,45 +1145,45 @@
 
         <div class="sect">
           <div class="sect-container">
-            <h2 class="text-title-lg md:text-4xl split-chars">Frequently asked questions</h2>
+            <h2 class="text-title-lg split-chars md:text-4xl">Frequently asked questions</h2>
             <div
-              class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 w-full grow-in-stagger-out"
+              class="grow-in-stagger-out grid w-full grid-cols-1 gap-8 md:grid-cols-2 md:gap-12 lg:grid-cols-3"
             >
-              <div class="flex flex-col gap-2 grow-in-stagger-inn">
+              <div class="grow-in-stagger-inn flex flex-col gap-2">
                 <h4 class="text-title-sm font-semibold">Is my data private?</h4>
                 <p class="text-body text-text-secondary">
                   Yes, we use end-to-end encryption. Your biometric data is your property, never
                   sold or shared.
                 </p>
               </div>
-              <div class="flex flex-col gap-2 grow-in-stagger-inn">
+              <div class="grow-in-stagger-inn flex flex-col gap-2">
                 <h4 class="text-title-sm font-semibold">Which devices are compatible?</h4>
                 <p class="text-body text-text-secondary">
                   Aetheria syncs with Oura, Apple Health, Whoop, Garmin, and Fitbit.
                 </p>
               </div>
-              <div class="flex flex-col gap-2 grow-in-stagger-inn">
+              <div class="grow-in-stagger-inn flex flex-col gap-2">
                 <h4 class="text-title-sm font-semibold">What is 'Circadian Intelligence'?</h4>
                 <p class="text-body text-text-secondary">
                   Our proprietary engine that uses hormonal and metabolic rhythms to suggest optimal
                   activity windows.
                 </p>
               </div>
-              <div class="flex flex-col gap-2 grow-in-stagger-inn">
+              <div class="grow-in-stagger-inn flex flex-col gap-2">
                 <h4 class="text-title-sm font-semibold">How long to see results?</h4>
                 <p class="text-body text-text-secondary">
                   Most users report improved focus and sleep quality within the first 7 days of
                   following nudges.
                 </p>
               </div>
-              <div class="flex flex-col gap-2 grow-in-stagger-inn">
+              <div class="grow-in-stagger-inn flex flex-col gap-2">
                 <h4 class="text-title-sm font-semibold">Is there 1-on-1 coaching?</h4>
                 <p class="text-body text-text-secondary">
                   Yes, 'The Sentinel' plan includes 1-on-1 sessions with human health performance
                   coaches.
                 </p>
               </div>
-              <div class="flex flex-col gap-2 grow-in-stagger-inn">
+              <div class="grow-in-stagger-inn flex flex-col gap-2">
                 <h4 class="text-title-sm font-semibold">Can I cancel anytime?</h4>
                 <p class="text-body text-text-secondary">
                   Yes, all our plans are month-to-month and can be canceled or paused at any time.
@@ -1183,9 +1194,9 @@
         </div>
 
         <div class="w-full self-stretch pt-8">
-          <div class="w-full h-24 relative overflow-hidden">
+          <div class="relative h-24 w-full overflow-hidden">
             <svg
-              class="w-full h-full absolute inset-0"
+              class="absolute inset-0 h-full w-full"
               viewBox="0 0 1200 100"
               preserveAspectRatio="none"
             >
@@ -1210,24 +1221,24 @@
 
         <div class="sect bg-surface">
           <div class="sect-container gap-4 text-center">
-            <h3 class="text-title text-3xl md:text-4xl font-bold text-text max-w-2xl split-chars">
+            <h3 class="text-title text-text split-chars max-w-2xl text-3xl font-bold md:text-4xl">
               Stop guessing. Start living in sync.
             </h3>
-            <p class="text-body max-w-md text-text-secondary split-text">
+            <p class="text-body text-text-secondary split-text max-w-md">
               Start your 14-day optimization trial. See the difference science makes.
             </p>
             <button
-              class="text-label bg-primary hover:bg-primary-hover text-primary-contrast font-semibold flex w-fit items-center justify-center px-4 py-2 gap-2 min-h-10 rounded-md transition-colors duration-400 mt-2 grow-in"
+              class="text-label bg-primary hover:bg-primary-hover text-primary-contrast grow-in mt-2 flex min-h-10 w-fit items-center justify-center gap-2 rounded-md px-4 py-2 font-semibold transition-colors duration-400"
             >
               Start Your 14-Day Optimization
             </button>
           </div>
         </div>
 
-        <div class="w-full self-stretch rotate-180">
-          <div class="w-full h-24 relative overflow-hidden">
+        <div class="w-full rotate-180 self-stretch">
+          <div class="relative h-24 w-full overflow-hidden">
             <svg
-              class="w-full h-full absolute inset-0"
+              class="absolute inset-0 h-full w-full"
               viewBox="0 0 1200 100"
               preserveAspectRatio="none"
             >
@@ -1251,24 +1262,34 @@
         </div>
 
         <footer class="w-full p-8 md:p-12">
-          <div class="flex flex-col items-center gap-6 text-center max-w-7xl mx-auto">
+          <div class="mx-auto flex max-w-7xl flex-col items-center gap-6 text-center">
             <a href="#" class="text-label flex items-center gap-2">
               <img src="./logo.svg" alt="Logo" class="h-8 object-contain" />
               <span class="text-xl font-bold">Aetheria</span>
             </a>
             <nav class="flex flex-wrap justify-center gap-x-8 gap-y-3">
-              <a href="#" class="text-label text-text-secondary hover:text-text transition-colors">About</a>
-              <a href="#" class="text-label text-text-secondary hover:text-text transition-colors">Features</a>
-              <a href="#" class="text-label text-text-secondary hover:text-text transition-colors">Pricing</a>
-              <a href="#" class="text-label text-text-secondary hover:text-text transition-colors">Blog</a>
-              <a href="#" class="text-label text-text-secondary hover:text-text transition-colors">Contact</a>
+              <a href="#" class="text-label text-text-secondary hover:text-text transition-colors">
+                About
+              </a>
+              <a href="#" class="text-label text-text-secondary hover:text-text transition-colors">
+                Features
+              </a>
+              <a href="#" class="text-label text-text-secondary hover:text-text transition-colors">
+                Pricing
+              </a>
+              <a href="#" class="text-label text-text-secondary hover:text-text transition-colors">
+                Blog
+              </a>
+              <a href="#" class="text-label text-text-secondary hover:text-text transition-colors">
+                Contact
+              </a>
             </nav>
-            <div class="flex gap-5 items-center">
+            <div class="flex items-center gap-5">
               <a
                 aria-label="GitHub"
                 href="https://github.com/codenhub/website-template"
                 target="_blank"
-                class="text-label size-5 text-text-secondary hover:text-text transition-colors"
+                class="text-label text-text-secondary hover:text-text size-5 transition-colors"
               >
                 <svg viewBox="0 0 20 20" fill="currentColor">
                   <path
@@ -1280,7 +1301,7 @@
               <a
                 aria-label="Instagram"
                 href="#"
-                class="text-label size-5 text-text-secondary hover:text-text transition-colors"
+                class="text-label text-text-secondary hover:text-text size-5 transition-colors"
               >
                 <svg viewBox="0 0 24 24" fill="currentColor">
                   <path
@@ -1301,7 +1322,7 @@
               <a
                 aria-label="X/Twitter"
                 href="#"
-                class="text-label size-5 text-text-secondary hover:text-text transition-colors"
+                class="text-label text-text-secondary hover:text-text size-5 transition-colors"
               >
                 <svg viewBox="0 0 24 24" fill="currentColor">
                   <path
@@ -1310,8 +1331,10 @@
                 </svg>
               </a>
             </div>
-            <div class="w-full pt-6 border-t border-border">
-              <p class="text-body text-sm text-text-secondary">© 2026 Aetheria. All rights reserved.</p>
+            <div class="border-border w-full border-t pt-6">
+              <p class="text-body text-text-secondary text-sm">
+                © 2026 Aetheria. All rights reserved.
+              </p>
             </div>
           </div>
         </footer>

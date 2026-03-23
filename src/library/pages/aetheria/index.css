@@ -34,7 +34,7 @@
 
   html,
   body {
-    @apply flex flex-col min-h-screen overflow-x-hidden bg-background text-text font-default;
+    @apply bg-background text-text font-default flex min-h-screen flex-col overflow-x-hidden;
   }
 
   button {
@@ -57,11 +57,11 @@
   }
 
   h1 {
-    @apply text-5xl md:text-7xl font-bold tracking-tight;
+    @apply text-5xl font-bold tracking-tight md:text-7xl;
   }
 
   h2 {
-    @apply text-3xl md:text-5xl font-bold tracking-tight;
+    @apply text-3xl font-bold tracking-tight md:text-5xl;
   }
 
   h3 {
@@ -89,10 +89,10 @@
 
 @layer components {
   .sect {
-    @apply flex flex-col gap-8 px-4 py-24 items-center justify-center;
+    @apply flex flex-col items-center justify-center gap-8 px-4 py-24;
   }
 
   .sect-container {
-    @apply flex flex-col w-full max-w-7xl gap-12 items-center;
+    @apply flex w-full max-w-7xl flex-col items-center gap-12;
   }
 }
