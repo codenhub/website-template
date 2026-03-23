@@ -170,7 +170,7 @@ class ComponentsHeaderSection extends HTMLElement {
                 <path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z" /><path d="m3.3 7 8.7 5 8.7-5" /><path d="M12 22V12" />
               </svg>
               <p class="font-medium mr-2">Heroes</p>
-              <span class="px-2 py-1 bg-surface rounded-full text-sm">4</span>
+              <span class="px-2 py-1 bg-surface rounded-full text-sm">6</span>
             </a>
             <a
               href="/library/components/inputs/"
@@ -256,7 +256,7 @@ class ComponentsHeaderSection extends HTMLElement {
                 <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
               </svg>
               <p class="font-medium mr-2">Testimonials</p>
-              <span class="px-2 py-1 bg-surface rounded-full text-sm">9</span>
+              <span class="px-2 py-1 bg-surface rounded-full text-sm">11</span>
             </a>
           </div>
         </div>

@@ -28,5 +28,17 @@
     "description": "Hero section with centered hero copy layered over a background image.",
     "location": "#L226-L274",
     "tags": ["heroes", "background", "image", "centered", "landing"]
+  },
+  {
+    "name": "Split with half-shown image",
+    "description": "Hero section with split text and a large partially shown image panel.",
+    "location": "#L275-L331",
+    "tags": ["heroes", "split-layout", "image", "asymmetric", "landing"]
+  },
+  {
+    "name": "Split with diagonal image",
+    "description": "Hero section with split text and a diagonally clipped image panel.",
+    "location": "#L332-L377",
+    "tags": ["heroes", "split-layout", "diagonal-image", "image", "landing"]
   }
 ]
