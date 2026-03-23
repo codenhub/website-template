@@ -97,7 +97,7 @@
       "name": "Heroes",
       "description": "Hero section starters for centered, image-supported, and background-image-first landing page intros.",
       "path": "./heroes/index.html",
-      "variants": 4,
+      "variants": 6,
       "tags": ["heroes", "landing-hero", "headline-section", "background-image", "centered-layout"]
     },
     {
@@ -111,7 +111,7 @@
       "name": "Loaders",
       "description": "Loading animation sets including spinner, dot, bar, and block-based motion variants.",
       "path": "./loaders/index.html",
-      "variants": 4,
+      "variants": 26,
       "tags": ["loaders", "loading-indicators", "spinners", "dot-loader", "skeleton-alternatives"]
     },
     {

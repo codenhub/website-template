@@ -5,8 +5,8 @@ class CustomCTA extends HTMLElement {
         <div
           class="flex flex-col items-center text-center max-w-7xl w-full px-8 py-16 gap-5 rounded-xl bg-foreground"
         >
-          <h2 class="split-chars">Start Building</h2>
-          <p class="max-w-xl text-text-secondary split-text">
+          <h2 class="text-title-lg split-chars">Start Building</h2>
+          <p class="text-body max-w-xl text-text-secondary split-text">
             Clone the repository, pick the components you need, and customize
             them with your own design tokens. It's that simple.
           </p>

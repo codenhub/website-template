@@ -17,8 +17,8 @@
     & .question {
       @apply flex items-center justify-between;
 
-      & h3 {
-        @apply text-lg;
+      & .question-title {
+        @apply text-title-sm;
       }
 
       & svg {
