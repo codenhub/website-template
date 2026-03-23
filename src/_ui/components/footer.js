@@ -13,21 +13,21 @@ class Footer extends HTMLElement {
               <a href="#">
                 <img src="/logo.svg" alt="Logo" class="h-10 object-contain invert" />
               </a>
-              <p class="max-w-sm">A complete website template built with Vite + TailwindCSS.</p>
+              <p class="text-body max-w-sm">A complete website template built with Vite + TailwindCSS.</p>
             </div>
             <div class="flex flex-col w-fit gap-2 min-w-36">
-              <a href="/library/" class="mb-2"><b>Library</b></a>
-              <a href="/library/components/">Components</a>
-              <a href="/library/pages/">Pages</a>
+              <a href="/library/" class="text-label mb-2"><b>Library</b></a>
+              <a href="/library/components/" class="text-body">Components</a>
+              <a href="/library/pages/" class="text-body">Pages</a>
             </div>
             <div class="flex flex-col w-fit gap-2 min-w-36">
-              <p class="mb-2"><b>Template</b></p>
-              <a href="https://github.com/codenhub/website-template" target="_blank">Source code</a>
-              <a href="/credits/">Credits</a>
+              <p class="text-label mb-2"><b>Template</b></p>
+              <a href="https://github.com/codenhub/website-template" target="_blank" class="text-body">Source code</a>
+              <a href="/credits/" class="text-body">Credits</a>
             </div>
           </div>
           <div class="flex w-full flex-wrap gap-4 items-center justify-between pt-4 border-t border-border">
-            <p class="flex gap-2 items-center">Made with ❤️ by <a href="https://coden.agency/" target="_blank"><img src="https://coden.agency/logo.svg" alt="Coden Agency Logo" class="h-5 object-contain" /></a></p>
+            <p class="text-body flex gap-2 items-center">Made with ❤️ by <a href="https://coden.agency/" target="_blank" class="text-body"><img src="https://coden.agency/logo.svg" alt="Coden Agency Logo" class="h-5 object-contain" /></a></p>
             <div class="flex gap-4 items-center">
               <!-- GITHUB LINK -->
               <a

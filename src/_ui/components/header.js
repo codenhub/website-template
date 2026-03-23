@@ -14,12 +14,12 @@ class Header extends HTMLElement {
           <div class="flex gap-6 items-center">
             <nav class="hidden md:flex gap-6">
               <div class="flex gap-2 group relative">
-                <a href="/library/">Library</a>
+                <a href="/library/" class="text-label">Library</a>
                 <svg class="size-4 transition-transform duration-400 group-hover:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                   <path d="m6 9 6 6 6-6"/>
                 </svg>
                 <div class="flex flex-col gap-2 min-w-3xs rounded-xl border border-border p-2 absolute top-full left-1/2 -translate-x-1/2 translate-y-4 bg-background opacity-0 scale-0 origin-top group-hover:opacity-100 group-hover:scale-100 transition-all duration-400 z-50">
-                  <a href="/library/components/" class="flex items-center gap-2 p-2 rounded-lg hover:bg-foreground transition duration-400">
+                  <a href="/library/components/" class="text-body flex items-center gap-2 p-2 rounded-lg hover:bg-foreground transition duration-400">
                     <div class="flex items-center justify-center size-10 bg-surface rounded-lg">
                       <svg
                         class="size-6"
@@ -39,7 +39,7 @@ class Header extends HTMLElement {
                     </div>
                     Components
                   </a>
-                  <a href="/library/pages/" class="flex items-center gap-2 p-2 rounded-lg hover:bg-foreground transition duration-400">
+                  <a href="/library/pages/" class="text-body flex items-center gap-2 p-2 rounded-lg hover:bg-foreground transition duration-400">
                     <div class="flex items-center justify-center size-10 bg-surface rounded-lg">
                       <svg viewBox="0 0 37.5 37.5" class="size-6" fill="currentColor">
                         <path d="M35.5,2.75H2c-1.105,0-2,0.896-2,2v28c0,1.105,0.895,2,2,2h33.5c1.104,0,2-0.895,2-2v-28C37.5,3.646,36.604,2.75,35.5,2.75   z M31.084,5.254c0.871,0,1.578,0.707,1.578,1.58c0,0.871-0.707,1.578-1.578,1.578c-0.873,0-1.58-0.707-1.58-1.578   C29.504,5.961,30.211,5.254,31.084,5.254z M26.625,5.254c0.873,0,1.58,0.707,1.58,1.58c0,0.871-0.707,1.578-1.58,1.578   c-0.871,0-1.578-0.707-1.578-1.578C25.047,5.961,25.754,5.254,26.625,5.254z M22.166,5.254c0.873,0,1.58,0.707,1.58,1.58   c0,0.871-0.707,1.578-1.58,1.578c-0.871,0-1.578-0.707-1.578-1.578C20.588,5.961,21.295,5.254,22.166,5.254z M33.5,30.75H4V10.416   h29.5V30.75z M31.916,18.334H5.584v-6h26.332V18.334z M17.795,23.793H5.584v-3.666h12.211V23.793z M17.795,29.084H5.584v-3.666   h12.211V29.084z M31.75,23.793H19.539v-3.666H31.75V23.793z M31.75,29.084H19.539v-3.666H31.75V29.084z"/>
@@ -49,7 +49,7 @@ class Header extends HTMLElement {
                   </a>
                 </div>
               </div>
-              <a href="/credits/">Credits</a>
+              <a href="/credits/" class="text-label">Credits</a>
             </nav>
             <a href="https://github.com/codenhub/website-template" target="_blank" class="primary-btn">
               <svg viewBox="0 0 20 20" fill="currentColor" class="size-4">
@@ -72,8 +72,8 @@ class Header extends HTMLElement {
                 class="absolute flex top-18 inset-x-0 bg-background shadow-lg p-4 origin-top scale-y-0 opacity-0 peer-checked:scale-y-100 peer-checked:opacity-100 transition duration-400 z-50"
               >
                 <nav class="flex flex-col items-center w-full gap-2">
-                  <a href="/library/" class="flex w-full text-center justify-center text-lg tracking-wide">Library</a>
-                  <a href="/credits/" class="flex w-full text-center justify-center text-lg tracking-wide">Credits</a>
+                   <a href="/library/" class="text-label-lg flex w-full text-center justify-center tracking-wide">Library</a>
+                   <a href="/credits/" class="text-label-lg flex w-full text-center justify-center tracking-wide">Credits</a>
                 </nav>
               </div>
             </div>

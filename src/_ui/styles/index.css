@@ -27,6 +27,34 @@
   font-family: "Inter", "Segoe UI", system-ui, sans-serif;
 }
 
+@utility text-display {
+  @apply font-title text-6xl tracking-tight md:text-8xl;
+}
+
+@utility text-title-lg {
+  @apply font-title text-5xl tracking-tight md:text-6xl;
+}
+
+@utility text-title {
+  @apply text-3xl font-semibold tracking-tight;
+}
+
+@utility text-title-sm {
+  @apply text-xl font-medium tracking-tight;
+}
+
+@utility text-label-lg {
+  @apply text-lg font-medium tracking-wide;
+}
+
+@utility text-label {
+  @apply text-base font-medium tracking-wide;
+}
+
+@utility text-body {
+  @apply text-sm font-normal tracking-wider;
+}
+
 @layer base {
   ::-webkit-scrollbar {
     width: calc(var(--spacing) * 4);
@@ -60,33 +88,4 @@
     @apply bg-background text-text;
   }
 
-  h1 {
-    @apply font-title text-6xl tracking-tight md:text-8xl;
-  }
-
-  h2 {
-    @apply font-title text-5xl tracking-tight md:text-6xl;
-  }
-
-  h3 {
-    @apply text-3xl font-semibold tracking-tight;
-  }
-
-  h4 {
-    @apply text-xl font-medium tracking-tight;
-  }
-
-  h5 {
-    @apply text-lg font-medium tracking-wide;
-  }
-
-  h6 {
-    @apply text-base font-medium tracking-wide;
-  }
-
-  p,
-  li,
-  a {
-    @apply text-sm font-normal tracking-wider;
-  }
 }
